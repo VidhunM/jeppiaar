@@ -1,58 +1,28 @@
 import React from 'react';
 import './WhyChooseUs.css';
+import groupImage from '../../assets/images/Group.png';
+import group2Image from '../../assets/images/Group2.png';
+import group3Image from '../../assets/images/Group3.png';
+import group4Image from '../../assets/images/Group4.png';
+import group6Image from '../../assets/images/Group6.png';
 
 const WhyChooseUs = () => {
-  const reasons = [
-    {
-      id: 1,
-      number: "01",
-      title: "Get trained by the NO:1 Psychologist in India",
-      color: "#FFC107"
-    },
-    {
-      id: 2,
-      number: "02",
-      title: "Practical, research-driven curriculum",
-      color: "#E91E63"
-    },
-    {
-      id: 3,
-      number: "03",
-      title: "Robust industry collaborations",
-      color: "#03A9F4"
-    },
-    {
-      id: 4,
-      number: "04",
-      title: "Holistic growth with extensive hands-on experience",
-      color: "#1A237E"
-    },
-    {
-      id: 5,
-      number: "05",
-      title: "State-of-the-art, air-conditioned smart",
-      color: "#0E0529"
-    }
+  const images = [
+    { src: groupImage, alt: 'Why Choose Us 1' },
+    { src: group2Image, alt: 'Why Choose Us 2' },
+    { src: group3Image, alt: 'Why Choose Us 3' },
+    { src: group4Image, alt: 'Why Choose Us 4' },
+    { src: group6Image, alt: 'Why Choose Us 5' }
   ];
 
   return (
     <section className="why-choose-us-section">
       <div className="container">
         <h2 className="section-title">WHY CHOOSE US?</h2>
-        <div className="reasons-grid">
-          {reasons.map((reason) => (
-            <div key={reason.id} className="reason-item">
-              <div className="reason-badge-wrapper">
-                <div className="reason-badge" style={{ '--badge-color': reason.color }}>
-                  <div className="badge-outer-ring"></div>
-                  <div className="badge-inner-ring"></div>
-                  <div className="badge-inner-circle">
-                    <span className="badge-number">{reason.number}</span>
-                  </div>
-                </div>
-                <div className="reason-bracket" style={{ backgroundColor: reason.color }}></div>
-              </div>
-              <p className="reason-text">{reason.title}</p>
+        <div className="images-grid">
+          {images.map((image, index) => (
+            <div key={index} className={`image-item image-item-${index + 1}`}>
+              <img src={image.src} alt={image.alt} className="group-image" />
             </div>
           ))}
         </div>
