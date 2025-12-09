@@ -1,0 +1,46 @@
+.route-map-section {
+  padding: 5rem 2rem;
+  background: white;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.map-content {
+  display: flex;
+  justify-content: center;
+}
+
+.map-text {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+}
+
+.map-text h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a237e;
+  margin-bottom: 1rem;
+}
+
+.map-text p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.map-container {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+  display: block;
+  width: 100%;
+}
+

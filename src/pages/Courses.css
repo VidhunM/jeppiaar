@@ -1,0 +1,22 @@
+.courses-page {
+  padding-top: 80px;
+}
+
+.courses-hero {
+  background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.courses-hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.courses-hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
