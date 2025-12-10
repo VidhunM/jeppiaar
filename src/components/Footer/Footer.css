@@ -16,6 +16,10 @@
   margin-bottom: 3rem;
 }
 
+.footer-section:last-child {
+  justify-self: end;
+}
+
 .footer-section h4 {
   font-size: 1rem;
   font-weight: 600;
@@ -115,6 +119,11 @@
   font-size: 0.85rem;
 }
 
+.footer-section:nth-child(3) ul li a {
+  white-space: nowrap;
+  display: block;
+}
+
 .footer-section ul li a:hover {
   color: white;
 }
@@ -145,6 +154,13 @@
   width: 100%;
   border-radius: 8px;
   overflow: hidden;
+  aspect-ratio: 1 / 1;
+}
+
+.footer-map iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .footer-bottom {

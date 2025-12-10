@@ -8,16 +8,10 @@ const HeroSection = () => {
   const slides = [
     {
       image: heroImage,
-      title: 'Transform Your Future',
-      titleLine2: 'Through Psychology',
-      tagline: 'Join Jeppiaar Academy for world-class psychology education'
-    },
-    {
-      image: heroImage,
-      title: 'Excellence in',
-      titleLine2: 'Psychology Education',
-      tagline: 'Practice-oriented diplomas with real-world experience'
+      title: 'Jeppiaar Academy of Psychology & Research',
+      tagline: 'Mind - Science - Innovation'
     }
+    
   ];
 
   const programCards = [
@@ -48,11 +42,17 @@ const HeroSection = () => {
         className="hero-slide"
         style={{ backgroundImage: `url(${slides[currentSlide].image})` }}
       >
-        <button className="hero-nav prev" onClick={prevSlide}>
-          ‹
+        <button className="hero-nav prev" onClick={prevSlide} aria-label="Previous slide">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 19L8 12L15 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M8 12H20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+          </svg>
         </button>
-        <button className="hero-nav next" onClick={nextSlide}>
-          ›
+        <button className="hero-nav next" onClick={nextSlide} aria-label="Next slide">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 5L16 12L9 19" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M16 12H4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+          </svg>
         </button>
 
         <div className="hero-content">
