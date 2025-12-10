@@ -536,6 +536,121 @@
 }
 
 @media (max-width: 968px) {
+  .home-page {
+    padding-top: 70px;
+  }
+
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .collaboration-section {
+    padding: 0.5rem 1.5rem 3rem 1.5rem;
+    margin-top: -6rem;
+  }
+
+  .collaboration-section h2 {
+    font-size: 2rem;
+    margin-top: 2rem;
+  }
+
+  .collaboration-text {
+    font-size: 1rem;
+  }
+
+  .university-name {
+    font-size: 1.75rem;
+  }
+
+  .accreditation-text {
+    font-size: 0.9rem;
+    padding: 0 1rem;
+  }
+
+  .collaboration-decorative-left img,
+  .collaboration-decorative-right img {
+    width: 250px;
+  }
+
+  .other-services-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .service-icon {
+    width: 120px;
+    height: 120px;
+  }
+
+  .service-icon img {
+    max-width: 110px;
+    max-height: 110px;
+  }
+
+  .service-item p {
+    font-size: 0.9rem;
+  }
+
+  .lead-generation-section .container {
+    padding: 0;
+  }
+
+  .lead-content {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .lead-form-panel {
+    margin: 1rem;
+    padding: 1.5rem 1.5rem;
+    border-radius: 15px;
+  }
+
+  .lead-form-panel h2 {
+    font-size: 1.75rem;
+  }
+
+  .lead-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .lead-image-panel {
+    margin: 0 1rem 1rem 1rem;
+    min-height: 300px;
+    border-radius: 15px;
+  }
+
+  .faq-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .faq-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .faq-list .section-title {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .faq-image {
+    min-height: 300px;
+  }
+
   .banner-overlay {
     width: 100%;
     background: rgba(0, 0, 0, 0.6);
@@ -544,6 +659,7 @@
   .banner-content {
     margin-left: 2rem;
     max-width: 90%;
+    padding: 2rem 0;
   }
 
   .banner-content h2 {
@@ -554,22 +670,237 @@
     font-size: 1rem;
   }
 
-  .lead-content,
-  .faq-content {
-    grid-template-columns: 1fr;
+  .admissions-banner {
+    min-height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .collaboration-section {
+    padding: 0.5rem 1rem 2.5rem 1rem;
   }
 
-  .lead-image-panel,
-  .faq-image {
-    min-height: 300px;
+  .collaboration-section h2 {
+    font-size: 1.75rem;
+    margin-top: 1.5rem;
+  }
+
+  .collaboration-text {
+    font-size: 0.95rem;
+  }
+
+  .university-name {
+    font-size: 1.5rem;
+  }
+
+  .accreditation-text {
+    font-size: 0.85rem;
+  }
+
+  .collaboration-decorative-left img,
+  .collaboration-decorative-right img {
+    width: 180px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .service-icon {
+    width: 100px;
+    height: 100px;
+  }
+
+  .service-icon img {
+    max-width: 90px;
+    max-height: 90px;
+  }
+
+  .service-item p {
+    font-size: 0.85rem;
+  }
+
+  .lead-form-panel {
+    margin: 0.75rem;
+    padding: 1.25rem 1.25rem;
+  }
+
+  .lead-form-panel h2 {
+    font-size: 1.5rem;
+  }
+
+  .lead-image-panel {
+    margin: 0 0.75rem 0.75rem 0.75rem;
+    min-height: 250px;
+  }
+
+  .banner-content {
+    margin-left: 1.5rem;
+    padding: 1.5rem 0;
   }
 
   .banner-content h2 {
-    font-size: 2rem;
+    font-size: 1.75rem;
+  }
+
+  .admissions-banner {
+    min-height: 450px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-page {
+    padding-top: 60px;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .collaboration-section {
+    padding: 0.5rem 0.75rem 2rem 0.75rem;
+    margin-top: -5rem;
+  }
+
+  .collaboration-section h2 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .collaboration-text {
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .university-name {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .accreditation-text {
+    font-size: 0.75rem;
+    margin-bottom: 2rem;
+    padding: 0;
+  }
+
+  .accreditation-badges {
+    gap: 1rem;
+  }
+
+  .badge {
+    width: 120px;
+    height: 120px;
+    padding: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .badge-bold {
+    font-size: 0.9rem;
+  }
+
+  .badge-regular {
+    font-size: 0.75rem;
+  }
+
+  .collaboration-decorative-left img,
+  .collaboration-decorative-right img {
+    width: 120px;
+  }
+
+  .other-services-section {
+    padding: 2rem 1rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .service-icon {
+    width: 110px;
+    height: 110px;
+  }
+
+  .lead-form-panel {
+    margin: 0.5rem;
+    padding: 1rem 1rem;
+    border-radius: 12px;
+  }
+
+  .lead-form-panel h2 {
+    font-size: 1.25rem;
+  }
+
+  .lead-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .lead-form input {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+
+  .lead-image-panel {
+    margin: 0 0.5rem 0.5rem 0.5rem;
+    min-height: 200px;
+    border-radius: 12px;
+  }
+
+  .faq-section {
+    padding: 2rem 1rem;
+  }
+
+  .faq-list .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .faq-question {
+    font-size: 0.9rem;
+  }
+
+  .faq-image {
+    min-height: 250px;
+  }
+
+  .banner-content {
+    margin-left: 1rem;
+    max-width: 95%;
+    padding: 1.5rem 0;
+  }
+
+  .banner-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
   }
 
   .banner-content p {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .banner-content .apply-now-btn {
+    padding: 0.875rem 2rem;
+    font-size: 0.9rem;
+  }
+
+  .admissions-banner {
+    min-height: 400px;
   }
 }
 

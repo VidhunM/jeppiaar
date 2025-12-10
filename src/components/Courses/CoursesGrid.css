@@ -207,22 +207,181 @@
 }
 
 @media (max-width: 1200px) {
+  .courses-section {
+    padding: 4rem 1.5rem;
+  }
+
   .courses-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .program-bubbles {
+    gap: 1.5rem;
+  }
+
+  .program-bubble {
+    width: 180px;
+    height: 180px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 968px) {
+  .courses-section {
+    padding: 3.5rem 1.5rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .program-bubbles {
+    gap: 1.25rem;
+    margin-bottom: 3rem;
+  }
+
+  .program-bubble {
+    width: 160px;
+    height: 160px;
+    font-size: 0.9rem;
+    padding: 1.25rem;
+  }
+
+  .description-text {
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .courses-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .course-image {
+    height: 200px;
   }
 }
 
 @media (max-width: 768px) {
+  .courses-section {
+    padding: 3rem 1rem;
+  }
+
   .section-title {
-    font-size: 2rem;
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .program-bubbles {
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .program-bubble {
+    width: 140px;
+    height: 140px;
+    font-size: 0.85rem;
+    padding: 1rem;
+  }
+
+  .description-text {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+    padding: 0 0.5rem;
   }
 
   .courses-grid {
     grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .course-card {
+    padding: 0.75rem;
   }
 
   .course-image {
-    height: 250px;
+    height: 220px;
+  }
+
+  .course-content {
+    padding: 0.875rem;
+  }
+
+  .course-content h3 {
+    font-size: 1.05rem;
+  }
+
+  .course-detail-item {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .courses-section {
+    padding: 2.5rem 0.75rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .program-bubbles {
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .program-bubble {
+    width: 120px;
+    height: 120px;
+    font-size: 0.75rem;
+    padding: 0.875rem;
+  }
+
+  .description-text {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .courses-grid {
+    gap: 1rem;
+  }
+
+  .course-card {
+    padding: 0.625rem;
+    border-radius: 12px;
+  }
+
+  .course-image {
+    height: 180px;
+    border-radius: 8px;
+  }
+
+  .course-content {
+    padding: 0.75rem;
+  }
+
+  .course-content h3 {
+    font-size: 1rem;
+    margin-bottom: 0.625rem;
+  }
+
+  .course-detail-item {
+    font-size: 0.8rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .course-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .know-more-btn {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.85rem;
   }
 }
 

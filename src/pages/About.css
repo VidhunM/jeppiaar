@@ -44,3 +44,102 @@
   color: #555;
 }
 
+@media (max-width: 968px) {
+  .about-page {
+    padding-top: 70px;
+  }
+
+  .about-hero {
+    padding: 3rem 1.5rem;
+  }
+
+  .about-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .about-hero p {
+    font-size: 1.1rem;
+  }
+
+  .about-content {
+    padding: 3rem 1.5rem;
+  }
+
+  .about-section h2 {
+    font-size: 1.75rem;
+  }
+
+  .about-section p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 2.5rem 1rem;
+  }
+
+  .about-hero h1 {
+    font-size: 2rem;
+  }
+
+  .about-hero p {
+    font-size: 1rem;
+  }
+
+  .about-content {
+    padding: 2.5rem 1rem;
+  }
+
+  .about-section {
+    margin-bottom: 2.5rem;
+  }
+
+  .about-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .about-section p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-page {
+    padding-top: 60px;
+  }
+
+  .about-hero {
+    padding: 2rem 0.75rem;
+  }
+
+  .about-hero h1 {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .about-hero p {
+    font-size: 0.9rem;
+  }
+
+  .about-content {
+    padding: 2rem 0.75rem;
+  }
+
+  .about-section {
+    margin-bottom: 2rem;
+  }
+
+  .about-section h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .about-section p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+}
+

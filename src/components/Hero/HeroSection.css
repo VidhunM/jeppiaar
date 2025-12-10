@@ -339,10 +339,21 @@
 }
 
 @media (max-width: 968px) {
+  .hero-slide {
+    height: 50vh;
+    min-height: 500px;
+  }
+
   .hero-content {
     flex-direction: column;
     text-align: center;
     justify-content: center;
+    padding: 1.5rem;
+  }
+
+  .hero-text {
+    margin-left: 0;
+    max-width: 100%;
   }
 
   .hero-text h1 {
@@ -354,7 +365,28 @@
   }
 
   .hero-sidebar {
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+    margin-top: 2rem;
     align-items: center;
+  }
+
+  .admission-box {
+    min-width: 140px;
+    max-width: 160px;
+    padding: 2rem 1.5rem;
+  }
+
+  .admission-year {
+    font-size: 3rem;
+  }
+
+  .apply-now-btn {
+    min-width: 160px;
+    padding: 0.875rem 2rem;
+    font-size: 0.95rem;
   }
 
   .hero-nav {
@@ -371,6 +403,10 @@
     right: 1rem;
   }
 
+  .vertical-apply-tab {
+    display: none;
+  }
+
   .hero-programs-container {
     flex-direction: column;
     text-align: center;
@@ -378,6 +414,12 @@
 
   .hero-programs-title-block {
     margin-bottom: 2rem;
+    padding-top: 3rem;
+    margin-top: 1rem;
+  }
+
+  .hero-programs-small-heading {
+    font-size: 1.8rem;
   }
 
   .hero-programs-bold-title {
@@ -388,6 +430,7 @@
     justify-content: center;
     padding-left: 0;
     gap: 1rem;
+    flex-wrap: wrap;
   }
 
   .hero-program-bubble {
@@ -404,32 +447,155 @@
   .hero-programs-section {
     padding-top: 15vh;
     margin-top: -15vh;
+    padding: 1rem 1rem 0 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-slide {
+    height: 45vh;
+    min-height: 400px;
+  }
+
+  .hero-content {
+    padding: 1rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+
+  .hero-sidebar {
+    margin-top: 1.5rem;
+  }
+
+  .admission-box {
+    min-width: 120px;
+    max-width: 140px;
+    padding: 1.5rem 1rem;
+  }
+
+  .admission-year {
+    font-size: 2.5rem;
+  }
+
+  .admission-text {
+    font-size: 0.9rem;
+  }
+
+  .apply-now-btn {
+    min-width: 140px;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .hero-nav {
+    width: 35px;
+    height: 35px;
+  }
+
+  .hero-nav.prev {
+    left: 0.5rem;
+  }
+
+  .hero-nav.next {
+    right: 0.5rem;
   }
 }
 
 @media (max-width: 480px) {
-  .hero-programs-bubbles {
-    gap: 0.75rem;
+  .hero-slide {
+    height: 40vh;
+    min-height: 350px;
   }
 
-  .hero-program-bubble {
-    width: 120px;
-    height: 120px;
-    min-width: 120px;
-    min-height: 120px;
+  .hero-content {
+    padding: 0.75rem;
+  }
+
+  .hero-text h1 {
+    font-size: 1.75rem;
+    line-height: 1.1;
+  }
+
+  .tagline {
+    font-size: 0.9rem;
+  }
+
+  .hero-sidebar {
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+
+  .admission-box {
+    min-width: 100px;
     max-width: 120px;
-    max-height: 120px;
-    font-size: 0.75rem;
-    margin-top: -70px;
+    padding: 1.25rem 0.75rem;
+  }
+
+  .admission-year {
+    font-size: 2rem;
+  }
+
+  .admission-text {
+    font-size: 0.8rem;
+  }
+
+  .apply-now-btn {
+    min-width: 120px;
+    padding: 0.625rem 1.25rem;
+    font-size: 0.85rem;
+  }
+
+  .hero-nav {
+    width: 32px;
+    height: 32px;
+  }
+
+  .hero-nav svg {
+    width: 18px;
+    height: 18px;
   }
 
   .hero-programs-section {
+    padding: 0.75rem 0.75rem 0 0.75rem;
     padding-top: 12vh;
     margin-top: -12vh;
   }
 
+  .hero-programs-title-block {
+    padding-top: 2rem;
+    margin-top: 0.5rem;
+  }
+
+  .hero-programs-small-heading {
+    font-size: 1.5rem;
+  }
+
   .hero-programs-bold-title {
     font-size: 1.5rem;
+    margin: -0.3rem 0 0 0;
+  }
+
+  .hero-programs-bubbles {
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .hero-program-bubble {
+    width: 110px;
+    height: 110px;
+    min-width: 110px;
+    min-height: 110px;
+    max-width: 110px;
+    max-height: 110px;
+    font-size: 0.7rem;
+    margin-top: -55px;
+    padding: 1rem;
   }
 }
 

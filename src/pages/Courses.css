@@ -20,3 +20,54 @@
   opacity: 0.9;
 }
 
+@media (max-width: 968px) {
+  .courses-page {
+    padding-top: 70px;
+  }
+
+  .courses-hero {
+    padding: 3rem 1.5rem;
+  }
+
+  .courses-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .courses-hero p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .courses-hero {
+    padding: 2.5rem 1rem;
+  }
+
+  .courses-hero h1 {
+    font-size: 2rem;
+  }
+
+  .courses-hero p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .courses-page {
+    padding-top: 60px;
+  }
+
+  .courses-hero {
+    padding: 2rem 0.75rem;
+  }
+
+  .courses-hero h1 {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .courses-hero p {
+    font-size: 0.9rem;
+  }
+}
+
