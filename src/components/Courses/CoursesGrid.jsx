@@ -43,15 +43,15 @@ const CoursesGrid = () => {
     <section className="courses-section">
       <div className="container">
         <div className="courses-description">
-          <h2 className="section-title">OUR ADVANCED DIPLOMA COURSES</h2>
-          <p className="description-text">
+          <h2 className="section-title scroll-from-center">OUR ADVANCED DIPLOMA COURSES</h2>
+          <p className="description-text scroll-from-center">
             Jeppiaar Academy of Psychology and Research prepares ethical, skilled, and globally competent psychology professionals through world-class, practice-oriented education. Our academy bridges the gap between classroom knowledge and real-world mental health practice.
           </p>
         </div>
 
         <div className="courses-grid">
-          {programs.map((program) => (
-            <div key={program.id} className="course-card">
+          {programs.map((program, index) => (
+            <div key={program.id} className={`course-card ${index % 2 === 0 ? 'scroll-from-left' : 'scroll-from-right'}`}>
               <div className="course-image">
                 <img 
                   src={program.image} 

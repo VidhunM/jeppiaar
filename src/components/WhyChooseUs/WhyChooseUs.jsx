@@ -18,10 +18,10 @@ const WhyChooseUs = () => {
   return (
     <section className="why-choose-us-section">
       <div className="container">
-        <h2 className="section-title">WHY CHOOSE US?</h2>
+        <h2 className="section-title scroll-from-center">WHY CHOOSE US?</h2>
         <div className="images-grid">
           {images.map((image, index) => (
-            <div key={index} className={`image-item image-item-${index + 1}`}>
+            <div key={index} className={`image-item image-item-${index + 1} ${index % 3 === 0 ? 'scroll-from-left' : index % 3 === 1 ? 'scroll-from-center' : 'scroll-from-right'}`}>
               <img src={image.src} alt={image.alt} className="group-image" />
             </div>
           ))}

@@ -24,18 +24,18 @@ const Home = () => {
           <img src={Group7} alt="Decoration" />
         </div>
         <div className="container">
-          <h2>JEPPIAAR ACADEMY OF PSYCHOLOGY AND RESEARCH</h2>
-          <p className="collaboration-text">IN COLLABORATION WITH</p>
-          <h3 className="university-name">BHARATHIDASAN UNIVERSITY</h3>
-          <p className="accreditation-text">
+          <h2 className="scroll-from-center">JEPPIAAR ACADEMY OF PSYCHOLOGY AND RESEARCH</h2>
+          <p className="collaboration-text scroll-from-center">IN COLLABORATION WITH</p>
+          <h3 className="university-name scroll-from-center">BHARATHIDASAN UNIVERSITY</h3>
+          <p className="accreditation-text scroll-from-center">
             (Accredited with A+ Grade by NAAC in the Third Cycle & 36th Rank among the Indian Universities in NIRF-2025)
           </p>
           <div className="accreditation-badges">
-            <div className="badge">
+            <div className="badge scroll-from-left">
               <span className="badge-bold">IAO</span>
               <span className="badge-regular">Accredited</span>
             </div>
-            <div className="badge">
+            <div className="badge scroll-from-right">
               <span className="badge-bold">Approved</span>
               <span className="badge-regular">by Skill</span>
               <span className="badge-regular">India</span>
@@ -52,27 +52,27 @@ const Home = () => {
       {/* Other Services Section */}
       <section className="other-services-section">
         <div className="container">
-          <h2 className="section-title">OTHER SERVICES</h2>
+          <h2 className="section-title scroll-from-center">OTHER SERVICES</h2>
           <div className="services-grid">
-            <div className="service-item">
+            <div className="service-item scroll-from-left">
               <div className="service-icon">
                 <img src={Ellipse} alt="Certification Programs" />
               </div>
               <p>Certification Programs</p>
             </div>
-            <div className="service-item">
+            <div className="service-item scroll-from-right">
               <div className="service-icon">
                 <img src={Layer} alt="Research Wing - POLO" />
               </div>
               <p>Research Wing - POLO</p>
             </div>
-            <div className="service-item">
+            <div className="service-item scroll-from-left">
               <div className="service-icon">
                 <img src={Ellipse} alt="Internships" />
               </div>
               <p>Internships</p>
             </div>
-            <div className="service-item">
+            <div className="service-item scroll-from-right">
               <div className="service-icon">
                 <img src={Youngvox} alt="YoungVox" />
               </div>
@@ -88,7 +88,7 @@ const Home = () => {
       <section className="lead-generation-section">
         <div className="container">
           <div className="lead-content">
-            <div className="lead-form-panel">
+            <div className="lead-form-panel scroll-from-left">
               <h2>Start your Psychology<br />Career Today!</h2>
               <p className="lead-subtitle">Upgrade your skills with practice-oriented diploma programs</p>
               <form 
@@ -129,7 +129,7 @@ const Home = () => {
                 </div>
               </form>
             </div>
-            <div className="lead-image-panel">
+            <div className="lead-image-panel scroll-from-right">
               <img 
                 src={contactImage} 
                 alt="Student"
@@ -149,7 +149,7 @@ const Home = () => {
       <section className="faq-section">
         <div className="container">
           <div className="faq-content">
-            <div className="faq-list">
+            <div className="faq-list scroll-from-left">
               <h2 className="section-title">FREQUENTLY ASKED QUESTIONS</h2>
               <div className="faq-items">
                 <div className="faq-item">
@@ -178,7 +178,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="faq-image">
+            <div className="faq-image scroll-from-right">
               <img 
                 src={image2} 
                 alt="Student studying"
@@ -195,7 +195,7 @@ const Home = () => {
       {/* Admissions Banner */}
       <section className="admissions-banner" style={{ backgroundImage: `url(${image3})` }}>
         <div className="banner-overlay"></div>
-        <div className="banner-content">
+        <div className="banner-content scroll-from-left">
           <h2>ADMISSIONS OPEN 2025 – START YOUR JOURNEY IN PSYCHOLOGY</h2>
           <p>Join Jeppiaar Academy for practice-oriented psychology diplomas that blend classroom learning with real-world experience.</p>
           <button 

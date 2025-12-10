@@ -38,11 +38,12 @@
   font-weight: 600;
   font-size: 1rem;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .program-bubble:hover {
   transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 .program-bubble p {
@@ -171,6 +172,26 @@
   width: auto;
   margin-top: auto;
   align-self: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+
+.know-more-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+.know-more-btn:hover::before {
+  width: 300px;
+  height: 300px;
 }
 
 .know-more-btn:hover {

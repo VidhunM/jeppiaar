@@ -74,10 +74,10 @@ const LearnersReview = () => {
   return (
     <section className="testimonials-section">
       <div className="container">
-        <h2 className="section-title">WHAT OUR LEARNERS SAY</h2>
+        <h2 className="section-title scroll-from-center">WHAT OUR LEARNERS SAY</h2>
         <div className="testimonials-grid">
-          {testimonials.map((testimonial) => (
-            <div key={testimonial.id} className="testimonial-card">
+          {testimonials.map((testimonial, index) => (
+            <div key={testimonial.id} className={`testimonial-card ${index % 3 === 0 ? 'scroll-from-left' : index % 3 === 1 ? 'scroll-from-center' : 'scroll-from-right'}`}>
               <div className="stars">{renderStars(testimonial.rating)}</div>
               <h3 className="testimonial-title">{testimonial.title}</h3>
               <p className="testimonial-quote">{testimonial.quote}</p>

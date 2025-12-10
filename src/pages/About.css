@@ -13,11 +13,13 @@
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1rem;
+  animation: fadeInUp 0.8s ease-out;
 }
 
 .about-hero p {
   font-size: 1.2rem;
   opacity: 0.9;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 
 .about-content {
@@ -36,6 +38,7 @@
   font-weight: 700;
   color: #1a237e;
   margin-bottom: 1.5rem;
+  animation: fadeInLeft 0.8s ease-out;
 }
 
 .about-section p {

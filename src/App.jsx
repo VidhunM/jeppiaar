@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { AppProvider } from './context/AppContext';
 import ErrorBoundary from './components/ErrorBoundary';
 import Header from './components/Header/Header';
@@ -8,13 +8,34 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Courses from './pages/Courses';
 import Contact from './pages/Contact';
+import { initScrollAnimations } from './utils/scrollAnimations';
 import './styles/global.css';
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    // Reinitialize scroll animations on route change
+    setTimeout(() => {
+      initScrollAnimations();
+    }, 100);
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
+  useEffect(() => {
+    // Initialize scroll animations on mount
+    initScrollAnimations();
+  }, []);
+
   return (
     <ErrorBoundary>
       <AppProvider>
         <Router>
+          <ScrollToTop />
           <div className="App">
             <Header />
             <main>

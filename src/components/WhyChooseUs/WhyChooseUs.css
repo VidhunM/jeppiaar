@@ -15,6 +15,7 @@
   margin-bottom: 4rem;
   text-align: center;
   text-transform: uppercase;
+  animation: fadeInUp 0.8s ease-out;
 }
 
 .images-grid {
@@ -55,6 +56,11 @@
   height: auto;
   display: block;
   border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.group-image:hover {
+  transform: scale(1.05);
 }
 
 @media (max-width: 1200px) {
