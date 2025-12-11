@@ -127,13 +127,13 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection }) => {
           <>
             <div className="hero-rated-badge">
               <div className="rated-text">STUDENT RATED</div>
-              <div className="rated-stars">
-                <span className="star">★</span>
-                <span className="star">★</span>
-                <span className="star">★</span>
-                <span className="star">★</span>
-                <span className="star">★</span>
-              </div>
+            </div>
+            <div className="hero-rated-stars">
+              <span className="star">★</span>
+              <span className="star">★</span>
+              <span className="star">★</span>
+              <span className="star">★</span>
+              <span className="star">★</span>
             </div>
             <div 
               className="vertical-apply-tab"

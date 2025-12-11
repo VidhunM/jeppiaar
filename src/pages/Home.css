@@ -612,7 +612,8 @@
 }
 
 .banner-content p {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
+  font-weight: 600;
   margin-bottom: 2rem;
   line-height: 1.6;
   color: white;
@@ -767,11 +768,12 @@
   }
 
   .banner-content h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .banner-content p {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
   }
 
   .admissions-banner {
@@ -846,7 +848,12 @@
   }
 
   .banner-content h2 {
-    font-size: 1.75rem;
+    font-size: 2rem;
+  }
+
+  .banner-content p {
+    font-size: 1.1rem;
+    font-weight: 600;
   }
 
   .admissions-banner {
@@ -1001,7 +1008,8 @@
   }
 
   .banner-content p {
-    font-size: 0.9rem;
+    font-size: 1rem;
+    font-weight: 600;
     margin-bottom: 1.5rem;
   }
 
