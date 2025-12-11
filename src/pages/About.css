@@ -417,6 +417,21 @@
   width: 100%;
 }
 
+.leadership-profile.profile-white:first-of-type .profile-content {
+  margin-left: -2rem;
+  padding-left: 2rem;
+}
+
+.leadership-profile.profile-dark.profile-reverse .profile-content {
+  margin-right: -2rem;
+  padding-right: 2rem;
+}
+
+.leadership-profile.profile-white:nth-of-type(3) .profile-content {
+  margin-left: -2rem;
+  padding-left: 2rem;
+}
+
 .profile-title {
   font-size: 2rem;
   font-weight: 700;
