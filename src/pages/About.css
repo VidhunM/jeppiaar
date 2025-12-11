@@ -2,110 +2,560 @@
   padding-top: 80px;
 }
 
-.about-hero {
-  background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+/* About Us Banner */
+.about-banner {
+  background: linear-gradient(180deg, #0E0529 0%, #5A556A 100%);
   color: white;
-  padding: 4rem 2rem;
+  padding: 5rem 2rem;
   text-align: center;
+  width: 100%;
+  position: relative;
+  margin-top: 4rem;
 }
 
-.about-hero h1 {
-  font-size: 3rem;
+.about-banner h1 {
+  font-size: 3.5rem;
   font-weight: 700;
-  margin-bottom: 1rem;
-  animation: fadeInUp 0.8s ease-out;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
-.about-hero p {
-  font-size: 1.2rem;
-  opacity: 0.9;
-  animation: fadeInUp 0.8s ease-out 0.2s both;
-}
-
-.about-content {
+/* Introduction Section */
+.introduction-section {
+  background: white;
   padding: 4rem 2rem;
+  position: relative;
 }
 
-.about-section {
+.introduction-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
   margin-bottom: 3rem;
-  max-width: 900px;
+  position: relative;
+  max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.about-section h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #1a237e;
-  margin-bottom: 1.5rem;
-  animation: fadeInLeft 0.8s ease-out;
+.introduction-text {
+  flex: 1;
+  max-width: 1000px;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.about-section p {
+.introduction-text h2 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #000;
+  margin-bottom: 2.5rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  text-align: center;
+}
+
+.introduction-text p {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: #000;
+  margin-bottom: 1.8rem;
+  text-align: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 400;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+.vertical-apply-tab {
+  position: fixed;
+  right: 2.5rem;
+  bottom: 20rem;
+  transform: rotate(90deg);
+  transform-origin: center right;
+  background: #0E0529;
+  color: #ffffff;
+  padding: 1.25rem 2.5rem;
+  border-radius: 10px 10px 0 0;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 1000;
+  white-space: nowrap;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.vertical-apply-tab::before {
+  content: '↑';
+  font-size: 0.8rem;
+}
+
+.vertical-apply-tab:hover {
+  background: #1a0a3d;
+  transform: rotate(90deg) translateY(-2px);
+}
+
+.vertical-apply-tab span {
+  display: block;
+}
+
+.introduction-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.intro-image {
+  width: 100%;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 450px;
+}
+
+.intro-image:first-child {
+  border-radius: 12px;
+}
+
+.intro-image:first-child img {
+  border-radius: 12px;
+}
+
+.intro-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Vision & Mission Section */
+.vision-mission-section {
+  background: #f5f5f5;
+  padding: 4rem 2rem;
+}
+
+.vision-mission-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.vision-card,
+.mission-card {
+  background: white;
+  padding: 3rem 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.card-icon {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.card-icon img {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+  max-height: 80px;
+}
+
+.vision-card h3,
+.mission-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.title-separator {
+  width: 60px;
+  height: 2px;
+  background: #333;
+  margin: 0 0 1.5rem 0;
+}
+
+.vision-card p,
+.mission-card p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+  text-align: left;
+  margin: 0;
+}
+
+/* Core Values Section */
+.core-values-section {
+  background: white;
+  padding: 4rem 2rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.section-subtitle {
   font-size: 1.1rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.core-values-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+.core-value-card {
+  background: #f5f5f5;
+  border: none;
+  padding: 2.5rem 2rem;
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.core-value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.core-value-card.highlighted {
+  background: #0E0529;
+  color: white;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.core-value-card.highlighted:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.core-value-card.highlighted h4,
+.core-value-card.highlighted p {
+  color: white;
+}
+
+.value-icon-container {
+  width: 80px;
+  height: 80px;
+  background: #0E0529;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.core-value-card.highlighted .value-icon-container {
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.value-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.value-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.core-value-card h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 0.75rem;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.core-value-card.highlighted h4 {
+  color: white;
+}
+
+.core-value-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #000;
+  margin: 0;
+  text-align: center;
+  font-weight: 400;
+}
+
+.core-value-card.highlighted p {
+  color: white;
+}
+
+/* Leadership Section */
+.leadership-section {
+  padding: 4rem 0;
+}
+
+.leadership-section .container {
+  max-width: 100%;
+  padding: 0;
+}
+
+.leadership-profile {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 4rem;
+  padding: 3rem;
+  border-radius: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.profile-reverse {
+  grid-template-columns: 1fr 1fr;
+}
+
+.profile-reverse .profile-content {
+  order: 1;
+}
+
+.profile-reverse .profile-image {
+  order: 2;
+}
+
+.profile-white {
+  background: white;
+}
+
+.profile-dark {
+  background: #0E0529;
+  color: white;
+}
+
+.profile-image {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-image img {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #0E0529;
+}
+
+.profile-dark .profile-image img {
+  border-color: white;
+}
+
+.profile-content {
+  width: 100%;
+}
+
+.profile-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0E0529;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.profile-dark .profile-title {
+  color: white;
+}
+
+.profile-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #0E0529;
+  margin-bottom: 0.75rem;
+}
+
+.profile-dark .profile-name {
+  color: white;
+}
+
+.profile-role {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.profile-dark .profile-role {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.profile-description {
+  font-size: 1rem;
   line-height: 1.8;
   color: #555;
 }
 
+.profile-dark .profile-description {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.profile-description p {
+  margin-bottom: 1rem;
+}
+
+.profile-description p:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive Styles */
 @media (max-width: 968px) {
   .about-page {
     padding-top: 70px;
   }
 
-  .about-hero {
-    padding: 3rem 1.5rem;
-  }
-
-  .about-hero h1 {
+  .about-banner h1 {
     font-size: 2.5rem;
   }
 
-  .about-hero p {
-    font-size: 1.1rem;
+  .introduction-content {
+    flex-direction: column;
   }
 
-  .about-content {
-    padding: 3rem 1.5rem;
+  .vertical-apply-tab {
+    position: relative;
+    writing-mode: horizontal-tb;
+    text-orientation: mixed;
+    min-height: auto;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
   }
 
-  .about-section h2 {
-    font-size: 1.75rem;
+  .introduction-images {
+    grid-template-columns: 1fr;
   }
 
-  .about-section p {
-    font-size: 1rem;
+  .vision-mission-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .core-values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .leadership-profile {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-image {
+    width: 150px;
+    height: 150px;
   }
 }
 
 @media (max-width: 768px) {
-  .about-hero {
-    padding: 2.5rem 1rem;
+  .about-banner {
+    padding: 3rem 1.5rem;
   }
 
-  .about-hero h1 {
+  .about-banner h1 {
     font-size: 2rem;
   }
 
-  .about-hero p {
+  .introduction-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .introduction-text h2 {
+    font-size: 2rem;
+  }
+
+  .introduction-text p {
     font-size: 1rem;
   }
 
-  .about-content {
-    padding: 2.5rem 1rem;
+  .vision-mission-section {
+    padding: 3rem 1.5rem;
   }
 
-  .about-section {
-    margin-bottom: 2.5rem;
+  .vision-card,
+  .mission-card {
+    padding: 2rem 1.5rem;
   }
 
-  .about-section h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1.25rem;
+  .core-values-section {
+    padding: 3rem 1.5rem;
   }
 
-  .about-section p {
-    font-size: 0.95rem;
-    line-height: 1.7;
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .core-values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .leadership-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .leadership-profile {
+    padding: 2rem 1.5rem;
   }
 }
 
@@ -114,35 +564,83 @@
     padding-top: 60px;
   }
 
-  .about-hero {
-    padding: 2rem 0.75rem;
+  .about-banner {
+    padding: 2rem 1rem;
   }
 
-  .about-hero h1 {
+  .about-banner h1 {
     font-size: 1.75rem;
-    margin-bottom: 0.75rem;
   }
 
-  .about-hero p {
-    font-size: 0.9rem;
+  .introduction-section {
+    padding: 2rem 1rem;
   }
 
-  .about-content {
-    padding: 2rem 0.75rem;
+  .introduction-text h2 {
+    font-size: 1.75rem;
   }
 
-  .about-section {
-    margin-bottom: 2rem;
+  .introduction-text p {
+    font-size: 0.95rem;
   }
 
-  .about-section h2 {
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
+  .introduction-images {
+    gap: 1.5rem;
   }
 
-  .about-section p {
-    font-size: 0.9rem;
-    line-height: 1.6;
+  .vision-mission-section {
+    padding: 2rem 1rem;
+  }
+
+  .vision-card,
+  .mission-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .card-icon {
+    font-size: 2.5rem;
+  }
+
+  .vision-card h3,
+  .mission-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .core-values-section {
+    padding: 2rem 1rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .core-value-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .leadership-section {
+    padding: 2rem 1rem;
+  }
+
+  .leadership-profile {
+    padding: 1.5rem 1rem;
+    gap: 2rem;
+  }
+
+  .profile-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .profile-name {
+    font-size: 1.2rem;
+  }
+
+  .profile-description {
+    font-size: 0.95rem;
   }
 }
-

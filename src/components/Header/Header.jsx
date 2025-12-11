@@ -19,9 +19,13 @@ const Header = () => {
   }, []);
 
   const handleNavClick = (e, path) => {
-    if (isHomePage && (path === '/about' || path === '/courses' || path === '/research' || path === '/contact')) {
+    if (isHomePage && (path === '/courses' || path === '/research' || path === '/contact')) {
       e.preventDefault();
       setShowUnderConstruction(true);
+      setIsMobileMenuOpen(false);
+    }
+    // Allow navigation to About page
+    if (path === '/about') {
       setIsMobileMenuOpen(false);
     }
   };
