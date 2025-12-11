@@ -374,7 +374,7 @@
 }
 
 .profile-reverse {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr;
 }
 
 .profile-reverse .profile-content {
