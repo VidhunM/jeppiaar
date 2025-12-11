@@ -393,12 +393,12 @@
 
   .collaboration-section {
     padding: 0.5rem 1.5rem 3rem 1.5rem;
-    margin-top: -18rem;
+    margin-top: -22rem;
   }
 
   .collaboration-section h2 {
     font-size: 2rem;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
   }
 
   .collaboration-text {
@@ -494,12 +494,12 @@
 @media (max-width: 768px) {
   .collaboration-section {
     padding: 0.5rem 1rem 2.5rem 1rem;
-    margin-top: -20rem;
+    margin-top: -24rem;
   }
 
   .collaboration-section h2 {
     font-size: 1.7rem;
-    margin-top: 0.75rem;
+    margin-top: 0.5rem;
   }
 
   .collaboration-text {
@@ -570,12 +570,12 @@
 
   .collaboration-section {
     padding: 0.5rem 0.75rem 2rem 0.75rem;
-    margin-top: -22rem;
+    margin-top: -26rem;
   }
 
   .collaboration-section h2 {
     font-size: 1.5rem;
-    margin-top: 0.5rem;
+    margin-top: 0.25rem;
   }
 
   .collaboration-text {
