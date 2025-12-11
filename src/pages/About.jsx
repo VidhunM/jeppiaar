@@ -59,7 +59,7 @@ const About = () => {
                 Jeppiaar Academy of Psychology and Research is established to bridge the gap between psychology education and real-world application. With a vision to nurture ethical, skilled, and research-oriented professionals, the academy offers advanced courses aligned with global mental health standards.
               </p>
               <p>
-                Jeppiaar Academy of Psychology and Research will offer specialised programmes in key domains of psychology, namely - Art Therapy, Counselling & Child Psychology, Counselling & Organisational Psychology, and Counselling & Forensic Psychology.
+              namely- Counselling & Child Psychology , Counselling & Organisational Psychology, Counselling & Forensic Psychology, and Art Therapy.
               </p>
             </div>
             <div 
@@ -175,7 +175,13 @@ const About = () => {
               <p className="profile-role">Chairman, Jeppiaar Academy of Psychology and Research</p>
               <div className="profile-description">
                 <p>
-                  B. Jaikumar Christhurajan is a second-generation entrepreneur and serves as the Chairman & Managing Director of the Jeppiaar Group. With an academic foundation in Engineering and an MBA from the UK, he brings strategic leadership and vision to the organization. His commitment extends beyond business, as he is actively involved with the St. Joseph's Institute of Science and Technology Trust and serves as a patron of the Shree Raghavendra Basketball Club. His dedication to community service was evident during the Chennai floods and Vardha cyclone, where he led relief efforts. At Jeppiaar Academy of Psychology and Research, he provides strategic direction, ensuring the institution remains at the forefront of psychology education and research.
+                  B. Jaikumar ChristhuRajan is a visionary second-generation entrepreneur and the Chairman & Managing Director of the Jeppiaar Group. With a strong academic foundation in Engineering and an MBA from the UK, he brings strategic leadership, administrative excellence, and a people-centric approach to all Jeppiaar institutions. He currently serves on the Board of Trustees of Sancta Maria Educational Trust.
+                </p>
+                <p>
+                  An educationalist since 2010, he has played a pivotal role as Director of the Jeppiaar Group of Educational Institutions. Through his training and placement initiatives, he has mentored and guided hundreds of students across diverse disciplines, helping them build successful careers. A strong supporter of youth development, he is the JCR Basketball Club, which trains over 250 children free of cost and has been conducting All India Basketball Tournaments for more than 22 years. Known for his compassion and community service, Jaikumar is deeply respected for his contributions during the 2015 Chennai floods and 2016 Vardha cyclone, where his relief efforts reached thousands.
+                </p>
+                <p>
+                  At Jeppiaar Academy of Psychology and Research, he provides strategic direction and ensures that the academy grows as a centre of excellence dedicated to mental health education, youth empowerment, and holistic societal wellbeing.
                 </p>
               </div>
             </div>
@@ -184,17 +190,20 @@ const About = () => {
           <div className="leadership-profile profile-dark profile-reverse">
             <div className="profile-content">
               <h3 className="profile-title">FOUNDER - DIRECTOR'S MESSAGE</h3>
-              <h4 className="profile-name">DR. SARANYA T. JAIKUMAR, PH.D. (EDUCATIONAL PSYCHOLOGY)</h4>
+              <h4 className="profile-name">DR. SARANYA T. JAIKUMAR, B.TECH., DIPE., M.SC., PH.D.</h4>
               <p className="profile-role">Founder & Director, Jeppiaar Academy of Psychology and Research</p>
               <div className="profile-description">
                 <p>
-                  Dr. Saranya T. Jaikumar is a distinguished psychologist with a Ph.D. in Educational Psychology. As the Founder and Director of Jeppiaar Academy of Psychology and Research, she brings a wealth of academic expertise and a passion for advancing psychology education.
+                  Dr. Saranya Jaikumar is one of India's first Doctorates in Educational Psychology and has made a significant impact in the field through her academic expertise and commitment to student development. As the founder of Voxdemy, she has tutored and mentored more than 7,000 psychology students across the globe, empowering learners with practical skills, academic clarity, and professional confidence. She serves as an Independent Expert to the Ministry of Women & Child Development, Government of India, Tamil Nadu Police Department, Samagra Shiksha, and numerous schools and colleges across India.
                 </p>
                 <p>
-                  Her research interests span educational psychology, child development, and innovative teaching methodologies. She is a strong advocate for practice-oriented education and has been instrumental in developing the academy's comprehensive curriculum that bridges theory and application.
+                  A former Member of the Tamil Nadu Commission for Protection of Child Rights, Dr. Saranya is widely acknowledged as a leading advocate for POCSO awareness and digital safety for children. She has conducted her flagship program "Raksha" across 3000+ schools, addressing students, teachers, and parents.
                 </p>
                 <p>
-                  Under her leadership, the academy has established partnerships with leading institutions and developed programs that prepare students to address real-world mental health challenges. She is committed to fostering an environment of excellence, innovation, and social responsibility.
+                  Dr. Saranya is also a Consultant Educational Psychologist at Shadithya Child Therapy Centre and a Child Protection Policy Expert for various international accreditation bodies. She serves as visiting faculty, programme head, keynote speaker, jury panelist, and motivational speaker at national and international platforms.
+                </p>
+                <p>
+                  Her articles, interviews, and expert opinions are widely featured in leading newspapers, magazines, TV channels, and digital media.
                 </p>
               </div>
             </div>

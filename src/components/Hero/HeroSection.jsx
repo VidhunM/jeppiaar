@@ -32,10 +32,10 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection }) => {
   ];
 
   const programCards = [
-    { text: 'Clinical Psychology', color: '#FDFFB6' },
-    { text: 'Counseling Psychology', color: '#D9EDF8' },
-    { text: 'Industrial Psychology', color: '#DEDAF3' },
-    { text: 'Research Methods', color: '#FFAEAD' }
+    { text: 'Counselling and Child Psychology', color: '#FDFFB6' },
+    { text: 'Counselling and Organizational Psychology', color: '#D9EDF8' },
+    { text: 'Counselling and Forensic Psychology', color: '#DEDAF3' },
+    { text: 'Art Therapy', color: '#FFAEAD' }
   ];
 
   useEffect(() => {

@@ -26,7 +26,7 @@ const LeadGeneration = ({ onShowConstructionPopup }) => {
               <div className="form-row">
                 <input type="tel" placeholder="Mobile number" required />
                 <select className="course-select" required>
-                  <option value="">Select Course</option>
+                  <option value="">Select Diploma Course</option>
                   <option value="Counselling and Child Psychology">1. Counselling and Child Psychology</option>
                   <option value="Counselling and Organisational Psychology">2. Counselling and Organisational Psychology</option>
                   <option value="Counselling and Forensic Psychology">3. Counselling and Forensic Psychology</option>

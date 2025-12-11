@@ -92,7 +92,7 @@
 .hero-sidebar {
   position: absolute;
   top: 50%;
-  right: 8rem;
+  right: 10rem;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
@@ -135,6 +135,8 @@
   color: white;
   text-align: left;
   letter-spacing: -0.02em;
+  padding-left: 0;
+  margin-left: -1rem;
 }
 
 .admission-text {
@@ -146,6 +148,8 @@
   color: white;
   text-align: left;
   line-height: 1.2;
+  padding-left: 0;
+  margin-left: -1rem;
 }
 
 .admission-text span {

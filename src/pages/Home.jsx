@@ -47,11 +47,11 @@ const Home = () => {
     },
     {
       question: '3. Are the programs accredited or recognized?',
-      answer: 'Our Advanced Diploma courses are accredited in collaboration with Bharathidasan University, which is recognized by the University Grants Commission (UGC).'
+      answer: 'Our diploma courses are conducted in collaboration with University Grants Commission (UGC).'
     },
     {
-      question: '4. Do I need prior clinical or counselling experience?',
-      answer: 'Prior counselling or clinical experience is not required to apply for the Advanced Diploma.'
+      question: '4. Can you become a counselor by attending this course?',
+      answer: 'Yes, you can become a counselor in your chosen specialization (Child Psychology, Psychology, Forensic Psychology, or Art Therapy). After completing this course, you can work as a counselor under the supervision of a qualified psychologist.'
     }
   ];
   return (
@@ -79,8 +79,8 @@ const Home = () => {
               <span className="badge-regular">Accredited</span>
             </div>
             <div className="badge scroll-from-right">
-              <span className="badge-bold">Approved</span>
-              <span className="badge-regular">by Skill India</span>
+              <span className="badge-bold">Skill India</span>
+              <span className="badge-regular">Approved</span>
             </div>
           </div>
         </div>
@@ -98,7 +98,7 @@ const Home = () => {
           <div className="services-grid">
             <div 
               className="service-item scroll-from-left"
-              onClick={showConstructionPopup}
+              onClick={() => window.open('https://www.voxdemy.com/courses/Psychology-Basics-Course-Jan-2026-68569c00e0203b5c9661eafa', '_blank')}
             >
               <div className="service-icon">
                 <img src={Ellipse} alt="Certification Programs" />
@@ -107,7 +107,7 @@ const Home = () => {
             </div>
             <div 
               className="service-item scroll-from-right"
-              onClick={() => window.open('https://www.voxdemy.com/courses/YOUNG-RESAEARCHER-67da64a1f529217c97f00cd6', '_blank')}
+              onClick={() => window.open('https://www.thepoloresearch.com/', '_blank')}
             >
               <div className="service-icon">
                 <img src={Layer} alt="Research Wing - POLO" />
@@ -185,8 +185,8 @@ const Home = () => {
       <section className="admissions-banner" style={{ backgroundImage: `url(${image3})` }}>
         <div className="banner-overlay"></div>
         <div className="banner-content scroll-from-left">
-          <h2>ADMISSIONS OPEN 2026 - START YOUR JOURNEY IN PSYCHOLOGY</h2>
-          <p>Join Jeppiaar Academy for practice-oriented psychology diplomas that blend classroom learning with real-world experience.</p>
+          <h2> 2026 ADMISSIONS OPEN - START YOUR JOURNEY IN PSYCHOLOGY</h2>
+          <p>Join Jeppiaar Academy for practice-oriented psychology diploma programs that blend classroom learning with real-world experience.</p>
           <button 
             className="apply-now-btn"
             onClick={showConstructionPopup}
