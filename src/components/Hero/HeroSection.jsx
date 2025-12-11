@@ -7,6 +7,7 @@ import hero4Image from '../../assets/images/hero4.png';
 
 const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
   
   const slides = [
     {
@@ -30,6 +31,32 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection }) => {
       tagline: 'Mind - Science - Innovation'
     }
   ];
+
+  // Preload all hero images
+  useEffect(() => {
+    const imageUrls = [heroImage, hero2Image, hero3Image, hero4Image];
+    const imagePromises = imageUrls.map((imageUrl) => {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.onload = resolve;
+        img.onerror = reject;
+        img.src = imageUrl;
+        // Force iOS to load the image
+        if (img.complete) {
+          resolve();
+        }
+      });
+    });
+
+    Promise.all(imagePromises)
+      .then(() => {
+        setImagesLoaded(true);
+      })
+      .catch((error) => {
+        console.error('Error preloading images:', error);
+        setImagesLoaded(true); // Still show content even if preload fails
+      });
+  }, []);
 
   const programCards = [
     { text: 'Counselling and Child Psychology', color: '#FDFFB6' },
@@ -55,8 +82,14 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection }) => {
 
   return (
     <div className="hero-section">
+      {/* Preload all images as hidden img tags for iOS */}
+      <div style={{ position: 'absolute', visibility: 'hidden', width: 0, height: 0, overflow: 'hidden' }}>
+        {slides.map((slide, index) => (
+          <img key={index} src={slide.image} alt="" />
+        ))}
+      </div>
       <div 
-        className={`hero-slide ${currentSlide === 0 ? 'hero-slide-first' : ''} ${currentSlide === 3 ? 'hero-slide-fourth' : ''}`}
+        className={`hero-slide ${currentSlide === 0 ? 'hero-slide-first' : ''} ${currentSlide === 3 ? 'hero-slide-fourth' : ''} ${imagesLoaded ? 'images-loaded' : ''}`}
         style={{ backgroundImage: `url(${slides[currentSlide].image})` }}
       >
         {currentSlide === 0 && <div className="hero-gradient-overlay"></div>}

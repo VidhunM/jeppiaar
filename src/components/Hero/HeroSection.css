@@ -23,6 +23,27 @@
   margin: 0;
   padding: 0;
   transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+  /* iOS specific fixes */
+  -webkit-background-size: cover !important;
+  background-attachment: scroll;
+  will-change: background-image;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+.hero-slide.images-loaded {
+  opacity: 1;
+}
+
+/* iOS Safari specific fixes */
+@supports (-webkit-touch-callout: none) {
+  .hero-slide {
+    -webkit-background-size: cover !important;
+    background-size: cover !important;
+    background-attachment: scroll !important;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
 }
 
 .hero-slide-fourth {
@@ -791,6 +812,11 @@
   .hero-slide {
     height: 45vh;
     min-height: 400px;
+    -webkit-background-size: cover !important;
+    background-size: cover !important;
+    background-attachment: scroll !important;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 
   .hero-content {
@@ -915,6 +941,11 @@
   .hero-slide {
     height: 40vh;
     min-height: 350px;
+    -webkit-background-size: cover !important;
+    background-size: cover !important;
+    background-attachment: scroll !important;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 
   .hero-content {

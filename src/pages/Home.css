@@ -413,7 +413,7 @@
   }
 
   .collaboration-section h2 {
-    font-size: 2rem;
+    font-size: 1.6rem;
     margin-top: 0.5rem;
   }
 
@@ -461,6 +461,11 @@
 
   .service-item p {
     font-size: 0.9rem;
+  }
+
+  .service-item:nth-child(1) p,
+  .service-item:nth-child(2) p {
+    font-size: 0.75rem;
   }
 
 
@@ -519,7 +524,7 @@
   }
 
   .collaboration-section h2 {
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     margin-top: 0.5rem;
   }
 
@@ -565,6 +570,11 @@
     font-size: 0.85rem;
   }
 
+  .service-item:nth-child(1) p,
+  .service-item:nth-child(2) p {
+    font-size: 0.7rem;
+  }
+
 
   .banner-content {
     margin-left: 1.5rem;
@@ -604,7 +614,7 @@
   }
 
   .collaboration-section h2 {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     margin-top: 0.25rem;
   }
 
@@ -673,6 +683,14 @@
     max-height: 70px;
   }
 
+  .service-item p {
+    font-size: 0.8rem;
+  }
+
+  .service-item:nth-child(1) p,
+  .service-item:nth-child(2) p {
+    font-size: 0.65rem;
+  }
 
   .faq-section {
     padding: 2rem 1rem;
