@@ -210,7 +210,7 @@ const About = () => {
           <div className="leadership-profile profile-dark profile-reverse scroll-from-right">
             <div className="profile-content">
               <h3 className="profile-title">FOUNDER - DIRECTOR'S MESSAGE</h3>
-              <h4 className="profile-name">DR. SARANYA T. JAIKUMAR, B.TECH., DIPE., M.SC., PH.D.</h4>
+              <h4 className="profile-name">DR. SARANYA T. JAIKUMAR, B.TECH., Dip.E, M.SC., ph.D</h4>
               <p className="profile-role">Founder & Director, Jeppiaar Academy of Psychology and Research</p>
               <div className="profile-description">
                 <p>
@@ -249,7 +249,7 @@ const About = () => {
             </div>
             <div className="profile-content">
               <h3 className="profile-title">DEAN - ACADEMICS</h3>
-              <h4 className="profile-name">DR. S. USHARANI, PH.D. (PSYCHOLOGY)</h4>
+              <h4 className="profile-name">DR. S. USHARANI, PH.D.</h4>
               <p className="profile-role">Dean, Jeppiaar Academy of Psychology and Research</p>
               <div className="profile-description">
                 <p>
