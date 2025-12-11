@@ -249,7 +249,7 @@ const About = () => {
             </div>
             <div className="profile-content">
               <h3 className="profile-title">DEAN - ACADEMICS</h3>
-              <h4 className="profile-name">DR. S. USHARANI, PH.D.</h4>
+              <h4 className="profile-name">DR. S. USHARANI, ph.D</h4>
               <p className="profile-role">Dean, Jeppiaar Academy of Psychology and Research</p>
               <div className="profile-description">
                 <p>
