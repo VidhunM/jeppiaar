@@ -193,7 +193,7 @@ const About = () => {
             <div className="profile-content">
               <h3 className="profile-title">CHAIRMAN</h3>
               <h4 className="profile-name">B. JAIKUMAR CHRISTHURAJAN, M.E.,M.B.A(UK)</h4>
-              <p className="profile-role">Chairman, Jeppiaar Academy of Psychology and Research</p>
+              
               <div className="profile-description">
                 <p>
                   B. Jaikumar ChristhuRajan is a visionary second-generation entrepreneur and the Chairman & Managing Director of the Jeppiaar Group. With a strong academic foundation in Engineering and an MBA from the UK, he brings strategic leadership, administrative excellence, and a people-centric approach to all Jeppiaar institutions. He currently serves on the Board of Trustees of Sancta Maria Educational Trust.
@@ -208,9 +208,9 @@ const About = () => {
 
           <div className="leadership-profile profile-dark profile-reverse scroll-from-right">
             <div className="profile-content">
-              <h3 className="profile-title">FOUNDER - DIRECTOR'S MESSAGE</h3>
-              <h4 className="profile-name">DR. SARANYA T. JAIKUMAR, B.TECH., Dip.E, M.SC., ph.D</h4>
-              <p className="profile-role">Founder & Director, Jeppiaar Academy of Psychology and Research</p>
+              <h3 className="profile-title">FOUNDER & DIRECTOR'S MESSAGE</h3>
+              <h4 className="profile-name">DR. SARANYA T. JAIKUMAR, B.Tech., M.Sc., Ph.D</h4>
+              
               <div className="profile-description">
                 <p>
                   Dr. Saranya Jaikumar is one of India's first Doctorates in Educational Psychology and has made a significant impact in the field through her academic expertise and commitment to student development. As the founder of Voxdemy, she has tutored and mentored more than 7,000 psychology students across the globe, empowering learners with practical skills, academic clarity, and professional confidence. She serves as an Independent Expert to the Ministry of Women & Child Development, Government of India, Tamil Nadu Police Department, Samagra Shiksha, and numerous schools and colleges across India.
@@ -248,8 +248,8 @@ const About = () => {
             </div>
             <div className="profile-content">
               <h3 className="profile-title">DEAN - ACADEMICS</h3>
-              <h4 className="profile-name">DR. S. USHARANI, ph.D</h4>
-              <p className="profile-role">Dean, Jeppiaar Academy of Psychology and Research</p>
+              <h4 className="profile-name">DR. S. USHARANI, Ph.D</h4>
+              
               <div className="profile-description">
                 <p>
                   Dr. S. Usharani is an accomplished academician and psychologist with extensive experience in psychology education and research. With a Ph.D. in Psychology, she has dedicated her career to advancing the field through teaching, research, and academic leadership.

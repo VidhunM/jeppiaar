@@ -66,9 +66,9 @@ const Footer = () => {
           <div className="footer-section">
             <h4>GET IN TOUCH</h4>
             <div className="contact-info">
-              <p><a href="tel:+919898384598">+91 98983 84598</a></p>
-              <p><a href="mailto:infoJeppiaar@gmail.com">infoJeppiaar@gmail.com</a></p>
-              <p>Tamilnadu, India</p>
+              <p>1/40H, EJR Enclave, Mount Poonamallee Road, St. Thomas Mt, Chennai - 600016</p>
+              <p><a href="mailto:mail@jeppiaaracademy.com">mail@jeppiaaracademy.com</a></p>
+              <p><a href="tel:+919381811111">93818-11111</a></p>
             </div>
             <div className="footer-map">
               <iframe
