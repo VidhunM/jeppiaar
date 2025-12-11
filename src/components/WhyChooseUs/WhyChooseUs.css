@@ -115,7 +115,7 @@
   }
 
   .images-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
   }
 
@@ -124,8 +124,14 @@
   .image-item-3,
   .image-item-4,
   .image-item-5 {
-    grid-column: 1;
+    grid-column: span 1;
     margin-left: 0;
+  }
+
+  .image-item-5 {
+    grid-column: 1 / -1;
+    justify-self: center;
+    max-width: 50%;
   }
 
   .group-image {
@@ -144,7 +150,23 @@
   }
 
   .images-grid {
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
+  }
+
+  .image-item-1,
+  .image-item-2,
+  .image-item-3,
+  .image-item-4,
+  .image-item-5 {
+    grid-column: span 1;
+    margin-left: 0;
+  }
+
+  .image-item-5 {
+    grid-column: 1 / -1;
+    justify-self: center;
+    max-width: 50%;
   }
 
   .group-image {
