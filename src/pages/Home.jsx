@@ -47,7 +47,7 @@ const Home = () => {
     },
     {
       question: '3. Are the programs accredited or recognized?',
-      answer: 'Our diploma courses are conducted in collaboration with University Grants Commission (UGC).'
+      answer: 'Our diploma courses are conducted in collaboration with Bharathidasan university, which is recognized by the University of Grants Commission (UGC).'
     },
     {
       question: '4. Can you become a counselor by attending this course?',

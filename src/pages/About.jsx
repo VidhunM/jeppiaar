@@ -162,7 +162,7 @@ const About = () => {
             {coreValues.map((value, index) => (
               <div 
                 key={index} 
-                className={`core-value-card scroll-from-${index % 2 === 0 ? 'left' : 'right'} ${index === 2 ? 'highlighted' : ''}`}
+                className={`core-value-card scroll-from-${index % 2 === 0 ? 'left' : 'right'}`}
               >
                 <div className="value-icon-container">
                   <div className="value-icon">
