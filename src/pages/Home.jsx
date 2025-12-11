@@ -80,8 +80,7 @@ const Home = () => {
             </div>
             <div className="badge scroll-from-right">
               <span className="badge-bold">Approved</span>
-              <span className="badge-regular">by Skill</span>
-              <span className="badge-regular">India</span>
+              <span className="badge-regular">by Skill India</span>
             </div>
           </div>
         </div>
