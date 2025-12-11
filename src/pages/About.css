@@ -485,7 +485,7 @@
   line-height: 1.8;
   color: #555;
   text-align: justify;
-  text-align-last: center;
+  text-align-last: left;
 }
 
 .profile-dark .profile-description {
