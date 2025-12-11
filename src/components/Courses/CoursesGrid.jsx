@@ -7,7 +7,7 @@ import D1 from '../../assets/icons/D1.png';
 import D2 from '../../assets/icons/D2.png';
 import './CoursesGrid.css';
 
-const CoursesGrid = () => {
+const CoursesGrid = ({ onKnowMoreClick }) => {
   const programs = [
     {
       id: 1,
@@ -75,7 +75,7 @@ const CoursesGrid = () => {
                     <span>Courses: {program.eligibility}</span>
                   </div>
                 </div>
-                <button className="know-more-btn">Know more</button>
+                <button className="know-more-btn" onClick={onKnowMoreClick}>Know more</button>
               </div>
             </div>
           ))}

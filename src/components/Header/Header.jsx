@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Logo1 from '../../assets/icons/Logo1.png';
 import './Header.css';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [showUnderConstruction, setShowUnderConstruction] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,37 +18,59 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleNavClick = (e, path) => {
+    if (isHomePage && (path === '/about' || path === '/courses' || path === '/research' || path === '/contact')) {
+      e.preventDefault();
+      setShowUnderConstruction(true);
+      setIsMobileMenuOpen(false);
+    }
+  };
+
+  const closePopup = () => {
+    setShowUnderConstruction(false);
+  };
+
   return (
-    <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
-      <div className="header-container">
-        <Link to="/" className="logo-container">
-          <div className="logo">
-            <img 
-              src={Logo1} 
-              alt="Jeppiaar Academy"
-              onError={(e) => {
-                console.error('Logo image failed to load, trying fallback');
-                e.target.src = '/icons/Logo1.png';
-              }}
-              onLoad={() => {
-                console.log('Logo image loaded successfully');
-              }}
-            />
-          </div>
-        </Link>
+    <>
+      <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
+        <div className="header-container">
+          <Link to="/" className="logo-container">
+            <div className="logo">
+              <img 
+                src={Logo1} 
+                alt="Jeppiaar Academy"
+                onError={(e) => {
+                  console.error('Logo image failed to load, trying fallback');
+                  e.target.src = '/icons/Logo1.png';
+                }}
+                onLoad={() => {
+                  console.log('Logo image loaded successfully');
+                }}
+              />
+            </div>
+          </Link>
 
-        <nav className={`nav ${isMobileMenuOpen ? 'open' : ''}`}>
-          <Link to="/" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
-          <Link to="/about" onClick={() => setIsMobileMenuOpen(false)}>About Us</Link>
-          <Link to="/leadership" onClick={() => setIsMobileMenuOpen(false)}>Leadership</Link>
-          <Link to="/courses" onClick={() => setIsMobileMenuOpen(false)}>Diploma Programs</Link>
-          <Link to="/research" onClick={() => setIsMobileMenuOpen(false)}>Research & Publication</Link>
-          <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>Contact Us</Link>
-        </nav>
+          <nav className={`nav ${isMobileMenuOpen ? 'open' : ''}`}>
+            <Link to="/" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
+            <Link to="/about" onClick={(e) => handleNavClick(e, '/about')}>About Us</Link>
+            <Link to="/courses" onClick={(e) => handleNavClick(e, '/courses')}>Diploma Programs</Link>
+            <Link to="/research" onClick={(e) => handleNavClick(e, '/research')}>Research & Publication</Link>
+            <Link to="/contact" onClick={(e) => handleNavClick(e, '/contact')}>Contact Us</Link>
+          </nav>
 
-        <button className="cta-button" onClick={() => window.location.href = '/contact'}>
-          Join Us Now
-        </button>
+          <button 
+            className="cta-button" 
+            onClick={() => {
+              const startCareerSection = document.getElementById('start-career-section');
+              if (startCareerSection) {
+                startCareerSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              } else {
+                window.location.href = '/contact';
+              }
+            }}
+          >
+            Join Us Now
+          </button>
 
         <button 
           className="mobile-menu-toggle"
@@ -57,6 +82,17 @@ const Header = () => {
         </button>
       </div>
     </header>
+
+    {showUnderConstruction && (
+      <div className="under-construction-popup" onClick={closePopup}>
+        <div className="popup-content" onClick={(e) => e.stopPropagation()}>
+          <button className="popup-close" onClick={closePopup}>×</button>
+          <h2>Site Under Construction</h2>
+          <p>This page is currently under construction. Please check back soon!</p>
+        </div>
+      </div>
+    )}
+    </>
   );
 };
 

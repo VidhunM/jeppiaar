@@ -16,7 +16,7 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-  margin-top: -8rem;
+  margin-top: -18rem;
 }
 
 .collaboration-decorative-left,
@@ -49,7 +49,7 @@
 .collaboration-section h2 {
   font-size: 2.5rem;
   font-weight: 700;
-  margin-top: 3rem;
+  margin-top: 0;
   margin-bottom: 1rem;
   color: white;
   text-transform: uppercase;
@@ -150,11 +150,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  cursor: pointer;
 }
 
 .service-item:hover {
   transform: translateY(-5px);
+  opacity: 0.9;
 }
 
 .service-icon {
@@ -275,6 +277,33 @@
 
 .lead-form input::placeholder {
   color: #999;
+}
+
+.course-select {
+  padding: 0.85rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  background: white;
+  color: #333;
+  width: 100%;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.85rem center;
+  padding-right: 2.5rem;
+}
+
+.course-select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(14, 5, 41, 0.2);
+}
+
+.course-select option {
+  padding: 0.5rem;
+  background: white;
+  color: #333;
 }
 
 .checkbox-label {
@@ -501,6 +530,26 @@
   color: #666;
   font-weight: 400;
   margin-left: 1rem;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.faq-icon.open {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #f0f0f0;
+  animation: fadeInDown 0.3s ease-out;
+}
+
+.faq-answer p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
 }
 
 .faq-image {
@@ -902,6 +951,12 @@
     font-size: 0.9rem;
   }
 
+  .course-select {
+    padding: 0.75rem;
+    padding-right: 2.5rem;
+    font-size: 0.9rem;
+  }
+
   .form-buttons {
     flex-direction: column;
   }
@@ -957,6 +1012,95 @@
 
   .admissions-banner {
     min-height: 400px;
+  }
+
+  .popup-content {
+    padding: 2rem 1.5rem;
+    max-width: 90%;
+  }
+
+  .popup-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .popup-content p {
+    font-size: 1rem;
+  }
+}
+
+/* Under Construction Popup */
+.under-construction-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.popup-content {
+  background: white;
+  padding: 3rem 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  animation: slideUp 0.3s ease-out;
+}
+
+.popup-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #666;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.popup-close:hover {
+  background: #f5f5f5;
+  color: #000;
+}
+
+.popup-content h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0E0529;
+  margin-bottom: 1rem;
+}
+
+.popup-content p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 

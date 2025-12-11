@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import HeroSection from '../components/Hero/HeroSection';
 import CoursesGrid from '../components/Courses/CoursesGrid';
 import WhyChooseUs from '../components/WhyChooseUs/WhyChooseUs';
@@ -14,9 +14,52 @@ import image2 from '../assets/images/image2.png';
 import './Home.css';
 
 const Home = () => {
+  const [openFaq, setOpenFaq] = useState(null);
+  const [showUnderConstruction, setShowUnderConstruction] = useState(false);
+
+  const toggleFaq = (index) => {
+    setOpenFaq(openFaq === index ? null : index);
+  };
+
+  const showConstructionPopup = () => {
+    setShowUnderConstruction(true);
+  };
+
+  const closePopup = () => {
+    setShowUnderConstruction(false);
+  };
+
+  const scrollToCareerSection = () => {
+    const startCareerSection = document.getElementById('start-career-section');
+    if (startCareerSection) {
+      startCareerSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
+  const faqs = [
+    {
+      question: '1. Who can apply for the advanced diploma programs?',
+      answer: 'Any UG graduate from a recognized university can apply, regardless of their academic background.'
+    },
+    {
+      question: '2. What is the duration of each advanced diploma?',
+      answer: 'The duration of each Advanced Diploma is one year.'
+    },
+    {
+      question: '3. Are the programs accredited or recognized?',
+      answer: 'Our Advanced Diploma courses are accredited in collaboration with Bharathidasan University, which is recognized by the University Grants Commission (UGC).'
+    },
+    {
+      question: '4. Do I need prior clinical or counselling experience?',
+      answer: 'Prior counselling or clinical experience is not required to apply for the Advanced Diploma.'
+    }
+  ];
   return (
     <div className="home-page">
-      <HeroSection />
+      <HeroSection 
+        onShowConstructionPopup={showConstructionPopup}
+        onScrollToCareerSection={scrollToCareerSection}
+      />
       
       {/* Collaboration Section */}
       <section className="collaboration-section">
@@ -47,32 +90,44 @@ const Home = () => {
         </div>
       </section>
 
-      <CoursesGrid />
+      <CoursesGrid onKnowMoreClick={showConstructionPopup} />
 
       {/* Other Services Section */}
       <section className="other-services-section">
         <div className="container">
           <h2 className="section-title scroll-from-center">OTHER SERVICES</h2>
           <div className="services-grid">
-            <div className="service-item scroll-from-left">
+            <div 
+              className="service-item scroll-from-left"
+              onClick={showConstructionPopup}
+            >
               <div className="service-icon">
                 <img src={Ellipse} alt="Certification Programs" />
               </div>
               <p>Certification Programs</p>
             </div>
-            <div className="service-item scroll-from-right">
+            <div 
+              className="service-item scroll-from-right"
+              onClick={() => window.open('https://www.voxdemy.com/courses/YOUNG-RESAEARCHER-67da64a1f529217c97f00cd6', '_blank')}
+            >
               <div className="service-icon">
                 <img src={Layer} alt="Research Wing - POLO" />
               </div>
               <p>Research Wing - POLO</p>
             </div>
-            <div className="service-item scroll-from-left">
+            <div 
+              className="service-item scroll-from-left"
+              onClick={() => window.open('https://www.voxdemy.com/courses/Voxdemy-Internship-May-2025-Batch-680dcda04238861d5cad3f02', '_blank')}
+            >
               <div className="service-icon">
                 <img src={Ellipse} alt="Internships" />
               </div>
               <p>Internships</p>
             </div>
-            <div className="service-item scroll-from-right">
+            <div 
+              className="service-item scroll-from-right"
+              onClick={showConstructionPopup}
+            >
               <div className="service-icon">
                 <img src={Youngvox} alt="YoungVox" />
               </div>
@@ -85,7 +140,7 @@ const Home = () => {
       <WhyChooseUs />
 
       {/* Lead Generation Form Section */}
-      <section className="lead-generation-section">
+      <section id="start-career-section" className="lead-generation-section">
         <div className="container">
           <div className="lead-content">
             <div className="lead-form-panel scroll-from-left">
@@ -104,7 +159,13 @@ const Home = () => {
                 </div>
                 <div className="form-row">
                   <input type="tel" placeholder="Mobile number" required />
-                  <input type="text" placeholder="Course" required />
+                  <select className="course-select" required>
+                    <option value="">Select Course</option>
+                    <option value="Counselling and Child Psychology">1. Counselling and Child Psychology</option>
+                    <option value="Counselling and Organisational Psychology">2. Counselling and Organisational Psychology</option>
+                    <option value="Counselling and Forensic Psychology">3. Counselling and Forensic Psychology</option>
+                    <option value="Art Therapy">4. Art Therapy</option>
+                  </select>
                 </div>
                 <label className="checkbox-label">
                   <input type="checkbox" required />
@@ -115,14 +176,14 @@ const Home = () => {
                   <button 
                     type="button" 
                     className="btn-secondary"
-                    onClick={() => alert('Prospectus download will be available soon!')}
+                    onClick={showConstructionPopup}
                   >
                     Download Prospectus
                   </button>
                   <button 
                     type="button" 
                     className="btn-secondary"
-                    onClick={() => window.location.href = '/contact'}
+                    onClick={showConstructionPopup}
                   >
                     Contact Us
                   </button>
@@ -152,30 +213,22 @@ const Home = () => {
             <div className="faq-list scroll-from-left">
               <h2 className="section-title">FREQUENTLY ASKED QUESTIONS</h2>
               <div className="faq-items">
-                <div className="faq-item">
-                  <div className="faq-question">
-                    <span>1. Who can apply for the advanced diploma programs?</span>
-                    <span className="faq-icon">▼</span>
+                {faqs.map((faq, index) => (
+                  <div key={index} className="faq-item">
+                    <div 
+                      className="faq-question"
+                      onClick={() => toggleFaq(index)}
+                    >
+                      <span>{faq.question}</span>
+                      <span className={`faq-icon ${openFaq === index ? 'open' : ''}`}>▼</span>
+                    </div>
+                    {openFaq === index && (
+                      <div className="faq-answer">
+                        <p>{faq.answer}</p>
+                      </div>
+                    )}
                   </div>
-                </div>
-                <div className="faq-item">
-                  <div className="faq-question">
-                    <span>2. What is the duration of each advanced diploma?</span>
-                    <span className="faq-icon">▼</span>
-                  </div>
-                </div>
-                <div className="faq-item">
-                  <div className="faq-question">
-                    <span>3. Are the programs accredited or recognized?</span>
-                    <span className="faq-icon">▼</span>
-                  </div>
-                </div>
-                <div className="faq-item">
-                  <div className="faq-question">
-                    <span>4. Do I need prior clinical or counselling experience?</span>
-                    <span className="faq-icon">▼</span>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
             <div className="faq-image scroll-from-right">
@@ -196,16 +249,26 @@ const Home = () => {
       <section className="admissions-banner" style={{ backgroundImage: `url(${image3})` }}>
         <div className="banner-overlay"></div>
         <div className="banner-content scroll-from-left">
-          <h2>ADMISSIONS OPEN 2025 – START YOUR JOURNEY IN PSYCHOLOGY</h2>
+          <h2>ADMISSIONS OPEN 2026 - START YOUR JOURNEY IN PSYCHOLOGY</h2>
           <p>Join Jeppiaar Academy for practice-oriented psychology diplomas that blend classroom learning with real-world experience.</p>
           <button 
             className="apply-now-btn"
-            onClick={() => window.location.href = '/contact'}
+            onClick={showConstructionPopup}
           >
             Apply Now
           </button>
         </div>
       </section>
+
+      {showUnderConstruction && (
+        <div className="under-construction-popup" onClick={closePopup}>
+          <div className="popup-content" onClick={(e) => e.stopPropagation()}>
+            <button className="popup-close" onClick={closePopup}>×</button>
+            <h2>Site Under Construction</h2>
+            <p>This page is currently under construction. Please check back soon!</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

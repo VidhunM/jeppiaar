@@ -104,7 +104,7 @@
   text-decoration: none;
   color: #333;
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   transition: color 0.3s ease;
   position: relative;
 }
@@ -209,7 +209,7 @@
   }
 
   .nav a {
-    font-size: 1rem;
+    font-size: 1.1rem;
     padding: 0.75rem 0;
     width: 100%;
     text-align: center;
@@ -252,8 +252,97 @@
   }
 
   .nav a {
-    font-size: 0.9rem;
+    font-size: 1rem;
     padding: 0.6rem 0;
+  }
+
+  .popup-content {
+    padding: 2rem 1.5rem;
+    max-width: 90%;
+  }
+
+  .popup-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .popup-content p {
+    font-size: 1rem;
+  }
+}
+
+/* Under Construction Popup */
+.under-construction-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.popup-content {
+  background: white;
+  padding: 3rem 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  animation: slideUp 0.3s ease-out;
+}
+
+.popup-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #666;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.popup-close:hover {
+  background: #f5f5f5;
+  color: #000;
+}
+
+.popup-content h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0E0529;
+  margin-bottom: 1rem;
+}
+
+.popup-content p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 

@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './HeroSection.css';
 import heroImage from '../../assets/images/hero.png';
+import hero2Image from '../../assets/images/hero2.png';
+import hero3Image from '../../assets/images/hero3.png';
+import hero4Image from '../../assets/images/hero4.png';
 
-const HeroSection = () => {
+const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   
   const slides = [
@@ -10,8 +13,22 @@ const HeroSection = () => {
       image: heroImage,
       title: 'Jeppiaar Academy of Psychology & Research',
       tagline: 'Mind - Science - Innovation'
+    },
+    {
+      image: hero2Image,
+      title: 'Jeppiaar Academy of Psychology & Research',
+      tagline: 'Mind - Science - Innovation'
+    },
+    {
+      image: hero3Image,
+      title: 'Jeppiaar Academy of Psychology & Research',
+      tagline: 'Mind - Science - Innovation'
+    },
+    {
+      image: hero4Image,
+      title: 'Jeppiaar Academy of Psychology & Research',
+      tagline: 'Mind - Science - Innovation'
     }
-    
   ];
 
   const programCards = [
@@ -39,9 +56,10 @@ const HeroSection = () => {
   return (
     <div className="hero-section">
       <div 
-        className="hero-slide"
+        className={`hero-slide ${currentSlide === 0 ? 'hero-slide-first' : ''} ${currentSlide === 3 ? 'hero-slide-fourth' : ''}`}
         style={{ backgroundImage: `url(${slides[currentSlide].image})` }}
       >
+        {currentSlide === 0 && <div className="hero-gradient-overlay"></div>}
         <button className="hero-nav prev" onClick={prevSlide} aria-label="Previous slide">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M15 19L8 12L15 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -55,38 +73,118 @@ const HeroSection = () => {
           </svg>
         </button>
 
-        <div className="hero-content">
-          <div className="hero-text">
-            <h1>
-              <span className="title-line">{slides[currentSlide].title}</span>
-              <span className="title-line">{slides[currentSlide].titleLine2}</span>
-            </h1>
-            <p className="tagline">{slides[currentSlide].tagline}</p>
-          </div>
-        </div>
-
-        <div className="hero-sidebar">
-          <div className="admission-box">
-            <div className="admission-year">2025</div>
-            <div className="admission-text">
-              <span>Admissions</span>
-              <span>Open Now</span>
+        {currentSlide === 0 && (
+          <>
+            <div className="hero-content">
+              <div className="hero-text">
+                <h1>
+                  <span className="title-line">{slides[currentSlide].title}</span>
+                  <span className="title-line">{slides[currentSlide].titleLine2}</span>
+                </h1>
+                <p className="tagline">{slides[currentSlide].tagline}</p>
+              </div>
             </div>
-          </div>
-          <button 
-            className="apply-now-btn"
-            onClick={() => window.location.href = '/contact'}
-          >
-            Apply Now
-          </button>
-        </div>
 
-        <div 
-          className="vertical-apply-tab"
-          onClick={() => window.location.href = '/contact'}
-        >
-          <span>Apply Now</span>
-        </div>
+            <div className="hero-sidebar">
+              <div className="admission-box">
+                <div className="admission-year">2026</div>
+                <div className="admission-text">
+                  <span>Admissions</span>
+                  <span>Open Now</span>
+                </div>
+              </div>
+              <button 
+                className="apply-now-btn"
+                onClick={() => {
+                  if (onScrollToCareerSection) {
+                    onScrollToCareerSection();
+                  } else {
+                    const startCareerSection = document.getElementById('start-career-section');
+                    if (startCareerSection) {
+                      startCareerSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                  }
+                }}
+              >
+                Apply Now
+              </button>
+            </div>
+
+            <div 
+              className="vertical-apply-tab"
+              onClick={() => {
+                if (onShowConstructionPopup) {
+                  onShowConstructionPopup();
+                }
+              }}
+            >
+              <span>Apply Now</span>
+            </div>
+          </>
+        )}
+
+        {currentSlide === 1 && (
+          <>
+            <div className="hero-rated-badge">
+              <div className="rated-text">STUDENT RATED</div>
+              <div className="rated-stars">
+                <span className="star">★</span>
+                <span className="star">★</span>
+                <span className="star">★</span>
+                <span className="star">★</span>
+                <span className="star">★</span>
+              </div>
+            </div>
+            <div 
+              className="vertical-apply-tab"
+              onClick={() => {
+                if (onShowConstructionPopup) {
+                  onShowConstructionPopup();
+                }
+              }}
+            >
+              <span>Apply Now</span>
+            </div>
+          </>
+        )}
+
+        {currentSlide === 2 && (
+          <>
+            <div className="hero-feature-badge">
+              <div className="feature-text">AC CLASSROOMS</div>
+              <div className="feature-text">WITH SMART BOARD</div>
+            </div>
+            <div 
+              className="vertical-apply-tab"
+              onClick={() => {
+                if (onShowConstructionPopup) {
+                  onShowConstructionPopup();
+                }
+              }}
+            >
+              <span>Apply Now</span>
+            </div>
+          </>
+        )}
+
+        {currentSlide === 3 && (
+          <>
+            <div className="hero-feature-badge hero-feature-badge-fourth">
+              <div className="feature-text feature-text-fourth">LEARN FROM</div>
+              <div className="feature-text feature-text-fourth">LEADING PSYCHOLOGISTS</div>
+            </div>
+            <div 
+              className="vertical-apply-tab"
+              onClick={() => {
+                if (onShowConstructionPopup) {
+                  onShowConstructionPopup();
+                }
+              }}
+            >
+              <span>Apply Now</span>
+            </div>
+          </>
+        )}
       </div>
 
       <div className="hero-programs-section">
