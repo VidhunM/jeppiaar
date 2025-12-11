@@ -413,7 +413,7 @@
   padding-top: 20vh;
   border-radius: 0 0 50% 50% / 0 0 200% 200%;
   overflow: visible;
-  margin-bottom: -8rem;
+  margin-bottom: -15rem;
 }
 
 .hero-programs-container {
@@ -436,7 +436,7 @@
 }
 
 .hero-programs-small-heading {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
   color: #000;
   text-transform: uppercase;
@@ -447,7 +447,7 @@
 }
 
 .hero-programs-bold-title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
   color: #000;
   line-height: 1.2;
@@ -686,13 +686,13 @@
   }
 
   .hero-programs-small-heading {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     text-align: center;
     width: 100%;
   }
 
   .hero-programs-bold-title {
-    font-size: 2rem;
+    font-size: 1.6rem;
     text-align: center;
     width: 100%;
   }
@@ -980,13 +980,13 @@
   }
 
   .hero-programs-small-heading {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-align: center;
     width: 100%;
   }
 
   .hero-programs-bold-title {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin: -0.3rem 0 0 0;
     text-align: center;
     width: 100%;
