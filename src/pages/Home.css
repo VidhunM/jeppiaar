@@ -413,7 +413,7 @@
   }
 
   .collaboration-section h2 {
-    font-size: 1.6rem;
+    font-size: 1.3rem !important;
     margin-top: 0.5rem;
   }
 
@@ -422,7 +422,7 @@
   }
 
   .university-name {
-    font-size: 1.6rem;
+    font-size: 1.3rem !important;
   }
 
   .accreditation-text {
@@ -479,7 +479,7 @@
   }
 
   .faq-list .section-title {
-    font-size: 1.75rem;
+    font-size: 1.2rem !important;
     margin-bottom: 2rem;
   }
 
@@ -524,16 +524,16 @@
   }
 
   .collaboration-section h2 {
-    font-size: 1.3rem;
+    font-size: 1.2rem !important;
     margin-top: 0.5rem;
   }
 
   .collaboration-text {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
   .university-name {
-    font-size: 1.3rem;
+    font-size: 1.3rem !important;
   }
 
   .accreditation-text {
@@ -547,7 +547,7 @@
   }
 
   .other-services-section .section-title {
-    font-size: 1.25rem;
+    font-size: 1.3rem !important;
     margin-bottom: 1.25rem;
   }
 
@@ -614,7 +614,7 @@
   }
 
   .collaboration-section h2 {
-    font-size: 1.1rem;
+    font-size: 1.1rem !important;
     margin-top: 0.25rem;
   }
 
@@ -624,7 +624,7 @@
   }
 
   .university-name {
-    font-size: 1.1rem;
+    font-size: 1.1rem !important;
     margin-bottom: 1rem;
   }
 
@@ -664,7 +664,7 @@
   }
 
   .section-title {
-    font-size: 1.1rem;
+    font-size: 1.1rem !important;
     margin-bottom: 1rem;
   }
 
@@ -697,7 +697,7 @@
   }
 
   .faq-list .section-title {
-    font-size: 1.5rem;
+    font-size: 1.1rem !important;
     margin-bottom: 1.5rem;
   }
 

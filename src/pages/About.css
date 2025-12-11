@@ -628,7 +628,7 @@
   }
 
   .introduction-text h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem !important;
   }
 
   .introduction-text p {
@@ -668,6 +668,69 @@
 
   .core-values-grid {
     grid-template-columns: 1fr;
+  }
+
+  /* Mobile Slider Styles */
+  .core-values-slider {
+    position: relative;
+    overflow: visible;
+    width: 100%;
+    display: block;
+    padding-bottom: 3rem;
+  }
+
+  .core-values-slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+  }
+
+  .core-value-slide {
+    flex: 0 0 100%;
+    width: 100%;
+    box-sizing: border-box;
+    min-width: 100%;
+  }
+
+  .core-value-nav {
+    position: absolute;
+    bottom: -20px;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    transform: translateY(0);
+  }
+
+  .core-value-nav:hover {
+    background: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .core-value-nav.prev {
+    left: calc(50% - 60px);
+  }
+
+  .core-value-nav.next {
+    right: calc(50% - 60px);
+  }
+
+  .core-value-nav svg {
+    width: 20px;
+    height: 20px;
+    color: #0E0529;
+  }
+
+  .core-value-dots {
+    display: none;
   }
 
   .leadership-section {
@@ -759,7 +822,7 @@
   }
 
   .introduction-text h2 {
-    font-size: 1.25rem;
+    font-size: 1.1rem !important;
   }
 
   .introduction-text p {
@@ -817,7 +880,7 @@
 
   .vision-card h3,
   .mission-card h3 {
-    font-size: 1.5rem;
+    font-size: 1.05rem !important;
   }
 
   .core-values-section {
@@ -835,6 +898,14 @@
   .core-values-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+
+  .core-value-nav.prev {
+    left: calc(50% - 50px);
+  }
+
+  .core-value-nav.next {
+    right: calc(50% - 50px);
   }
 
   .core-value-card {

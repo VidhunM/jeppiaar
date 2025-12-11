@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import about1Image from '../assets/images/about1.png';
 import about2Image from '../assets/images/about2.png';
 import visionIcon from '../assets/icons/abt1.png';
@@ -14,6 +14,18 @@ import icon5 from '../assets/icons/Icon5.png';
 import './About.css';
 
 const About = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   const coreValues = [
     {
       title: 'Integrity',
@@ -41,6 +53,15 @@ const About = () => {
       icon: icon5
     }
   ];
+
+  useEffect(() => {
+    if (isMobile) {
+      const timer = setInterval(() => {
+        setCurrentSlide((prev) => (prev + 1) % coreValues.length);
+      }, 5000);
+      return () => clearInterval(timer);
+    }
+  }, [isMobile, coreValues.length]);
 
   useEffect(() => {
     const observerOptions = {
@@ -157,21 +178,59 @@ const About = () => {
           <p className="section-subtitle scroll-from-center">
             The principles that guide our commitment to excellence in psychology education and research.
           </p>
-          <div className="core-values-grid">
-            {coreValues.map((value, index) => (
-              <div 
-                key={index} 
-                className={`core-value-card scroll-from-${index % 2 === 0 ? 'left' : 'right'}`}
-              >
-                <div className="value-icon-container">
-                  <div className="value-icon">
-                    <img src={value.icon} alt={value.title} />
-                  </div>
+          <div className={`core-values-grid ${isMobile ? 'core-values-slider' : ''}`}>
+            {isMobile ? (
+              <>
+                <div className="core-values-slider-wrapper" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+                  {coreValues.map((value, index) => (
+                    <div key={index} className="core-value-card core-value-slide">
+                      <div className="value-icon-container">
+                        <div className="value-icon">
+                          <img src={value.icon} alt={value.title} />
+                        </div>
+                      </div>
+                      <h4>{value.title}</h4>
+                      <p>{value.description}</p>
+                    </div>
+                  ))}
                 </div>
-                <h4>{value.title}</h4>
-                <p>{value.description}</p>
-              </div>
-            ))}
+                <button className="core-value-nav prev" onClick={() => setCurrentSlide((prev) => (prev - 1 + coreValues.length) % coreValues.length)} aria-label="Previous value">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 19L8 12L15 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </button>
+                <button className="core-value-nav next" onClick={() => setCurrentSlide((prev) => (prev + 1) % coreValues.length)} aria-label="Next value">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 5L16 12L9 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </button>
+                <div className="core-value-dots">
+                  {coreValues.map((_, index) => (
+                    <button
+                      key={index}
+                      className={`core-value-dot ${index === currentSlide ? 'active' : ''}`}
+                      onClick={() => setCurrentSlide(index)}
+                      aria-label={`Go to slide ${index + 1}`}
+                    />
+                  ))}
+                </div>
+              </>
+            ) : (
+              coreValues.map((value, index) => (
+                <div 
+                  key={index} 
+                  className={`core-value-card scroll-from-${index % 2 === 0 ? 'left' : 'right'}`}
+                >
+                  <div className="value-icon-container">
+                    <div className="value-icon">
+                      <img src={value.icon} alt={value.title} />
+                    </div>
+                  </div>
+                  <h4>{value.title}</h4>
+                  <p>{value.description}</p>
+                </div>
+              ))
+            )}
           </div>
         </div>
       </section>

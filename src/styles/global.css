@@ -337,8 +337,25 @@ img {
     padding: 0 1.5rem;
   }
 
-  .section-title {
-    font-size: 2rem;
+  .section-title,
+  h2.section-title,
+  .section-title h2,
+  h2 {
+    font-size: 1.3rem !important;
+  }
+
+  h3,
+  .section-title h3,
+  h3.section-title,
+  .profile-title,
+  h3.profile-title {
+    font-size: 1.15rem !important;
+  }
+
+  h4,
+  .profile-name,
+  h4.profile-name {
+    font-size: 1.05rem !important;
   }
 }
 
@@ -347,9 +364,26 @@ img {
     padding: 0 1rem;
   }
 
-  .section-title {
-    font-size: 1.75rem;
+  .section-title,
+  h2.section-title,
+  .section-title h2,
+  h2 {
+    font-size: 1.2rem !important;
     margin-bottom: 2rem;
+  }
+
+  h3,
+  .section-title h3,
+  h3.section-title,
+  .profile-title,
+  h3.profile-title {
+    font-size: 1.05rem !important;
+  }
+
+  h4,
+  .profile-name,
+  h4.profile-name {
+    font-size: 0.95rem !important;
   }
 
   body {
@@ -362,9 +396,26 @@ img {
     padding: 0 0.75rem;
   }
 
-  .section-title {
-    font-size: 1.5rem;
+  .section-title,
+  h2.section-title,
+  .section-title h2,
+  h2 {
+    font-size: 1.1rem !important;
     margin-bottom: 1.5rem;
+  }
+
+  h3,
+  .section-title h3,
+  h3.section-title,
+  .profile-title,
+  h3.profile-title {
+    font-size: 0.95rem !important;
+  }
+
+  h4,
+  .profile-name,
+  h4.profile-name {
+    font-size: 0.85rem !important;
   }
 
   body {
@@ -373,14 +424,6 @@ img {
 
   h1 {
     font-size: 1.75rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  h3 {
-    font-size: 1.25rem;
   }
 }
 
