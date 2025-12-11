@@ -1,7 +1,19 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './LearnersReview.css';
 
 const LearnersReview = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   const testimonials = [
     {
       id: 1,
@@ -59,6 +71,23 @@ const LearnersReview = () => {
     }
   ];
 
+  useEffect(() => {
+    if (isMobile) {
+      const timer = setInterval(() => {
+        setCurrentSlide((prev) => (prev + 1) % testimonials.length);
+      }, 5000);
+      return () => clearInterval(timer);
+    }
+  }, [isMobile, testimonials.length]);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
+
   const renderStars = (rating) => {
     const stars = [];
     for (let i = 0; i < 5; i++) {
@@ -75,29 +104,78 @@ const LearnersReview = () => {
     <section className="testimonials-section">
       <div className="container">
         <h2 className="section-title scroll-from-center">WHAT OUR LEARNERS SAY</h2>
-        <div className="testimonials-grid">
-          {testimonials.map((testimonial, index) => (
-            <div key={testimonial.id} className={`testimonial-card ${index % 3 === 0 ? 'scroll-from-left' : index % 3 === 1 ? 'scroll-from-center' : 'scroll-from-right'}`}>
-              <div className="stars">{renderStars(testimonial.rating)}</div>
-              <h3 className="testimonial-title">{testimonial.title}</h3>
-              <p className="testimonial-quote">{testimonial.quote}</p>
-              <div className="testimonial-author">
-                <img 
-                  src={testimonial.image} 
-                  alt={testimonial.name}
-                  className="author-image"
-                  onError={(e) => {
-                    e.target.onerror = null;
-                    e.target.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="60" height="60"%3E%3Ccircle fill="%23e0e0e0" cx="30" cy="30" r="30"/%3E%3Ctext fill="%23999" font-family="sans-serif" font-size="20" x="50%25" y="50%25" text-anchor="middle" dy=".3em"%3E%3C/text%3E%3C/svg%3E';
-                  }}
-                />
-                <div className="author-info">
-                  <p className="author-name">{testimonial.name}</p>
-                  <p className="author-role">{testimonial.role}</p>
+        <div className={`testimonials-grid ${isMobile ? 'testimonials-slider' : ''}`}>
+          {isMobile ? (
+            <>
+              <div className="testimonials-slider-wrapper" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+                {testimonials.map((testimonial) => (
+                  <div key={testimonial.id} className="testimonial-card testimonial-slide">
+                    <div className="stars">{renderStars(testimonial.rating)}</div>
+                    <h3 className="testimonial-title">{testimonial.title}</h3>
+                    <p className="testimonial-quote">{testimonial.quote}</p>
+                    <div className="testimonial-author">
+                      <img 
+                        src={testimonial.image} 
+                        alt={testimonial.name}
+                        className="author-image"
+                        onError={(e) => {
+                          e.target.onerror = null;
+                          e.target.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="60" height="60"%3E%3Ccircle fill="%23e0e0e0" cx="30" cy="30" r="30"/%3E%3Ctext fill="%23999" font-family="sans-serif" font-size="20" x="50%25" y="50%25" text-anchor="middle" dy=".3em"%3E%3C/text%3E%3C/svg%3E';
+                        }}
+                      />
+                      <div className="author-info">
+                        <p className="author-name">{testimonial.name}</p>
+                        <p className="author-role">{testimonial.role}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <button className="testimonial-nav prev" onClick={prevSlide} aria-label="Previous testimonial">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15 19L8 12L15 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
+              <button className="testimonial-nav next" onClick={nextSlide} aria-label="Next testimonial">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 5L16 12L9 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
+              <div className="testimonial-dots">
+                {testimonials.map((_, index) => (
+                  <button
+                    key={index}
+                    className={`testimonial-dot ${index === currentSlide ? 'active' : ''}`}
+                    onClick={() => setCurrentSlide(index)}
+                    aria-label={`Go to slide ${index + 1}`}
+                  />
+                ))}
+              </div>
+            </>
+          ) : (
+            testimonials.map((testimonial, index) => (
+              <div key={testimonial.id} className={`testimonial-card ${index % 3 === 0 ? 'scroll-from-left' : index % 3 === 1 ? 'scroll-from-center' : 'scroll-from-right'}`}>
+                <div className="stars">{renderStars(testimonial.rating)}</div>
+                <h3 className="testimonial-title">{testimonial.title}</h3>
+                <p className="testimonial-quote">{testimonial.quote}</p>
+                <div className="testimonial-author">
+                  <img 
+                    src={testimonial.image} 
+                    alt={testimonial.name}
+                    className="author-image"
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="60" height="60"%3E%3Ccircle fill="%23e0e0e0" cx="30" cy="30" r="30"/%3E%3Ctext fill="%23999" font-family="sans-serif" font-size="20" x="50%25" y="50%25" text-anchor="middle" dy=".3em"%3E%3C/text%3E%3C/svg%3E';
+                    }}
+                  />
+                  <div className="author-info">
+                    <p className="author-name">{testimonial.name}</p>
+                    <p className="author-role">{testimonial.role}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))
+          )}
         </div>
       </div>
     </section>
