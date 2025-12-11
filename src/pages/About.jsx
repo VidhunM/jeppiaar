@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import about1Image from '../assets/images/about1.png';
 import about2Image from '../assets/images/about2.png';
 import visionIcon from '../assets/icons/abt1.png';
@@ -42,6 +42,28 @@ const About = () => {
     }
   ];
 
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animated');
+        }
+      });
+    }, observerOptions);
+
+    const animatedElements = document.querySelectorAll('.scroll-from-left, .scroll-from-right, .scroll-from-center');
+    animatedElements.forEach((el) => observer.observe(el));
+
+    return () => {
+      animatedElements.forEach((el) => observer.unobserve(el));
+    };
+  }, []);
+
   return (
     <div className="about-page">
       {/* About Us Banner */}
@@ -53,7 +75,7 @@ const About = () => {
       <section className="introduction-section">
         <div className="container">
           <div className="introduction-content">
-            <div className="introduction-text">
+            <div className="introduction-text scroll-from-left">
               <h2>JEPPIAAR ACADEMY OF PSYCHOLOGY AND RESEARCH</h2>
               <p>
                 Jeppiaar Academy of Psychology and Research is established to bridge the gap between psychology education and real-world application. With a vision to nurture ethical, skilled, and research-oriented professionals, the academy offers advanced courses aligned with global mental health standards.
@@ -77,7 +99,7 @@ const About = () => {
             </div>
           </div>
           <div className="introduction-images">
-            <div className="intro-image">
+            <div className="intro-image scroll-from-left">
               <img 
                 src={about1Image} 
                 alt="Students with certificates"
@@ -87,7 +109,7 @@ const About = () => {
                 }}
               />
             </div>
-            <div className="intro-image">
+            <div className="intro-image scroll-from-right">
               <img 
                 src={about2Image} 
                 alt="Certification ceremony"
@@ -105,7 +127,7 @@ const About = () => {
       <section className="vision-mission-section">
         <div className="container">
           <div className="vision-mission-grid">
-            <div className="vision-card">
+            <div className="vision-card scroll-from-left">
               <div className="card-icon">
                 <img src={visionIcon} alt="Vision Icon" />
               </div>
@@ -115,7 +137,7 @@ const About = () => {
                 To be India's most trusted and innovative center of excellence in psychology, setting national standards in education, research, and practice, and transforming mental health for every community empowering generations through ethical leadership, compassionate service, and lifelong learning.
               </p>
             </div>
-            <div className="mission-card">
+            <div className="mission-card scroll-from-right">
               <div className="card-icon">
                 <img src={missionIcon} alt="Mission Icon" />
               </div>
@@ -132,15 +154,15 @@ const About = () => {
       {/* Core Values Section */}
       <section className="core-values-section">
         <div className="container">
-          <h2 className="section-title">OUR CORE VALUES</h2>
-          <p className="section-subtitle">
+          <h2 className="section-title scroll-from-center">OUR CORE VALUES</h2>
+          <p className="section-subtitle scroll-from-center">
             The principles that guide our commitment to excellence in psychology education and research.
           </p>
           <div className="core-values-grid">
             {coreValues.map((value, index) => (
               <div 
                 key={index} 
-                className={`core-value-card ${index === 2 ? 'highlighted' : ''}`}
+                className={`core-value-card scroll-from-${index % 2 === 0 ? 'left' : 'right'} ${index === 2 ? 'highlighted' : ''}`}
               >
                 <div className="value-icon-container">
                   <div className="value-icon">
@@ -158,7 +180,7 @@ const About = () => {
       {/* Leadership Section */}
       <section className="leadership-section">
         <div className="container">
-          <div className="leadership-profile profile-white">
+          <div className="leadership-profile profile-white scroll-from-left">
             <div className="profile-image">
               <img 
                 src={chairmanImage} 
@@ -187,7 +209,7 @@ const About = () => {
             </div>
           </div>
 
-          <div className="leadership-profile profile-dark profile-reverse">
+          <div className="leadership-profile profile-dark profile-reverse scroll-from-right">
             <div className="profile-content">
               <h3 className="profile-title">FOUNDER - DIRECTOR'S MESSAGE</h3>
               <h4 className="profile-name">DR. SARANYA T. JAIKUMAR, B.TECH., DIPE., M.SC., PH.D.</h4>
@@ -219,7 +241,7 @@ const About = () => {
             </div>
           </div>
 
-          <div className="leadership-profile profile-white">
+          <div className="leadership-profile profile-white scroll-from-left">
             <div className="profile-image">
               <img 
                 src={deanImage} 

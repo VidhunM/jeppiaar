@@ -21,6 +21,7 @@
   letter-spacing: 0.1em;
   color: white;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  animation: fadeInUp 0.8s ease-out;
 }
 
 /* Introduction Section */
@@ -508,14 +509,35 @@
   }
 
   .leadership-profile {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .profile-reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-reverse .profile-content {
+    order: 1;
+  }
+
+  .profile-reverse .profile-image {
+    order: 2;
   }
 
   .profile-image {
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+  }
+
+  .profile-image img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .profile-name {
+    white-space: normal;
   }
 }
 
@@ -567,6 +589,35 @@
 
   .leadership-profile {
     padding: 2rem 1.5rem;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .profile-reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-reverse .profile-content {
+    order: 1;
+  }
+
+  .profile-reverse .profile-image {
+    order: 2;
+  }
+
+  .profile-image {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+  }
+
+  .profile-image img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .profile-name {
+    white-space: normal;
   }
 }
 
@@ -597,6 +648,15 @@
 
   .introduction-images {
     gap: 1.5rem;
+    grid-template-columns: 1fr;
+  }
+
+  .intro-image {
+    height: 300px;
+  }
+
+  .intro-image:last-child {
+    height: 300px;
   }
 
   .vision-mission-section {
@@ -629,6 +689,11 @@
     font-size: 1rem;
   }
 
+  .core-values-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
   .core-value-card {
     padding: 1.5rem 1rem;
   }
@@ -640,18 +705,48 @@
   .leadership-profile {
     padding: 1.5rem 1rem;
     gap: 2rem;
+    grid-template-columns: 1fr;
+  }
+
+  .profile-reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-reverse .profile-content {
+    order: 1;
+  }
+
+  .profile-reverse .profile-image {
+    order: 2;
   }
 
   .profile-image {
-    width: 120px;
-    height: 120px;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+
+  .profile-image img {
+    width: 200px;
+    height: 200px;
   }
 
   .profile-name {
     font-size: 1.2rem;
+    white-space: normal;
   }
 
   .profile-description {
     font-size: 0.95rem;
+  }
+
+  .value-icon-container {
+    width: 60px;
+    height: 60px;
+  }
+
+  .value-icon {
+    width: 45px;
+    height: 45px;
   }
 }

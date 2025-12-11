@@ -114,10 +114,7 @@ const LeadGeneration = ({ onShowConstructionPopup }) => {
     try {
       const res = await fetch(SCRIPT_URL, {
         method: 'POST',
-        mode: 'cors', // default
-        headers: {
-          'Content-Type': 'application/json'
-        },
+        mode: 'cors', // defaul
         body: JSON.stringify(form)
       });
 
