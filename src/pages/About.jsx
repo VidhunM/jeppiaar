@@ -208,7 +208,7 @@ const About = () => {
 
           <div className="leadership-profile profile-dark profile-reverse scroll-from-right">
             <div className="profile-content">
-              <h3 className="profile-title">FOUNDER & DIRECTOR'S MESSAGE</h3>
+              <h3 className="profile-title">FOUNDER & DIRECTOR</h3>
               <h4 className="profile-name">DR. SARANYA T. JAIKUMAR, B.Tech., M.Sc., Ph.D</h4>
               
               <div className="profile-description">

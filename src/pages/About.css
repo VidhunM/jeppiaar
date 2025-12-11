@@ -417,21 +417,21 @@
   width: 100%;
 }
 
-.leadership-profile.profile-white:first-of-type .profile-content {
-  margin-left: -2rem;
-  padding-left: 2rem;
-  padding-right: 3rem;
-}
+  .leadership-profile.profile-white:first-of-type .profile-content {
+    margin-left: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 
-.leadership-profile.profile-white:first-of-type .profile-description {
-  font-size: 0.95rem;
-}
+  .leadership-profile.profile-white:first-of-type .profile-description {
+    font-size: 0.95rem;
+  }
 
-.leadership-profile.profile-dark.profile-reverse .profile-content {
-  margin-right: -2rem;
-  padding-right: 2rem;
-  padding-left: 3rem;
-}
+  .leadership-profile.profile-dark.profile-reverse .profile-content {
+    margin-right: 0;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
 
 .leadership-profile.profile-white:nth-of-type(3) .profile-content {
   margin-left: -2rem;
@@ -506,6 +506,15 @@
     padding-top: 70px;
   }
 
+  .about-banner {
+    margin-top: 0;
+    padding-top: 2rem;
+  }
+
+  .introduction-section {
+    padding-top: 1rem;
+  }
+
   .about-banner h1 {
     font-size: 2.5rem;
   }
@@ -570,6 +579,39 @@
   .profile-name {
     white-space: normal;
   }
+
+  .leadership-profile.profile-white:first-of-type .profile-content {
+    margin-left: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .leadership-profile.profile-dark.profile-reverse .profile-content {
+    margin-right: 0;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .leadership-profile .profile-content {
+    text-align: center;
+  }
+
+  .leadership-profile .profile-title,
+  .leadership-profile .profile-name,
+  .leadership-profile .profile-role {
+    text-align: center;
+  }
+
+  .leadership-profile .profile-description {
+    text-align: justify;
+    text-align-last: center;
+  }
+
+  .leadership-profile.profile-white:nth-of-type(3) .profile-content {
+    margin-left: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -582,7 +624,7 @@
   }
 
   .introduction-section {
-    padding: 3rem 1.5rem;
+    padding: 1.5rem 1.5rem 3rem 1.5rem;
   }
 
   .introduction-text h2 {
@@ -664,6 +706,39 @@
   .profile-name {
     white-space: normal;
   }
+
+  .leadership-profile.profile-white:first-of-type .profile-content {
+    margin-left: 0;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .leadership-profile.profile-white:nth-of-type(3) .profile-content {
+    margin-left: 0;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .leadership-profile.profile-dark.profile-reverse .profile-content {
+    margin-right: 0;
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+
+  .leadership-profile .profile-content {
+    text-align: center;
+  }
+
+  .leadership-profile .profile-title,
+  .leadership-profile .profile-name,
+  .leadership-profile .profile-role {
+    text-align: center;
+  }
+
+  .leadership-profile .profile-description {
+    text-align: justify;
+    text-align-last: center;
+  }
 }
 
 @media (max-width: 480px) {
@@ -680,7 +755,7 @@
   }
 
   .introduction-section {
-    padding: 2rem 1rem;
+    padding: 1rem 1rem 2rem 1rem;
   }
 
   .introduction-text h2 {
@@ -806,6 +881,27 @@
 
   .profile-description {
     font-size: 0.95rem;
+  }
+
+  .leadership-profile .profile-content {
+    text-align: center;
+  }
+
+  .leadership-profile .profile-title,
+  .leadership-profile .profile-name,
+  .leadership-profile .profile-role {
+    text-align: center;
+  }
+
+  .leadership-profile .profile-description {
+    text-align: justify;
+    text-align-last: center;
+  }
+
+  .leadership-profile.profile-white:nth-of-type(3) .profile-content {
+    margin-left: 0;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 
   .value-icon-container {
