@@ -418,15 +418,15 @@
   }
 
   .collaboration-text {
-    font-size: 1rem;
+    font-size: 1.6rem;
   }
 
   .university-name {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
   }
 
   .accreditation-text {
-    font-size: 1rem;
+    font-size: 1.6rem;
     padding: 0 1rem;
   }
 
@@ -529,15 +529,15 @@
   }
 
   .collaboration-text {
-    font-size: 0.95rem;
+    font-size: 1.3rem;
   }
 
   .university-name {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .accreditation-text {
-    font-size: 0.95rem;
+    font-size: 1.3rem;
     white-space: normal;
   }
 
@@ -619,17 +619,17 @@
   }
 
   .collaboration-text {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     margin-bottom: 0.75rem;
   }
 
   .university-name {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     margin-bottom: 1rem;
   }
 
   .accreditation-text {
-    font-size: 0.85rem;
+    font-size: 1.1rem;
     margin-bottom: 2rem;
     padding: 0;
     white-space: normal;
