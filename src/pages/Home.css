@@ -16,7 +16,8 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-  margin-top: -18rem;
+  margin-top: -8rem;
+  padding-top: 3rem;
 }
 
 .collaboration-decorative-left,
