@@ -361,7 +361,7 @@
 
 /* Leadership Section */
 .leadership-section {
-  padding: 1.5rem 0;
+  padding: 2rem 0;
 }
 
 .leadership-section .container {
@@ -372,10 +372,10 @@
 .leadership-profile {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.25rem;
+  gap: 1.5rem;
   align-items: center;
-  margin-bottom: 1.5rem;
-  padding: 1.25rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
   border-radius: 0;
   width: 100%;
   box-sizing: border-box;
@@ -410,8 +410,8 @@
 }
 
 .profile-image img {
-  width: 180px;
-  height: 180px;
+  width: 220px;
+  height: 220px;
   object-fit: cover;
   border-radius: 50%;
   border: 2px solid #0E0529;
@@ -432,25 +432,13 @@
   }
 
   .leadership-profile.profile-white:first-of-type .profile-description {
-    font-size: 0.65rem;
-  }
-  
-  .leadership-profile.profile-white:first-of-type .profile-description p {
-    font-size: 0.65rem;
+    font-size: 0.8rem;
   }
 
   .leadership-profile.profile-dark.profile-reverse .profile-content {
     margin-right: 0;
     padding-right: 1rem;
     padding-left: 1rem;
-  }
-  
-  .leadership-profile.profile-dark.profile-reverse .profile-description {
-    font-size: 0.65rem;
-  }
-  
-  .leadership-profile.profile-dark.profile-reverse .profile-description p {
-    font-size: 0.65rem;
   }
 
 .leadership-profile.profile-white:nth-of-type(3) .profile-content {
@@ -460,14 +448,14 @@
 }
 
 .leadership-profile.profile-white:nth-of-type(3) .profile-description {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
 }
 
 .profile-title {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: #0E0529;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
@@ -477,10 +465,10 @@
 }
 
 .profile-name {
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 700;
   color: #0E0529;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.4rem;
   white-space: nowrap;
   line-height: 1.3;
 }
@@ -490,9 +478,9 @@
 }
 
 .profile-role {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: #666;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.75rem;
   font-style: italic;
 }
 
@@ -501,8 +489,8 @@
 }
 
 .profile-description {
-  font-size: 0.8rem;
-  line-height: 1.5;
+  font-size: 0.85rem;
+  line-height: 1.6;
   color: #555;
   text-align: justify;
   text-align-last: left;
