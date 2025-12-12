@@ -279,9 +279,9 @@
 
 .vertical-apply-tab {
   position: fixed;
-  right: 2.5rem;
-  bottom: 20rem;
-  transform: rotate(90deg);
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
   transform-origin: center right;
   background: #0E0529;
   color: #ffffff;
@@ -306,7 +306,8 @@
 
 .vertical-apply-tab:hover {
   background: #1a0a3d;
-  transform: rotate(90deg) translateY(-2px);
+  transform: translateY(-50%) rotate(90deg) translateY(-2px);
+  box-shadow: -2px 0 12px rgba(0, 0, 0, 0.3);
 }
 
 .vertical-apply-tab span {
