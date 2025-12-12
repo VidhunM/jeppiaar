@@ -66,24 +66,18 @@ const Header = () => {
               <div
                 className="dropdown-toggle"
                 onClick={(e) => {
-                  if (isMobileMenuOpen) {
-                    e.preventDefault();
-                    setIsDropdownOpen(!isDropdownOpen);
-                  }
+                  e.preventDefault();
+                  setIsDropdownOpen(!isDropdownOpen);
                 }}
               >
-                <Link 
-                  to="/courses" 
+                <span 
                   onClick={(e) => {
-                    if (!isMobileMenuOpen) {
-                      handleNavClick(e, '/courses');
-                    } else {
-                      e.preventDefault();
-                    }
+                    e.preventDefault();
+                    setIsDropdownOpen(!isDropdownOpen);
                   }}
                 >
                   Diploma Programs <span className="dropdown-arrow">▼</span>
-                </Link>
+                </span>
               </div>
               {isDropdownOpen && (
                 <div className="dropdown-menu">
@@ -129,8 +123,24 @@ const Header = () => {
                 </div>
               )}
             </div>
-            <Link to="/research" onClick={(e) => handleNavClick(e, '/research')}>Research & Publication</Link>
-            <Link to="/contact" onClick={(e) => handleNavClick(e, '/contact')}>Contact Us</Link>
+            <Link 
+              to="/research" 
+              onClick={(e) => {
+                e.preventDefault();
+                setShowUnderConstruction(true);
+                setIsMobileMenuOpen(false);
+              }}
+            >
+              Research & Publication
+            </Link>
+            <Link 
+              to="/contact" 
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+              }}
+            >
+              Contact Us
+            </Link>
           </nav>
 
           <button 

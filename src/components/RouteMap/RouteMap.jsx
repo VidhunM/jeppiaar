@@ -6,8 +6,6 @@ const RouteMap = () => {
     <section className="route-map-section">
       <div className="map-header">
         <div className="container">
-          <h2>Find Us</h2>
-          
         </div>
       </div>
       <div className="map-container-full">

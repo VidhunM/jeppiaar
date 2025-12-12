@@ -139,6 +139,35 @@
   gap: 0.25rem;
 }
 
+.dropdown-toggle > span:first-child {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.05rem;
+  transition: color 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown-toggle:hover > span:first-child {
+  color: #1a237e;
+}
+
+.dropdown-toggle > span:first-child::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #1a237e;
+  transition: width 0.3s ease;
+}
+
+.dropdown-toggle:hover > span:first-child::after {
+  width: calc(100% - 1rem);
+}
+
 .dropdown-arrow {
   font-size: 0.7rem;
   transition: transform 0.3s ease;
