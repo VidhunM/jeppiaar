@@ -10,7 +10,7 @@
 
 .lead-generation-section .container {
   max-width: 100%;
-  padding: 1.25rem;
+  padding: 1.25rem 0.75rem;
   margin: 0 auto;
 }
 
@@ -32,7 +32,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0.6rem 0.5rem 0.6rem 0.6rem;
+  margin: 0.6rem 0.3rem 0.6rem 0.4rem;
 }
 
 .lead-form-panel h2 {
@@ -262,7 +262,7 @@
   overflow: hidden;
   position: relative;
   min-height: 400px;
-  margin: 0.6rem 0 -2rem 0.5rem;
+  margin: 0.6rem 0 -2rem 0.3rem;
   border-radius: 12px 0 0 0;
   padding-bottom: 0;
   align-content: flex-end;
@@ -271,8 +271,8 @@
 }
 
 .lead-image-panel img {
-  width: 150%;
-  height: 100%;
+  width: 170%;
+  height: 110%;
   object-fit: cover;
   object-position: 55% 100%;
   display: block;
@@ -291,7 +291,7 @@
   }
 
   .lead-generation-section .container {
-    padding: 1rem;
+    padding: 1rem 0.5rem;
   }
 
   .lead-content {
@@ -301,7 +301,7 @@
 
   .lead-form-panel {
     border-radius: 12px 12px 0 0;
-    margin: 1.25rem 1.25rem 0 1.25rem;
+    margin: 1.25rem 0.75rem 0 0.75rem;
     padding: 1.1rem 1.25rem;
   }
 
@@ -310,7 +310,7 @@
   }
 
   .lead-image-panel {
-    margin: 0 1.25rem 0.25rem 1.25rem;
+    margin: 0 0.75rem 0.25rem 0.75rem;
     border-radius: 0 0 12px 12px;
     min-height: 320px;
     justify-content: center;
