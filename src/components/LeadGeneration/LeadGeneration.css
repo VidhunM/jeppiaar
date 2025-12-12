@@ -1,5 +1,5 @@
 .lead-generation-section {
-  padding: 2rem 0 0 0;
+  padding: 0.75rem 0 0 0;
   background: #0E0529;
   color: white;
   width: 100%;
@@ -10,7 +10,7 @@
 
 .lead-generation-section .container {
   max-width: 100%;
-  padding: 1.5rem;
+  padding: 1.25rem;
   margin: 0 auto;
 }
 
@@ -19,24 +19,24 @@
   grid-template-columns: 3fr 2fr;
   gap: 0;
   align-items: stretch;
-  min-height: 450px;
-  max-width: 1100px;
+  min-height: 400px;
+  max-width: 1000px;
   margin: 0 auto;
   width: 100%;
 }
 
 .lead-form-panel {
   background: #4A4A6A;
-  padding: 1.25rem 1.5rem;
-  border-radius: 15px;
+  padding: 1.1rem 1.25rem;
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0.75rem 0.5rem 0.75rem 0.75rem;
+  margin: 0.6rem 0.5rem 0.6rem 0.6rem;
 }
 
 .lead-form-panel h2 {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 700;
   margin-bottom: 0.4rem;
   color: white;
@@ -44,8 +44,8 @@
 }
 
 .lead-subtitle {
-  font-size: 0.85rem;
-  margin-bottom: 1.25rem;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
   color: white;
   opacity: 0.95;
   line-height: 1.5;
@@ -54,20 +54,20 @@
 .lead-form {
   display: flex;
   flex-direction: column;
-  gap: 0.875rem;
+  gap: 0.75rem;
 }
 
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.75rem;
+  gap: 0.65rem;
 }
 
 .lead-form input {
-  padding: 0.7rem;
+  padding: 0.65rem;
   border: none;
   border-radius: 8px;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   background: white;
   color: #333;
   width: 100%;
@@ -78,10 +78,10 @@
 }
 
 .course-select {
-  padding: 0.7rem;
+  padding: 0.65rem;
   border: none;
   border-radius: 8px;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   background: white;
   color: #333;
   width: 100%;
@@ -89,8 +89,8 @@
   appearance: none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  background-position: right 0.7rem center;
-  padding-right: 2.25rem;
+  background-position: right 0.65rem center;
+  padding-right: 2rem;
 }
 
 .course-select:focus {
@@ -156,14 +156,14 @@
   background: transparent;
   color: white;
   border: 2px solid white;
-  padding: 0.75rem 1.25rem;
-  border-radius: 10px;
+  padding: 0.65rem 1.1rem;
+  border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   transition: all 0.3s ease;
   flex: 1;
-  min-width: 100px;
+  min-width: 90px;
   position: relative;
   overflow: hidden;
 }
@@ -197,14 +197,14 @@
   background: transparent;
   color: white;
   border: 2px solid white;
-  padding: 0.75rem 1.25rem;
-  border-radius: 10px;
+  padding: 0.65rem 1.1rem;
+  border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   flex: 1;
-  min-width: 100px;
+  min-width: 90px;
   position: relative;
   overflow: hidden;
 }
@@ -261,9 +261,9 @@
   background: #0E0529;
   overflow: hidden;
   position: relative;
-  min-height: 450px;
-  margin: 0.75rem 0 -2rem 0.5rem;
-  border-radius: 15px 0 0 0;
+  min-height: 400px;
+  margin: 0.6rem 0 -2rem 0.5rem;
+  border-radius: 12px 0 0 0;
   padding-bottom: 0;
   align-content: flex-end;
   align-self: flex-end;
@@ -287,11 +287,11 @@
 
 @media (max-width: 968px) {
   .lead-generation-section {
-    padding: 1.5rem 0;
+    padding: 1.25rem 0;
   }
 
   .lead-generation-section .container {
-    padding: 1.25rem;
+    padding: 1rem;
   }
 
   .lead-content {
@@ -301,18 +301,18 @@
 
   .lead-form-panel {
     border-radius: 12px 12px 0 0;
-    margin: 1.5rem 1.5rem 0 1.5rem;
-    padding: 1.25rem 1.5rem;
+    margin: 1.25rem 1.25rem 0 1.25rem;
+    padding: 1.1rem 1.25rem;
   }
 
   .lead-form-panel h2 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
   .lead-image-panel {
-    margin: 0 1.5rem 0.25rem 1.5rem;
+    margin: 0 1.25rem 0.25rem 1.25rem;
     border-radius: 0 0 12px 12px;
-    min-height: 350px;
+    min-height: 320px;
     justify-content: center;
   }
 
