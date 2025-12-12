@@ -8,6 +8,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Courses from './pages/Courses';
 import Contact from './pages/Contact';
+import CounsellingChildPsychology from './pages/CounsellingChildPsychology';
 import { initScrollAnimations } from './utils/scrollAnimations';
 import './styles/global.css';
 
@@ -44,6 +45,7 @@ function App() {
                 <Route path="/about" element={<About />} />
                 <Route path="/courses" element={<Courses />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/counselling-child-psychology" element={<CounsellingChildPsychology />} />
                 <Route path="/leadership" element={<About />} />
                 <Route path="/research" element={<About />} />
               </Routes>

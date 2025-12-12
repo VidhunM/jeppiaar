@@ -7,6 +7,7 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [showUnderConstruction, setShowUnderConstruction] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const location = useLocation();
   const isHomePage = location.pathname === '/';
 
@@ -57,7 +58,77 @@ const Header = () => {
           <nav className={`nav ${isMobileMenuOpen ? 'open' : ''}`}>
             <Link to="/" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
             <Link to="/about" onClick={(e) => handleNavClick(e, '/about')}>About Us</Link>
-            <Link to="/courses" onClick={(e) => handleNavClick(e, '/courses')}>Diploma Programs</Link>
+            <div 
+              className="nav-dropdown"
+              onMouseEnter={() => setIsDropdownOpen(true)}
+              onMouseLeave={() => setIsDropdownOpen(false)}
+            >
+              <div
+                className="dropdown-toggle"
+                onClick={(e) => {
+                  if (isMobileMenuOpen) {
+                    e.preventDefault();
+                    setIsDropdownOpen(!isDropdownOpen);
+                  }
+                }}
+              >
+                <Link 
+                  to="/courses" 
+                  onClick={(e) => {
+                    if (!isMobileMenuOpen) {
+                      handleNavClick(e, '/courses');
+                    } else {
+                      e.preventDefault();
+                    }
+                  }}
+                >
+                  Diploma Programs <span className="dropdown-arrow">▼</span>
+                </Link>
+              </div>
+              {isDropdownOpen && (
+                <div className="dropdown-menu">
+                  <Link 
+                    to="/counselling-child-psychology" 
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      setIsDropdownOpen(false);
+                    }}
+                  >
+                    Counselling & Child Psychology
+                  </Link>
+                  <Link 
+                    to="/courses" 
+                    onClick={(e) => {
+                      setIsMobileMenuOpen(false);
+                      setIsDropdownOpen(false);
+                      handleNavClick(e, '/courses');
+                    }}
+                  >
+                    Counselling & Organizational Psychology
+                  </Link>
+                  <Link 
+                    to="/courses" 
+                    onClick={(e) => {
+                      setIsMobileMenuOpen(false);
+                      setIsDropdownOpen(false);
+                      handleNavClick(e, '/courses');
+                    }}
+                  >
+                    Counselling & Forensic Psychology
+                  </Link>
+                  <Link 
+                    to="/courses" 
+                    onClick={(e) => {
+                      setIsMobileMenuOpen(false);
+                      setIsDropdownOpen(false);
+                      handleNavClick(e, '/courses');
+                    }}
+                  >
+                    Art Therapy
+                  </Link>
+                </div>
+              )}
+            </div>
             <Link to="/research" onClick={(e) => handleNavClick(e, '/research')}>Research & Publication</Link>
             <Link to="/contact" onClick={(e) => handleNavClick(e, '/contact')}>Contact Us</Link>
           </nav>

@@ -858,3 +858,12 @@
   }
 }
 
+/* Lead Generation Section - Restore old background for home page */
+.home-page .lead-generation-section {
+  background: #0E0529 !important;
+}
+
+.home-page .lead-image-panel {
+  background: #0E0529 !important;
+}
+
