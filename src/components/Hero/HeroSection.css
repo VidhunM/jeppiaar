@@ -124,7 +124,7 @@
 .hero-sidebar {
   position: absolute;
   top: 65%;
-  right: 10rem;
+  right: 4rem;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
