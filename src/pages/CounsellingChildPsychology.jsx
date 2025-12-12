@@ -3,6 +3,14 @@ import { Link } from 'react-router-dom';
 import LeadGeneration from '../components/LeadGeneration/LeadGeneration';
 import image2 from '../assets/images/image2.png';
 import cc1Image from '../assets/images/cc1.png';
+import cc2Image from '../assets/images/cc2.png';
+import cp1Image from '../assets/images/cp1.png';
+import cp2Image from '../assets/images/cp2.png';
+import cp3Image from '../assets/images/cp4.png';
+import cp4Image from '../assets/images/cp4.jpg';
+import cc1Icon from '../assets/icons/cc1.png';
+import cc2Icon from '../assets/icons/cc2.png';
+import cc3Icon from '../assets/icons/cc3.png';
 import './CounsellingChildPsychology.css';
 
 const CounsellingChildPsychology = () => {
@@ -23,10 +31,10 @@ const CounsellingChildPsychology = () => {
   };
 
   const careers = [
-    { title: 'Child Counselor', image: '/api/placeholder/400/300' },
-    { title: 'Educational Psychologist', image: '/api/placeholder/400/300' },
-    { title: 'Rehabilitation & Behavioral Therapist', image: '/api/placeholder/400/300' },
-    { title: 'School Psychologist', image: '/api/placeholder/400/300' }
+    { title: 'Child Counselor', image: cp1Image },
+    { title: 'Educational Psychologist', image: cp2Image },
+    { title: 'Rehabilitation & Behavioral Therapist', image: cp3Image },
+    { title: 'School Psychologist', image: cp4Image }
   ];
 
   const nextCareer = () => {
@@ -99,17 +107,29 @@ const CounsellingChildPsychology = () => {
         <div className="container">
           <div className="highlights-content">
             <div className="highlights-image">
-              <img src="/api/placeholder/600/500" alt="Child counselling" />
+              <img src={cc2Image} alt="Children" />
             </div>
             <div className="highlights-text">
-              <p className="highlights-subtitle">Unlock your path to becoming a skilled child counselor or</p>
+              <p className="highlights-subtitle">Unlock your path to becoming a skilled child counsellor</p>
               <h2>ADVANCED DIPLOMA IN COUNSELLING AND CHILD PSYCHOLOGY</h2>
-              <div className="accreditation-badges">
-                <div className="badge">
-                  <span className="badge-text">UGC-DEB Approved</span>
+              <div className="batch-boxes">
+                <div className="batch-box">
+                  <div className="batch-icon"></div>
+                  <h3>Batch 1</h3>
+                  <ul className="batch-details">
+                    <li>Weekday Morning Batch</li>
+                    <li>Monday - Thursday</li>
+                    <li>9 AM - 1 PM</li>
+                  </ul>
                 </div>
-                <div className="badge">
-                  <span className="badge-text">NAAC Accredited</span>
+                <div className="batch-box">
+                  <div className="batch-icon"></div>
+                  <h3>Batch 2</h3>
+                  <ul className="batch-details">
+                    <li>Weekday Evening Batch</li>
+                    <li>Monday - Thursday</li>
+                    <li>1 PM - 6 PM</li>
+                  </ul>
                 </div>
               </div>
               <button className="download-brochure-btn">Download Brochure</button>
@@ -128,11 +148,11 @@ const CounsellingChildPsychology = () => {
             </div>
             <div className="detail-item">
               <span className="detail-label">Fees</span>
-              <span className="detail-value">INR 18,750 per Semester</span>
+              <span className="detail-value">₹0 per Semester</span>
             </div>
             <div className="detail-item">
               <span className="detail-label">Eligibility</span>
-              <span className="detail-value">Bachelor's degree in any discipline</span>
+              <span className="detail-value">Eligibility - Bachelor's degree in any discipline</span>
             </div>
           </div>
         </div>
@@ -142,13 +162,15 @@ const CounsellingChildPsychology = () => {
       <section className="learning-outcomes">
         <div className="container">
           <h2 className="section-title">LEARNING OUTCOMES</h2>
-          <ul className="outcomes-list">
-            <li>Gain practical counselling skills for children and adolescents</li>
-            <li>Learn to assess and support children's emotional and behavioral needs</li>
-            <li>Practice ethical and child-centered counselling approaches</li>
-            <li>Apply learning through hands-on training and real-world experience</li>
-            <li>Promote children's mental health and overall well-being</li>
-          </ul>
+          <div className="outcomes-box">
+            <ul className="outcomes-list">
+              <li>Gain practical counselling skills for children and adolescents</li>
+              <li>Learn to assess and support children's emotional and behavioral needs</li>
+              <li>Practice ethical and child-centered counselling approaches</li>
+              <li>Apply learning through hands-on training and real-world experience</li>
+              <li>Promote children's mental health and overall wellbeing</li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -158,43 +180,41 @@ const CounsellingChildPsychology = () => {
           <div className="syllabus-header">
             <h2 className="section-title">COURSE SYLLABUS</h2>
             <div className="syllabus-buttons">
-              <button className="apply-now-btn-outline">Apply Now</button>
+              <button className="apply-now-btn-outline">Apply now</button>
               <button className="download-brochure-btn">Download Brochure</button>
             </div>
           </div>
           <div className="syllabus-content">
             <div className="semester-card">
-              <div className="semester-header semester-1">SEMESTER 1</div>
+              <div className="semester-header semester-1">SEMESTER I</div>
               <h3>FOUNDATIONS OF COUNSELLING PSYCHOLOGY</h3>
               <p className="credits">Total Credits - 22</p>
               <ul className="semester-topics">
-                <li>Introduction to Psychology</li>
+                <li>Foundations of Psychology</li>
                 <li>Introduction to Counselling Psychology</li>
-                <li>Developmental Psychology across the Lifespan</li>
+                <li>Developmental Psychology Across the Lifespan</li>
                 <li>Foundations of Child Psychology</li>
-                <li>Elective Paper - Child Assessment, Testing & Counselling</li>
+                <li>Practical Paper - Child Assessment, Testing & Counselling Lab</li>
               </ul>
             </div>
             <div className="semester-card">
               <div className="semester-header semester-2">SEMESTER 2</div>
               <h3>ADVANCEMENT TO SPECIALIZATION</h3>
-              <p className="credits">Total Credits - 22</p>
+              <p className="credits">Total Credits - 32</p>
               <ul className="semester-topics">
-                <li>Advanced Therapeutic Counselling</li>
+                <li>Ethics and Professional Issues in Counselling</li>
                 <li>Child Psychopathology and Counselling</li>
-                <li>Positive Development & Role of School & Community in Mental Health</li>
-                <li>Methods in Research</li>
+                <li>Positive Development, Family, School & Community Interventions</li>
+                <li>Media Psychology</li>
                 <li>Dissertation</li>
-                <li>Internship and Field Practicum</li>
+                <li>Internship / Field Placement</li>
               </ul>
             </div>
           </div>
           <div className="internship-section">
             <h3>Internship Opportunities</h3>
             <p>
-              Gain hands-on experience through internships in school counselling, rehabilitation, 
-              educational, or clinical settings. These opportunities help you build practical skills, 
-              professional competence, and industry-ready expertise.
+              Gain real-world experience in approved counselling, rehabilitation, educational, or clinical settings. Structured internships help you build practical skills, professional confidence, and industry-ready expertise.
             </p>
           </div>
         </div>
@@ -204,27 +224,32 @@ const CounsellingChildPsychology = () => {
       <section className="course-fee">
         <div className="container">
           <h2 className="section-title">COURSE FEE</h2>
-          <div className="fee-content">
-            <div className="main-fee">
-              <p className="fee-label">Full course fee (Two semesters)</p>
-              <p className="fee-amount">INR 75,000</p>
-              <p className="fee-note">inclusive of all taxes</p>
-            </div>
-            <div className="fee-options">
-              <div className="fee-option">
-                <p className="fee-option-label">Per semester fee</p>
-                <p className="fee-option-amount">INR 18,750</p>
-                <p className="fee-option-note">inclusive of all taxes</p>
+          <div className="fee-wrapper">
+            <div className="fee-content">
+              <div className="main-fee">
+                <p className="fee-label">Full course fee (Four semesters)</p>
+                <p className="fee-amount">INR 75,000</p>
+                <p className="fee-note">Inclusive of all taxes</p>
               </div>
-              <div className="fee-option">
-                <p className="fee-option-label">EMI (12 Months)</p>
-                <p className="fee-option-amount">INR 3,125 /Month</p>
-                <p className="fee-option-note">inclusive of all taxes</p>
+              <div className="fee-right-column">
+                <div className="fee-options">
+                  <div className="fee-option">
+                    <p className="fee-option-label">Each semester fee</p>
+                    <p className="fee-option-amount">INR 18,750</p>
+                    <p className="fee-option-note">Inclusive of all taxes</p>
+                  </div>
+                  <div className="fee-option">
+                    <p className="fee-option-label">EMI starting at</p>
+                    <p className="fee-option-amount">INR 3,125 /Month</p>
+                    <p className="fee-option-note">Terms & conditions apply</p>
+                  </div>
+                </div>
+                <div className="fee-note-section">
+                  <span className="info-icon">ℹ</span>
+                  <p>Note for online payments</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="fee-note-section">
-            <p>Note for online payments</p>
           </div>
         </div>
       </section>
@@ -235,19 +260,54 @@ const CounsellingChildPsychology = () => {
           <h2 className="section-title">SKILLS</h2>
           <ul className="skills-list">
             <li>
-              <strong>Active Listening & Empathy</strong> - Understand children's emotions and needs in care.
+              <span className="skill-checkmark">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="#1A1260"/>
+                </svg>
+              </span>
+              <span className="skill-text">
+                <strong>Active Listening & Empathy</strong> – Understand children's emotions and respond with care.
+              </span>
             </li>
             <li>
-              <strong>Assessment & Observation</strong> - Identify emotional, behavioral, and developmental needs.
+              <span className="skill-checkmark">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="#1A1260"/>
+                </svg>
+              </span>
+              <span className="skill-text">
+                <strong>Assessment & Observation</strong> – Identify emotional, behavioral, and developmental needs
+              </span>
             </li>
             <li>
-              <strong>Communication Skills</strong> - Effectively interact with children, parents, and caregivers.
+              <span className="skill-checkmark">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="#1A1260"/>
+                </svg>
+              </span>
+              <span className="skill-text">
+                <strong>Communication Skills</strong> – Effectively interact with children, parents, and caregivers
+              </span>
             </li>
             <li>
-              <strong>Counselling Techniques</strong> - Apply child-centered, ethical strategies to support well-being.
+              <span className="skill-checkmark">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="#1A1260"/>
+                </svg>
+              </span>
+              <span className="skill-text">
+                <strong>Counselling Techniques</strong> – Apply child-centered, ethical strategies to support wellbeing
+              </span>
             </li>
             <li>
-              <strong>Problem Solving & Intervention</strong> - Develop practical solutions and therapeutic plans for children's challenges.
+              <span className="skill-checkmark">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="#1A1260"/>
+                </svg>
+              </span>
+              <span className="skill-text">
+                <strong>Problem Solving & Intervention</strong> – Develop practical solutions and therapeutic plans for children's challenges
+              </span>
             </li>
           </ul>
         </div>
@@ -261,22 +321,20 @@ const CounsellingChildPsychology = () => {
             With a Child Counselling specialization, this course lays a strong psychological foundation 
             and prepares you for impactful careers in child and adolescent mental health. Potential career paths include:
           </p>
-          <div className="career-carousel">
-            <button className="carousel-btn prev" onClick={prevCareer}>‹</button>
-            <div className="career-cards">
-              {careers.map((career, index) => (
-                <div 
-                  key={index} 
-                  className={`career-card ${index === currentCareerIndex ? 'active' : ''}`}
-                >
-                  <div className="career-image">
-                    <img src={career.image} alt={career.title} />
+          <div className="career-cards-grid">
+            {careers.map((career, index) => (
+              <div 
+                key={index} 
+                className="career-card"
+              >
+                <div className="career-image">
+                  <img src={career.image} alt={career.title} />
+                  <div className="career-overlay">
+                    <p className="career-title-overlay">{career.title}</p>
                   </div>
-                  <p className="career-title">{career.title}</p>
                 </div>
-              ))}
-            </div>
-            <button className="carousel-btn next" onClick={nextCareer}>›</button>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -287,15 +345,21 @@ const CounsellingChildPsychology = () => {
           <h2 className="section-title">OTHER ADVANCED DIPLOMA PROGRAMS</h2>
           <div className="programs-grid">
             <Link to="/courses" className="program-card">
-              <div className="program-icon">🧠</div>
+              <div className="program-icon-wrapper">
+                <img src={cc1Icon} alt="Organizational Psychology" className="program-icon" />
+              </div>
               <p>Advanced Diploma in Counselling and Organizational Psychology</p>
             </Link>
             <Link to="/courses" className="program-card">
-              <div className="program-icon">🧠</div>
+              <div className="program-icon-wrapper">
+                <img src={cc2Icon} alt="Forensic Psychology" className="program-icon" />
+              </div>
               <p>Advanced Diploma in Counselling and Forensic Psychology</p>
             </Link>
             <Link to="/courses" className="program-card">
-              <div className="program-icon">🧠</div>
+              <div className="program-icon-wrapper">
+                <img src={cc3Icon} alt="Art Therapy" className="program-icon" />
+              </div>
               <p>Advanced Diploma in Art Therapy</p>
             </Link>
           </div>

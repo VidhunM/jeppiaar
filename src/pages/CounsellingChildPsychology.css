@@ -129,102 +129,175 @@
 
 /* Program Highlights Section */
 .program-highlights {
-  padding: 4rem 0;
-  background: linear-gradient(135deg, #0E0529 0%, #1a0a3d 100%);
+  padding: 3.5rem 0;
+  background: #0E0529;
   color: white;
+  margin-bottom: 2rem;
 }
 
 .highlights-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
+  grid-template-columns: 40% 60%;
+  gap: 3rem;
+  align-items: end;
+  min-height: 100%;
+}
+
+.highlights-image {
+  width: 100%;
+  max-width: 70%;
+  align-self: flex-end;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  margin-top: auto;
 }
 
 .highlights-image img {
   width: 100%;
   height: auto;
+  display: block;
   border-radius: 8px;
+  object-fit: contain;
+  align-self: flex-end;
 }
 
 .highlights-subtitle {
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-  opacity: 0.9;
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+  color: white;
+  opacity: 0.95;
 }
 
 .highlights-text h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: left;
+  vertical-align: middle;
+  text-transform: uppercase;
+  color: white;
   margin-bottom: 2rem;
-  line-height: 1.2;
 }
 
-.accreditation-badges {
-  display: flex;
+.batch-boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
   margin-bottom: 2rem;
-  flex-wrap: wrap;
 }
 
-.badge {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
+.batch-box {
+  background: rgba(90, 85, 106, 0.8);
+  border: none;
+  border-radius: 12px;
+  padding: 1.5rem;
+  position: relative;
+}
+
+.batch-icon {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: white;
-  color: #0E0529;
-  font-weight: 600;
-  font-size: 0.9rem;
-  text-align: center;
-  padding: 1rem;
 }
 
-.badge-text {
-  font-size: 0.85rem;
-  line-height: 1.3;
+.batch-icon::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm-1 7h5.5L13 3.5V9z'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+}
+
+.batch-box h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.875rem;
+  margin-top: 0;
+  padding-left: 2.25rem;
+}
+
+.batch-details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-left: 2.25rem;
+}
+
+.batch-details li {
+  color: white;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  margin-bottom: 0.45rem;
+  position: relative;
+  padding-left: 1.1rem;
+}
+
+.batch-details li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .download-brochure-btn {
-  background: #0E0529;
-  color: white;
+  background: white;
+  color: #333;
   border: none;
-  padding: 1rem 2.5rem;
-  border-radius: 8px;
-  font-weight: 600;
+  padding: 1.125rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 700;
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  width: 100%;
+  max-width: 310px;
+  margin: 0;
+  display: block;
 }
 
 .download-brochure-btn:hover {
-  background: #1a0a3d;
+  background: #f5f5f5;
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
 }
 
 /* Program Details Bar */
 .program-details-bar {
-  background: white;
+  background: #f5f5f5;
   padding: 2rem 0;
-  border-top: 1px solid #e0e0e0;
-  border-bottom: 1px solid #e0e0e0;
+  border-top: none;
+  border-bottom: none;
 }
 
 .details-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 0;
   text-align: center;
+  background: #f5f5f5;
 }
 
 .detail-item {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  padding: 0 2rem;
-  border-right: 1px solid #e0e0e0;
+  padding: 1.5rem 2rem;
+  border-right: 2px solid #1A1260;
+  background: #f5f5f5;
 }
 
 .detail-item:last-child {
@@ -232,15 +305,17 @@
 }
 
 .detail-label {
-  font-size: 0.9rem;
-  color: #666;
-  font-weight: 500;
+  font-size: 0.85rem;
+  color: #1A1260;
+  font-weight: 400;
+  text-align: left;
 }
 
 .detail-value {
-  font-size: 1.2rem;
-  color: #0E0529;
-  font-weight: 600;
+  font-size: 1.1rem;
+  color: #1A1260;
+  font-weight: 700;
+  text-align: left;
 }
 
 /* Learning Outcomes Section */
@@ -252,9 +327,15 @@
 .section-title {
   font-size: 2rem;
   font-weight: 700;
-  color: #0E0529;
+  color: #000;
   margin-bottom: 2rem;
   text-transform: uppercase;
+}
+
+.outcomes-box {
+  background: #E8E4F4;
+  border-radius: 12px;
+  padding: 2rem;
 }
 
 .outcomes-list {
@@ -267,9 +348,9 @@
 
 .outcomes-list li {
   font-size: 1.1rem;
-  color: #333;
+  color: #000;
   line-height: 1.8;
-  padding-left: 2rem;
+  padding-left: 3rem;
   position: relative;
 }
 
@@ -277,92 +358,123 @@
   content: '✓';
   position: absolute;
   left: 0;
-  color: #0E0529;
+  width: 24px;
+  height: 24px;
+  background: #1A1260;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
+  flex-shrink: 0;
 }
 
 /* Course Syllabus Section */
 .course-syllabus {
-  padding: 4rem 0;
-  background: #f8f9fa;
+  padding: 2.5rem 0;
+  background: #0E0529;
 }
 
 .syllabus-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   flex-wrap: wrap;
   gap: 1rem;
 }
 
+.syllabus-header .section-title {
+  color: white;
+  font-size: 1.75rem;
+}
+
 .syllabus-buttons {
   display: flex;
-  gap: 1rem;
+  gap: 0.75rem;
 }
 
 .apply-now-btn-outline {
   background: white;
-  color: #0E0529;
-  border: 2px solid #0E0529;
-  padding: 1rem 2.5rem;
-  border-radius: 8px;
+  color: #333;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.9rem;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .apply-now-btn-outline:hover {
+  background: white;
+  color: #0E0529;
+}
+
+.course-syllabus .download-brochure-btn {
   background: #0E0529;
   color: white;
+  border: 2px solid #E8E4F4;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.course-syllabus .download-brochure-btn:hover {
+  background: white;
+  color: #0E0529;
+  border-color: white;
 }
 
 .syllabus-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  margin-bottom: 3rem;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .semester-card {
   background: white;
   border-radius: 8px;
-  padding: 2rem;
+  padding: 1.5rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .semester-header {
-  background: #9C88FF;
+  background: #E8E4F4;
   color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
   font-weight: 600;
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
+  font-size: 0.85rem;
+  margin-bottom: 1.25rem;
   display: inline-block;
 }
 
 .semester-1 {
-  background: #9C88FF;
+  background: #E8E4F4;
 }
 
 .semester-2 {
-  background: #9C88FF;
+  background: #E8E4F4;
 }
 
 .semester-card h3 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 700;
   color: #0E0529;
   margin-bottom: 0.5rem;
 }
 
 .credits {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #666;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .semester-topics {
@@ -370,43 +482,52 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.6rem;
 }
 
 .semester-topics li {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #333;
-  padding-left: 1.5rem;
+  padding-left: 2.75rem;
   position: relative;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .semester-topics li::before {
   content: '✓';
   position: absolute;
   left: 0;
-  color: #0E0529;
+  width: 22px;
+  height: 22px;
+  background: #0E0529;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
   font-weight: 700;
+  font-size: 0.85rem;
+  flex-shrink: 0;
 }
 
 .internship-section {
   background: white;
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .internship-section h3 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 700;
   color: #0E0529;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .internship-section p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #333;
-  line-height: 1.8;
+  line-height: 1.7;
 }
 
 /* Course Fee Section */
@@ -415,30 +536,36 @@
   background: white;
 }
 
+.fee-wrapper {
+  background: #f5f5f5;
+  border-radius: 8px;
+  padding: 2.5rem;
+}
+
 .fee-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  margin-bottom: 2rem;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2rem;
+  align-items: start;
 }
 
 .main-fee {
-  text-align: center;
-  padding: 2rem;
-  background: #f8f9fa;
-  border-radius: 8px;
+  text-align: left;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
 }
 
 .fee-label {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #666;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .fee-amount {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
-  color: #0E0529;
+  color: #1A1260;
   margin-bottom: 0.5rem;
 }
 
@@ -447,17 +574,23 @@
   color: #666;
 }
 
-.fee-options {
+.fee-right-column {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
+}
+
+.fee-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }
 
 .fee-option {
-  background: #f8f9fa;
+  background: white;
   padding: 1.5rem;
   border-radius: 8px;
-  text-align: center;
+  text-align: left;
 }
 
 .fee-option-label {
@@ -469,7 +602,7 @@
 .fee-option-amount {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #0E0529;
+  color: #1A1260;
   margin-bottom: 0.5rem;
 }
 
@@ -479,48 +612,105 @@
 }
 
 .fee-note-section {
-  text-align: center;
-  margin-top: 1rem;
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.info-icon {
+  width: 20px;
+  height: 20px;
+  background: #000;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  flex-shrink: 0;
 }
 
 .fee-note-section p {
   font-size: 0.9rem;
   color: #666;
+  margin: 0;
 }
 
 /* Skills Section */
 .skills-section {
   padding: 4rem 0;
-  background: #f8f9fa;
+  background: white;
+}
+
+.skills-section .section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 2rem;
+  text-align: left;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
 }
 
 .skills-list {
   list-style: none;
   padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .skills-list li {
-  font-size: 1.1rem;
-  color: #333;
-  line-height: 1.8;
-  padding-left: 2rem;
-  position: relative;
+  background: #E8E4F4;
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+  text-align: left;
 }
 
-.skills-list li::before {
-  content: '✓';
-  position: absolute;
-  left: 0;
-  color: #0E0529;
-  font-weight: 700;
-  font-size: 1.2rem;
+.skills-list li:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.skill-checkmark {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 20px;
+  height: 20px;
+  margin-right: 0;
+}
+
+.skill-checkmark svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.skill-text {
+  font-size: 1rem;
+  color: #000;
+  line-height: 1.6;
+  flex: 1;
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
 }
 
 .skills-list li strong {
-  color: #0E0529;
+  color: #000;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Career Prospects Section */
@@ -545,64 +735,33 @@
   opacity: 0.95;
 }
 
-.career-carousel {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.carousel-btn {
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
-  border: none;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  font-size: 2rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  flex-shrink: 0;
-}
-
-.carousel-btn:hover {
-  background: rgba(255, 255, 255, 0.3);
-}
-
-.career-cards {
-  display: flex;
+.career-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  flex: 1;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.career-cards::-webkit-scrollbar {
-  display: none;
+  justify-items: center;
 }
 
 .career-card {
-  min-width: 300px;
+  width: 100%;
+  max-width: 350px;
   background: white;
   border-radius: 8px;
   overflow: hidden;
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.career-card.active {
-  opacity: 1;
+.career-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
 .career-image {
   width: 100%;
-  height: 250px;
+  height: 400px;
   overflow: hidden;
+  position: relative;
 }
 
 .career-image img {
@@ -611,18 +770,40 @@
   object-fit: cover;
 }
 
-.career-title {
-  padding: 1rem;
-  text-align: center;
-  color: #0E0529;
+.career-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.career-title-overlay {
+  color: white;
   font-weight: 600;
   font-size: 1rem;
+  text-align: center;
+  margin: 0;
+  letter-spacing: 0.2px;
+}
+
+.career-title {
+  display: none;
 }
 
 /* Other Programs Section */
 .other-programs {
   padding: 4rem 0;
   background: white;
+}
+
+.other-programs .section-title {
+  text-align: left;
+  margin-bottom: 2rem;
 }
 
 .programs-grid {
@@ -632,42 +813,52 @@
 }
 
 .program-card {
-  background: #f8f9fa;
-  padding: 2rem;
-  border-radius: 8px;
-  text-align: center;
+  background: #f5f5f5;
+  padding: 1.5rem;
+  border-radius: 12px;
   text-decoration: none;
-  color: #0E0529;
+  color: #000;
   transition: all 0.3s ease;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
+  align-items: flex-start;
+  gap: 1.25rem;
+  cursor: pointer;
 }
 
 .program-card:hover {
-  background: #0E0529;
-  color: white;
-  transform: translateY(-5px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  background: #e8e8e8;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.program-icon {
-  font-size: 3rem;
-  width: 80px;
-  height: 80px;
-  background: #0E0529;
-  color: white;
+.program-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  background: #1A1260;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+  padding: 12px;
 }
 
-.program-card:hover .program-icon {
-  background: white;
-  color: #0E0529;
+.program-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
 }
+
+.program-card p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #000;
+  font-weight: 500;
+  flex: 1;
+}
+
 
 .program-card p {
   font-size: 1rem;
@@ -876,6 +1067,19 @@
     gap: 2rem;
   }
 
+  .highlights-content {
+    grid-template-columns: 1fr;
+  }
+
+  .batch-boxes {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .highlights-text h2 {
+    font-size: 28px;
+  }
+
   .vertical-apply-tab {
     position: fixed;
     right: 1rem;
@@ -945,6 +1149,10 @@
     font-size: 1.5rem;
   }
 
+  .highlights-text h2 {
+    font-size: 24px;
+  }
+
   .vertical-apply-tab {
     position: fixed;
     right: 1rem;
@@ -1007,6 +1215,10 @@
   .section-title,
   .section-title-white {
     font-size: 1.25rem;
+  }
+
+  .highlights-text h2 {
+    font-size: 20px;
   }
 
   .vertical-apply-tab {
