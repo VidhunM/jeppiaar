@@ -88,6 +88,17 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection }) => {
           <img key={index} src={slide.image} alt="" />
         ))}
       </div>
+      {/* Vertical Apply Now Tab - positioned relative to hero-section */}
+      <div 
+        className="vertical-apply-tab"
+        onClick={() => {
+          if (onShowConstructionPopup) {
+            onShowConstructionPopup();
+          }
+        }}
+      >
+        <span>Apply Now</span>
+      </div>
       <div 
         className={`hero-slide ${currentSlide === 0 ? 'hero-slide-first' : ''} ${currentSlide === 3 ? 'hero-slide-fourth' : ''} ${imagesLoaded ? 'images-loaded' : ''}`}
         style={{ backgroundImage: `url(${slides[currentSlide].image})` }}
@@ -144,16 +155,6 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection }) => {
               </button>
             </div>
 
-            <div 
-              className="vertical-apply-tab"
-              onClick={() => {
-                if (onShowConstructionPopup) {
-                  onShowConstructionPopup();
-                }
-              }}
-            >
-              <span>Apply Now</span>
-            </div>
           </>
         )}
 
@@ -169,16 +170,6 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection }) => {
               <span className="star">★</span>
               <span className="star">★</span>
             </div>
-            <div 
-              className="vertical-apply-tab"
-              onClick={() => {
-                if (onShowConstructionPopup) {
-                  onShowConstructionPopup();
-                }
-              }}
-            >
-              <span>Apply Now</span>
-            </div>
           </>
         )}
 
@@ -188,16 +179,6 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection }) => {
               <div className="feature-text">AC CLASSROOMS</div>
               <div className="feature-text">WITH SMART BOARD</div>
             </div>
-            <div 
-              className="vertical-apply-tab"
-              onClick={() => {
-                if (onShowConstructionPopup) {
-                  onShowConstructionPopup();
-                }
-              }}
-            >
-              <span>Apply Now</span>
-            </div>
           </>
         )}
 
@@ -206,16 +187,6 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection }) => {
             <div className="hero-feature-badge hero-feature-badge-fourth">
               <div className="feature-text feature-text-fourth">LEARN FROM</div>
               <div className="feature-text feature-text-fourth">LEADING PSYCHOLOGISTS</div>
-            </div>
-            <div 
-              className="vertical-apply-tab"
-              onClick={() => {
-                if (onShowConstructionPopup) {
-                  onShowConstructionPopup();
-                }
-              }}
-            >
-              <span>Apply Now</span>
             </div>
           </>
         )}
