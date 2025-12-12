@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import LeadGeneration from '../components/LeadGeneration/LeadGeneration';
 import image2 from '../assets/images/image2.png';
@@ -17,6 +17,7 @@ const CounsellingChildPsychology = () => {
   const [openFaq, setOpenFaq] = useState(null);
   const [currentCareerIndex, setCurrentCareerIndex] = useState(0);
   const [showUnderConstruction, setShowUnderConstruction] = useState(false);
+  const [cardsToShow, setCardsToShow] = useState(3);
 
   const showConstructionPopup = () => {
     setShowUnderConstruction(true);
@@ -37,12 +38,31 @@ const CounsellingChildPsychology = () => {
     { title: 'School Psychologist', image: cp4Image }
   ];
 
+  useEffect(() => {
+    const handleResize = () => {
+      const newCardsToShow = window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 3;
+      setCardsToShow((prevCardsToShow) => {
+        if (prevCardsToShow !== newCardsToShow) {
+          const newMaxIndex = Math.max(0, careers.length - newCardsToShow);
+          setCurrentCareerIndex((prevIndex) => Math.min(prevIndex, newMaxIndex));
+        }
+        return newCardsToShow;
+      });
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [careers.length]);
+
+  const maxIndex = Math.max(0, careers.length - cardsToShow);
+
   const nextCareer = () => {
-    setCurrentCareerIndex((prev) => (prev + 1) % careers.length);
+    setCurrentCareerIndex((prev) => Math.min(prev + 1, maxIndex));
   };
 
   const prevCareer = () => {
-    setCurrentCareerIndex((prev) => (prev - 1 + careers.length) % careers.length);
+    setCurrentCareerIndex((prev) => Math.max(prev - 1, 0));
   };
 
   const faqs = [
@@ -318,22 +338,64 @@ const CounsellingChildPsychology = () => {
         <div className="container">
           <h2 className="section-title-white">CAREER PROSPECTS</h2>
           <p className="career-description">
-            With a Child Counselling specialization, this course lays a strong psychological foundation 
-            and prepares you for impactful careers in child and adolescent mental health. Potential career paths include:
+          With a Child Counselling specialization, this course builds a strong psychology foundation and 
+prepares <br /> you for impactful careers in child and adolescent mental health. Potential career paths 
+include
           </p>
-          <div className="career-cards-grid">
-            {careers.map((career, index) => (
+          <div className="career-carousel-wrapper">
+            <button 
+              className="career-carousel-btn prev" 
+              onClick={prevCareer}
+              aria-label="Previous career"
+              disabled={currentCareerIndex === 0}
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 19L8 12L15 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M8 12H20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+              </svg>
+            </button>
+            <div className="career-carousel-container">
               <div 
-                key={index} 
-                className="career-card"
+                className="career-cards-slider"
+                style={{ 
+                  transform: `translateX(calc(-${currentCareerIndex} * (100% / ${cardsToShow})))` 
+                }}
               >
-                <div className="career-image">
-                  <img src={career.image} alt={career.title} />
-                  <div className="career-overlay">
-                    <p className="career-title-overlay">{career.title}</p>
+                {careers.map((career, index) => (
+                  <div 
+                    key={index} 
+                    className="career-card"
+                  >
+                    <div className="career-image">
+                      <img src={career.image} alt={career.title} />
+                      <div className="career-overlay">
+                        <p className="career-title-overlay">{career.title}</p>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                ))}
               </div>
+            </div>
+            <button 
+              className="career-carousel-btn next" 
+              onClick={nextCareer}
+              aria-label="Next career"
+              disabled={currentCareerIndex >= maxIndex}
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 5L16 12L9 19" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M16 12H4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+              </svg>
+            </button>
+          </div>
+          <div className="career-carousel-dots">
+            {careers.map((_, index) => (
+              <button
+                key={index}
+                className={`carousel-dot ${currentCareerIndex === index ? 'active' : ''}`}
+                onClick={() => setCurrentCareerIndex(index)}
+                aria-label={`Go to career ${index + 1}`}
+              />
             ))}
           </div>
         </div>

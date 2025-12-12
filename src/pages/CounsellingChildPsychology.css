@@ -715,7 +715,7 @@
 
 /* Career Prospects Section */
 .career-prospects {
-  padding: 4rem 0;
+  padding: 2.5rem 0;
   background: #0E0529;
   color: white;
 }
@@ -724,32 +724,64 @@
   font-size: 2rem;
   font-weight: 700;
   color: white;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   text-transform: uppercase;
+  padding-left: 5rem;
 }
 
 .career-description {
   font-size: 1.1rem;
   line-height: 1.8;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   opacity: 0.95;
+  padding-left: 5rem;
 }
 
-.career-cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+.career-carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.career-carousel-container {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.career-cards-slider {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   gap: 2rem;
-  justify-items: center;
+  will-change: transform;
 }
 
 .career-card {
-  width: 100%;
-  max-width: 350px;
+  flex: 0 0 calc(100% / 3 - 1.33rem);
+  min-width: 0;
   background: white;
   border-radius: 8px;
   overflow: hidden;
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 1023px) {
+  .career-card {
+    flex: 0 0 calc(100% / 2 - 1rem);
+  }
+}
+
+@media (max-width: 767px) {
+  .career-card {
+    flex: 0 0 100%;
+  }
+  
+  .career-cards-slider {
+    gap: 1.5rem;
+  }
 }
 
 .career-card:hover {
@@ -772,23 +804,118 @@
 
 .career-overlay {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 1rem 1.5rem;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 1rem 1.25rem;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .career-title-overlay {
   color: white;
   font-weight: 600;
-  font-size: 1rem;
-  text-align: center;
-  margin: 0;
+  font-size: 0.9rem;
+  text-align: left;
+  margin: 0 0 0.5rem 0;
   letter-spacing: 0.2px;
+  position: relative;
+  width: 100%;
+}
+
+.career-title-overlay::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: white;
+  border-radius: 2px;
+}
+
+.career-carousel-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.career-carousel-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+}
+
+.career-carousel-btn:active {
+  transform: scale(0.95);
+}
+
+.career-carousel-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.career-carousel-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+.career-carousel-btn.prev {
+  order: -1;
+}
+
+.career-carousel-btn.next {
+  order: 1;
+}
+
+.career-carousel-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.carousel-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.carousel-dot:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.carousel-dot.active {
+  background: white;
+  border-color: white;
+  width: 14px;
+  height: 14px;
 }
 
 .career-title {
@@ -1167,22 +1294,22 @@
     transform: translateY(-2px);
   }
 
-  .career-carousel {
-    flex-direction: column;
+  .career-carousel-wrapper {
+    gap: 1rem;
   }
 
-  .carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+  .career-carousel-btn {
+    width: 40px;
+    height: 40px;
   }
 
-  .carousel-btn.prev {
-    left: 0;
+  .career-carousel-btn svg {
+    width: 20px;
+    height: 20px;
   }
 
-  .carousel-btn.next {
-    right: 0;
+  .career-cards-slider {
+    gap: 1.5rem;
   }
 }
 
