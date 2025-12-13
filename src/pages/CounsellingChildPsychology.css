@@ -71,9 +71,8 @@ img {
 
 /* Program Overview Section */
 .program-overview {
-  padding: 3.5rem 0;
+  padding: 3rem 0;
   padding-bottom: 4rem;
-  padding-right: 3.5rem;
   background: white;
   overflow: visible;
   position: relative;
@@ -82,48 +81,50 @@ img {
 .overview-content {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 40% 60%;
-  grid-template-columns: 40% 60%;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 2.5rem;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   position: relative;
   max-width: 1400px;
   margin: 0 auto;
-  padding-right: 3.5rem;
+  padding: 0 2rem;
 }
 
 .overview-text {
-  align-self: flex-start;
+  align-self: center;
+  padding-right: 1.5rem;
 }
 
 .overview-text h1 {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   font-weight: 700;
   color: #000;
   margin-bottom: 1.5rem;
-  margin-top: 1rem;
-  line-height: 1.2;
+  margin-top: 0;
+  line-height: 1.15;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .overview-text p {
-  font-size: 1rem;
+  font-size: 0.98rem;
   color: #333;
   line-height: 1.7;
   margin-bottom: 2rem;
-  margin-top: 0.5rem;
+  margin-top: 0;
 }
 
 .enroll-now-btn {
   background: #0E0529;
   color: white;
   border: none;
-  padding: 0.875rem 2rem;
+  padding: 0.8rem 1.75rem;
   border-radius: 50px;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -144,26 +145,21 @@ img {
 
 .overview-image {
   position: relative;
-  border-radius: 8px;
-  overflow: visible;
-  max-width: 70%;
-  margin-left: auto;
-  margin-right: 6%;
-  align-self: flex-end;
-  margin-top: 0;
-  margin-bottom: -3rem;
-  -webkit-transform: translateY(-2rem);
-  -ms-transform: translateY(-2rem);
-  transform: translateY(-2rem);
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%;
+  align-self: center;
+  margin: 0;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
 }
 
 .overview-image img {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 8px;
-  max-height: 300px;
+  border-radius: 12px;
   object-fit: cover;
+  min-height: 350px;
 }
 
 .vertical-apply-tab {
