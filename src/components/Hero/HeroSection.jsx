@@ -5,7 +5,7 @@ import hero2Image from '../../assets/images/hero2.png';
 import hero3Image from '../../assets/images/hero3.png';
 import hero4Image from '../../assets/images/hero4.png';
 
-const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection }) => {
+const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection, onOpenApplyModal }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [imagesLoaded, setImagesLoaded] = useState(false);
   
@@ -92,7 +92,9 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection }) => {
       <div 
         className="vertical-apply-tab"
         onClick={() => {
-          if (onShowConstructionPopup) {
+          if (onOpenApplyModal) {
+            onOpenApplyModal();
+          } else if (onShowConstructionPopup) {
             onShowConstructionPopup();
           }
         }}
@@ -141,7 +143,9 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection }) => {
               <button 
                 className="apply-now-btn"
                 onClick={() => {
-                  if (onScrollToCareerSection) {
+                  if (onOpenApplyModal) {
+                    onOpenApplyModal();
+                  } else if (onScrollToCareerSection) {
                     onScrollToCareerSection();
                   } else {
                     const startCareerSection = document.getElementById('start-career-section');

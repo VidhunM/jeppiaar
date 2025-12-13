@@ -11,13 +11,26 @@ import cp4Image from '../assets/images/cp4.jpg';
 import cc1Icon from '../assets/icons/cc1.png';
 import cc2Icon from '../assets/icons/cc02.png';
 import cc3Icon from '../assets/icons/cc3.png';
+import logo from '../assets/icons/Logo1.png';
 import './CounsellingChildPsychology.css';
 
 const CounsellingChildPsychology = () => {
   const [openFaq, setOpenFaq] = useState(null);
   const [currentCareerIndex, setCurrentCareerIndex] = useState(0);
   const [showUnderConstruction, setShowUnderConstruction] = useState(false);
+  const [showApplyModal, setShowApplyModal] = useState(false);
   const [cardsToShow, setCardsToShow] = useState(3);
+  const [applyForm, setApplyForm] = useState({
+    name: '',
+    email: '',
+    mobile: '',
+    country: '',
+    city: '',
+    state: '',
+    course: '',
+    qualification: '',
+    consent: false
+  });
 
   const showConstructionPopup = () => {
     setShowUnderConstruction(true);
@@ -25,6 +38,42 @@ const CounsellingChildPsychology = () => {
 
   const closePopup = () => {
     setShowUnderConstruction(false);
+  };
+
+  const openApplyModal = () => {
+    setShowApplyModal(true);
+  };
+
+  const closeApplyModal = () => {
+    setShowApplyModal(false);
+    setApplyForm({
+      name: '',
+      email: '',
+      mobile: '',
+      country: '',
+      city: '',
+      state: '',
+      course: '',
+      qualification: '',
+      consent: false
+    });
+  };
+
+  const handleApplyFormChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setApplyForm(prev => ({
+      ...prev,
+      [name]: type === 'checkbox' ? checked : value
+    }));
+  };
+
+  const handleApplySubmit = async (e) => {
+    e.preventDefault();
+    // Handle form submission here
+    console.log('Apply form submitted:', applyForm);
+    // You can add API call here similar to LeadGeneration component
+    alert('Thank you for your interest! We will contact you soon.');
+    closeApplyModal();
   };
 
   const toggleFaq = (index) => {
@@ -100,21 +149,14 @@ const CounsellingChildPsychology = () => {
               <p>
                 The Diploma in Counselling Psychology (Specialization in Child Psychology) equips learners with essential counselling skills, child-focused assessment techniques, and ethically grounded practice. With a blend of theory, supervised practicum, and real-world exposure, the program prepares reflective practitioners to support the emotional, behavioural, and developmental needs of children and adolescents across diverse settings.
               </p>
-              <button className="enroll-now-btn">Enroll Now</button>
+              <button className="enroll-now-btn" onClick={openApplyModal}>Enroll Now</button>
             </div>
             <div className="overview-image">
               <img src={cc1Image} alt="Child counselling session" />
             </div>
             <div 
               className="vertical-apply-tab"
-              onClick={() => {
-                const section = document.getElementById('start-career-section');
-                if (section) {
-                  section.scrollIntoView({ behavior: 'smooth' });
-                } else {
-                  window.location.href = '/#start-career-section';
-                }
-              }}
+              onClick={openApplyModal}
             >
               <span>Apply Now</span>
             </div>
@@ -476,6 +518,136 @@ include
             <button className="popup-close" onClick={closePopup}>×</button>
             <h2>Site Under Construction</h2>
             <p>This page is currently under construction. Please check back soon!</p>
+          </div>
+        </div>
+      )}
+
+      {showApplyModal && (
+        <div className="apply-modal-overlay" onClick={closeApplyModal}>
+          <div className="apply-modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="apply-modal-close" onClick={closeApplyModal}>×</button>
+            
+            <div className="apply-modal-header">
+              <div className="apply-modal-logo">
+                <img src={logo} alt="Jeppiaar Academy Logo" />
+              </div>
+              <h2 className="apply-modal-title">Advanced Diploma Courses in Psychology- Admissions open!</h2>
+            </div>
+
+            <form className="apply-modal-form" onSubmit={handleApplySubmit}>
+              <div className="apply-form-row">
+                <div className="apply-form-column">
+                  <input
+                    type="text"
+                    name="name"
+                    value={applyForm.name}
+                    onChange={handleApplyFormChange}
+                    placeholder="Name"
+                    required
+                  />
+                  <input
+                    type="tel"
+                    name="mobile"
+                    value={applyForm.mobile}
+                    onChange={handleApplyFormChange}
+                    placeholder="Mobile Number"
+                    required
+                  />
+                  <select
+                    name="country"
+                    value={applyForm.country}
+                    onChange={handleApplyFormChange}
+                    required
+                  >
+                    <option value="">Select Country</option>
+                    <option value="India">India</option>
+                    <option value="United States">United States</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Germany">Germany</option>
+                    <option value="France">France</option>
+                    <option value="Japan">Japan</option>
+                    <option value="China">China</option>
+                    <option value="Singapore">Singapore</option>
+                    <option value="United Arab Emirates">United Arab Emirates</option>
+                    <option value="Other">Other</option>
+                  </select>
+                  <select
+                    name="city"
+                    value={applyForm.city}
+                    onChange={handleApplyFormChange}
+                    required
+                  >
+                    <option value="">Select City</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                <div className="apply-form-column">
+                  <input
+                    type="email"
+                    name="email"
+                    value={applyForm.email}
+                    onChange={handleApplyFormChange}
+                    placeholder="Email address"
+                    required
+                  />
+                  <select
+                    name="state"
+                    value={applyForm.state}
+                    onChange={handleApplyFormChange}
+                    required
+                  >
+                    <option value="">Select State</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Telangana">Telangana</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Other">Other</option>
+                  </select>
+                  <input
+                    type="text"
+                    name="qualification"
+                    value={applyForm.qualification}
+                    onChange={handleApplyFormChange}
+                    placeholder="Highest Qualification (completed as of June 2026)"
+                    className="apply-form-input"
+                    required
+                  />
+                  <select
+                    name="course"
+                    value={applyForm.course}
+                    onChange={handleApplyFormChange}
+                    required
+                  >
+                    <option value="">Select Diploma Course</option>
+                    <option value="Counselling and Child Psychology">Counselling and Child Psychology</option>
+                    <option value="Counselling and Organisational Psychology">Counselling and Organisational Psychology</option>
+                    <option value="Counselling and Forensic Psychology">Counselling and Forensic Psychology</option>
+                    <option value="Art Therapy">Art Therapy</option>
+                  </select>
+                </div>
+              </div>
+
+              <label className="apply-form-checkbox">
+                <input
+                  type="checkbox"
+                  name="consent"
+                  checked={applyForm.consent}
+                  onChange={handleApplyFormChange}
+                  required
+                />
+                <span>I authorize Jeppiaar Academy of Psychology & Research and its associates to contact me with updates</span>
+              </label>
+
+              <button type="submit" className="apply-form-submit">Submit</button>
+            </form>
           </div>
         </div>
       )}

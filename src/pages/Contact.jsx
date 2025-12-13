@@ -126,14 +126,23 @@ const Contact = () => {
                     required
                   />
                 </div>
-                <input
-                  type="text"
+                <select
                   name="hearAbout"
-                  placeholder="How did you hear about us?"
                   value={formData.hearAbout}
                   onChange={handleChange}
                   required
-                />
+                >
+                  <option value="">How did you hear about us?</option>
+                  <option value="Google Search">Google Search</option>
+                  <option value="Social Media">Social Media</option>
+                  <option value="Friend/Referral">Friend/Referral</option>
+                  <option value="Advertisement">Advertisement</option>
+                  <option value="Website">Website</option>
+                  <option value="Email">Email</option>
+                  <option value="Newsletter">Newsletter</option>
+                  <option value="Event/Seminar">Event/Seminar</option>
+                  <option value="Other">Other</option>
+                </select>
                 <textarea
                   name="message"
                   placeholder="Your message"
