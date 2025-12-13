@@ -82,8 +82,8 @@ img {
 .overview-content {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 40% 60%;
+  grid-template-columns: 40% 60%;
   gap: 2.5rem;
   -webkit-box-align: end;
   -ms-flex-align: end;
@@ -146,9 +146,9 @@ img {
   position: relative;
   border-radius: 8px;
   overflow: visible;
-  max-width: 80%;
+  max-width: 70%;
   margin-left: auto;
-  margin-right: 2rem;
+  margin-right: 6%;
   align-self: flex-end;
   margin-top: 0;
   margin-bottom: -3rem;
@@ -162,7 +162,7 @@ img {
   height: auto;
   display: block;
   border-radius: 8px;
-  max-height: 380px;
+  max-height: 300px;
   object-fit: cover;
 }
 
@@ -237,16 +237,17 @@ img {
 }
 
 .highlights-text {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  padding-right: 6%;
   display: flex;
   flex-direction: column;
 }
 
 .highlights-subtitle {
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   margin-top: 0;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
   color: white;
   opacity: 0.95;
 }
@@ -254,29 +255,29 @@ img {
 .highlights-text h2 {
   font-family: 'Roboto', sans-serif;
   font-weight: 600;
-  font-size: 2.5rem;
+  font-size: 2rem;
   line-height: 1.2;
   letter-spacing: 0%;
   text-align: left;
   vertical-align: middle;
   text-transform: uppercase;
   color: white;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   margin-top: 0.5rem;
 }
 
 .batch-boxes {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 
 .batch-box {
   background: rgba(90, 85, 106, 0.8);
   border: none;
   border-radius: 12px;
-  padding: 1.5rem;
+  padding: 1.25rem;
   position: relative;
 }
 
@@ -304,28 +305,28 @@ img {
 }
 
 .batch-box h3 {
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: white;
-  margin-bottom: 0.875rem;
+  margin-bottom: 0.75rem;
   margin-top: 0;
-  padding-left: 2.25rem;
+  padding-left: 2rem;
 }
 
 .batch-details {
   list-style: none;
   padding: 0;
   margin: 0;
-  padding-left: 2.25rem;
+  padding-left: 2rem;
 }
 
 .batch-details li {
   color: white;
-  font-size: 0.95rem;
-  line-height: 1.75;
-  margin-bottom: 0.45rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin-bottom: 0.4rem;
   position: relative;
-  padding-left: 1.1rem;
+  padding-left: 1rem;
 }
 
 .batch-details li::before {
@@ -341,17 +342,17 @@ img {
   background: white;
   color: #333;
   border: none;
-  padding: 1.125rem 2.5rem;
+  padding: 1rem 2rem;
   border-radius: 50px;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 0.9rem;
   cursor: pointer;
   transition: all 0.3s ease;
   width: 100%;
-  max-width: 310px;
+  max-width: 280px;
   margin: 0;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
   display: block;
 }
 
