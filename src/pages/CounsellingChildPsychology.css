@@ -99,7 +99,7 @@ img {
 }
 
 .overview-text h1 {
-  font-size: 2.4rem;
+  font-size: 2.1rem;
   font-weight: 700;
   color: #000;
   margin-bottom: 1.5rem;
@@ -159,7 +159,7 @@ img {
   display: block;
   border-radius: 12px;
   object-fit: cover;
-  min-height: 350px;
+  min-height: 200px;
 }
 
 .vertical-apply-tab {
@@ -251,7 +251,7 @@ img {
 .highlights-text h2 {
   font-family: 'Roboto', sans-serif;
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 1.75rem;
   line-height: 1.2;
   letter-spacing: 0%;
   text-align: left;
@@ -1416,7 +1416,7 @@ img {
   }
 
   .highlights-text h2 {
-    font-size: 2.2rem;
+    font-size: 1.9rem;
   }
 
   .vertical-apply-tab {
@@ -1538,7 +1538,7 @@ img {
 
   .overview-text h1,
   .highlights-text h2 {
-    font-size: 2.2rem;
+    font-size: 1.9rem;
   }
 
   .section-title,
@@ -1547,7 +1547,7 @@ img {
   }
 
   .highlights-text h2 {
-    font-size: 1.75rem;
+    font-size: 1.55rem;
   }
 
   .vertical-apply-tab {
@@ -1644,7 +1644,7 @@ img {
 
   .overview-text h1,
   .highlights-text h2 {
-    font-size: 1.75rem;
+    font-size: 1.55rem;
   }
 
   .section-title,
@@ -1654,7 +1654,7 @@ img {
   }
 
   .highlights-text h2 {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     word-wrap: break-word;
   }
 
