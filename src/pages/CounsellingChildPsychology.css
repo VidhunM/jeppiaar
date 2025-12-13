@@ -1,5 +1,38 @@
+/* Cross-Browser Compatibility Fixes */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .counselling-child-psychology-page {
   padding-top: 80px;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
 }
 
 .container {
@@ -10,6 +43,9 @@
 
 /* Hero Banner Section */
 .program-hero-banner {
+  background: -webkit-gradient(linear, left top, left bottom, from(#0E0529), to(#5A556A));
+  background: -webkit-linear-gradient(180deg, #0E0529 0%, #5A556A 100%);
+  background: -o-linear-gradient(180deg, #0E0529 0%, #5A556A 100%);
   background: linear-gradient(180deg, #0E0529 0%, #5A556A 100%);
   color: white;
   padding: 5rem 2rem;
@@ -36,14 +72,21 @@
 /* Program Overview Section */
 .program-overview {
   padding: 3.5rem 0;
+  padding-bottom: 5rem;
   background: white;
+  overflow: visible;
+  position: relative;
 }
 
 .overview-content {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   gap: 3.5rem;
-  align-items: start;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: end;
   position: relative;
   max-width: 1400px;
   margin: 0 auto;
@@ -74,27 +117,37 @@
   color: white;
   border: none;
   padding: 1rem 2.5rem;
-  border-radius: 8px;
+  border-radius: 50px;
   font-weight: 600;
   font-size: 1rem;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  font-family: 'Roboto', sans-serif;
+  text-transform: none;
+  white-space: nowrap;
 }
 
 .enroll-now-btn:hover {
   background: #1a0a3d;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
   transform: translateY(-2px);
+  -webkit-box-shadow: 0 4px 12px rgba(14, 5, 41, 0.3);
   box-shadow: 0 4px 12px rgba(14, 5, 41, 0.3);
 }
 
 .overview-image {
   position: relative;
   border-radius: 8px;
-  overflow: hidden;
+  overflow: visible;
   max-width: 85%;
   margin-left: auto;
   align-self: flex-end;
-  margin-top: auto;
+  margin-top: 4rem;
+  margin-bottom: -4rem;
+  transform: translateY(1rem);
 }
 
 .overview-image img {
@@ -135,10 +188,11 @@
 
 /* Program Highlights Section */
 .program-highlights {
-  padding: 3.5rem 0;
+  padding: 3.5rem 0 0 0;
   background: #0E0529;
   color: white;
   margin-bottom: 2rem;
+  overflow: visible;
 }
 
 .highlights-content {
@@ -147,6 +201,11 @@
   gap: 3rem;
   align-items: end;
   min-height: 100%;
+  padding-bottom: 0;
+}
+
+.program-highlights .container {
+  padding-bottom: 0;
 }
 
 .highlights-image {
@@ -157,19 +216,29 @@
   align-items: flex-end;
   justify-content: flex-start;
   margin-top: auto;
+  margin-bottom: 0;
 }
 
 .highlights-image img {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 8px;
+  border-radius: 8px 8px 0 0;
   object-fit: contain;
   align-self: flex-end;
+  margin-bottom: 0;
+}
+
+.highlights-text {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .highlights-subtitle {
   font-size: 1.05rem;
+  margin-top: 0;
   margin-bottom: 1.5rem;
   color: white;
   opacity: 0.95;
@@ -218,11 +287,12 @@
   content: '';
   width: 24px;
   height: 24px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm-1 7h5.5L13 3.5V9z'/%3E%3C/svg%3E");
+  background-image: url('../assets/icons/cc02.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   display: block;
+  filter: brightness(0) invert(1);
 }
 
 .batch-box h3 {
@@ -272,6 +342,8 @@
   width: 100%;
   max-width: 310px;
   margin: 0;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   display: block;
 }
 
@@ -403,45 +475,105 @@
 }
 
 .syllabus-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 0.75rem;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+/* Course Syllabus Apply Now Button */
+.apply-now-btn-syllabus {
+  background: #0E0529;
+  color: white;
+  border: 2px solid #E8E4F4;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  text-transform: none;
+}
+
+.apply-now-btn-syllabus:hover {
+  background: white;
+  color: #0E0529;
+  border-color: white;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  -webkit-box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2);
 }
 
 .apply-now-btn-outline {
-  background: white;
-  color: #333;
-  border: none;
-  padding: 0.65rem 1.75rem;
-  border-radius: 50px;
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 0.65rem;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
   font-weight: 600;
   font-size: 0.85rem;
   cursor: pointer;
   transition: all 0.3s ease;
   white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 .apply-now-btn-outline:hover {
-  background: white;
-  color: #0E0529;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-color: white;
 }
 
 .course-syllabus .download-brochure-btn {
   background: #0E0529;
   color: white;
   border: 2px solid #E8E4F4;
-  padding: 0.65rem 1.75rem;
+  padding: 0.75rem 2rem;
   border-radius: 50px;
   font-weight: 600;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
   white-space: nowrap;
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+  height: auto;
+  line-height: 1.5;
+  font-family: 'Roboto', sans-serif;
 }
 
 .course-syllabus .download-brochure-btn:hover {
   background: white;
   color: #0E0529;
   border-color: white;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  -webkit-box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2);
 }
 
 .syllabus-content {
@@ -675,10 +807,10 @@
 }
 
 .skills-section .section-title {
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 700;
   color: #000;
-  margin-bottom: 2rem;
+  margin-bottom: 1.75rem;
   text-align: left;
   text-transform: uppercase;
   font-family: 'Roboto', sans-serif;
@@ -695,19 +827,30 @@
 
 .skills-list li {
   background: #E8E4F4;
-  border-radius: 24px;
+  border-radius: 25px;
   padding: 1.25rem 1.5rem;
   display: flex;
-  align-items: center;
-  gap: 1rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  align-items: flex-start;
+  gap: 1.125rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   transition: box-shadow 0.3s ease;
   text-align: left;
   width: 100%;
+  box-sizing: border-box;
+}
+
+.skills-list li:first-child,
+.skills-list li:nth-child(2),
+.skills-list li:nth-child(3),
+.skills-list li:nth-child(4),
+.skills-list li:nth-child(5) {
+  width: auto;
+  max-width: 85%;
+  align-self: flex-start;
 }
 
 .skills-list li:hover {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .skill-checkmark {
@@ -715,17 +858,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
-  margin-right: 0;
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
   background: #1A1260;
   border-radius: 50%;
-  padding: 6px;
+  padding: 0;
 }
 
 .skill-checkmark svg {
-  width: 100%;
-  height: 100%;
+  width: 18px;
+  height: 18px;
   display: block;
 }
 
@@ -736,12 +879,15 @@
 .skill-text {
   font-size: 1rem;
   color: #000;
-  line-height: 1.6;
+  line-height: 1.65;
   flex: 1;
+  min-width: 0;
   text-align: left;
   font-family: 'Roboto', sans-serif;
   word-wrap: break-word;
   overflow-wrap: break-word;
+  padding-top: 0.125rem;
+  box-sizing: border-box;
 }
 
 .skills-list li strong {
@@ -1035,15 +1181,24 @@
 
 /* FAQ Section */
 .faq-section {
-  padding: 4rem 0;
+  padding: 2.5rem 0;
   background: white;
 }
 
 .faq-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 3rem;
   align-items: start;
+}
+
+.faq-list {
+  padding-top: 1.5rem;
+}
+
+.faq-list .section-title {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .faq-items {
@@ -1054,8 +1209,8 @@
 
 .faq-item {
   border-bottom: 1px solid #e0e0e0;
-  padding-bottom: 1.25rem;
-  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .faq-item:last-child {
@@ -1070,12 +1225,12 @@
   font-weight: 500;
   color: #000;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 0.9rem;
   padding: 0;
 }
 
 .faq-icon {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #666;
   transition: transform 0.3s ease;
 }
@@ -1085,16 +1240,16 @@
 }
 
 .faq-answer {
-  margin-top: 1rem;
-  padding-top: 1rem;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
   border-top: 1px solid #f0f0f0;
   animation: fadeInDown 0.3s ease-out;
 }
 
 .faq-answer p {
   color: #666;
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-size: 0.85rem;
+  line-height: 1.5;
   margin: 0;
 }
 
@@ -1102,14 +1257,22 @@
   width: 100%;
   height: 100%;
   min-height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  padding-top: 0;
+  margin-top: -1.5rem;
 }
 
 .faq-image img {
-  width: 85%;
-  height: 85%;
+  width: 90%;
+  height: 90%;
   max-width: 550px;
   max-height: 550px;
   object-fit: contain;
@@ -1290,6 +1453,49 @@
   .syllabus-header {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .skills-section {
+    padding: 3rem 0;
+  }
+
+  .skills-section .section-title {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .skills-list {
+    gap: 0.875rem;
+  }
+
+  .skills-list li {
+    padding: 1.125rem 1.375rem;
+    gap: 1rem;
+    border-radius: 22px;
+  }
+
+  .skills-list li:first-child,
+  .skills-list li:nth-child(2),
+  .skills-list li:nth-child(3),
+  .skills-list li:nth-child(4),
+  .skills-list li:nth-child(5) {
+    max-width: 80%;
+  }
+
+  .skill-checkmark {
+    width: 22px;
+    height: 22px;
+    min-width: 22px;
+  }
+
+  .skill-checkmark svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .skill-text {
+    font-size: 0.85rem;
+    min-width: 0;
   }
 }
 
@@ -1511,27 +1717,88 @@
     word-wrap: break-word;
   }
 
+  .skills-section {
+    padding: 2.5rem 0;
+  }
+
+  .skills-section .section-title {
+    font-size: 1.35rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .skills-list {
+    gap: 0.875rem;
+  }
+
   .skills-list li {
-    padding: 1rem 1.25rem;
+    padding: 1.125rem 1.375rem;
+    gap: 0.875rem;
+    border-radius: 20px;
+  }
+
+  .skills-list li:first-child,
+  .skills-list li:nth-child(2),
+  .skills-list li:nth-child(3),
+  .skills-list li:nth-child(4),
+  .skills-list li:nth-child(5) {
+    max-width: 90%;
   }
 
   .skill-checkmark {
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
+    min-width: 26px;
+  }
+
+  .skill-checkmark svg {
+    width: 18px;
+    height: 18px;
   }
 
   .skill-text {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    min-width: 0;
+  }
+}
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
   }
 }
 
 @keyframes fadeInDown {
   from {
     opacity: 0;
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
     transform: translateY(-10px);
   }
   to {
     opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 }
@@ -1539,11 +1806,52 @@
 @keyframes fadeInUp {
   from {
     opacity: 0;
+    -webkit-transform: translateY(20px);
+    -ms-transform: translateY(20px);
     transform: translateY(20px);
   }
   to {
     opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
     transform: translateY(0);
+  }
+}
+
+/* Cross-Browser Compatibility - Transform Fixes */
+@supports not (transform: translateY(0)) {
+  .enroll-now-btn:hover,
+  .download-brochure-btn:hover,
+  .apply-now-btn-outline:hover {
+    position: relative;
+    top: -2px;
+  }
+}
+
+/* Cross-Browser Compatibility - Flexbox Fallback */
+@supports not (display: flex) {
+  .skills-list li,
+  .faq-question,
+  .batch-boxes {
+    display: block;
+  }
+}
+
+/* Cross-Browser Compatibility - Grid Fallback */
+@supports not (display: grid) {
+  .overview-content,
+  .highlights-content,
+  .faq-content,
+  .syllabus-content {
+    display: block;
+  }
+  
+  .overview-content > *,
+  .highlights-content > *,
+  .faq-content > * {
+    display: block;
+    width: 100%;
+    margin-bottom: 2rem;
   }
 }
 
@@ -1569,6 +1877,32 @@
   .contact-form input:focus,
   .contact-form textarea:focus {
     font-size: 16px;
+  }
+}
+
+/* Firefox Specific Fixes */
+@-moz-document url-prefix() {
+  .counselling-child-psychology-page {
+    scroll-behavior: smooth;
+  }
+  
+  img {
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Edge/IE Compatibility */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .overview-content,
+  .highlights-content,
+  .faq-content {
+    display: -ms-grid;
+  }
+  
+  .skills-list li {
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
