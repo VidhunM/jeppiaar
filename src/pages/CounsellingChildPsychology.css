@@ -151,8 +151,8 @@ img {
   position: relative;
   border-radius: 12px;
   overflow: hidden;
-  width: 80%;
-  max-width: 500px;
+  width: 90%;
+  max-width: 550px;
   align-self: center;
   margin: 0;
   margin-left: auto;
@@ -248,8 +248,8 @@ img {
   position: relative;
   border-radius: 12px;
   overflow: hidden;
-  width: 80%;
-  max-width: 500px;
+  width: 90%;
+  max-width: 550px;
   align-self: center;
   margin: 0;
   margin-left: auto;
@@ -643,7 +643,7 @@ img {
 /* Program Details Bar */
 .program-details-bar {
   background: #f5f5f5;
-  padding: 2rem 0;
+  padding: 1.5rem 0;
   border-top: none;
   border-bottom: none;
 }
@@ -659,8 +659,8 @@ img {
 .detail-item {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  padding: 1.5rem 2rem;
+  gap: 0.4rem;
+  padding: 1.25rem 1.75rem;
   border-right: 3px solid #1A1260;
   background: #f5f5f5;
 }
@@ -670,14 +670,14 @@ img {
 }
 
 .detail-label {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #1A1260;
   font-weight: 500;
   text-align: left;
 }
 
 .detail-value {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #1A1260;
   font-weight: 700;
   text-align: left;
@@ -685,7 +685,7 @@ img {
 
 /* Learning Outcomes Section */
 .learning-outcomes {
-  padding: 4rem 0;
+  padding: 3rem 0;
   background: white;
 }
 
@@ -695,17 +695,17 @@ img {
 }
 
 .section-title {
-  font-size: 2rem;
+  font-size: 1.85rem;
   font-weight: 700;
   color: #000;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   text-transform: uppercase;
 }
 
 .outcomes-box {
   background: #E8E4F4;
   border-radius: 12px;
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 .outcomes-list {
@@ -713,13 +713,13 @@ img {
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.875rem;
 }
 
 .outcomes-list li {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #000;
-  line-height: 1.8;
+  line-height: 1.7;
   padding-left: 3rem;
   position: relative;
 }
@@ -835,10 +835,10 @@ img {
   background: #0E0529;
   color: white;
   border: 2px solid #E8E4F4;
-  padding: 0.75rem 2rem;
+  padding: 0.65rem 1.75rem;
   border-radius: 50px;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -980,26 +980,36 @@ img {
 .course-fee .section-title {
   color: #000;
   text-align: left;
+  max-width: 1200px;
+  margin: 0 auto 1.5rem auto;
+  padding: 0 1.75rem 0 0.5rem;
 }
 
 .fee-wrapper {
   background: #f5f5f5;
   border-radius: 8px;
   padding: 1.75rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .fee-content {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
   align-items: start;
 }
 
 .main-fee {
   text-align: left;
-  padding: 0;
+  padding: 1.5rem;
   background: transparent;
   border-radius: 0;
+  max-width: 400px;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .fee-label {
@@ -1089,36 +1099,40 @@ img {
 
 /* Skills Section */
 .skills-section {
-  padding: 4rem 0;
+  padding: 3rem 0;
   background: white;
 }
 
 .skills-section .section-title {
-  font-size: 1.75rem;
+  font-size: 1.85rem;
   font-weight: 700;
   color: #000;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.5rem;
   text-align: left;
   text-transform: uppercase;
   font-family: 'Roboto', sans-serif;
+  max-width: 1200px;
+  margin: 0 auto 1.5rem auto;
+  padding: 0 1.75rem 0 1.5rem;
 }
 
 .skills-list {
   list-style: none;
-  padding: 0;
-  margin: 0;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.875rem;
+  max-width: 1200px;
+  padding: 0 1.75rem 0 1.5rem;
 }
 
 .skills-list li {
   background: #E8E4F4;
   border-radius: 25px;
-  padding: 1.25rem 1.5rem;
+  padding: 1.125rem 1.375rem;
   display: flex;
   align-items: flex-start;
-  gap: 1.125rem;
+  gap: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   transition: box-shadow 0.3s ease;
   text-align: left;
@@ -1145,17 +1159,17 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
-  min-width: 28px;
+  width: 26px;
+  height: 26px;
+  min-width: 26px;
   background: #1A1260;
   border-radius: 50%;
   padding: 0;
 }
 
 .skill-checkmark svg {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   display: block;
 }
 
@@ -1164,9 +1178,9 @@ img {
 }
 
 .skill-text {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #000;
-  line-height: 1.65;
+  line-height: 1.6;
   flex: 1;
   min-width: 0;
   text-align: left;
@@ -1185,24 +1199,24 @@ img {
 
 /* Career Prospects Section */
 .career-prospects {
-  padding: 2.5rem 0;
+  padding: 2rem 0;
   background: #0E0529;
   color: white;
 }
 
 .section-title-white {
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 700;
   color: white;
-  margin-bottom: 1rem;
+  margin-bottom: 0.875rem;
   text-transform: uppercase;
   padding-left: 5rem;
 }
 
 .career-description {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  margin-bottom: 2rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
   opacity: 0.95;
   padding-left: 5rem;
 }
@@ -1211,8 +1225,8 @@ img {
   position: relative;
   display: flex;
   align-items: center;
-  gap: 1.5rem;
-  margin-bottom: 1.5rem;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
 .career-carousel-container {
@@ -1224,29 +1238,37 @@ img {
 .career-cards-slider {
   display: flex;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  gap: 2rem;
+  gap: 1.5rem;
   will-change: transform;
+  justify-content: center;
 }
 
 .career-card {
   flex: 0 0 calc(100% / 3 - 1.33rem);
   min-width: 0;
   background: white;
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  aspect-ratio: 3 / 4;
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+  margin: 0 auto;
 }
 
 @media (max-width: 1023px) {
   .career-card {
     flex: 0 0 calc(100% / 2 - 1rem);
+    max-width: 250px;
   }
 }
 
 @media (max-width: 767px) {
   .career-card {
     flex: 0 0 100%;
+    max-width: 250px;
   }
   
   .career-cards-slider {
@@ -1261,31 +1283,33 @@ img {
 
 .career-image {
   width: 100%;
-  height: 400px;
+  height: 100%;
   overflow: hidden;
   position: relative;
+  flex: 1;
 }
 
 .career-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .career-overlay {
   position: absolute;
-  bottom: 1.5rem;
-  left: 1.5rem;
-  right: 1.5rem;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  right: 1.25rem;
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  padding: 1rem 1.25rem;
+  padding: 0.875rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  border-radius: 12px;
+  border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
@@ -1293,9 +1317,9 @@ img {
 .career-title-overlay {
   color: white;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   text-align: left;
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 0.4rem 0;
   letter-spacing: 0.2px;
   position: relative;
   width: 100%;
@@ -1316,8 +1340,8 @@ img {
   background: rgba(255, 255, 255, 0.1);
   border: 2px solid rgba(255, 255, 255, 0.3);
   color: white;
-  width: 50px;
-  height: 50px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1345,8 +1369,8 @@ img {
 }
 
 .career-carousel-btn svg {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
 }
 
 .career-carousel-btn.prev {
@@ -1361,8 +1385,8 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.75rem;
-  margin-top: 1.5rem;
+  gap: 0.625rem;
+  margin-top: 1.25rem;
 }
 
 .carousel-dot {
@@ -1559,14 +1583,16 @@ img {
   padding-top: 0;
   margin-top: -1.5rem;
   margin-bottom: 0;
+  overflow: hidden;
 }
 
 .faq-image img {
-  width: 90%;
-  height: 90%;
-  max-width: 550px;
-  max-height: 550px;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  max-width: 480px;
+  max-height: 400px;
+  object-fit: cover;
+  object-position: center top;
   border-radius: 8px;
 }
 
@@ -1881,10 +1907,6 @@ img {
     flex: 0 0 100%;
   }
 
-  .career-image {
-    height: 300px;
-  }
-
   .career-overlay {
     bottom: 1rem;
     left: 1rem;
@@ -1992,10 +2014,6 @@ img {
     height: 36px;
     min-width: 36px;
     min-height: 36px;
-  }
-
-  .career-image {
-    height: 280px;
   }
 
   .career-overlay {
