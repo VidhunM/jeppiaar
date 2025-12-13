@@ -71,8 +71,8 @@ img {
 
 /* Program Overview Section */
 .program-overview {
-  padding: 2.5rem 0;
-  padding-bottom: 3.5rem;
+  padding: 3.5rem 0;
+  padding-bottom: 4rem;
   padding-right: 3.5rem;
   background: white;
   overflow: visible;
@@ -99,19 +99,21 @@ img {
 }
 
 .overview-text h1 {
-  font-size: 1.85rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: #000;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
   line-height: 1.2;
   text-transform: uppercase;
 }
 
 .overview-text p {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: #333;
   line-height: 1.7;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  margin-top: 0.5rem;
 }
 
 .enroll-now-btn {
@@ -193,7 +195,7 @@ img {
 
 /* Program Highlights Section */
 .program-highlights {
-  padding: 3.5rem 0 0 0;
+  padding: 4rem 0 0 0;
   background: #0E0529;
   color: white;
   margin-bottom: 2rem;
@@ -235,8 +237,8 @@ img {
 }
 
 .highlights-text {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   display: flex;
   flex-direction: column;
 }
@@ -252,14 +254,15 @@ img {
 .highlights-text h2 {
   font-family: 'Roboto', sans-serif;
   font-weight: 600;
-  font-size: 32px;
-  line-height: 100%;
+  font-size: 2.5rem;
+  line-height: 1.2;
   letter-spacing: 0%;
   text-align: left;
   vertical-align: middle;
   text-transform: uppercase;
   color: white;
   margin-bottom: 2rem;
+  margin-top: 0.5rem;
 }
 
 .batch-boxes {
@@ -1412,7 +1415,7 @@ img {
   }
 
   .highlights-text h2 {
-    font-size: 28px;
+    font-size: 2.2rem;
   }
 
   .vertical-apply-tab {
@@ -1529,7 +1532,7 @@ img {
 
   .overview-text h1,
   .highlights-text h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .section-title,
@@ -1538,7 +1541,7 @@ img {
   }
 
   .highlights-text h2 {
-    font-size: 24px;
+    font-size: 1.75rem;
   }
 
   .vertical-apply-tab {
@@ -1629,7 +1632,7 @@ img {
 
   .overview-text h1,
   .highlights-text h2 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
   }
 
   .section-title,
@@ -1639,7 +1642,7 @@ img {
   }
 
   .highlights-text h2 {
-    font-size: 20px;
+    font-size: 1.5rem;
     word-wrap: break-word;
   }
 
