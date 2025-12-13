@@ -1421,15 +1421,20 @@ img {
 
   .vertical-apply-tab {
     position: fixed;
-    right: 1rem;
+    right: 0.5rem;
     bottom: 2rem;
     transform: rotate(0deg);
-    writing-mode: horizontal-tb;
-    text-orientation: mixed;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
     min-height: auto;
-    padding: 0.75rem 1.5rem;
+    padding: 0.7rem 0.35rem;
     margin-top: 0;
     z-index: 1000;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
   .vertical-apply-tab:hover {
@@ -1547,12 +1552,18 @@ img {
 
   .vertical-apply-tab {
     position: fixed;
-    right: 1rem;
+    right: 0.5rem;
     bottom: 2rem;
     transform: rotate(0deg);
-    padding: 0.75rem 1.5rem;
-    font-size: 0.9rem;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    padding: 0.7rem 0.3rem;
+    font-size: 0.65rem;
     z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
   .vertical-apply-tab:hover {
@@ -1649,14 +1660,20 @@ img {
 
   .vertical-apply-tab {
     position: fixed;
-    right: 0.75rem;
+    right: 0.5rem;
     bottom: 1.5rem;
     transform: rotate(0deg);
-    padding: 0.65rem 1.25rem;
-    font-size: 0.85rem;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    padding: 0.65rem 0.3rem;
+    font-size: 0.6rem;
     z-index: 1000;
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
   .vertical-apply-tab:hover {
