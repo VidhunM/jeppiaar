@@ -92,11 +92,11 @@ const CounsellingChildPsychology = () => {
       </div>
 
       {/* Program Overview Section */}
-      <section className="program-overview">
+      <section className="program-overview overview-section">
         <div className="container">
           <div className="overview-content">
             <div className="overview-text">
-              <h1>ADVANCED DIPLOMA IN COUNSELLING AND CHILD PSYCHOLOGY</h1>
+              <h1 className="overview-title">ADVANCED DIPLOMA IN COUNSELLING AND CHILD PSYCHOLOGY</h1>
               <p>
                 The Diploma in Counselling Psychology (Specialization in Child Psychology) equips learners with essential counselling skills, child-focused assessment techniques, and ethically grounded practice. With a blend of theory, supervised practicum, and real-world exposure, the program prepares reflective practitioners to support the emotional, behavioural, and developmental needs of children and adolescents across diverse settings.
               </p>
@@ -123,7 +123,7 @@ const CounsellingChildPsychology = () => {
       </section>
 
       {/* Program Highlights Section */}
-      <section className="program-highlights">
+      <section className="program-highlights highlights-section">
         <div className="container">
           <div className="highlights-content">
             <div className="highlights-image">
@@ -131,7 +131,7 @@ const CounsellingChildPsychology = () => {
             </div>
             <div className="highlights-text">
               <p className="highlights-subtitle">Unlock your path to becoming a skilled child counsellor</p>
-              <h2>ADVANCED DIPLOMA IN COUNSELLING AND CHILD PSYCHOLOGY</h2>
+              <h2 className="highlights-title">ADVANCED DIPLOMA IN COUNSELLING AND CHILD PSYCHOLOGY</h2>
               <div className="batch-boxes">
                 <div className="batch-box">
                   <div className="batch-icon"></div>

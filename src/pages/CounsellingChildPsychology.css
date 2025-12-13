@@ -69,7 +69,107 @@ img {
   animation: fadeInUp 0.8s ease-out;
 }
 
-/* Program Overview Section */
+/* ============================================
+   OVERVIEW SECTION - SEPARATE CSS
+   Section: ADVANCED DIPLOMA IN COUNSELLING AND CHILD PSYCHOLOGY
+   ============================================ */
+.overview-section {
+  padding: 1.75rem 0;
+  padding-bottom: 3rem;
+  background: white;
+  overflow: visible;
+  position: relative;
+}
+
+.overview-section .overview-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 5% 0 2rem;
+}
+
+.overview-section .overview-text {
+  align-self: center;
+  padding-right: 2rem;
+}
+
+.overview-section .overview-title {
+  font-size: 1.95rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 1.25rem;
+  margin-top: 0;
+  line-height: 1.15;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.overview-section .overview-text p {
+  font-size: 0.92rem;
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 1.75rem;
+  margin-top: 0;
+}
+
+.overview-section .enroll-now-btn {
+  background: #0E0529;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.75rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-family: 'Roboto', sans-serif;
+  text-transform: none;
+  white-space: nowrap;
+}
+
+.overview-section .enroll-now-btn:hover {
+  background: #1a0a3d;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  -webkit-box-shadow: 0 4px 12px rgba(14, 5, 41, 0.3);
+  box-shadow: 0 4px 12px rgba(14, 5, 41, 0.3);
+}
+
+.overview-section .overview-image {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 80%;
+  max-width: 500px;
+  align-self: center;
+  margin: 0;
+  margin-left: auto;
+  margin-right: 5%;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+.overview-section .overview-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  object-fit: cover;
+  min-height: 200px;
+}
+
+/* Legacy support - keep old class names working */
 .program-overview {
   padding: 1.75rem 0;
   padding-bottom: 3rem;
@@ -83,22 +183,22 @@ img {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  gap: 1.25rem;
+  gap: 3rem;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   position: relative;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 4.5% 0 2rem;
+  padding: 0 5% 0 2rem;
 }
 
 .overview-text {
   align-self: center;
-  padding-right: 0.75rem;
+  padding-right: 2rem;
 }
 
-.overview-text h1 {
+.overview-title {
   font-size: 1.95rem;
   font-weight: 700;
   color: #000;
@@ -107,6 +207,7 @@ img {
   line-height: 1.15;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .overview-text p {
@@ -147,10 +248,12 @@ img {
   position: relative;
   border-radius: 12px;
   overflow: hidden;
-  width: 100%;
+  width: 80%;
+  max-width: 500px;
   align-self: center;
   margin: 0;
-  margin-left: -3.5%;
+  margin-left: auto;
+  margin-right: 5%;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
 }
 
@@ -190,7 +293,182 @@ img {
   transform: rotate(90deg) translateY(-2px);
 }
 
-/* Program Highlights Section */
+/* ============================================
+   HIGHLIGHTS SECTION - SEPARATE CSS
+   Section: Unlock your path to becoming a skilled child counsellor
+   ============================================ */
+.highlights-section {
+  padding: 4rem 0 0 0;
+  background: #0E0529;
+  color: white;
+  margin-bottom: 2rem;
+  overflow: visible;
+}
+
+.highlights-section .highlights-content {
+  display: grid;
+  grid-template-columns: 37% 60%;
+  gap: 3rem;
+  align-items: end;
+  min-height: 100%;
+  padding-bottom: 0;
+}
+
+.highlights-section .container {
+  padding-bottom: 0;
+}
+
+.highlights-section .highlights-image {
+  width: 100%;
+  max-width: 70%;
+  align-self: flex-end;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.highlights-section .highlights-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px 8px 0 0;
+  object-fit: contain;
+  align-self: flex-end;
+  margin-bottom: 0;
+}
+
+.highlights-section .highlights-text {
+  padding-top: 0;
+  padding-bottom: 2.5rem;
+  padding-right: 6%;
+  display: flex;
+  flex-direction: column;
+}
+
+.highlights-section .highlights-subtitle {
+  font-size: 0.95rem;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  color: white;
+  opacity: 0.95;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.highlights-section .highlights-title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 1.75rem;
+  line-height: 1.2;
+  letter-spacing: 0%;
+  text-align: left;
+  vertical-align: middle;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.highlights-section .batch-boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.highlights-section .batch-box {
+  background: rgba(90, 85, 106, 0.8);
+  border: none;
+  border-radius: 12px;
+  padding: 1.25rem;
+  position: relative;
+}
+
+.highlights-section .batch-icon {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.highlights-section .batch-icon::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  background-image: url('../assets/icons/cc02.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  filter: brightness(0) invert(1);
+}
+
+.highlights-section .batch-box h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.75rem;
+  margin-top: 0;
+  padding-left: 2rem;
+}
+
+.highlights-section .batch-details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-left: 2rem;
+}
+
+.highlights-section .batch-details li {
+  color: white;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin-bottom: 0.4rem;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.highlights-section .batch-details li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.highlights-section .download-brochure-btn {
+  background: white;
+  color: #333;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 280px;
+  margin: 0;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.highlights-section .download-brochure-btn:hover {
+  background: #f5f5f5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+/* Legacy support - keep old class names working */
 .program-highlights {
   padding: 4rem 0 0 0;
   background: #0E0529;
@@ -247,9 +525,12 @@ img {
   margin-bottom: 1.25rem;
   color: white;
   opacity: 0.95;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
-.highlights-text h2 {
+.highlights-title {
   font-family: 'Roboto', sans-serif;
   font-weight: 600;
   font-size: 1.75rem;
@@ -1400,14 +1681,17 @@ img {
   }
 
   .overview-content,
+  .overview-section .overview-content,
   .highlights-content,
+  .highlights-section .highlights-content,
   .syllabus-content,
   .faq-content {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
 
-  .highlights-content {
+  .highlights-content,
+  .highlights-section .highlights-content {
     grid-template-columns: 1fr;
   }
 
@@ -1416,7 +1700,7 @@ img {
     gap: 1rem;
   }
 
-  .highlights-text h2 {
+  .highlights-title {
     font-size: 1.9rem;
   }
 
@@ -1537,8 +1821,8 @@ img {
     word-wrap: break-word;
   }
 
-  .overview-text h1,
-  .highlights-text h2 {
+  .overview-title,
+  .highlights-title {
     font-size: 1.9rem;
   }
 
@@ -1547,7 +1831,7 @@ img {
     font-size: 1.5rem;
   }
 
-  .highlights-text h2 {
+  .highlights-title {
     font-size: 1.55rem;
   }
 
@@ -1643,8 +1927,8 @@ img {
     padding: 0 0.5rem;
   }
 
-  .overview-text h1,
-  .highlights-text h2 {
+  .overview-title,
+  .highlights-title {
     font-size: 1.55rem;
   }
 
@@ -1654,7 +1938,7 @@ img {
     word-wrap: break-word;
   }
 
-  .highlights-text h2 {
+  .highlights-title {
     font-size: 1.35rem;
     word-wrap: break-word;
   }
@@ -1867,14 +2151,18 @@ img {
 /* Cross-Browser Compatibility - Grid Fallback */
 @supports not (display: grid) {
   .overview-content,
+  .overview-section .overview-content,
   .highlights-content,
+  .highlights-section .highlights-content,
   .faq-content,
   .syllabus-content {
     display: block;
   }
   
   .overview-content > *,
+  .overview-section .overview-content > *,
   .highlights-content > *,
+  .highlights-section .highlights-content > *,
   .faq-content > * {
     display: block;
     width: 100%;
@@ -1922,7 +2210,9 @@ img {
 /* Edge/IE Compatibility */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .overview-content,
+  .overview-section .overview-content,
   .highlights-content,
+  .highlights-section .highlights-content,
   .faq-content {
     display: -ms-grid;
   }
