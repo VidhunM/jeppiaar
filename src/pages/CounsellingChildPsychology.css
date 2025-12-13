@@ -145,9 +145,11 @@ img {
   max-width: 85%;
   margin-left: auto;
   align-self: flex-end;
-  margin-top: 4rem;
+  margin-top: 0;
   margin-bottom: -4rem;
-  transform: translateY(1rem);
+  -webkit-transform: translateY(-2rem);
+  -ms-transform: translateY(-2rem);
+  transform: translateY(-2rem);
 }
 
 .overview-image img {
