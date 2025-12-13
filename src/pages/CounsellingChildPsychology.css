@@ -71,8 +71,8 @@ img {
 
 /* Program Overview Section */
 .program-overview {
-  padding: 3rem 0;
-  padding-bottom: 4rem;
+  padding: 2.5rem 0;
+  padding-bottom: 3rem;
   background: white;
   overflow: visible;
   position: relative;
@@ -83,26 +83,26 @@ img {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;
+  gap: 1.25rem;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   position: relative;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 4.5% 0 2rem;
 }
 
 .overview-text {
   align-self: center;
-  padding-right: 1.5rem;
+  padding-right: 0.75rem;
 }
 
 .overview-text h1 {
-  font-size: 2.1rem;
+  font-size: 1.95rem;
   font-weight: 700;
   color: #000;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
   margin-top: 0;
   line-height: 1.15;
   text-transform: uppercase;
@@ -110,10 +110,10 @@ img {
 }
 
 .overview-text p {
-  font-size: 0.98rem;
+  font-size: 0.92rem;
   color: #333;
   line-height: 1.7;
-  margin-bottom: 2rem;
+  margin-bottom: 1.75rem;
   margin-top: 0;
 }
 
@@ -150,6 +150,7 @@ img {
   width: 100%;
   align-self: center;
   margin: 0;
+  margin-left: -3.5%;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
 }
 
@@ -159,7 +160,7 @@ img {
   display: block;
   border-radius: 12px;
   object-fit: cover;
-  min-height: 220px;
+  min-height: 200px;
 }
 
 .vertical-apply-tab {
@@ -200,7 +201,7 @@ img {
 
 .highlights-content {
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 37% 60%;
   gap: 3rem;
   align-items: end;
   min-height: 100%;
