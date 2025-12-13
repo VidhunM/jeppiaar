@@ -159,7 +159,7 @@ img {
   display: block;
   border-radius: 12px;
   object-fit: cover;
-  min-height: 200px;
+  min-height: 220px;
 }
 
 .vertical-apply-tab {
