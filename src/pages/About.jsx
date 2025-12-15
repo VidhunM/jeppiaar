@@ -104,19 +104,6 @@ const About = () => {
               <p>
               The academy provides specialized programs in key domains of psychology, including Counselling & Child Psychology , Counselling & Organisational Psychology, Counselling & Forensic Psychology, and Art Therapy.              </p>
             </div>
-            <div 
-              className="vertical-apply-tab"
-              onClick={() => {
-                const section = document.getElementById('start-career-section');
-                if (section) {
-                  section.scrollIntoView({ behavior: 'smooth' });
-                } else {
-                  window.location.href = '/#start-career-section';
-                }
-              }}
-            >
-              <span>Apply Now</span>
-            </div>
           </div>
           <div className="introduction-images">
             <div className="intro-image scroll-from-left">

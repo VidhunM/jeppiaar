@@ -153,12 +153,6 @@ const CounsellingOrganizationalPsychology = () => {
             <div className="overview-image">
               <img src={cc1Image} alt="Organizational counselling session" />
             </div>
-            <div 
-              className="vertical-apply-tab"
-              onClick={openApplyModal}
-            >
-              <span>Apply Now</span>
-            </div>
           </div>
         </div>
       </section>

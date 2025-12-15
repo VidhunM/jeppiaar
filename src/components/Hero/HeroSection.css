@@ -277,42 +277,6 @@
   background: #1a0a3d;
 }
 
-.vertical-apply-tab {
-  position: fixed;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%) rotate(90deg);
-  transform-origin: center right;
-  background: #0E0529;
-  color: #ffffff;
-  padding: 1.25rem 2.5rem;
-  border-radius: 10px 10px 0 0;
-  font-weight: 600;
-  font-size: 1rem;
-  cursor: pointer;
-  z-index: 1000;
-  white-space: nowrap;
-  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.vertical-apply-tab::before {
-  content: '↑';
-  font-size: 0.8rem;
-}
-
-.vertical-apply-tab:hover {
-  background: #1a0a3d;
-  transform: translateY(-50%) rotate(90deg) translateY(-2px);
-  box-shadow: -2px 0 12px rgba(0, 0, 0, 0.3);
-}
-
-.vertical-apply-tab span {
-  display: block;
-}
 
 /* Hero Slide 2 - Student Rated Badge */
 .hero-rated-badge {
@@ -656,9 +620,6 @@
     right: 1rem;
   }
 
-  .vertical-apply-tab {
-    display: none;
-  }
 
   .hero-rated-badge {
     top: 4rem;

@@ -88,19 +88,6 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection, onOpenA
           <img key={index} src={slide.image} alt="" />
         ))}
       </div>
-      {/* Vertical Apply Now Tab - positioned relative to hero-section */}
-      <div 
-        className="vertical-apply-tab"
-        onClick={() => {
-          if (onOpenApplyModal) {
-            onOpenApplyModal();
-          } else if (onShowConstructionPopup) {
-            onShowConstructionPopup();
-          }
-        }}
-      >
-        <span>Apply Now</span>
-      </div>
       <div 
         className={`hero-slide ${currentSlide === 0 ? 'hero-slide-first' : ''} ${currentSlide === 3 ? 'hero-slide-fourth' : ''} ${imagesLoaded ? 'images-loaded' : ''}`}
         style={{ backgroundImage: `url(${slides[currentSlide].image})` }}

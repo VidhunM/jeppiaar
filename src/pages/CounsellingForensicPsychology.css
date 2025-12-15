@@ -1772,6 +1772,41 @@ img {
     line-height: 100%;
     letter-spacing: 0%;
     word-wrap: break-word;
+    text-align: center;
+  }
+
+  .overview-section .overview-content,
+  .overview-content {
+    justify-items: center;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .overview-section .overview-text {
+    text-align: center;
+    padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .overview-section .overview-title {
+    text-align: center;
+  }
+
+  .overview-section .overview-text p {
+    text-align: center;
+  }
+
+  .overview-section .enroll-now-btn {
+    align-self: center;
+    margin: 0 auto;
+  }
+
+  .overview-section .overview-image {
+    margin: 0 auto;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .overview-title,
@@ -2001,6 +2036,450 @@ img {
     font-size: 0.95rem;
     line-height: 1.65;
     min-width: 0;
+  }
+}
+
+/* Additional Mobile Breakpoints for iPhone and Android */
+@media (max-width: 428px) {
+  /* iPhone 12/13/14 Pro Max and similar Android devices */
+  .program-hero-banner h1 {
+    font-size: 16px;
+    line-height: 130%;
+  }
+
+  .overview-title,
+  .highlights-title {
+    font-size: 1.4rem;
+  }
+
+  .section-title,
+  .section-title-white {
+    font-size: 1.15rem;
+  }
+
+  .container {
+    padding: 0 0.875rem;
+  }
+
+  .overview-section .overview-content,
+  .overview-content {
+    padding: 0 0.875rem 0 0.875rem;
+    gap: 1.5rem;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .overview-section .overview-text {
+    padding-right: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .overview-section .overview-title {
+    text-align: center;
+  }
+
+  .overview-section .overview-text p {
+    text-align: center;
+  }
+
+  .overview-section .enroll-now-btn {
+    align-self: center;
+    margin: 0 auto;
+  }
+
+  .overview-section .overview-image {
+    width: 100%;
+    margin-right: 0;
+    margin: 0 auto;
+  }
+
+  .highlights-section .highlights-text {
+    padding-right: 0.875rem;
+  }
+
+  .batch-box {
+    padding: 1rem;
+  }
+
+  .enroll-now-btn,
+  .download-brochure-btn,
+  .apply-now-btn-syllabus {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.85rem;
+    min-height: 44px;
+    min-width: 120px;
+  }
+
+  .fee-amount {
+    font-size: 3.5rem;
+  }
+
+  .fee-option-amount {
+    font-size: 1.75rem;
+  }
+
+  .semester-card {
+    padding: 1rem;
+  }
+
+  .semester-card h3 {
+    font-size: 1rem;
+  }
+
+  .semester-topics li {
+    font-size: 0.875rem;
+    padding-left: 2.5rem;
+  }
+
+  .skills-list {
+    padding: 0 0.875rem 0 0.875rem;
+  }
+
+  .skills-list li {
+    padding: 1rem 1.25rem;
+  }
+
+  .skill-text {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 375px) {
+  /* iPhone SE, iPhone 8, and similar Android devices */
+  .counselling-forensic-psychology-page {
+    padding-top: 55px;
+  }
+
+  .program-hero-banner {
+    padding: 1.75rem 0.875rem;
+  }
+
+  .program-hero-banner h1 {
+    font-size: 15px;
+    line-height: 135%;
+    padding: 0 0.25rem;
+  }
+
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  .overview-title,
+  .highlights-title {
+    font-size: 1.3rem;
+  }
+
+  .section-title,
+  .section-title-white {
+    font-size: 1.1rem;
+  }
+
+  .highlights-title {
+    font-size: 1.25rem;
+  }
+
+  .overview-section .overview-content,
+  .overview-content {
+    padding: 0 0.75rem 0 0.75rem;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .overview-section .overview-text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .overview-section .overview-title {
+    text-align: center;
+  }
+
+  .overview-section .overview-text p {
+    text-align: center;
+  }
+
+  .overview-section .enroll-now-btn {
+    align-self: center;
+    margin: 0 auto;
+  }
+
+  .overview-section .overview-image {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .highlights-section .highlights-text {
+    padding-right: 0.75rem;
+    padding-bottom: 2rem;
+  }
+
+  .batch-box {
+    padding: 0.875rem;
+  }
+
+  .batch-box h3 {
+    font-size: 0.875rem;
+    padding-left: 1.75rem;
+  }
+
+  .batch-details {
+    padding-left: 1.75rem;
+  }
+
+  .batch-details li {
+    font-size: 0.8rem;
+  }
+
+  .enroll-now-btn,
+  .download-brochure-btn {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.8rem;
+    min-height: 44px;
+  }
+
+  .apply-now-btn-syllabus {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.8rem;
+  }
+
+  .fee-amount {
+    font-size: 3rem;
+  }
+
+  .fee-option {
+    padding: 1.25rem;
+  }
+
+  .fee-option-amount {
+    font-size: 1.5rem;
+  }
+
+  .semester-card {
+    padding: 0.875rem;
+  }
+
+  .semester-card h3 {
+    font-size: 0.95rem;
+  }
+
+  .semester-topics li {
+    font-size: 0.8rem;
+    padding-left: 2.25rem;
+  }
+
+  .skills-section .section-title {
+    font-size: 1.2rem;
+    padding: 0 0.75rem 0 0.75rem;
+  }
+
+  .skills-list {
+    padding: 0 0.75rem 0 0.75rem;
+  }
+
+  .skills-list li {
+    padding: 0.875rem 1rem;
+    gap: 0.75rem;
+  }
+
+  .skill-checkmark {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+  }
+
+  .skill-checkmark svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .skill-text {
+    font-size: 0.8rem;
+  }
+
+  .career-carousel-btn {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    min-height: 34px;
+  }
+
+  .career-overlay {
+    padding: 0.75rem 0.875rem;
+  }
+
+  .career-title-overlay {
+    font-size: 0.8rem;
+  }
+
+  .vertical-apply-tab {
+    padding: 0.6rem 0.25rem;
+    font-size: 0.55rem;
+    right: 0.25rem;
+  }
+
+  .faq-question {
+    font-size: 0.85rem;
+  }
+
+  .faq-answer p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 320px) {
+  /* Very small devices like iPhone 5/SE (first gen) */
+  .program-hero-banner h1 {
+    font-size: 14px;
+    line-height: 140%;
+  }
+
+  .overview-title,
+  .highlights-title {
+    font-size: 1.15rem;
+  }
+
+  .section-title,
+  .section-title-white {
+    font-size: 1rem;
+  }
+
+  .container {
+    padding: 0 0.625rem;
+  }
+
+  .overview-section .overview-content,
+  .overview-content {
+    padding: 0 0.625rem 0 0.625rem;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .overview-section .overview-text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .overview-section .overview-title {
+    text-align: center;
+  }
+
+  .overview-section .overview-text p {
+    text-align: center;
+  }
+
+  .overview-section .enroll-now-btn {
+    align-self: center;
+    margin: 0 auto;
+  }
+
+  .highlights-section .highlights-text {
+    padding-right: 0.625rem;
+  }
+
+  .enroll-now-btn,
+  .download-brochure-btn {
+    padding: 0.7rem 1rem;
+    font-size: 0.75rem;
+  }
+
+  .fee-amount {
+    font-size: 2.5rem;
+  }
+
+  .fee-option-amount {
+    font-size: 1.25rem;
+  }
+
+  .skills-list {
+    padding: 0 0.625rem 0 0.625rem;
+  }
+
+  .skills-list li {
+    padding: 0.75rem 0.875rem;
+  }
+
+  .skill-text {
+    font-size: 0.75rem;
+  }
+}
+
+/* Landscape Orientation Fixes for Mobile */
+@media (max-width: 968px) and (orientation: landscape) {
+  .program-hero-banner {
+    padding: 1.5rem 1rem;
+  }
+
+  .program-hero-banner h1 {
+    font-size: 22px;
+  }
+
+  .overview-section,
+  .highlights-section,
+  .skills-section {
+    padding: 2rem 0;
+  }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+  .program-hero-banner {
+    padding: 1.25rem 1rem;
+  }
+
+  .program-hero-banner h1 {
+    font-size: 20px;
+  }
+
+  .vertical-apply-tab {
+    bottom: 1rem;
+    right: 0.25rem;
+  }
+}
+
+/* Touch Target Improvements for All Mobile Devices */
+@media (max-width: 768px) {
+  button,
+  .enroll-now-btn,
+  .download-brochure-btn,
+  .apply-now-btn-syllabus,
+  .career-carousel-btn {
+    min-height: 44px;
+    min-width: 44px;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .faq-question {
+    min-height: 44px;
+    padding: 0.75rem 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .detail-item {
+    min-height: 60px;
+    padding: 1rem 1.25rem;
+  }
+}
+
+/* Prevent Text Size Adjustment on iOS */
+@media (max-width: 768px) {
+  html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  body {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
   }
 }
 

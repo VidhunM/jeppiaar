@@ -19,6 +19,24 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isDropdownOpen && !event.target.closest('.nav-dropdown')) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    if (isDropdownOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener('touchstart', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('touchstart', handleClickOutside);
+    };
+  }, [isDropdownOpen]);
+
   const handleNavClick = (e, path) => {
     if (isHomePage && (path === '/courses' || path === '/research' || path === '/contact')) {
       e.preventDefault();
@@ -60,23 +78,27 @@ const Header = () => {
             <Link to="/about" onClick={(e) => handleNavClick(e, '/about')}>About Us</Link>
             <div 
               className="nav-dropdown"
-              onMouseEnter={() => setIsDropdownOpen(true)}
-              onMouseLeave={() => setIsDropdownOpen(false)}
+              onMouseEnter={() => {
+                if (window.innerWidth > 968) {
+                  setIsDropdownOpen(true);
+                }
+              }}
+              onMouseLeave={() => {
+                if (window.innerWidth > 968) {
+                  setIsDropdownOpen(false);
+                }
+              }}
             >
               <div
                 className="dropdown-toggle"
                 onClick={(e) => {
                   e.preventDefault();
+                  e.stopPropagation();
                   setIsDropdownOpen(!isDropdownOpen);
                 }}
               >
-                <span 
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setIsDropdownOpen(!isDropdownOpen);
-                  }}
-                >
-                  Diploma Programs <span className="dropdown-arrow">▼</span>
+                <span>
+                  Diploma Programs <span className={`dropdown-arrow ${isDropdownOpen ? 'open' : ''}`}>▼</span>
                 </span>
               </div>
               {isDropdownOpen && (
@@ -128,7 +150,7 @@ const Header = () => {
                 setIsMobileMenuOpen(false);
               }}
             >
-              Research & Publication
+              Partnership
             </Link>
             <Link 
               to="/contact" 
