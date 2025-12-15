@@ -91,31 +91,28 @@ const Header = () => {
                     Counselling & Child Psychology
                   </Link>
                   <Link 
-                    to="/courses" 
-                    onClick={(e) => {
+                    to="/counselling-organizational-psychology" 
+                    onClick={() => {
                       setIsMobileMenuOpen(false);
                       setIsDropdownOpen(false);
-                      handleNavClick(e, '/courses');
                     }}
                   >
                     Counselling & Organizational Psychology
                   </Link>
                   <Link 
-                    to="/courses" 
-                    onClick={(e) => {
+                    to="/counselling-forensic-psychology" 
+                    onClick={() => {
                       setIsMobileMenuOpen(false);
                       setIsDropdownOpen(false);
-                      handleNavClick(e, '/courses');
                     }}
                   >
                     Counselling & Forensic Psychology
                   </Link>
                   <Link 
-                    to="/courses" 
-                    onClick={(e) => {
+                    to="/counselling-art-therapy" 
+                    onClick={() => {
                       setIsMobileMenuOpen(false);
                       setIsDropdownOpen(false);
-                      handleNavClick(e, '/courses');
                     }}
                   >
                     Art Therapy

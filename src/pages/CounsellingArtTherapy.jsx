@@ -12,9 +12,9 @@ import cp4Image from '../assets/images/cp4.jpg';
 import cc1Icon from '../assets/icons/cc1.png';
 import cc2Icon from '../assets/icons/cc02.png';
 import cc3Icon from '../assets/icons/cc3.png';
-import './CounsellingChildPsychology.css';
+import './CounsellingArtTherapy.css';
 
-const CounsellingChildPsychology = () => {
+const CounsellingArtTherapy = () => {
   const [openFaq, setOpenFaq] = useState(null);
   const [currentCareerIndex, setCurrentCareerIndex] = useState(0);
   const [showUnderConstruction, setShowUnderConstruction] = useState(false);
@@ -69,9 +69,7 @@ const CounsellingChildPsychology = () => {
 
   const handleApplySubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
     console.log('Apply form submitted:', applyForm);
-    // You can add API call here similar to LeadGeneration component
     alert('Thank you for your interest! We will contact you soon.');
     closeApplyModal();
   };
@@ -81,10 +79,11 @@ const CounsellingChildPsychology = () => {
   };
 
   const careers = [
-    { title: 'Child Counselor', image: cp1Image },
-    { title: 'Educational Psychologist', image: cp2Image },
-    { title: 'Rehabilitation & Behavioral Therapist', image: cp3Image },
-    { title: 'School Psychologist', image: cp4Image }
+    { title: 'Art Therapist', image: cp1Image },
+    { title: 'Community & NGO Practitioner', image: cp2Image },
+    { title: 'Child & School Art Therapist', image: cp3Image },
+    { title: 'Rehabilitation & Wellness Specialist', image: cp4Image },
+    { title: 'Researcher / Educator in Art Therapy', image: cp1Image }
   ];
 
   useEffect(() => {
@@ -134,10 +133,10 @@ const CounsellingChildPsychology = () => {
   ];
 
   return (
-    <div className="counselling-child-psychology-page">
+    <div className="counselling-art-therapy-page">
       {/* Hero Banner Section */}
       <div className="program-hero-banner">
-        <h1>COUNSELLING & CHILD PSYCHOLOGY</h1>
+        <h1>ART THERAPY</h1>
       </div>
 
       {/* Program Overview Section */}
@@ -145,14 +144,14 @@ const CounsellingChildPsychology = () => {
         <div className="container">
           <div className="overview-content">
             <div className="overview-text">
-              <h1 className="overview-title">ADVANCED DIPLOMA IN COUNSELLING AND CHILD PSYCHOLOGY</h1>
+              <h1 className="overview-title">ADVANCED DIPLOMA IN ART THERAPY</h1>
               <p>
-                The Diploma in Counselling Psychology (Specialization in Child Psychology) equips learners with essential counselling skills, child-focused assessment techniques, and ethically grounded practice. With a blend of theory, supervised practicum, and real-world exposure, the program prepares reflective practitioners to support the emotional, behavioural, and developmental needs of children and adolescents across diverse settings.
+                The Diploma in Counselling Psychology (Specialization in Art Therapy) provides a strong foundation in art therapy theories, ethical practice, and culturally sensitive approaches. Learners gain confidence in using diverse art media, understanding the therapeutic value of creativity, and tailoring interventions to client needs. Through supervised practicum and hands-on training, students develop skills in assessment, ethical interpretation, session documentation, and reading non-verbal cues. The program prepares practitioners to conduct effective individual and group art therapy sessions, integrate innovative media, and contribute professionally through reflective practice and evidence-informed work.
               </p>
               <button className="enroll-now-btn" onClick={openApplyModal}>Enroll Now</button>
             </div>
             <div className="overview-image">
-              <img src={cc1Image} alt="Child counselling session" />
+              <img src={cc1Image} alt="Art therapy session" />
             </div>
             <div 
               className="vertical-apply-tab"
@@ -169,28 +168,19 @@ const CounsellingChildPsychology = () => {
         <div className="container">
           <div className="highlights-content">
             <div className="highlights-image">
-              <img src={cc2Image} alt="Children" />
+              <img src={cc2Image} alt="Art Therapy" />
             </div>
             <div className="highlights-text">
-              <p className="highlights-subtitle">Unlock your path to becoming a skilled child counsellor</p>
-              <h2 className="highlights-title">ADVANCED DIPLOMA IN COUNSELLING AND CHILD PSYCHOLOGY</h2>
+              <p className="highlights-subtitle">Unlock your potential as a skilled art therapy counsellor.</p>
+              <h2 className="highlights-title">ADVANCED DIPLOMA IN ART THERAPY</h2>
               <div className="batch-boxes">
                 <div className="batch-box">
                   <div className="batch-icon"></div>
                   <h3>Batch 1</h3>
                   <ul className="batch-details">
-                    <li>Weekday Morning Batch</li>
-                    <li>Monday - Thursday</li>
-                    <li>9 AM - 1 PM</li>
-                  </ul>
-                </div>
-                <div className="batch-box">
-                  <div className="batch-icon"></div>
-                  <h3>Batch 2</h3>
-                  <ul className="batch-details">
-                    <li>Weekday Evening Batch</li>
-                    <li>Monday - Thursday</li>
-                    <li>1 PM - 6 PM</li>
+                    <li>Weekend Morning Batch</li>
+                    <li>Saturday</li>
+                    <li>7:30 AM - 1:30 PM</li>
                   </ul>
                 </div>
               </div>
@@ -210,11 +200,11 @@ const CounsellingChildPsychology = () => {
             </div>
             <div className="detail-item">
               <span className="detail-label">Fees</span>
-              <span className="detail-value">₹0 per Semester</span>
+              <span className="detail-value">-</span>
             </div>
             <div className="detail-item">
               <span className="detail-label">Eligibility</span>
-              <span className="detail-value">Eligibility - Bachelor's degree in any discipline</span>
+              <span className="detail-value">Bachelor's degree in any discipline</span>
             </div>
           </div>
         </div>
@@ -226,11 +216,12 @@ const CounsellingChildPsychology = () => {
           <h2 className="section-title">LEARNING OUTCOMES</h2>
           <div className="outcomes-box">
             <ul className="outcomes-list">
-              <li>Gain practical counselling skills for children and adolescents</li>
-              <li>Learn to assess and support children's emotional and behavioral needs</li>
-              <li>Practice ethical and child-centered counselling approaches</li>
-              <li>Apply learning through hands-on training and real-world experience</li>
-              <li>Promote children's mental health and overall wellbeing</li>
+              <li>Build a foundation in art therapy theory, ethics, and cultural sensitivity</li>
+              <li>Gain confidence using varied media and applying the creative process therapeutically</li>
+              <li>Conduct assessments, interpret artwork ethically, and observe non-verbal cues</li>
+              <li>Facilitate individual and group art therapy sessions with appropriate interventions</li>
+              <li>Apply hands-on learning through supervised practicum, integrating theory with practice</li>
+              <li>Uphold professional standards and contribute to the growth of the art therapy field</li>
             </ul>
           </div>
         </div>
@@ -242,41 +233,37 @@ const CounsellingChildPsychology = () => {
           <div className="syllabus-header">
             <h2 className="section-title">COURSE SYLLABUS</h2>
             <div className="syllabus-buttons">
-              <button className="apply-now-btn-syllabus">Apply now</button>
+              <button className="apply-now-btn-syllabus" onClick={openApplyModal}>Apply now</button>
               <button className="download-brochure-btn">Download Brochure</button>
             </div>
           </div>
           <div className="syllabus-content">
             <div className="semester-card">
-              <div className="semester-header semester-1">SEMESTER I</div>
-              <h3>FOUNDATIONS OF COUNSELLING PSYCHOLOGY</h3>
-              <p className="credits">Total Credits - 22</p>
+              <div className="semester-header semester-1">SEMESTER 1</div>
+              <h3>FOUNDATIONS OF ART THERAPY</h3>
+              <p className="credits">TOTAL CREDITS - 4</p>
               <ul className="semester-topics">
-                <li>Foundations of Psychology</li>
-                <li>Introduction to Counselling Psychology</li>
-                <li>Developmental Psychology Across the Lifespan</li>
-                <li>Foundations of Child Psychology</li>
-                <li>Practical Paper - Child Assessment, Testing & Counselling Lab</li>
+                <li>Foundations of Art Therapy</li>
+                <li>Materials, Media & Creative Processes</li>
+                <li>Art Therapy Assessment, Diagnostics & Interpretive Skills</li>
               </ul>
             </div>
             <div className="semester-card">
               <div className="semester-header semester-2">SEMESTER 2</div>
               <h3>ADVANCEMENT TO SPECIALIZATION</h3>
-              <p className="credits">Total Credits - 32</p>
+              <p className="credits">TOTAL CREDITS - 4</p>
               <ul className="semester-topics">
-                <li>Ethics and Professional Issues in Counselling</li>
-                <li>Child Psychopathology and Counselling</li>
-                <li>Positive Development, Family, School & Community Interventions</li>
-                <li>Media Psychology</li>
-                <li>Dissertation</li>
-                <li>Internship / Field Placement</li>
+                <li>Therapeutic Modalities & Population-based Practice</li>
+                <li>Clinical Art Therapy Interventions & Techniques</li>
+                <li>Practicum / Clinical Placement & Supervision</li>
+                <li>Research, Evaluation & Professional Practice</li>
               </ul>
             </div>
           </div>
           <div className="internship-section">
             <h3>Internship Opportunities</h3>
             <p>
-              Gain real-world experience in approved counselling, rehabilitation, educational, or clinical settings. Structured internships help you build practical skills, professional confidence, and industry-ready expertise.
+              Gain supervised, hands-on experience in therapeutic, educational, or clinical settings such as hospitals, schools, rehabilitation centers, community organizations, or NGOs. These structured internships help you build practical skills, professional confidence, and industry-ready expertise in applying art therapy for mental health and emotional well-being.
             </p>
           </div>
         </div>
@@ -328,7 +315,7 @@ const CounsellingChildPsychology = () => {
                 </svg>
               </span>
               <span className="skill-text">
-                <strong>Active Listening & Empathy</strong> – Understand children's emotions and respond with care.
+                <strong>Creative Facilitation</strong> – Guide clients using various art media to express thoughts and emotions.
               </span>
             </li>
             <li>
@@ -338,7 +325,7 @@ const CounsellingChildPsychology = () => {
                 </svg>
               </span>
               <span className="skill-text">
-                <strong>Assessment & Observation</strong> – Identify emotional, behavioral, and developmental needs
+                <strong>Psychological Assessment</strong> – Interpret artwork to understand clients' mental and emotional states.
               </span>
             </li>
             <li>
@@ -348,7 +335,7 @@ const CounsellingChildPsychology = () => {
                 </svg>
               </span>
               <span className="skill-text">
-                <strong>Communication Skills</strong> – Effectively interact with children, parents, and caregivers
+                <strong>Therapeutic Communication</strong> – Observe and respond to verbal and non-verbal cues effectively.
               </span>
             </li>
             <li>
@@ -358,7 +345,7 @@ const CounsellingChildPsychology = () => {
                 </svg>
               </span>
               <span className="skill-text">
-                <strong>Counselling Techniques</strong> – Apply child-centered, ethical strategies to support wellbeing
+                <strong>Ethical & Cultural Sensitivity</strong> – Practice ethically and respect diverse backgrounds.
               </span>
             </li>
             <li>
@@ -368,7 +355,17 @@ const CounsellingChildPsychology = () => {
                 </svg>
               </span>
               <span className="skill-text">
-                <strong>Problem Solving & Intervention</strong> – Develop practical solutions and therapeutic plans for children's challenges
+                <strong>Session Planning & Leadership</strong> – Design and lead individual or group art therapy sessions.
+              </span>
+            </li>
+            <li>
+              <span className="skill-checkmark">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="white"/>
+                </svg>
+              </span>
+              <span className="skill-text">
+                <strong>Adaptability & Innovation</strong> – Integrate new techniques, digital media, and creative interventions.
               </span>
             </li>
           </ul>
@@ -380,9 +377,7 @@ const CounsellingChildPsychology = () => {
         <div className="container">
           <h2 className="section-title-white">CAREER PROSPECTS</h2>
           <p className="career-description">
-          With a Child Counselling specialization, this course builds a strong psychology foundation and 
-prepares <br /> you for impactful careers in child and adolescent mental health. Potential career paths 
-include
+            With an Art Therapy specialization, this course builds a strong foundation in creative therapeutic practices and prepares you for impactful careers in mental health and wellness. Potential career paths include
           </p>
           <div className="career-carousel-wrapper">
             <button 
@@ -448,23 +443,23 @@ include
         <div className="container">
           <h2 className="section-title">OTHER ADVANCED DIPLOMA PROGRAMS</h2>
           <div className="programs-grid">
-            <Link to="/courses" className="program-card">
+            <Link to="/counselling-child-psychology" className="program-card">
+              <div className="program-icon-wrapper">
+                <img src={cc1Icon} alt="Child Psychology" className="program-icon" />
+              </div>
+              <p>Advanced Diploma in Counselling and Child Psychology</p>
+            </Link>
+            <Link to="/counselling-organizational-psychology" className="program-card">
               <div className="program-icon-wrapper">
                 <img src={cc1Icon} alt="Organizational Psychology" className="program-icon" />
               </div>
               <p>Advanced Diploma in Counselling and Organizational Psychology</p>
             </Link>
-            <Link to="/courses" className="program-card">
+            <Link to="/counselling-forensic-psychology" className="program-card">
               <div className="program-icon-wrapper">
                 <img src={cc2Icon} alt="Forensic Psychology" className="program-icon" />
               </div>
               <p>Advanced Diploma in Counselling and Forensic Psychology</p>
-            </Link>
-            <Link to="/courses" className="program-card">
-              <div className="program-icon-wrapper">
-                <img src={cc3Icon} alt="Art Therapy" className="program-icon" />
-              </div>
-              <p>Advanced Diploma in Art Therapy</p>
             </Link>
           </div>
         </div>
@@ -533,5 +528,5 @@ include
   );
 };
 
-export default CounsellingChildPsychology;
+export default CounsellingArtTherapy;
 

@@ -4,6 +4,7 @@ import CoursesGrid from '../components/Courses/CoursesGrid';
 import WhyChooseUs from '../components/WhyChooseUs/WhyChooseUs';
 import LearnersReview from '../components/Testimonials/LearnersReview';
 import LeadGeneration from '../components/LeadGeneration/LeadGeneration';
+import ApplyModal from '../components/ApplyModal/ApplyModal';
 import Group7 from '../assets/icons/Group 7.png';
 import Group8 from '../assets/icons/Group 8.png';
 import Ellipse from '../assets/images/Ellipse.png';
@@ -11,7 +12,6 @@ import Layer from '../assets/images/Layer.png';
 import Youngvox from '../assets/images/Youngvox.png';
 import image3 from '../assets/images/image3.png';
 import image2 from '../assets/images/image2.png';
-import logo from '../assets/icons/Logo1.png';
 import './Home.css';
 
 const Home = () => {
@@ -256,135 +256,13 @@ const Home = () => {
         </div>
       )}
 
-      {showApplyModal && (
-        <div className="apply-modal-overlay" onClick={closeApplyModal}>
-          <div className="apply-modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="apply-modal-close" onClick={closeApplyModal}>×</button>
-            
-            <div className="apply-modal-header">
-              <div className="apply-modal-logo">
-                <img src={logo} alt="Jeppiaar Academy Logo" />
-              </div>
-              <h2 className="apply-modal-title">Advanced Diploma Courses in Psychology- Admissions open!</h2>
-            </div>
-
-            <form className="apply-modal-form" onSubmit={handleApplySubmit}>
-              <div className="apply-form-row">
-                <div className="apply-form-column">
-                  <input
-                    type="text"
-                    name="name"
-                    value={applyForm.name}
-                    onChange={handleApplyFormChange}
-                    placeholder="Name"
-                    required
-                  />
-                  <input
-                    type="tel"
-                    name="mobile"
-                    value={applyForm.mobile}
-                    onChange={handleApplyFormChange}
-                    placeholder="Mobile Number"
-                    required
-                  />
-                  <select
-                    name="country"
-                    value={applyForm.country}
-                    onChange={handleApplyFormChange}
-                    required
-                  >
-                    <option value="">Select Country</option>
-                    <option value="India">India</option>
-                    <option value="United States">United States</option>
-                    <option value="United Kingdom">United Kingdom</option>
-                    <option value="Canada">Canada</option>
-                    <option value="Australia">Australia</option>
-                    <option value="Germany">Germany</option>
-                    <option value="France">France</option>
-                    <option value="Japan">Japan</option>
-                    <option value="China">China</option>
-                    <option value="Singapore">Singapore</option>
-                    <option value="United Arab Emirates">United Arab Emirates</option>
-                    <option value="Other">Other</option>
-                  </select>
-                  <select
-                    name="city"
-                    value={applyForm.city}
-                    onChange={handleApplyFormChange}
-                    required
-                  >
-                    <option value="">Select City</option>
-                    <option value="Chennai">Chennai</option>
-                    <option value="Bangalore">Bangalore</option>
-                    <option value="Hyderabad">Hyderabad</option>
-                    <option value="Mumbai">Mumbai</option>
-                    <option value="Delhi">Delhi</option>
-                    <option value="Other">Other</option>
-                  </select>
-                </div>
-                <div className="apply-form-column">
-                  <input
-                    type="email"
-                    name="email"
-                    value={applyForm.email}
-                    onChange={handleApplyFormChange}
-                    placeholder="Email address"
-                    required
-                  />
-                  <select
-                    name="state"
-                    value={applyForm.state}
-                    onChange={handleApplyFormChange}
-                    required
-                  >
-                    <option value="">Select State</option>
-                    <option value="Tamil Nadu">Tamil Nadu</option>
-                    <option value="Karnataka">Karnataka</option>
-                    <option value="Telangana">Telangana</option>
-                    <option value="Maharashtra">Maharashtra</option>
-                    <option value="Delhi">Delhi</option>
-                    <option value="Other">Other</option>
-                  </select>
-                  <input
-                    type="text"
-                    name="qualification"
-                    value={applyForm.qualification}
-                    onChange={handleApplyFormChange}
-                    placeholder="Highest Qualification (completed as of June 2026)"
-                    className="apply-form-input"
-                    required
-                  />
-                  <select
-                    name="course"
-                    value={applyForm.course}
-                    onChange={handleApplyFormChange}
-                    required
-                  >
-                    <option value="">Select Diploma Course</option>
-                    <option value="Counselling and Child Psychology">Counselling and Child Psychology</option>
-                    <option value="Counselling and Organisational Psychology">Counselling and Organisational Psychology</option>
-                    <option value="Counselling and Forensic Psychology">Counselling and Forensic Psychology</option>
-                    <option value="Art Therapy">Art Therapy</option>
-                  </select>
-                </div>
-              </div>
-
-              <label className="apply-form-checkbox">
-                <input
-                  type="checkbox"
-                  name="consent"
-                  checked={applyForm.consent}
-                  onChange={handleApplyFormChange}
-                  required
-                />
-                <span>I authorize Jeppiaar Academy of Psychology & Research and its associates to contact me with updates</span>
-              </label>
-
-              <button type="submit" className="apply-form-submit">Submit</button>
-            </form>
-          </div>
-        </div>
-      )}
+      <ApplyModal
+        isOpen={showApplyModal}
+        onClose={closeApplyModal}
+        formData={applyForm}
+        onFormChange={handleApplyFormChange}
+        onSubmit={handleApplySubmit}
+      />
     </div>
   );
 };

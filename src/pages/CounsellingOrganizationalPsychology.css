@@ -29,10 +29,7 @@ img {
   user-select: none;
 }
 
-.counselling-child-psychology-page,
-.counselling-organizational-psychology-page,
-.counselling-forensic-psychology-page,
-.counselling-art-therapy-page {
+.counselling-organizational-psychology-page {
   padding-top: 80px;
   -webkit-overflow-scrolling: touch;
   overflow-x: hidden;
@@ -74,7 +71,7 @@ img {
 
 /* ============================================
    OVERVIEW SECTION - SEPARATE CSS
-   Section: ADVANCED DIPLOMA IN COUNSELLING AND CHILD PSYCHOLOGY
+   Section: ADVANCED DIPLOMA IN COUNSELLING & ORGANIZATIONAL PSYCHOLOGY
    ============================================ */
 .overview-section {
   padding: 1.75rem 0;
@@ -298,7 +295,7 @@ img {
 
 /* ============================================
    HIGHLIGHTS SECTION - SEPARATE CSS
-   Section: Unlock your path to becoming a skilled child counsellor
+   Section: Unlock your potential as a skilled organizational counsellor
    ============================================ */
 .highlights-section {
   padding: 4rem 0 0 0;
@@ -1612,19 +1609,13 @@ img {
 }
 
 /* Lead Generation Section Override for this page */
-.counselling-child-psychology-page .lead-generation-section,
-.counselling-organizational-psychology-page .lead-generation-section,
-.counselling-forensic-psychology-page .lead-generation-section,
-.counselling-art-therapy-page .lead-generation-section {
+.counselling-organizational-psychology-page .lead-generation-section {
   background: #1A1260;
 }
 
 /* Responsive Design */
 @media (max-width: 968px) {
-  .counselling-child-psychology-page,
-  .counselling-organizational-psychology-page,
-  .counselling-forensic-psychology-page,
-  .counselling-art-therapy-page {
+  .counselling-organizational-psychology-page {
     padding-top: 70px;
     -webkit-overflow-scrolling: touch;
   }
@@ -1761,7 +1752,7 @@ img {
 }
 
 @media (max-width: 768px) {
-  .counselling-child-psychology-page {
+  .counselling-organizational-psychology-page {
     padding-top: 60px;
     -webkit-overflow-scrolling: touch;
   }
@@ -1860,10 +1851,7 @@ img {
 }
 
 @media (max-width: 480px) {
-  .counselling-child-psychology-page,
-  .counselling-organizational-psychology-page,
-  .counselling-forensic-psychology-page,
-  .counselling-art-therapy-page {
+  .counselling-organizational-psychology-page {
     padding-top: 60px;
     -webkit-overflow-scrolling: touch;
   }
@@ -2115,10 +2103,7 @@ img {
 
 /* iOS Specific Fixes */
 @supports (-webkit-touch-callout: none) {
-  .counselling-child-psychology-page,
-  .counselling-organizational-psychology-page,
-  .counselling-forensic-psychology-page,
-  .counselling-art-therapy-page {
+  .counselling-organizational-psychology-page {
     -webkit-overflow-scrolling: touch;
   }
 
@@ -2143,10 +2128,7 @@ img {
 
 /* Firefox Specific Fixes */
 @-moz-document url-prefix() {
-  .counselling-child-psychology-page,
-  .counselling-organizational-psychology-page,
-  .counselling-forensic-psychology-page,
-  .counselling-art-therapy-page {
+  .counselling-organizational-psychology-page {
     scroll-behavior: smooth;
   }
   

@@ -170,6 +170,9 @@
   cursor: pointer;
   transition: all 0.3s ease;
   width: auto;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
   margin-top: auto;
   align-self: flex-start;
   position: relative;

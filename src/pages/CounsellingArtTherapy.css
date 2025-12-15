@@ -29,9 +29,6 @@ img {
   user-select: none;
 }
 
-.counselling-child-psychology-page,
-.counselling-organizational-psychology-page,
-.counselling-forensic-psychology-page,
 .counselling-art-therapy-page {
   padding-top: 80px;
   -webkit-overflow-scrolling: touch;
@@ -74,7 +71,7 @@ img {
 
 /* ============================================
    OVERVIEW SECTION - SEPARATE CSS
-   Section: ADVANCED DIPLOMA IN COUNSELLING AND CHILD PSYCHOLOGY
+   Section: ADVANCED DIPLOMA IN COUNSELLING & FORENSIC PSYCHOLOGY
    ============================================ */
 .overview-section {
   padding: 1.75rem 0;
@@ -298,7 +295,7 @@ img {
 
 /* ============================================
    HIGHLIGHTS SECTION - SEPARATE CSS
-   Section: Unlock your path to becoming a skilled child counsellor
+   Section: Unlock your potential as a skilled forensic counsellor
    ============================================ */
 .highlights-section {
   padding: 4rem 0 0 0;
@@ -1159,7 +1156,9 @@ img {
 .skills-list li:nth-child(2),
 .skills-list li:nth-child(3),
 .skills-list li:nth-child(4),
-.skills-list li:nth-child(5) {
+.skills-list li:nth-child(5),
+.skills-list li:nth-child(6),
+.skills-list li:last-child {
   width: auto;
   max-width: 85%;
   align-self: flex-start;
@@ -1612,18 +1611,12 @@ img {
 }
 
 /* Lead Generation Section Override for this page */
-.counselling-child-psychology-page .lead-generation-section,
-.counselling-organizational-psychology-page .lead-generation-section,
-.counselling-forensic-psychology-page .lead-generation-section,
 .counselling-art-therapy-page .lead-generation-section {
   background: #1A1260;
 }
 
 /* Responsive Design */
 @media (max-width: 968px) {
-  .counselling-child-psychology-page,
-  .counselling-organizational-psychology-page,
-  .counselling-forensic-psychology-page,
   .counselling-art-therapy-page {
     padding-top: 70px;
     -webkit-overflow-scrolling: touch;
@@ -1739,7 +1732,9 @@ img {
   .skills-list li:nth-child(2),
   .skills-list li:nth-child(3),
   .skills-list li:nth-child(4),
-  .skills-list li:nth-child(5) {
+  .skills-list li:nth-child(5),
+  .skills-list li:nth-child(6),
+  .skills-list li:last-child {
     max-width: 80%;
   }
 
@@ -1761,7 +1756,7 @@ img {
 }
 
 @media (max-width: 768px) {
-  .counselling-child-psychology-page {
+  .counselling-art-therapy-page {
     padding-top: 60px;
     -webkit-overflow-scrolling: touch;
   }
@@ -1860,9 +1855,6 @@ img {
 }
 
 @media (max-width: 480px) {
-  .counselling-child-psychology-page,
-  .counselling-organizational-psychology-page,
-  .counselling-forensic-psychology-page,
   .counselling-art-therapy-page {
     padding-top: 60px;
     -webkit-overflow-scrolling: touch;
@@ -1994,7 +1986,9 @@ img {
   .skills-list li:nth-child(2),
   .skills-list li:nth-child(3),
   .skills-list li:nth-child(4),
-  .skills-list li:nth-child(5) {
+  .skills-list li:nth-child(5),
+  .skills-list li:nth-child(6),
+  .skills-list li:last-child {
     max-width: 90%;
   }
 
@@ -2115,9 +2109,6 @@ img {
 
 /* iOS Specific Fixes */
 @supports (-webkit-touch-callout: none) {
-  .counselling-child-psychology-page,
-  .counselling-organizational-psychology-page,
-  .counselling-forensic-psychology-page,
   .counselling-art-therapy-page {
     -webkit-overflow-scrolling: touch;
   }
@@ -2143,9 +2134,6 @@ img {
 
 /* Firefox Specific Fixes */
 @-moz-document url-prefix() {
-  .counselling-child-psychology-page,
-  .counselling-organizational-psychology-page,
-  .counselling-forensic-psychology-page,
   .counselling-art-therapy-page {
     scroll-behavior: smooth;
   }

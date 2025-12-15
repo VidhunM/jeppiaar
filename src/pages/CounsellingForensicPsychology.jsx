@@ -12,9 +12,9 @@ import cp4Image from '../assets/images/cp4.jpg';
 import cc1Icon from '../assets/icons/cc1.png';
 import cc2Icon from '../assets/icons/cc02.png';
 import cc3Icon from '../assets/icons/cc3.png';
-import './CounsellingChildPsychology.css';
+import './CounsellingForensicPsychology.css';
 
-const CounsellingChildPsychology = () => {
+const CounsellingForensicPsychology = () => {
   const [openFaq, setOpenFaq] = useState(null);
   const [currentCareerIndex, setCurrentCareerIndex] = useState(0);
   const [showUnderConstruction, setShowUnderConstruction] = useState(false);
@@ -69,9 +69,7 @@ const CounsellingChildPsychology = () => {
 
   const handleApplySubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
     console.log('Apply form submitted:', applyForm);
-    // You can add API call here similar to LeadGeneration component
     alert('Thank you for your interest! We will contact you soon.');
     closeApplyModal();
   };
@@ -81,10 +79,12 @@ const CounsellingChildPsychology = () => {
   };
 
   const careers = [
-    { title: 'Child Counselor', image: cp1Image },
-    { title: 'Educational Psychologist', image: cp2Image },
-    { title: 'Rehabilitation & Behavioral Therapist', image: cp3Image },
-    { title: 'School Psychologist', image: cp4Image }
+    { title: 'Forensic Counsellor', image: cp1Image },
+    { title: 'Criminal Profiler', image: cp2Image },
+    { title: 'Correctional Counsellor', image: cp3Image },
+    { title: 'Court Consultant / Expert Witness', image: cp4Image },
+    { title: 'Victim Support Counsellor', image: cp1Image },
+    { title: 'Rehabilitation & Reintegration Specialist', image: cp2Image }
   ];
 
   useEffect(() => {
@@ -134,10 +134,10 @@ const CounsellingChildPsychology = () => {
   ];
 
   return (
-    <div className="counselling-child-psychology-page">
+    <div className="counselling-forensic-psychology-page">
       {/* Hero Banner Section */}
       <div className="program-hero-banner">
-        <h1>COUNSELLING & CHILD PSYCHOLOGY</h1>
+        <h1>COUNSELLING & FORENSIC PSYCHOLOGY</h1>
       </div>
 
       {/* Program Overview Section */}
@@ -145,14 +145,14 @@ const CounsellingChildPsychology = () => {
         <div className="container">
           <div className="overview-content">
             <div className="overview-text">
-              <h1 className="overview-title">ADVANCED DIPLOMA IN COUNSELLING AND CHILD PSYCHOLOGY</h1>
+              <h1 className="overview-title">ADVANCED DIPLOMA IN COUNSELLING & FORENSIC PSYCHOLOGY</h1>
               <p>
-                The Diploma in Counselling Psychology (Specialization in Child Psychology) equips learners with essential counselling skills, child-focused assessment techniques, and ethically grounded practice. With a blend of theory, supervised practicum, and real-world exposure, the program prepares reflective practitioners to support the emotional, behavioural, and developmental needs of children and adolescents across diverse settings.
+                The Diploma in Counselling Psychology (Specialization in Forensic Psychology) builds essential knowledge in criminal behavior, legal processes, and forensic assessment. Learners develop competencies in offender evaluation, risk assessment, criminal profiling, and rehabilitation, rooted in ethical and evidence-based practice. Through supervised practicum, case studies, and field exposure in forensic and correctional settings, the program prepares practitioners to support criminal investigations, promote justice, and address mental health needs within legal systems.
               </p>
               <button className="enroll-now-btn" onClick={openApplyModal}>Enroll Now</button>
             </div>
             <div className="overview-image">
-              <img src={cc1Image} alt="Child counselling session" />
+              <img src={cc1Image} alt="Forensic counselling session" />
             </div>
             <div 
               className="vertical-apply-tab"
@@ -169,11 +169,11 @@ const CounsellingChildPsychology = () => {
         <div className="container">
           <div className="highlights-content">
             <div className="highlights-image">
-              <img src={cc2Image} alt="Children" />
+              <img src={cc2Image} alt="Forensic Psychology" />
             </div>
             <div className="highlights-text">
-              <p className="highlights-subtitle">Unlock your path to becoming a skilled child counsellor</p>
-              <h2 className="highlights-title">ADVANCED DIPLOMA IN COUNSELLING AND CHILD PSYCHOLOGY</h2>
+              <p className="highlights-subtitle">Unlock your potential as a skilled forensic counsellor</p>
+              <h2 className="highlights-title">ADVANCED DIPLOMA IN COUNSELLING & FORENSIC PSYCHOLOGY</h2>
               <div className="batch-boxes">
                 <div className="batch-box">
                   <div className="batch-icon"></div>
@@ -188,8 +188,8 @@ const CounsellingChildPsychology = () => {
                   <div className="batch-icon"></div>
                   <h3>Batch 2</h3>
                   <ul className="batch-details">
-                    <li>Weekday Evening Batch</li>
-                    <li>Monday - Thursday</li>
+                    <li>Weekend Evening Batch</li>
+                    <li>Saturday</li>
                     <li>1 PM - 6 PM</li>
                   </ul>
                 </div>
@@ -210,11 +210,11 @@ const CounsellingChildPsychology = () => {
             </div>
             <div className="detail-item">
               <span className="detail-label">Fees</span>
-              <span className="detail-value">₹0 per Semester</span>
+              <span className="detail-value">-</span>
             </div>
             <div className="detail-item">
               <span className="detail-label">Eligibility</span>
-              <span className="detail-value">Eligibility - Bachelor's degree in any discipline</span>
+              <span className="detail-value">Bachelor's degree in any discipline</span>
             </div>
           </div>
         </div>
@@ -226,11 +226,11 @@ const CounsellingChildPsychology = () => {
           <h2 className="section-title">LEARNING OUTCOMES</h2>
           <div className="outcomes-box">
             <ul className="outcomes-list">
-              <li>Gain practical counselling skills for children and adolescents</li>
-              <li>Learn to assess and support children's emotional and behavioral needs</li>
-              <li>Practice ethical and child-centered counselling approaches</li>
-              <li>Apply learning through hands-on training and real-world experience</li>
-              <li>Promote children's mental health and overall wellbeing</li>
+              <li>Build a strong foundation in psychological principles related to criminal behavior, legal processes, and forensic settings</li>
+              <li>Learn to assess, understand, and manage offenders' behavior, motivation, risk factors, and mental health concerns</li>
+              <li>Practice ethical, culturally sensitive, and evidence-based approaches in forensic assessment, criminal profiling, and rehabilitation</li>
+              <li>Apply learning through supervised practicum, case analyses, and field exposure in forensic and correctional environments</li>
+              <li>Contribute effectively to criminal investigations, promote justice, and support mental health within legal and correctional systems</li>
             </ul>
           </div>
         </div>
@@ -242,32 +242,32 @@ const CounsellingChildPsychology = () => {
           <div className="syllabus-header">
             <h2 className="section-title">COURSE SYLLABUS</h2>
             <div className="syllabus-buttons">
-              <button className="apply-now-btn-syllabus">Apply now</button>
+              <button className="apply-now-btn-syllabus" onClick={openApplyModal}>Apply now</button>
               <button className="download-brochure-btn">Download Brochure</button>
             </div>
           </div>
           <div className="syllabus-content">
             <div className="semester-card">
-              <div className="semester-header semester-1">SEMESTER I</div>
+              <div className="semester-header semester-1">SEMESTER 1</div>
               <h3>FOUNDATIONS OF COUNSELLING PSYCHOLOGY</h3>
-              <p className="credits">Total Credits - 22</p>
+              <p className="credits">TOTAL CREDITS - 22</p>
               <ul className="semester-topics">
                 <li>Foundations of Psychology</li>
                 <li>Introduction to Counselling Psychology</li>
                 <li>Developmental Psychology Across the Lifespan</li>
-                <li>Foundations of Child Psychology</li>
-                <li>Practical Paper - Child Assessment, Testing & Counselling Lab</li>
+                <li>Foundations of Criminal & Forensic Psychology</li>
+                <li>Practical Paper – Psychological Assessment, Observation & Forensic Applications Lab</li>
               </ul>
             </div>
             <div className="semester-card">
               <div className="semester-header semester-2">SEMESTER 2</div>
               <h3>ADVANCEMENT TO SPECIALIZATION</h3>
-              <p className="credits">Total Credits - 32</p>
+              <p className="credits">TOTAL CREDITS - 32</p>
               <ul className="semester-topics">
                 <li>Ethics and Professional Issues in Counselling</li>
-                <li>Child Psychopathology and Counselling</li>
-                <li>Positive Development, Family, School & Community Interventions</li>
-                <li>Media Psychology</li>
+                <li>Forensic Assessment, Psychopathology & Legal Frameworks</li>
+                <li>Correctional Counselling, Rehabilitation & Applied Forensic Skills</li>
+                <li>Media Psychology - Elective Paper</li>
                 <li>Dissertation</li>
                 <li>Internship / Field Placement</li>
               </ul>
@@ -276,7 +276,7 @@ const CounsellingChildPsychology = () => {
           <div className="internship-section">
             <h3>Internship Opportunities</h3>
             <p>
-              Gain real-world experience in approved counselling, rehabilitation, educational, or clinical settings. Structured internships help you build practical skills, professional confidence, and industry-ready expertise.
+              Gain supervised, hands-on experience in forensic, correctional, legal, or investigative settings such as prisons, police departments, rehabilitation centers, forensic hospitals, or NGOs working in criminal justice. These structured internships help you build practical skills, professional confidence, and industry-ready expertise for forensic and legal practice.
             </p>
           </div>
         </div>
@@ -328,7 +328,7 @@ const CounsellingChildPsychology = () => {
                 </svg>
               </span>
               <span className="skill-text">
-                <strong>Active Listening & Empathy</strong> – Understand children's emotions and respond with care.
+                <strong>Criminal Behaviour Assessment</strong> – Evaluate offender motives, risk levels, and psychological patterns.
               </span>
             </li>
             <li>
@@ -338,7 +338,7 @@ const CounsellingChildPsychology = () => {
                 </svg>
               </span>
               <span className="skill-text">
-                <strong>Assessment & Observation</strong> – Identify emotional, behavioral, and developmental needs
+                <strong>Critical Thinking & Analysis</strong> – Interpret complex case details and forensic evidence accurately.
               </span>
             </li>
             <li>
@@ -348,7 +348,7 @@ const CounsellingChildPsychology = () => {
                 </svg>
               </span>
               <span className="skill-text">
-                <strong>Communication Skills</strong> – Effectively interact with children, parents, and caregivers
+                <strong>Interviewing & Profiling Skills</strong> – Conduct structured interviews and analyze behavioural cues for profiling.
               </span>
             </li>
             <li>
@@ -358,7 +358,7 @@ const CounsellingChildPsychology = () => {
                 </svg>
               </span>
               <span className="skill-text">
-                <strong>Counselling Techniques</strong> – Apply child-centered, ethical strategies to support wellbeing
+                <strong>Ethical & Legal Awareness</strong> – Apply legal standards and ethical guidelines in all forensic work.
               </span>
             </li>
             <li>
@@ -368,7 +368,7 @@ const CounsellingChildPsychology = () => {
                 </svg>
               </span>
               <span className="skill-text">
-                <strong>Problem Solving & Intervention</strong> – Develop practical solutions and therapeutic plans for children's challenges
+                <strong>Forensic Report & Courtroom Communication</strong> – Prepare clear reports and present findings confidently in court.
               </span>
             </li>
           </ul>
@@ -380,9 +380,7 @@ const CounsellingChildPsychology = () => {
         <div className="container">
           <h2 className="section-title-white">CAREER PROSPECTS</h2>
           <p className="career-description">
-          With a Child Counselling specialization, this course builds a strong psychology foundation and 
-prepares <br /> you for impactful careers in child and adolescent mental health. Potential career paths 
-include
+            With a Forensic Psychology specialization, this course builds a strong foundation in criminal psychology and prepares you for impactful careers in forensic and legal settings. Potential career paths include
           </p>
           <div className="career-carousel-wrapper">
             <button 
@@ -448,17 +446,17 @@ include
         <div className="container">
           <h2 className="section-title">OTHER ADVANCED DIPLOMA PROGRAMS</h2>
           <div className="programs-grid">
-            <Link to="/courses" className="program-card">
+            <Link to="/counselling-child-psychology" className="program-card">
+              <div className="program-icon-wrapper">
+                <img src={cc1Icon} alt="Child Psychology" className="program-icon" />
+              </div>
+              <p>Advanced Diploma in Counselling and Child Psychology</p>
+            </Link>
+            <Link to="/counselling-organizational-psychology" className="program-card">
               <div className="program-icon-wrapper">
                 <img src={cc1Icon} alt="Organizational Psychology" className="program-icon" />
               </div>
               <p>Advanced Diploma in Counselling and Organizational Psychology</p>
-            </Link>
-            <Link to="/courses" className="program-card">
-              <div className="program-icon-wrapper">
-                <img src={cc2Icon} alt="Forensic Psychology" className="program-icon" />
-              </div>
-              <p>Advanced Diploma in Counselling and Forensic Psychology</p>
             </Link>
             <Link to="/courses" className="program-card">
               <div className="program-icon-wrapper">
@@ -533,5 +531,5 @@ include
   );
 };
 
-export default CounsellingChildPsychology;
+export default CounsellingForensicPsychology;
 

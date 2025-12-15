@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import our1 from '../../assets/images/our1.png';
 import our2 from '../../assets/images/our2.png';
 import our3 from '../../assets/images/our3.png';
@@ -14,28 +15,32 @@ const CoursesGrid = ({ onKnowMoreClick }) => {
       title: "Counselling and Child Psychology",
       duration: "12-Month Program",
       eligibility: "Open to All UG Graduates",
-      image: our1
+      image: our1,
+      path: "/counselling-child-psychology"
     },
     {
       id: 2,
       title: "Counselling and Organisational Psychology",
       duration: "12-Month Program",
       eligibility: "Open to All UG Graduates",
-      image: our2
+      image: our2,
+      path: "/counselling-organizational-psychology"
     },
     {
       id: 3,
       title: "Counselling and Forensic Psychology",
       duration: "12-Month Program",
       eligibility: "Open to All UG Graduates",
-      image: our3
+      image: our3,
+      path: "/counselling-forensic-psychology"
     },
     {
       id: 4,
       title: "Art Therapy",
       duration: "12-Month Program",
       eligibility: "Open to All UG Graduates",
-      image: our4
+      image: our4,
+      path: "/counselling-art-therapy"
     }
   ];
 
@@ -75,7 +80,7 @@ const CoursesGrid = ({ onKnowMoreClick }) => {
                     <span>Courses: {program.eligibility}</span>
                   </div>
                 </div>
-                <button className="know-more-btn" onClick={onKnowMoreClick}>Know more</button>
+                <Link to={program.path} className="know-more-btn">Know more</Link>
               </div>
             </div>
           ))}
