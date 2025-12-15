@@ -414,7 +414,7 @@ img {
 }
 
 .highlights-section .batch-box h3 {
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: white;
   margin-bottom: 0.75rem;
@@ -431,7 +431,7 @@ img {
 
 .highlights-section .batch-details li {
   color: white;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 0.4rem;
   position: relative;
@@ -586,7 +586,7 @@ img {
 }
 
 .batch-box h3 {
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: white;
   margin-bottom: 0.75rem;
@@ -603,7 +603,7 @@ img {
 
 .batch-details li {
   color: white;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 0.4rem;
   position: relative;
@@ -673,14 +673,14 @@ img {
 }
 
 .detail-label {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #1A1260;
   font-weight: 500;
   text-align: left;
 }
 
 .detail-value {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #1A1260;
   font-weight: 700;
   text-align: left;
@@ -720,7 +720,7 @@ img {
 }
 
 .outcomes-list li {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #000;
   line-height: 1.7;
   padding-left: 3rem;

@@ -7,8 +7,9 @@ import cc1Image from '../assets/images/cc1.png';
 import cc2Image from '../assets/images/cc2.png';
 import cp1Image from '../assets/images/cp1.png';
 import cp2Image from '../assets/images/cp2.png';
-import cp3Image from '../assets/images/cp4.png';
-import cp4Image from '../assets/images/cp4.jpg';
+import cfp2Image from '../assets/images/cfp2.jpeg';
+import cfp3Image from '../assets/images/cfp3.jpeg';
+import cfp4Image from '../assets/images/cfp4.jpeg';
 import cc1Icon from '../assets/icons/cc1.png';
 import cc2Icon from '../assets/icons/cc02.png';
 import cc3Icon from '../assets/icons/cc3.png';
@@ -80,9 +81,9 @@ const CounsellingForensicPsychology = () => {
 
   const careers = [
     { title: 'Forensic Counsellor', image: cp1Image },
-    { title: 'Criminal Profiler', image: cp2Image },
-    { title: 'Correctional Counsellor', image: cp3Image },
-    { title: 'Court Consultant / Expert Witness', image: cp4Image },
+    { title: 'Criminal Profiler', image: cfp2Image },
+    { title: 'Correctional Counsellor', image: cfp3Image },
+    { title: 'Court Consultant / Expert Witness', image: cfp4Image },
     { title: 'Victim Support Counsellor', image: cp1Image },
     { title: 'Rehabilitation & Reintegration Specialist', image: cp2Image }
   ];

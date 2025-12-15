@@ -14,7 +14,7 @@ const ApplyModal = ({ isOpen, onClose, formData, onFormChange, onSubmit }) => {
           <div className="apply-modal-logo">
             <img src={logo} alt="Jeppiaar Academy Logo" />
           </div>
-          <h2 className="apply-modal-title">Advanced Diploma Courses in Psychology- Admissions open!</h2>
+          <h2 className="apply-modal-title">Advanced Diploma Courses in Psychology<br />2026 Admissions open!</h2>
         </div>
 
         <form className="apply-modal-form" onSubmit={onSubmit}>
@@ -34,6 +34,39 @@ const ApplyModal = ({ isOpen, onClose, formData, onFormChange, onSubmit }) => {
                 value={formData.mobile}
                 onChange={onFormChange}
                 placeholder="Mobile Number"
+                required
+              />
+              <select
+                name="state"
+                value={formData.state}
+                onChange={onFormChange}
+                required
+              >
+                <option value="">Select State</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Telangana">Telangana</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Other">Other</option>
+              </select>
+              <input
+                type="text"
+                name="qualification"
+                value={formData.qualification}
+                onChange={onFormChange}
+                placeholder="Highest Qualification (Completed as of June 2026)"
+                className="apply-form-input"
+                required
+              />
+            </div>
+            <div className="apply-form-column">
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={onFormChange}
+                placeholder="Email Address"
                 required
               />
               <select
@@ -70,39 +103,6 @@ const ApplyModal = ({ isOpen, onClose, formData, onFormChange, onSubmit }) => {
                 <option value="Delhi">Delhi</option>
                 <option value="Other">Other</option>
               </select>
-            </div>
-            <div className="apply-form-column">
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={onFormChange}
-                placeholder="Email address"
-                required
-              />
-              <select
-                name="state"
-                value={formData.state}
-                onChange={onFormChange}
-                required
-              >
-                <option value="">Select State</option>
-                <option value="Tamil Nadu">Tamil Nadu</option>
-                <option value="Karnataka">Karnataka</option>
-                <option value="Telangana">Telangana</option>
-                <option value="Maharashtra">Maharashtra</option>
-                <option value="Delhi">Delhi</option>
-                <option value="Other">Other</option>
-              </select>
-              <input
-                type="text"
-                name="qualification"
-                value={formData.qualification}
-                onChange={onFormChange}
-                placeholder="Highest Qualification (completed as of June 2026)"
-                className="apply-form-input"
-                required
-              />
               <select
                 name="course"
                 value={formData.course}

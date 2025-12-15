@@ -5,10 +5,10 @@ import ApplyModal from '../components/ApplyModal/ApplyModal';
 import image2 from '../assets/images/image2.png';
 import cc1Image from '../assets/images/cc1.png';
 import cc2Image from '../assets/images/cc2.png';
-import cp1Image from '../assets/images/cp1.png';
-import cp2Image from '../assets/images/cp2.png';
-import cp3Image from '../assets/images/cp4.png';
-import cp4Image from '../assets/images/cp4.jpg';
+import cop1Image from '../assets/images/cop1.jpeg';
+import cop2Image from '../assets/images/cop2.jpeg';
+import cop3Image from '../assets/images/cop3.jpeg';
+import cop4Image from '../assets/images/cop4.jpeg';
 import cc1Icon from '../assets/icons/cc1.png';
 import cc2Icon from '../assets/icons/cc02.png';
 import cc3Icon from '../assets/icons/cc3.png';
@@ -79,11 +79,10 @@ const CounsellingOrganizationalPsychology = () => {
   };
 
   const careers = [
-    { title: 'Corporate Counsellor', image: cp1Image },
-    { title: 'Employee Wellbeing & Counselling Specialist', image: cp2Image },
-    { title: 'Learning & Development (L&D) Manager', image: cp3Image },
-    { title: 'Change Management Consultant', image: cp4Image },
-    { title: 'Human Resources Specialist', image: cp1Image }
+    { title: 'Corporate Counsellor', image: cop1Image },
+    { title: 'Employee Wellbeing & Counselling Specialist', image: cop2Image },
+    { title: 'Learning & Development (L&D) Manager', image: cop3Image },
+    { title: 'Human Resources Specialist', image: cop4Image }
   ];
 
   useEffect(() => {

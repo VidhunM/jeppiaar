@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Logo1 from '../../assets/icons/Logo1.png';
+import ApplyModal from '../ApplyModal/ApplyModal';
 import './Header.css';
 
 const Header = () => {
@@ -8,6 +9,18 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [showUnderConstruction, setShowUnderConstruction] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [showApplyModal, setShowApplyModal] = useState(false);
+  const [applyForm, setApplyForm] = useState({
+    name: '',
+    email: '',
+    mobile: '',
+    country: '',
+    city: '',
+    state: '',
+    course: '',
+    qualification: '',
+    consent: false
+  });
   const location = useLocation();
   const isHomePage = location.pathname === '/';
 
@@ -51,6 +64,41 @@ const Header = () => {
 
   const closePopup = () => {
     setShowUnderConstruction(false);
+  };
+
+  const openApplyModal = () => {
+    setShowApplyModal(true);
+    setIsMobileMenuOpen(false);
+  };
+
+  const closeApplyModal = () => {
+    setShowApplyModal(false);
+    setApplyForm({
+      name: '',
+      email: '',
+      mobile: '',
+      country: '',
+      city: '',
+      state: '',
+      course: '',
+      qualification: '',
+      consent: false
+    });
+  };
+
+  const handleApplyFormChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setApplyForm(prev => ({
+      ...prev,
+      [name]: type === 'checkbox' ? checked : value
+    }));
+  };
+
+  const handleApplySubmit = async (e) => {
+    e.preventDefault();
+    console.log('Apply form submitted:', applyForm);
+    alert('Thank you for your interest! We will contact you soon.');
+    closeApplyModal();
   };
 
   return (
@@ -164,14 +212,7 @@ const Header = () => {
 
           <button 
             className="cta-button" 
-            onClick={() => {
-              const startCareerSection = document.getElementById('start-career-section');
-              if (startCareerSection) {
-                startCareerSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-              } else {
-                window.location.href = '/contact';
-              }
-            }}
+            onClick={openApplyModal}
           >
             Join Us Now
           </button>
@@ -196,6 +237,14 @@ const Header = () => {
         </div>
       </div>
     )}
+
+    <ApplyModal
+      isOpen={showApplyModal}
+      onClose={closeApplyModal}
+      formData={applyForm}
+      onFormChange={handleApplyFormChange}
+      onSubmit={handleApplySubmit}
+    />
     </>
   );
 };
