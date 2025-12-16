@@ -318,6 +318,18 @@ img {
   padding-bottom: 0;
 }
 
+.counselling-forensic-psychology-page .highlights-section .highlights-image {
+  width: 100%;
+  max-width: 100%;
+  align-self: flex-end;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  margin-top: auto;
+  margin-bottom: 0;
+  flex: 1;
+}
+
 .highlights-section .highlights-image {
   width: 100%;
   max-width: 70%;
@@ -327,6 +339,19 @@ img {
   justify-content: flex-start;
   margin-top: auto;
   margin-bottom: 0;
+}
+
+.counselling-forensic-psychology-page .highlights-section .highlights-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px 8px 0 0;
+  object-fit: contain;
+  align-self: flex-end;
+  margin-bottom: 0;
+  max-width: 100%;
+  transform: scale(1.6) translateX(-10%);
+  transform-origin: bottom left;
 }
 
 .highlights-section .highlights-image img {
@@ -490,6 +515,18 @@ img {
   padding-bottom: 0;
 }
 
+.counselling-forensic-psychology-page .highlights-image {
+  width: 100%;
+  max-width: 100%;
+  align-self: flex-end;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  margin-top: auto;
+  margin-bottom: 0;
+  flex: 1;
+}
+
 .highlights-image {
   width: 100%;
   max-width: 70%;
@@ -499,6 +536,19 @@ img {
   justify-content: flex-start;
   margin-top: auto;
   margin-bottom: 0;
+}
+
+.counselling-forensic-psychology-page .highlights-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px 8px 0 0;
+  object-fit: contain;
+  align-self: flex-end;
+  margin-bottom: 0;
+  max-width: 100%;
+  transform: scale(1.6) translateX(-10%);
+  transform-origin: bottom left;
 }
 
 .highlights-image img {

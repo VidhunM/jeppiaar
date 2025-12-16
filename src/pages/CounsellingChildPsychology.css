@@ -29,10 +29,7 @@ img {
   user-select: none;
 }
 
-.counselling-child-psychology-page,
-.counselling-organizational-psychology-page,
-.counselling-forensic-psychology-page,
-.counselling-art-therapy-page {
+.counselling-child-psychology-page {
   padding-top: 80px;
   -webkit-overflow-scrolling: touch;
   overflow-x: hidden;
@@ -321,6 +318,21 @@ img {
   padding-bottom: 0;
 }
 
+.counselling-child-psychology-page .highlights-section {
+  padding: 0.5rem 0 0 0;
+}
+
+.counselling-child-psychology-page .highlights-section .highlights-image {
+  width: 100%;
+  max-width: 90%;
+  align-self: flex-end;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  margin-top: -4rem;
+  margin-bottom: 0;
+}
+
 .highlights-section .highlights-image {
   width: 100%;
   max-width: 70%;
@@ -330,6 +342,19 @@ img {
   justify-content: flex-start;
   margin-top: auto;
   margin-bottom: 0;
+}
+
+.counselling-child-psychology-page .highlights-section .highlights-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px 8px 0 0;
+  object-fit: contain;
+  align-self: flex-end;
+  margin-bottom: 0;
+  max-width: 100%;
+  transform: scale(1.1);
+  transform-origin: bottom left;
 }
 
 .highlights-section .highlights-image img {
@@ -493,6 +518,17 @@ img {
   padding-bottom: 0;
 }
 
+.counselling-child-psychology-page .highlights-image {
+  width: 100%;
+  max-width: 90%;
+  align-self: flex-end;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  margin-top: -4rem;
+  margin-bottom: 0;
+}
+
 .highlights-image {
   width: 100%;
   max-width: 70%;
@@ -502,6 +538,19 @@ img {
   justify-content: flex-start;
   margin-top: auto;
   margin-bottom: 0;
+}
+
+.counselling-child-psychology-page .highlights-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px 8px 0 0;
+  object-fit: contain;
+  align-self: flex-end;
+  margin-bottom: 0;
+  max-width: 100%;
+  transform: scale(1.1);
+  transform-origin: bottom left;
 }
 
 .highlights-image img {
@@ -1603,19 +1652,13 @@ img {
 }
 
 /* Lead Generation Section Override for this page */
-.counselling-child-psychology-page .lead-generation-section,
-.counselling-organizational-psychology-page .lead-generation-section,
-.counselling-forensic-psychology-page .lead-generation-section,
-.counselling-art-therapy-page .lead-generation-section {
+.counselling-child-psychology-page .lead-generation-section {
   background: #1A1260;
 }
 
 /* Responsive Design */
 @media (max-width: 968px) {
-  .counselling-child-psychology-page,
-  .counselling-organizational-psychology-page,
-  .counselling-forensic-psychology-page,
-  .counselling-art-therapy-page {
+  .counselling-child-psychology-page {
     padding-top: 70px;
     -webkit-overflow-scrolling: touch;
   }
@@ -1913,10 +1956,7 @@ img {
 }
 
 @media (max-width: 480px) {
-  .counselling-child-psychology-page,
-  .counselling-organizational-psychology-page,
-  .counselling-forensic-psychology-page,
-  .counselling-art-therapy-page {
+  .counselling-child-psychology-page {
     padding-top: 60px;
     -webkit-overflow-scrolling: touch;
   }
@@ -2172,10 +2212,7 @@ img {
 
 @media (max-width: 375px) {
   /* iPhone SE, iPhone 8, and similar Android devices */
-  .counselling-child-psychology-page,
-  .counselling-organizational-psychology-page,
-  .counselling-forensic-psychology-page,
-  .counselling-art-therapy-page {
+  .counselling-child-psychology-page {
     padding-top: 55px;
   }
 
@@ -2608,10 +2645,7 @@ img {
 
 /* iOS Specific Fixes */
 @supports (-webkit-touch-callout: none) {
-  .counselling-child-psychology-page,
-  .counselling-organizational-psychology-page,
-  .counselling-forensic-psychology-page,
-  .counselling-art-therapy-page {
+  .counselling-child-psychology-page {
     -webkit-overflow-scrolling: touch;
   }
 
@@ -2636,10 +2670,7 @@ img {
 
 /* Firefox Specific Fixes */
 @-moz-document url-prefix() {
-  .counselling-child-psychology-page,
-  .counselling-organizational-psychology-page,
-  .counselling-forensic-psychology-page,
-  .counselling-art-therapy-page {
+  .counselling-child-psychology-page {
     scroll-behavior: smooth;
   }
   

@@ -5,6 +5,7 @@ import ApplyModal from '../components/ApplyModal/ApplyModal';
 import image2 from '../assets/images/image2.png';
 import cc1Image from '../assets/images/cc1.png';
 import cc2Image from '../assets/images/cc2.png';
+import cc201Image from '../assets/images/cc201.png';
 import cop1Image from '../assets/images/cop1.jpeg';
 import cop2Image from '../assets/images/cop2.jpeg';
 import cop3Image from '../assets/images/cop3.jpeg';
@@ -161,7 +162,7 @@ const CounsellingOrganizationalPsychology = () => {
         <div className="container">
           <div className="highlights-content">
             <div className="highlights-image">
-              <img src={cc2Image} alt="Organizational Psychology" />
+              <img src={cc201Image} alt="Organizational Psychology" />
             </div>
             <div className="highlights-text">
               <p className="highlights-subtitle">Unlock your potential as a skilled organizational counsellor</p>

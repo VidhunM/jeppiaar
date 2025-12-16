@@ -305,12 +305,16 @@ img {
   overflow: visible;
 }
 
-.highlights-section .highlights-content {
+.counselling-art-therapy-page .highlights-section .highlights-content {
   display: grid;
-  grid-template-columns: 37% 60%;
+  grid-template-columns: 50% 50%;
   gap: 3rem;
   align-items: end;
   min-height: 100%;
+  padding-bottom: 0;
+}
+
+.counselling-art-therapy-page .highlights-section .container {
   padding-bottom: 0;
 }
 
@@ -318,15 +322,29 @@ img {
   padding-bottom: 0;
 }
 
-.highlights-section .highlights-image {
+.counselling-art-therapy-page .highlights-section .highlights-image {
   width: 100%;
-  max-width: 70%;
+  max-width: 100%;
   align-self: flex-end;
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
   margin-top: auto;
   margin-bottom: 0;
+  flex: 1;
+}
+
+.counselling-art-therapy-page .highlights-section .highlights-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px 8px 0 0;
+  object-fit: contain;
+  align-self: flex-end;
+  margin-bottom: 0;
+  max-width: 100%;
+  transform: scale(1.1) translateX(-3%);
+  transform-origin: bottom left;
 }
 
 .highlights-section .highlights-image img {
@@ -477,9 +495,9 @@ img {
   overflow: visible;
 }
 
-.highlights-content {
+.counselling-art-therapy-page .highlights-content {
   display: grid;
-  grid-template-columns: 37% 60%;
+  grid-template-columns: 35% 65%;
   gap: 3rem;
   align-items: end;
   min-height: 100%;
@@ -490,15 +508,29 @@ img {
   padding-bottom: 0;
 }
 
-.highlights-image {
+.counselling-art-therapy-page .highlights-image {
   width: 100%;
-  max-width: 70%;
+  max-width: 100%;
   align-self: flex-end;
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
   margin-top: auto;
   margin-bottom: 0;
+  flex: 1;
+}
+
+.counselling-art-therapy-page .highlights-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px 8px 0 0;
+  object-fit: contain;
+  align-self: flex-end;
+  margin-bottom: 0;
+  max-width: 100%;
+  transform: scale(1.1) translateX(-3%);
+  transform-origin: bottom left;
 }
 
 .highlights-image img {
@@ -2609,4 +2641,6 @@ img {
     display: flex;
   }
 }
+
+
 

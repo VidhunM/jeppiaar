@@ -5,6 +5,7 @@ import ApplyModal from '../components/ApplyModal/ApplyModal';
 import image2 from '../assets/images/image2.png';
 import cc1Image from '../assets/images/cc1.png';
 import cc2Image from '../assets/images/cc2.png';
+import cc202Image from '../assets/images/cc202.png';
 import cp1Image from '../assets/images/cp1.png';
 import cp2Image from '../assets/images/cp2.png';
 import cfp2Image from '../assets/images/cfp2.jpeg';
@@ -163,7 +164,7 @@ const CounsellingForensicPsychology = () => {
         <div className="container">
           <div className="highlights-content">
             <div className="highlights-image">
-              <img src={cc2Image} alt="Forensic Psychology" />
+              <img src={cc202Image} alt="Forensic Psychology" />
             </div>
             <div className="highlights-text">
               <p className="highlights-subtitle">Unlock your potential as a skilled forensic counsellor</p>
