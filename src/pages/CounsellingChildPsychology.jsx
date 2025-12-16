@@ -220,11 +220,11 @@ const CounsellingChildPsychology = () => {
           <h2 className="section-title">LEARNING OUTCOMES</h2>
           <div className="outcomes-box">
             <ul className="outcomes-list">
-              <li>Gain practical counselling skills for children and adolescents</li>
-              <li>Learn to assess and support children's emotional and behavioral needs</li>
-              <li>Practice ethical and child-centered counselling approaches</li>
-              <li>Apply learning through hands-on training and real-world experience</li>
-              <li>Promote children's mental health and overall wellbeing</li>
+              <li>Gain practical counselling skills for children and adolescents by developing age-appropriate communication techniques and intervention strategies.</li>
+              <li>Learn to assess and support emotional and behavioural needs using structured observation, basic assessments, and case understanding.</li>
+              <li>Practice ethical, child-centred counselling approaches that prioritise safety, confidentiality, and the child's best interests.</li>
+              <li>Apply learning through hands-on training and real-world experience with supervised practice, activities, and case-based learning.</li>
+              <li>Promote children's mental health and overall wellbeing by fostering resilience, emotional regulation, and healthy coping skills</li>
             </ul>
           </div>
         </div>
@@ -363,6 +363,16 @@ const CounsellingChildPsychology = () => {
               </span>
               <span className="skill-text">
                 <strong>Problem Solving & Intervention</strong> – Develop practical solutions and therapeutic plans for children's challenges
+              </span>
+            </li>
+            <li>
+              <span className="skill-checkmark">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="white"/>
+                </svg>
+              </span>
+              <span className="skill-text">
+                <strong>Building Trust & Emotional Safety</strong> – Create a safe, supportive environment that encourages expression, growth, and healing.
               </span>
             </li>
           </ul>
