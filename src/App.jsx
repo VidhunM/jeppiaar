@@ -4,6 +4,7 @@ import { AppProvider } from './context/AppContext';
 import ErrorBoundary from './components/ErrorBoundary';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import WhatsAppButton from './components/WhatsAppButton/WhatsAppButton';
 import Home from './pages/Home';
 import About from './pages/About';
 import Courses from './pages/Courses';
@@ -57,6 +58,7 @@ function App() {
               </Routes>
             </main>
             <Footer />
+            <WhatsAppButton />
           </div>
         </Router>
       </AppProvider>

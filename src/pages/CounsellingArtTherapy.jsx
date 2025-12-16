@@ -4,6 +4,7 @@ import LeadGeneration from '../components/LeadGeneration/LeadGeneration';
 import ApplyModal from '../components/ApplyModal/ApplyModal';
 import image2 from '../assets/images/image2.png';
 import cc1Image from '../assets/images/cc1.png';
+import a1Image from '../assets/images/a1.jpeg';
 import cc2Image from '../assets/images/cc2.png';
 import cc203Image from '../assets/images/cc203.png';
 import cp1Image from '../assets/images/cp1.png';
@@ -155,7 +156,7 @@ const CounsellingArtTherapy = () => {
               <button className="enroll-now-btn" onClick={openApplyModal}>Enroll Now</button>
             </div>
             <div className="overview-image">
-              <img src={cc1Image} alt="Art therapy session" />
+              <img src={a1Image} alt="Art therapy session" />
             </div>
           </div>
         </div>

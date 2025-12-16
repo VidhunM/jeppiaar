@@ -4,6 +4,7 @@ import LeadGeneration from '../components/LeadGeneration/LeadGeneration';
 import ApplyModal from '../components/ApplyModal/ApplyModal';
 import image2 from '../assets/images/image2.png';
 import cc1Image from '../assets/images/cc1.png';
+import f1Image from '../assets/images/f1.jpeg';
 import cc2Image from '../assets/images/cc2.png';
 import cc202Image from '../assets/images/cc202.png';
 import cp1Image from '../assets/images/cp1.png';
@@ -153,7 +154,7 @@ const CounsellingForensicPsychology = () => {
               <button className="enroll-now-btn" onClick={openApplyModal}>Enroll Now</button>
             </div>
             <div className="overview-image">
-              <img src={cc1Image} alt="Forensic counselling session" />
+              <img src={f1Image} alt="Forensic counselling session" />
             </div>
           </div>
         </div>

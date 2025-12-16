@@ -4,6 +4,7 @@ import LeadGeneration from '../components/LeadGeneration/LeadGeneration';
 import ApplyModal from '../components/ApplyModal/ApplyModal';
 import image2 from '../assets/images/image2.png';
 import cc1Image from '../assets/images/cc1.png';
+import o1Image from '../assets/images/o1.jpeg';
 import cc2Image from '../assets/images/cc2.png';
 import cc201Image from '../assets/images/cc201.png';
 import cop1Image from '../assets/images/cop1.jpeg';
@@ -151,7 +152,7 @@ const CounsellingOrganizationalPsychology = () => {
               <button className="enroll-now-btn" onClick={openApplyModal}>Enroll Now</button>
             </div>
             <div className="overview-image">
-              <img src={cc1Image} alt="Organizational counselling session" />
+              <img src={o1Image} alt="Organizational counselling session" />
             </div>
           </div>
         </div>
