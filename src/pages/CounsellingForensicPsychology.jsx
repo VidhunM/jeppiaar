@@ -415,7 +415,7 @@ const CounsellingForensicPsychology = () => {
               </div>
               <p>Advanced Diploma in Counselling and Organizational Psychology</p>
             </Link>
-            <Link to="/courses" className="program-card">
+            <Link to="/counselling-art-therapy" className="program-card">
               <div className="program-icon-wrapper">
                 <img src={cc3Icon} alt="Art Therapy" className="program-icon" />
               </div>

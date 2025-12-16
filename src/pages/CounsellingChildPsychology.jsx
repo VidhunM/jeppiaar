@@ -405,19 +405,19 @@ include
         <div className="container">
           <h2 className="section-title">OTHER ADVANCED DIPLOMA PROGRAMS</h2>
           <div className="programs-grid">
-            <Link to="/courses" className="program-card">
+            <Link to="/counselling-organizational-psychology" className="program-card">
               <div className="program-icon-wrapper">
                 <img src={cc1Icon} alt="Organizational Psychology" className="program-icon" />
               </div>
               <p>Advanced Diploma in Counselling and Organizational Psychology</p>
             </Link>
-            <Link to="/courses" className="program-card">
+            <Link to="/counselling-forensic-psychology" className="program-card">
               <div className="program-icon-wrapper">
                 <img src={cc2Icon} alt="Forensic Psychology" className="program-icon" />
               </div>
               <p>Advanced Diploma in Counselling and Forensic Psychology</p>
             </Link>
-            <Link to="/courses" className="program-card">
+            <Link to="/counselling-art-therapy" className="program-card">
               <div className="program-icon-wrapper">
                 <img src={cc3Icon} alt="Art Therapy" className="program-icon" />
               </div>
