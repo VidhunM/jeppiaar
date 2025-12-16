@@ -1131,8 +1131,8 @@ img {
 .skills-list {
   list-style: none;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 0.875rem;
   max-width: 1200px;
   padding: 0 1.75rem 0 1.5rem;
@@ -1152,15 +1152,6 @@ img {
   box-sizing: border-box;
 }
 
-.skills-list li:first-child,
-.skills-list li:nth-child(2),
-.skills-list li:nth-child(3),
-.skills-list li:nth-child(4),
-.skills-list li:nth-child(5) {
-  width: auto;
-  max-width: 85%;
-  align-self: flex-start;
-}
 
 .skills-list li:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -1751,6 +1742,7 @@ img {
   }
 
   .skills-list {
+    grid-template-columns: 1fr;
     gap: 0.875rem;
   }
 
@@ -1758,14 +1750,6 @@ img {
     padding: 1.125rem 1.375rem;
     gap: 1rem;
     border-radius: 22px;
-  }
-
-  .skills-list li:first-child,
-  .skills-list li:nth-child(2),
-  .skills-list li:nth-child(3),
-  .skills-list li:nth-child(4),
-  .skills-list li:nth-child(5) {
-    max-width: 80%;
   }
 
   .skill-checkmark {
@@ -2038,6 +2022,7 @@ img {
   }
 
   .skills-list {
+    grid-template-columns: 1fr;
     gap: 0.875rem;
   }
 
@@ -2045,14 +2030,6 @@ img {
     padding: 1.125rem 1.375rem;
     gap: 0.875rem;
     border-radius: 20px;
-  }
-
-  .skills-list li:first-child,
-  .skills-list li:nth-child(2),
-  .skills-list li:nth-child(3),
-  .skills-list li:nth-child(4),
-  .skills-list li:nth-child(5) {
-    max-width: 90%;
   }
 
   .skill-checkmark {

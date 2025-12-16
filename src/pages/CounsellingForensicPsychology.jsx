@@ -10,6 +10,7 @@ import cp2Image from '../assets/images/cp2.png';
 import cfp2Image from '../assets/images/cfp2.jpeg';
 import cfp3Image from '../assets/images/cfp3.jpeg';
 import cfp4Image from '../assets/images/cfp4.jpeg';
+import cfp5Image from '../assets/images/cfp5.jpeg';
 import cc1Icon from '../assets/icons/cc1.png';
 import cc2Icon from '../assets/icons/cc02.png';
 import cc3Icon from '../assets/icons/cc3.png';
@@ -80,12 +81,10 @@ const CounsellingForensicPsychology = () => {
   };
 
   const careers = [
-    { title: 'Forensic Counsellor', image: cp1Image },
     { title: 'Criminal Profiler', image: cfp2Image },
     { title: 'Correctional Counsellor', image: cfp3Image },
     { title: 'Court Consultant / Expert Witness', image: cfp4Image },
-    { title: 'Victim Support Counsellor', image: cp1Image },
-    { title: 'Rehabilitation & Reintegration Specialist', image: cp2Image }
+    { title: 'Victim Support Counsellor', image: cfp5Image }
   ];
 
   useEffect(() => {
@@ -378,24 +377,8 @@ const CounsellingForensicPsychology = () => {
             With a Forensic Psychology specialization, this course builds a strong foundation in criminal psychology and prepares you for impactful careers in forensic and legal settings. Potential career paths include
           </p>
           <div className="career-carousel-wrapper">
-            <button 
-              className="career-carousel-btn prev" 
-              onClick={prevCareer}
-              aria-label="Previous career"
-              disabled={currentCareerIndex === 0}
-            >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15 19L8 12L15 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M8 12H20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-              </svg>
-            </button>
             <div className="career-carousel-container">
-              <div 
-                className="career-cards-slider"
-                style={{ 
-                  transform: `translateX(calc(-${currentCareerIndex} * (100% / ${cardsToShow})))` 
-                }}
-              >
+              <div className="career-cards-slider">
                 {careers.map((career, index) => (
                   <div 
                     key={index} 
@@ -411,27 +394,6 @@ const CounsellingForensicPsychology = () => {
                 ))}
               </div>
             </div>
-            <button 
-              className="career-carousel-btn next" 
-              onClick={nextCareer}
-              aria-label="Next career"
-              disabled={currentCareerIndex >= maxIndex}
-            >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 5L16 12L9 19" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M16 12H4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-              </svg>
-            </button>
-          </div>
-          <div className="career-carousel-dots">
-            {careers.map((_, index) => (
-              <button
-                key={index}
-                className={`carousel-dot ${currentCareerIndex === index ? 'active' : ''}`}
-                onClick={() => setCurrentCareerIndex(index)}
-                aria-label={`Go to career ${index + 1}`}
-              />
-            ))}
           </div>
         </div>
       </section>

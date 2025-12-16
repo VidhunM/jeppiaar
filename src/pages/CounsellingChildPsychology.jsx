@@ -379,24 +379,8 @@ prepares <br /> you for impactful careers in child and adolescent mental health.
 include
           </p>
           <div className="career-carousel-wrapper">
-            <button 
-              className="career-carousel-btn prev" 
-              onClick={prevCareer}
-              aria-label="Previous career"
-              disabled={currentCareerIndex === 0}
-            >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15 19L8 12L15 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M8 12H20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-              </svg>
-            </button>
             <div className="career-carousel-container">
-              <div 
-                className="career-cards-slider"
-                style={{ 
-                  transform: `translateX(calc(-${currentCareerIndex} * (100% / ${cardsToShow})))` 
-                }}
-              >
+              <div className="career-cards-slider">
                 {careers.map((career, index) => (
                   <div 
                     key={index} 
@@ -412,27 +396,6 @@ include
                 ))}
               </div>
             </div>
-            <button 
-              className="career-carousel-btn next" 
-              onClick={nextCareer}
-              aria-label="Next career"
-              disabled={currentCareerIndex >= maxIndex}
-            >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 5L16 12L9 19" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M16 12H4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-              </svg>
-            </button>
-          </div>
-          <div className="career-carousel-dots">
-            {careers.map((_, index) => (
-              <button
-                key={index}
-                className={`carousel-dot ${currentCareerIndex === index ? 'active' : ''}`}
-                onClick={() => setCurrentCareerIndex(index)}
-                aria-label={`Go to career ${index + 1}`}
-              />
-            ))}
           </div>
         </div>
       </section>

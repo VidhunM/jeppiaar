@@ -195,6 +195,40 @@ She has been instrumental in developing the academy's curriculum, establishing q
         </div>
       </section>
 
+      {/* Meet Our Team Section */}
+      <section className="meet-our-team-section">
+        <div className="container">
+          <h2 className="team-section-title scroll-from-center">MEET OUR TEAM</h2>
+          <p className="team-section-subtitle scroll-from-center">
+            Distinguished experts guiding our strategic direction and academic excellence.
+          </p>
+          <div className="team-members-grid">
+            {teamMembers.map((member, index) => (
+              <div 
+                key={index} 
+                className={`team-member-card scroll-from-${index % 2 === 0 ? 'left' : 'right'}`}
+                onClick={() => setSelectedMember(member)}
+              >
+                <div className="team-member-image">
+                  <img 
+                    src={member.image} 
+                    alt={member.name}
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="300" height="300"%3E%3Crect fill="%23e0e0e0" width="300" height="300"/%3E%3Ctext fill="%23999" font-family="sans-serif" font-size="16" x="50%25" y="50%25" text-anchor="middle" dy=".3em"%3EPhoto Coming Soon%3C/text%3E%3C/svg%3E';
+                    }}
+                  />
+                </div>
+                <div className="team-member-info">
+                  <h4 className="team-member-name">{member.name}</h4>
+                  <p className="team-member-role">{member.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Core Values Section */}
       <section className="core-values-section">
         <div className="container">
@@ -255,40 +289,6 @@ She has been instrumental in developing the academy's curriculum, establishing q
                 </div>
               ))
             )}
-          </div>
-        </div>
-      </section>
-
-      {/* Meet Our Team Section */}
-      <section className="meet-our-team-section">
-        <div className="container">
-          <h2 className="team-section-title scroll-from-center">MEET OUR TEAM</h2>
-          <p className="team-section-subtitle scroll-from-center">
-            Distinguished experts guiding our strategic direction and academic excellence.
-          </p>
-          <div className="team-members-grid">
-            {teamMembers.map((member, index) => (
-              <div 
-                key={index} 
-                className={`team-member-card scroll-from-${index % 2 === 0 ? 'left' : 'right'}`}
-                onClick={() => setSelectedMember(member)}
-              >
-                <div className="team-member-image">
-                  <img 
-                    src={member.image} 
-                    alt={member.name}
-                    onError={(e) => {
-                      e.target.onerror = null;
-                      e.target.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="300" height="300"%3E%3Crect fill="%23e0e0e0" width="300" height="300"/%3E%3Ctext fill="%23999" font-family="sans-serif" font-size="16" x="50%25" y="50%25" text-anchor="middle" dy=".3em"%3EPhoto Coming Soon%3C/text%3E%3C/svg%3E';
-                    }}
-                  />
-                </div>
-                <div className="team-member-info">
-                  <h4 className="team-member-name">{member.name}</h4>
-                  <p className="team-member-role">{member.role}</p>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>

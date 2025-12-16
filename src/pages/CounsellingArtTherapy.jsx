@@ -9,6 +9,10 @@ import cp1Image from '../assets/images/cp1.png';
 import cp2Image from '../assets/images/cp2.png';
 import cp3Image from '../assets/images/cp4.png';
 import cp4Image from '../assets/images/cp4.jpg';
+import at1Image from '../assets/images/at1.jpeg';
+import at2Image from '../assets/images/at2.jpeg';
+import at3Image from '../assets/images/at3.jpeg';
+import at4Image from '../assets/images/at4.jpeg';
 import cc1Icon from '../assets/icons/cc1.png';
 import cc2Icon from '../assets/icons/cc02.png';
 import cc3Icon from '../assets/icons/cc3.png';
@@ -79,11 +83,10 @@ const CounsellingArtTherapy = () => {
   };
 
   const careers = [
-    { title: 'Art Therapist', image: cp1Image },
-    { title: 'Community & NGO Practitioner', image: cp2Image },
-    { title: 'Child & School Art Therapist', image: cp3Image },
-    { title: 'Rehabilitation & Wellness Specialist', image: cp4Image },
-    { title: 'Researcher / Educator in Art Therapy', image: cp1Image }
+    { title: 'Community & NGO Practitioner', image: at1Image },
+    { title: 'Child & School Art Therapist', image: at2Image },
+    { title: 'Rehabilitation & Wellness Specialist', image: at3Image },
+    { title: 'Researcher / Educator in Art Therapy', image: at4Image }
   ];
 
   useEffect(() => {
@@ -374,24 +377,8 @@ const CounsellingArtTherapy = () => {
             With an Art Therapy specialization, this course builds a strong foundation in creative therapeutic practices and prepares you for impactful careers in mental health and wellness. Potential career paths include
           </p>
           <div className="career-carousel-wrapper">
-            <button 
-              className="career-carousel-btn prev" 
-              onClick={prevCareer}
-              aria-label="Previous career"
-              disabled={currentCareerIndex === 0}
-            >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15 19L8 12L15 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M8 12H20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-              </svg>
-            </button>
             <div className="career-carousel-container">
-              <div 
-                className="career-cards-slider"
-                style={{ 
-                  transform: `translateX(calc(-${currentCareerIndex} * (100% / ${cardsToShow})))` 
-                }}
-              >
+              <div className="career-cards-slider">
                 {careers.map((career, index) => (
                   <div 
                     key={index} 
@@ -407,27 +394,6 @@ const CounsellingArtTherapy = () => {
                 ))}
               </div>
             </div>
-            <button 
-              className="career-carousel-btn next" 
-              onClick={nextCareer}
-              aria-label="Next career"
-              disabled={currentCareerIndex >= maxIndex}
-            >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 5L16 12L9 19" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M16 12H4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-              </svg>
-            </button>
-          </div>
-          <div className="career-carousel-dots">
-            {careers.map((_, index) => (
-              <button
-                key={index}
-                className={`carousel-dot ${currentCareerIndex === index ? 'active' : ''}`}
-                onClick={() => setCurrentCareerIndex(index)}
-                aria-label={`Go to career ${index + 1}`}
-              />
-            ))}
           </div>
         </div>
       </section>
