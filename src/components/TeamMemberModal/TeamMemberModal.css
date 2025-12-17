@@ -106,14 +106,19 @@
 
 .team-modal-description {
   font-size: 1rem;
-  line-height: 1.8;
+  line-height: 2;
   color: #333;
   text-align: justify;
 }
 
 .team-modal-description p {
-  margin: 0;
+  margin: 0 0 1.5rem 0;
   white-space: pre-line;
+  min-height: 1.8em;
+}
+
+.team-modal-description p:last-child {
+  margin-bottom: 0;
 }
 
 @keyframes slideUp {

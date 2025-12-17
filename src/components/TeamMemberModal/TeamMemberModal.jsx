@@ -27,7 +27,9 @@ const TeamMemberModal = ({ isOpen, onClose, member }) => {
         </div>
 
         <div className="team-modal-description">
-          <p>{member.description}</p>
+          {member.description.split('\n\n').map((paragraph, index) => (
+            <p key={index}>{paragraph.trim()}</p>
+          ))}
         </div>
       </div>
     </div>
