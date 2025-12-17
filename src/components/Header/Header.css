@@ -554,3 +554,121 @@
   }
 }
 
+/* ============================================
+   MAC RESPONSIVE - HEADER
+   ============================================ */
+
+/* MacBook Air 13" and larger */
+@media screen and (min-width: 1440px) {
+  .header-container {
+    padding: 1.25rem 3rem;
+  }
+
+  .logo {
+    width: 130px;
+    height: 130px;
+    min-width: 130px;
+    min-height: 130px;
+  }
+
+  .logo img {
+    max-width: 130px;
+    max-height: 130px;
+  }
+
+  .nav a {
+    font-size: 1.1rem;
+  }
+
+  .cta-button {
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+/* MacBook Pro 16" / iMac */
+@media screen and (min-width: 1920px) {
+  .header-container {
+    padding: 1.5rem 4rem;
+  }
+
+  .logo {
+    width: 140px;
+    height: 140px;
+    min-width: 140px;
+    min-height: 140px;
+  }
+
+  .logo img {
+    max-width: 140px;
+    max-height: 140px;
+  }
+}
+
+/* ============================================
+   IPHONE RESPONSIVE - HEADER
+   ============================================ */
+
+/* iPhone SE */
+@media screen and (max-width: 375px) and (max-height: 667px) {
+  .header-container {
+    padding: 0.5rem 0.875rem;
+  }
+
+  .logo {
+    width: 55px;
+    height: 55px;
+    min-width: 55px;
+    min-height: 55px;
+  }
+
+  .logo img {
+    max-width: 55px;
+    max-height: 55px;
+  }
+
+  .mobile-menu-toggle span {
+    width: 20px;
+    height: 2px;
+  }
+}
+
+/* iPhone X and newer (with notch) */
+@supports (padding: max(0px)) {
+  @media screen and (max-width: 480px) {
+    .header {
+      padding-top: max(0.5rem, env(safe-area-inset-top));
+    }
+
+    .header-container {
+      padding-left: max(1rem, env(safe-area-inset-left));
+      padding-right: max(1rem, env(safe-area-inset-right));
+    }
+  }
+}
+
+/* iPhone Landscape */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .header-container {
+    padding: 0.5rem 1rem;
+  }
+
+  .logo {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    min-height: 60px;
+  }
+
+  .logo img {
+    max-width: 60px;
+    max-height: 60px;
+  }
+
+  .nav {
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+

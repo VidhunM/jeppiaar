@@ -92,7 +92,7 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection, onOpenA
         className={`hero-slide ${currentSlide === 0 ? 'hero-slide-first' : ''} ${currentSlide === 3 ? 'hero-slide-fourth' : ''} ${imagesLoaded ? 'images-loaded' : ''}`}
         style={{ backgroundImage: `url(${slides[currentSlide].image})` }}
       >
-        {currentSlide === 0 && <div className="hero-gradient-overlay"></div>}
+        <div className="hero-gradient-overlay-bottom"></div>
         <button className="hero-nav prev" onClick={prevSlide} aria-label="Previous slide">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M15 19L8 12L15 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -151,10 +151,10 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection, onOpenA
 
         {currentSlide === 1 && (
           <>
-            <div className="hero-rated-badge">
+            <div className="hero-rated-badge hero-rated-badge-bottom">
               <div className="rated-text">STUDENT RATED</div>
             </div>
-            <div className="hero-rated-stars">
+            <div className="hero-rated-stars hero-rated-stars-bottom">
               <span className="star">★</span>
               <span className="star">★</span>
               <span className="star">★</span>
@@ -166,7 +166,7 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection, onOpenA
 
         {currentSlide === 2 && (
           <>
-            <div className="hero-feature-badge">
+            <div className="hero-feature-badge hero-feature-badge-bottom">
               <div className="feature-text">AC CLASSROOMS</div>
               <div className="feature-text">WITH SMART BOARD</div>
             </div>
@@ -175,7 +175,7 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection, onOpenA
 
         {currentSlide === 3 && (
           <>
-            <div className="hero-feature-badge hero-feature-badge-fourth">
+            <div className="hero-feature-badge hero-feature-badge-fourth hero-feature-badge-bottom">
               <div className="feature-text feature-text-fourth">LEARN FROM</div>
               <div className="feature-text feature-text-fourth">LEADING PSYCHOLOGISTS</div>
             </div>
