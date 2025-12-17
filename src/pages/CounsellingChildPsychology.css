@@ -1726,11 +1726,16 @@ img {
     grid-template-columns: 1fr;
   }
 
+  .counselling-child-psychology-page .highlights-section .highlights-content {
+    gap: 0.6rem;
+  }
+
   .highlights-section .highlights-text {
     order: 1;
     text-align: center;
     align-items: center;
     padding-right: 0;
+    padding-bottom: 1rem;
   }
 
   .highlights-section .highlights-subtitle {
@@ -1806,7 +1811,7 @@ img {
 
   .highlights-section .download-brochure-btn {
     align-self: center;
-    margin: 0 auto;
+    margin: 0.35rem auto 0.18rem;
   }
 
   .highlights-title {
@@ -1966,7 +1971,7 @@ img {
 
   .section-title,
   .section-title-white {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 
   .highlights-title {
@@ -1998,6 +2003,23 @@ img {
     margin-bottom: 1.5rem;
   }
 
+  .career-prospects {
+    --career-card-width: 230px;
+  }
+
+  .career-carousel-container {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    scroll-padding-inline: calc((100% - var(--career-card-width)) / 2);
+  }
+
+  .career-carousel-container::-webkit-scrollbar {
+    display: none;
+  }
+
   .career-carousel-btn {
     width: 40px;
     height: 40px;
@@ -2012,18 +2034,24 @@ img {
   }
 
   .career-cards-slider {
-    gap: 1.5rem;
+    gap: 1rem;
+    justify-content: flex-start;
+    padding: 0 calc((100% - var(--career-card-width)) / 2);
   }
 
   .career-card {
-    flex: 0 0 100%;
+    flex: 0 0 var(--career-card-width);
+    max-width: var(--career-card-width);
+    margin: 0;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
   }
 
   .career-overlay {
-    bottom: 1rem;
-    left: 1rem;
-    right: 1rem;
-    padding: 1rem 1.25rem;
+    bottom: 0.75rem;
+    left: 0.75rem;
+    right: 0.75rem;
+    padding: 0.8rem 0.9rem;
   }
 
   .career-title-overlay {
@@ -2119,6 +2147,14 @@ img {
 
   .career-carousel-wrapper {
     gap: 0.5rem;
+  }
+
+  .career-prospects {
+    --career-card-width: 210px;
+  }
+
+  .career-prospects .section-title-white {
+    font-size: 1.6rem;
   }
 
   .career-carousel-btn {
@@ -2242,9 +2278,14 @@ img {
 
   .highlights-section .highlights-text {
     padding-right: 0;
+    padding-bottom: 0.25rem;
     order: 1;
     text-align: center;
     align-items: center;
+  }
+
+  .counselling-child-psychology-page .highlights-section .highlights-content {
+    gap: 1rem;
   }
 
   .highlights-section .highlights-subtitle {
@@ -2320,7 +2361,7 @@ img {
 
   .highlights-section .download-brochure-btn {
     align-self: center;
-    margin: 0 auto;
+    margin: 0.18rem auto 0.12rem;
   }
 
   .batch-box {
@@ -2439,10 +2480,14 @@ img {
 
   .highlights-section .highlights-text {
     padding-right: 0;
-    padding-bottom: 2rem;
+    padding-bottom: 0.25rem;
     order: 1;
     text-align: center;
     align-items: center;
+  }
+
+  .counselling-child-psychology-page .highlights-section .highlights-content {
+    gap: 0.9rem;
   }
 
   .highlights-section .highlights-subtitle {
@@ -2518,7 +2563,7 @@ img {
 
   .highlights-section .download-brochure-btn {
     align-self: center;
-    margin: 0 auto;
+    margin: 0.18rem auto 0.12rem;
   }
 
   .batch-box {
