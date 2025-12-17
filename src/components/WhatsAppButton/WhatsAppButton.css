@@ -6,28 +6,46 @@
   right: 20px;
   background-color: #25d366;
   color: #fff;
-  border-radius: 50px;
+  border-radius: 50%;
   text-align: center;
   font-size: 30px;
-  box-shadow: 2px 2px 3px #999;
-  z-index: 1000;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
   text-decoration: none;
+  /* Ensure it's always visible and clickable */
+  pointer-events: auto;
+  -webkit-tap-highlight-color: transparent;
+  /* Prevent text selection */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  /* Smooth rendering */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .whatsapp-float:hover {
   background-color: #20ba5a;
   transform: scale(1.1);
-  box-shadow: 2px 2px 8px #666;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.whatsapp-float:active {
+  transform: scale(0.95);
 }
 
 .whatsapp-icon {
   width: 35px;
   height: 35px;
   fill: #fff;
+  display: block;
+  flex-shrink: 0;
 }
 
 /* Animation for pulse effect */
@@ -48,31 +66,86 @@
 }
 
 /* Responsive design */
-@media (max-width: 768px) {
+@media (max-width: 968px) {
   .whatsapp-float {
-    width: 55px;
-    height: 55px;
-    bottom: 15px;
-    right: 15px;
+    width: 56px;
+    height: 56px;
+    bottom: 18px;
+    right: 18px;
+    z-index: 9999;
   }
 
   .whatsapp-icon {
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .whatsapp-float {
+    width: 56px;
+    height: 56px;
+    bottom: 20px;
+    right: 20px;
+    /* Safe area for iOS devices with home indicator */
+    bottom: max(20px, env(safe-area-inset-bottom, 20px));
+    right: max(20px, env(safe-area-inset-right, 20px));
+    z-index: 9999;
+  }
+
+  .whatsapp-icon {
+    width: 32px;
+    height: 32px;
   }
 }
 
 @media (max-width: 480px) {
   .whatsapp-float {
-    width: 50px;
-    height: 50px;
-    bottom: 10px;
-    right: 10px;
+    width: 56px;
+    height: 56px;
+    bottom: 20px;
+    right: 20px;
+    /* Safe area for iOS devices with home indicator */
+    bottom: max(20px, env(safe-area-inset-bottom, 20px));
+    right: max(20px, env(safe-area-inset-right, 20px));
+    z-index: 9999;
+    /* Ensure minimum touch target size */
+    min-width: 56px;
+    min-height: 56px;
   }
 
   .whatsapp-icon {
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* iOS Safari specific fixes */
+@supports (-webkit-touch-callout: none) {
+  .whatsapp-float {
+    /* Better positioning on iOS */
+    position: fixed;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    /* Safe area support for notched iPhones */
+    bottom: max(20px, env(safe-area-inset-bottom, 20px));
+    right: max(20px, env(safe-area-inset-right, 20px));
+    /* Prevent iOS Safari from moving the button */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+}
+
+/* Ensure button is always on top and visible */
+@media (max-width: 768px) {
+  .whatsapp-float {
+    /* Higher z-index to ensure visibility */
+    z-index: 99999 !important;
+    /* Ensure it's not hidden by other elements */
+    position: fixed !important;
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
 }
 

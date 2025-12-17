@@ -237,7 +237,7 @@ She has been instrumental in developing the academy's curriculum, establishing q
           <div className={`core-values-grid ${isMobile ? 'core-values-slider' : ''}`}>
             {isMobile ? (
               <>
-                <div className="core-values-slider-wrapper" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+                <div className="core-values-slider-wrapper" style={{ transform: `translateX(calc(-${currentSlide * 100}% - ${currentSlide * 1.5}rem))` }}>
                   {coreValues.map((value, index) => (
                     <div key={index} className="core-value-card core-value-slide">
                       <div className="value-icon-container">

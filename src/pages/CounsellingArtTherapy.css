@@ -1694,9 +1694,87 @@ img {
     grid-template-columns: 1fr;
   }
 
-  .batch-boxes {
+  .highlights-section .highlights-text {
+    order: 1;
+    text-align: center;
+    align-items: center;
+    padding-right: 0;
+  }
+
+  .highlights-section .highlights-subtitle {
+    text-align: center;
+  }
+
+  .highlights-section .highlights-title {
+    text-align: center;
+  }
+
+  .highlights-section .highlights-image {
+    order: 2;
+  }
+
+  .batch-boxes,
+  .highlights-section .batch-boxes {
+    display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: auto;
     gap: 1rem;
+    width: 100%;
+    justify-items: center;
+  }
+
+  .batch-box {
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .batch-box h3 {
+    text-align: left;
+    font-size: 0.9rem;
+    padding-left: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .batch-details {
+    text-align: left;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  .batch-details li {
+    font-size: 0.8rem;
+    text-align: left;
+    position: relative;
+    padding-left: 1.2rem;
+    display: inline-block;
+    width: auto;
+    max-width: 100%;
+  }
+
+  .batch-details li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: white;
+    font-size: 1rem;
+    line-height: inherit;
+  }
+
+  .batch-icon {
+    position: static;
+    margin: 0 0 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .highlights-section .download-brochure-btn {
+    align-self: center;
+    margin: 0 auto;
   }
 
   .highlights-title {
@@ -1816,36 +1894,37 @@ img {
 
   .overview-section .overview-content,
   .overview-content {
-    justify-items: center;
-    text-align: center;
+    justify-items: start;
+    text-align: left;
     padding: 0 1rem;
   }
 
   .overview-section .overview-text {
-    text-align: center;
+    text-align: left;
     padding-right: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .overview-section .overview-title {
-    text-align: center;
+    text-align: left;
   }
 
   .overview-section .overview-text p {
-    text-align: center;
+    text-align: left;
   }
 
   .overview-section .enroll-now-btn {
-    align-self: center;
-    margin: 0 auto;
+    align-self: flex-start;
+    margin: 0;
   }
 
   .overview-section .overview-image {
-    margin: 0 auto;
-    margin-right: auto;
-    margin-left: auto;
+    margin: 0;
+    margin-right: 0;
+    margin-left: 0;
+    justify-self: start;
   }
 
   .overview-title,
@@ -2097,39 +2176,119 @@ img {
   .overview-content {
     padding: 0 0.875rem 0 0.875rem;
     gap: 1.5rem;
-    justify-items: center;
-    text-align: center;
+    justify-items: start;
+    text-align: left;
   }
 
   .overview-section .overview-text {
     padding-right: 0;
-    text-align: center;
+    text-align: left;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .overview-section .overview-title {
-    text-align: center;
+    text-align: left;
   }
 
   .overview-section .overview-text p {
-    text-align: center;
+    text-align: left;
   }
 
   .overview-section .enroll-now-btn {
-    align-self: center;
-    margin: 0 auto;
+    align-self: flex-start;
+    margin: 0;
   }
 
   .overview-section .overview-image {
     width: 100%;
     margin-right: 0;
-    margin: 0 auto;
+    margin: 0;
+    justify-self: start;
   }
 
   .highlights-section .highlights-text {
-    padding-right: 0.875rem;
+    padding-right: 0;
+    order: 1;
+    text-align: center;
+    align-items: center;
+  }
+
+  .highlights-section .highlights-subtitle {
+    text-align: center;
+  }
+
+  .highlights-section .highlights-title {
+    text-align: center;
+  }
+
+  .highlights-section .highlights-image {
+    order: 2;
+  }
+
+  .batch-boxes,
+  .highlights-section .batch-boxes {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 1rem;
+    width: 100%;
+    justify-items: center;
+  }
+
+  .batch-box {
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .batch-box h3 {
+    text-align: left;
+    font-size: 0.9rem;
+    padding-left: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .batch-details {
+    text-align: left;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  .batch-details li {
+    font-size: 0.8rem;
+    text-align: left;
+    position: relative;
+    padding-left: 1.2rem;
+    display: inline-block;
+    width: auto;
+    max-width: 100%;
+  }
+
+  .batch-details li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: white;
+    font-size: 1rem;
+    line-height: inherit;
+  }
+
+  .batch-icon {
+    position: static;
+    margin: 0 0 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .highlights-section .download-brochure-btn {
+    align-self: center;
+    margin: 0 auto;
   }
 
   .batch-box {
@@ -2216,38 +2375,118 @@ img {
   .overview-section .overview-content,
   .overview-content {
     padding: 0 0.75rem 0 0.75rem;
-    justify-items: center;
-    text-align: center;
+    justify-items: start;
+    text-align: left;
   }
 
   .overview-section .overview-text {
-    text-align: center;
+    text-align: left;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .overview-section .overview-title {
-    text-align: center;
+    text-align: left;
   }
 
   .overview-section .overview-text p {
-    text-align: center;
+    text-align: left;
   }
 
   .overview-section .enroll-now-btn {
-    align-self: center;
-    margin: 0 auto;
+    align-self: flex-start;
+    margin: 0;
   }
 
   .overview-section .overview-image {
     max-width: 100%;
-    margin: 0 auto;
+    margin: 0;
+    justify-self: start;
   }
 
   .highlights-section .highlights-text {
-    padding-right: 0.75rem;
+    padding-right: 0;
     padding-bottom: 2rem;
+    order: 1;
+    text-align: center;
+    align-items: center;
+  }
+
+  .highlights-section .highlights-subtitle {
+    text-align: center;
+  }
+
+  .highlights-section .highlights-title {
+    text-align: center;
+  }
+
+  .highlights-section .highlights-image {
+    order: 2;
+  }
+
+  .batch-boxes,
+  .highlights-section .batch-boxes {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 1rem;
+    width: 100%;
+    justify-items: center;
+  }
+
+  .batch-box {
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .batch-box h3 {
+    text-align: left;
+    font-size: 0.9rem;
+    padding-left: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .batch-details {
+    text-align: left;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  .batch-details li {
+    font-size: 0.8rem;
+    text-align: left;
+    position: relative;
+    padding-left: 1.2rem;
+    display: inline-block;
+    width: auto;
+    max-width: 100%;
+  }
+
+  .batch-details li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: white;
+    font-size: 1rem;
+    line-height: inherit;
+  }
+
+  .batch-icon {
+    position: static;
+    margin: 0 0 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .highlights-section .download-brochure-btn {
+    align-self: center;
+    margin: 0 auto;
   }
 
   .batch-box {
@@ -2387,32 +2626,117 @@ img {
   .overview-section .overview-content,
   .overview-content {
     padding: 0 0.625rem 0 0.625rem;
-    justify-items: center;
-    text-align: center;
+    justify-items: start;
+    text-align: left;
   }
 
   .overview-section .overview-text {
-    text-align: center;
+    text-align: left;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .overview-section .overview-title {
-    text-align: center;
+    text-align: left;
   }
 
   .overview-section .overview-text p {
-    text-align: center;
+    text-align: left;
   }
 
   .overview-section .enroll-now-btn {
-    align-self: center;
-    margin: 0 auto;
+    align-self: flex-start;
+    margin: 0;
+  }
+
+  .overview-section .overview-image {
+    max-width: 100%;
+    margin: 0;
+    justify-self: start;
   }
 
   .highlights-section .highlights-text {
-    padding-right: 0.625rem;
+    padding-right: 0;
+    order: 1;
+    text-align: center;
+    align-items: center;
+  }
+
+  .highlights-section .highlights-subtitle {
+    text-align: center;
+  }
+
+  .highlights-section .highlights-title {
+    text-align: center;
+  }
+
+  .highlights-section .highlights-image {
+    order: 2;
+  }
+
+  .batch-boxes,
+  .highlights-section .batch-boxes {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 1rem;
+    width: 100%;
+    justify-items: center;
+  }
+
+  .batch-box {
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .batch-box h3 {
+    text-align: left;
+    font-size: 0.9rem;
+    padding-left: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .batch-details {
+    text-align: left;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  .batch-details li {
+    font-size: 0.8rem;
+    text-align: left;
+    position: relative;
+    padding-left: 1.2rem;
+    display: inline-block;
+    width: auto;
+    max-width: 100%;
+  }
+
+  .batch-details li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: white;
+    font-size: 1rem;
+    line-height: inherit;
+  }
+
+  .batch-icon {
+    position: static;
+    margin: 0 0 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .highlights-section .download-brochure-btn {
+    align-self: center;
+    margin: 0 auto;
   }
 
   .enroll-now-btn,

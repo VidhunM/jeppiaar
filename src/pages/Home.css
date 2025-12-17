@@ -417,25 +417,52 @@
 
   .collaboration-section {
     padding: 0.5rem 1.5rem 3rem 1.5rem;
-    margin-top: -18rem;
+    margin-top: -12rem;
   }
 
   .collaboration-section h2 {
-    font-size: 1.3rem !important;
+    font-size: 1.1rem !important;
     margin-top: 0.5rem;
+    line-height: 1.3;
   }
 
   .collaboration-text {
-    font-size: 1.6rem;
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
   }
 
   .university-name {
-    font-size: 1.3rem !important;
+    font-size: 1.1rem !important;
+    margin-bottom: 1rem;
+    line-height: 1.3;
   }
 
   .accreditation-text {
-    font-size: 1.6rem;
+    font-size: 0.85rem;
     padding: 0 1rem;
+    line-height: 1.5;
+  }
+
+  .accreditation-badges {
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .badge {
+    width: 100px;
+    height: 100px;
+    padding: 1rem;
+    font-size: 0.75rem;
+  }
+
+  .badge-bold {
+    font-size: 0.85rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .badge-regular {
+    font-size: 0.7rem;
+    line-height: 1.2;
   }
 
   .collaboration-decorative-left img,
@@ -480,28 +507,36 @@
 
 
   .faq-section {
-    padding: 1rem 1.5rem;
+    padding: 0.75rem 1.5rem;
   }
 
   .faq-content {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.25rem;
   }
 
   .faq-list .section-title {
-    font-size: 1.2rem !important;
-    margin-bottom: 2rem;
+    font-size: 0.95rem !important;
+    margin-bottom: 1.25rem;
+  }
+
+  .faq-question {
+    font-size: 0.85rem;
+  }
+
+  .faq-answer p {
+    font-size: 0.8rem;
   }
 
   .faq-image {
-    min-height: 300px;
+    min-height: 180px;
   }
 
   .faq-image img {
-    width: 80%;
-    height: 80%;
-    max-width: 450px;
-    max-height: 450px;
+    width: 65%;
+    height: 65%;
+    max-width: 250px;
+    max-height: 250px;
   }
 
   .banner-overlay {
@@ -537,25 +572,52 @@
 @media (max-width: 768px) {
   .collaboration-section {
     padding: 0.5rem 1rem 2.5rem 1rem;
-    margin-top: -20rem;
+    margin-top: -10rem;
   }
 
   .collaboration-section h2 {
-    font-size: 1.2rem !important;
+    font-size: 1rem !important;
     margin-top: 0.5rem;
+    line-height: 1.3;
   }
 
   .collaboration-text {
-    font-size: 1.2rem;
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
   }
 
   .university-name {
-    font-size: 1.3rem !important;
+    font-size: 1rem !important;
+    margin-bottom: 1rem;
+    line-height: 1.3;
   }
 
   .accreditation-text {
-    font-size: 1.3rem;
+    font-size: 0.8rem;
     white-space: normal;
+    line-height: 1.5;
+  }
+
+  .accreditation-badges {
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+  }
+
+  .badge {
+    width: 90px;
+    height: 90px;
+    padding: 0.75rem;
+    font-size: 0.7rem;
+  }
+
+  .badge-bold {
+    font-size: 0.8rem;
+    margin-bottom: 0.15rem;
+  }
+
+  .badge-regular {
+    font-size: 0.65rem;
+    line-height: 1.2;
   }
 
   .collaboration-decorative-left img,
@@ -629,48 +691,54 @@
 
   .collaboration-section {
     padding: 0.5rem 0.75rem 2rem 0.75rem;
-    margin-top: -22rem;
+    margin-top: -10rem;
   }
 
   .collaboration-section h2 {
-    font-size: 1.1rem !important;
+    font-size: 0.95rem !important;
     margin-top: 0.25rem;
+    line-height: 1.3;
   }
 
   .collaboration-text {
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     margin-bottom: 0.75rem;
   }
 
   .university-name {
-    font-size: 1.1rem !important;
+    font-size: 0.95rem !important;
     margin-bottom: 1rem;
+    line-height: 1.3;
   }
 
   .accreditation-text {
-    font-size: 1.1rem;
+    font-size: 0.75rem;
     margin-bottom: 2rem;
     padding: 0;
     white-space: normal;
+    line-height: 1.5;
   }
 
   .accreditation-badges {
-    gap: 1rem;
+    gap: 0.75rem;
+    margin-top: 1rem;
   }
 
   .badge {
-    width: 120px;
-    height: 120px;
-    padding: 1rem;
-    font-size: 0.8rem;
+    width: 85px;
+    height: 85px;
+    padding: 0.7rem;
+    font-size: 0.65rem;
   }
 
   .badge-bold {
-    font-size: 0.9rem;
+    font-size: 0.75rem;
+    margin-bottom: 0.15rem;
   }
 
   .badge-regular {
-    font-size: 0.75rem;
+    font-size: 0.6rem;
+    line-height: 1.2;
   }
 
   .collaboration-decorative-left img,
@@ -714,27 +782,35 @@
   }
 
   .faq-section {
-    padding: 1rem 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .faq-content {
+    gap: 1rem;
   }
 
   .faq-list .section-title {
-    font-size: 1.1rem !important;
-    margin-bottom: 1.5rem;
+    font-size: 0.9rem !important;
+    margin-bottom: 1rem;
   }
 
   .faq-question {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+  }
+
+  .faq-answer p {
+    font-size: 0.75rem;
   }
 
   .faq-image {
-    min-height: 250px;
+    min-height: 150px;
   }
 
   .faq-image img {
-    width: 75%;
-    height: 75%;
-    max-width: 350px;
-    max-height: 350px;
+    width: 60%;
+    height: 60%;
+    max-width: 200px;
+    max-height: 200px;
   }
 
   .banner-content {

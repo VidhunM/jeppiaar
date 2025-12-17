@@ -75,12 +75,14 @@
 // export default LeadGeneration;
 
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import contactImage from '../../assets/images/contact.png';
 import './LeadGeneration.css';
 
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw94ZBBLU5OIcbG_Ydo-Qizu-JiSmA6x0JwNmtHTcQ9-L2onyqDhwkACsVGfXgxI708/exec";
 
 const LeadGeneration = ({ onShowConstructionPopup }) => {
+  const navigate = useNavigate();
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -93,10 +95,36 @@ const LeadGeneration = ({ onShowConstructionPopup }) => {
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
+    
+    // Restrict phone number to digits only and limit to 10 digits
+    if (name === 'phone') {
+      const numericValue = value.replace(/\D/g, ''); // Remove non-digits
+      if (numericValue.length <= 10) {
+        setForm(prev => ({
+          ...prev,
+          [name]: numericValue
+        }));
+      }
+      return;
+    }
+    
+    // Limit email length
+    if (name === 'email' && value.length > 100) {
+      return;
+    }
+    
     setForm(prev => ({
       ...prev,
       [name]: type === 'checkbox' ? checked : value
     }));
+  };
+
+  const handlePhoneKeyPress = (e) => {
+    // Only allow numeric keys (0-9)
+    const char = String.fromCharCode(e.which || e.keyCode);
+    if (!/[0-9]/.test(char)) {
+      e.preventDefault();
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -105,6 +133,20 @@ const LeadGeneration = ({ onShowConstructionPopup }) => {
     // client-side basic validation
     if (!form.name || !form.email || !form.phone || !form.course || !form.consent) {
       setMessage({ type: 'error', text: 'Please fill all fields and accept consent.' });
+      return;
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(form.email)) {
+      setMessage({ type: 'error', text: 'Please enter a valid email address.' });
+      return;
+    }
+
+    // Phone number validation (must be exactly 10 digits)
+    const phoneRegex = /^\d{10}$/;
+    if (!phoneRegex.test(form.phone)) {
+      setMessage({ type: 'error', text: 'Please enter a valid 10-digit mobile number.' });
       return;
     }
 
@@ -140,6 +182,11 @@ const LeadGeneration = ({ onShowConstructionPopup }) => {
       <div className="container">
         <div className="lead-content">
           <div className="lead-form-panel scroll-from-left">
+            {message && (
+              <p className={`form-message form-message-top ${message.type === 'error' ? 'error' : 'success'}`}>
+                {message.text}
+              </p>
+            )}
             <h2>Start your Psychology<br />Career Today!</h2>
             <p className="lead-subtitle">Upgrade your skills with practice-oriented diploma programs</p>
             <form 
@@ -148,10 +195,30 @@ const LeadGeneration = ({ onShowConstructionPopup }) => {
             >
               <div className="form-row">
                 <input name="name" value={form.name} onChange={handleChange} type="text" placeholder="Name" required />
-                <input name="email" value={form.email} onChange={handleChange} type="email" placeholder="Email address" required />
+                <input 
+                  name="email" 
+                  value={form.email} 
+                  onChange={handleChange} 
+                  type="email" 
+                  placeholder="Email address" 
+                  maxLength={100}
+                  pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
+                  required 
+                />
               </div>
               <div className="form-row">
-                <input name="phone" value={form.phone} onChange={handleChange} type="tel" placeholder="Mobile number" required />
+                <input 
+                  name="phone" 
+                  value={form.phone} 
+                  onChange={handleChange}
+                  onKeyPress={handlePhoneKeyPress}
+                  type="tel" 
+                  inputMode="numeric"
+                  placeholder="Mobile number (10 digits)" 
+                  maxLength={10}
+                  pattern="[0-9]{10}"
+                  required 
+                />
                 <select name="course" value={form.course} onChange={handleChange} className="course-select" required>
                   <option value="">Select Diploma Course</option>
                   <option value="Counselling and Child Psychology">Counselling and Child Psychology</option>
@@ -178,16 +245,11 @@ const LeadGeneration = ({ onShowConstructionPopup }) => {
                 <button 
                   type="button" 
                   className="btn-secondary"
-                  onClick={onShowConstructionPopup}
+                  onClick={() => navigate('/contact')}
                 >
                   Contact Us
                 </button>
               </div>
-              {message && (
-                <p className={`form-message ${message.type === 'error' ? 'error' : 'success'}`}>
-                  {message.text}
-                </p>
-              )}
             </form>
           </div>
           <div className="lead-image-panel scroll-from-right">

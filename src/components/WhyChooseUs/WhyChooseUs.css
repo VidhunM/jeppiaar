@@ -77,6 +77,11 @@
     gap: 1.25rem;
     max-width: 900px;
   }
+
+  .image-item-5 {
+    grid-column: 2;
+    justify-self: center;
+  }
 }
 
 @media (max-width: 768px) {
@@ -93,6 +98,12 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
     max-width: 650px;
+  }
+
+  .image-item-5 {
+    grid-column: 1 / -1;
+    justify-self: center;
+    max-width: 50%;
   }
 
   .group-image {
@@ -114,6 +125,12 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     max-width: 550px;
+  }
+
+  .image-item-5 {
+    grid-column: 1 / -1;
+    justify-self: center;
+    max-width: 50%;
   }
 
   .group-image {

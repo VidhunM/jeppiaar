@@ -126,7 +126,7 @@ const LearnersReview = () => {
             className="testimonials-slider-wrapper" 
             style={{ 
               transform: isMobile 
-                ? `translateX(-${currentSlide * slideWidth}%)` 
+                ? `translateX(-${currentSlide * 100}%)` 
                 : `translateX(calc(-${currentSlide * slideWidth}% - ${currentSlide * 1.5}rem))`
             }}
           >

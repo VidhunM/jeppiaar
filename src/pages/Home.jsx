@@ -70,10 +70,36 @@ const Home = () => {
 
   const handleApplyFormChange = (e) => {
     const { name, value, type, checked } = e.target;
+    
+    // Restrict mobile number to digits only and limit to 10 digits
+    if (name === 'mobile') {
+      const numericValue = value.replace(/\D/g, ''); // Remove non-digits
+      if (numericValue.length <= 10) {
+        setApplyForm(prev => ({
+          ...prev,
+          [name]: numericValue
+        }));
+      }
+      return;
+    }
+    
+    // Limit email length
+    if (name === 'email' && value.length > 100) {
+      return;
+    }
+    
     setApplyForm(prev => ({
       ...prev,
       [name]: type === 'checkbox' ? checked : value
     }));
+  };
+
+  const handleMobileKeyPress = (e) => {
+    // Only allow numeric keys (0-9)
+    const char = String.fromCharCode(e.which || e.keyCode);
+    if (!/[0-9]/.test(char)) {
+      e.preventDefault();
+    }
   };
 
   const handleApplySubmit = async (e) => {

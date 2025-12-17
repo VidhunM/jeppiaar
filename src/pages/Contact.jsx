@@ -195,18 +195,61 @@ const Contact = () => {
   });
 
   const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState(null);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
+    
+    // Restrict phone number to digits only and limit to 10 digits
+    if (name === 'phoneNumber') {
+      const numericValue = value.replace(/\D/g, ''); // Remove non-digits
+      if (numericValue.length <= 10) {
+        setFormData(prev => ({
+          ...prev,
+          [name]: numericValue
+        }));
+      }
+      return;
+    }
+    
+    // Limit email length
+    if (name === 'email' && value.length > 100) {
+      return;
+    }
+    
     setFormData(prev => ({
       ...prev,
       [name]: type === 'checkbox' ? checked : value
     }));
   };
 
+  const handlePhoneKeyPress = (e) => {
+    // Only allow numeric keys (0-9)
+    const char = String.fromCharCode(e.which || e.keyCode);
+    if (!/[0-9]/.test(char)) {
+      e.preventDefault();
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      setMessage({ type: 'error', text: 'Please enter a valid email address.' });
+      return;
+    }
+
+    // Phone number validation (must be exactly 10 digits)
+    const phoneRegex = /^\d{10}$/;
+    if (!phoneRegex.test(formData.phoneNumber)) {
+      setMessage({ type: 'error', text: 'Please enter a valid 10-digit phone number.' });
+      return;
+    }
+    
     setLoading(true);
+    setMessage(null);
   
     try {
       const formBody = new URLSearchParams(formData).toString();
@@ -222,7 +265,7 @@ const Contact = () => {
       const text = await response.text();
   
       if (text === "success") {
-        alert("Thank you! Your message has been submitted.");
+        setMessage({ type: 'success', text: 'Thank you! Your message has been submitted.' });
         setFormData({
           fullName: '',
           email: '',
@@ -233,12 +276,12 @@ const Contact = () => {
           authorize: false
         });
       } else {
-        alert("Submission failed. Please try again.");
+        setMessage({ type: 'error', text: 'Submission failed. Please try again.' });
       }
   
     } catch (error) {
       console.error(error);
-      alert("Network error!");
+      setMessage({ type: 'error', text: 'Network error! Please try again.' });
     } finally {
       setLoading(false);
     }
@@ -327,6 +370,8 @@ const Contact = () => {
                     placeholder="Email"
                     value={formData.email}
                     onChange={handleChange}
+                    maxLength={100}
+                    pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
                     required
                   />
                 </div>
@@ -335,9 +380,13 @@ const Contact = () => {
                   <input
                     type="tel"
                     name="phoneNumber"
-                    placeholder="Phone Number"
+                    placeholder="Phone Number (10 digits)"
                     value={formData.phoneNumber}
                     onChange={handleChange}
+                    onKeyPress={handlePhoneKeyPress}
+                    inputMode="numeric"
+                    maxLength={10}
+                    pattern="[0-9]{10}"
                     required
                   />
                   <input
@@ -395,6 +444,11 @@ const Contact = () => {
                 <button type="submit" className="submit-btn" disabled={loading}>
                   {loading ? "Submitting..." : "Submit"}
                 </button>
+                {message && (
+                  <p className={`contact-form-message ${message.type === 'error' ? 'error' : 'success'}`}>
+                    {message.text}
+                  </p>
+                )}
               </form>
             </div>
 

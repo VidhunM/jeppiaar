@@ -138,7 +138,7 @@
 
 // export default ApplyModal;
 
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../assets/icons/Logo1.png";
 import "./ApplyModal.css";
 
@@ -147,24 +147,49 @@ const SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycbwt5RPQdhwUATta9TpfEfqP9YGdwHLiVOhYs61noahGrvysPfEXZquzFnuPDdTp_GKz/exec";
 
 const ApplyModal = ({ isOpen, onClose, formData, onFormChange }) => {
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState(null);
+
   if (!isOpen) return null;
 
   /* 🔹 Handle Submit */
   const handleSubmit = async (e) => {
     e.preventDefault();
   
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      setMessage({ type: 'error', text: 'Please enter a valid email address.' });
+      return;
+    }
+
+    // Phone number validation (must be exactly 10 digits)
+    const phoneRegex = /^\d{10}$/;
+    if (!phoneRegex.test(formData.mobile)) {
+      setMessage({ type: 'error', text: 'Please enter a valid 10-digit mobile number.' });
+      return;
+    }
+  
+    setLoading(true);
+    setMessage(null);
+
     try {
       await fetch(SCRIPT_URL, {
         method: "POST",
         body: JSON.stringify(formData), // no headers!
       });
   
-      alert("Application submitted successfully!");
-      onClose();
+      setMessage({ type: 'success', text: 'Application submitted successfully!' });
+      setTimeout(() => {
+        onClose();
+        setMessage(null);
+      }, 2000);
   
     } catch (error) {
       console.error(error);
-      alert("Submission failed");
+      setMessage({ type: 'error', text: 'Submission failed. Please try again.' });
+    } finally {
+      setLoading(false);
     }
   };
   
@@ -206,7 +231,17 @@ const ApplyModal = ({ isOpen, onClose, formData, onFormChange }) => {
                 name="mobile"
                 value={formData.mobile}
                 onChange={onFormChange}
-                placeholder="Mobile Number"
+                onKeyPress={(e) => {
+                  // Only allow numeric keys (0-9)
+                  const char = String.fromCharCode(e.which || e.keyCode);
+                  if (!/[0-9]/.test(char)) {
+                    e.preventDefault();
+                  }
+                }}
+                inputMode="numeric"
+                placeholder="Mobile Number (10 digits)"
+                maxLength={10}
+                pattern="[0-9]{10}"
                 required
               />
 
@@ -242,6 +277,8 @@ const ApplyModal = ({ isOpen, onClose, formData, onFormChange }) => {
                 value={formData.email}
                 onChange={onFormChange}
                 placeholder="Email Address"
+                maxLength={100}
+                pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
                 required
               />
 
@@ -318,9 +355,14 @@ const ApplyModal = ({ isOpen, onClose, formData, onFormChange }) => {
             </span>
           </label>
 
-          <button type="submit" className="apply-form-submit">
-            Submit
+          <button type="submit" className="apply-form-submit" disabled={loading}>
+            {loading ? 'Submitting...' : 'Submit'}
           </button>
+          {message && (
+            <p className={`apply-form-message ${message.type === 'error' ? 'error' : 'success'}`}>
+              {message.text}
+            </p>
+          )}
         </form>
       </div>
     </div>
