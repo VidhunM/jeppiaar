@@ -1,18 +1,14 @@
 .courses-section {
-  padding: 5rem 2rem;
+  /* Reduce vertical gap from the section above (Collaboration) */
+  padding: 2.75rem 2rem;
   background: #e5e5e5;
 }
 
-.container {
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.section-title {
+.courses-section .courses-section-title {
   font-size: 2.5rem;
   font-weight: 700;
   color: #000;
-  margin: 2rem 0;
+  margin: 0 0 0.75rem 0;
   text-align: center;
   text-transform: uppercase;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
@@ -52,17 +48,17 @@
   line-height: 1.4;
 }
 
-.courses-description {
-  margin: 2rem 0;
+.courses-section .courses-description {
+  margin: 0 0 1.1rem 0;
   text-align: center;
 }
 
-.description-text {
+.courses-section .courses-description-text {
   font-size: 1.1rem;
   line-height: 1.8;
   color: #000;
   max-width: 1000px;
-  margin: 0 auto 2rem;
+  margin: 0 auto 1.25rem; /* reduce space between heading/description and cards */
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -235,7 +231,7 @@
 
 @media (max-width: 1200px) {
   .courses-section {
-    padding: 4rem 1.5rem;
+    padding: 2.5rem 1.5rem;
   }
 
   .courses-grid {
@@ -256,12 +252,12 @@
 
 @media (max-width: 968px) {
   .courses-section {
-    padding: 3.5rem 1.5rem;
+    padding: 2.1rem 1.5rem;
   }
 
-  .section-title {
+  .courses-section .courses-section-title {
     font-size: 2rem;
-    margin: 1.5rem 0;
+    margin: 0 0 0.7rem 0;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   }
 
@@ -295,13 +291,13 @@
 
 @media (max-width: 768px) {
   .courses-section {
-    padding: 1.5rem 1rem 3rem 1rem;
-    margin-bottom: 2rem;
+    padding: 0.85rem 1rem 2rem 1rem;
+    margin-bottom: 1rem;
   }
 
-  .section-title {
+  .courses-section .courses-section-title {
     font-size: 1.75rem;
-    margin: 1.5rem 0;
+    margin: 0 0 0.65rem 0;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   }
 
@@ -352,13 +348,13 @@
 
 @media (max-width: 480px) {
   .courses-section {
-    padding: 1rem 0.75rem 2.5rem 0.75rem;
-    margin-bottom: 1.5rem;
+    padding: 0.65rem 0.75rem 1.75rem 0.75rem;
+    margin-bottom: 0.85rem;
   }
 
-  .section-title {
+  .courses-section .courses-section-title {
     font-size: 1.5rem;
-    margin: 1.25rem 0;
+    margin: 0 0 0.6rem 0;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   }
 

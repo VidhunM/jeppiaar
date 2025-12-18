@@ -855,8 +855,7 @@ body {
   }
 
   /* Fix for iOS Safari fixed positioning */
-  .header,
-  .footer {
+  .header {
     position: fixed;
     -webkit-transform: translateZ(0);
     transform: translateZ(0);

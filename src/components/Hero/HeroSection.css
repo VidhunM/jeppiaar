@@ -1,7 +1,8 @@
 .hero-section {
   position: relative;
   width: 100%;
-  min-height: 160vh;
+  /* Let the hero size to its content across devices (prevents big blank space on desktop). */
+  min-height: auto;
   overflow: visible;
   display: flex;
   flex-direction: column;
@@ -469,19 +470,22 @@
 .hero-programs-section {
   width: 100%;
   background: transparent;
-  padding: 1rem 2rem 0 2rem;
+  padding: 1rem 2rem 1.5rem 2rem;
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  min-height: 40vh;
-  height: 40vh;
-  margin-top: -20vh;
+  /* Avoid fixed vh heights (caused extra white space on Windows/Mac) */
+  min-height: auto;
+  height: auto;
+  /* Keep a controlled overlap with the hero slide */
+  margin-top: -160px;
   position: relative;
   z-index: 10;
-  padding-top: 20vh;
+  padding-top: 160px;
   border-radius: 0 0 50% 50% / 0 0 200% 200%;
   overflow: visible;
-  margin-bottom: -15rem;
+  /* Don't pull the next section up (was causing overlap on some devices) */
+  margin-bottom: 0;
 }
 
 .hero-programs-container {
@@ -847,8 +851,8 @@
   .hero-programs-section {
     padding-top: 15vh;
     margin-top: -15vh;
-    padding: 1rem 1rem 0.5rem 1rem;
-    margin-bottom: -10rem;
+    padding: 1rem 1rem 1.25rem 1rem;
+    margin-bottom: 0;
     min-height: auto;
     height: auto;
   }
@@ -1240,10 +1244,10 @@
   }
 
   .hero-programs-section {
-    padding: 0.75rem 0.75rem 0 0.75rem;
+    padding: 0.75rem 0.75rem 1.1rem 0.75rem;
     padding-top: 12vh;
     margin-top: -12vh;
-    margin-bottom: -9rem;
+    margin-bottom: 0;
     min-height: auto;
     height: auto;
   }
@@ -1309,10 +1313,10 @@
   }
 
   .hero-programs-section {
-    padding: 0.75rem 0.75rem 0.25rem 0.75rem;
+    padding: 0.75rem 0.75rem 1.1rem 0.75rem;
     padding-top: 12vh;
     margin-top: -12vh;
-    margin-bottom: -8rem;
+    margin-bottom: 0;
     min-height: auto;
     height: auto;
   }

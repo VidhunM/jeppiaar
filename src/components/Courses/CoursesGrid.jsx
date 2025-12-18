@@ -48,8 +48,8 @@ const CoursesGrid = ({ onKnowMoreClick }) => {
     <section className="courses-section">
       <div className="container">
         <div className="courses-description">
-          <h2 className="section-title scroll-from-center">OUR ADVANCED DIPLOMA COURSES</h2>
-          <p className="description-text scroll-from-center">
+          <h2 className="courses-section-title scroll-from-center">OUR ADVANCED DIPLOMA COURSES</h2>
+          <p className="courses-description-text scroll-from-center">
             Jeppiaar Academy of Psychology and Research prepares ethical, skilled, and globally competent psychology professionals through world-class, practice-oriented education. Our academy bridges the gap between classroom knowledge and<br /> real-world mental health practice.
           </p>
         </div>
