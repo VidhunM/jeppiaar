@@ -96,14 +96,15 @@
 
   .images-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.25rem;
+    gap: 1.05rem; /* slightly bigger images by reducing gap */
     max-width: 650px;
   }
 
   .image-item-5 {
     grid-column: 1 / -1;
     justify-self: center;
-    max-width: 50%;
+    /* Match the size of one tile in the 2-column grid */
+    max-width: calc((100% - 1.05rem) / 2);
   }
 
   .group-image {
@@ -123,14 +124,15 @@
 
   .images-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    gap: 0.85rem; /* slightly bigger images by reducing gap */
     max-width: 550px;
   }
 
   .image-item-5 {
     grid-column: 1 / -1;
     justify-self: center;
-    max-width: 50%;
+    /* Match the size of one tile in the 2-column grid */
+    max-width: calc((100% - 0.85rem) / 2);
   }
 
   .group-image {

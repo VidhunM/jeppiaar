@@ -59,6 +59,17 @@
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
+/* 2-line collaboration heading: default to inline on desktop, stack tightly on mobile */
+.collaboration-heading .collaboration-heading-line {
+  display: inline;
+}
+
+/* Fix: ensure the main collaboration heading is never stuck invisible due to scroll animation state */
+.collaboration-heading.scroll-from-center {
+  opacity: 1;
+  transform: none;
+}
+
 .collaboration-text {
   font-size: 1.1rem;
   margin: 1rem 0;
@@ -389,6 +400,8 @@
   backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(1px);
   z-index: 1;
+  /* Fix: ensure overlay never blocks taps/clicks (iPhone/Android) */
+  pointer-events: none;
 }
 
 .banner-content {
@@ -402,6 +415,12 @@
   display: block !important;
   visibility: visible !important;
   opacity: 1 !important;
+}
+
+/* Fix: banner uses scroll-from-left (transform) which can break layout on iOS; keep it in-place */
+.banner-content.scroll-from-left {
+  opacity: 1 !important;
+  transform: none !important;
 }
 
 .banner-content h2 {
@@ -475,6 +494,22 @@
     padding: 0.3rem 0;
     line-height: 1.3;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  .collaboration-heading .collaboration-heading-line {
+    display: block;
+  }
+
+  /* Tight line gap like "OUR ADVANCED / DIPLOMA PROGRAMS" */
+  .collaboration-heading .collaboration-heading-line-1 {
+    margin: 0 0 0.15rem 0;
+    line-height: 1.25;
+    letter-spacing: 0.06em;
+  }
+
+  .collaboration-heading .collaboration-heading-line-2 {
+    margin: 0;
+    line-height: 1.25;
   }
 
   .collaboration-text {
@@ -558,13 +593,13 @@
   }
 
   .service-item p {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   }
 
   .service-item:nth-child(1) p,
   .service-item:nth-child(2) p {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   }
 
@@ -651,6 +686,21 @@
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   }
 
+  .collaboration-heading .collaboration-heading-line {
+    display: block;
+  }
+
+  .collaboration-heading .collaboration-heading-line-1 {
+    margin: 0 0 0.12rem 0;
+    line-height: 1.22;
+    letter-spacing: 0.055em;
+  }
+
+  .collaboration-heading .collaboration-heading-line-2 {
+    margin: 0;
+    line-height: 1.22;
+  }
+
   .collaboration-text {
     font-size: 0.85rem;
     margin: 0.75rem 0;
@@ -729,13 +779,13 @@
   }
 
   .service-item p {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   }
 
   .service-item:nth-child(1) p,
   .service-item:nth-child(2) p {
-    font-size: 0.65rem;
+    font-size: 0.7rem;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   }
 
@@ -825,6 +875,21 @@
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   }
 
+  .collaboration-heading .collaboration-heading-line {
+    display: block;
+  }
+
+  .collaboration-heading .collaboration-heading-line-1 {
+    margin: 0 0 0.1rem 0;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+  }
+
+  .collaboration-heading .collaboration-heading-line-2 {
+    margin: 0;
+    line-height: 1.2;
+  }
+
   .collaboration-text {
     font-size: 0.8rem;
     margin: 0.75rem 0;
@@ -907,13 +972,13 @@
   }
 
   .service-item p {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   }
 
   .service-item:nth-child(1) p,
   .service-item:nth-child(2) p {
-    font-size: 0.6rem;
+    font-size: 0.65rem;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   }
 

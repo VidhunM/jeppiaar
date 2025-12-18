@@ -152,7 +152,7 @@
 /* Contact rows with icons */
 .contact-item {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 0.65rem;
   margin-bottom: 0.75rem;
 }
@@ -167,7 +167,7 @@
   justify-content: center;
   color: white;
   opacity: 0.95;
-  margin-top: 2px;
+  margin-top: 0;
   flex-shrink: 0;
 }
 
@@ -345,6 +345,15 @@
     margin-bottom: 0.6rem;
   }
 
+  /* Mobile: vertically center icons with their text for cleaner alignment */
+  .contact-item {
+    align-items: center;
+  }
+
+  .contact-icon {
+    margin-top: 0;
+  }
+
   /* Global.css forces all <a> to min 44x44 on mobile; override in footer contact rows */
   .footer .contact-item a {
     min-width: 0 !important;
@@ -428,6 +437,15 @@
   .contact-info a {
     text-align: left;
     display: inline-block;
+  }
+
+  /* Mobile: vertically center icons with their text for cleaner alignment */
+  .contact-item {
+    align-items: center;
+  }
+
+  .contact-icon {
+    margin-top: 0;
   }
 
   .footer-bottom {

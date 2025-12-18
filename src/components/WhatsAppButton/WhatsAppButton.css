@@ -127,8 +127,8 @@
     position: fixed;
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
-    /* Safe area support for notched iPhones */
-    bottom: max(20px, env(safe-area-inset-bottom, 20px));
+    /* iOS Safari: keep it above the bottom browser toolbar + home indicator */
+    bottom: calc(20px + env(safe-area-inset-bottom, 0px) + 44px);
     right: max(20px, env(safe-area-inset-right, 20px));
     /* Prevent iOS Safari from moving the button */
     -webkit-backface-visibility: hidden;

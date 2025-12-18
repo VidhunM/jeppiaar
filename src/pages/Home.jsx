@@ -143,7 +143,14 @@ const Home = () => {
           <img src={Group7} alt="Decoration" />
         </div>
         <div className="container">
-          <h2 className="scroll-from-center">JEPPIAAR ACADEMY OF PSYCHOLOGY AND RESEARCH</h2>
+          <h2 className="collaboration-heading scroll-from-center">
+            <span className="collaboration-heading-line collaboration-heading-line-1">
+              JEPPIAAR ACADEMY OF
+            </span>
+            <span className="collaboration-heading-line collaboration-heading-line-2">
+              PSYCHOLOGY AND RESEARCH
+            </span>
+          </h2>
           <p className="collaboration-text scroll-from-center">IN COLLABORATION WITH</p>
           <h3 className="university-name scroll-from-center">BHARATHIDASAN UNIVERSITY</h3>
           <p className="accreditation-text scroll-from-center">
@@ -262,7 +269,7 @@ const Home = () => {
         <div className="banner-overlay"></div>
         <div className="banner-content scroll-from-left">
           <h2> 2026 ADMISSIONS OPEN - START YOUR JOURNEY IN PSYCHOLOGY</h2>
-          <p>Join Jeppiaar Academy for practice-oriented psychology diploma programs that blend classroom learning with<br/> real-world experience.</p>
+          <p>Join Jeppiaar Academy for practice-oriented psychology diploma programs that blend classroom learning with real-world experience.</p>
           <button 
             className="apply-now-btn"
             onClick={openApplyModal}
