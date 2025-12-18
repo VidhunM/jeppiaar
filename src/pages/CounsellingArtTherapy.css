@@ -1,0 +1,44 @@
+/* Ensure hero heading isn't hidden behind the fixed header */
+.counselling-art-therapy-page {
+  padding-top: 160px;
+  overflow-x: hidden;
+}
+
+@media (max-width: 968px) {
+  .counselling-art-therapy-page {
+    padding-top: calc(120px + env(safe-area-inset-top));
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 480px) {
+  .counselling-art-therapy-page {
+    padding-top: calc(90px + env(safe-area-inset-top));
+  }
+}
+
+/* COURSE SYLLABUS - Mobile button sizing fix (Art Therapy) */
+
+@media (max-width: 480px) {
+  .counselling-art-therapy-page .course-syllabus .syllabus-buttons {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+
+  .counselling-art-therapy-page .course-syllabus .syllabus-buttons .apply-now-btn-syllabus,
+  .counselling-art-therapy-page .course-syllabus .syllabus-buttons .download-brochure-btn {
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 44px;
+    padding: 0.6rem 0.6rem;
+    font-size: 0.75rem;
+    line-height: 1.1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+  }
+}
