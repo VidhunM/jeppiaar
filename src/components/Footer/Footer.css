@@ -561,3 +561,48 @@
   }
 }
 
+/* Specific fixes for iPhone 14 Pro and 12 Mini */
+@media screen and (device-width: 430px) and (device-height: 932px),
+       screen and (device-width: 390px) and (device-height: 844px),
+       screen and (max-width: 428px) and (max-height: 926px) {
+  .footer {
+    padding: 2rem 1rem 1.5rem;
+    /* Fix for iOS devices to ensure footer visibility */
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+    will-change: transform;
+  }
+  
+  .footer-content {
+    gap: 1.5rem;
+  }
+  
+  .footer-section h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.875rem;
+  }
+  
+  .footer-logo img {
+    max-width: 130px;
+    max-height: 85px;
+  }
+  
+  .social-media a {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    min-height: 38px;
+  }
+  
+  .social-media a svg {
+    width: 22px;
+    height: 22px;
+    min-width: 22px;
+    min-height: 22px;
+  }
+  
+  .footer-bottom p {
+    font-size: 0.8rem;
+  }
+}
+

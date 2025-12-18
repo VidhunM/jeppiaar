@@ -5,6 +5,7 @@ import WhyChooseUs from '../components/WhyChooseUs/WhyChooseUs';
 import LearnersReview from '../components/Testimonials/LearnersReview';
 import LeadGeneration from '../components/LeadGeneration/LeadGeneration';
 import ApplyModal from '../components/ApplyModal/ApplyModal';
+import Footer from '../components/Footer/Footer';
 import Group7 from '../assets/icons/Group 7.png';
 import Group8 from '../assets/icons/Group 8.png';
 import Ellipse from '../assets/images/Ellipse.png';
@@ -289,6 +290,7 @@ const Home = () => {
         onFormChange={handleApplyFormChange}
         onSubmit={handleApplySubmit}
       />
+      <Footer />
     </div>
   );
 };
