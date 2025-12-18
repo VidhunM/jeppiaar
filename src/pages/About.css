@@ -1,5 +1,7 @@
 .about-page {
-  padding-top: 80px;
+  /* Account for fixed header so the hero ("ABOUT US") never sits underneath it.
+     Include iOS safe-area inset for notch devices. */
+  padding-top: calc(160px + env(safe-area-inset-top, 0px));
 }
 
 /* About Us Banner */
@@ -10,7 +12,8 @@
   text-align: center;
   width: 100%;
   position: relative;
-  margin-top: 4rem;
+  /* Avoid extra top-gap; the page padding-top already offsets the fixed header */
+  margin-top: 0;
 }
 
 .about-banner h1 {
@@ -580,7 +583,7 @@
 /* Responsive Styles */
 @media (max-width: 968px) {
   .about-page {
-    padding-top: 70px;
+    padding-top: calc(115px + env(safe-area-inset-top, 0px));
   }
 
   .about-banner {
@@ -887,7 +890,7 @@
 
 @media (max-width: 480px) {
   .about-page {
-    padding-top: 60px;
+    padding-top: calc(90px + env(safe-area-inset-top, 0px));
   }
 
   .about-banner {
