@@ -470,7 +470,7 @@
 .hero-programs-section {
   width: 100%;
   background: transparent;
-  padding: 1rem 2rem 1.5rem 2rem;
+  padding: 1rem 2rem 2.75rem 2rem; /* a bit more white space below circles */
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -851,7 +851,7 @@
   .hero-programs-section {
     padding-top: 15vh;
     margin-top: -15vh;
-    padding: 1rem 1rem 1.25rem 1rem;
+    padding: 1rem 1rem 2.1rem 1rem; /* more breathing room below circles on mobile */
     margin-bottom: 0;
     min-height: auto;
     height: auto;
@@ -1244,7 +1244,7 @@
   }
 
   .hero-programs-section {
-    padding: 0.75rem 0.75rem 1.1rem 0.75rem;
+    padding: 0.75rem 0.75rem 2rem 0.75rem; /* more breathing room below circles on small iPhones */
     padding-top: 12vh;
     margin-top: -12vh;
     margin-bottom: 0;
@@ -1313,7 +1313,7 @@
   }
 
   .hero-programs-section {
-    padding: 0.75rem 0.75rem 1.1rem 0.75rem;
+    padding: 0.75rem 0.75rem 2rem 0.75rem; /* keep consistent for duplicated block */
     padding-top: 12vh;
     margin-top: -12vh;
     margin-bottom: 0;

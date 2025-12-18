@@ -66,9 +66,32 @@ const Footer = () => {
           <div className="footer-section">
             <h4>GET IN TOUCH</h4>
             <div className="contact-info">
-              <p>1/40H, EJR Enclave, Mount Poonamallee Road, St. Thomas Mt, Chennai - 600016</p>
-              <p><a href="mailto:mail@jeppiaaracademy.com">mail@jeppiaaracademy.com</a></p>
-              <p><a href="tel:+919381811111">93818-11111</a></p>
+              <div className="contact-item">
+                <span className="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" />
+                  </svg>
+                </span>
+                <p>1/40H, EJR Enclave, Mount Poonamallee Road, St. Thomas Mt, Chennai - 600016</p>
+              </div>
+
+              <div className="contact-item">
+                <span className="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z" />
+                  </svg>
+                </span>
+                <a href="mailto:mail@jeppiaaracademy.com">mail@jeppiaaracademy.com</a>
+              </div>
+
+              <div className="contact-item">
+                <span className="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.07 21 3 13.93 3 5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.59a1 1 0 0 1-.24 1.01l-2.21 2.19z" />
+                  </svg>
+                </span>
+                <a href="tel:+919381811111">93818-11111</a>
+              </div>
             </div>
             <div className="footer-map">
               <iframe
