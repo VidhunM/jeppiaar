@@ -1761,6 +1761,19 @@ img {
     order: 2;
   }
 
+  /* Mobile/tablet: slightly reduce highlights image size + soften zoom */
+  .counselling-forensic-psychology-page .highlights-section .highlights-image {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  .counselling-forensic-psychology-page .highlights-section .highlights-image img {
+    transform: scale(1.25);
+    transform-origin: bottom center;
+  }
+
   .highlights-content,
   .highlights-section .highlights-content {
     grid-template-columns: 1fr;
@@ -2311,6 +2324,18 @@ img {
     order: 2;
   }
 
+  .counselling-forensic-psychology-page .highlights-section .highlights-image {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  .counselling-forensic-psychology-page .highlights-section .highlights-image img {
+    transform: scale(1.2);
+    transform-origin: bottom center;
+  }
+
   .batch-boxes,
   .highlights-section .batch-boxes {
     display: grid;
@@ -2507,6 +2532,18 @@ img {
 
   .highlights-section .highlights-image {
     order: 2;
+  }
+
+  .counselling-forensic-psychology-page .highlights-section .highlights-image {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  .counselling-forensic-psychology-page .highlights-section .highlights-image img {
+    transform: scale(1.15);
+    transform-origin: bottom center;
   }
 
   .batch-boxes,

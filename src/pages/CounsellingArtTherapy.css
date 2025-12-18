@@ -4,16 +4,93 @@
   overflow-x: hidden;
 }
 
+/* Prevent other Diploma page CSS (global .highlights-*) from affecting Art Therapy */
+.counselling-art-therapy-page .highlights-section .highlights-content {
+  display: grid;
+  grid-template-columns: 37% 60%;
+  gap: 3rem;
+  align-items: end;
+}
+
+.counselling-art-therapy-page .highlights-section .highlights-image {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.counselling-art-therapy-page .highlights-section .highlights-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  transform: none;
+}
+
 @media (max-width: 968px) {
   .counselling-art-therapy-page {
     padding-top: calc(120px + env(safe-area-inset-top));
     -webkit-overflow-scrolling: touch;
+  }
+
+  /* Mobile/tablet: force single column so image doesn't shift right */
+  .counselling-art-therapy-page .highlights-section .highlights-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    justify-items: center;
+  }
+
+  /* Highlights image: slightly bigger on mobile/tablet */
+  .counselling-art-therapy-page .highlights-section .highlights-image {
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    justify-self: center;
+    box-sizing: border-box;
+  }
+
+  /* Ensure equal left/right padding so the centered image doesn't look offset */
+  .counselling-art-therapy-page .highlights-section .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
+  }
+
+  .counselling-art-therapy-page .highlights-section .highlights-image img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+    transform: none;
   }
 }
 
 @media (max-width: 480px) {
   .counselling-art-therapy-page {
     padding-top: calc(90px + env(safe-area-inset-top));
+  }
+
+  .counselling-art-therapy-page .highlights-section .highlights-image {
+    max-width: 360px;
+  }
+
+  .counselling-art-therapy-page .highlights-section .highlights-image img {
+    transform: none;
+  }
+}
+
+@media (max-width: 375px) {
+  .counselling-art-therapy-page .highlights-section .highlights-image {
+    max-width: 340px;
+  }
+
+  .counselling-art-therapy-page .highlights-section .highlights-image img {
+    transform: none;
   }
 }
 

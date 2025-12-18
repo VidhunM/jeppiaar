@@ -1734,21 +1734,34 @@ img {
 
   .highlights-section .highlights-text {
     order: 1;
-    text-align: center;
-    align-items: center;
+    text-align: left;
+    align-items: flex-start;
     padding-right: 0;
   }
 
   .highlights-section .highlights-subtitle {
-    text-align: center;
+    text-align: left;
   }
 
   .highlights-section .highlights-title {
-    text-align: center;
+    text-align: left;
   }
 
   .highlights-section .highlights-image {
     order: 2;
+  }
+
+  /* Mobile/tablet: slightly reduce highlights image size + remove heavy zoom */
+  .counselling-organizational-psychology-page .highlights-section .highlights-image {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  .counselling-organizational-psychology-page .highlights-section .highlights-image img {
+    transform: scale(1.25);
+    transform-origin: bottom center;
   }
 
   .batch-boxes,
@@ -1758,7 +1771,7 @@ img {
     grid-template-rows: auto;
     gap: 1rem;
     width: 100%;
-    justify-items: center;
+    justify-items: start;
   }
 
   .batch-box {
@@ -1811,8 +1824,8 @@ img {
   }
 
   .highlights-section .download-brochure-btn {
-    align-self: center;
-    margin: 0 auto;
+    align-self: flex-start;
+    margin: 0.35rem 0 0.18rem;
   }
 
   .overview-section .overview-content,
@@ -2379,20 +2392,32 @@ img {
   .highlights-section .highlights-text {
     padding-right: 0;
     order: 1;
-    text-align: center;
-    align-items: center;
+    text-align: left;
+    align-items: flex-start;
   }
 
   .highlights-section .highlights-subtitle {
-    text-align: center;
+    text-align: left;
   }
 
   .highlights-section .highlights-title {
-    text-align: center;
+    text-align: left;
   }
 
   .highlights-section .highlights-image {
     order: 2;
+  }
+
+  .counselling-organizational-psychology-page .highlights-section .highlights-image {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  .counselling-organizational-psychology-page .highlights-section .highlights-image img {
+    transform: scale(1.2);
+    transform-origin: bottom center;
   }
 
   .batch-boxes,
@@ -2402,7 +2427,7 @@ img {
     grid-template-rows: auto;
     gap: 1rem;
     width: 100%;
-    justify-items: center;
+    justify-items: start;
   }
 
   .batch-box {
@@ -2455,8 +2480,8 @@ img {
   }
 
   .highlights-section .download-brochure-btn {
-    align-self: center;
-    margin: 0 auto;
+    align-self: flex-start;
+    margin: 0.18rem 0 0.12rem;
   }
 
   .batch-box {
@@ -2577,20 +2602,32 @@ img {
     padding-right: 0;
     padding-bottom: 2rem;
     order: 1;
-    text-align: center;
-    align-items: center;
+    text-align: left;
+    align-items: flex-start;
   }
 
   .highlights-section .highlights-subtitle {
-    text-align: center;
+    text-align: left;
   }
 
   .highlights-section .highlights-title {
-    text-align: center;
+    text-align: left;
   }
 
   .highlights-section .highlights-image {
     order: 2;
+  }
+
+  .counselling-organizational-psychology-page .highlights-section .highlights-image {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  .counselling-organizational-psychology-page .highlights-section .highlights-image img {
+    transform: scale(1.2);
+    transform-origin: bottom center;
   }
 
   .batch-boxes,
@@ -2600,7 +2637,7 @@ img {
     grid-template-rows: auto;
     gap: 1rem;
     width: 100%;
-    justify-items: center;
+    justify-items: start;
   }
 
   .batch-box {
@@ -2653,8 +2690,8 @@ img {
   }
 
   .highlights-section .download-brochure-btn {
-    align-self: center;
-    margin: 0 auto;
+    align-self: flex-start;
+    margin: 0.18rem 0 0.12rem;
   }
 
   .batch-box {
@@ -2670,7 +2707,7 @@ img {
     padding-left: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 0.4rem;
   }
 
@@ -2846,16 +2883,16 @@ img {
   .highlights-section .highlights-text {
     padding-right: 0;
     order: 1;
-    text-align: center;
-    align-items: center;
+    text-align: left;
+    align-items: flex-start;
   }
 
   .highlights-section .highlights-subtitle {
-    text-align: center;
+    text-align: left;
   }
 
   .highlights-section .highlights-title {
-    text-align: center;
+    text-align: left;
   }
 
   .highlights-section .highlights-image {
@@ -2869,7 +2906,7 @@ img {
     grid-template-rows: auto;
     gap: 1rem;
     width: 100%;
-    justify-items: center;
+    justify-items: start;
   }
 
   .batch-box {
@@ -2922,8 +2959,8 @@ img {
   }
 
   .highlights-section .download-brochure-btn {
-    align-self: center;
-    margin: 0 auto;
+    align-self: flex-start;
+    margin: 0.18rem 0 0.12rem;
   }
 
   .enroll-now-btn,
