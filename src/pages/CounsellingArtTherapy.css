@@ -119,3 +119,115 @@
     white-space: nowrap;
   }
 }
+
+/* =========================================================
+   LEARNING OUTCOMES (Art Therapy) - Typography + mobile sizing
+   Matches other Diploma Program pages on iPhone/Android
+   ========================================================= */
+
+.learning-outcomes {
+  padding: 3rem 0;
+  background: white;
+}
+
+.learning-outcomes h2.section-title {
+  color: #000;
+  text-align: left;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.85rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+}
+
+.learning-outcomes .outcomes-box {
+  background: #E8E4F4;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.learning-outcomes .outcomes-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.learning-outcomes .outcomes-list li {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.1rem;
+  color: #000;
+  line-height: 1.7;
+  padding-left: 3rem;
+  position: relative;
+}
+
+.learning-outcomes .outcomes-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background: #1A1260;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .learning-outcomes h2.section-title {
+    font-size: 1.25rem !important;
+    margin-bottom: 0.85rem;
+  }
+
+  .learning-outcomes .outcomes-box {
+    padding: 1.1rem;
+  }
+
+  .learning-outcomes .outcomes-list {
+    gap: 0.75rem;
+  }
+
+  .learning-outcomes .outcomes-list li {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    padding-left: 2.25rem;
+  }
+
+  .learning-outcomes .outcomes-list li::before {
+    width: 20px;
+    height: 20px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .learning-outcomes h2.section-title {
+    font-size: 1.15rem !important;
+    margin-bottom: 0.75rem;
+  }
+
+  .learning-outcomes .outcomes-box {
+    padding: 1rem;
+  }
+
+  .learning-outcomes .outcomes-list li {
+    font-size: 0.9rem;
+    padding-left: 2.1rem;
+  }
+
+  .learning-outcomes .outcomes-list li::before {
+    width: 18px;
+    height: 18px;
+    font-size: 0.75rem;
+  }
+}

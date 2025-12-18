@@ -198,6 +198,14 @@
   cursor: pointer;
   flex-shrink: 0;
   accent-color: #1A1260;
+  /* Override global checkbox reset so tick is visible (iPhone/Android/Windows) */
+  -webkit-appearance: checkbox;
+  -moz-appearance: auto;
+  appearance: auto;
+  /* Prevent global 44px touch-target from inflating checkbox */
+  min-width: 0 !important;
+  min-height: 0 !important;
+  padding: 0 !important;
 }
 
 .checkbox-container label {
@@ -386,6 +394,14 @@
     align-items: flex-start;
   }
 
+  .checkbox-container input[type="checkbox"] {
+    width: 14px;
+    height: 14px;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+  }
+
   .checkbox-container label {
     font-size: 0.85rem;
     line-height: 1.4;
@@ -500,10 +516,13 @@
   }
 
   .checkbox-container input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
+    width: 13px;
+    height: 13px;
     margin-top: 2px;
     flex-shrink: 0;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    padding: 0 !important;
   }
 
   .checkbox-container label {
