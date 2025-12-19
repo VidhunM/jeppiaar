@@ -11,14 +11,14 @@
   -webkit-backdrop-filter: blur(10px);
   z-index: 10002;
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* Changed from center to allow margin: auto centering */
   justify-content: center;
   animation: fadeIn 0.3s ease-out;
   overflow-y: auto;
   /* iPhone notch safe-area + comfortable padding */
-  padding: calc(1rem + env(safe-area-inset-top, 0px))
+  padding: calc(2rem + env(safe-area-inset-top, 0px))
     calc(1rem + env(safe-area-inset-right, 0px))
-    calc(1rem + env(safe-area-inset-bottom, 0px))
+    calc(2rem + env(safe-area-inset-bottom, 0px))
     calc(1rem + env(safe-area-inset-left, 0px));
   -webkit-overflow-scrolling: touch;
 }
@@ -33,11 +33,10 @@
   position: relative;
   animation: slideUp 0.3s ease-out;
   padding: 2.5rem;
+  margin: auto; /* Centers content vertically if space exists, prevents top cut-off */
   /* Use modern viewport units on iOS so the modal doesn't get cut off */
-  max-height: calc(100dvh - 2rem - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
-  max-height: calc(100svh - 2rem - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
+  max-height: none; /* Removed fixed max-height to let margin: auto and overlay padding handle it */
+  color: #333;
 }
 
 .team-modal-close {
@@ -160,12 +159,10 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .team-modal-overlay {
-    padding: calc(0.75rem + env(safe-area-inset-top, 0px))
-      calc(0.75rem + env(safe-area-inset-right, 0px))
-      calc(0.75rem + env(safe-area-inset-bottom, 0px))
-      calc(0.75rem + env(safe-area-inset-left, 0px));
-    /* On small iPhones, centering can cause the modal to look "cut off" */
-    align-items: flex-start;
+    padding: calc(2rem + env(safe-area-inset-top, 0px))
+      calc(1rem + env(safe-area-inset-right, 0px))
+      calc(2rem + env(safe-area-inset-bottom, 0px))
+      calc(1rem + env(safe-area-inset-left, 0px));
   }
 
   .team-modal-content {
@@ -224,6 +221,7 @@
   .team-modal-content {
     padding: 1.25rem 1rem;
     border-radius: 14px;
+    max-height: none;
   }
 
   .team-modal-image {

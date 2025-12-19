@@ -673,7 +673,7 @@
   }
 
   .hero-nav {
-    display: none;
+    display: none !important;
   }
 
 
@@ -959,7 +959,7 @@
   }
 
   .hero-nav {
-    display: none;
+    display: none !important;
   }
 
   .hero-rated-badge {
@@ -1153,7 +1153,7 @@
   }
 
   .hero-nav {
-    display: none;
+    display: none !important;
   }
 
   .hero-rated-badge {
