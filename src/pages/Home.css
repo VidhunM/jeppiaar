@@ -401,7 +401,7 @@
   -webkit-backdrop-filter: blur(1px);
   z-index: 1;
   /* Fix: ensure overlay never blocks taps/clicks (iPhone/Android) */
-  pointer-events: none;
+  pointer-events: none !important;
 }
 
 .banner-content {

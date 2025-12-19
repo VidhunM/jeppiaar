@@ -128,19 +128,23 @@
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
     /* iOS Safari: keep it above the bottom browser toolbar + home indicator */
-    bottom: calc(20px + env(safe-area-inset-bottom, 0px) + 44px);
-    right: max(20px, env(safe-area-inset-right, 20px));
+    /* Simplified positioning that works better across iPhone models */
+    bottom: calc(25px + env(safe-area-inset-bottom, 0px));
+    right: calc(20px + env(safe-area-inset-right, 0px));
     /* Prevent iOS Safari from moving the button */
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    z-index: 99999 !important;
+    pointer-events: auto !important;
   }
 }
 
 /* Ensure button is always on top and visible */
 @media (max-width: 768px) {
   .whatsapp-float {
-    /* Above page UI, but BELOW modals (modals use z-index 10000+) */
-    z-index: 9000 !important;
+    /* Higher z-index to stay above other mobile elements */
+    z-index: 99999 !important;
+    pointer-events: auto !important;
   }
 }
 

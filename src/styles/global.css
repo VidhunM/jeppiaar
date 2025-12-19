@@ -811,8 +811,8 @@ body {
   body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    /* Prevent rubber band scrolling */
-    overscroll-behavior: none;
+    /* Allow natural scrolling but prevent unnecessary rubber-banding that can feel like "stuck" */
+    overscroll-behavior-y: auto;
     -webkit-overflow-scrolling: touch;
   }
 
@@ -882,14 +882,6 @@ body {
   * {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
-  }
-
-  /* Prevent iOS Safari text selection issues */
-  * {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
   }
 
   /* Allow text selection for content */
@@ -995,11 +987,6 @@ body {
   img {
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
-  }
-
-  /* Sharper borders on retina */
-  * {
-    border-width: 0.5px;
   }
 }
 
@@ -1259,9 +1246,14 @@ a {
   button,
   a,
   input[type="button"],
-  input[type="submit"] {
+  input[type="submit"],
+  .whatsapp-float {
     min-height: 44px;
     min-width: 44px;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
   }
 }
 

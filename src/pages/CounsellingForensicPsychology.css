@@ -297,7 +297,7 @@ img {
   font-weight: 600;
   font-size: 1rem;
   cursor: pointer;
-  z-index: 1000;
+  z-index: 999; /* Just below header */
   white-space: nowrap;
   box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
@@ -2041,6 +2041,12 @@ img {
   .overview-section .enroll-now-btn {
     align-self: flex-start;
     margin: 0;
+    min-height: 48px !important;
+    min-width: 140px !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    z-index: 10;
+    position: relative;
   }
 
   .overview-section .overview-image {
@@ -2353,6 +2359,12 @@ img {
   .overview-section .enroll-now-btn {
     align-self: flex-start;
     margin: 0;
+    min-height: 48px !important;
+    min-width: 140px !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    z-index: 10;
+    position: relative;
   }
 
   .overview-section .overview-image {
@@ -2563,6 +2575,12 @@ img {
   .overview-section .enroll-now-btn {
     align-self: flex-start;
     margin: 0;
+    min-height: 48px !important;
+    min-width: 140px !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    z-index: 10;
+    position: relative;
   }
 
   .overview-section .overview-image {
@@ -2845,6 +2863,12 @@ img {
   .overview-section .enroll-now-btn {
     align-self: flex-start;
     margin: 0;
+    min-height: 48px !important;
+    min-width: 140px !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    z-index: 10;
+    position: relative;
   }
 
   .overview-section .overview-image {

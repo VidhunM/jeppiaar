@@ -366,7 +366,7 @@
     color: #333;
     font-weight: 500;
     font-size: 0.88rem;
-    pointer-events: none;
+    pointer-events: auto; /* Enable pointer events for reliable tapping on iOS */
   }
 
   .dropdown-toggle > span:first-child {
@@ -376,6 +376,7 @@
   .dropdown-arrow {
     transition: transform 0.3s ease;
     margin-left: 0.5rem;
+    pointer-events: none; /* Let clicks pass through the arrow to the toggle */
   }
 
   .dropdown-arrow.open {
@@ -394,7 +395,7 @@
   }
 
   .dropdown-menu a {
-    padding: 0.65rem 0 0.65rem 1.5rem;
+    padding: 0.875rem 0 0.875rem 1.5rem; /* Increased padding for better touch target */
     text-align: left;
     display: block;
     border-bottom: 1px solid #f0f0f0;
@@ -403,6 +404,7 @@
     transition: all 0.2s ease;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
     touch-action: manipulation;
+    min-height: 44px; /* Standard touch target size */
   }
 
   .dropdown-menu a:last-child {
@@ -430,6 +432,12 @@
     min-height: 28px;
     min-width: unset;
     box-shadow: 0 2px 6px rgba(14, 5, 41, 0.18);
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    z-index: 1010;
+    cursor: pointer;
+    position: relative;
+    border-radius: 50px;
   }
 
   .logo-container {
@@ -471,14 +479,15 @@
     height: 2.5px;
   }
 
-  /* Extra-small phones */
-  .header .cta-button {
-    padding: 0.24rem 0.42rem;
-    font-size: 0.64rem;
-    line-height: 1;
-    min-height: 26px;
-    min-width: unset;
-  }
+    /* Extra-small phones */
+    .header .cta-button {
+      padding: 0.24rem 0.42rem;
+      font-size: 0.64rem;
+      line-height: 1;
+      min-height: 26px;
+      min-width: unset;
+      border-radius: 50px;
+    }
 
   .nav {
     padding: 1.25rem 0.875rem;
@@ -680,14 +689,15 @@
     height: 2px;
   }
 
-  /* iPhone SE */
-  .header .cta-button {
-    padding: 0.22rem 0.4rem;
-    font-size: 0.62rem;
-    line-height: 1;
-    min-height: 26px;
-    min-width: unset;
-  }
+    /* iPhone SE */
+    .header .cta-button {
+      padding: 0.22rem 0.4rem;
+      font-size: 0.62rem;
+      line-height: 1;
+      min-height: 26px;
+      min-width: unset;
+      border-radius: 50px;
+    }
 }
 
 /* iPhone X and newer (with notch) */
