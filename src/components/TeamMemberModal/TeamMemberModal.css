@@ -11,15 +11,15 @@
   -webkit-backdrop-filter: blur(10px);
   z-index: 10002;
   display: flex;
-  align-items: flex-start; /* Changed from center to allow margin: auto centering */
+  align-items: center; /* Back to center */
   justify-content: center;
   animation: fadeIn 0.3s ease-out;
   overflow-y: auto;
   /* iPhone notch safe-area + comfortable padding */
-  padding: calc(2rem + env(safe-area-inset-top, 0px))
-    calc(1rem + env(safe-area-inset-right, 0px))
-    calc(2rem + env(safe-area-inset-bottom, 0px))
-    calc(1rem + env(safe-area-inset-left, 0px));
+  padding: env(safe-area-inset-top, 20px)
+    env(safe-area-inset-right, 20px)
+    env(safe-area-inset-bottom, 20px)
+    env(safe-area-inset-left, 20px);
   -webkit-overflow-scrolling: touch;
 }
 
@@ -29,13 +29,15 @@
   border: 3px solid #0E0529;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
   max-width: 800px;
-  width: 100%;
+  width: 90%;
   position: relative;
   animation: slideUp 0.3s ease-out;
   padding: 2.5rem;
-  margin: auto; /* Centers content vertically if space exists, prevents top cut-off */
-  /* Use modern viewport units on iOS so the modal doesn't get cut off */
-  max-height: none; /* Removed fixed max-height to let margin: auto and overlay padding handle it */
+  margin: auto; /* Keep margin auto for vertical centering in scrollable flex */
+  max-height: calc(100dvh - 40px - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
+  max-height: calc(100svh - 40px - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   color: #333;
 }
 
@@ -156,18 +158,30 @@
   }
 }
 
+/* iOS Safari: backdrop-filter on a fixed overlay can break input tapping.
+   Disable blur on iPhones to ensure the modal is clickable. */
+@supports (-webkit-touch-callout: none) {
+  .team-modal-overlay {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .team-modal-overlay {
-    padding: calc(2rem + env(safe-area-inset-top, 0px))
-      calc(1rem + env(safe-area-inset-right, 0px))
-      calc(2rem + env(safe-area-inset-bottom, 0px))
-      calc(1rem + env(safe-area-inset-left, 0px));
+    padding: calc(1rem + env(safe-area-inset-top, 0px))
+      calc(0.75rem + env(safe-area-inset-right, 0px))
+      calc(1rem + env(safe-area-inset-bottom, 0px))
+      calc(0.75rem + env(safe-area-inset-left, 0px));
+    align-items: center;
   }
 
   .team-modal-content {
     padding: 2rem 1.5rem;
-    max-width: 95%;
+    width: 95%;
+    max-width: none;
+    max-height: calc(100dvh - 2rem - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
   }
 
   .team-modal-header {

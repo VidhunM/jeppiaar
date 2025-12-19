@@ -878,8 +878,8 @@ body {
     transform: translateZ(0);
   }
 
-  /* Fix for iOS Safari animations */
-  * {
+  /* Fix for iOS Safari animations - removed global * transform as it breaks position: fixed */
+  .animated {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
   }

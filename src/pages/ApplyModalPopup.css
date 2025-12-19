@@ -97,15 +97,15 @@
   -webkit-backdrop-filter: blur(10px);
   z-index: 10001;
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* Use flex-start + margin: auto for robust centering */
   justify-content: center;
   animation: fadeIn 0.3s ease-out;
   overflow-y: auto;
   overscroll-behavior: contain;
-  padding: calc(1rem + env(safe-area-inset-top, 0px))
-    calc(1rem + env(safe-area-inset-right, 0px))
-    calc(1rem + env(safe-area-inset-bottom, 0px))
-    calc(1rem + env(safe-area-inset-left, 0px));
+  padding: env(safe-area-inset-top, 20px)
+    env(safe-area-inset-right, 20px)
+    env(safe-area-inset-bottom, 20px)
+    env(safe-area-inset-left, 20px);
   -webkit-overflow-scrolling: touch;
   touch-action: manipulation;
 }
@@ -114,11 +114,10 @@
   background: #0E0529;
   border-radius: 20px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-  width: min(900px, 100%);
-  max-height: calc(100vh - 2rem - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
-  max-height: calc(100dvh - 2rem - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
-  max-height: calc(100svh - 2rem - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
-  overflow: auto;
+  width: min(900px, 95%);
+  margin: auto; /* Robust centering */
+  max-height: none; /* Let the overlay padding and margin auto handle it */
+  overflow: visible; /* Content itself doesn't need to scroll if overlay scrolls */
   -webkit-overflow-scrolling: touch;
   position: relative;
   animation: slideUp 0.3s ease-out;
@@ -351,9 +350,17 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .apply-modal-overlay {
+    padding: calc(1rem + env(safe-area-inset-top, 0px))
+      calc(0.75rem + env(safe-area-inset-right, 0px))
+      calc(1rem + env(safe-area-inset-bottom, 0px))
+      calc(0.75rem + env(safe-area-inset-left, 0px));
+  }
+
   .apply-modal-content {
     padding: 1rem;
-    width: min(560px, 100%);
+    width: 95%;
+    max-width: none;
     border-radius: 16px;
   }
 
