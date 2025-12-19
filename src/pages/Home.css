@@ -59,9 +59,18 @@
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
-/* 2-line collaboration heading: default to inline on desktop, stack tightly on mobile */
+/* Collaboration heading: single line on desktop with correct spacing */
 .collaboration-heading .collaboration-heading-line {
   display: inline;
+}
+
+.collaboration-heading .collaboration-heading-line-1 {
+  margin-right: 0.6rem;
+  letter-spacing: 0.02em;
+}
+
+.collaboration-heading .collaboration-heading-line-2 {
+  letter-spacing: 0.02em;
 }
 
 /* Fix: ensure the main collaboration heading is never stuck invisible due to scroll animation state */

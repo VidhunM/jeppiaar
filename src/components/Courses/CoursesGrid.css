@@ -14,9 +14,18 @@
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
-/* Split heading into 2 lines like the Hero "OUR ADVANCED / DIPLOMA PROGRAMS" */
+/* Split heading into 2 lines on mobile, single line on desktop with correct spacing */
 .courses-heading .courses-heading-line {
   display: inline;
+}
+
+.courses-heading .courses-heading-line-1 {
+  margin-right: 0.6rem;
+  letter-spacing: 0.02em;
+}
+
+.courses-heading .courses-heading-line-2 {
+  letter-spacing: 0.02em;
 }
 
 /* Fix: ensure Courses heading is never stuck invisible due to scroll animation state */
