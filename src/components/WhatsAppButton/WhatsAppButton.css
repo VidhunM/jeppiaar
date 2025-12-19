@@ -139,13 +139,8 @@
 /* Ensure button is always on top and visible */
 @media (max-width: 768px) {
   .whatsapp-float {
-    /* Higher z-index to ensure visibility */
-    z-index: 99999 !important;
-    /* Ensure it's not hidden by other elements */
-    position: fixed !important;
-    display: flex !important;
-    visibility: visible !important;
-    opacity: 1 !important;
+    /* Above page UI, but BELOW modals (modals use z-index 10000+) */
+    z-index: 9000 !important;
   }
 }
 
