@@ -158,6 +158,8 @@
       calc(0.75rem + env(safe-area-inset-right, 0px))
       calc(0.75rem + env(safe-area-inset-bottom, 0px))
       calc(0.75rem + env(safe-area-inset-left, 0px));
+    /* On small iPhones, centering can cause the modal to look "cut off" */
+    align-items: flex-start;
   }
 
   .team-modal-content {
@@ -206,6 +208,50 @@
   .team-modal-header {
     margin-bottom: 1.25rem;
     padding-bottom: 1.25rem;
+  }
+}
+
+/* Small phones (iPhone 12 mini ~360x780, iPhone 14 Pro ~393x852):
+   reduce typography + spacing so the header + text fit cleanly */
+@media (max-width: 480px) {
+  .team-modal-content {
+    padding: 1.25rem 1rem;
+    border-radius: 14px;
+  }
+
+  .team-modal-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .team-modal-name {
+    font-size: 1.1rem;
+    line-height: 1.25;
+  }
+
+  .team-modal-role {
+    font-size: 0.9rem;
+  }
+
+  .team-modal-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    text-align: left;
+  }
+
+  .team-modal-description p {
+    margin: 0 0 0.9rem 0;
+    min-height: unset;
+  }
+}
+
+@media screen and (max-width: 360px) and (max-height: 780px) {
+  .team-modal-content {
+    padding: 1.1rem 0.9rem;
+  }
+
+  .team-modal-description {
+    font-size: 0.86rem;
   }
 }
 

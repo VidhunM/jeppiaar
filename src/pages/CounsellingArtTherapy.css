@@ -133,8 +133,7 @@
 .learning-outcomes h2.section-title {
   color: #000;
   text-align: left;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1.85rem;
   font-weight: 800;
   letter-spacing: 0.06em;
@@ -229,5 +228,354 @@
     width: 18px;
     height: 18px;
     font-size: 0.75rem;
+  }
+}
+
+/* =========================================================
+   Mobile typography: make the top "ADVANCED DIPLOMA..." heading
+   + description smaller on iPhone/Android (Art Therapy)
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .counselling-art-therapy-page .overview-section .overview-title,
+  .counselling-art-therapy-page .overview-title {
+    font-size: 1.25rem !important;
+    line-height: 1.2;
+    letter-spacing: 0.4px;
+  }
+
+  .counselling-art-therapy-page .overview-section .overview-text p,
+  .counselling-art-therapy-page .overview-text p {
+    font-size: 0.82rem !important;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 480px) {
+  .counselling-art-therapy-page .overview-section .overview-title,
+  .counselling-art-therapy-page .overview-title {
+    font-size: 1.05rem !important;
+    letter-spacing: 0.35px;
+  }
+
+  .counselling-art-therapy-page .overview-section .overview-text p,
+  .counselling-art-therapy-page .overview-text p {
+    font-size: 0.78rem !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .counselling-art-therapy-page .overview-section .overview-title,
+  .counselling-art-therapy-page .overview-title {
+    font-size: 0.98rem !important;
+  }
+
+  .counselling-art-therapy-page .overview-section .overview-text p,
+  .counselling-art-therapy-page .overview-text p {
+    font-size: 0.76rem !important;
+  }
+}
+
+/* =========================================================
+   Mobile sizing: COURSE FEE section (iPhone/Android)
+   Note: Base fee styles may be coming from shared CSS, so we scope
+   overrides to the Art Therapy page wrapper.
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .counselling-art-therapy-page .course-fee {
+    padding: 1.75rem 0 !important;
+  }
+
+  .counselling-art-therapy-page .course-fee .section-title {
+    font-size: 1.15rem !important;
+    margin-bottom: 1rem !important;
+    padding: 0 1rem !important;
+  }
+
+  .counselling-art-therapy-page .fee-wrapper {
+    padding: 1rem !important;
+  }
+
+  .counselling-art-therapy-page .fee-content {
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+  }
+
+  .counselling-art-therapy-page .main-fee {
+    padding: 0.75rem 0.25rem !important;
+    min-height: unset !important;
+  }
+
+  .counselling-art-therapy-page .fee-label {
+    font-size: 0.9rem !important;
+  }
+
+  .counselling-art-therapy-page .fee-amount {
+    font-size: 2.6rem !important;
+    line-height: 1.1;
+  }
+
+  .counselling-art-therapy-page .fee-note {
+    font-size: 0.82rem !important;
+  }
+
+  .counselling-art-therapy-page .fee-options {
+    grid-template-columns: 1fr !important;
+    gap: 0.6rem !important;
+  }
+
+  .counselling-art-therapy-page .fee-option {
+    padding: 1rem !important;
+  }
+
+  .counselling-art-therapy-page .fee-option-label {
+    font-size: 0.7rem !important;
+  }
+
+  .counselling-art-therapy-page .fee-option-amount {
+    font-size: 1.25rem !important;
+  }
+
+  .counselling-art-therapy-page .fee-month-text {
+    font-size: 0.75rem !important;
+  }
+
+  .counselling-art-therapy-page .fee-option-note {
+    font-size: 0.7rem !important;
+  }
+
+  .counselling-art-therapy-page .fee-note-section {
+    padding: 0.75rem 1rem !important;
+  }
+
+  .counselling-art-therapy-page .fee-note-section p {
+    font-size: 0.78rem !important;
+  }
+
+  .counselling-art-therapy-page .info-icon {
+    width: 18px;
+    height: 18px;
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .counselling-art-therapy-page .course-fee {
+    padding: 1.5rem 0 !important;
+  }
+
+  .counselling-art-therapy-page .course-fee .section-title {
+    font-size: 1.05rem !important;
+    padding: 0 0.875rem !important;
+  }
+
+  .counselling-art-therapy-page .fee-wrapper {
+    padding: 0.875rem !important;
+  }
+
+  .counselling-art-therapy-page .fee-amount {
+    font-size: 2.2rem !important;
+  }
+
+  .counselling-art-therapy-page .fee-option-amount {
+    font-size: 1.1rem !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .counselling-art-therapy-page .fee-amount {
+    font-size: 2rem !important;
+  }
+
+  .counselling-art-therapy-page .fee-option-amount {
+    font-size: 1rem !important;
+  }
+}
+
+/* =========================================================
+   Mobile sizing: SKILLS + OTHER ADVANCED DIPLOMA PROGRAMS
+   Note: Base styles may be shared/global; we scope overrides to page.
+   ========================================================= */
+
+@media (max-width: 768px) {
+  /* SKILLS */
+  .counselling-art-therapy-page .skills-section {
+    padding: 1.75rem 0 !important;
+  }
+
+  .counselling-art-therapy-page .skills-section .section-title {
+    font-size: 1.15rem !important;
+    margin-bottom: 1rem !important;
+    padding: 0 1rem !important;
+  }
+
+  .counselling-art-therapy-page .skills-list {
+    grid-template-columns: 1fr !important;
+    gap: 0.6rem !important;
+    padding: 0 1rem !important;
+  }
+
+  .counselling-art-therapy-page .skills-list li {
+    padding: 0.8rem 1rem !important;
+    border-radius: 18px;
+    gap: 0.75rem;
+  }
+
+  .counselling-art-therapy-page .skill-checkmark {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+  }
+
+  .counselling-art-therapy-page .skill-checkmark svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .counselling-art-therapy-page .skill-text {
+    font-size: 0.82rem !important;
+    line-height: 1.5;
+  }
+
+  /* OTHER ADVANCED DIPLOMA PROGRAMS */
+  .counselling-art-therapy-page .other-programs {
+    padding: 2rem 0 !important;
+  }
+
+  .counselling-art-therapy-page .other-programs .section-title {
+    font-size: 1.15rem !important;
+    margin-bottom: 1rem !important;
+    padding: 0 1rem !important;
+  }
+
+  .counselling-art-therapy-page .programs-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+  }
+
+  .counselling-art-therapy-page .program-card {
+    padding: 1rem !important;
+    border-radius: 10px;
+    gap: 0.75rem;
+  }
+
+  .counselling-art-therapy-page .program-icon-wrapper {
+    width: 44px;
+    height: 44px;
+    padding: 9px;
+  }
+
+  .counselling-art-therapy-page .program-card p {
+    font-size: 0.85rem !important;
+    line-height: 1.35;
+  }
+}
+
+@media (max-width: 480px) {
+  .counselling-art-therapy-page .skills-section .section-title,
+  .counselling-art-therapy-page .other-programs .section-title {
+    font-size: 1.05rem !important;
+    padding: 0 0.875rem !important;
+  }
+
+  .counselling-art-therapy-page .skills-list {
+    padding: 0 0.875rem !important;
+  }
+
+  .counselling-art-therapy-page .skill-text {
+    font-size: 0.78rem !important;
+  }
+
+  .counselling-art-therapy-page .program-icon-wrapper {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+  }
+
+  .counselling-art-therapy-page .program-card p {
+    font-size: 0.82rem !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .counselling-art-therapy-page .skill-text {
+    font-size: 0.76rem !important;
+  }
+
+  .counselling-art-therapy-page .program-card p {
+    font-size: 0.8rem !important;
+  }
+}
+
+/* =========================================================
+   Mobile typography: keep ONE consistent font across this page
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .counselling-art-therapy-page {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .counselling-art-therapy-page h1,
+  .counselling-art-therapy-page h2,
+  .counselling-art-therapy-page h3,
+  .counselling-art-therapy-page h4,
+  .counselling-art-therapy-page p,
+  .counselling-art-therapy-page li,
+  .counselling-art-therapy-page a,
+  .counselling-art-therapy-page button,
+  .counselling-art-therapy-page input,
+  .counselling-art-therapy-page textarea,
+  .counselling-art-therapy-page select,
+  .counselling-art-therapy-page label,
+  .counselling-art-therapy-page span {
+    font-family: inherit !important;
+  }
+}
+
+/* =========================================================
+   Global headings: keep ONE consistent font for all section headings
+   (applies to all screen sizes)
+   ========================================================= */
+
+.counselling-art-therapy-page h1,
+.counselling-art-therapy-page h2,
+.counselling-art-therapy-page h3,
+.counselling-art-therapy-page h4,
+.counselling-art-therapy-page h5,
+.counselling-art-therapy-page h6,
+.counselling-art-therapy-page .section-title,
+.counselling-art-therapy-page .section-title-white,
+.counselling-art-therapy-page .overview-title,
+.counselling-art-therapy-page .highlights-title,
+.counselling-art-therapy-page .learning-outcomes h2.section-title {
+  font-family: 'Roboto', sans-serif !important;
+}
+
+/* =========================================================
+   Mobile spacing: reduce space ABOVE COURSE SYLLABUS buttons
+   (Art Therapy inherits base syllabus styles from shared CSS)
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .counselling-art-therapy-page .course-syllabus .syllabus-header {
+    margin-bottom: 1.1rem !important;
+    gap: 0.5rem !important;
+  }
+
+  .counselling-art-therapy-page .course-syllabus .syllabus-header .section-title {
+    margin-bottom: 0 !important;
+  }
+
+  .counselling-art-therapy-page .course-syllabus .syllabus-buttons {
+    margin-top: 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .counselling-art-therapy-page .course-syllabus .syllabus-header {
+    margin-bottom: 0.75rem !important;
+    gap: 0.3rem !important;
   }
 }

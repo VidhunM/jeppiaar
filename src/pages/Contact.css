@@ -360,6 +360,20 @@
     word-wrap: break-word;
   }
 
+  /* Fix extra gap between "Queries" and email on iPhone/Android:
+     global.css adds min-height:44px + big padding to ALL <a> on touch devices */
+  .contact-info-content h3 {
+    margin-bottom: 0.2rem;
+  }
+
+  .contact-page .contact-info-content a.contact-value {
+    padding: 0 !important;
+    min-height: unset !important;
+    min-width: unset !important;
+    line-height: 1.35;
+    display: inline-block;
+  }
+
   .contact-form {
     gap: 1rem;
   }
@@ -475,6 +489,18 @@
   .contact-info-content p {
     font-size: 0.9rem;
     line-height: 1.5;
+  }
+
+  /* Keep "Queries" + email tight on small screens */
+  .contact-info-content h3 {
+    margin-bottom: 0.15rem;
+  }
+
+  .contact-page .contact-info-content a.contact-value {
+    padding: 0 !important;
+    min-height: unset !important;
+    min-width: unset !important;
+    line-height: 1.3;
   }
 
   .contact-form-section {

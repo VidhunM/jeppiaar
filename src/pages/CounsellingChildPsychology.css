@@ -796,8 +796,7 @@ img {
 /* Mobile typography normalization for Learning Outcomes (iPhone/Android) */
 @media (max-width: 768px) {
   .learning-outcomes h2.section-title {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 1.25rem !important;
     font-weight: 800;
     letter-spacing: 0.06em;
@@ -1839,7 +1838,7 @@ img {
     grid-template-rows: auto;
     gap: 1rem;
     width: 100%;
-    justify-items: center;
+    justify-items: start;
   }
 
   .batch-box {
@@ -1855,7 +1854,8 @@ img {
     margin-bottom: 0.5rem;
   }
 
-  .batch-details {
+  .batch-details,
+  .highlights-section .batch-details {
     text-align: left;
     padding-left: 0;
     display: flex;
@@ -1864,7 +1864,8 @@ img {
     gap: 0.4rem;
   }
 
-  .batch-details li {
+  .batch-details li,
+  .highlights-section .batch-details li {
     font-size: 0.8rem;
     text-align: left;
     position: relative;
@@ -1874,7 +1875,8 @@ img {
     max-width: 100%;
   }
 
-  .batch-details li::before {
+  .batch-details li::before,
+  .highlights-section .batch-details li::before {
     content: '•';
     position: absolute;
     left: 0;
@@ -3066,6 +3068,350 @@ img {
   .skills-list li {
     display: -ms-flexbox;
     display: flex;
+  }
+}
+
+/* =========================================================
+   Mobile typography: make the top "ADVANCED DIPLOMA..." heading
+   + description smaller on iPhone/Android
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .counselling-child-psychology-page .overview-section .overview-title,
+  .counselling-child-psychology-page .overview-title {
+    font-size: 1.25rem !important;
+    line-height: 1.2;
+    letter-spacing: 0.4px;
+  }
+
+  .counselling-child-psychology-page .overview-section .overview-text p,
+  .counselling-child-psychology-page .overview-text p {
+    font-size: 0.82rem !important;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 480px) {
+  .counselling-child-psychology-page .overview-section .overview-title,
+  .counselling-child-psychology-page .overview-title {
+    font-size: 1.05rem !important;
+    letter-spacing: 0.35px;
+  }
+
+  .counselling-child-psychology-page .overview-section .overview-text p,
+  .counselling-child-psychology-page .overview-text p {
+    font-size: 0.78rem !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .counselling-child-psychology-page .overview-section .overview-title,
+  .counselling-child-psychology-page .overview-title {
+    font-size: 0.98rem !important;
+  }
+
+  .counselling-child-psychology-page .overview-section .overview-text p,
+  .counselling-child-psychology-page .overview-text p {
+    font-size: 0.76rem !important;
+  }
+}
+
+/* =========================================================
+   Mobile sizing: COURSE FEE section (iPhone/Android)
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .counselling-child-psychology-page .course-fee {
+    padding: 1.75rem 0 !important;
+  }
+
+  .counselling-child-psychology-page .course-fee .section-title {
+    font-size: 1.15rem !important;
+    margin-bottom: 1rem !important;
+    padding: 0 1rem !important;
+  }
+
+  .counselling-child-psychology-page .fee-wrapper {
+    padding: 1rem !important;
+  }
+
+  .counselling-child-psychology-page .fee-content {
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+  }
+
+  .counselling-child-psychology-page .main-fee {
+    padding: 0.75rem 0.25rem !important;
+    min-height: unset !important;
+  }
+
+  .counselling-child-psychology-page .fee-label {
+    font-size: 0.9rem !important;
+  }
+
+  .counselling-child-psychology-page .fee-amount {
+    font-size: 2.6rem !important;
+    line-height: 1.1;
+  }
+
+  .counselling-child-psychology-page .fee-note {
+    font-size: 0.82rem !important;
+  }
+
+  .counselling-child-psychology-page .fee-options {
+    grid-template-columns: 1fr !important;
+    gap: 0.6rem !important;
+  }
+
+  .counselling-child-psychology-page .fee-option {
+    padding: 1rem !important;
+  }
+
+  .counselling-child-psychology-page .fee-option-label {
+    font-size: 0.7rem !important;
+  }
+
+  .counselling-child-psychology-page .fee-option-amount {
+    font-size: 1.25rem !important;
+  }
+
+  .counselling-child-psychology-page .fee-month-text {
+    font-size: 0.75rem !important;
+  }
+
+  .counselling-child-psychology-page .fee-option-note {
+    font-size: 0.7rem !important;
+  }
+
+  .counselling-child-psychology-page .fee-note-section {
+    padding: 0.75rem 1rem !important;
+  }
+
+  .counselling-child-psychology-page .fee-note-section p {
+    font-size: 0.78rem !important;
+  }
+
+  .counselling-child-psychology-page .info-icon {
+    width: 18px;
+    height: 18px;
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .counselling-child-psychology-page .course-fee {
+    padding: 1.5rem 0 !important;
+  }
+
+  .counselling-child-psychology-page .course-fee .section-title {
+    font-size: 1.05rem !important;
+    padding: 0 0.875rem !important;
+  }
+
+  .counselling-child-psychology-page .fee-wrapper {
+    padding: 0.875rem !important;
+  }
+
+  .counselling-child-psychology-page .fee-amount {
+    font-size: 2.2rem !important;
+  }
+
+  .counselling-child-psychology-page .fee-option-amount {
+    font-size: 1.1rem !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .counselling-child-psychology-page .fee-amount {
+    font-size: 2rem !important;
+  }
+
+  .counselling-child-psychology-page .fee-option-amount {
+    font-size: 1rem !important;
+  }
+}
+
+/* =========================================================
+   Mobile sizing: SKILLS + OTHER ADVANCED DIPLOMA PROGRAMS
+   ========================================================= */
+
+@media (max-width: 768px) {
+  /* SKILLS */
+  .counselling-child-psychology-page .skills-section {
+    padding: 1.75rem 0 !important;
+  }
+
+  .counselling-child-psychology-page .skills-section .section-title {
+    font-size: 1.15rem !important;
+    margin-bottom: 1rem !important;
+    padding: 0 1rem !important;
+  }
+
+  .counselling-child-psychology-page .skills-list {
+    grid-template-columns: 1fr !important;
+    gap: 0.6rem !important;
+    padding: 0 1rem !important;
+  }
+
+  .counselling-child-psychology-page .skills-list li {
+    padding: 0.8rem 1rem !important;
+    border-radius: 18px;
+    gap: 0.75rem;
+  }
+
+  .counselling-child-psychology-page .skill-checkmark {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+  }
+
+  .counselling-child-psychology-page .skill-checkmark svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .counselling-child-psychology-page .skill-text {
+    font-size: 0.82rem !important;
+    line-height: 1.5;
+  }
+
+  /* OTHER ADVANCED DIPLOMA PROGRAMS */
+  .counselling-child-psychology-page .other-programs {
+    padding: 2rem 0 !important;
+  }
+
+  .counselling-child-psychology-page .other-programs .section-title {
+    font-size: 1.15rem !important;
+    margin-bottom: 1rem !important;
+    padding: 0 1rem !important;
+  }
+
+  .counselling-child-psychology-page .programs-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+  }
+
+  .counselling-child-psychology-page .program-card {
+    padding: 1rem !important;
+    border-radius: 10px;
+    gap: 0.75rem;
+  }
+
+  .counselling-child-psychology-page .program-icon-wrapper {
+    width: 44px;
+    height: 44px;
+    padding: 9px;
+  }
+
+  .counselling-child-psychology-page .program-card p {
+    font-size: 0.85rem !important;
+    line-height: 1.35;
+  }
+}
+
+@media (max-width: 480px) {
+  .counselling-child-psychology-page .skills-section .section-title,
+  .counselling-child-psychology-page .other-programs .section-title {
+    font-size: 1.05rem !important;
+    padding: 0 0.875rem !important;
+  }
+
+  .counselling-child-psychology-page .skills-list {
+    padding: 0 0.875rem !important;
+  }
+
+  .counselling-child-psychology-page .skill-text {
+    font-size: 0.78rem !important;
+  }
+
+  .counselling-child-psychology-page .program-icon-wrapper {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+  }
+
+  .counselling-child-psychology-page .program-card p {
+    font-size: 0.82rem !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .counselling-child-psychology-page .skill-text {
+    font-size: 0.76rem !important;
+  }
+
+  .counselling-child-psychology-page .program-card p {
+    font-size: 0.8rem !important;
+  }
+}
+
+/* =========================================================
+   Mobile typography: keep ONE consistent font across this page
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .counselling-child-psychology-page {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .counselling-child-psychology-page h1,
+  .counselling-child-psychology-page h2,
+  .counselling-child-psychology-page h3,
+  .counselling-child-psychology-page h4,
+  .counselling-child-psychology-page p,
+  .counselling-child-psychology-page li,
+  .counselling-child-psychology-page a,
+  .counselling-child-psychology-page button,
+  .counselling-child-psychology-page input,
+  .counselling-child-psychology-page textarea,
+  .counselling-child-psychology-page select,
+  .counselling-child-psychology-page label,
+  .counselling-child-psychology-page span {
+    font-family: inherit !important;
+  }
+}
+
+/* =========================================================
+   Global headings: keep ONE consistent font for all section headings
+   (applies to all screen sizes)
+   ========================================================= */
+
+.counselling-child-psychology-page h1,
+.counselling-child-psychology-page h2,
+.counselling-child-psychology-page h3,
+.counselling-child-psychology-page h4,
+.counselling-child-psychology-page h5,
+.counselling-child-psychology-page h6,
+.counselling-child-psychology-page .section-title,
+.counselling-child-psychology-page .section-title-white,
+.counselling-child-psychology-page .overview-title,
+.counselling-child-psychology-page .highlights-title {
+  font-family: 'Roboto', sans-serif !important;
+}
+
+/* =========================================================
+   Mobile spacing: reduce space ABOVE COURSE SYLLABUS buttons
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .counselling-child-psychology-page .course-syllabus .syllabus-header {
+    margin-bottom: 1.1rem !important;
+    gap: 0.5rem !important;
+  }
+
+  .counselling-child-psychology-page .course-syllabus .syllabus-header .section-title {
+    margin-bottom: 0 !important;
+  }
+
+  .counselling-child-psychology-page .course-syllabus .syllabus-buttons {
+    margin-top: 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .counselling-child-psychology-page .course-syllabus .syllabus-header {
+    margin-bottom: 0.75rem !important;
+    gap: 0.3rem !important;
   }
 }
 
