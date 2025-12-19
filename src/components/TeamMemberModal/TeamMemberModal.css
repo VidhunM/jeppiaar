@@ -82,12 +82,18 @@
   height: 180px;
   border-radius: 12px;
   overflow: hidden;
+  /* Photo frame */
+  background: #fff;
+  border: 2px solid rgba(14, 5, 41, 0.18);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 
 .team-modal-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
+  display: block;
 }
 
 .team-modal-title-section {
@@ -177,6 +183,7 @@
   .team-modal-image {
     width: 150px;
     height: 150px;
+    border-radius: 14px;
   }
 
   .team-modal-name {
@@ -222,6 +229,7 @@
   .team-modal-image {
     width: 120px;
     height: 120px;
+    border-radius: 14px;
   }
 
   .team-modal-name {
