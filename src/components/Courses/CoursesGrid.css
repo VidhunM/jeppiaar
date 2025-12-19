@@ -282,7 +282,7 @@
   .courses-section .courses-section-title {
     font-size: 2rem;
     margin: 0 0 0.7rem 0;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-family: Helvetica, sans-serif;
   }
 
   .courses-section .courses-description-text {
@@ -347,7 +347,7 @@
   .courses-section .courses-section-title {
     font-size: 1.75rem;
     margin: 0 0 0.65rem 0;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-family: Helvetica, sans-serif;
   }
 
   .courses-section .courses-description {
@@ -454,7 +454,7 @@
   .courses-section .courses-section-title {
     font-size: 1.5rem;
     margin: 0 0 0.6rem 0;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-family: Helvetica, sans-serif;
   }
 
   .courses-heading .courses-heading-line {

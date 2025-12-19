@@ -187,13 +187,13 @@
   object-fit: contain;
 }
 
-.apply-modal-logo-text h3 {
-  font-size: 0.85rem;
-  font-weight: 700;
-  margin: 0 0 0.25rem 0;
-  color: white;
-  font-family: 'Roboto', sans-serif;
-}
+  .apply-modal-logo-text h3 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin: 0 0 0.25rem 0;
+    color: white;
+    font-family: Helvetica, sans-serif;
+  }
 
 .apply-modal-logo-text p {
   font-size: 0.65rem;
@@ -380,6 +380,7 @@
 
   .apply-modal-title {
     font-size: 0.98rem;
+    font-family: Helvetica, sans-serif;
   }
 
   .apply-form-row {
@@ -454,6 +455,7 @@
 
   .apply-modal-title {
     font-size: 0.9rem;
+    font-family: Helvetica, sans-serif;
   }
 
   .apply-modal-form input,

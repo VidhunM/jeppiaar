@@ -177,6 +177,7 @@
   .section-title {
     font-size: 2rem;
     margin-bottom: 2.5rem;
+    font-family: Helvetica, sans-serif;
   }
 
   .testimonial-card {
@@ -187,6 +188,7 @@
 
   .testimonial-title {
     font-size: 1.1rem;
+    font-family: Helvetica, sans-serif;
   }
 
   .testimonial-quote {
@@ -213,6 +215,7 @@
   .section-title {
     font-size: 1.2rem !important;
     margin-bottom: 2rem;
+    font-family: Helvetica, sans-serif;
   }
 
   .testimonials-slider {
@@ -262,6 +265,7 @@
     font-size: 1.05rem;
     word-wrap: break-word;
     overflow-wrap: break-word;
+    font-family: Helvetica, sans-serif;
   }
 
   .testimonial-quote {
@@ -308,6 +312,7 @@
   .section-title {
     font-size: 1.1rem !important;
     margin-bottom: 1.5rem;
+    font-family: Helvetica, sans-serif;
   }
 
   .testimonials-slider {
@@ -357,6 +362,7 @@
     margin-bottom: 0.75rem;
     word-wrap: break-word;
     overflow-wrap: break-word;
+    font-family: Helvetica, sans-serif;
   }
 
   .testimonial-quote {
@@ -528,6 +534,7 @@
 
   .testimonial-title {
     font-size: 0.95rem;
+    font-family: Helvetica, sans-serif;
   }
 
   .testimonial-quote {

@@ -649,6 +649,7 @@
 
   .hero-text h1 {
     font-size: 2rem;
+    font-family: Helvetica, sans-serif;
   }
 
   .tagline {
@@ -807,6 +808,7 @@
     width: 100%;
     margin: 0 0 0.4rem 0;
     line-height: 1.3;
+    font-family: Helvetica, sans-serif;
   }
 
   .hero-programs-bold-title {
@@ -815,6 +817,7 @@
     width: 100%;
     margin: 0;
     line-height: 1.3;
+    font-family: Helvetica, sans-serif;
   }
 
   .hero-programs-bubbles {
@@ -877,6 +880,7 @@
     margin: 0 0 0.15rem 0;
     line-height: 1.25;
     letter-spacing: 0.06em;
+    font-family: Helvetica, sans-serif;
   }
 
   .hero-programs-bold-title {
@@ -885,6 +889,7 @@
     width: 100%;
     margin: 0;
     line-height: 1.25;
+    font-family: Helvetica, sans-serif;
   }
 
   .hero-programs-bubbles {
@@ -931,6 +936,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    font-family: Helvetica, sans-serif;
   }
 
   .tagline {
@@ -1125,6 +1131,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    font-family: Helvetica, sans-serif;
   }
 
   .tagline {
@@ -1278,6 +1285,7 @@
     margin: 0 0 0.12rem 0;
     line-height: 1.25;
     letter-spacing: 0.055em;
+    font-family: Helvetica, sans-serif;
   }
 
   .hero-programs-bold-title {
@@ -1286,6 +1294,7 @@
     text-align: center;
     width: 100%;
     line-height: 1.25;
+    font-family: Helvetica, sans-serif;
   }
 
   .hero-programs-bubbles {
@@ -1349,6 +1358,7 @@
     margin: 0 0 0.1rem 0;
     line-height: 1.22;
     letter-spacing: 0.05em;
+    font-family: Helvetica, sans-serif;
   }
 
   .hero-programs-bold-title {
@@ -1357,6 +1367,7 @@
     text-align: center;
     width: 100%;
     line-height: 1.22;
+    font-family: Helvetica, sans-serif;
   }
 
   .hero-programs-bubbles {
