@@ -12,6 +12,20 @@
   align-items: end;
 }
 
+@media (max-width: 1440px) {
+  .counselling-art-therapy-page .highlights-section .highlights-content {
+    grid-template-columns: 40% 55%;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .counselling-art-therapy-page .highlights-section .highlights-content {
+    grid-template-columns: 42% 53%;
+    gap: 1.5rem;
+  }
+}
+
 .counselling-art-therapy-page .highlights-section .highlights-image {
   width: 100%;
   display: flex;

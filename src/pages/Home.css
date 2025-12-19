@@ -59,6 +59,27 @@
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
+@media (max-width: 1440px) {
+  .collaboration-section h2 {
+    font-size: 2.1rem;
+  }
+  .university-name {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .collaboration-section h2 {
+    font-size: 1.8rem;
+  }
+  .university-name {
+    font-size: 1.6rem;
+  }
+  .accreditation-text {
+    font-size: 1.05rem;
+  }
+}
+
 /* Collaboration heading: single line on desktop with correct spacing */
 .collaboration-heading .collaboration-heading-line {
   display: inline;
