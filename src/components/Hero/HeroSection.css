@@ -818,14 +818,14 @@
   }
 
   .hero-programs-bubbles {
+    gap: 1.25rem;
+    margin-top: 0;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     padding-left: 0;
     padding-right: 0;
     margin-right: 0;
-    gap: 0.7rem;
-    margin-top: 0;
-    flex-wrap: wrap;
     width: 100%;
     display: flex;
     max-width: 100%;
@@ -847,7 +847,7 @@
   
   .hero-program-bubble:nth-child(1),
   .hero-program-bubble:nth-child(2) {
-    margin-bottom: 0.7rem;
+    margin-bottom: 1.25rem;
   }
 
   .hero-programs-section {
@@ -888,7 +888,7 @@
   }
 
   .hero-programs-bubbles {
-    gap: 0.6rem;
+    gap: 1.25rem;
     margin-top: 0;
     margin-bottom: 0.25rem;
   }
@@ -1061,7 +1061,7 @@
     padding-left: 0;
     padding-right: 0;
     margin-right: 0;
-    gap: 1rem;
+    gap: 1.25rem;
     flex-wrap: wrap;
     width: 100%;
     display: flex;
@@ -1084,7 +1084,7 @@
   
   .hero-program-bubble:nth-child(1),
   .hero-program-bubble:nth-child(2) {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -1289,7 +1289,7 @@
   }
 
   .hero-programs-bubbles {
-    gap: 0.55rem;
+    gap: 1.25rem;
     margin-top: 0;
     flex-wrap: wrap;
     justify-content: center;
@@ -1319,7 +1319,7 @@
   
   .hero-program-bubble:nth-child(1),
   .hero-program-bubble:nth-child(2) {
-    margin-bottom: 0.55rem;
+    margin-bottom: 1.25rem;
   }
 
   .hero-programs-section {
@@ -1362,6 +1362,7 @@
   .hero-programs-bubbles {
     margin-top: 0;
     margin-bottom: 0.25rem;
+    gap: 1.25rem;
   }
 }
 
