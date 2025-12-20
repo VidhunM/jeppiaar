@@ -31,21 +31,21 @@
 /* Prevent other Diploma page CSS (global .highlights-*) from affecting Art Therapy */
 .counselling-art-therapy-page .highlights-section .highlights-content {
   display: grid;
-  grid-template-columns: 37% 60%;
+  grid-template-columns: 50% 45%;
   gap: 3rem;
   align-items: end;
 }
 
 @media (max-width: 1440px) {
   .counselling-art-therapy-page .highlights-section .highlights-content {
-    grid-template-columns: 40% 55%;
+    grid-template-columns: 53% 42%;
     gap: 2rem;
   }
 }
 
 @media (max-width: 1200px) {
   .counselling-art-therapy-page .highlights-section .highlights-content {
-    grid-template-columns: 42% 53%;
+    grid-template-columns: 55% 40%;
     gap: 1.5rem;
   }
 }
@@ -58,11 +58,52 @@
 }
 
 .counselling-art-therapy-page .highlights-section .highlights-image img {
-  width: 100%;
+  width: 140%;
   height: auto;
   display: block;
   object-fit: contain;
-  transform: none;
+  transform: translateX(60px);
+  max-width: none;
+  position: relative;
+  z-index: 1;
+}
+
+.counselling-art-therapy-page .highlights-section {
+  padding: 2rem 0 0 0;
+}
+
+.counselling-art-therapy-page .highlights-section .highlights-text {
+  padding-right: 2%;
+  padding-bottom: 1.5rem;
+  padding-top: 0;
+}
+
+.counselling-art-therapy-page .highlights-section .highlights-subtitle {
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+  margin-top: 0;
+}
+
+.counselling-art-therapy-page .highlights-section .highlights-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.counselling-art-therapy-page .highlights-section .batch-box {
+  padding: 1rem;
+}
+
+.counselling-art-therapy-page .highlights-section .batch-box h3 {
+  font-size: 0.95rem;
+  padding-left: 2.5rem;
+}
+
+.counselling-art-therapy-page .highlights-section .batch-details {
+  padding-left: 2.5rem;
+}
+
+.counselling-art-therapy-page .highlights-section .batch-details li {
+  font-size: 0.85rem;
 }
 
 @media (max-width: 768px) {
