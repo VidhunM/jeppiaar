@@ -50,6 +50,7 @@ const CoursesGrid = ({ onKnowMoreClick }) => {
         <div className="courses-description">
           <h2 className="courses-section-title courses-heading scroll-from-center">
             <span className="courses-heading-line courses-heading-line-1">OUR ADVANCED</span>
+            {' '}
             <span className="courses-heading-line courses-heading-line-2">DIPLOMA COURSES</span>
           </h2>
           <p className="courses-description-text scroll-from-center">

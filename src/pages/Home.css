@@ -445,6 +445,7 @@
   display: block !important;
   visibility: visible !important;
   opacity: 1 !important;
+  margin-top: -7.5rem; /* Moved upwards even further */
 }
 
 /* Fix: banner uses scroll-from-left (transform) which can break layout on iOS; keep it in-place */
@@ -679,6 +680,7 @@
     margin-left: 2rem;
     max-width: 90%;
     padding: 2rem 0;
+    margin-top: -6.5rem; /* Moved upwards even further */
   }
 
   .banner-content h2 {
@@ -827,6 +829,7 @@
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
+    margin-top: -5.5rem; /* Moved upwards even further */
   }
 
   .banner-content h2 {
@@ -1055,6 +1058,7 @@
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
+    margin-top: -3.5rem; /* Moved upwards even further */
   }
 
   .banner-content h2 {

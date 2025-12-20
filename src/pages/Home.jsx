@@ -157,11 +157,7 @@ const Home = () => {
             (Accredited with A+ Grade by NAAC in the Third Cycle & 36th Rank among the Indian Universities in NIRF-2025)
           </p>
           <div className="accreditation-badges">
-            <div className="badge scroll-from-left">
-              <span className="badge-bold">IAO</span>
-              <span className="badge-regular">Accredited</span>
-            </div>
-            <div className="badge scroll-from-right">
+            <div className="badge animate-on-scroll">
               <span className="badge-bold">Skill India</span>
               <span className="badge-regular">Approved</span>
             </div>
