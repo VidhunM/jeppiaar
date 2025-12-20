@@ -127,12 +127,12 @@ const Header = () => {
             <div 
               className="nav-dropdown"
               onMouseEnter={() => {
-                if (window.innerWidth > 968) {
+                if (window.innerWidth > 768) {
                   setIsDropdownOpen(true);
                 }
               }}
               onMouseLeave={() => {
-                if (window.innerWidth > 968) {
+                if (window.innerWidth > 768) {
                   setIsDropdownOpen(false);
                 }
               }}

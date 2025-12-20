@@ -178,7 +178,7 @@
   transform: rotate(180deg);
 }
 
-@media (max-width: 968px) {
+@media (max-width: 768px) {
   .nav-dropdown:hover .dropdown-arrow {
     transform: none;
   }
@@ -267,7 +267,7 @@
   transition: all 0.3s ease;
 }
 
-@media (max-width: 968px) {
+@media (max-width: 768px) {
   .header-container {
     padding-top: 0.6rem;
     padding-bottom: 0.6rem;

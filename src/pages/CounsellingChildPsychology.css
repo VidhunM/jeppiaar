@@ -1781,7 +1781,7 @@ img {
 }
 
 /* Responsive Design */
-@media (max-width: 968px) {
+@media (max-width: 768px) {
   .counselling-child-psychology-page {
     padding-top: calc(120px + env(safe-area-inset-top));
     -webkit-overflow-scrolling: touch;
@@ -2922,7 +2922,7 @@ img {
 }
 
 /* Landscape Orientation Fixes for Mobile */
-@media (max-width: 968px) and (orientation: landscape) {
+@media (max-width: 768px) and (orientation: landscape) {
   .program-hero-banner {
     padding: 1.5rem 1rem;
   }

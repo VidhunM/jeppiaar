@@ -22,7 +22,7 @@
   animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 
-@media (max-width: 968px) {
+@media (max-width: 768px) {
   .courses-page {
     padding-top: 70px;
   }

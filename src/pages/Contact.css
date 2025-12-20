@@ -278,7 +278,7 @@
 }
 
 /* Responsive Design */
-@media (max-width: 968px) {
+@media (max-width: 768px) {
   .contact-page {
     padding-top: 120px;
     -webkit-overflow-scrolling: touch;

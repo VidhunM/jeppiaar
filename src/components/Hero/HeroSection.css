@@ -670,7 +670,7 @@
   margin: 0;
 }
 
-@media (max-width: 968px) {
+@media (max-width: 768px) {
   .hero-slide {
     height: 50vh;
     min-height: 500px;

@@ -582,7 +582,7 @@
 }
 
 /* Responsive Styles */
-@media (max-width: 968px) {
+@media (max-width: 768px) {
   .about-page {
     padding-top: calc(115px + env(safe-area-inset-top, 0px));
   }

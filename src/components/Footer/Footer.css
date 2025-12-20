@@ -240,7 +240,7 @@
   }
 }
 
-@media (max-width: 968px) {
+@media (max-width: 768px) {
   .footer {
     padding: 3rem 1.5rem 1.5rem;
   }

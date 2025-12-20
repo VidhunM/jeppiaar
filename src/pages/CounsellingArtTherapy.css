@@ -1,8 +1,32 @@
 /* Ensure hero heading isn't hidden behind the fixed header */
 .counselling-art-therapy-page {
-  padding-top: 160px;
+  padding-top: 152px; /* Adjusted to match header height exactly */
   overflow-x: hidden;
 }
+
+/* Hero Banner Section */
+.program-hero-banner {
+  background: linear-gradient(180deg, #0E0529 0%, #5A556A 100%);
+  color: white;
+  padding: 5rem 2rem;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  margin-top: 0 !important; /* Remove top margin that causes white space */
+}
+
+.program-hero-banner h1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  color: white;
+  animation: fadeInUp 0.8s ease-out;
+}
+
 
 /* Prevent other Diploma page CSS (global .highlights-*) from affecting Art Therapy */
 .counselling-art-therapy-page .highlights-section .highlights-content {
@@ -41,10 +65,19 @@
   transform: none;
 }
 
-@media (max-width: 968px) {
+@media (max-width: 768px) {
   .counselling-art-therapy-page {
-    padding-top: calc(120px + env(safe-area-inset-top));
+    padding-top: 0; /* Let the padding be handled by individual components or specific rules */
     -webkit-overflow-scrolling: touch;
+  }
+
+  .program-hero-banner {
+    padding: 3rem 1.5rem;
+    margin-top: 80px; /* Reduced for mobile header */
+  }
+
+  .program-hero-banner h1 {
+    font-size: 24px;
   }
 
   /* Mobile/tablet: force single column so image doesn't shift right */
@@ -86,7 +119,16 @@
 
 @media (max-width: 480px) {
   .counselling-art-therapy-page {
-    padding-top: calc(90px + env(safe-area-inset-top));
+    padding-top: 0;
+  }
+
+  .program-hero-banner {
+    padding: 2.5rem 1rem;
+    margin-top: 70px;
+  }
+
+  .program-hero-banner h1 {
+    font-size: 20px;
   }
 
   .counselling-art-therapy-page .highlights-section .highlights-image {

@@ -311,7 +311,7 @@
   right: 0;
 }
 
-@media (max-width: 968px) {
+@media (max-width: 768px) {
   .lead-generation-section {
     padding: 1.25rem 0 0 0;
   }
