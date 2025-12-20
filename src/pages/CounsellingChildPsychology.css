@@ -74,8 +74,8 @@ img {
    Section: ADVANCED DIPLOMA IN COUNSELLING AND CHILD PSYCHOLOGY
    ============================================ */
 .overview-section {
-  padding: 1.75rem 0;
-  padding-bottom: 3rem;
+  padding: 1.25rem 0;
+  padding-bottom: 2rem;
   background: white;
   overflow: visible;
   position: relative;
@@ -86,7 +86,7 @@ img {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  gap: 2.5rem;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -98,14 +98,14 @@ img {
 
 .overview-section .overview-text {
   align-self: center;
-  padding-right: 2rem;
+  padding-right: 1.5rem;
 }
 
 .overview-section .overview-title {
-  font-size: 1.95rem;
+  font-size: 1.75rem;
   font-weight: 700;
   color: #000;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
   margin-top: 0;
   line-height: 1.15;
   text-transform: uppercase;
@@ -114,10 +114,10 @@ img {
 }
 
 .overview-section .overview-text p {
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   color: #333;
-  line-height: 1.7;
-  margin-bottom: 1.75rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
   margin-top: 0;
 }
 
@@ -125,10 +125,10 @@ img {
   background: #0E0529;
   color: white;
   border: none;
-  padding: 0.8rem 1.75rem;
+  padding: 0.7rem 1.5rem;
   border-radius: 50px;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -151,8 +151,8 @@ img {
   position: relative;
   border-radius: 12px;
   overflow: hidden;
-  width: 90%;
-  max-width: 550px;
+  width: 85%;
+  max-width: 500px;
   align-self: center;
   margin: 0;
   margin-left: auto;
@@ -171,8 +171,8 @@ img {
 
 /* Legacy support - keep old class names working */
 .program-overview {
-  padding: 1.75rem 0;
-  padding-bottom: 3rem;
+  padding: 1.25rem 0;
+  padding-bottom: 2rem;
   background: white;
   overflow: visible;
   position: relative;
@@ -183,7 +183,7 @@ img {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  gap: 2.5rem;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -195,14 +195,14 @@ img {
 
 .overview-text {
   align-self: center;
-  padding-right: 2rem;
+  padding-right: 1.5rem;
 }
 
 .overview-title {
-  font-size: 1.95rem;
+  font-size: 1.75rem;
   font-weight: 700;
   color: #000;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
   margin-top: 0;
   line-height: 1.15;
   text-transform: uppercase;
@@ -211,10 +211,10 @@ img {
 }
 
 .overview-text p {
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   color: #333;
-  line-height: 1.7;
-  margin-bottom: 1.75rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
   margin-top: 0;
 }
 
@@ -222,10 +222,10 @@ img {
   background: #0E0529;
   color: white;
   border: none;
-  padding: 0.8rem 1.75rem;
+  padding: 0.7rem 1.5rem;
   border-radius: 50px;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -248,8 +248,8 @@ img {
   position: relative;
   border-radius: 12px;
   overflow: hidden;
-  width: 90%;
-  max-width: 550px;
+  width: 85%;
+  max-width: 500px;
   align-self: center;
   margin: 0;
   margin-left: auto;
@@ -298,7 +298,7 @@ img {
    Section: Unlock your path to becoming a skilled child counsellor
    ============================================ */
 .highlights-section {
-  padding: 4rem 0 0 0;
+  padding: 3rem 0 0 0;
   background: #0E0529;
   color: white;
   margin-bottom: 2rem;
@@ -308,7 +308,7 @@ img {
 .highlights-section .highlights-content {
   display: grid;
   grid-template-columns: 37% 60%;
-  gap: 3rem;
+  gap: 2.5rem;
   align-items: end;
   min-height: 100%;
   padding-bottom: 0;
@@ -347,7 +347,7 @@ img {
 }
 
 .counselling-child-psychology-page .highlights-section {
-  padding: 0.5rem 0 0 0;
+  padding: 0;
 }
 
 .counselling-child-psychology-page .highlights-section .highlights-image {
@@ -397,16 +397,16 @@ img {
 
 .highlights-section .highlights-text {
   padding-top: 0;
-  padding-bottom: 2.5rem;
+  padding-bottom: 2rem;
   padding-right: 6%;
   display: flex;
   flex-direction: column;
 }
 
 .highlights-section .highlights-subtitle {
-  font-size: 0.95rem;
-  margin-top: 0;
-  margin-bottom: 1.25rem;
+  font-size: 0.9rem;
+  margin-top: -2.5rem;
+  margin-bottom: 0.4rem;
   color: white;
   opacity: 0.95;
   font-family: 'Roboto', sans-serif;
@@ -417,38 +417,38 @@ img {
 .highlights-section .highlights-title {
   font-family: 'Roboto', sans-serif;
   font-weight: 600;
-  font-size: 1.75rem;
+  font-size: 1.6rem;
   line-height: 1.2;
   letter-spacing: 0%;
   text-align: left;
   vertical-align: middle;
   text-transform: uppercase;
   color: white;
-  margin-bottom: 1.5rem;
-  margin-top: 0.5rem;
+  margin-bottom: 1.25rem;
+  margin-top: 0.3rem;
 }
 
 .highlights-section .batch-boxes {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.25rem;
-  margin-bottom: 1.5rem;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 .highlights-section .batch-box {
   background: rgba(90, 85, 106, 0.8);
   border: none;
   border-radius: 12px;
-  padding: 1.25rem;
+  padding: 1rem;
   position: relative;
 }
 
 .highlights-section .batch-icon {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   position: absolute;
-  top: 1.5rem;
-  left: 1.5rem;
+  top: 1.25rem;
+  left: 1.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -456,8 +456,8 @@ img {
 
 .highlights-section .batch-icon::before {
   content: '';
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   background-image: url('../assets/icons/cc02.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -467,26 +467,26 @@ img {
 }
 
 .highlights-section .batch-box h3 {
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: white;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
   margin-top: 0;
-  padding-left: 2rem;
+  padding-left: 1.75rem;
 }
 
 .highlights-section .batch-details {
   list-style: none;
   padding: 0;
   margin: 0;
-  padding-left: 2rem;
+  padding-left: 1.75rem;
 }
 
 .highlights-section .batch-details li {
   color: white;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 0.4rem;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  margin-bottom: 0.3rem;
   position: relative;
   padding-left: 1rem;
 }
@@ -496,7 +496,7 @@ img {
   position: absolute;
   left: 0;
   color: white;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: bold;
 }
 
@@ -504,17 +504,17 @@ img {
   background: white;
   color: #333;
   border: none;
-  padding: 1rem 2rem;
+  padding: 0.8rem 1.75rem;
   border-radius: 50px;
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   cursor: pointer;
   transition: all 0.3s ease;
   width: 100%;
-  max-width: 280px;
+  max-width: 250px;
   margin: 0;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
   display: block;
 }
 
@@ -526,7 +526,7 @@ img {
 
 /* Legacy support - keep old class names working */
 .program-highlights {
-  padding: 4rem 0 0 0;
+  padding: 3rem 0 0 0;
   background: #0E0529;
   color: white;
   margin-bottom: 2rem;
@@ -536,7 +536,7 @@ img {
 .highlights-content {
   display: grid;
   grid-template-columns: 37% 60%;
-  gap: 3rem;
+  gap: 2.5rem;
   align-items: end;
   min-height: 100%;
   padding-bottom: 0;
@@ -607,16 +607,16 @@ img {
 
 .highlights-text {
   padding-top: 0;
-  padding-bottom: 2.5rem;
+  padding-bottom: 2rem;
   padding-right: 6%;
   display: flex;
   flex-direction: column;
 }
 
 .highlights-subtitle {
-  font-size: 0.95rem;
-  margin-top: 0;
-  margin-bottom: 1.25rem;
+  font-size: 0.9rem;
+  margin-top: -2.5rem;
+  margin-bottom: 0.4rem;
   color: white;
   opacity: 0.95;
   font-family: 'Roboto', sans-serif;
@@ -627,38 +627,38 @@ img {
 .highlights-title {
   font-family: 'Roboto', sans-serif;
   font-weight: 600;
-  font-size: 1.75rem;
+  font-size: 1.6rem;
   line-height: 1.2;
   letter-spacing: 0%;
   text-align: left;
   vertical-align: middle;
   text-transform: uppercase;
   color: white;
-  margin-bottom: 1.5rem;
-  margin-top: 0.5rem;
+  margin-bottom: 1.25rem;
+  margin-top: 0.3rem;
 }
 
 .batch-boxes {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.25rem;
-  margin-bottom: 1.5rem;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 .batch-box {
   background: rgba(90, 85, 106, 0.8);
   border: none;
   border-radius: 12px;
-  padding: 1.25rem;
+  padding: 1rem;
   position: relative;
 }
 
 .batch-icon {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   position: absolute;
-  top: 1.5rem;
-  left: 1.5rem;
+  top: 1.25rem;
+  left: 1.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -666,8 +666,8 @@ img {
 
 .batch-icon::before {
   content: '';
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   background-image: url('../assets/icons/cc02.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -677,26 +677,26 @@ img {
 }
 
 .batch-box h3 {
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: white;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
   margin-top: 0;
-  padding-left: 2rem;
+  padding-left: 1.75rem;
 }
 
 .batch-details {
   list-style: none;
   padding: 0;
   margin: 0;
-  padding-left: 2rem;
+  padding-left: 1.75rem;
 }
 
 .batch-details li {
   color: white;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 0.4rem;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  margin-bottom: 0.3rem;
   position: relative;
   padding-left: 1rem;
 }
@@ -706,7 +706,7 @@ img {
   position: absolute;
   left: 0;
   color: white;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: bold;
 }
 
@@ -714,17 +714,17 @@ img {
   background: white;
   color: #333;
   border: none;
-  padding: 1rem 2rem;
+  padding: 0.8rem 1.75rem;
   border-radius: 50px;
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   cursor: pointer;
   transition: all 0.3s ease;
   width: 100%;
-  max-width: 280px;
+  max-width: 250px;
   margin: 0;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
   display: block;
 }
 
@@ -2105,16 +2105,16 @@ img {
 
   .overview-title,
   .highlights-title {
-    font-size: 1.9rem;
+    font-size: 1.75rem;
   }
 
   .section-title,
   .section-title-white {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 
   .highlights-title {
-    font-size: 1.55rem;
+    font-size: 1.45rem;
   }
 
   .vertical-apply-tab {
@@ -2230,17 +2230,17 @@ img {
 
   .overview-title,
   .highlights-title {
-    font-size: 1.55rem;
+    font-size: 1.45rem;
   }
 
   .section-title,
   .section-title-white {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     word-wrap: break-word;
   }
 
   .highlights-title {
-    font-size: 1.35rem;
+    font-size: 1.25rem;
     word-wrap: break-word;
   }
 
@@ -2367,12 +2367,12 @@ img {
 
   .overview-title,
   .highlights-title {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
   .section-title,
   .section-title-white {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
   }
 
   .container {
@@ -3152,14 +3152,14 @@ img {
 @media (max-width: 768px) {
   .counselling-child-psychology-page .overview-section .overview-title,
   .counselling-child-psychology-page .overview-title {
-    font-size: 1.25rem !important;
+    font-size: 1.15rem !important;
     line-height: 1.2;
     letter-spacing: 0.4px;
   }
 
   .counselling-child-psychology-page .overview-section .overview-text p,
   .counselling-child-psychology-page .overview-text p {
-    font-size: 0.82rem !important;
+    font-size: 0.8rem !important;
     line-height: 1.6;
   }
 }
@@ -3167,25 +3167,25 @@ img {
 @media (max-width: 480px) {
   .counselling-child-psychology-page .overview-section .overview-title,
   .counselling-child-psychology-page .overview-title {
-    font-size: 1.05rem !important;
+    font-size: 0.95rem !important;
     letter-spacing: 0.35px;
   }
 
   .counselling-child-psychology-page .overview-section .overview-text p,
   .counselling-child-psychology-page .overview-text p {
-    font-size: 0.78rem !important;
+    font-size: 0.75rem !important;
   }
 }
 
 @media (max-width: 375px) {
   .counselling-child-psychology-page .overview-section .overview-title,
   .counselling-child-psychology-page .overview-title {
-    font-size: 0.98rem !important;
+    font-size: 0.88rem !important;
   }
 
   .counselling-child-psychology-page .overview-section .overview-text p,
   .counselling-child-psychology-page .overview-text p {
-    font-size: 0.76rem !important;
+    font-size: 0.74rem !important;
   }
 }
 
