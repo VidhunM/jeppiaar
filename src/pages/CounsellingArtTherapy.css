@@ -58,7 +58,7 @@
 }
 
 .counselling-art-therapy-page .highlights-section .highlights-image img {
-  width: 140%;
+  width: 125%;
   height: auto;
   display: block;
   object-fit: contain;
@@ -131,7 +131,7 @@
   /* Highlights image: slightly bigger on mobile/tablet */
   .counselling-art-therapy-page .highlights-section .highlights-image {
     width: 100%;
-    max-width: 380px;
+    max-width: 350px;
     margin: 0 auto;
     display: grid;
     place-items: center;
@@ -173,7 +173,7 @@
   }
 
   .counselling-art-therapy-page .highlights-section .highlights-image {
-    max-width: 360px;
+    max-width: 330px;
   }
 
   .counselling-art-therapy-page .highlights-section .highlights-image img {
@@ -183,7 +183,7 @@
 
 @media (max-width: 375px) {
   .counselling-art-therapy-page .highlights-section .highlights-image {
-    max-width: 340px;
+    max-width: 310px;
   }
 
   .counselling-art-therapy-page .highlights-section .highlights-image img {
