@@ -232,7 +232,7 @@ const CounsellingChildPsychology = () => {
           <div className="syllabus-header">
             <h2 className="section-title">COURSE SYLLABUS</h2>
             <div className="syllabus-buttons">
-              <button className="apply-now-btn-syllabus">Apply now</button>
+              <button className="apply-now-btn-syllabus" onClick={openApplyModal}>Apply now</button>
               <button className="download-brochure-btn">Download Brochure</button>
             </div>
           </div>

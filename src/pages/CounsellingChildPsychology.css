@@ -75,11 +75,15 @@ img {
   background: -o-linear-gradient(180deg, #0E0529 0%, #5A556A 100%);
   background: linear-gradient(180deg, #0E0529 0%, #5A556A 100%);
   color: white;
-  padding: 5rem 2rem;
+  padding: 6rem 2rem;
   text-align: center;
   width: 100%;
   position: relative;
   margin-top: 0 !important; /* Removed top margin that caused issues with header */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 12rem;
 }
 
 .program-hero-banner h1 {
@@ -94,6 +98,7 @@ img {
   margin: 0;
   color: white;
   animation: fadeInUp 0.8s ease-out;
+  padding: 2rem 0;
 }
 
 /* ============================================
@@ -141,7 +146,7 @@ img {
 }
 
 .overview-section .overview-text p {
-  font-size: 0.88rem;
+  font-size: 1rem;
   color: #333;
   line-height: 1.6;
   margin-bottom: 1.5rem;
@@ -838,7 +843,7 @@ img {
 }
 
 .outcomes-list li {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   color: #000;
   line-height: 1.7;
   padding-left: 3rem;
@@ -885,7 +890,7 @@ img {
   .learning-outcomes .outcomes-list li {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     line-height: 1.55;
     padding-left: 2.25rem;
   }
@@ -908,7 +913,7 @@ img {
   }
 
   .learning-outcomes .outcomes-list li {
-    font-size: 0.9rem;
+    font-size: 1.05rem;
     padding-left: 2.1rem;
   }
 
@@ -932,11 +937,14 @@ img {
   margin-bottom: 2rem;
   flex-wrap: wrap;
   gap: 1rem;
+  min-height: 3rem;
 }
 
 .syllabus-header .section-title {
   color: white;
   font-size: 1.75rem;
+  align-self: center;
+  margin: 0;
 }
 
 .syllabus-buttons {
@@ -947,6 +955,7 @@ img {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  align-self: center;
 }
 
 /* Mobile: keep COURSE SYLLABUS buttons in a single row and equal size */
@@ -1129,7 +1138,7 @@ img {
 }
 
 .semester-topics li {
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   color: #333;
   padding-left: 3rem;
   position: relative;
@@ -1384,7 +1393,7 @@ img {
 }
 
 .skill-text {
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   color: #000;
   line-height: 1.6;
   flex: 1;
@@ -1428,7 +1437,7 @@ img {
 }
 
 .career-description {
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   line-height: 1.5;
   margin-bottom: 1rem;
   opacity: 0.95;
@@ -1706,7 +1715,7 @@ img {
 
 .program-card p {
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.15rem;
   line-height: 1.5;
   color: #000;
   font-weight: 500;
@@ -1793,7 +1802,7 @@ img {
 
 .faq-answer p {
   color: #666;
-  font-size: 0.85rem;
+  font-size: 1rem;
   line-height: 1.5;
   margin: 0;
 }
@@ -3396,7 +3405,7 @@ img {
   }
 
   .counselling-child-psychology-page .skill-text {
-    font-size: 0.82rem !important;
+    font-size: 0.95rem !important;
     line-height: 1.5;
   }
 
@@ -3429,7 +3438,7 @@ img {
   }
 
   .counselling-child-psychology-page .program-card p {
-    font-size: 0.85rem !important;
+    font-size: 1rem !important;
     line-height: 1.35;
   }
 }
@@ -3446,7 +3455,7 @@ img {
   }
 
   .counselling-child-psychology-page .skill-text {
-    font-size: 0.78rem !important;
+    font-size: 0.9rem !important;
   }
 
   .counselling-child-psychology-page .program-icon-wrapper {
@@ -3456,17 +3465,17 @@ img {
   }
 
   .counselling-child-psychology-page .program-card p {
-    font-size: 0.82rem !important;
+    font-size: 0.95rem !important;
   }
 }
 
 @media (max-width: 375px) {
   .counselling-child-psychology-page .skill-text {
-    font-size: 0.76rem !important;
+    font-size: 0.88rem !important;
   }
 
   .counselling-child-psychology-page .program-card p {
-    font-size: 0.8rem !important;
+    font-size: 0.92rem !important;
   }
 }
 
@@ -3538,5 +3547,29 @@ img {
     margin-bottom: 0.75rem !important;
     gap: 0.3rem !important;
   }
+}
+
+/* =========================================================
+   Typography consistency for key content sections
+   (requested: Overview, Highlights, Learning Outcomes,
+   Course Syllabus cards, Skills, Career Prospects,
+   Other Programs, FAQ)
+   ========================================================= */
+.counselling-child-psychology-page .overview-section .overview-text p,
+.counselling-child-psychology-page .highlights-section .highlights-subtitle,
+.counselling-child-psychology-page .highlights-section .batch-box h3,
+.counselling-child-psychology-page .highlights-section .batch-details li,
+.counselling-child-psychology-page .learning-outcomes .outcomes-list li,
+.counselling-child-psychology-page .course-syllabus .credits,
+.counselling-child-psychology-page .course-syllabus .semester-topics li,
+.counselling-child-psychology-page .skills-section .skill-text,
+.counselling-child-psychology-page .career-prospects .career-title-overlay,
+.counselling-child-psychology-page .career-prospects .career-description,
+.counselling-child-psychology-page .other-programs .program-card p,
+.counselling-child-psychology-page .faq-section .faq-question,
+.counselling-child-psychology-page .faq-section .faq-answer p {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 1rem !important;
+  line-height: 1.55;
 }
 
