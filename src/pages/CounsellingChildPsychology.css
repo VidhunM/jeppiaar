@@ -35,6 +35,33 @@ img {
   overflow-x: hidden;
 }
 
+/* Unified typography: use one font across all sections */
+.counselling-child-psychology-page {
+  font-family: 'Inter', sans-serif !important;
+}
+
+.counselling-child-psychology-page h1,
+.counselling-child-psychology-page h2,
+.counselling-child-psychology-page h3,
+.counselling-child-psychology-page h4,
+.counselling-child-psychology-page h5,
+.counselling-child-psychology-page h6,
+.counselling-child-psychology-page p,
+.counselling-child-psychology-page li,
+.counselling-child-psychology-page a,
+.counselling-child-psychology-page button,
+.counselling-child-psychology-page input,
+.counselling-child-psychology-page textarea,
+.counselling-child-psychology-page select,
+.counselling-child-psychology-page label,
+.counselling-child-psychology-page span,
+.counselling-child-psychology-page .section-title,
+.counselling-child-psychology-page .section-title-white,
+.counselling-child-psychology-page .overview-title,
+.counselling-child-psychology-page .highlights-title {
+  font-family: inherit !important;
+}
+
 .container {
   max-width: 1400px;
   margin: 0 auto;

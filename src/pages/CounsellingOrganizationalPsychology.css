@@ -35,6 +35,33 @@ img {
   overflow-x: hidden;
 }
 
+/* Unified typography: use one font across all sections */
+.counselling-organizational-psychology-page {
+  font-family: 'Inter', sans-serif !important;
+}
+
+.counselling-organizational-psychology-page h1,
+.counselling-organizational-psychology-page h2,
+.counselling-organizational-psychology-page h3,
+.counselling-organizational-psychology-page h4,
+.counselling-organizational-psychology-page h5,
+.counselling-organizational-psychology-page h6,
+.counselling-organizational-psychology-page p,
+.counselling-organizational-psychology-page li,
+.counselling-organizational-psychology-page a,
+.counselling-organizational-psychology-page button,
+.counselling-organizational-psychology-page input,
+.counselling-organizational-psychology-page textarea,
+.counselling-organizational-psychology-page select,
+.counselling-organizational-psychology-page label,
+.counselling-organizational-psychology-page span,
+.counselling-organizational-psychology-page .section-title,
+.counselling-organizational-psychology-page .section-title-white,
+.counselling-organizational-psychology-page .overview-title,
+.counselling-organizational-psychology-page .highlights-title {
+  font-family: inherit !important;
+}
+
 .container {
   max-width: 1400px;
   margin: 0 auto;

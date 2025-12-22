@@ -35,6 +35,33 @@ img {
   overflow-x: hidden;
 }
 
+/* Unified typography: use one font across all sections */
+.counselling-forensic-psychology-page {
+  font-family: 'Inter', sans-serif !important;
+}
+
+.counselling-forensic-psychology-page h1,
+.counselling-forensic-psychology-page h2,
+.counselling-forensic-psychology-page h3,
+.counselling-forensic-psychology-page h4,
+.counselling-forensic-psychology-page h5,
+.counselling-forensic-psychology-page h6,
+.counselling-forensic-psychology-page p,
+.counselling-forensic-psychology-page li,
+.counselling-forensic-psychology-page a,
+.counselling-forensic-psychology-page button,
+.counselling-forensic-psychology-page input,
+.counselling-forensic-psychology-page textarea,
+.counselling-forensic-psychology-page select,
+.counselling-forensic-psychology-page label,
+.counselling-forensic-psychology-page span,
+.counselling-forensic-psychology-page .section-title,
+.counselling-forensic-psychology-page .section-title-white,
+.counselling-forensic-psychology-page .overview-title,
+.counselling-forensic-psychology-page .highlights-title {
+  font-family: inherit !important;
+}
+
 .container {
   max-width: 1400px;
   margin: 0 auto;

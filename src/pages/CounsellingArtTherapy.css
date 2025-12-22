@@ -4,6 +4,32 @@
   overflow-x: hidden;
 }
 
+/* Unified typography: use one font across all sections */
+.counselling-art-therapy-page {
+  font-family: 'Inter', sans-serif !important;
+}
+
+.counselling-art-therapy-page h1,
+.counselling-art-therapy-page h2,
+.counselling-art-therapy-page h3,
+.counselling-art-therapy-page h4,
+.counselling-art-therapy-page h5,
+.counselling-art-therapy-page h6,
+.counselling-art-therapy-page p,
+.counselling-art-therapy-page li,
+.counselling-art-therapy-page a,
+.counselling-art-therapy-page button,
+.counselling-art-therapy-page input,
+.counselling-art-therapy-page textarea,
+.counselling-art-therapy-page select,
+.counselling-art-therapy-page label,
+.counselling-art-therapy-page span,
+.counselling-art-therapy-page .section-title,
+.counselling-art-therapy-page .section-title-white,
+.counselling-art-therapy-page .overview-title,
+.counselling-art-therapy-page .highlights-title {
+  font-family: inherit !important;
+}
 /* Hero Banner Section */
 .program-hero-banner {
   background: linear-gradient(180deg, #0E0529 0%, #5A556A 100%);
