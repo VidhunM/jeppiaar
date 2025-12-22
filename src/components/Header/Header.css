@@ -136,10 +136,10 @@
 .dropdown-toggle {
   display: flex;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.35rem;
 }
 
-.dropdown-toggle > span:first-child {
+.dropdown-label {
   text-decoration: none;
   color: #333;
   font-weight: 500;
@@ -149,11 +149,11 @@
   cursor: pointer;
 }
 
-.dropdown-toggle:hover > span:first-child {
+.dropdown-toggle:hover .dropdown-label {
   color: #1a237e;
 }
 
-.dropdown-toggle > span:first-child::after {
+.dropdown-label::after {
   content: '';
   position: absolute;
   bottom: -5px;
@@ -164,24 +164,39 @@
   transition: width 0.3s ease;
 }
 
-.dropdown-toggle:hover > span:first-child::after {
-  width: calc(100% - 1rem);
+.dropdown-toggle:hover .dropdown-label::after {
+  width: 100%;
 }
 
-.dropdown-arrow {
-  font-size: 0.7rem;
-  transition: transform 0.3s ease;
-  display: inline-block;
+.dropdown-icon {
+  width: 1.15rem;
+  height: 1.15rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+  color: #1f2452;
 }
 
-.nav-dropdown:hover .dropdown-arrow {
+.dropdown-icon svg {
+  width: 100%;
+  height: 100%;
+  stroke: currentColor;
+  fill: none;
+  transform-origin: center;
+  transition: transform 0.2s ease;
+}
+
+.dropdown-icon.open svg {
   transform: rotate(180deg);
 }
 
-@media (max-width: 768px) {
-  .nav-dropdown:hover .dropdown-arrow {
-    transform: none;
-  }
+.dropdown-toggle:hover .dropdown-icon {
+  color: #0f1941;
 }
 
 .dropdown-menu {
@@ -357,11 +372,10 @@
     background: #f8f8f8;
   }
 
-  .dropdown-toggle > span {
+  .dropdown-label {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     text-align: left;
     color: #333;
     font-weight: 500;
@@ -369,18 +383,10 @@
     pointer-events: auto; /* Enable pointer events for reliable tapping on iOS */
   }
 
-  .dropdown-toggle > span:first-child {
-    width: 100%;
-  }
-
-  .dropdown-arrow {
-    transition: transform 0.3s ease;
+  .dropdown-icon {
+    width: 1.25rem;
+    height: 1.25rem;
     margin-left: 0.5rem;
-    pointer-events: none; /* Let clicks pass through the arrow to the toggle */
-  }
-
-  .dropdown-arrow.open {
-    transform: rotate(180deg);
   }
 
   .dropdown-menu {

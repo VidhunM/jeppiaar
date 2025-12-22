@@ -139,18 +139,30 @@ const Header = () => {
             >
               <div
                 className="dropdown-toggle"
+                role="button"
+                aria-expanded={isDropdownOpen}
+                aria-controls="diploma-dropdown"
                 onClick={(e) => {
                   e.preventDefault();
                   e.stopPropagation();
                   setIsDropdownOpen(!isDropdownOpen);
                 }}
               >
-                <span>
-                  Diploma Programs <span className={`dropdown-arrow ${isDropdownOpen ? 'open' : ''}`}>▼</span>
+                <span className="dropdown-label">Diploma Programs</span>
+                <span className={`dropdown-icon ${isDropdownOpen ? 'open' : ''}`} aria-hidden="true">
+                  <svg viewBox="0 0 24 24" focusable="false">
+                    <path
+                      d="M6 9l6 6 6-6"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
                 </span>
               </div>
               {isDropdownOpen && (
-                <div className="dropdown-menu">
+                <div id="diploma-dropdown" className="dropdown-menu">
                   <Link 
                     to="/counselling-child-psychology" 
                     onClick={() => {
@@ -158,7 +170,7 @@ const Header = () => {
                       setIsDropdownOpen(false);
                     }}
                   >
-                    Counselling & Child Psychology
+                    Diploma in Counselling & Child Psychology
                   </Link>
                   <Link 
                     to="/counselling-organizational-psychology" 
@@ -167,7 +179,7 @@ const Header = () => {
                       setIsDropdownOpen(false);
                     }}
                   >
-                    Counselling & Organizational Psychology
+                    Diploma in Counselling & Organizational Psychology
                   </Link>
                   <Link 
                     to="/counselling-forensic-psychology" 
@@ -176,7 +188,7 @@ const Header = () => {
                       setIsDropdownOpen(false);
                     }}
                   >
-                    Counselling & Forensic Psychology
+                    Diploma in Counselling & Forensic Psychology
                   </Link>
                   <Link 
                     to="/counselling-art-therapy" 
@@ -185,7 +197,7 @@ const Header = () => {
                       setIsDropdownOpen(false);
                     }}
                   >
-                    Art Therapy
+                    Diploma in Art Therapy
                   </Link>
                 </div>
               )}
