@@ -1627,6 +1627,12 @@ img {
   color: #000;
 }
 
+.counselling-child-psychology-page .other-programs .section-title,
+.counselling-child-psychology-page .other-programs .program-card,
+.counselling-child-psychology-page .other-programs .program-card p {
+  font-family: 'Inter', sans-serif !important;
+}
+
 .programs-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

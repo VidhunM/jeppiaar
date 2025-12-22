@@ -505,6 +505,13 @@
    Note: Base styles may be shared/global; we scope overrides to page.
    ========================================================= */
 
+/* Typography: Other Advanced Diploma Programs */
+.counselling-art-therapy-page .other-programs .section-title,
+.counselling-art-therapy-page .other-programs .program-card,
+.counselling-art-therapy-page .other-programs .program-card p {
+  font-family: 'Inter', sans-serif !important;
+}
+
 @media (max-width: 768px) {
   /* SKILLS */
   .counselling-art-therapy-page .skills-section {

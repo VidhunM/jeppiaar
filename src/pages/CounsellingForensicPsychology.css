@@ -1644,6 +1644,12 @@ img {
   color: #000;
 }
 
+.counselling-forensic-psychology-page .other-programs .section-title,
+.counselling-forensic-psychology-page .other-programs .program-card,
+.counselling-forensic-psychology-page .other-programs .program-card p {
+  font-family: 'Inter', sans-serif !important;
+}
+
 .programs-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
