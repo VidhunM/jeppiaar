@@ -26,6 +26,23 @@
   margin: 0 auto;
 }
 
+.images-slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.images-track {
+  display: flex;
+  transition: transform 0.45s ease-in-out;
+  width: 100%;
+}
+
+.images-track .image-item {
+  min-width: 100%;
+  justify-content: center;
+}
+
 .image-item {
   grid-column: span 2;
   display: flex;
@@ -73,20 +90,12 @@
   }
 
   .images-grid {
-    grid-template-columns: repeat(6, 1fr);
-    gap: 1.25rem;
+    display: none;
   }
 
-  .image-item {
-    grid-column: span 2;
-  }
-
-  .image-item:nth-child(4) {
-    grid-column: 2 / span 2;
-  }
-
-  .image-item:nth-child(5) {
-    grid-column: 4 / span 2;
+  .images-track .image-item {
+    min-width: 100%;
+    padding: 0 0.5rem;
   }
 }
 
