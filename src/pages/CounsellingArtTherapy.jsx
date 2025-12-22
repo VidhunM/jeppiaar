@@ -198,10 +198,6 @@ const CounsellingArtTherapy = () => {
               <span className="detail-value">12 Months</span>
             </div>
             <div className="detail-item">
-              <span className="detail-label">Fees</span>
-              <span className="detail-value">-</span>
-            </div>
-            <div className="detail-item">
               <span className="detail-label">Eligibility</span>
               <span className="detail-value">Bachelor's degree in any discipline</span>
             </div>
@@ -264,40 +260,6 @@ const CounsellingArtTherapy = () => {
             <p>
               Gain supervised, hands-on experience in therapeutic, educational, or clinical settings such as hospitals, schools, rehabilitation centers, community organizations, or NGOs. These structured internships help you build practical skills, professional confidence, and industry-ready expertise in applying art therapy for mental health and emotional well-being.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Course Fee Section */}
-      <section className="course-fee">
-        <div className="container">
-          <h2 className="section-title">COURSE FEE</h2>
-          <div className="fee-wrapper">
-            <div className="fee-content">
-              <div className="main-fee">
-                <p className="fee-label">Full course fee (Four semesters)</p>
-                <p className="fee-amount">INR 75,000</p>
-                <p className="fee-note">Inclusive of all taxes</p>
-              </div>
-              <div className="fee-right-column">
-                <div className="fee-options">
-                  <div className="fee-option">
-                    <p className="fee-option-label">Each semester fee</p>
-                    <p className="fee-option-amount">INR 18,750</p>
-                    <p className="fee-option-note">Inclusive of all taxes</p>
-                  </div>
-                  <div className="fee-option">
-                    <p className="fee-option-label">EMI starting at</p>
-                    <p className="fee-option-amount">INR 3,125 <span className="fee-month-text">/Month</span></p>
-                    <p className="fee-option-note">Terms & conditions apply</p>
-                  </div>
-                </div>
-                <div className="fee-note-section">
-                  <span className="info-icon">ℹ</span>
-                  <p>Note for online payments</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -376,7 +338,8 @@ const CounsellingArtTherapy = () => {
         <div className="container">
           <h2 className="section-title-white">CAREER PROSPECTS</h2>
           <p className="career-description">
-            With an Art Therapy specialization, this course builds a strong foundation in creative therapeutic practices and prepares you for impactful careers in mental health and wellness. Potential career paths include
+            With an Art Therapy specialization, this course builds a strong foundation in creative therapeutic practices and prepares you for impactful careers in mental health and wellness.
+            <span className="career-secondary-line">Potential career paths include</span>
           </p>
           <div className="career-carousel-wrapper">
             <div className="career-carousel-container">

@@ -30,7 +30,7 @@ img {
 }
 
 .counselling-child-psychology-page {
-  padding-top: 80px;
+  padding-top: 152px; /* Ensure hero isn't hidden behind fixed header */
   -webkit-overflow-scrolling: touch;
   overflow-x: hidden;
 }
@@ -52,14 +52,14 @@ img {
   text-align: center;
   width: 100%;
   position: relative;
-  margin-top: 4rem;
+  margin-top: 0 !important; /* Removed top margin that caused issues with header */
 }
 
 .program-hero-banner h1 {
   font-family: 'Roboto', sans-serif;
   font-weight: 600;
   font-size: 35px;
-  line-height: 100%;
+  line-height: 1.2;
   letter-spacing: 0%;
   text-align: center;
   vertical-align: middle;
@@ -744,7 +744,7 @@ img {
 
 .details-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 0;
   text-align: center;
   background: #f5f5f5;
@@ -1378,52 +1378,71 @@ img {
 
 /* Career Prospects Section */
 .career-prospects {
-  padding: 2rem 0;
+  padding: 1.25rem 0;
   background: #0E0529;
   color: white;
 }
 
+.career-prospects .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2.25rem;
+}
+
 .section-title-white {
-  font-size: 1.75rem;
+  font-size: 1.45rem;
   font-weight: 700;
   color: white;
-  margin-bottom: 0.875rem;
+  margin-bottom: 0.6rem;
   text-transform: uppercase;
-  padding-left: 5rem;
+  padding-left: 0;
+  text-align: left;
 }
 
 .career-description {
-  font-size: 1rem;
-  line-height: 1.7;
-  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
   opacity: 0.95;
-  padding-left: 5rem;
+  padding-left: 0;
+  text-align: left;
+}
+
+.career-secondary-line {
+  display: block;
+  margin-top: 0.35rem;
+  text-align: left;
 }
 
 .career-carousel-wrapper {
   position: relative;
   display: flex;
   align-items: center;
-  gap: 1.25rem;
-  margin-bottom: 1.25rem;
+  gap: 0.875rem;
+  margin-bottom: 0.75rem;
 }
 
 .career-carousel-container {
   flex: 1;
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: visible;
   position: relative;
+  padding-bottom: 0.5rem;
 }
 
 .career-cards-slider {
   display: flex;
+  flex-wrap: nowrap;
+  width: max-content;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  gap: 1.5rem;
+  gap: 0.85rem;
   will-change: transform;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .career-card {
-  flex: 0 0 calc(100% / 3 - 1.33rem);
+  flex: 0 0 calc(100% / 3 - 1rem);
   min-width: 0;
   background: white;
   border-radius: 12px;
@@ -1433,21 +1452,21 @@ img {
   aspect-ratio: 3 / 4;
   display: flex;
   flex-direction: column;
-  max-width: 250px;
-  margin: 0 auto;
+  max-width: 260px;
+  margin: 0;
 }
 
 @media (max-width: 1023px) {
   .career-card {
     flex: 0 0 calc(100% / 2 - 1rem);
-    max-width: 250px;
+    max-width: 300px;
   }
 }
 
 @media (max-width: 767px) {
   .career-card {
     flex: 0 0 100%;
-    max-width: 250px;
+    max-width: 300px;
   }
   
   .career-cards-slider {

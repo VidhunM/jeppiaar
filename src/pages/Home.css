@@ -246,8 +246,26 @@
   height: 100%;
 }
 
+/* Specific styling for Certification Programs, Internships and YoungVox to zoom in images on desktop */
+@media (min-width: 1024px) {
+  .service-item:nth-child(1) .service-icon img,
+  .service-item:nth-child(3) .service-icon img,
+  .service-item:nth-child(4) .service-icon img {
+    max-width: 115px;
+    max-height: 115px;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+
+  .service-item:nth-child(1):hover .service-icon img,
+  .service-item:nth-child(3):hover .service-icon img,
+  .service-item:nth-child(4):hover .service-icon img {
+    transform: scale(1.18);
+  }
+}
+
 .service-item p {
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   font-weight: 500;
   color: #0E0529;
   margin: 0;
@@ -624,13 +642,13 @@
   }
 
   .service-item p {
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   }
 
   .service-item:nth-child(1) p,
   .service-item:nth-child(2) p {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   }
 
@@ -1005,13 +1023,13 @@
   }
 
   .service-item p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   }
 
   .service-item:nth-child(1) p,
   .service-item:nth-child(2) p {
-    font-size: 0.65rem;
+    font-size: 0.75rem;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   }
 

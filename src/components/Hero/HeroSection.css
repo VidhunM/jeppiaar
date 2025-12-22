@@ -50,7 +50,6 @@
 .hero-slide-fourth {
   background-size: cover;
   background-position: center top;
-  object-fit: cover;
 }
 
 /* Bottom to top gradient overlay for all slides - dark smoky to transparent */
@@ -972,6 +971,12 @@
     transform: translateZ(0);
   }
 
+  .hero-slide-fourth {
+    -webkit-background-size: 100% 100% !important;
+    background-size: 100% 100% !important;
+    background-position: center center !important;
+  }
+
   .hero-content {
     padding: 1rem;
     padding-top: 0;
@@ -1165,6 +1170,12 @@
     background-attachment: scroll !important;
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
+  }
+
+  .hero-slide-fourth {
+    -webkit-background-size: 100% 100% !important;
+    background-size: 100% 100% !important;
+    background-position: center center !important;
   }
 
   .hero-content {

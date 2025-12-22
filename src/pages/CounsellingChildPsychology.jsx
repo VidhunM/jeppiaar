@@ -203,10 +203,6 @@ const CounsellingChildPsychology = () => {
               <span className="detail-value">12 Months</span>
             </div>
             <div className="detail-item">
-              <span className="detail-label">Fees</span>
-              <span className="detail-value">₹0 per Semester</span>
-            </div>
-            <div className="detail-item">
               <span className="detail-label">Eligibility</span>
               <span className="detail-value">Eligibility - Bachelor's degree in any discipline</span>
             </div>
@@ -272,40 +268,6 @@ const CounsellingChildPsychology = () => {
             <p>
               Gain real-world experience in approved counselling, rehabilitation, educational, or clinical settings. Structured internships help you build practical skills, professional confidence, and industry-ready expertise.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Course Fee Section */}
-      <section className="course-fee">
-        <div className="container">
-          <h2 className="section-title">COURSE FEE</h2>
-          <div className="fee-wrapper">
-            <div className="fee-content">
-              <div className="main-fee">
-                <p className="fee-label">Full course fee (Four semesters)</p>
-                <p className="fee-amount">INR 75,000</p>
-                <p className="fee-note">Inclusive of all taxes</p>
-              </div>
-              <div className="fee-right-column">
-                <div className="fee-options">
-                  <div className="fee-option">
-                    <p className="fee-option-label">Each semester fee</p>
-                    <p className="fee-option-amount">INR 18,750</p>
-                    <p className="fee-option-note">Inclusive of all taxes</p>
-                  </div>
-                  <div className="fee-option">
-                    <p className="fee-option-label">EMI starting at</p>
-                    <p className="fee-option-amount">INR 3,125 <span className="fee-month-text">/Month</span></p>
-                    <p className="fee-option-note">Terms & conditions apply</p>
-                  </div>
-                </div>
-                <div className="fee-note-section">
-                  <span className="info-icon">ℹ</span>
-                  <p>Note for online payments</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -384,9 +346,8 @@ const CounsellingChildPsychology = () => {
         <div className="container">
           <h2 className="section-title-white">CAREER PROSPECTS</h2>
           <p className="career-description">
-          With a Child Counselling specialization, this course builds a strong psychology foundation and 
-prepares <br /> you for impactful careers in child and adolescent mental health. Potential career paths 
-include
+            With a Child Counselling specialization, this course builds a strong psychology foundation and prepares you for impactful careers in child and adolescent mental health.
+            <span className="career-secondary-line">Potential career paths include</span>
           </p>
           <div className="career-carousel-wrapper">
             <div className="career-carousel-container">
