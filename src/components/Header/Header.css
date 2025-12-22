@@ -104,7 +104,7 @@
   text-decoration: none;
   color: #333;
   font-weight: 500;
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   transition: color 0.3s ease;
   position: relative;
 }
@@ -143,7 +143,7 @@
   text-decoration: none;
   color: #333;
   font-weight: 500;
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   transition: color 0.3s ease;
   position: relative;
   cursor: pointer;
@@ -252,7 +252,7 @@
   padding: 0.75rem 1.5rem;
   border-radius: 50px;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   cursor: pointer;
   transition: all 0.3s ease;
   white-space: nowrap;
@@ -337,7 +337,7 @@
   }
 
   .nav a {
-    font-size: 0.88rem;
+    font-size: 0.95rem;
     padding: 0.75rem 0;
     width: 100%;
     text-align: left;
@@ -379,7 +379,7 @@
     text-align: left;
     color: #333;
     font-weight: 500;
-    font-size: 0.88rem;
+    font-size: 0.95rem;
     pointer-events: auto; /* Enable pointer events for reliable tapping on iOS */
   }
 
@@ -500,7 +500,7 @@
   }
 
   .nav a {
-    font-size: 0.84rem;
+    font-size: 0.91rem;
     padding: 0.65rem 0;
     text-align: left;
   }
@@ -632,12 +632,12 @@
   }
 
   .nav a {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 
   .cta-button {
     padding: 0.875rem 2rem;
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 }
 
