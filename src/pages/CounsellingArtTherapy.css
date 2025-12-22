@@ -527,16 +527,91 @@
 }
 
 /* =========================================================
-   Mobile sizing: SKILLS + OTHER ADVANCED DIPLOMA PROGRAMS
-   Note: Base styles may be shared/global; we scope overrides to page.
+   OTHER ADVANCED DIPLOMA PROGRAMS
+   Ensure consistent grid on desktop (incl. Mac) + scoped responsiveness
    ========================================================= */
 
-/* Typography: Other Advanced Diploma Programs */
+.counselling-art-therapy-page .other-programs {
+  padding: 4rem 0;
+  background: #fff;
+}
+
+.counselling-art-therapy-page .other-programs .section-title {
+  text-align: left;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  color: #000;
+}
+
 .counselling-art-therapy-page .other-programs .section-title,
 .counselling-art-therapy-page .other-programs .program-card,
 .counselling-art-therapy-page .other-programs .program-card p {
   font-family: 'Inter', sans-serif !important;
 }
+
+.counselling-art-therapy-page .programs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.counselling-art-therapy-page .program-card {
+  background: #f5f5f5;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #000;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  cursor: pointer;
+}
+
+.counselling-art-therapy-page .program-card:hover {
+  background: #e8e8e8;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.counselling-art-therapy-page .program-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  background: #1A1260;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 12px;
+}
+
+.counselling-art-therapy-page .program-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.counselling-art-therapy-page .program-card p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #000;
+  font-weight: 500;
+  flex: 1;
+}
+
+@media (max-width: 1024px) {
+  .counselling-art-therapy-page .programs-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* =========================================================
+   Mobile sizing: SKILLS + OTHER ADVANCED DIPLOMA PROGRAMS
+   Note: Base styles may be shared/global; we scope overrides to page.
+   ========================================================= */
 
 @media (max-width: 768px) {
   /* SKILLS */
