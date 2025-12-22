@@ -114,7 +114,7 @@ const LearnersReview = () => {
   };
 
   const slidesToShow = isMobile ? 1 : 3;
-  const gapPercent = isMobile ? 0 : 1.5; // gap as percentage of container (approximately)
+  const gapPercent = isMobile ? 0 : 1.5; // gap as percentage of container
   const slideWidth = isMobile ? 100 : (100 - (gapPercent * (slidesToShow - 1))) / slidesToShow;
 
   return (
@@ -127,7 +127,7 @@ const LearnersReview = () => {
             style={{ 
               transform: isMobile 
                 ? `translateX(-${currentSlide * 100}%)` 
-                : `translateX(calc(-${currentSlide * slideWidth}% - ${currentSlide * 1.5}rem))`
+                : `translateX(calc(-${currentSlide * slideWidth}% - ${currentSlide * gapPercent}%))`
             }}
           >
             {testimonials.map((testimonial) => (
