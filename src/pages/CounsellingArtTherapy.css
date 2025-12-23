@@ -109,14 +109,14 @@
 }
 
 .counselling-art-therapy-page .highlights-section .highlights-subtitle {
-  font-size: 1.1rem;
-  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+  margin-bottom: 0.85rem;
   margin-top: 0;
 }
 
 .counselling-art-therapy-page .highlights-section .highlights-title {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: 1.65rem;
+  margin-bottom: 1.1rem;
 }
 
 .counselling-art-therapy-page .highlights-section .batch-box {
@@ -125,15 +125,15 @@
 
 .counselling-art-therapy-page .highlights-section .batch-box h3 {
   font-size: 0.95rem;
-  padding-left: 2.5rem;
+  padding-left: 2.75rem;
 }
 
 .counselling-art-therapy-page .highlights-section .batch-details {
-  padding-left: 2.5rem;
+  padding-left: 2.75rem;
 }
 
 .counselling-art-therapy-page .highlights-section .batch-details li {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
 }
 
 @media (max-width: 768px) {
@@ -245,6 +245,53 @@
     justify-content: center;
     white-space: nowrap;
   }
+}
+
+/* COURSE SYLLABUS & INTERNSHIP TYPOGRAPHY OVERRIDES (Art Therapy) */
+
+.counselling-art-therapy-page .course-syllabus .syllabus-header .section-title {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 2.4rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+
+.counselling-art-therapy-page .course-syllabus .semester-card h3 {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: 0.01em;
+}
+
+.counselling-art-therapy-page .course-syllabus .credits {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.counselling-art-therapy-page .course-syllabus .semester-topics li {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 1.2rem;
+  line-height: 1.65;
+  letter-spacing: 0.01em;
+  font-weight: 500;
+}
+
+.counselling-art-therapy-page .internship-section h3 {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 1.9rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.counselling-art-therapy-page .internship-section p {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  font-weight: 500;
 }
 
 /* =========================================================
