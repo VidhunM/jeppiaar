@@ -1905,17 +1905,17 @@ img {
 
   .highlights-section .highlights-text {
     order: 1;
-    text-align: center;
-    align-items: center;
+    text-align: left;
+    align-items: flex-start;
     padding-right: 0;
   }
 
   .highlights-section .highlights-subtitle {
-    text-align: center;
+    text-align: left;
   }
 
   .highlights-section .highlights-title {
-    text-align: center;
+    text-align: left;
   }
 
   .highlights-section .highlights-image {
