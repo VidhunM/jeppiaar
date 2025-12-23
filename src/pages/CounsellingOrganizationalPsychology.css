@@ -114,8 +114,8 @@ img {
 .overview-section .overview-content {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 55% 45%;
+  grid-template-columns: 55% 45%;
   gap: 3rem;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -132,7 +132,8 @@ img {
 }
 
 .overview-section .overview-title {
-  font-size: 1.95rem;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 1.85rem;
   font-weight: 700;
   color: #000;
   margin-bottom: 1.25rem;
@@ -140,13 +141,14 @@ img {
   line-height: 1.15;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  font-family: 'Roboto', sans-serif;
 }
 
 .overview-section .overview-text p {
-  font-size: 0.92rem;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 1.2rem !important;
   color: #333;
-  line-height: 1.7;
+  line-height: 1.55;
+  letter-spacing: 0.01em;
   margin-bottom: 1.75rem;
   margin-top: 0;
 }
@@ -196,8 +198,8 @@ img {
 }
 
 .counselling-organizational-psychology-page .overview-section .overview-image {
-  width: 85%;
-  max-width: 500px;
+  width: 100%;
+  max-width: 600px;
 }
 
 .counselling-organizational-psychology-page .overview-section .overview-title {
@@ -234,8 +236,8 @@ img {
 .overview-content {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 55% 45%;
+  grid-template-columns: 55% 45%;
   gap: 3rem;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -440,20 +442,21 @@ img {
 }
 
 .highlights-section .highlights-subtitle {
-  font-size: 0.95rem;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 1.2rem !important;
   margin-top: 0;
   margin-bottom: 1.25rem;
   color: white;
   opacity: 0.95;
-  font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.55;
+  letter-spacing: 0.01em;
 }
 
 .highlights-section .highlights-title {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif !important;
   font-weight: 600;
-  font-size: 1.75rem;
+  font-size: 1.85rem;
   line-height: 1.2;
   letter-spacing: 0%;
   text-align: left;
@@ -503,12 +506,12 @@ img {
 }
 
 .highlights-section .batch-box h3 {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: white;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
   margin-top: 0;
-  padding-left: 2rem;
+  padding-left: 2.4rem;
 }
 
 .highlights-section .batch-details {
@@ -520,9 +523,9 @@ img {
 
 .highlights-section .batch-details li {
   color: white;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 0.4rem;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  margin-bottom: 0.3rem;
   position: relative;
   padding-left: 1rem;
 }
@@ -1442,18 +1445,20 @@ img {
 }
 
 .section-title-white {
-  font-size: 1.45rem;
+  font-size: 1.85rem;
   font-weight: 700;
   color: white;
-  margin-bottom: 0.6rem;
+  margin-bottom: 1.5rem;
   text-transform: uppercase;
   padding-left: 0;
   text-align: left;
 }
 
 .career-description {
-  font-size: 0.9rem;
-  line-height: 1.5;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 1.2rem !important;
+  line-height: 1.55;
+  letter-spacing: 0.01em;
   margin-bottom: 1rem;
   opacity: 0.95;
   padding-left: 0;
@@ -2245,12 +2250,12 @@ img {
 
   .overview-title,
   .highlights-title {
-    font-size: 1.9rem;
+    font-size: 1.25rem !important;
   }
 
   .section-title,
   .section-title-white {
-    font-size: 1.6rem;
+    font-size: 1.25rem !important;
   }
 
   .highlights-title {
@@ -2370,12 +2375,12 @@ img {
 
   .overview-title,
   .highlights-title {
-    font-size: 1.55rem;
+    font-size: 1.15rem !important;
   }
 
   .section-title,
   .section-title-white {
-    font-size: 1.25rem;
+    font-size: 1.15rem !important;
     word-wrap: break-word;
   }
 
@@ -2415,7 +2420,7 @@ img {
   }
 
   .career-description {
-    font-size: 1rem;
+    font-size: 0.95rem !important;
     padding-left: 0;
   }
 
@@ -2433,7 +2438,7 @@ img {
   }
 
   .career-prospects .section-title-white {
-    font-size: 1.6rem;
+    font-size: 1.25rem !important;
   }
 
   .career-carousel-btn {
@@ -2507,7 +2512,7 @@ img {
 
   .overview-title,
   .highlights-title {
-    font-size: 1.4rem;
+    font-size: 1.1rem !important;
   }
 
   .section-title,
@@ -2725,7 +2730,7 @@ img {
 
   .overview-title,
   .highlights-title {
-    font-size: 1.3rem;
+    font-size: 1.05rem !important;
   }
 
   .section-title,
@@ -3013,7 +3018,7 @@ img {
 
   .overview-title,
   .highlights-title {
-    font-size: 1.15rem;
+    font-size: 1rem !important;
   }
 
   .section-title,
@@ -3410,35 +3415,50 @@ img {
     letter-spacing: 0.4px;
   }
 
+  .counselling-organizational-psychology-page .highlights-title {
+    font-size: 1.25rem !important;
+  }
+
   .counselling-organizational-psychology-page .overview-section .overview-text p,
-  .counselling-organizational-psychology-page .overview-text p {
-    font-size: 0.82rem !important;
-    line-height: 1.6;
+  .counselling-organizational-psychology-page .overview-text p,
+  .counselling-organizational-psychology-page .highlights-section .highlights-subtitle {
+    font-size: 0.95rem !important;
+    line-height: 1.55;
   }
 }
 
 @media (max-width: 480px) {
   .counselling-organizational-psychology-page .overview-section .overview-title,
   .counselling-organizational-psychology-page .overview-title {
-    font-size: 1.05rem !important;
+    font-size: 1.15rem !important;
     letter-spacing: 0.35px;
   }
 
+  .counselling-organizational-psychology-page .highlights-title {
+    font-size: 1.15rem !important;
+  }
+
   .counselling-organizational-psychology-page .overview-section .overview-text p,
-  .counselling-organizational-psychology-page .overview-text p {
-    font-size: 0.78rem !important;
+  .counselling-organizational-psychology-page .overview-text p,
+  .counselling-organizational-psychology-page .highlights-section .highlights-subtitle {
+    font-size: 0.9rem !important;
   }
 }
 
 @media (max-width: 375px) {
   .counselling-organizational-psychology-page .overview-section .overview-title,
   .counselling-organizational-psychology-page .overview-title {
-    font-size: 0.98rem !important;
+    font-size: 1.05rem !important;
+  }
+
+  .counselling-organizational-psychology-page .highlights-title {
+    font-size: 1.05rem !important;
   }
 
   .counselling-organizational-psychology-page .overview-section .overview-text p,
-  .counselling-organizational-psychology-page .overview-text p {
-    font-size: 0.76rem !important;
+  .counselling-organizational-psychology-page .overview-text p,
+  .counselling-organizational-psychology-page .highlights-section .highlights-subtitle {
+    font-size: 0.85rem !important;
   }
 }
 
@@ -3709,10 +3729,21 @@ img {
 .counselling-organizational-psychology-page h5,
 .counselling-organizational-psychology-page h6,
 .counselling-organizational-psychology-page .section-title,
-.counselling-organizational-psychology-page .section-title-white,
+.counselling-organizational-psychology-page .section-title-white {
+  font-family: 'Roboto', sans-serif !important;
+}
+
 .counselling-organizational-psychology-page .overview-title,
 .counselling-organizational-psychology-page .highlights-title {
-  font-family: 'Roboto', sans-serif !important;
+  font-family: 'Inter', sans-serif !important;
+}
+
+.counselling-organizational-psychology-page .faq-section .faq-question,
+.counselling-organizational-psychology-page .faq-section .faq-answer p {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 1.2rem !important;
+  line-height: 1.55;
+  letter-spacing: 0.01em;
 }
 
 /* =========================================================
@@ -3738,6 +3769,10 @@ img {
   .counselling-organizational-psychology-page .course-syllabus .syllabus-header {
     margin-bottom: 0.75rem !important;
     gap: 0.3rem !important;
+  }
+
+  .career-description {
+    font-size: 0.9rem !important;
   }
 }
 

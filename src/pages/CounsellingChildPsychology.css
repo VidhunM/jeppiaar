@@ -114,8 +114,8 @@ img {
 .overview-section .overview-content {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 55% 45%;
+  grid-template-columns: 55% 45%;
   gap: 2.5rem;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -132,6 +132,7 @@ img {
 }
 
 .overview-section .overview-title {
+  font-family: 'Inter', sans-serif !important;
   font-size: 1.85rem;
   font-weight: 700;
   color: #000;
@@ -140,13 +141,14 @@ img {
   line-height: 1.15;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  font-family: 'Roboto', sans-serif;
 }
 
 .overview-section .overview-text p {
-  font-size: 1rem;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 1.2rem !important;
   color: #333;
-  line-height: 1.6;
+  line-height: 1.55;
+  letter-spacing: 0.01em;
   margin-bottom: 1.5rem;
   margin-top: 0;
 }
@@ -211,8 +213,8 @@ img {
 .overview-content {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 55% 45%;
+  grid-template-columns: 55% 45%;
   gap: 2.5rem;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -434,20 +436,21 @@ img {
 }
 
 .highlights-section .highlights-subtitle {
-  font-size: 1.15rem;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 1.2rem !important;
   margin-top: -2.5rem;
   margin-bottom: 0.4rem;
   color: white;
   opacity: 0.95;
-  font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.55;
+  letter-spacing: 0.01em;
 }
 
 .highlights-section .highlights-title {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif !important;
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 1.85rem;
   line-height: 1.2;
   letter-spacing: 0%;
   text-align: left;
@@ -2329,7 +2332,7 @@ img {
 
   .overview-title,
   .highlights-title {
-    font-size: 1.45rem;
+    font-size: 1.15rem !important;
   }
 
   .section-title,
@@ -2482,7 +2485,7 @@ img {
 
   .overview-title,
   .highlights-title {
-    font-size: 1.3rem;
+    font-size: 1.1rem !important;
   }
 
   .section-title,
@@ -2693,7 +2696,7 @@ img {
 
   .overview-title,
   .highlights-title {
-    font-size: 1.3rem;
+    font-size: 1.05rem !important;
   }
 
   .section-title,
@@ -2954,7 +2957,7 @@ img {
 
   .overview-title,
   .highlights-title {
-    font-size: 1.15rem;
+    font-size: 1rem !important;
   }
 
   .section-title,
@@ -3267,40 +3270,55 @@ img {
 @media (max-width: 768px) {
   .counselling-child-psychology-page .overview-section .overview-title,
   .counselling-child-psychology-page .overview-title {
-    font-size: 1.15rem !important;
+    font-size: 1.25rem !important;
     line-height: 1.2;
     letter-spacing: 0.4px;
   }
 
+  .counselling-child-psychology-page .highlights-title {
+    font-size: 1.25rem !important;
+  }
+
   .counselling-child-psychology-page .overview-section .overview-text p,
-  .counselling-child-psychology-page .overview-text p {
-    font-size: 0.8rem !important;
-    line-height: 1.6;
+  .counselling-child-psychology-page .overview-text p,
+  .counselling-child-psychology-page .highlights-section .highlights-subtitle {
+    font-size: 0.95rem !important;
+    line-height: 1.55;
   }
 }
 
 @media (max-width: 480px) {
   .counselling-child-psychology-page .overview-section .overview-title,
   .counselling-child-psychology-page .overview-title {
-    font-size: 0.95rem !important;
+    font-size: 1.15rem !important;
     letter-spacing: 0.35px;
   }
 
+  .counselling-child-psychology-page .highlights-title {
+    font-size: 1.15rem !important;
+  }
+
   .counselling-child-psychology-page .overview-section .overview-text p,
-  .counselling-child-psychology-page .overview-text p {
-    font-size: 0.75rem !important;
+  .counselling-child-psychology-page .overview-text p,
+  .counselling-child-psychology-page .highlights-section .highlights-subtitle {
+    font-size: 0.9rem !important;
   }
 }
 
 @media (max-width: 375px) {
   .counselling-child-psychology-page .overview-section .overview-title,
   .counselling-child-psychology-page .overview-title {
-    font-size: 0.88rem !important;
+    font-size: 1.05rem !important;
+  }
+
+  .counselling-child-psychology-page .highlights-title {
+    font-size: 1.05rem !important;
   }
 
   .counselling-child-psychology-page .overview-section .overview-text p,
-  .counselling-child-psychology-page .overview-text p {
-    font-size: 0.74rem !important;
+  .counselling-child-psychology-page .overview-text p,
+  .counselling-child-psychology-page .highlights-section .highlights-subtitle {
+    font-size: 0.85rem !important;
   }
 }
 
@@ -3571,10 +3589,13 @@ img {
 .counselling-child-psychology-page h5,
 .counselling-child-psychology-page h6,
 .counselling-child-psychology-page .section-title,
-.counselling-child-psychology-page .section-title-white,
+.counselling-child-psychology-page .section-title-white {
+  font-family: 'Roboto', sans-serif !important;
+}
+
 .counselling-child-psychology-page .overview-title,
 .counselling-child-psychology-page .highlights-title {
-  font-family: 'Roboto', sans-serif !important;
+  font-family: 'Inter', sans-serif !important;
 }
 
 /* =========================================================
@@ -3609,14 +3630,12 @@ img {
    Course Syllabus cards, Skills, Career Prospects,
    Other Programs, FAQ)
    ========================================================= */
-.counselling-child-psychology-page .overview-section .overview-text p,
-.counselling-child-psychology-page .highlights-section .highlights-subtitle,
-.counselling-child-psychology-page .career-prospects .career-description,
 .counselling-child-psychology-page .faq-section .faq-question,
 .counselling-child-psychology-page .faq-section .faq-answer p {
   font-family: 'Inter', sans-serif !important;
-  font-size: 1rem !important;
+  font-size: 1.2rem !important;
   line-height: 1.55;
+  letter-spacing: 0.01em;
 }
 
 .counselling-child-psychology-page .highlights-section .batch-box h3,
@@ -3624,6 +3643,9 @@ img {
 .counselling-child-psychology-page .learning-outcomes .outcomes-list li,
 .counselling-child-psychology-page .course-syllabus .semester-topics li,
 .counselling-child-psychology-page .skills-section .skill-text,
+.counselling-child-psychology-page .career-prospects .career-description,
+.counselling-child-psychology-page .overview-section .overview-text p,
+.counselling-child-psychology-page .highlights-section .highlights-subtitle,
 .counselling-child-psychology-page .other-programs .program-card p {
   font-family: 'Inter', sans-serif !important;
   font-size: 1.2rem !important;

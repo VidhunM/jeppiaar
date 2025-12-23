@@ -61,7 +61,7 @@
 /* Prevent other Diploma page CSS (global .highlights-*) from affecting Art Therapy */
 .counselling-art-therapy-page .highlights-section .highlights-content {
   display: grid;
-  grid-template-columns: 50% 45%;
+  grid-template-columns: 45% 55%;
   gap: 3rem;
   align-items: end;
 }
@@ -119,21 +119,76 @@
   margin-bottom: 1.1rem;
 }
 
+.counselling-art-therapy-page .highlights-section .batch-boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.35rem;
+  margin-bottom: 1.25rem;
+}
+
 .counselling-art-therapy-page .highlights-section .batch-box {
+  background: rgba(90, 85, 106, 0.8);
+  border: none;
+  border-radius: 12px;
   padding: 1rem;
+  position: relative;
+}
+
+.counselling-art-therapy-page .highlights-section .batch-icon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 1.5rem;
+  left: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.counselling-art-therapy-page .highlights-section .batch-icon::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-image: url('../assets/icons/cc02.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  filter: brightness(0) invert(1);
 }
 
 .counselling-art-therapy-page .highlights-section .batch-box h3 {
-  font-size: 0.95rem;
-  padding-left: 2.75rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+  padding-left: 2.4rem;
 }
 
 .counselling-art-therapy-page .highlights-section .batch-details {
-  padding-left: 2.75rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-left: 2.4rem;
 }
 
 .counselling-art-therapy-page .highlights-section .batch-details li {
-  font-size: 0.95rem;
+  color: white;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  margin-bottom: 0.3rem;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.counselling-art-therapy-page .highlights-section .batch-details li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: bold;
 }
 
 @media (max-width: 768px) {
@@ -407,6 +462,93 @@
 }
 
 /* =========================================================
+   Overview and Highlights sections: match LEARNING OUTCOMES typography
+   ========================================================= */
+
+.overview-section .overview-text p {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 1.2rem !important;
+  color: #333;
+  line-height: 1.55;
+  letter-spacing: 0.01em;
+  margin-bottom: 1.75rem;
+  margin-top: 0;
+}
+
+.highlights-section .highlights-subtitle {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 1.2rem !important;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  color: white;
+  opacity: 0.95;
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: 0.01em;
+}
+
+.overview-section .overview-title {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 1.25rem;
+  margin-top: 1.5rem;
+  line-height: 1.15;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.highlights-section .highlights-title {
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 600;
+  font-size: 1.85rem;
+  line-height: 1.2;
+  letter-spacing: 0%;
+  text-align: left;
+  vertical-align: middle;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.counselling-art-therapy-page .overview-section .overview-image {
+  width: 100%;
+  max-width: 600px;
+}
+
+.overview-section .overview-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 55% 45%;
+  grid-template-columns: 55% 45%;
+  gap: 3rem;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 5% 0 2rem;
+}
+
+.overview-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 55% 45%;
+  grid-template-columns: 55% 45%;
+  gap: 3rem;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 5% 0 2rem;
+}
+
+/* =========================================================
    Mobile typography: make the top "ADVANCED DIPLOMA..." heading
    + description smaller on iPhone/Android (Art Therapy)
    ========================================================= */
@@ -419,35 +561,50 @@
     letter-spacing: 0.4px;
   }
 
+  .counselling-art-therapy-page .highlights-title {
+    font-size: 1.25rem !important;
+  }
+
   .counselling-art-therapy-page .overview-section .overview-text p,
-  .counselling-art-therapy-page .overview-text p {
-    font-size: 0.82rem !important;
-    line-height: 1.6;
+  .counselling-art-therapy-page .overview-text p,
+  .counselling-art-therapy-page .highlights-section .highlights-subtitle {
+    font-size: 0.95rem !important;
+    line-height: 1.55;
   }
 }
 
 @media (max-width: 480px) {
   .counselling-art-therapy-page .overview-section .overview-title,
   .counselling-art-therapy-page .overview-title {
-    font-size: 1.05rem !important;
+    font-size: 1.15rem !important;
     letter-spacing: 0.35px;
   }
 
+  .counselling-art-therapy-page .highlights-title {
+    font-size: 1.15rem !important;
+  }
+
   .counselling-art-therapy-page .overview-section .overview-text p,
-  .counselling-art-therapy-page .overview-text p {
-    font-size: 0.78rem !important;
+  .counselling-art-therapy-page .overview-text p,
+  .counselling-art-therapy-page .highlights-section .highlights-subtitle {
+    font-size: 0.9rem !important;
   }
 }
 
 @media (max-width: 375px) {
   .counselling-art-therapy-page .overview-section .overview-title,
   .counselling-art-therapy-page .overview-title {
-    font-size: 0.98rem !important;
+    font-size: 1.05rem !important;
+  }
+
+  .counselling-art-therapy-page .highlights-title {
+    font-size: 1.05rem !important;
   }
 
   .counselling-art-therapy-page .overview-section .overview-text p,
-  .counselling-art-therapy-page .overview-text p {
-    font-size: 0.76rem !important;
+  .counselling-art-therapy-page .overview-text p,
+  .counselling-art-therapy-page .highlights-section .highlights-subtitle {
+    font-size: 0.85rem !important;
   }
 
   .enroll-now-btn {
@@ -813,10 +970,21 @@
 .counselling-art-therapy-page h6,
 .counselling-art-therapy-page .section-title,
 .counselling-art-therapy-page .section-title-white,
-.counselling-art-therapy-page .overview-title,
-.counselling-art-therapy-page .highlights-title,
 .counselling-art-therapy-page .learning-outcomes h2.section-title {
   font-family: 'Roboto', sans-serif !important;
+}
+
+.counselling-art-therapy-page .overview-title,
+.counselling-art-therapy-page .highlights-title {
+  font-family: 'Inter', sans-serif !important;
+}
+
+.counselling-art-therapy-page .faq-section .faq-question,
+.counselling-art-therapy-page .faq-section .faq-answer p {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 1.2rem !important;
+  line-height: 1.55;
+  letter-spacing: 0.01em;
 }
 
 /* =========================================================
@@ -843,6 +1011,14 @@
   .counselling-art-therapy-page .course-syllabus .syllabus-header {
     margin-bottom: 0.75rem !important;
     gap: 0.3rem !important;
+  }
+
+  .career-prospects .section-title-white {
+    font-size: 1.15rem !important;
+  }
+
+  .career-description {
+    font-size: 0.9rem !important;
   }
 }
 
@@ -918,18 +1094,20 @@
 }
 
 .section-title-white {
-  font-size: 1.45rem;
+  font-size: 1.85rem;
   font-weight: 700;
   color: white;
-  margin-bottom: 0.6rem;
+  margin-bottom: 1.5rem;
   text-transform: uppercase;
   padding-left: 0;
   text-align: left;
 }
 
 .career-description {
-  font-size: 0.9rem;
-  line-height: 1.5;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 1.2rem !important;
+  line-height: 1.55;
+  letter-spacing: 0.01em;
   margin-bottom: 1rem;
   opacity: 0.95;
   padding-left: 0;
@@ -1001,11 +1179,16 @@
   }
   
   .career-description {
+    font-size: 0.95rem !important;
     padding-left: 0;
   }
 
   .section-title-white {
     padding-left: 0;
+  }
+
+  .career-prospects .section-title-white {
+    font-size: 1.25rem !important;
   }
 }
 

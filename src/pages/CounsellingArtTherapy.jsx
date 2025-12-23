@@ -339,7 +339,7 @@ const CounsellingArtTherapy = () => {
           <h2 className="section-title-white">CAREER PROSPECTS</h2>
           <p className="career-description">
             With an Art Therapy specialization, this course builds a strong foundation in creative therapeutic practices and prepares you for impactful careers in mental health and wellness.
-            <span className="career-secondary-line">Potential career paths include</span>
+            <span className="career-secondary-line">Potential career paths include :</span>
           </p>
           <div className="career-carousel-wrapper">
             <div className="career-carousel-container">
