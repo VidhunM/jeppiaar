@@ -953,7 +953,7 @@ img {
   color: white;
   font-family: 'Inter', sans-serif !important;
   font-size: 3.4rem;
-  font-weight: 900;
+  font-weight: 600;
   align-self: center;
   margin: 0;
   letter-spacing: 0.02em;
@@ -1903,6 +1903,13 @@ img {
     justify-items: start;
     text-align: left;
     padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .overview-section .overview-image {
+    order: -1;
+    margin-bottom: 1.5rem;
   }
 
   .overview-section .overview-text {
@@ -2298,7 +2305,9 @@ img {
   }
 
   .internship-section h3 {
-    font-size: 2.2rem;
+    font-size: 1.15rem !important;
+    margin-bottom: 1rem !important;
+    padding: 0 1rem !important;
   }
 
   .internship-section p {
@@ -2423,7 +2432,8 @@ img {
   }
 
   .internship-section h3 {
-    font-size: 1.9rem;
+    font-size: 1rem !important;
+    padding: 0 0.875rem !important;
   }
 
   .internship-section p {
@@ -3305,6 +3315,18 @@ img {
   .counselling-child-psychology-page .highlights-section .highlights-subtitle {
     font-size: 0.9rem !important;
   }
+
+  /* Ensure vertical stacking on small mobile screens */
+  .counselling-child-psychology-page .overview-section .overview-content,
+  .counselling-child-psychology-page .overview-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .counselling-child-psychology-page .overview-section .overview-image {
+    order: -1;
+    margin-bottom: 1.25rem;
+  }
 }
 
 @media (max-width: 375px) {
@@ -3321,6 +3343,18 @@ img {
   .counselling-child-psychology-page .overview-text p,
   .counselling-child-psychology-page .highlights-section .highlights-subtitle {
     font-size: 0.85rem !important;
+  }
+
+  /* Ensure vertical stacking on very small screens */
+  .counselling-child-psychology-page .overview-section .overview-content,
+  .counselling-child-psychology-page .overview-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .counselling-child-psychology-page .overview-section .overview-image {
+    order: -1;
+    margin-bottom: 1rem;
   }
 }
 
@@ -3544,6 +3578,11 @@ img {
 }
 
 @media (max-width: 375px) {
+  .counselling-child-psychology-page .internship-section h3 {
+    font-size: 0.95rem !important;
+    padding: 0 0.75rem !important;
+  }
+
   .counselling-child-psychology-page .skill-text {
     font-size: 0.88rem !important;
   }

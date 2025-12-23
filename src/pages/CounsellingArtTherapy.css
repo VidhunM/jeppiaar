@@ -206,6 +206,18 @@
     font-size: 24px;
   }
 
+  /* Mobile/tablet: overview section layout fix */
+  .counselling-art-therapy-page .overview-section .overview-content,
+  .counselling-art-therapy-page .overview-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .counselling-art-therapy-page .overview-section .overview-image {
+    order: -1;
+    margin-bottom: 1.5rem;
+  }
+
   /* Mobile/tablet: force single column so image doesn't shift right */
   .counselling-art-therapy-page .highlights-section .highlights-content {
     grid-template-columns: 1fr;
@@ -307,7 +319,7 @@
 .counselling-art-therapy-page .course-syllabus .syllabus-header .section-title {
   font-family: 'Inter', sans-serif !important;
   font-size: 2.4rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: 0.01em;
 }
 
@@ -589,6 +601,18 @@
   .counselling-art-therapy-page .highlights-section .highlights-subtitle {
     font-size: 0.9rem !important;
   }
+
+  /* Ensure vertical stacking on small mobile screens */
+  .counselling-art-therapy-page .overview-section .overview-content,
+  .counselling-art-therapy-page .overview-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .counselling-art-therapy-page .overview-section .overview-image {
+    order: -1;
+    margin-bottom: 1.25rem;
+  }
 }
 
 @media (max-width: 375px) {
@@ -605,6 +629,18 @@
   .counselling-art-therapy-page .overview-text p,
   .counselling-art-therapy-page .highlights-section .highlights-subtitle {
     font-size: 0.85rem !important;
+  }
+
+  /* Ensure vertical stacking on very small screens */
+  .counselling-art-therapy-page .overview-section .overview-content,
+  .counselling-art-therapy-page .overview-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .counselling-art-therapy-page .overview-section .overview-image {
+    order: -1;
+    margin-bottom: 1rem;
   }
 
   .enroll-now-btn {
@@ -833,6 +869,13 @@
     padding: 0 1rem !important;
   }
 
+  /* INTERNSHIP OPPORTUNITIES - match SKILLS section styling */
+  .counselling-art-therapy-page .internship-section h3 {
+    font-size: 1.15rem !important;
+    margin-bottom: 1rem !important;
+    padding: 0 1rem !important;
+  }
+
   .counselling-art-therapy-page .skills-list {
     grid-template-columns: 1fr !important;
     gap: 0.6rem !important;
@@ -897,7 +940,8 @@
 
 @media (max-width: 480px) {
   .counselling-art-therapy-page .skills-section .section-title,
-  .counselling-art-therapy-page .other-programs .section-title {
+  .counselling-art-therapy-page .other-programs .section-title,
+  .counselling-art-therapy-page .internship-section h3 {
     font-size: 1.05rem !important;
     padding: 0 0.875rem !important;
   }

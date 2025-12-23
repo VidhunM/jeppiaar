@@ -220,6 +220,10 @@
 
   .courses-section-title {
     font-size: 2rem;
+    flex-wrap: nowrap; /* Keep heading on single line on mobile */
+    gap: 0.5rem; /* Appropriate spacing between words */
+    justify-content: center;
+    letter-spacing: 0.02em; /* Slight letter spacing for better readability */
   }
 
   .courses-grid {
@@ -246,6 +250,10 @@
 
   .courses-section-title {
     font-size: 1.5rem;
+    flex-wrap: nowrap; /* Keep heading on single line */
+    gap: 0.4rem; /* Appropriate spacing for smaller screens */
+    justify-content: center;
+    letter-spacing: 0.015em; /* Slight letter spacing for readability */
   }
 
   .courses-grid {
@@ -257,5 +265,14 @@
     width: 140px;
     height: 140px;
     font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .courses-section-title {
+    flex-wrap: nowrap; /* Keep heading on single line */
+    gap: 0.3rem; /* Appropriate spacing for very small screens */
+    justify-content: center;
+    letter-spacing: 0.01em; /* Minimal letter spacing for very small screens */
   }
 }

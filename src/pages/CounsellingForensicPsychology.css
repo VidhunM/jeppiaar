@@ -946,7 +946,7 @@ img {
   color: white;
   font-family: 'Inter', sans-serif !important;
   font-size: 2.4rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: 0.01em;
 }
 
@@ -2124,6 +2124,13 @@ img {
     justify-items: start;
     text-align: left;
     padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .overview-section .overview-image {
+    order: -1;
+    margin-bottom: 1.5rem;
   }
 
   .overview-section .overview-text {
@@ -3355,6 +3362,18 @@ img {
   .counselling-forensic-psychology-page .highlights-section .highlights-subtitle {
     font-size: 0.9rem !important;
   }
+
+  /* Ensure vertical stacking on small mobile screens */
+  .counselling-forensic-psychology-page .overview-section .overview-content,
+  .counselling-forensic-psychology-page .overview-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .counselling-forensic-psychology-page .overview-section .overview-image {
+    order: -1;
+    margin-bottom: 1.25rem;
+  }
 }
 
 @media (max-width: 375px) {
@@ -3371,6 +3390,18 @@ img {
   .counselling-forensic-psychology-page .overview-text p,
   .counselling-forensic-psychology-page .highlights-section .highlights-subtitle {
     font-size: 0.85rem !important;
+  }
+
+  /* Ensure vertical stacking on very small screens */
+  .counselling-forensic-psychology-page .overview-section .overview-content,
+  .counselling-forensic-psychology-page .overview-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .counselling-forensic-psychology-page .overview-section .overview-image {
+    order: -1;
+    margin-bottom: 1rem;
   }
 }
 
@@ -3505,6 +3536,13 @@ img {
     padding: 0 1rem !important;
   }
 
+  /* INTERNSHIP OPPORTUNITIES - match SKILLS section styling */
+  .counselling-forensic-psychology-page .internship-section h3 {
+    font-size: 1.15rem !important;
+    margin-bottom: 1rem !important;
+    padding: 0 1rem !important;
+  }
+
   .counselling-forensic-psychology-page .skills-list {
     grid-template-columns: 1fr !important;
     gap: 0.6rem !important;
@@ -3569,7 +3607,8 @@ img {
 
 @media (max-width: 480px) {
   .counselling-forensic-psychology-page .skills-section .section-title,
-  .counselling-forensic-psychology-page .other-programs .section-title {
+  .counselling-forensic-psychology-page .other-programs .section-title,
+  .counselling-forensic-psychology-page .internship-section h3 {
     font-size: 1.05rem !important;
     padding: 0 0.875rem !important;
   }
