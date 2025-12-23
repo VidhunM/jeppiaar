@@ -122,13 +122,19 @@
 }
 
 .team-modal-description {
-  font-size: 1rem;
-  line-height: 2;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 1.2rem !important;
+  line-height: 1.55;
+  letter-spacing: 0.01em;
   color: #333;
   text-align: justify;
 }
 
 .team-modal-description p {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 1.2rem !important;
+  line-height: 1.55;
+  letter-spacing: 0.01em;
   margin: 0 0 1.5rem 0;
   white-space: pre-line;
   min-height: 1.8em;
@@ -206,7 +212,10 @@
   }
 
   .team-modal-description {
-    font-size: 0.95rem;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 1.2rem !important;
+    line-height: 1.55;
+    letter-spacing: 0.01em;
   }
 
   .team-modal-close {
@@ -254,8 +263,10 @@
   }
 
   .team-modal-description {
-    font-size: 0.9rem;
-    line-height: 1.6;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 1.2rem !important;
+    line-height: 1.55;
+    letter-spacing: 0.01em;
     text-align: left;
   }
 
@@ -271,7 +282,10 @@
   }
 
   .team-modal-description {
-    font-size: 0.86rem;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 1.2rem !important;
+    line-height: 1.55;
+    letter-spacing: 0.01em;
   }
 }
 
