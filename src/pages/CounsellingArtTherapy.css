@@ -357,6 +357,19 @@
     transform: none;
   }
 
+  /* Ensure left alignment for all mobile devices */
+  .counselling-art-therapy-page .highlights-section .highlights-text {
+    text-align: left !important;
+  }
+
+  .counselling-art-therapy-page .highlights-section .highlights-subtitle {
+    text-align: left !important;
+  }
+
+  .counselling-art-therapy-page .highlights-section .highlights-title {
+    text-align: left !important;
+  }
+
   /* iPhone/Android: Better batch cards spacing */
   .counselling-art-therapy-page .highlights-section .batch-boxes {
     gap: 1rem; /* Better gap for phones */
@@ -427,6 +440,19 @@
 
   .counselling-art-therapy-page .highlights-section .highlights-image img {
     transform: none;
+  }
+
+  /* Ensure left alignment for smallest mobile devices */
+  .counselling-art-therapy-page .highlights-section .highlights-text {
+    text-align: left !important;
+  }
+
+  .counselling-art-therapy-page .highlights-section .highlights-subtitle {
+    text-align: left !important;
+  }
+
+  .counselling-art-therapy-page .highlights-section .highlights-title {
+    text-align: left !important;
   }
 
   /* Smallest iPhone screens: Proper spacing for batch cards */

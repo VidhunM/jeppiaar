@@ -3453,6 +3453,19 @@ img {
     font-size: 0.9rem !important;
   }
 
+  /* Ensure left alignment for all mobile devices */
+  .counselling-organizational-psychology-page .highlights-section .highlights-text {
+    text-align: left !important;
+  }
+
+  .counselling-organizational-psychology-page .highlights-section .highlights-subtitle {
+    text-align: left !important;
+  }
+
+  .counselling-organizational-psychology-page .highlights-section .highlights-title {
+    text-align: left !important;
+  }
+
   /* Ensure vertical stacking on small mobile screens */
   .counselling-organizational-psychology-page .overview-section .overview-content,
   .counselling-organizational-psychology-page .overview-content {
@@ -3480,6 +3493,19 @@ img {
   .counselling-organizational-psychology-page .overview-text p,
   .counselling-organizational-psychology-page .highlights-section .highlights-subtitle {
     font-size: 0.85rem !important;
+  }
+
+  /* Ensure left alignment for smallest mobile devices */
+  .counselling-organizational-psychology-page .highlights-section .highlights-text {
+    text-align: left !important;
+  }
+
+  .counselling-organizational-psychology-page .highlights-section .highlights-subtitle {
+    text-align: left !important;
+  }
+
+  .counselling-organizational-psychology-page .highlights-section .highlights-title {
+    text-align: left !important;
   }
 
   /* Ensure vertical stacking on very small screens */

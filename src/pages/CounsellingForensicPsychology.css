@@ -3363,6 +3363,19 @@ img {
     font-size: 0.9rem !important;
   }
 
+  /* Ensure left alignment for all mobile devices */
+  .counselling-forensic-psychology-page .highlights-section .highlights-text {
+    text-align: left !important;
+  }
+
+  .counselling-forensic-psychology-page .highlights-section .highlights-subtitle {
+    text-align: left !important;
+  }
+
+  .counselling-forensic-psychology-page .highlights-section .highlights-title {
+    text-align: left !important;
+  }
+
   /* Ensure vertical stacking on small mobile screens */
   .counselling-forensic-psychology-page .overview-section .overview-content,
   .counselling-forensic-psychology-page .overview-content {
@@ -3390,6 +3403,19 @@ img {
   .counselling-forensic-psychology-page .overview-text p,
   .counselling-forensic-psychology-page .highlights-section .highlights-subtitle {
     font-size: 0.85rem !important;
+  }
+
+  /* Ensure left alignment for smallest mobile devices */
+  .counselling-forensic-psychology-page .highlights-section .highlights-text {
+    text-align: left !important;
+  }
+
+  .counselling-forensic-psychology-page .highlights-section .highlights-subtitle {
+    text-align: left !important;
+  }
+
+  .counselling-forensic-psychology-page .highlights-section .highlights-title {
+    text-align: left !important;
   }
 
   /* Ensure vertical stacking on very small screens */
