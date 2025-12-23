@@ -34,11 +34,15 @@
 .program-hero-banner {
   background: linear-gradient(180deg, #0E0529 0%, #5A556A 100%);
   color: white;
-  padding: 5rem 2rem;
+  padding: 4rem 2rem 3.5rem 2rem;
   text-align: center;
   width: 100%;
   position: relative;
   margin-top: 0 !important; /* Remove top margin that causes white space */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 12rem;
 }
 
 .program-hero-banner h1 {
@@ -48,7 +52,7 @@
   line-height: 1.2;
   text-align: center;
   text-transform: uppercase;
-  margin: 0;
+  margin: 1.5rem 0 0 0;
   color: white;
   animation: fadeInUp 0.8s ease-out;
 }
@@ -105,7 +109,7 @@
 }
 
 .counselling-art-therapy-page .highlights-section .highlights-subtitle {
-  font-size: 0.85rem;
+  font-size: 1.1rem;
   margin-bottom: 0.75rem;
   margin-top: 0;
 }
@@ -139,7 +143,7 @@
   }
 
   .program-hero-banner {
-    padding: 3rem 1.5rem;
+    padding: 2.5rem 1.5rem;
     margin-top: 80px; /* Reduced for mobile header */
   }
 
@@ -190,7 +194,7 @@
   }
 
   .program-hero-banner {
-    padding: 2.5rem 1rem;
+    padding: 2rem 1rem;
     margin-top: 70px;
   }
 

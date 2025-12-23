@@ -75,7 +75,7 @@ img {
   background: -o-linear-gradient(180deg, #0E0529 0%, #5A556A 100%);
   background: linear-gradient(180deg, #0E0529 0%, #5A556A 100%);
   color: white;
-  padding: 6rem 2rem;
+  padding: 4rem 2rem 3.5rem 2rem;
   text-align: center;
   width: 100%;
   position: relative;
@@ -89,16 +89,14 @@ img {
 .program-hero-banner h1 {
   font-family: 'Roboto', sans-serif;
   font-weight: 600;
-  font-size: 35px;
+  font-size: 2.1875rem;
   line-height: 1.2;
   letter-spacing: 0%;
   text-align: center;
-  vertical-align: middle;
   text-transform: uppercase;
-  margin: 0;
+  margin: 1.5rem 0 0 0;
   color: white;
   animation: fadeInUp 0.8s ease-out;
-  padding: 2rem 0;
 }
 
 /* ============================================
@@ -134,7 +132,7 @@ img {
 }
 
 .overview-section .overview-title {
-  font-size: 1.75rem;
+  font-size: 1.85rem;
   font-weight: 700;
   color: #000;
   margin-bottom: 1rem;
@@ -436,7 +434,7 @@ img {
 }
 
 .highlights-section .highlights-subtitle {
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin-top: -2.5rem;
   margin-bottom: 0.4rem;
   color: white;
@@ -449,7 +447,7 @@ img {
 .highlights-section .highlights-title {
   font-family: 'Roboto', sans-serif;
   font-weight: 600;
-  font-size: 1.6rem;
+  font-size: 1.85rem;
   line-height: 1.2;
   letter-spacing: 0%;
   text-align: left;
@@ -499,7 +497,7 @@ img {
 }
 
 .highlights-section .batch-box h3 {
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: white;
   margin-bottom: 0.5rem;
@@ -516,7 +514,7 @@ img {
 
 .highlights-section .batch-details li {
   color: white;
-  font-size: 0.88rem;
+  font-size: 1.1rem;
   line-height: 1.5;
   margin-bottom: 0.3rem;
   position: relative;
@@ -646,7 +644,7 @@ img {
 }
 
 .highlights-subtitle {
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   margin-top: -2.5rem;
   margin-bottom: 0.4rem;
   color: white;
@@ -1427,7 +1425,7 @@ img {
 }
 
 .section-title-white {
-  font-size: 1.45rem;
+  font-size: 1.85rem;
   font-weight: 700;
   color: white;
   margin-bottom: 0.6rem;
@@ -1437,7 +1435,7 @@ img {
 }
 
 .career-description {
-  font-size: 1.05rem;
+  font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 1rem;
   opacity: 0.95;
@@ -1715,7 +1713,7 @@ img {
 
 .program-card p {
   margin: 0;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   line-height: 1.5;
   color: #000;
   font-weight: 500;
@@ -1779,7 +1777,7 @@ img {
   font-weight: 500;
   color: #000;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 1rem;
   padding: 0;
 }
 
@@ -1850,7 +1848,7 @@ img {
 
   .program-hero-banner {
     margin-top: 0;
-    padding-top: 3rem;
+    padding: 2rem 1rem;
   }
 
   .program-hero-banner h1 {
@@ -2110,7 +2108,7 @@ img {
   }
 
   .program-hero-banner {
-    padding: 3rem 1.5rem;
+    padding: 2.5rem 1.5rem;
   }
 
   .program-hero-banner h1 {
@@ -2275,7 +2273,7 @@ img {
   }
 
   .program-hero-banner {
-    padding: 2.75rem 1rem;
+    padding: 2rem 1rem;
     margin-top: 0;
   }
 
@@ -2624,7 +2622,7 @@ img {
   }
 
   .program-hero-banner {
-    padding: 1.75rem 0.875rem;
+    padding: 1.5rem 0.875rem;
   }
 
   .program-hero-banner h1 {
@@ -3415,7 +3413,7 @@ img {
   }
 
   .counselling-child-psychology-page .other-programs .section-title {
-    font-size: 1.15rem !important;
+    font-size: 1.1rem !important;
     margin-bottom: 1rem !important;
     padding: 0 1rem !important;
   }
@@ -3446,7 +3444,7 @@ img {
 @media (max-width: 480px) {
   .counselling-child-psychology-page .skills-section .section-title,
   .counselling-child-psychology-page .other-programs .section-title {
-    font-size: 1.05rem !important;
+    font-size: 1rem !important;
     padding: 0 0.875rem !important;
   }
 
@@ -3557,19 +3555,29 @@ img {
    ========================================================= */
 .counselling-child-psychology-page .overview-section .overview-text p,
 .counselling-child-psychology-page .highlights-section .highlights-subtitle,
-.counselling-child-psychology-page .highlights-section .batch-box h3,
-.counselling-child-psychology-page .highlights-section .batch-details li,
-.counselling-child-psychology-page .learning-outcomes .outcomes-list li,
-.counselling-child-psychology-page .course-syllabus .credits,
-.counselling-child-psychology-page .course-syllabus .semester-topics li,
-.counselling-child-psychology-page .skills-section .skill-text,
-.counselling-child-psychology-page .career-prospects .career-title-overlay,
 .counselling-child-psychology-page .career-prospects .career-description,
-.counselling-child-psychology-page .other-programs .program-card p,
 .counselling-child-psychology-page .faq-section .faq-question,
 .counselling-child-psychology-page .faq-section .faq-answer p {
   font-family: 'Inter', sans-serif !important;
   font-size: 1rem !important;
+  line-height: 1.55;
+}
+
+.counselling-child-psychology-page .highlights-section .batch-box h3,
+.counselling-child-psychology-page .highlights-section .batch-details li,
+.counselling-child-psychology-page .learning-outcomes .outcomes-list li,
+.counselling-child-psychology-page .course-syllabus .semester-topics li,
+.counselling-child-psychology-page .skills-section .skill-text,
+.counselling-child-psychology-page .other-programs .program-card p {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 1.1rem !important;
+  line-height: 1.55;
+}
+
+.counselling-child-psychology-page .course-syllabus .credits,
+.counselling-child-psychology-page .career-prospects .career-title-overlay {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 0.9rem !important;
   line-height: 1.55;
 }
 
