@@ -316,13 +316,13 @@
 
   .counselling-art-therapy-page .highlights-section .highlights-subtitle {
     margin-bottom: 0.75rem; /* Reduced margin for tighter spacing */
-    font-size: 1rem; /* Slightly smaller subtitle */
+    font-size: 0.85rem !important; /* Match program card mobile sizing */
     text-align: left;
   }
 
   .counselling-art-therapy-page .highlights-section .highlights-title {
     margin-bottom: 1.25rem; /* Reduced margin */
-    font-size: 1.15rem; /* Smaller title on mobile */
+    font-size: 0.85rem !important; /* Match program card mobile sizing */
     text-align: left;
   }
 
@@ -421,12 +421,12 @@
   /* Ensure proper text alignment and spacing */
   .counselling-art-therapy-page .highlights-section .highlights-subtitle {
     margin-bottom: 0.6rem; /* Even tighter spacing for small screens */
-    font-size: 0.95rem; /* Smaller subtitle */
+    font-size: 0.82rem !important; /* Match program card mobile sizing */
   }
 
   .counselling-art-therapy-page .highlights-section .highlights-title {
     margin-bottom: 1rem; /* Reduced margin */
-    font-size: 1.05rem; /* Smaller title */
+    font-size: 0.82rem !important; /* Match program card mobile sizing */
   }
 
   .counselling-art-therapy-page .highlights-section .download-brochure-btn {
@@ -510,12 +510,12 @@
   /* Optimize text spacing for smallest screens */
   .counselling-art-therapy-page .highlights-section .highlights-subtitle {
     margin-bottom: 0.5rem; /* Minimal spacing */
-    font-size: 0.9rem; /* Smallest subtitle */
+    font-size: 0.8rem !important; /* Match program card mobile sizing */
   }
 
   .counselling-art-therapy-page .highlights-section .highlights-title {
     margin-bottom: 0.75rem; /* Minimal margin */
-    font-size: 1rem; /* Smallest title while maintaining readability */
+    font-size: 0.8rem !important; /* Match program card mobile sizing */
   }
 
   .counselling-art-therapy-page .highlights-section .download-brochure-btn {
