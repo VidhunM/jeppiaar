@@ -97,6 +97,10 @@
     min-width: 100%;
     padding: 0 0.5rem;
   }
+
+  .group-image {
+    max-width: 240px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -109,6 +113,6 @@
   }
 
   .group-image {
-    max-width: 100%;
+    max-width: 220px;
   }
 }

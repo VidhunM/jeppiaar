@@ -728,7 +728,15 @@
   }
 
   .introduction-text p {
-    font-size: 0.9rem;
+    font-size: 0.85rem !important;
+  }
+
+  .core-value-card h4 {
+    font-size: 0.85rem !important;
+  }
+
+  .core-value-card p {
+    font-size: 0.85rem !important;
   }
 
 
@@ -748,7 +756,7 @@
 
   .vision-card p,
   .mission-card p {
-    font-size: 0.95rem;
+    font-size: 0.95rem !important;
   }
 
   .core-values-section {
@@ -923,7 +931,15 @@
   }
 
   .introduction-text p {
-    font-size: 0.85rem;
+    font-size: 0.8rem !important;
+  }
+
+  .core-value-card h4 {
+    font-size: 0.8rem !important;
+  }
+
+  .core-value-card p {
+    font-size: 0.8rem !important;
   }
 
 
@@ -969,7 +985,7 @@
 
   .vision-card p,
   .mission-card p {
-    font-size: 0.9rem;
+    font-size: 0.9rem !important;
   }
 
   .core-values-section {

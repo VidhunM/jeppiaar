@@ -1090,7 +1090,7 @@
   font-size: 1rem;
   line-height: 1.5;
   color: #000;
-  font-weight: 500;
+  font-weight: 600;
   flex: 1;
 }
 
@@ -1169,7 +1169,7 @@
   }
 
   .counselling-art-therapy-page .skill-text {
-    font-size: 0.82rem !important;
+    font-size: 0.95rem !important;
     line-height: 1.5;
   }
 
@@ -1245,7 +1245,7 @@
   }
 
   .counselling-art-therapy-page .skill-text {
-    font-size: 0.78rem !important;
+    font-size: 0.9rem !important;
   }
 
   .counselling-art-therapy-page .program-icon-wrapper {
@@ -1286,7 +1286,7 @@
 
 @media (max-width: 375px) {
   .counselling-art-therapy-page .skill-text {
-    font-size: 0.76rem !important;
+    font-size: 0.85rem !important;
   }
 
   .counselling-art-therapy-page .program-card p {

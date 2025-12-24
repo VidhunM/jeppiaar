@@ -3737,7 +3737,7 @@ img {
   }
 
   .counselling-child-psychology-page .program-card p {
-    font-size: 1rem !important;
+    font-size: 0.85rem !important;
     line-height: 1.35;
   }
 }
@@ -3764,7 +3764,7 @@ img {
   }
 
   .counselling-child-psychology-page .program-card p {
-    font-size: 0.95rem !important;
+    font-size: 0.82rem !important;
   }
 }
 
@@ -3823,11 +3823,11 @@ img {
   }
 
   .counselling-child-psychology-page .skill-text {
-    font-size: 0.88rem !important;
+    font-size: 0.85rem !important;
   }
 
   .counselling-child-psychology-page .program-card p {
-    font-size: 0.92rem !important;
+    font-size: 0.8rem !important;
   }
 }
 
@@ -3993,11 +3993,9 @@ img {
 
 .counselling-child-psychology-page .highlights-section .batch-box h3,
 .counselling-child-psychology-page .highlights-section .batch-details li,
-.counselling-child-psychology-page .skills-section .skill-text,
 .counselling-child-psychology-page .career-prospects .career-description,
 .counselling-child-psychology-page .overview-section .overview-text p,
-.counselling-child-psychology-page .highlights-section .highlights-subtitle,
-.counselling-child-psychology-page .other-programs .program-card p {
+.counselling-child-psychology-page .highlights-section .highlights-subtitle {
   font-family: 'Inter', sans-serif !important;
   font-size: 1.2rem !important;
   line-height: 1.55;
