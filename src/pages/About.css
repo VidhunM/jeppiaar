@@ -72,7 +72,7 @@
 
 .introduction-text p {
   font-family: 'Inter', sans-serif !important;
-  font-size: 1.2rem !important;
+  font-size: 1.4rem !important;
   line-height: 1.55;
   letter-spacing: 0.01em;
   color: #000;
@@ -201,7 +201,7 @@
 .vision-card p,
 .mission-card p {
   font-family: 'Inter', sans-serif !important;
-  font-size: 1.2rem !important;
+  font-size: 1.4rem !important;
   line-height: 1.55;
   letter-spacing: 0.01em;
   color: #333;
@@ -728,7 +728,7 @@
   }
 
   .introduction-text p {
-    font-size: 0.85rem !important;
+    font-size: 1.0rem !important;
   }
 
   .core-value-card h4 {
@@ -756,7 +756,7 @@
 
   .vision-card p,
   .mission-card p {
-    font-size: 0.95rem !important;
+    font-size: 1.1rem !important;
   }
 
   .core-values-section {
@@ -931,7 +931,7 @@
   }
 
   .introduction-text p {
-    font-size: 0.8rem !important;
+    font-size: 0.95rem !important;
   }
 
   .core-value-card h4 {
@@ -985,7 +985,7 @@
 
   .vision-card p,
   .mission-card p {
-    font-size: 0.9rem !important;
+    font-size: 1.05rem !important;
   }
 
   .core-values-section {
