@@ -1143,6 +1143,7 @@ img {
   margin-bottom: 1.5rem;
   font-weight: 500;
   letter-spacing: 0.01em;
+  text-transform: uppercase;
 }
 
 .semester-topics {
@@ -2457,6 +2458,7 @@ img {
 
   .internship-section {
     text-align: left !important;
+    padding: 1.25rem !important;
   }
 
   .internship-section h3 {
@@ -2488,6 +2490,31 @@ img {
 
   .semester-topics li {
     font-size: 1rem !important;
+  }
+
+  .internship-section {
+    padding: 1.5rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .internship-section h3 {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 1.9rem;
+    font-weight: 600;
+    color: #0E0529;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.01em;
+  }
+
+  .internship-section p {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+    font-weight: 500;
   }
 
   .internship-section {
@@ -2732,6 +2759,18 @@ img {
   .semester-topics li {
     font-size: 0.95rem !important;
     padding-left: 2.5rem;
+  }
+
+  .internship-section {
+    padding: 1.25rem;
+  }
+
+  .internship-section h3 {
+    font-size: 1.9rem;
+  }
+
+  .internship-section p {
+    font-size: 1.2rem;
   }
 
   .internship-section {
@@ -2997,6 +3036,18 @@ img {
   .semester-topics li {
     font-size: 0.85rem !important;
     padding-left: 2.25rem;
+  }
+
+  .internship-section {
+    padding: 1rem;
+  }
+
+  .internship-section h3 {
+    font-size: 1.9rem;
+  }
+
+  .internship-section p {
+    font-size: 1.2rem;
   }
 
   .internship-section {
@@ -3932,7 +3983,6 @@ img {
 .counselling-child-psychology-page .highlights-section .batch-box h3,
 .counselling-child-psychology-page .highlights-section .batch-details li,
 .counselling-child-psychology-page .learning-outcomes .outcomes-list li,
-.counselling-child-psychology-page .course-syllabus .semester-topics li,
 .counselling-child-psychology-page .skills-section .skill-text,
 .counselling-child-psychology-page .career-prospects .career-description,
 .counselling-child-psychology-page .overview-section .overview-text p,
@@ -3952,7 +4002,6 @@ img {
   font-family: 'Inter', sans-serif !important;
 }
 
-.counselling-child-psychology-page .course-syllabus .credits,
 .counselling-child-psychology-page .career-prospects .career-title-overlay {
   font-family: 'Inter', sans-serif !important;
   font-size: 0.9rem !important;

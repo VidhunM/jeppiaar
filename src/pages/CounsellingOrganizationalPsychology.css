@@ -1137,6 +1137,7 @@ img {
   margin-bottom: 1.5rem;
   font-weight: 500;
   letter-spacing: 0.01em;
+  text-transform: uppercase;
 }
 
 .semester-topics {
