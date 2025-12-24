@@ -3853,7 +3853,7 @@ img {
   }
 
   .counselling-organizational-psychology-page .skill-text {
-    font-size: 0.82rem !important;
+    font-size: 0.95rem !important;
     line-height: 1.5;
   }
 
@@ -3928,7 +3928,7 @@ img {
   }
 
   .counselling-organizational-psychology-page .skill-text {
-    font-size: 0.78rem !important;
+    font-size: 0.9rem !important;
   }
 
   .counselling-organizational-psychology-page .program-icon-wrapper {
@@ -3944,7 +3944,7 @@ img {
 
 @media (max-width: 375px) {
   .counselling-organizational-psychology-page .skill-text {
-    font-size: 0.76rem !important;
+    font-size: 0.85rem !important;
   }
 
   .counselling-organizational-psychology-page .program-card p {
