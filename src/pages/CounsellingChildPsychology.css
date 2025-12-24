@@ -3717,10 +3717,58 @@ img {
   }
 }
 
-@media (max-width: 375px) {
-  .counselling-child-psychology-page .internship-section h3 {
+@media (max-width: 480px) {
+  .counselling-child-psychology-page .course-syllabus .credits {
+    font-size: 0.85rem !important;
+  }
+
+  .counselling-child-psychology-page .course-syllabus .semester-topics li {
     font-size: 0.95rem !important;
-    padding: 0 0.75rem !important;
+  }
+
+  .counselling-child-psychology-page .internship-section {
+    text-align: left !important;
+  }
+
+  .counselling-child-psychology-page .internship-section h3 {
+    font-size: 1.05rem !important;
+    margin-left: 0 !important;
+    padding: 0 !important;
+    padding-left: 0 !important;
+    text-align: left !important;
+    width: 100% !important;
+  }
+
+  .counselling-child-psychology-page .internship-section p {
+    font-size: 0.95rem !important;
+    text-align: left !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .counselling-child-psychology-page .course-syllabus .credits {
+    font-size: 0.8rem !important;
+  }
+
+  .counselling-child-psychology-page .course-syllabus .semester-topics li {
+    font-size: 0.85rem !important;
+  }
+
+  .counselling-child-psychology-page .internship-section {
+    text-align: left !important;
+  }
+
+  .counselling-child-psychology-page .internship-section h3 {
+    font-size: 1rem !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    text-align: left !important;
+    width: 100% !important;
+  }
+
+  .counselling-child-psychology-page .internship-section p {
+    font-size: 0.85rem !important;
+    text-align: left !important;
   }
 
   .counselling-child-psychology-page .skill-text {
@@ -3755,6 +3803,33 @@ img {
   .counselling-child-psychology-page label,
   .counselling-child-psychology-page span {
     font-family: inherit !important;
+  }
+
+  .counselling-child-psychology-page .course-syllabus .credits {
+    font-size: 0.9rem !important;
+  }
+
+  .counselling-child-psychology-page .course-syllabus .semester-topics li {
+    font-size: 1rem !important;
+  }
+
+  .counselling-child-psychology-page .internship-section {
+    text-align: left !important;
+  }
+
+  .counselling-child-psychology-page .internship-section h3 {
+    font-size: 1.15rem !important;
+    margin-bottom: 1rem !important;
+    margin-left: 0 !important;
+    padding: 0 !important;
+    padding-left: 0 !important;
+    text-align: left !important;
+    width: 100% !important;
+  }
+
+  .counselling-child-psychology-page .internship-section p {
+    font-size: 1rem !important;
+    text-align: left !important;
   }
 }
 
