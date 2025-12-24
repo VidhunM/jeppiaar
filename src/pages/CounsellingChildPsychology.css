@@ -1187,6 +1187,7 @@ img {
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
 }
 
 .internship-section h3 {
@@ -1195,8 +1196,13 @@ img {
   font-weight: 600;
   color: #0E0529;
   margin-bottom: 0.75rem;
+  margin-left: 0;
+  margin-right: auto;
+  padding-left: 0;
   letter-spacing: 0.02em;
   text-transform: uppercase;
+  text-align: left;
+  width: 100%;
 }
 
 .internship-section p {
@@ -2080,11 +2086,11 @@ img {
   }
 
   .detail-label {
-    font-size: 1.25rem;
+    font-size: 0.9rem !important;
   }
 
   .detail-value {
-    font-size: 1.5rem;
+    font-size: 1rem !important;
   }
 
   .detail-item:last-child {
@@ -2304,14 +2310,23 @@ img {
     width: 40px;
   }
 
+  .internship-section {
+    text-align: left !important;
+  }
+
   .internship-section h3 {
     font-size: 1.15rem !important;
     margin-bottom: 1rem !important;
-    padding: 0 1rem !important;
+    margin-left: 0 !important;
+    padding: 0 !important;
+    padding-left: 0 !important;
+    text-align: left !important;
+    width: 100% !important;
   }
 
   .internship-section p {
-    font-size: 1.4rem;
+    font-size: 1rem !important;
+    text-align: left !important;
   }
 }
 
@@ -2352,12 +2367,21 @@ img {
     word-wrap: break-word;
   }
 
+  .program-details-bar {
+    padding: 1rem 0;
+  }
+
+  .detail-item {
+    padding: 0.75rem 0.875rem;
+    gap: 0.25rem;
+  }
+
   .detail-label {
-    font-size: 1.15rem;
+    font-size: 0.85rem !important;
   }
 
   .detail-value {
-    font-size: 1.35rem;
+    font-size: 0.9rem !important;
   }
 
   .highlights-title {
@@ -2431,13 +2455,22 @@ img {
     padding: 0.875rem 1rem;
   }
 
+  .internship-section {
+    text-align: left !important;
+  }
+
   .internship-section h3 {
     font-size: 1rem !important;
-    padding: 0 0.875rem !important;
+    margin-left: 0 !important;
+    padding: 0 !important;
+    padding-left: 0 !important;
+    text-align: left !important;
+    width: 100% !important;
   }
 
   .internship-section p {
-    font-size: 1.3rem;
+    font-size: 0.95rem !important;
+    text-align: left !important;
   }
 
   .semester-card {
@@ -2447,6 +2480,30 @@ img {
   .semester-card h3 {
     font-size: 1.1rem;
     word-wrap: break-word;
+  }
+
+  .credits {
+    font-size: 0.9rem !important;
+  }
+
+  .semester-topics li {
+    font-size: 1rem !important;
+  }
+
+  .internship-section {
+    text-align: left !important;
+  }
+
+  .internship-section h3 {
+    text-align: left !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    width: 100% !important;
+  }
+
+  .internship-section p {
+    font-size: 1rem !important;
+    text-align: left !important;
   }
 
   .skills-section {
@@ -2668,9 +2725,29 @@ img {
     font-size: 1rem;
   }
 
+  .credits {
+    font-size: 0.85rem !important;
+  }
+
   .semester-topics li {
-    font-size: 0.875rem;
+    font-size: 0.95rem !important;
     padding-left: 2.5rem;
+  }
+
+  .internship-section {
+    text-align: left !important;
+  }
+
+  .internship-section h3 {
+    text-align: left !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    width: 100% !important;
+  }
+
+  .internship-section p {
+    font-size: 0.95rem !important;
+    text-align: left !important;
   }
 
   .skills-list {
@@ -2704,6 +2781,23 @@ img {
 
   .container {
     padding: 0 0.75rem;
+  }
+
+  .program-details-bar {
+    padding: 0.875rem 0;
+  }
+
+  .detail-item {
+    padding: 0.7rem 0.75rem;
+    gap: 0.2rem;
+  }
+
+  .detail-label {
+    font-size: 0.8rem !important;
+  }
+
+  .detail-value {
+    font-size: 0.85rem !important;
   }
 
   .overview-title,
@@ -2896,9 +2990,29 @@ img {
     font-size: 0.95rem;
   }
 
+  .credits {
+    font-size: 0.8rem !important;
+  }
+
   .semester-topics li {
-    font-size: 0.8rem;
+    font-size: 0.85rem !important;
     padding-left: 2.25rem;
+  }
+
+  .internship-section {
+    text-align: left !important;
+  }
+
+  .internship-section h3 {
+    text-align: left !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    width: 100% !important;
+  }
+
+  .internship-section p {
+    font-size: 0.85rem !important;
+    text-align: left !important;
   }
 
   .skills-section .section-title {
@@ -3703,6 +3817,41 @@ img {
   font-size: 1.2rem !important;
   line-height: 1.55;
   letter-spacing: 0.01em;
+}
+
+/* =========================================================
+   Mobile FAQ: decrease text size for questions and answers
+   on iPhone and Android devices
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .counselling-child-psychology-page .faq-section .faq-question {
+    font-size: 0.9rem !important;
+  }
+
+  .counselling-child-psychology-page .faq-section .faq-answer p {
+    font-size: 0.85rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .counselling-child-psychology-page .faq-section .faq-question {
+    font-size: 0.85rem !important;
+  }
+
+  .counselling-child-psychology-page .faq-section .faq-answer p {
+    font-size: 0.8rem !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .counselling-child-psychology-page .faq-section .faq-question {
+    font-size: 0.8rem !important;
+  }
+
+  .counselling-child-psychology-page .faq-section .faq-answer p {
+    font-size: 0.75rem !important;
+  }
 }
 
 .counselling-child-psychology-page .highlights-section .batch-box h3,

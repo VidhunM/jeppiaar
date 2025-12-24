@@ -1181,6 +1181,7 @@ img {
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
 }
 
 .internship-section h3 {
@@ -1189,7 +1190,12 @@ img {
   font-weight: 600;
   color: #0E0529;
   margin-bottom: 0.75rem;
+  margin-left: 0;
+  margin-right: auto;
+  padding-left: 0;
   letter-spacing: 0.01em;
+  text-align: left;
+  width: 100%;
 }
 
 .internship-section p {
@@ -2127,6 +2133,10 @@ img {
     transform: translateY(-2px);
   }
 
+  .program-details-bar {
+    padding: 1.25rem 0;
+  }
+
   .details-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -2135,11 +2145,20 @@ img {
   .detail-item {
     border-right: none;
     border-bottom: 1px solid #e0e0e0;
-    padding-bottom: 1.5rem;
+    padding: 0.875rem 1rem;
+    gap: 0.3rem;
   }
 
   .detail-item:last-child {
     border-bottom: none;
+  }
+
+  .detail-label {
+    font-size: 0.9rem !important;
+  }
+
+  .detail-value {
+    font-size: 1rem !important;
   }
 
   .programs-grid {
@@ -2362,6 +2381,23 @@ img {
     -webkit-overflow-scrolling: touch;
   }
 
+  .program-details-bar {
+    padding: 1rem 0;
+  }
+
+  .detail-item {
+    padding: 0.75rem 0.875rem;
+    gap: 0.25rem;
+  }
+
+  .detail-label {
+    font-size: 0.85rem !important;
+  }
+
+  .detail-value {
+    font-size: 0.9rem !important;
+  }
+
   .container {
     padding: 0 1rem;
     max-width: 100%;
@@ -2471,6 +2507,30 @@ img {
   .semester-card h3 {
     font-size: 1.1rem;
     word-wrap: break-word;
+  }
+
+  .credits {
+    font-size: 0.9rem !important;
+  }
+
+  .semester-topics li {
+    font-size: 1rem !important;
+  }
+
+  .internship-section {
+    text-align: left !important;
+  }
+
+  .internship-section h3 {
+    text-align: left !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    width: 100% !important;
+  }
+
+  .internship-section p {
+    font-size: 1rem !important;
+    text-align: left !important;
   }
 
   .skills-section {
@@ -2699,9 +2759,29 @@ img {
     font-size: 1rem;
   }
 
+  .credits {
+    font-size: 0.85rem !important;
+  }
+
   .semester-topics li {
-    font-size: 0.875rem;
+    font-size: 0.95rem !important;
     padding-left: 2.5rem;
+  }
+
+  .internship-section {
+    text-align: left !important;
+  }
+
+  .internship-section h3 {
+    text-align: left !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    width: 100% !important;
+  }
+
+  .internship-section p {
+    font-size: 0.95rem !important;
+    text-align: left !important;
   }
 
   .skills-list {
@@ -2735,6 +2815,23 @@ img {
 
   .container {
     padding: 0 0.75rem;
+  }
+
+  .program-details-bar {
+    padding: 0.875rem 0;
+  }
+
+  .detail-item {
+    padding: 0.7rem 0.75rem;
+    gap: 0.2rem;
+  }
+
+  .detail-label {
+    font-size: 0.8rem !important;
+  }
+
+  .detail-value {
+    font-size: 0.85rem !important;
   }
 
   .overview-title,
@@ -2954,9 +3051,29 @@ img {
     font-size: 0.95rem;
   }
 
+  .credits {
+    font-size: 0.8rem !important;
+  }
+
   .semester-topics li {
-    font-size: 0.8rem;
+    font-size: 0.85rem !important;
     padding-left: 2.25rem;
+  }
+
+  .internship-section {
+    text-align: left !important;
+  }
+
+  .internship-section h3 {
+    text-align: left !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    width: 100% !important;
+  }
+
+  .internship-section p {
+    font-size: 0.85rem !important;
+    text-align: left !important;
   }
 
   .skills-section .section-title {
@@ -3495,6 +3612,34 @@ img {
     font-size: 0.85rem !important;
   }
 
+  .counselling-organizational-psychology-page .course-syllabus .credits {
+    font-size: 0.8rem !important;
+  }
+
+  .counselling-organizational-psychology-page .internship-section {
+    text-align: left !important;
+  }
+
+  .counselling-organizational-psychology-page .internship-section h3 {
+    text-align: left !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    font-size: 1rem !important;
+    width: 100% !important;
+  }
+
+  .counselling-organizational-psychology-page .internship-section p {
+    text-align: left !important;
+  }
+
+  .counselling-organizational-psychology-page .internship-section p {
+    font-size: 0.85rem !important;
+  }
+
+  .counselling-organizational-psychology-page .course-syllabus .semester-topics li {
+    font-size: 0.85rem !important;
+  }
+
   /* Ensure left alignment for smallest mobile devices */
   .counselling-organizational-psychology-page .highlights-section .highlights-text {
     text-align: left !important;
@@ -3653,10 +3798,34 @@ img {
   }
 
   /* INTERNSHIP OPPORTUNITIES - match SKILLS section styling */
+  .counselling-organizational-psychology-page .internship-section {
+    text-align: left !important;
+  }
+
   .counselling-organizational-psychology-page .internship-section h3 {
     font-size: 1.15rem !important;
     margin-bottom: 1rem !important;
-    padding: 0 1rem !important;
+    margin-left: 0 !important;
+    padding: 0 !important;
+    padding-left: 0 !important;
+    text-align: left !important;
+    width: 100% !important;
+  }
+
+  .counselling-organizational-psychology-page .internship-section p {
+    text-align: left !important;
+  }
+
+  .counselling-organizational-psychology-page .internship-section p {
+    font-size: 0.95rem !important;
+  }
+
+  .counselling-organizational-psychology-page .course-syllabus .credits {
+    font-size: 0.9rem !important;
+  }
+
+  .counselling-organizational-psychology-page .course-syllabus .semester-topics li {
+    font-size: 0.95rem !important;
   }
 
   .counselling-organizational-psychology-page .skills-list {
@@ -3724,9 +3893,33 @@ img {
 @media (max-width: 480px) {
   .counselling-organizational-psychology-page .skills-section .section-title,
   .counselling-organizational-psychology-page .other-programs .section-title,
+  .counselling-organizational-psychology-page .internship-section {
+    text-align: left !important;
+  }
+
   .counselling-organizational-psychology-page .internship-section h3 {
     font-size: 1.05rem !important;
-    padding: 0 0.875rem !important;
+    margin-left: 0 !important;
+    padding: 0 !important;
+    padding-left: 0 !important;
+    text-align: left !important;
+    width: 100% !important;
+  }
+
+  .counselling-organizational-psychology-page .internship-section p {
+    text-align: left !important;
+  }
+
+  .counselling-organizational-psychology-page .internship-section p {
+    font-size: 0.9rem !important;
+  }
+
+  .counselling-organizational-psychology-page .course-syllabus .credits {
+    font-size: 0.85rem !important;
+  }
+
+  .counselling-organizational-psychology-page .course-syllabus .semester-topics li {
+    font-size: 0.9rem !important;
   }
 
   .counselling-organizational-psychology-page .skills-list {
@@ -3811,6 +4004,41 @@ img {
   font-size: 1.2rem !important;
   line-height: 1.55;
   letter-spacing: 0.01em;
+}
+
+/* =========================================================
+   Mobile FAQ: decrease text size for questions and answers
+   on iPhone and Android devices
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .counselling-organizational-psychology-page .faq-section .faq-question {
+    font-size: 0.9rem !important;
+  }
+
+  .counselling-organizational-psychology-page .faq-section .faq-answer p {
+    font-size: 0.85rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .counselling-organizational-psychology-page .faq-section .faq-question {
+    font-size: 0.85rem !important;
+  }
+
+  .counselling-organizational-psychology-page .faq-section .faq-answer p {
+    font-size: 0.8rem !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .counselling-organizational-psychology-page .faq-section .faq-question {
+    font-size: 0.8rem !important;
+  }
+
+  .counselling-organizational-psychology-page .faq-section .faq-answer p {
+    font-size: 0.75rem !important;
+  }
 }
 
 /* =========================================================
