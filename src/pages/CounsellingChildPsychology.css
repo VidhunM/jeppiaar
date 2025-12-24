@@ -3832,6 +3832,17 @@ img {
 }
 
 /* =========================================================
+   Mobile spacing: add space above "Unlock your path..." subtitle
+   for iPhone and Android mobile devices
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .counselling-child-psychology-page .highlights-section .highlights-subtitle {
+    margin-top: 1.5rem !important;
+  }
+}
+
+/* =========================================================
    Mobile typography: keep ONE consistent font across this page
    ========================================================= */
 
