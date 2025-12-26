@@ -728,7 +728,7 @@
   }
 
   .introduction-text p {
-    font-size: 1.0rem !important;
+    font-size: 1.1rem !important;
   }
 
   .core-value-card h4 {
@@ -756,7 +756,7 @@
 
   .vision-card p,
   .mission-card p {
-    font-size: 1.0rem !important;
+    font-size: 1.1rem !important;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
     line-height: 1.55;
@@ -765,7 +765,7 @@
 @media (max-width: 480px) {
   .vision-card p,
   .mission-card p {
-    font-size: 0.95rem !important;
+    font-size: 1.05rem !important;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
     line-height: 1.55;
@@ -944,7 +944,7 @@
   }
 
   .introduction-text p {
-    font-size: 0.95rem !important;
+    font-size: 1.05rem !important;
   }
 
   .core-value-card h4 {
