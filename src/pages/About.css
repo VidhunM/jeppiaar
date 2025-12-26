@@ -756,8 +756,15 @@
 
   .vision-card p,
   .mission-card p {
-    font-size: 0.9rem !important;
+    font-size: 0.85rem !important;
   }
+
+@media (max-width: 480px) {
+  .vision-card p,
+  .mission-card p {
+    font-size: 0.8rem !important;
+  }
+}
 
   .core-values-section {
     padding: 3rem 1.5rem;
