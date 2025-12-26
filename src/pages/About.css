@@ -732,11 +732,11 @@
   }
 
   .core-value-card h4 {
-    font-size: 0.85rem !important;
+    font-size: 1rem !important;
   }
 
   .core-value-card p {
-    font-size: 0.85rem !important;
+    font-size: 1rem !important;
   }
 
 
@@ -756,7 +756,7 @@
 
   .vision-card p,
   .mission-card p {
-    font-size: 1.3rem !important;
+    font-size: 1.1rem !important;
   }
 
   .core-values-section {
@@ -935,11 +935,11 @@
   }
 
   .core-value-card h4 {
-    font-size: 0.8rem !important;
+    font-size: 0.95rem !important;
   }
 
   .core-value-card p {
-    font-size: 0.8rem !important;
+    font-size: 0.95rem !important;
   }
 
 
@@ -985,7 +985,7 @@
 
   .vision-card p,
   .mission-card p {
-    font-size: 1.25rem !important;
+    font-size: 1.05rem !important;
   }
 
   .core-values-section {
