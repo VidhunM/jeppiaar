@@ -213,9 +213,12 @@
 
   .team-modal-description {
     font-family: 'Inter', sans-serif !important;
-    font-size: 1.1rem !important;
+    font-size: 0.9rem !important;
     line-height: 1.55;
     letter-spacing: 0.01em;
+  }
+  .team-modal-description p {
+    font-size: 0.9rem !important;
   }
 
   .team-modal-close {
@@ -266,10 +269,13 @@
 
   .team-modal-description {
     font-family: 'Inter', sans-serif !important;
-    font-size: 1.1rem !important;
+    font-size: 0.85rem !important;
     line-height: 1.55;
     letter-spacing: 0.01em;
     text-align: left;
+  }
+  .team-modal-description p {
+    font-size: 0.85rem !important;
   }
 
   .team-modal-description p {
@@ -287,9 +293,12 @@
 
   .team-modal-description {
     font-family: 'Inter', sans-serif !important;
-    font-size: 1.1rem !important;
+    font-size: 0.8rem !important;
     line-height: 1.55;
     letter-spacing: 0.01em;
+  }
+  .team-modal-description p {
+    font-size: 0.8rem !important;
   }
 }
 
