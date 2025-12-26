@@ -340,7 +340,7 @@
 
 .hero-rated-badge-bottom {
   top: auto;
-  bottom: 5rem;
+  bottom: 8rem;
   left: 6rem;
   background: transparent;
   backdrop-filter: none;
@@ -387,7 +387,7 @@
 
 .hero-rated-stars-bottom {
   top: auto;
-  bottom: 2.5rem;
+  bottom: 5.5rem;
   left: 6rem;
   background: transparent;
   backdrop-filter: none;

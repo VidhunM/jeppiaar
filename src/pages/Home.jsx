@@ -265,7 +265,7 @@ const Home = () => {
         <div className="banner-overlay"></div>
         <div className="banner-content scroll-from-left">
           <h2> 2026 ADMISSIONS OPEN - START YOUR JOURNEY IN PSYCHOLOGY</h2>
-          <p>Join Jeppiaar Academy for practice-oriented psychology diploma programs that blend classroom learning with real-world experience.</p>
+          <p>Join Jeppiaar Academy for practice-oriented psychology diploma programs that blend classroom learning <br />with real-world experience.</p>
           <button 
             className="apply-now-btn"
             onClick={openApplyModal}

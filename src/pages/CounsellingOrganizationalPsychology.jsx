@@ -346,8 +346,7 @@ const CounsellingOrganizationalPsychology = () => {
         <div className="container">
           <h2 className="section-title-white">CAREER PROSPECTS</h2>
           <p className="career-description">
-            With an Organizational Psychology specialization, this course builds a strong foundation in workplace counselling and prepares you for impactful careers in corporate mental health and organizational development.
-            <span className="career-secondary-line">Potential career paths include :</span>
+            With an Organizational Psychology specialization, this course builds a strong foundation in workplace counselling and prepares you for impactful careers in corporate mental health and organizational development. Potential career paths include:
           </p>
           <div className="career-carousel-wrapper">
             <div className="career-carousel-container">

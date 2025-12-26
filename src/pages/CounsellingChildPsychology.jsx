@@ -346,8 +346,7 @@ const CounsellingChildPsychology = () => {
         <div className="container">
           <h2 className="section-title-white">CAREER PROSPECTS</h2>
           <p className="career-description">
-            With a Child Counselling specialization, this course builds a strong psychology foundation and prepares you for impactful careers in child and adolescent mental health.
-            <span className="career-secondary-line">Potential career paths include :</span>
+            With a Child Counselling specialization, this course builds a strong psychology foundation and prepares you for impactful careers in child and adolescent mental health. Potential career paths include:
           </p>
           <div className="career-carousel-wrapper">
             <div className="career-carousel-container">
