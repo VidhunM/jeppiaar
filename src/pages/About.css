@@ -757,12 +757,18 @@
   .vision-card p,
   .mission-card p {
     font-size: 0.8rem !important;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    line-height: 1.55;
   }
 
 @media (max-width: 480px) {
   .vision-card p,
   .mission-card p {
     font-size: 0.75rem !important;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    line-height: 1.55;
   }
 }
 
@@ -992,7 +998,10 @@
 
   .vision-card p,
   .mission-card p {
-    font-size: 1.05rem !important;
+    font-size: 0.75rem !important;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    line-height: 1.55;
   }
 
   .core-values-section {
