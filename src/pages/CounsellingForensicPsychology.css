@@ -4010,12 +4010,12 @@ img {
 }
 
 /* Mobile Hero Section Fixes */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .program-hero-banner {
     margin-top: 0px !important;
     min-height: auto !important;
-    padding-top: 2rem !important;
-    padding-bottom: 2rem !important;
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
