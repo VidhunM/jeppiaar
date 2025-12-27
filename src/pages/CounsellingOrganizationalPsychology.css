@@ -537,7 +537,7 @@ img {
   position: absolute;
   left: 0;
   color: white;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: bold;
 }
 
@@ -4097,5 +4097,16 @@ img {
   .counselling-organizational-psychology-page {
     padding-top: 80px !important;
   }
+}
+
+.counselling-organizational-psychology-page .highlights-section .batch-box h3,
+.counselling-organizational-psychology-page .highlights-section .batch-details li,
+.counselling-organizational-psychology-page .career-prospects .career-description,
+.counselling-organizational-psychology-page .overview-section .overview-text p,
+.counselling-organizational-psychology-page .highlights-section .highlights-subtitle {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 1.2rem !important;
+  line-height: 1.55;
+  letter-spacing: 0.01em;
 }
 
