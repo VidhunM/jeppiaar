@@ -3877,7 +3877,7 @@ img {
 
   .counselling-child-psychology-page .course-syllabus .semester-topics li {
     font-family: 'Inter', sans-serif !important;
-    font-size: 0.75rem !important;
+    font-size: 0.9rem !important;
     line-height: 1.55 !important;
   }
 
@@ -4042,6 +4042,57 @@ img {
   }
 }
 
+@media (max-width: 768px) {
+  .counselling-child-psychology-page .course-syllabus {
+    padding: 1.5rem 0 !important;
+  }
+  .counselling-child-psychology-page .syllabus-content {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+    margin-bottom: 1.25rem !important;
+  }
+  .counselling-child-psychology-page .semester-card {
+    padding: 1rem !important;
+  }
+  .counselling-child-psychology-page .semester-header {
+    margin-bottom: 1rem !important;
+    padding: 0.5rem 1rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .counselling-child-psychology-page .course-syllabus {
+    padding: 1.25rem 0 !important;
+  }
+  .counselling-child-psychology-page .syllabus-content {
+    gap: 0.75rem !important;
+    margin-bottom: 1rem !important;
+  }
+  .counselling-child-psychology-page .semester-card {
+    padding: 0.875rem !important;
+  }
+  .counselling-child-psychology-page .semester-header {
+    margin-bottom: 0.75rem !important;
+    padding: 0.4rem 0.875rem !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .counselling-child-psychology-page .course-syllabus {
+    padding: 1rem 0 !important;
+  }
+  .counselling-child-psychology-page .syllabus-content {
+    gap: 0.6rem !important;
+    margin-bottom: 0.875rem !important;
+  }
+  .counselling-child-psychology-page .semester-card {
+    padding: 0.75rem !important;
+  }
+  .counselling-child-psychology-page .semester-header {
+    margin-bottom: 0.6rem !important;
+    padding: 0.35rem 0.75rem !important;
+  }
+}
 /* =========================================================
    Typography consistency for key content sections
    (requested: Overview, Highlights, Learning Outcomes,
@@ -4213,5 +4264,73 @@ img {
     font-size: 0.9rem !important;
     line-height: 1.55 !important;
     margin-bottom: 0.7rem !important;
+  }
+}
+
+/* =========================================================
+   Mobile updates: Highlights section adjustments (iPhone/Android)
+   ========================================================= */
+@media (max-width: 768px) {
+  /* Decrease text size for "Unlock your path..." */
+  .counselling-child-psychology-page .highlights-section .highlights-subtitle {
+    font-size: 0.95rem !important;
+    margin-top: 1rem !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Decrease top and bottom height spacing of the whole section */
+  .counselling-child-psychology-page .highlights-section {
+    padding-top: 1.5rem !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .counselling-child-psychology-page .highlights-section .highlights-content {
+    gap: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  /* Remove padding from text container to further reduce space */
+  .counselling-child-psychology-page .highlights-section .highlights-text {
+    padding-bottom: 0 !important;
+  }
+  
+  .counselling-child-psychology-page .highlights-section .download-brochure-btn {
+    margin-bottom: 0 !important;
+  }
+
+  /* Move image to bottom and flush with edge */
+  .counselling-child-psychology-page .highlights-image {
+    order: 2 !important;
+    margin-bottom: 0 !important;
+    margin-top: -0.5rem !important;
+    padding-bottom: 0 !important;
+    margin-left: -2rem !important;
+    width: 95% !important;
+    max-width: none !important;
+    align-self: flex-start !important;
+  }
+
+  .counselling-child-psychology-page .highlights-image img {
+    margin-bottom: 0 !important;
+    display: block !important;
+    width: 100% !important;
+  }
+
+  /* Decrease text size for batches (both cards) - matching learning outcomes */
+  .counselling-child-psychology-page .batch-box h3,
+  .counselling-child-psychology-page .batch-details li {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
+    font-size: 0.95rem !important;
+    line-height: 1.55 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .counselling-child-psychology-page .batch-box h3,
+  .counselling-child-psychology-page .batch-details li {
+    font-size: 0.9rem !important;
   }
 }

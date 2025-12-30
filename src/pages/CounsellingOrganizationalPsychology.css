@@ -4193,3 +4193,87 @@ img {
   }
 }
 
+/* =========================================================
+   Mobile updates: Highlights section adjustments (iPhone/Android)
+   ========================================================= */
+@media (max-width: 768px) {
+  /* Decrease text size for "Unlock your path..." */
+  .counselling-organizational-psychology-page .highlights-section .highlights-subtitle {
+    font-size: 0.95rem !important;
+    margin-top: 1rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .counselling-organizational-psychology-page .highlights-title {
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    font-family: 'Roboto', sans-serif !important;
+  }
+
+  /* Decrease top and bottom height spacing of the whole section */
+  .counselling-organizational-psychology-page .highlights-section {
+    padding-top: 1.5rem !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .counselling-organizational-psychology-page .highlights-section .highlights-content {
+    gap: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  /* Remove padding from text container to further reduce space */
+  .counselling-organizational-psychology-page .highlights-section .highlights-text {
+    padding-bottom: 0 !important;
+  }
+  
+  .counselling-organizational-psychology-page .highlights-section .download-brochure-btn {
+    margin-bottom: 0 !important;
+  }
+
+  /* Move image to bottom and flush with edge */
+  .counselling-organizational-psychology-page .highlights-image {
+    order: 2 !important;
+    margin-bottom: 0 !important;
+    margin-top: 2.5rem !important;
+    padding-bottom: 0 !important;
+    margin-left: -2rem !important;
+    width: 110% !important;
+    max-width: none !important;
+    align-self: flex-start !important;
+  }
+
+  .counselling-organizational-psychology-page .highlights-image img {
+    margin-bottom: 0 !important;
+    display: block !important;
+    width: 100% !important;
+  }
+
+  /* Decrease text size for batches (both cards) - matching learning outcomes */
+  .counselling-organizational-psychology-page .batch-box h3,
+  .counselling-organizational-psychology-page .batch-details li {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
+    font-size: 0.95rem !important;
+    line-height: 1.55 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .counselling-organizational-psychology-page .batch-box h3,
+  .counselling-organizational-psychology-page .batch-details li {
+    font-size: 0.9rem !important;
+  }
+
+  .counselling-organizational-psychology-page .highlights-title {
+    font-size: 1.15rem !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .counselling-organizational-psychology-page .highlights-title {
+    font-size: 1.05rem !important;
+  }
+}
+
