@@ -3495,13 +3495,14 @@ img {
   .counselling-child-psychology-page .overview-section .overview-text p,
   .counselling-child-psychology-page .overview-text p,
   .counselling-child-psychology-page .career-prospects .career-description {
-    font-size: 0.95rem !important;
-    line-height: 1.55;
+    font-size: 0.8rem !important;
+    line-height: 1.4 !important;
+    margin-bottom: 0.95rem !important;
   }
 
   .counselling-child-psychology-page .highlights-section .highlights-subtitle {
     font-size: 1.25rem !important;
-    font-weight: 600 !important;
+    font-weight: 500 !important;
     font-family: 'Roboto', sans-serif !important;
     line-height: 1.2;
   }
@@ -3525,12 +3526,14 @@ img {
   .counselling-child-psychology-page .overview-section .overview-text p,
   .counselling-child-psychology-page .overview-text p,
   .counselling-child-psychology-page .career-prospects .career-description {
-    font-size: 0.9rem !important;
+    font-size: 0.75rem !important;
+    line-height: 1.4 !important;
+    margin-bottom: 0.8rem !important;
   }
 
   .counselling-child-psychology-page .highlights-section .highlights-subtitle {
     font-size: 1.15rem !important;
-    font-weight: 600 !important;
+    font-weight: 500 !important;
     font-family: 'Roboto', sans-serif !important;
   }
 
@@ -3569,13 +3572,23 @@ img {
   }
 
   .counselling-child-psychology-page .highlights-title {
-    font-size: 0.95rem !important;
+    font-size: 1.05rem !important;
+    font-weight: 700 !important;
+    font-family: 'Roboto', sans-serif !important;
   }
 
   .counselling-child-psychology-page .overview-section .overview-text p,
   .counselling-child-psychology-page .overview-text p,
   .counselling-child-psychology-page .highlights-section .highlights-subtitle {
-    font-size: 0.85rem !important;
+    font-size: 0.7rem !important;
+    line-height: 1.35 !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .counselling-child-psychology-page .highlights-section .highlights-subtitle {
+    font-size: 1.05rem !important;
+    font-weight: 500 !important;
+    font-family: 'Roboto', sans-serif !important;
   }
 
   /* Ensure left alignment for smallest mobile devices */

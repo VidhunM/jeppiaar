@@ -3553,8 +3553,9 @@ img {
   .counselling-organizational-psychology-page .overview-section .overview-text p,
   .counselling-organizational-psychology-page .overview-text p,
   .counselling-organizational-psychology-page .highlights-section .highlights-subtitle {
-    font-size: 0.95rem !important;
-    line-height: 1.55;
+    font-size: 0.8rem !important;
+    line-height: 1.4 !important;
+    margin-bottom: 0.95rem !important;
     font-family: 'Inter', sans-serif !important;
   }
 }
@@ -3575,7 +3576,9 @@ img {
   .counselling-organizational-psychology-page .overview-section .overview-text p,
   .counselling-organizational-psychology-page .overview-text p,
   .counselling-organizational-psychology-page .highlights-section .highlights-subtitle {
-    font-size: 0.9rem !important;
+    font-size: 0.75rem !important;
+    line-height: 1.4 !important;
+    margin-bottom: 0.8rem !important;
     font-family: 'Inter', sans-serif !important;
   }
 
@@ -3620,7 +3623,9 @@ img {
   .counselling-organizational-psychology-page .overview-section .overview-text p,
   .counselling-organizational-psychology-page .overview-text p,
   .counselling-organizational-psychology-page .highlights-section .highlights-subtitle {
-    font-size: 0.85rem !important;
+    font-size: 0.7rem !important;
+    line-height: 1.35 !important;
+    margin-bottom: 0.75rem !important;
     font-family: 'Inter', sans-serif !important;
   }
 
