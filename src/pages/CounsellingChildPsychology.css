@@ -3931,6 +3931,7 @@ img {
   .counselling-child-psychology-page h2,
   .counselling-child-psychology-page h3,
   .counselling-child-psychology-page h4,
+ 
   .counselling-child-psychology-page p,
   .counselling-child-psychology-page li,
   .counselling-child-psychology-page a,
@@ -3968,6 +3969,18 @@ img {
   .counselling-child-psychology-page .internship-section p {
     font-size: 1rem !important;
     text-align: left !important;
+  }
+}
+
+/* Mobile iPhone fix: show full career images */
+@media (max-width: 430px) {
+  .counselling-child-psychology-page .career-image {
+    background: #000;
+  }
+  .counselling-child-psychology-page .career-image img {
+    object-fit: contain !important;
+    width: 100%;
+    height: 100%;
   }
 }
 

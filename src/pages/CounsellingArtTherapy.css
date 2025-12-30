@@ -237,7 +237,7 @@
     justify-self: center;
     box-sizing: border-box;
     position: relative;
-    left: 8px;
+    left: 40px;
   }
 
   /* Ensure equal left/right padding so the centered image doesn't look offset */
@@ -356,7 +356,7 @@
   .counselling-art-therapy-page .highlights-section .highlights-image {
     max-width: 330px;
     position: relative;
-    left: 6px;
+    left: 32px;
   }
 
   .counselling-art-therapy-page .highlights-section .highlights-image img {
@@ -443,7 +443,7 @@
   .counselling-art-therapy-page .highlights-section .highlights-image {
     max-width: 310px;
     position: relative;
-    left: 4px;
+    left: 26px;
   }
 
   .counselling-art-therapy-page .highlights-section .highlights-image img {
@@ -2005,6 +2005,18 @@
   }
 
   .counselling-art-therapy-page .highlights-image img {
+
+/* Mobile iPhone fix: show full career images */
+@media (max-width: 430px) {
+  .counselling-art-therapy-page .career-image {
+    background: #000;
+  }
+  .counselling-art-therapy-page .career-image img {
+    object-fit: contain !important;
+    width: 100%;
+    height: 100%;
+  }
+}
     margin-bottom: 0 !important;
     display: block !important;
     width: 100% !important;

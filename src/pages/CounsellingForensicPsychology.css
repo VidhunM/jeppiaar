@@ -4180,6 +4180,18 @@ img {
   }
 
   .counselling-forensic-psychology-page .highlights-image img {
+
+/* Mobile iPhone fix: show full career images */
+@media (max-width: 430px) {
+  .counselling-forensic-psychology-page .career-image {
+    background: #000;
+  }
+  .counselling-forensic-psychology-page .career-image img {
+    object-fit: contain !important;
+    width: 100%;
+    height: 100%;
+  }
+}
     margin-bottom: 0 !important;
     display: block !important;
     width: 100% !important;
