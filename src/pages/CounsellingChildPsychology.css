@@ -3838,11 +3838,15 @@ img {
 
 @media (max-width: 480px) {
   .counselling-child-psychology-page .course-syllabus .credits {
-    font-size: 0.85rem !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.9rem !important;
+    line-height: 1.55 !important;
   }
 
   .counselling-child-psychology-page .course-syllabus .semester-topics li {
-    font-size: 0.95rem !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.9rem !important;
+    line-height: 1.55 !important;
   }
 
   .counselling-child-psychology-page .internship-section {
@@ -3866,11 +3870,15 @@ img {
 
 @media (max-width: 375px) {
   .counselling-child-psychology-page .course-syllabus .credits {
-    font-size: 0.8rem !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.75rem !important;
+    line-height: 1.55 !important;
   }
 
   .counselling-child-psychology-page .course-syllabus .semester-topics li {
-    font-size: 0.85rem !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.75rem !important;
+    line-height: 1.55 !important;
   }
 
   .counselling-child-psychology-page .internship-section {
@@ -3996,10 +4004,34 @@ img {
 
   .counselling-child-psychology-page .course-syllabus .syllabus-header .section-title {
     margin-bottom: 0 !important;
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    letter-spacing: 0.03em !important;
   }
 
   .counselling-child-psychology-page .course-syllabus .syllabus-buttons {
     margin-top: 0 !important;
+  }
+
+  .counselling-child-psychology-page .course-syllabus .semester-card h3 {
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 1.15rem !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+  }
+
+  .counselling-child-psychology-page .course-syllabus .credits {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.95rem !important;
+    line-height: 1.55 !important;
+  }
+
+  .counselling-child-psychology-page .course-syllabus .semester-topics li {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.95rem !important;
+    line-height: 1.55 !important;
   }
 }
 
@@ -4106,5 +4138,53 @@ img {
   
   .counselling-child-psychology-page {
     padding-top: 80px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .counselling-child-psychology-page .career-prospects .section-title-white {
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    letter-spacing: 0.03em !important;
+  }
+
+  .counselling-child-psychology-page .career-prospects .career-description {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.95rem !important;
+    line-height: 1.55 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .counselling-child-psychology-page .career-prospects .section-title-white {
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 1.15rem !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    letter-spacing: 0.03em !important;
+  }
+
+  .counselling-child-psychology-page .career-prospects .career-description {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.9rem !important;
+    line-height: 1.55 !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .counselling-child-psychology-page .career-prospects .section-title-white {
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 1.05rem !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    letter-spacing: 0.03em !important;
+  }
+
+  .counselling-child-psychology-page .career-prospects .career-description {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.75rem !important;
+    line-height: 1.5 !important;
   }
 }

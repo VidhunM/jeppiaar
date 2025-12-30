@@ -4070,10 +4070,34 @@ img {
 
   .counselling-organizational-psychology-page .course-syllabus .syllabus-header .section-title {
     margin-bottom: 0 !important;
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    letter-spacing: 0.03em !important;
   }
 
   .counselling-organizational-psychology-page .course-syllabus .syllabus-buttons {
     margin-top: 0 !important;
+  }
+
+  .counselling-organizational-psychology-page .course-syllabus .semester-card h3 {
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 1.15rem !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+  }
+
+  .counselling-organizational-psychology-page .course-syllabus .credits {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.95rem !important;
+    line-height: 1.55 !important;
+  }
+
+  .counselling-organizational-psychology-page .course-syllabus .semester-topics li {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.95rem !important;
+    line-height: 1.55 !important;
   }
 }
 
