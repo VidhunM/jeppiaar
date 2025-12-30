@@ -1901,3 +1901,48 @@
   line-height: 1.55;
   letter-spacing: 0.01em;
 }
+
+@media (max-width: 768px) {
+  .counselling-art-therapy-page .overview-section .overview-text p,
+  .counselling-art-therapy-page .overview-text p {
+    font-size: 0.95rem !important;
+    line-height: 1.55 !important;
+    margin-bottom: 0.8rem !important;
+  }
+
+  .counselling-art-therapy-page .highlights-section .highlights-subtitle {
+    font-size: 0.95rem !important;
+    line-height: 1.55 !important;
+    margin-bottom: 0.85rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .counselling-art-therapy-page .overview-section .overview-text p,
+  .counselling-art-therapy-page .overview-text p {
+    font-size: 0.9rem !important;
+    line-height: 1.55 !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .counselling-art-therapy-page .highlights-section .highlights-subtitle {
+    font-size: 0.9rem !important;
+    line-height: 1.55 !important;
+    margin-bottom: 0.8rem !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .counselling-art-therapy-page .overview-section .overview-text p,
+  .counselling-art-therapy-page .overview-text p {
+    font-size: 0.9rem !important;
+    line-height: 1.55 !important;
+    margin-bottom: 0.7rem !important;
+  }
+
+  .counselling-art-therapy-page .highlights-section .highlights-subtitle {
+    font-size: 0.9rem !important;
+    line-height: 1.55 !important;
+    margin-bottom: 0.75rem !important;
+  }
+}
