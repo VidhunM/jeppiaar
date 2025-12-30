@@ -844,6 +844,11 @@
 }
 
 @media (max-width: 480px) {
+  .career-card {
+    flex: 0 0 210px;
+    max-width: 210px;
+  }
+
   .counselling-art-therapy-page .overview-section .overview-title,
   .counselling-art-therapy-page .overview-title {
     font-size: 1.15rem !important;
@@ -2012,20 +2017,9 @@
     background: #000;
   }
   .counselling-art-therapy-page .career-image img {
-    object-fit: cover !important;
+    object-fit: contain !important;
     width: 100%;
     height: 100%;
-  }
-}
-
-/* Specific fix for iPhone 12 mini and iPhone 14 */
-@media (max-width: 390px) {
-  .counselling-art-therapy-page .career-image img {
-    object-fit: cover !important;
-    width: 100%;
-    height: 100%;
-    transform: scale(1.1);
-    transform-origin: center;
   }
 }
     margin-bottom: 0 !important;

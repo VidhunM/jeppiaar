@@ -2485,6 +2485,11 @@ img {
     --career-card-width: 210px;
   }
 
+  .career-card {
+    flex: 0 0 var(--career-card-width);
+    max-width: var(--career-card-width);
+  }
+
   .career-prospects .section-title-white {
     font-size: 1.25rem !important;
   }
