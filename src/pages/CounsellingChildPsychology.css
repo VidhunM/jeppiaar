@@ -3479,40 +3479,59 @@ img {
 @media (max-width: 768px) {
   .counselling-child-psychology-page .overview-section .overview-title,
   .counselling-child-psychology-page .overview-title {
-    font-size: 1.55rem !important;
+    font-size: 1.25rem !important;
     line-height: 1.2;
     letter-spacing: 0.4px;
+    margin-bottom: 0.75rem !important;
+    font-family: 'Roboto', sans-serif !important;
   }
 
   .counselling-child-psychology-page .highlights-title {
-    font-size: 0.95rem !important;
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    font-family: 'Roboto', sans-serif !important;
   }
 
   .counselling-child-psychology-page .overview-section .overview-text p,
   .counselling-child-psychology-page .overview-text p,
-  .counselling-child-psychology-page .highlights-section .highlights-subtitle,
   .counselling-child-psychology-page .career-prospects .career-description {
-    font-size: 0.75rem !important;
+    font-size: 0.95rem !important;
     line-height: 1.55;
+  }
+
+  .counselling-child-psychology-page .highlights-section .highlights-subtitle {
+    font-size: 1.25rem !important;
+    font-weight: 600 !important;
+    font-family: 'Roboto', sans-serif !important;
+    line-height: 1.2;
   }
 }
 
 @media (max-width: 480px) {
   .counselling-child-psychology-page .overview-section .overview-title,
   .counselling-child-psychology-page .overview-title {
-    font-size: 1.45rem !important;
+    font-size: 1.15rem !important;
     letter-spacing: 0.35px;
+    margin-bottom: 0.6rem !important;
+    font-family: 'Roboto', sans-serif !important;
   }
 
   .counselling-child-psychology-page .highlights-title {
-    font-size: 0.8rem !important;
+    font-size: 1.15rem !important;
+    font-weight: 700 !important;
+    font-family: 'Roboto', sans-serif !important;
   }
 
   .counselling-child-psychology-page .overview-section .overview-text p,
   .counselling-child-psychology-page .overview-text p,
-  .counselling-child-psychology-page .highlights-section .highlights-subtitle,
   .counselling-child-psychology-page .career-prospects .career-description {
-    font-size: 0.8rem !important;
+    font-size: 0.9rem !important;
+  }
+
+  .counselling-child-psychology-page .highlights-section .highlights-subtitle {
+    font-size: 1.15rem !important;
+    font-weight: 600 !important;
+    font-family: 'Roboto', sans-serif !important;
   }
 
   /* Ensure left alignment for all mobile devices */
@@ -3537,14 +3556,16 @@ img {
 
   .counselling-child-psychology-page .overview-section .overview-image {
     order: -1;
-    margin-bottom: 1.25rem;
+    margin-bottom: 0.5rem;
   }
 }
 
 @media (max-width: 375px) {
   .counselling-child-psychology-page .overview-section .overview-title,
   .counselling-child-psychology-page .overview-title {
-    font-size: 1.35rem !important;
+    font-size: 1.05rem !important;
+    margin-bottom: 0.5rem !important;
+    font-family: 'Roboto', sans-serif !important;
   }
 
   .counselling-child-psychology-page .highlights-title {
@@ -3554,7 +3575,7 @@ img {
   .counselling-child-psychology-page .overview-section .overview-text p,
   .counselling-child-psychology-page .overview-text p,
   .counselling-child-psychology-page .highlights-section .highlights-subtitle {
-    font-size: 0.75rem !important;
+    font-size: 0.85rem !important;
   }
 
   /* Ensure left alignment for smallest mobile devices */
@@ -3579,7 +3600,7 @@ img {
 
   .counselling-child-psychology-page .overview-section .overview-image {
     order: -1;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -4074,4 +4095,3 @@ img {
     padding-top: 80px !important;
   }
 }
-
