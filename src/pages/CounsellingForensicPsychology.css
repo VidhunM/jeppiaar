@@ -1525,12 +1525,14 @@ img {
 
 @media (max-width: 767px) {
   .career-card {
-    flex: 0 0 100%;
-    max-width: 300px;
+    flex: 0 0 280px;
+    max-width: 280px;
+    min-width: 280px;
   }
-  
+
   .career-cards-slider {
-    gap: 1.5rem;
+    gap: 1rem;
+    justify-content: center;
   }
 }
 
