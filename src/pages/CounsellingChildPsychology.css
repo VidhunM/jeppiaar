@@ -3846,13 +3846,13 @@ img {
 @media (max-width: 480px) {
   .counselling-child-psychology-page .course-syllabus .credits {
     font-family: 'Inter', sans-serif !important;
-    font-size: 0.9rem !important;
+    font-size: 0.85rem !important;
     line-height: 1.55 !important;
   }
 
   .counselling-child-psychology-page .course-syllabus .semester-topics li {
     font-family: 'Inter', sans-serif !important;
-    font-size: 0.9rem !important;
+    font-size: 0.85rem !important;
     line-height: 1.55 !important;
   }
 
@@ -3878,13 +3878,13 @@ img {
 @media (max-width: 375px) {
   .counselling-child-psychology-page .course-syllabus .credits {
     font-family: 'Inter', sans-serif !important;
-    font-size: 0.75rem !important;
+    font-size: 0.72rem !important;
     line-height: 1.55 !important;
   }
 
   .counselling-child-psychology-page .course-syllabus .semester-topics li {
     font-family: 'Inter', sans-serif !important;
-    font-size: 0.9rem !important;
+    font-size: 0.82rem !important;
     line-height: 1.55 !important;
   }
 
@@ -4019,14 +4019,14 @@ img {
 
 @media (max-width: 768px) {
   .counselling-child-psychology-page .course-syllabus .syllabus-header {
-    margin-bottom: 1.1rem !important;
-    gap: 0.5rem !important;
+    margin-bottom: 0.9rem !important;
+    gap: 0.4rem !important;
   }
 
   .counselling-child-psychology-page .course-syllabus .syllabus-header .section-title {
     margin-bottom: 0 !important;
     font-family: 'Roboto', sans-serif !important;
-    font-size: 1.25rem !important;
+    font-size: 1.2rem !important;
     font-weight: 700 !important;
     line-height: 1.2 !important;
     letter-spacing: 0.03em !important;
@@ -4038,20 +4038,20 @@ img {
 
   .counselling-child-psychology-page .course-syllabus .semester-card h3 {
     font-family: 'Roboto', sans-serif !important;
-    font-size: 1.15rem !important;
+    font-size: 1.1rem !important;
     font-weight: 700 !important;
     line-height: 1.2 !important;
   }
 
   .counselling-child-psychology-page .course-syllabus .credits {
     font-family: 'Inter', sans-serif !important;
-    font-size: 0.95rem !important;
+    font-size: 0.9rem !important;
     line-height: 1.55 !important;
   }
 
   .counselling-child-psychology-page .course-syllabus .semester-topics li {
     font-family: 'Inter', sans-serif !important;
-    font-size: 0.95rem !important;
+    font-size: 0.9rem !important;
     line-height: 1.55 !important;
     padding-left: 2.25rem !important;
   }
@@ -4071,36 +4071,36 @@ img {
 
 @media (max-width: 768px) {
   .counselling-child-psychology-page .course-syllabus {
-    padding: 1.5rem 0 !important;
+    padding: 1.25rem 0 !important;
   }
   .counselling-child-psychology-page .syllabus-content {
     grid-template-columns: 1fr !important;
-    gap: 1rem !important;
-    margin-bottom: 1.25rem !important;
+    gap: 0.8rem !important;
+    margin-bottom: 0.9rem !important;
   }
   .counselling-child-psychology-page .semester-card {
-    padding: 1rem !important;
+    padding: 0.85rem !important;
   }
   .counselling-child-psychology-page .semester-header {
-    margin-bottom: 1rem !important;
-    padding: 0.5rem 1rem !important;
+    margin-bottom: 0.8rem !important;
+    padding: 0.4rem 0.875rem !important;
   }
 }
 
 @media (max-width: 480px) {
   .counselling-child-psychology-page .course-syllabus {
-    padding: 1.25rem 0 !important;
+    padding: 1.1rem 0 !important;
   }
   .counselling-child-psychology-page .syllabus-content {
-    gap: 0.75rem !important;
-    margin-bottom: 1rem !important;
+    gap: 0.6rem !important;
+    margin-bottom: 0.8rem !important;
   }
   .counselling-child-psychology-page .semester-card {
-    padding: 0.875rem !important;
+    padding: 0.75rem !important;
   }
   .counselling-child-psychology-page .semester-header {
-    margin-bottom: 0.75rem !important;
-    padding: 0.4rem 0.875rem !important;
+    margin-bottom: 0.6rem !important;
+    padding: 0.35rem 0.8rem !important;
   }
   .counselling-child-psychology-page .course-syllabus .semester-topics li {
     padding-left: 2.1rem !important;
@@ -4114,18 +4114,18 @@ img {
 
 @media (max-width: 375px) {
   .counselling-child-psychology-page .course-syllabus {
-    padding: 1rem 0 !important;
+    padding: 0.85rem 0 !important;
   }
   .counselling-child-psychology-page .syllabus-content {
-    gap: 0.6rem !important;
-    margin-bottom: 0.875rem !important;
+    gap: 0.5rem !important;
+    margin-bottom: 0.75rem !important;
   }
   .counselling-child-psychology-page .semester-card {
-    padding: 0.75rem !important;
+    padding: 0.65rem !important;
   }
   .counselling-child-psychology-page .semester-header {
-    margin-bottom: 0.6rem !important;
-    padding: 0.35rem 0.75rem !important;
+    margin-bottom: 0.5rem !important;
+    padding: 0.3rem 0.7rem !important;
   }
   .counselling-child-psychology-page .course-syllabus .semester-topics li {
     padding-left: 2rem !important;
@@ -4323,9 +4323,9 @@ img {
 
   /* Decrease top and bottom height spacing of the whole section */
   .counselling-child-psychology-page .highlights-section {
-    padding-top: 1rem !important;
-    padding-bottom: 0.5rem !important;
-    margin-bottom: 0.75rem !important;
+    padding-top: 0.5rem !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
   }
 
   .counselling-child-psychology-page .highlights-section .highlights-content {
@@ -4338,6 +4338,7 @@ img {
   .counselling-child-psychology-page .highlights-section .highlights-text {
     padding-bottom: 0 !important;
     padding-top: 0 !important;
+    margin-bottom: 0 !important;
   }
   
   .counselling-child-psychology-page .highlights-section .download-brochure-btn {
@@ -4349,10 +4350,10 @@ img {
   .counselling-child-psychology-page .highlights-image {
     order: 2 !important;
     margin-bottom: 0 !important;
-    margin-top: -0.85rem !important;
+    margin-top: -1.6rem !important;
     padding-bottom: 0 !important;
-    margin-left: -2rem !important;
-    width: 95% !important;
+    margin-left: 0.5rem !important;
+    width: 92% !important;
     max-width: none !important;
     align-self: flex-start !important;
   }
@@ -4361,6 +4362,7 @@ img {
     margin-bottom: 0 !important;
     display: block !important;
     width: 100% !important;
+    transform: scale(0.95) !important;
   }
 
   /* Decrease text size for batches (both cards) - matching learning outcomes */
@@ -4422,9 +4424,9 @@ img {
   }
 
   .counselling-child-psychology-page .highlights-section {
-    padding-top: 0.75rem !important;
-    padding-bottom: 0.25rem !important;
-    margin-bottom: 0.5rem !important;
+    padding-top: 0.3rem !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
   }
 
   .counselling-child-psychology-page .highlights-section .batch-boxes {
@@ -4455,11 +4457,16 @@ img {
   }
 
   .counselling-child-psychology-page .highlights-section .download-brochure-btn {
-    padding: 0.42rem 0.68rem !important;
+    padding: 0.38rem 0.66rem !important;
     margin-bottom: 0 !important;
   }
   .counselling-child-psychology-page .highlights-image {
-    margin-top: -0.95rem !important;
+    margin-top: -1.6rem !important;
+    width: 90% !important;
+    margin-left: 0.75rem !important;
+  }
+  .counselling-child-psychology-page .highlights-image img {
+    transform: scale(0.93) !important;
   }
 }
 
@@ -4470,9 +4477,9 @@ img {
   }
 
   .counselling-child-psychology-page .highlights-section {
-    padding-top: 0.6rem !important;
-    padding-bottom: 0.2rem !important;
-    margin-bottom: 0.4rem !important;
+    padding-top: 0.3rem !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
   }
 
   .counselling-child-psychology-page .highlights-section .batch-boxes {
@@ -4503,10 +4510,15 @@ img {
   }
 
   .counselling-child-psychology-page .highlights-section .download-brochure-btn {
-    padding: 0.38rem 0.62rem !important;
+    padding: 0.36rem 0.6rem !important;
     margin-bottom: 0 !important;
   }
   .counselling-child-psychology-page .highlights-image {
-    margin-top: -1.1rem !important;
+    margin-top: -2rem !important;
+    width: 88% !important;
+    margin-left: 1rem !important;
+  }
+  .counselling-child-psychology-page .highlights-image img {
+    transform: scale(0.9) !important;
   }
 }
