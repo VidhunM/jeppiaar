@@ -171,6 +171,9 @@ img {
   font-family: 'Roboto', sans-serif;
   text-transform: none;
   white-space: nowrap;
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
 }
 
 .overview-section .enroll-now-btn:hover {
@@ -268,6 +271,9 @@ img {
   font-family: 'Roboto', sans-serif;
   text-transform: none;
   white-space: nowrap;
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
 }
 
 .enroll-now-btn:hover {
@@ -1019,6 +1025,9 @@ img {
   font-family: 'Roboto', sans-serif;
   text-align: center;
   text-transform: none;
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
 }
 
 .apply-now-btn-syllabus:hover {
