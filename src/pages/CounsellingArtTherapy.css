@@ -521,7 +521,7 @@
 
   .counselling-art-therapy-page .highlights-section .highlights-title {
     margin-bottom: 0.75rem; /* Minimal margin */
-    font-size: 0.8rem !important; /* Match program card mobile sizing */
+    font-size: 1.15rem !important; /* Increased for better readability on very small screens */
   }
 
   .counselling-art-therapy-page .highlights-section .download-brochure-btn {
@@ -865,7 +865,7 @@
   .counselling-art-therapy-page .overview-section .overview-text p,
   .counselling-art-therapy-page .overview-text p,
   .counselling-art-therapy-page .highlights-section .highlights-subtitle {
-    font-size: 0.75rem !important;
+    font-size: 0.7rem !important;
     line-height: 1.4 !important;
     margin-bottom: 0.8rem !important;
     font-family: 'Inter', sans-serif !important;
@@ -899,7 +899,7 @@
   .counselling-art-therapy-page .overview-section .overview-text p,
   .counselling-art-therapy-page .overview-text p,
   .counselling-art-therapy-page .highlights-section .highlights-subtitle {
-    font-size: 0.7rem !important;
+    font-size: 0.65rem !important;
     line-height: 1.35 !important;
     margin-bottom: 0.75rem !important;
     font-family: 'Inter', sans-serif !important;
@@ -1971,7 +1971,7 @@
   }
 
   .counselling-art-therapy-page .highlights-title {
-    font-size: 1.25rem !important;
+    font-size: 1.45rem !important;
     font-weight: 700 !important;
     font-family: 'Roboto', sans-serif !important;
   }
@@ -2093,5 +2093,38 @@
 
   .counselling-art-therapy-page .career-prospects .career-description {
     font-size: 0.75rem !important;
+  }
+}
+
+/* =========================================================
+   FINAL OVERRIDE: Force Left Alignment for Highlights Text
+   This block is placed at the end to override any previous rules
+   including the 'Mobile updates' block around line 1976.
+   ========================================================= */
+@media (max-width: 768px) {
+  .counselling-art-therapy-page .highlights-section .highlights-content {
+    /* Ensure items stretch to full width so text-align: left works */
+    align-items: stretch !important; 
+    justify-items: stretch !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .counselling-art-therapy-page .highlights-section .highlights-text {
+    text-align: left !important;
+    width: 100% !important;
+    padding-right: 0 !important;
+    margin-right: 0 !important;
+    /* Ensure it's not a flex container centering its children */
+    display: block !important; 
+    padding-bottom: 0 !important;
+  }
+
+  .counselling-art-therapy-page .highlights-section .highlights-subtitle,
+  .counselling-art-therapy-page .highlights-section .highlights-title {
+    text-align: left !important;
+    width: 100% !important;
+    display: block !important;
+    margin-left: 0 !important;
   }
 }
