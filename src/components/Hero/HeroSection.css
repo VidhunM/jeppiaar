@@ -702,9 +702,10 @@
     z-index: 2;
     width: 100%;
     padding: 1.5rem;
-    padding-top: 4rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     height: 100%;
   }
@@ -714,16 +715,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     width: 100%;
     max-width: 90%;
+    margin-top: 2rem;
   }
 
   .mobile-title {
     font-size: 2rem;
     font-weight: 700;
     line-height: 1.2;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     font-family: Helvetica, sans-serif;
@@ -745,7 +747,7 @@
     font-weight: 400;
     color: white;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
     text-align: center;
     width: 100%;
     /* Improve text rendering on mobile */
@@ -759,7 +761,7 @@
     font-weight: 400;
     color: white;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.8rem;
     opacity: 0.95;
     text-align: center;
     width: 100%;
@@ -773,7 +775,7 @@
     background: white;
     color: #000;
     border: none;
-    padding: 0.5rem 1.6rem;
+    padding: 0.28rem 1.2rem;
     border-radius: 30px;
     font-weight: 600;
     font-size: 0.65rem;
@@ -1357,7 +1359,7 @@
   }
 
   .apply-now-btn-mobile {
-    padding: 0.35rem 1rem;
+    padding: 0.16rem 0.9rem;
     font-size: 0.5rem;
     min-width: 90px;
     margin-bottom: 0.6rem;
@@ -1589,4 +1591,3 @@
     gap: 1.25rem;
   }
 }
-
