@@ -687,69 +687,199 @@
     min-height: 500px;
   }
 
-  .hero-content {
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    padding: 1.5rem;
-    padding-top: 6rem;
+  /* Hide desktop elements on mobile */
+  .desktop-only {
+    display: none !important;
   }
 
-  .hero-text {
-    margin-left: 0;
-    max-width: 100%;
+  /* Show mobile elements */
+  .mobile-only {
+    display: block !important;
+  }
+
+  .hero-content-mobile {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 1.5rem;
+    padding-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .hero-text-mobile {
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 3rem;
     width: 100%;
+    max-width: 90%;
   }
 
-  .hero-text h1 {
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .tagline {
-    text-align: center;
-    width: 100%;
-  }
-
-  .hero-text h1 {
+  .mobile-title {
     font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     font-family: Helvetica, sans-serif;
+    text-align: center;
+    width: 100%;
+    /* Improve text rendering on mobile */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
-  .tagline {
+  .mobile-title .title-line {
+    display: block;
+    text-align: center;
+  }
+
+  .tagline-mobile {
     font-size: 1rem;
+    font-weight: 400;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    margin-bottom: 0.5rem;
+    text-align: center;
+    width: 100%;
+    /* Improve text rendering on mobile */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
-  .tagline-subtitle {
+  .tagline-subtitle-mobile {
     font-size: 0.85rem;
-    margin-top: 0.4rem;
+    font-weight: 400;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1.5rem;
+    opacity: 0.95;
+    text-align: center;
+    width: 100%;
+    /* Improve text rendering on mobile */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
-  .hero-sidebar {
-    display: none;
+  .apply-now-btn-mobile {
+    background: white;
+    color: #000;
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: auto;
+    min-width: 180px;
+    white-space: nowrap;
+    margin-bottom: 1rem;
+    position: relative;
+    overflow: hidden;
+    /* Remove backdrop-filter for mobile to avoid glassy effect */
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
   }
 
-  .admission-box {
-    display: none;
+  .apply-now-btn-mobile::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.1);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
   }
 
-  .apply-now-btn {
-    display: none;
+  .apply-now-btn-mobile:hover::before {
+    width: 300px;
+    height: 300px;
+  }
+
+  .apply-now-btn-mobile:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .mobile-admission-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .admission-year-mobile {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 0.25rem;
+    /* Improve text rendering on mobile */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  .admission-text-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    line-height: 1.2;
+    text-align: center;
+    /* Improve text rendering on mobile */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  .admission-text-mobile span {
+    display: block;
   }
 
   .hero-nav {
     display: none !important;
   }
 
+  /* Disable backdrop-filter effects on small mobile devices to prevent glassy text */
+  .admission-box,
+  .hero-rated-badge,
+  .hero-rated-stars,
+  .hero-feature-badge .feature-text,
+  .hero-apply-now-vertical {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    background: rgba(0, 0, 0, 0.8) !important;
+  }
+
+  /* Disable backdrop-filter effects on mobile to prevent glassy text */
+  .admission-box,
+  .hero-rated-badge,
+  .hero-rated-stars,
+  .hero-feature-badge .feature-text,
+  .hero-apply-now-vertical {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    background: rgba(0, 0, 0, 0.8) !important;
+  }
 
   .hero-rated-badge {
     top: 4rem;
@@ -1192,58 +1322,53 @@
     background-position: center center !important;
   }
 
-  .hero-content {
-    padding: 0.75rem;
-    padding-top: 0;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+  /* Hide desktop elements on mobile */
+  .desktop-only {
+    display: none !important;
   }
 
-  .hero-text {
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    margin-top: 0;
-    margin-left: 0;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+  /* Show mobile elements */
+  .mobile-only {
+    display: block !important;
   }
 
-  .hero-text h1 {
+  .hero-content-mobile {
+    padding: 1rem;
+    padding-top: 3rem;
+  }
+
+  .hero-text-mobile {
+    max-width: 95%;
+  }
+
+  .mobile-title {
     font-size: 1.5rem;
-    line-height: 1.1;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    font-family: Helvetica, sans-serif;
+    margin-bottom: 0.8rem;
   }
 
-  .tagline {
+  .tagline-mobile {
     font-size: 0.85rem;
-    text-align: center;
-    width: 100%;
+    margin-bottom: 0.4rem;
   }
 
-  .tagline-subtitle {
+  .tagline-subtitle-mobile {
     font-size: 0.75rem;
-    text-align: center;
-    width: 100%;
-    margin-top: 0.3rem;
+    margin-bottom: 1.2rem;
   }
 
-  .hero-sidebar {
-    display: none;
+  .apply-now-btn-mobile {
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+    min-width: 160px;
+    margin-bottom: 1rem;
   }
 
-  .admission-box {
-    display: none;
+  .admission-year-mobile {
+    font-size: 2.5rem;
   }
 
-  .apply-now-btn {
-    display: none;
+  .admission-text-mobile {
+    font-size: 0.9rem;
   }
 
   .hero-nav {

@@ -108,7 +108,8 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection, onOpenA
 
         {currentSlide === 0 && (
           <>
-            <div className="hero-content">
+            {/* Desktop Layout */}
+            <div className="hero-content desktop-only">
               <div className="hero-text">
                 <h1>
                   <span className="title-line">{slides[currentSlide].title}</span>
@@ -119,7 +120,7 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection, onOpenA
               </div>
             </div>
 
-            <div className="hero-sidebar">
+            <div className="hero-sidebar desktop-only">
               <div className="admission-box">
                 <div className="admission-year">2026</div>
                 <div className="admission-text">
@@ -127,7 +128,7 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection, onOpenA
                   <span>Open Now</span>
                 </div>
               </div>
-              <button 
+              <button
                 className="apply-now-btn"
                 onClick={() => {
                   if (onOpenApplyModal) {
@@ -144,6 +145,42 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection, onOpenA
               >
                 Apply Now
               </button>
+            </div>
+
+            {/* Mobile Layout */}
+            <div className="hero-content-mobile mobile-only">
+              <div className="hero-text-mobile">
+                <h1 className="mobile-title">
+                  <span className="title-line">{slides[currentSlide].title}</span>
+                  <span className="title-line">{slides[currentSlide].titleLine2}</span>
+                </h1>
+                <p className="tagline-mobile">{slides[currentSlide].tagline}</p>
+                <p className="tagline-subtitle-mobile">(A unit of Sancta Maria Educational Trust)</p>
+                <button
+                  className="apply-now-btn-mobile"
+                  onClick={() => {
+                    if (onOpenApplyModal) {
+                      onOpenApplyModal();
+                    } else if (onScrollToCareerSection) {
+                      onScrollToCareerSection();
+                    } else {
+                      const startCareerSection = document.getElementById('start-career-section');
+                      if (startCareerSection) {
+                        startCareerSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                      }
+                    }
+                  }}
+                >
+                  Apply Now
+                </button>
+                <div className="mobile-admission-info">
+                  <div className="admission-year-mobile">2026</div>
+                  <div className="admission-text-mobile">
+                    <span>Admissions</span>
+                    <span>Open Now</span>
+                  </div>
+                </div>
+              </div>
             </div>
 
           </>

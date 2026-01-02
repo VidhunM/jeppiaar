@@ -153,6 +153,7 @@ img {
   letter-spacing: 0.01em;
   margin-bottom: 1.5rem;
   margin-top: 0;
+  text-align: justify;
 }
 
 .overview-section .enroll-now-btn {
@@ -1215,6 +1216,7 @@ img {
   font-weight: 500;
   line-height: 1.7;
   letter-spacing: 0.02em;
+  text-align: justify;
 }
 
 /* Course Fee Section */
@@ -2806,7 +2808,7 @@ img {
 
   .internship-section p {
     font-size: 0.95rem !important;
-    text-align: left !important;
+    text-align: justify !important;
   }
 
   .skills-list {

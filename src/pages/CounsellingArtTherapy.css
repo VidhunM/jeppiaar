@@ -612,7 +612,7 @@
   line-height: 1.7;
   letter-spacing: 0.01em;
   font-weight: 500;
-  text-align: left;
+  text-align: justify;
 }
 
 /* =========================================================
@@ -739,6 +739,7 @@
   letter-spacing: 0.01em;
   margin-bottom: 1.75rem;
   margin-top: 0;
+  text-align: justify;
 }
 
 .highlights-section .highlights-subtitle {
@@ -1262,7 +1263,7 @@
 
   .counselling-art-therapy-page .internship-section p {
     font-size: 0.95rem !important;
-    text-align: left !important;
+    text-align: justify !important;
   }
 
   .counselling-art-therapy-page .skills-list {
