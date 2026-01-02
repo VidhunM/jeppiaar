@@ -2024,6 +2024,29 @@
     height: 100%;
   }
 }
+
+/* Mac M1 specific fix: ensure career images show properly */
+@supports (-webkit-appearance: none) and (display: flex) {
+  @media screen and (min-device-pixel-ratio: 2) {
+    .counselling-art-therapy-page .career-image {
+      background: transparent;
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+    }
+    .counselling-art-therapy-page .career-image img {
+      object-fit: contain !important;
+      width: 100% !important;
+      height: 100% !important;
+      display: block !important;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;
+    }
+  }
+}
     margin-bottom: 0 !important;
     display: block !important;
     width: 100% !important;
@@ -2053,5 +2076,13 @@
 @media (max-width: 375px) {
   .counselling-art-therapy-page .highlights-title {
     font-size: 1.05rem !important;
+  }
+
+  .counselling-art-therapy-page .career-prospects .section-title-white {
+    font-size: 1.05rem !important;
+  }
+
+  .counselling-art-therapy-page .career-prospects .career-description {
+    font-size: 0.75rem !important;
   }
 }
