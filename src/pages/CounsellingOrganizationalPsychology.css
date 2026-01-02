@@ -3837,11 +3837,8 @@ img {
   }
 
   .counselling-organizational-psychology-page .internship-section p {
+    font-size: 1rem !important;
     text-align: left !important;
-  }
-
-  .counselling-organizational-psychology-page .internship-section p {
-    font-size: 0.95rem !important;
   }
 
   .counselling-organizational-psychology-page .course-syllabus .credits {
@@ -3931,11 +3928,8 @@ img {
   }
 
   .counselling-organizational-psychology-page .internship-section p {
+    font-size: 0.95rem !important;
     text-align: left !important;
-  }
-
-  .counselling-organizational-psychology-page .internship-section p {
-    font-size: 0.9rem !important;
   }
 
   .counselling-organizational-psychology-page .course-syllabus .credits {
@@ -4295,6 +4289,12 @@ img {
       transform: translateZ(0);
       image-rendering: -webkit-optimize-contrast;
       image-rendering: crisp-edges;
+    }
+
+    /* Mac M1 specific fix: reduce highlights image size */
+    .counselling-organizational-psychology-page .highlights-section .highlights-image img {
+      transform: scale(1.2) translateX(-20%) !important;
+      transform-origin: bottom left !important;
     }
   }
 }

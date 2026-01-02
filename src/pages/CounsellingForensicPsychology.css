@@ -4220,6 +4220,12 @@ img {
       image-rendering: -webkit-optimize-contrast;
       image-rendering: crisp-edges;
     }
+
+    /* Mac M1 specific fix: reduce highlights image size */
+    .counselling-forensic-psychology-page .highlights-section .highlights-image img {
+      transform: scale(1.2) translateX(-10%) !important;
+      transform-origin: bottom left !important;
+    }
   }
 }
     margin-bottom: 0 !important;
