@@ -838,9 +838,6 @@
   }
 
   .admission-text-mobile {
-    display: flex;
-    flex-direction: column;
-    gap: 0.1rem;
     font-size: 1.4rem;
     font-weight: 400;
     color: white;
@@ -854,7 +851,11 @@
   }
 
   .admission-text-mobile span {
-    display: block;
+    display: inline;
+  }
+
+  .admission-text-mobile span:first-child {
+    margin-right: 0.3rem;
   }
 
   .hero-nav {
@@ -1366,7 +1367,7 @@
   }
 
   .admission-year-mobile {
-    font-size: 1.8rem;
+    font-size: 0.7rem;
   }
 
   .admission-text-mobile {
