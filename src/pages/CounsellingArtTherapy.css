@@ -1905,8 +1905,6 @@
   }
 }
 
-.counselling-art-therapy-page .highlights-section .batch-box h3,
-.counselling-art-therapy-page .highlights-section .batch-details li,
 .counselling-art-therapy-page .career-prospects .career-description,
 .counselling-art-therapy-page .overview-section .overview-text p,
 .counselling-art-therapy-page .highlights-section .highlights-subtitle {
@@ -2006,8 +2004,8 @@
     margin-bottom: 0 !important;
     margin-top: 2.5rem !important;
     padding-bottom: 0 !important;
-    margin-left: 0 !important;
-    width: 100% !important;
+    margin-left: 2rem !important;
+    width: 115% !important;
     max-width: none !important;
     align-self: center !important;
   }
@@ -2053,7 +2051,21 @@
     width: 100% !important;
   }
 
-  /* Decrease text size for batches (both cards) - matching learning outcomes */
+}
+
+@media (max-width: 480px) {
+  .counselling-art-therapy-page .batch-box h3,
+  .counselling-art-therapy-page .batch-details li {
+    font-size: 0.9rem !important;
+  }
+
+  .counselling-art-therapy-page .highlights-title {
+    font-size: 1.15rem !important;
+  }
+}
+
+/* Mobile responsive typography for batches - matching learning outcomes for iPhone/Android */
+@media (max-width: 768px) {
   .counselling-art-therapy-page .batch-box h3,
   .counselling-art-therapy-page .batch-details li {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -2067,10 +2079,6 @@
   .counselling-art-therapy-page .batch-box h3,
   .counselling-art-therapy-page .batch-details li {
     font-size: 0.9rem !important;
-  }
-
-  .counselling-art-therapy-page .highlights-title {
-    font-size: 1.15rem !important;
   }
 }
 

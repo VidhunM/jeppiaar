@@ -4082,8 +4082,6 @@ img {
   }
 }
 
-.counselling-forensic-psychology-page .highlights-section .batch-box h3,
-.counselling-forensic-psychology-page .highlights-section .batch-details li,
 .counselling-forensic-psychology-page .career-prospects .career-description,
 .counselling-forensic-psychology-page .overview-section .overview-text p,
 .counselling-forensic-psychology-page .highlights-section .highlights-subtitle {
@@ -4183,8 +4181,8 @@ img {
     margin-bottom: 0 !important;
     margin-top: 2.5rem !important;
     padding-bottom: 0 !important;
-    margin-left: -2rem !important;
-    width: 110% !important;
+    margin-left: 1rem !important;
+    width: 115% !important;
     max-width: none !important;
     align-self: flex-start !important;
   }
@@ -4236,7 +4234,21 @@ img {
     width: 100% !important;
   }
 
-  /* Decrease text size for batches (both cards) - matching learning outcomes */
+}
+
+@media (max-width: 480px) {
+  .counselling-forensic-psychology-page .batch-box h3,
+  .counselling-forensic-psychology-page .batch-details li {
+    font-size: 0.9rem !important;
+  }
+
+  .counselling-forensic-psychology-page .highlights-title {
+    font-size: 1.15rem !important;
+  }
+}
+
+/* Mobile responsive typography for batches - matching learning outcomes for iPhone/Android */
+@media (max-width: 768px) {
   .counselling-forensic-psychology-page .batch-box h3,
   .counselling-forensic-psychology-page .batch-details li {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -4250,10 +4262,6 @@ img {
   .counselling-forensic-psychology-page .batch-box h3,
   .counselling-forensic-psychology-page .batch-details li {
     font-size: 0.9rem !important;
-  }
-
-  .counselling-forensic-psychology-page .highlights-title {
-    font-size: 1.15rem !important;
   }
 }
 
