@@ -4224,7 +4224,7 @@ img {
 
     /* Mac M1 specific fix: reduce highlights image size */
     .counselling-forensic-psychology-page .highlights-section .highlights-image img {
-      transform: scale(1.2) translateX(-10%) !important;
+      transform: scale(0.7) translateX(-10%) !important;
       transform-origin: bottom left !important;
     }
   }

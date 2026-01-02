@@ -4293,7 +4293,7 @@ img {
 
     /* Mac M1 specific fix: reduce highlights image size */
     .counselling-organizational-psychology-page .highlights-section .highlights-image img {
-      transform: scale(1.2) translateX(-20%) !important;
+      transform: scale(0.7) translateX(-20%) !important;
       transform-origin: bottom left !important;
     }
   }
