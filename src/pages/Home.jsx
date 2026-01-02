@@ -280,7 +280,7 @@ const Home = () => {
           <div className="popup-content" onClick={(e) => e.stopPropagation()}>
             <button className="popup-close" onClick={closePopup}>×</button>
             <h2>Coming Soon</h2>
-            <p>This page is currently under construction. Please check back soon!</p>
+            <p> Please check back soon!</p>
           </div>
         </div>
       )}
