@@ -4296,6 +4296,22 @@ img {
       transform: scale(0.7) translateX(-20%) !important;
       transform-origin: bottom left !important;
     }
+    /* Mac M1: constrain highlights image container and reset scaling on desktop */
+    @media screen and (min-width: 1024px) {
+      .counselling-organizational-psychology-page .highlights-section .highlights-image {
+        width: 100% !important;
+        max-width: 400px !important;
+        margin: 0 !important;
+        align-self: start !important;
+        overflow: hidden !important;
+      }
+      .counselling-organizational-psychology-page .highlights-section .highlights-image img {
+        transform: none !important;
+        width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important;
+      }
+    }
   }
 }
     margin-bottom: 0 !important;
@@ -4347,4 +4363,3 @@ img {
     font-size: 0.75rem !important;
   }
 }
-
