@@ -1942,8 +1942,9 @@ img {
   }
 
   .counselling-forensic-psychology-page .highlights-section .highlights-image img {
-    transform: scale(1.25);
-    transform-origin: bottom center;
+    transform: none;
+    width: 100%;
+    height: auto;
   }
 
   .highlights-content,

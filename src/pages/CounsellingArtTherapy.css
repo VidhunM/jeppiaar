@@ -237,7 +237,7 @@
     justify-self: center;
     box-sizing: border-box;
     position: relative;
-    left: 40px;
+    left: 0;
   }
 
   /* Ensure equal left/right padding so the centered image doesn't look offset */
@@ -2005,10 +2005,10 @@
     margin-bottom: 0 !important;
     margin-top: 2.5rem !important;
     padding-bottom: 0 !important;
-    margin-left: -2rem !important;
-    width: 110% !important;
+    margin-left: 0 !important;
+    width: 100% !important;
     max-width: none !important;
-    align-self: flex-start !important;
+    align-self: center !important;
   }
 
   .counselling-art-therapy-page .highlights-image img {

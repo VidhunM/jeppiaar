@@ -170,8 +170,8 @@ const CounsellingArtTherapy = () => {
               <img src={cc203Image} alt="Art Therapy" />
             </div>
             <div className="highlights-text">
-              <p className="highlights-subtitle">Unlock your path to becoming a skilled child counsellor</p>
-              <h2 className="highlights-title">ADVANCED DIPLOMA IN COUNSELLING AND CHILD PSYCHOLOGY</h2>
+              <p className="highlights-subtitle">Unlock your path to becoming a skilled art therapist</p>
+              <h2 className="highlights-title">ADVANCED DIPLOMA IN ART THERAPY</h2>
               <div className="batch-boxes">
                 <div className="batch-box">
                   <div className="batch-icon"></div>
