@@ -244,8 +244,8 @@ const Header = () => {
       <div className="under-construction-popup" onClick={closePopup}>
         <div className="popup-content" onClick={(e) => e.stopPropagation()}>
           <button className="popup-close" onClick={closePopup}>×</button>
-          <h2>Site Under Construction</h2>
-          <p>This page is currently under construction. Please check back soon!</p>
+          <h2>Coming Soon</h2>
+          <p>Please check back soon!</p>
         </div>
       </div>
     )}
