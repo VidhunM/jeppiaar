@@ -752,3 +752,11 @@
   }
 }
 
+/* iPhone 12 mini and iPhone 14 specific logo sizing */
+@media (max-width: 393px) {
+  .logo img {
+    transform: scale(1.4) !important;
+    transform-origin: center;
+  }
+}
+
