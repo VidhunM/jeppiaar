@@ -4293,7 +4293,7 @@ img {
 
     /* Mac M1 specific fix: reduce highlights image size */
     .counselling-organizational-psychology-page .highlights-section .highlights-image img {
-      transform: scale(0.7) translateX(-20%) !important;
+      transform: scale(0.6) translateX(-25%) !important;
       transform-origin: bottom left !important;
     }
     /* Mac M1: global constrain for highlights image across all viewports */
@@ -4314,7 +4314,7 @@ img {
     @media screen and (min-width: 1024px) {
       .counselling-organizational-psychology-page .highlights-section .highlights-image {
         width: 100% !important;
-        max-width: 400px !important;
+        max-width: 350px !important;
         margin: 0 !important;
         align-self: start !important;
         overflow: hidden !important;
