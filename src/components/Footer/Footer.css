@@ -328,17 +328,17 @@
     white-space: normal;
   }
 
-  /* Academics section: extremely tight spacing approach on mobile */
+  /* Academics section: balanced spacing approach on mobile */
   .footer-section:nth-child(3) ul li {
-    margin-bottom: -0.5rem !important;
-    padding-bottom: 0rem !important;
-    line-height: 0.8 !important;
+    margin-bottom: -0.2rem !important;
+    padding-bottom: 0.05rem !important;
+    line-height: 0.9 !important;
   }
 
   .footer-section:nth-child(3) ul li a {
-    line-height: 0.8 !important;
-    margin-bottom: -0.25rem !important;
-    padding-bottom: 0rem !important;
+    line-height: 0.9 !important;
+    margin-bottom: -0.1rem !important;
+    padding-bottom: 0.02rem !important;
     display: block !important;
   }
 
@@ -483,17 +483,17 @@
     font-size: 0.8rem;
   }
 
-  /* Academics section: extremely tight spacing approach on small screens */
+  /* Academics section: balanced spacing approach on small screens */
   .footer-section:nth-child(3) ul li {
-    margin-bottom: -0.5rem !important;
-    padding-bottom: 0rem !important;
-    line-height: 0.8 !important;
+    margin-bottom: -0.2rem !important;
+    padding-bottom: 0.05rem !important;
+    line-height: 0.9 !important;
   }
 
   .footer-section:nth-child(3) ul li a {
-    line-height: 0.8 !important;
-    margin-bottom: -0.25rem !important;
-    padding-bottom: 0rem !important;
+    line-height: 0.9 !important;
+    margin-bottom: -0.1rem !important;
+    padding-bottom: 0.02rem !important;
     display: block !important;
   }
 
