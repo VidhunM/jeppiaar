@@ -4222,39 +4222,38 @@ img {
       image-rendering: crisp-edges;
     }
 
-    /* Mac M1 specific fix: reduce highlights image size */
-    .counselling-forensic-psychology-page .highlights-section .highlights-image img {
-      transform: scale(0.6) translateX(-15%) !important;
-      transform-origin: bottom left !important;
-    }
-    /* Mac M1: global constrain for highlights image across all viewports */
+    /* Mac M1: constrain highlights image container to prevent overflow */
     .counselling-forensic-psychology-page .highlights-section .highlights-image {
       width: 100% !important;
-      max-width: 400px !important;
-      margin: 0 auto !important;
-      align-self: start !important;
+      max-width: 100% !important;
+      align-self: flex-end !important;
+      display: flex !important;
+      align-items: flex-end !important;
+      justify-content: flex-start !important;
+      margin-top: auto !important;
+      margin-bottom: 0 !important;
+      flex: 1 !important;
       overflow: hidden !important;
     }
     .counselling-forensic-psychology-page .highlights-section .highlights-image img {
-      transform: none !important;
       width: 100% !important;
       height: auto !important;
+      display: block !important;
+      border-radius: 8px 8px 0 0 !important;
       object-fit: contain !important;
+      align-self: flex-end !important;
+      margin-bottom: 0 !important;
+      max-width: 100% !important;
+      transform: scale(0.8) translateX(-10%) !important;
+      transform-origin: bottom left !important;
     }
-    /* Mac M1: constrain highlights image container and reset scaling on desktop */
+    /* Mac M1: desktop specific sizing to ensure containment */
     @media screen and (min-width: 1024px) {
       .counselling-forensic-psychology-page .highlights-section .highlights-image {
-        width: 100% !important;
-        max-width: 330px !important;
-        margin: 0 !important;
-        align-self: start !important;
-        overflow: hidden !important;
+        max-width: 80% !important;
       }
       .counselling-forensic-psychology-page .highlights-section .highlights-image img {
-        transform: none !important;
-        width: 100% !important;
-        height: auto !important;
-        object-fit: contain !important;
+        transform: scale(0.9) translateX(-8%) !important;
       }
     }
   }
