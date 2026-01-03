@@ -298,6 +298,8 @@
     height: 60px;
     min-width: 60px;
     min-height: 60px;
+    transform: scale(1.15);
+    transform-origin: center;
   }
 
   .logo img {
@@ -469,6 +471,8 @@
     height: 50px;
     min-width: 50px;
     min-height: 50px;
+    transform: scale(1.2);
+    transform-origin: center;
   }
 
   .logo img {
