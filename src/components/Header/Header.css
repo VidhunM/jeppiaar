@@ -294,15 +294,15 @@
   }
 
   .logo {
-    width: 90px;
-    height: 90px;
-    min-width: 90px;
-    min-height: 90px;
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    min-height: 60px;
   }
 
   .logo img {
-    max-width: 90px;
-    max-height: 90px;
+    max-width: 80px;
+    max-height: 80px;
   }
 
   .mobile-menu-toggle {
@@ -465,15 +465,15 @@
   }
 
   .logo {
-    width: 80px;
-    height: 80px;
-    min-width: 80px;
-    min-height: 80px;
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    min-height: 50px;
   }
 
   .logo img {
-    max-width: 80px;
-    max-height: 80px;
+    max-width: 70px;
+    max-height: 70px;
   }
 
   .mobile-menu-toggle {
@@ -675,15 +675,15 @@
   }
 
   .logo {
-    width: 70px;
-    height: 70px;
-    min-width: 70px;
-    min-height: 70px;
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    min-height: 45px;
   }
 
   .logo img {
-    max-width: 70px;
-    max-height: 70px;
+    max-width: 65px;
+    max-height: 65px;
   }
 
   .mobile-menu-toggle {
