@@ -4261,7 +4261,7 @@ img {
       }
     }
     /* Mac M1: full screen and high-res displays */
-    @media screen and (min-width: 1440px) or (min-device-pixel-ratio: 2) and (min-width: 1024px) {
+    @media screen and (min-width: 1440px), screen and (min-device-pixel-ratio: 2) and (min-width: 1024px) {
       .counselling-forensic-psychology-page .highlights-section .highlights-image {
         max-width: 95% !important;
       }
