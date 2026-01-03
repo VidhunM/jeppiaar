@@ -184,7 +184,7 @@ const CounsellingForensicPsychology = () => {
                   <div className="batch-icon"></div>
                   <h3>Batch 2</h3>
                   <ul className="batch-details">
-                    <li>Weekend  Batch</li>
+                    <li>Weekend Morning Batch</li>
                     <li>Friday and Saturday</li>
                     <li>7.30 AM - 1.30 PM</li>
                   </ul>
