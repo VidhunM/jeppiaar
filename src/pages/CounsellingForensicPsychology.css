@@ -4260,22 +4260,30 @@ img {
         max-width: 85% !important;
       }
     }
-    /* Mac M1: full screen and high-res displays - aggressive containment */
+    /* Mac M1: full screen and high-res displays - ultra-aggressive containment */
     @media screen and (min-width: 1440px), screen and (min-device-pixel-ratio: 2) and (min-width: 1024px) {
       .counselling-forensic-psychology-page .highlights-section .highlights-image {
-        max-width: 75% !important;
-        width: 75% !important;
+        max-width: 70% !important;
+        width: 70% !important;
         overflow: hidden !important;
         position: relative !important;
+        clip-path: inset(0);
+        mask-image: linear-gradient(to right, black 0%, black 100%);
+        -webkit-mask-image: linear-gradient(to right, black 0%, black 100%);
       }
       .counselling-forensic-psychology-page .highlights-section .highlights-image img {
         transform: none !important;
         width: 100% !important;
-        height: auto !important;
+        height: 100% !important;
         max-width: 100% !important;
-        object-fit: contain !important;
-        position: relative !important;
+        max-height: 100% !important;
+        object-fit: cover !important;
+        object-position: bottom left !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
         z-index: 1 !important;
+        clip-path: inset(0);
       }
     }
   }
