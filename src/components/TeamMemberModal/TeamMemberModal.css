@@ -246,9 +246,19 @@
     font-size: 0.9rem !important;
     line-height: 1.55;
     letter-spacing: 0.01em;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: none;
+    word-break: normal;
+    overflow-wrap: break-word;
   }
   .team-modal-description p {
     font-size: 0.9rem !important;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: none;
+    word-break: normal;
+    overflow-wrap: break-word;
   }
 
   .team-modal-close {
@@ -304,7 +314,9 @@
     letter-spacing: 0.01em;
     text-align: justify;
     text-justify: inter-word;
-    hyphens: auto;
+    hyphens: none;
+    word-break: normal;
+    overflow-wrap: break-word;
   }
   .team-modal-description p {
     font-size: 0.85rem !important;

@@ -184,7 +184,7 @@ const CounsellingChildPsychology = () => {
                   <ul className="batch-details">
                     <li>Weekday Evening Batch</li>
                     <li>Monday - Thursday</li>
-                    <li>1 PM - 6 PM</li>
+                    <li>2 PM - 6 PM</li>
                   </ul>
                 </div>
               </div>

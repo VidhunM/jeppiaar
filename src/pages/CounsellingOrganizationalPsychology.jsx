@@ -173,18 +173,18 @@ const CounsellingOrganizationalPsychology = () => {
                   <div className="batch-icon"></div>
                   <h3>Batch 1</h3>
                   <ul className="batch-details">
-                    <li>Weekday Evening Batch</li>
-                    <li>Monday - Thursday</li>
-                    <li>1 PM - 6 PM</li>
+                    <li>Weekend Morning Batch</li>
+                    <li>Friday - Thursday</li>
+                    <li>7.30 AM - 1.30 PM</li>
                   </ul>
                 </div>
                 <div className="batch-box">
                   <div className="batch-icon"></div>
                   <h3>Batch 2</h3>
                   <ul className="batch-details">
-                    <li>Weekend Morning Batch</li>
-                    <li>Saturday</li>
-                    <li>9 AM - 1 PM</li>
+                    <li>Weekday Evening Batch</li>
+                    <li>Monday - Thursday</li>
+                    <li>2 PM - 6 PM</li>
                   </ul>
                 </div>
               </div>
