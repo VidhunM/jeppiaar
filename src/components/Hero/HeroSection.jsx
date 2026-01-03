@@ -68,7 +68,7 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection, onOpenA
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 7000);
+    }, 12000);
     return () => clearInterval(timer);
   }, [slides.length]);
 

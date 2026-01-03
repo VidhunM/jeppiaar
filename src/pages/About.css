@@ -210,6 +210,18 @@
   flex: 1;
 }
 
+/* Desktop-specific justify alignment for Vision & Mission paragraphs */
+@media (min-width: 769px) {
+  .vision-card p,
+  .mission-card p {
+    text-align: justify !important;
+    text-justify: inter-word;
+    hyphens: auto;
+    word-break: break-word;
+    margin-top: 1rem !important;
+  }
+}
+
 /* Core Values Section */
 .core-values-section {
   background: white;
@@ -760,6 +772,14 @@
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
     line-height: 1.6;
+    text-align: justify;
+    text-justify: inter-word;
+    margin-top: 1rem;
+  }
+
+  .vision-card p:first-child,
+  .mission-card p:first-child {
+    margin-top: 0;
   }
 
 @media (max-width: 480px) {
@@ -769,6 +789,14 @@
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
     line-height: 1.6;
+    text-align: justify;
+    text-justify: inter-word;
+    margin-top: 0.8rem;
+  }
+
+  .vision-card p:first-child,
+  .mission-card p:first-child {
+    margin-top: 0;
   }
 }
 

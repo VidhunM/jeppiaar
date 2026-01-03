@@ -144,6 +144,36 @@
   margin-bottom: 0;
 }
 
+/* Desktop-specific justify alignment for better text flow */
+@media (min-width: 769px) {
+  .team-modal-description {
+    text-align: justify !important;
+    text-justify: inter-word;
+    text-align-last: left;
+    hyphens: auto;
+    word-break: break-word;
+    font-size: 1.1rem !important;
+  }
+
+  .team-modal-description p {
+    margin: 1rem 0 1rem 0 !important;
+    font-size: 1.1rem !important;
+    text-align: justify !important;
+    text-justify: inter-word;
+    text-align-last: left;
+    hyphens: auto;
+    word-break: break-word;
+  }
+
+  .team-modal-description p:first-child {
+    margin-top: 0 !important;
+  }
+
+  .team-modal-description p:last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
 @keyframes slideUp {
   from {
     transform: translateY(30px);
@@ -272,15 +302,21 @@
     font-size: 0.85rem !important;
     line-height: 1.55;
     letter-spacing: 0.01em;
-    text-align: left;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
   }
   .team-modal-description p {
     font-size: 0.85rem !important;
   }
 
   .team-modal-description p {
-    margin: 0 0 0.9rem 0;
+    margin: 0.5rem 0 0.9rem 0;
     min-height: unset;
+  }
+
+  .team-modal-description p:first-child {
+    margin-top: 0;
   }
 }
 
