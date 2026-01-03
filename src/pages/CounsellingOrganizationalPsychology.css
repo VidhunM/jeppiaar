@@ -4291,7 +4291,7 @@ img {
       image-rendering: crisp-edges;
     }
 
-    /* Mac M1: constrain highlights image container to prevent overflow */
+    /* Mac M1: constrain highlights image container like desktop with overflow prevention */
     .counselling-organizational-psychology-page .highlights-section .highlights-image {
       width: 100% !important;
       max-width: 100% !important;
@@ -4303,6 +4303,7 @@ img {
       margin-bottom: 0 !important;
       flex: 1 !important;
       overflow: hidden !important;
+      position: relative !important;
     }
     .counselling-organizational-psychology-page .highlights-section .highlights-image img {
       width: 100% !important;
@@ -4313,16 +4314,19 @@ img {
       align-self: flex-end !important;
       margin-bottom: 0 !important;
       max-width: 100% !important;
-      transform: scale(0.8) translateX(-15%) !important;
+      transform: scale(1.2) translateX(-15%) !important;
       transform-origin: bottom left !important;
+      position: relative !important;
+      z-index: 1 !important;
     }
-    /* Mac M1: desktop specific sizing to ensure containment */
+    /* Mac M1: desktop specific sizing - closer to desktop behavior */
     @media screen and (min-width: 1024px) {
       .counselling-organizational-psychology-page .highlights-section .highlights-image {
-        max-width: 80% !important;
+        max-width: 100% !important;
       }
       .counselling-organizational-psychology-page .highlights-section .highlights-image img {
-        transform: scale(0.9) translateX(-10%) !important;
+        transform: scale(1.3) translateX(-18%) !important;
+        max-width: 90% !important;
       }
     }
   }
