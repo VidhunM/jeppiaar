@@ -748,7 +748,7 @@
   }
 
   .core-value-card p {
-    font-size: 1rem !important;
+    font-size: 1.1rem !important;
   }
 
 
@@ -768,7 +768,7 @@
 
   .vision-card p,
   .mission-card p {
-    font-size: 1rem !important;
+    font-size: 1.1rem !important;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
     line-height: 1.6;
@@ -785,7 +785,7 @@
 @media (max-width: 480px) {
   .vision-card p,
   .mission-card p {
-    font-size: 0.95rem !important;
+    font-size: 1.05rem !important;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
     line-height: 1.6;
@@ -980,7 +980,7 @@
   }
 
   .core-value-card p {
-    font-size: 0.95rem !important;
+    font-size: 1.05rem !important;
   }
 
 
