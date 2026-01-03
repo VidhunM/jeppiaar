@@ -328,16 +328,18 @@
     white-space: normal;
   }
 
-  /* Academics section: alternative tight spacing approach on mobile */
+  /* Academics section: extremely tight spacing approach on mobile */
   .footer-section:nth-child(3) ul li {
-    margin-bottom: -0.2rem;
-    padding-bottom: 0.1rem;
+    margin-bottom: -0.5rem !important;
+    padding-bottom: 0rem !important;
+    line-height: 0.8 !important;
   }
 
   .footer-section:nth-child(3) ul li a {
-    line-height: 1.0;
-    margin-bottom: -0.1rem;
-    padding-bottom: 0.05rem;
+    line-height: 0.8 !important;
+    margin-bottom: -0.25rem !important;
+    padding-bottom: 0rem !important;
+    display: block !important;
   }
 
   .contact-info {
@@ -481,16 +483,18 @@
     font-size: 0.8rem;
   }
 
-  /* Academics section: alternative tighter approach on small screens */
+  /* Academics section: extremely tight spacing approach on small screens */
   .footer-section:nth-child(3) ul li {
-    margin-bottom: -0.15rem;
-    padding-bottom: 0.08rem;
+    margin-bottom: -0.5rem !important;
+    padding-bottom: 0rem !important;
+    line-height: 0.8 !important;
   }
 
   .footer-section:nth-child(3) ul li a {
-    line-height: 0.95;
-    margin-bottom: -0.08rem;
-    padding-bottom: 0.04rem;
+    line-height: 0.8 !important;
+    margin-bottom: -0.25rem !important;
+    padding-bottom: 0rem !important;
+    display: block !important;
   }
 
   .contact-icon,
