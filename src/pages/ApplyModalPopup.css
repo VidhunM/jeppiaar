@@ -547,24 +547,31 @@
 /* iPhone specific fixes - ensure modal clears header */
 @media (max-width: 430px) and (-webkit-min-device-pixel-ratio: 2) {
   .apply-modal-overlay {
-    padding-top: calc(80px + env(safe-area-inset-top, 20px)) !important;
+    padding-top: 0 !important;
     align-items: flex-start !important;
+    justify-content: flex-start !important;
+    padding: 0 !important;
   }
 
   .apply-modal-content {
-    margin-top: 20px !important;
+    margin-top: 100px !important;
+    margin-bottom: auto !important;
+    width: min(400px, 95%) !important;
   }
 }
 
 /* iPhone 12 mini and similar small iPhones */
 @media (max-width: 390px) and (-webkit-min-device-pixel-ratio: 2) {
   .apply-modal-overlay {
-    padding-top: calc(90px + env(safe-area-inset-top, 25px)) !important;
+    padding-top: 0 !important;
     align-items: flex-start !important;
+    justify-content: flex-start !important;
+    padding: 0 !important;
   }
 
   .apply-modal-content {
-    margin-top: 15px !important;
+    margin-top: 110px !important;
+    margin-bottom: auto !important;
     width: min(350px, 95%) !important;
   }
 }
@@ -573,12 +580,18 @@
 @supports (-webkit-touch-callout: none) {
   @media (max-width: 768px) {
     .apply-modal-overlay {
-      padding-top: calc(70px + env(safe-area-inset-top, 20px)) !important;
+      padding-top: 0 !important;
       align-items: flex-start !important;
+      justify-content: flex-start !important;
+      padding: env(safe-area-inset-top, 20px)
+        env(safe-area-inset-right, 20px)
+        env(safe-area-inset-bottom, 20px)
+        env(safe-area-inset-left, 20px) !important;
     }
 
     .apply-modal-content {
-      margin-top: 10px !important;
+      margin-top: 90px !important;
+      margin-bottom: auto !important;
     }
   }
 }
