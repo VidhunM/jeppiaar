@@ -782,16 +782,16 @@
     margin-top: 0;
   }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .vision-card p,
   .mission-card p {
-    font-size: 1.05rem !important;
+    font-size: 1.1rem !important;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
-    line-height: 1.6;
+    line-height: 1.5;
     text-align: justify;
     text-justify: inter-word;
-    margin-top: 0.8rem;
+    margin-top: 0.7rem;
   }
 
   .vision-card p:first-child,
