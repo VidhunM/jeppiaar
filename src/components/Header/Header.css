@@ -298,13 +298,13 @@
     height: 60px;
     min-width: 60px;
     min-height: 60px;
-    transform: scale(1.15);
-    transform-origin: center;
   }
 
   .logo img {
     max-width: 120px;
     max-height: 120px;
+    transform: scale(1.15);
+    transform-origin: center;
   }
 
   .mobile-menu-toggle {
@@ -471,13 +471,13 @@
     height: 50px;
     min-width: 50px;
     min-height: 50px;
-    transform: scale(1.2);
-    transform-origin: center;
   }
 
   .logo img {
     max-width: 110px;
     max-height: 110px;
+    transform: scale(1.2);
+    transform-origin: center;
   }
 
   .mobile-menu-toggle {
