@@ -626,6 +626,12 @@ img {
   object-fit: contain;
 }
 
+/* Page-specific positioning for Counselling Child Psychology */
+.counselling-child-psychology-page .title-university-icon {
+  left: 40rem !important;
+  right: auto !important;
+}
+
 /* Collaboration text above button */
 .university-collaboration-text-above {
   margin-bottom: 1.5rem;

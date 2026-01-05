@@ -171,7 +171,7 @@ const CounsellingForensicPsychology = () => {
             <div className="highlights-text">
               <p className="highlights-subtitle">Unlock your potential as a skilled forensic counsellor</p>
               <h2 className="highlights-title">
-                ADVANCED DIPLOMA IN COUNSELLING & FORENSIC PSYCHOLOGY
+                ADVANCED DIPLOMA IN <br />COUNSELLING & FORENSIC PSYCHOLOGY
                 <div className="title-university-icon">
                   <img src={brIcon} alt="Bharathidasan University" />
                 </div>

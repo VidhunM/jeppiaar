@@ -169,7 +169,7 @@ const CounsellingOrganizationalPsychology = () => {
             <div className="highlights-text">
               <p className="highlights-subtitle">Unlock your potential as a skilled organizational counsellor</p>
               <h2 className="highlights-title">
-                ADVANCED DIPLOMA IN COUNSELLING & ORGANIZATIONAL PSYCHOLOGY
+                ADVANCED DIPLOMA IN<br /> COUNSELLING & ORGANIZATIONAL PSYCHOLOGY
                 <div className="title-university-icon">
                   <img src={brIcon} alt="Bharathidasan University" />
                 </div>

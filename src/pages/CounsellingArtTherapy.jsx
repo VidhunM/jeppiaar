@@ -173,7 +173,7 @@ const CounsellingArtTherapy = () => {
             <div className="highlights-text">
               <p className="highlights-subtitle">Unlock your path to becoming a skilled art therapist</p>
               <h2 className="highlights-title">
-                ADVANCED DIPLOMA IN ART THERAPY
+                ADVANCED DIPLOMA IN<br /> ART THERAPY
                 <div className="title-university-icon">
                   <img src={brIcon} alt="Bharathidasan University" />
                 </div>

@@ -392,6 +392,12 @@
   object-fit: contain;
 }
 
+/* Page-specific positioning for Counselling Art Therapy */
+.counselling-art-therapy-page .title-university-icon {
+  right: -2rem !important;
+  left:35rem !important;
+}
+
 /* Collaboration text above button */
 .university-collaboration-text-above {
   margin-bottom: 1.5rem;
