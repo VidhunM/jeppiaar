@@ -2065,10 +2065,17 @@
     padding-bottom: 0 !important;
   }
   
+  /* Download button near subtitle */
+  .counselling-art-therapy-page .highlights-section .highlights-subtitle {
+    margin-bottom: 0.5rem !important;
+  }
+
   .counselling-art-therapy-page .button-text-container {
     flex-direction: column !important;
-    gap: 0.75rem !important;
+    gap: 0 !important;
     align-items: stretch !important;
+    margin-top: 0.5rem !important;
+    margin-bottom: 1rem !important;
   }
 
   .counselling-art-therapy-page .highlights-section .download-brochure-btn {
@@ -2077,20 +2084,49 @@
     margin: 0 !important;
   }
 
-  .counselling-art-therapy-page .university-collaboration-container {
-    max-width: none !important;
-    gap: 0.6rem !important;
+  /* Collaboration text near br.png icon */
+  .counselling-art-therapy-page .highlights-section .highlights-title {
+    position: relative !important;
+    margin-bottom: 0.25rem !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
   }
 
-  .counselling-art-therapy-page .university-icon {
-    width: 22px !important;
-    height: 22px !important;
+  .counselling-art-therapy-page .title-university-icon {
+    display: none !important;
   }
 
-  .counselling-art-therapy-page .university-collaboration-text {
-    text-align: center !important;
-    font-size: 0.8rem !important;
-    margin-top: 0 !important;
+  .counselling-art-therapy-page .title-university-icon img {
+    display: none !important;
+  }
+
+  .counselling-art-therapy-page .university-collaboration-text-above {
+    margin-top: 0.25rem !important;
+    margin-bottom: 1rem !important;
+    text-align: left !important;
+  }
+
+  .counselling-art-therapy-page .university-collaboration-text-above .university-collaboration-text {
+    font-size: 0.75rem !important;
+    text-align: left !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+  }
+
+  .counselling-art-therapy-page .university-collaboration-text-above .university-collaboration-text::before {
+    content: '' !important;
+    display: inline-block !important;
+    width: 20px !important;
+    height: 20px !important;
+    background-image: url('../assets/icons/br.png') !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    flex-shrink: 0 !important;
   }
 
   /* Move image to bottom and flush with edge */
