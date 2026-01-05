@@ -325,8 +325,7 @@ const Contact = () => {
                   <div className="contact-info-content">
                     <h3>Address</h3>
                     <p className="contact-value">
-                      1/40H, EJR Enclave, Mount Poonamallee Road,
-                      St. Thomas Mount, Chennai - 600016
+                      First floor, EJR Enclave, 1/40H, Mount Poonamallee Rd, Ramapuram, Viralur, Parangi Malai, Chennai, St.Thomas Mount, Tamil Nadu 600016
                     </p>
                   </div>
                 </div>

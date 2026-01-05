@@ -132,7 +132,7 @@ const Footer = () => {
                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" />
                   </svg>
                 </span>
-                <p>1/40H, EJR Enclave, Mount Poonamallee Road, St. Thomas Mt, Chennai - 600016</p>
+                <p>First floor, EJR Enclave, 1/40H, Mount Poonamallee Rd, Ramapuram, Viralur, Parangi Malai, Chennai, St.Thomas Mount, Tamil Nadu 600016</p>
               </div>
 
               <div className="contact-item">
@@ -155,7 +155,7 @@ const Footer = () => {
             </div>
             <div className="footer-map">
               <iframe
-                src="https://maps.google.com/maps?q=1/40H,%20EJR%20Enclave,%20Mount%20Poonamallee%20Road,%20St.%20Thomas%20Mt,%20Chennai%20-%20600016&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                src="https://maps.google.com/maps?q=13.007243,80.201819&t=&z=15&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0, borderRadius: '8px', aspectRatio: '1 / 1' }}
