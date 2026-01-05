@@ -284,7 +284,7 @@ const CounsellingChildPsychology = () => {
                 </svg>
               </span>
               <span className="skill-text">
-                <strong>Active Listening & Empathy</strong> – Understand children's emotions and respond with care.
+                <strong>Active Listening & Empathy</strong> <br />– Understand children's emotions and respond with care.
               </span>
             </li>
             <li>
@@ -294,7 +294,7 @@ const CounsellingChildPsychology = () => {
                 </svg>
               </span>
               <span className="skill-text">
-                <strong>Assessment & Observation</strong> – Identify emotional, behavioral, and developmental needs
+                <strong>Assessment & Observation</strong> <br />– Identify emotional, behavioral, and developmental needs
               </span>
             </li>
             <li>
@@ -304,7 +304,7 @@ const CounsellingChildPsychology = () => {
                 </svg>
               </span>
               <span className="skill-text">
-                <strong>Communication Skills</strong> – Effectively interact with children, parents, and caregivers
+                <strong>Communication Skills</strong> <br />– Effectively interact with children, parents, and caregivers
               </span>
             </li>
             <li>
@@ -314,7 +314,7 @@ const CounsellingChildPsychology = () => {
                 </svg>
               </span>
               <span className="skill-text">
-                <strong>Counselling Techniques</strong> – Apply child-centered, ethical strategies to support wellbeing
+                <strong>Counselling Techniques</strong> <br />– Apply child-centered, ethical strategies to support wellbeing
               </span>
             </li>
             <li>
@@ -324,7 +324,7 @@ const CounsellingChildPsychology = () => {
                 </svg>
               </span>
               <span className="skill-text">
-                <strong>Problem Solving & Intervention</strong> – Develop practical solutions and therapeutic plans for children's challenges
+                <strong>Problem Solving & Intervention</strong> <br />– Develop practical solutions and therapeutic plans for children's challenges
               </span>
             </li>
             <li>
@@ -334,7 +334,7 @@ const CounsellingChildPsychology = () => {
                 </svg>
               </span>
               <span className="skill-text">
-                <strong>Building Trust & Emotional Safety</strong> – Create a safe, supportive environment that encourages expression, growth, and healing.
+                <strong>Building Trust & Emotional Safety</strong> <br />– Create a safe, supportive environment that encourages expression, growth, and healing.
               </span>
             </li>
           </ul>

@@ -3823,15 +3823,6 @@ img {
     padding: 0 1rem !important;
   }
 
-  .counselling-organizational-psychology-page .skills-section .section-title::after {
-    content: "-";
-    display: block;
-    width: 30px;
-    height: 2px;
-    background-color: #0E0529;
-    margin: 0.5rem auto 0.5rem 1rem;
-  }
-
   /* INTERNSHIP OPPORTUNITIES - match SKILLS section styling */
   .counselling-organizational-psychology-page .internship-section {
     text-align: left !important;
@@ -3870,6 +3861,7 @@ img {
     padding: 0.8rem 1rem !important;
     border-radius: 18px;
     gap: 0.75rem;
+    box-shadow: none !important;
   }
 
   .counselling-organizational-psychology-page .skill-checkmark {

@@ -286,7 +286,7 @@ const CounsellingForensicPsychology = () => {
                 </svg>
               </span>
               <span className="skill-text">
-                <strong>Criminal Behaviour Assessment</strong> – Evaluate offender motives, risk levels, and psychological patterns.
+                <strong>Criminal Behaviour Assessment</strong> <br />– Evaluate offender motives, risk levels, and psychological patterns.
               </span>
             </li>
             <li>
@@ -296,7 +296,7 @@ const CounsellingForensicPsychology = () => {
                 </svg>
               </span>
               <span className="skill-text">
-                <strong>Critical Thinking & Analysis</strong> – Interpret complex case details and forensic evidence accurately.
+                <strong>Critical Thinking & Analysis</strong> <br />– Interpret complex case details and forensic evidence accurately.
               </span>
             </li>
             <li>
@@ -306,7 +306,7 @@ const CounsellingForensicPsychology = () => {
                 </svg>
               </span>
               <span className="skill-text">
-                <strong>Interviewing & Profiling Skills</strong> – Conduct structured interviews and analyze behavioural cues for profiling.
+                <strong>Interviewing & Profiling Skills</strong> <br />– Conduct structured interviews and analyze behavioural cues for profiling.
               </span>
             </li>
             <li>
@@ -316,7 +316,7 @@ const CounsellingForensicPsychology = () => {
                 </svg>
               </span>
               <span className="skill-text">
-                <strong>Ethical & Legal Awareness</strong> – Apply legal standards and ethical guidelines in all forensic work.
+                <strong>Ethical & Legal Awareness</strong> <br />– Apply legal standards and ethical guidelines in all forensic work.
               </span>
             </li>
             <li>
@@ -326,7 +326,7 @@ const CounsellingForensicPsychology = () => {
                 </svg>
               </span>
               <span className="skill-text">
-                <strong>Forensic Report & Courtroom Communication</strong> – Prepare clear reports and present findings confidently in court.
+                <strong>Forensic Report & Courtroom Communication</strong> <br />– Prepare clear reports and present findings confidently in court.
               </span>
             </li>
             <li>
@@ -336,7 +336,7 @@ const CounsellingForensicPsychology = () => {
                 </svg>
               </span>
               <span className="skill-text">
-                <strong>Courtroom Communication & Expert Testimony</strong> – Present findings confidently and communicate expert opinions effectively in legal settings.
+                <strong>Courtroom Communication & Expert Testimony</strong> <br />– Present findings confidently and communicate expert opinions effectively in legal settings.
               </span>
             </li>
           </ul>

@@ -276,7 +276,7 @@ const CounsellingArtTherapy = () => {
                 </svg>
               </span>
               <span className="skill-text">
-                <strong>Creative Facilitation</strong> – Guide clients using various art media to express thoughts and emotions.
+                <strong>Creative Facilitation</strong> <br />– Guide clients using various art media to express thoughts and emotions.
               </span>
             </li>
             <li>
@@ -286,7 +286,7 @@ const CounsellingArtTherapy = () => {
                 </svg>
               </span>
               <span className="skill-text">
-                <strong>Psychological Assessment</strong> – Interpret artwork to understand clients' mental and emotional states.
+                <strong>Psychological Assessment</strong> <br />– Interpret artwork to understand clients' mental and emotional states.
               </span>
             </li>
             <li>
@@ -296,7 +296,7 @@ const CounsellingArtTherapy = () => {
                 </svg>
               </span>
               <span className="skill-text">
-                <strong>Therapeutic Communication</strong> – Observe and respond to verbal and non-verbal cues effectively.
+                <strong>Therapeutic Communication</strong> <br />– Observe and respond to verbal and non-verbal cues effectively.
               </span>
             </li>
             <li>
@@ -306,7 +306,7 @@ const CounsellingArtTherapy = () => {
                 </svg>
               </span>
               <span className="skill-text">
-                <strong>Ethical & Cultural Sensitivity</strong> – Practice ethically and respect diverse backgrounds.
+                <strong>Ethical & Cultural Sensitivity</strong> <br />– Practice ethically and respect diverse backgrounds.
               </span>
             </li>
             <li>
@@ -316,7 +316,7 @@ const CounsellingArtTherapy = () => {
                 </svg>
               </span>
               <span className="skill-text">
-                <strong>Session Planning & Leadership</strong> – Design and lead individual or group art therapy sessions.
+                <strong>Session Planning & Leadership</strong> <br />– Design and lead individual or group art therapy sessions.
               </span>
             </li>
             <li>
@@ -326,7 +326,7 @@ const CounsellingArtTherapy = () => {
                 </svg>
               </span>
               <span className="skill-text">
-                <strong>Adaptability & Innovation</strong> – Integrate new techniques, digital media, and creative interventions.
+                <strong>Adaptability & Innovation</strong> <br />– Integrate new techniques, digital media, and creative interventions.
               </span>
             </li>
           </ul>

@@ -3766,15 +3766,6 @@ img {
     padding: 0 1rem !important;
   }
 
-  .counselling-child-psychology-page .skills-section .section-title::after {
-    content: "-";
-    display: block;
-    width: 30px;
-    height: 2px;
-    background-color: #0E0529;
-    margin: 0.5rem auto 0.5rem 1rem;
-  }
-
   .counselling-child-psychology-page .skills-list {
     grid-template-columns: 1fr !important;
     gap: 0.6rem !important;
@@ -3785,6 +3776,7 @@ img {
     padding: 0.8rem 1rem !important;
     border-radius: 18px;
     gap: 0.75rem;
+    box-shadow: none !important;
   }
 
   .counselling-child-psychology-page .skill-checkmark {

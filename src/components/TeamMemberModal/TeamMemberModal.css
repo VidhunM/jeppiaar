@@ -128,6 +128,9 @@
   letter-spacing: 0.01em;
   color: #333;
   text-align: justify;
+  text-justify: inter-word;
+  hyphens: none;
+  word-break: normal;
 }
 
 .team-modal-description p {
@@ -138,6 +141,10 @@
   margin: 0 0 1.5rem 0;
   white-space: pre-line;
   min-height: 1.8em;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: none;
+  word-break: normal;
 }
 
 .team-modal-description p:last-child {
@@ -150,8 +157,8 @@
     text-align: justify !important;
     text-justify: inter-word;
     text-align-last: left;
-    hyphens: auto;
-    word-break: break-word;
+    hyphens: none !important;
+    word-break: normal;
     font-size: 1.1rem !important;
   }
 
@@ -161,8 +168,8 @@
     text-align: justify !important;
     text-justify: inter-word;
     text-align-last: left;
-    hyphens: auto;
-    word-break: break-word;
+    hyphens: none !important;
+    word-break: normal;
   }
 
   .team-modal-description p:first-child {
