@@ -137,7 +137,7 @@ She has been instrumental in developing the academy's curriculum, establishing q
               Jeppiaar Academy of Psychology and Research was established to bridge the gap between psychology education and real-world application. With a vision to nurture ethical, skilled, and research-oriented professionals, the academy offers advanced courses aligned with global mental health standards.
               </p>
               <p>
-              The academy provides specialized programs in key domains of psychology,<br/>including Counselling & Child Psychology, Counselling & Organisational Psychology, Counselling & Forensic Psychology, and Art Therapy.
+              The academy provides specialized programs in key domains of psychology, including <br /> Counselling & Child Psychology, Counselling & Organisational Psychology, Counselling & Forensic Psychology, and Art Therapy.
               </p>
             </div>
           </div>
@@ -177,7 +177,7 @@ She has been instrumental in developing the academy's curriculum, establishing q
               <h3>OUR VISION</h3>
               <div className="title-separator"></div>
               <p>
-                To be India's most trusted and innovative center of excellence in psychology, setting national standards in education, research, and practice, and transforming mental health for every community empowering generations through ethical leadership, compassionate service, and lifelong learning.
+                To be India's most trusted and innovative center of excellence in psychology, setting national standards in education, research, and practice, and transforming mental health across communities by empowering generations through ethical leadership, compassionate service, and lifelong learning.
               </p>
             </div>
             <div className="mission-card scroll-from-right">
