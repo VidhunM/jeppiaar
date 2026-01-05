@@ -382,6 +382,16 @@
   .footer-bottom p {
     font-size: 0.85rem;
     line-height: 1.6;
+    white-space: normal;
+    word-spacing: normal;
+    letter-spacing: normal;
+  }
+
+  /* Proper spacing around links - balanced spacing */
+  .footer-bottom p a {
+    margin: 0 0.2em;
+    padding: 0;
+    display: inline;
   }
 }
 
@@ -522,6 +532,17 @@
 
   .footer-bottom p {
     font-size: 0.75rem;
+    white-space: normal;
+    word-spacing: normal;
+    letter-spacing: normal;
+    line-height: 1.5;
+  }
+
+  /* Proper spacing around links - balanced spacing */
+  .footer-bottom p a {
+    margin: 0 0.2em;
+    padding: 0;
+    display: inline;
   }
 }
 
