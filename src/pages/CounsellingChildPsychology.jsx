@@ -169,7 +169,8 @@ const CounsellingChildPsychology = () => {
             <div className="highlights-text">
               <p className="highlights-subtitle">Unlock your path to becoming a skilled child counsellor</p>
               <h2 className="highlights-title">
-                ADVANCED DIPLOMA IN COUNSELLING AND CHILD PSYCHOLOGY
+                ADVANCED DIPLOMA IN<br />
+                COUNSELLING AND CHILD PSYCHOLOGY
                 <div className="title-university-icon">
                   <img src={brIcon} alt="Bharathidasan University" />
                 </div>
