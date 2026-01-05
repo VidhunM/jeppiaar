@@ -2539,7 +2539,7 @@ img {
   }
 
   .career-description {
-    font-size: 0.95rem !important;
+    font-size: 1.05rem !important;
     padding-left: 0;
   }
 
@@ -4179,7 +4179,7 @@ img {
   }
 
   .career-description {
-    font-size: 0.9rem !important;
+    font-size: 1rem !important;
   }
 }
 
@@ -4352,8 +4352,8 @@ img {
   .counselling-organizational-psychology-page .university-collaboration-text-above .university-collaboration-text::before {
     content: '' !important;
     display: inline-block !important;
-    width: 20px !important;
-    height: 20px !important;
+    width: 28px !important;
+    height: 28px !important;
     background-image: url('../assets/icons/br.png') !important;
     background-size: contain !important;
     background-repeat: no-repeat !important;
@@ -4531,6 +4531,6 @@ img {
   }
 
   .counselling-organizational-psychology-page .career-prospects .career-description {
-    font-size: 0.85rem !important;
+    font-size: 0.95rem !important;
   }
 }

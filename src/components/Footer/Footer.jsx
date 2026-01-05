@@ -53,7 +53,16 @@ const Footer = () => {
 
   const handleYoungVox = (e) => {
     e.preventDefault();
-    setShowUnderConstruction(true);
+    const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
+    const targetEl = e.currentTarget;
+    if (isMobile && targetEl && typeof targetEl.scrollIntoView === 'function') {
+      try {
+        targetEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } catch (_) {}
+      setTimeout(() => setShowUnderConstruction(true), 300);
+    } else {
+      setShowUnderConstruction(true);
+    }
   };
 
   const handleFAQ = (e) => {
@@ -187,4 +196,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
