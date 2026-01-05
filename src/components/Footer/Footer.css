@@ -124,8 +124,6 @@
   text-decoration: none;
   transition: color 0.3s ease;
   font-size: 0.9rem;
-  position: relative;
-  z-index: 1;
 }
 
 .footer-section:nth-child(2) ul li,
@@ -488,19 +486,11 @@
 
   .footer-section ul li a {
     font-size: 0.85rem;
-    min-height: 44px; /* Ensure adequate touch target */
-    display: flex;
-    align-items: center;
-    padding: 8px 0; /* Add padding for better touch area */
   }
 
   .footer-section:nth-child(2) ul li a,
   .footer-section:nth-child(3) ul li a {
     font-size: 0.8rem;
-    min-height: 44px; /* Ensure adequate touch target */
-    display: flex;
-    align-items: center;
-    padding: 8px 0; /* Add padding for better touch area */
   }
 
   /* Academics section: balanced spacing approach on small screens */
