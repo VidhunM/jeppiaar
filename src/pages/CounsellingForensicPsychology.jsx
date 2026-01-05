@@ -190,7 +190,12 @@ const CounsellingForensicPsychology = () => {
                   </ul>
                 </div>
               </div>
-              <button className="download-brochure-btn">Download Brochure</button>
+              <div className="button-text-container">
+                <button className="download-brochure-btn">Download Brochure</button>
+                <p className="university-collaboration-text">
+                  This diploma program is offered in collaboration with Bharathidasan University
+                </p>
+              </div>
             </div>
           </div>
         </div>

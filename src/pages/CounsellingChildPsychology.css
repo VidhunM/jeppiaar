@@ -447,7 +447,7 @@ img {
 .highlights-section .highlights-subtitle {
   font-family: 'Inter', sans-serif !important;
   font-size: 1.2rem !important;
-  margin-top: -2.5rem;
+  margin-top: -3rem;
   margin-bottom: 0.4rem;
   color: white;
   opacity: 0.95;
@@ -564,6 +564,31 @@ img {
   background: #f5f5f5;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+.button-text-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.highlights-section .download-brochure-btn {
+  flex-shrink: 0;
+  margin: 0;
+}
+
+.university-collaboration-text {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 0.9rem !important;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+  line-height: 1.5;
+  text-align: left;
+  flex: 1;
+  max-width: 320px;
 }
 
 /* Legacy support - keep old class names working */
@@ -4376,9 +4401,22 @@ img {
     margin-bottom: 0 !important;
   }
   
+  .counselling-child-psychology-page .button-text-container {
+    flex-direction: column !important;
+    gap: 0.75rem !important;
+    align-items: stretch !important;
+  }
+
   .counselling-child-psychology-page .highlights-section .download-brochure-btn {
-    margin-bottom: 0 !important;
-    
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+  }
+
+  .counselling-child-psychology-page .university-collaboration-text {
+    text-align: center !important;
+    font-size: 0.8rem !important;
+    margin-top: 0.5rem !important;
   }
 
   /* Move image to bottom and flush with edge */

@@ -88,7 +88,7 @@
 }
 
 .counselling-art-therapy-page .highlights-section .highlights-image img {
-  width: 125%;
+  width: 150%;
   height: auto;
   display: block;
   object-fit: contain;
@@ -99,38 +99,38 @@
 }
 
 .counselling-art-therapy-page .highlights-section {
-  padding: 2rem 0 0 0;
+  padding: 3.5rem 0 0 0;
 }
 
 .counselling-art-therapy-page .highlights-section .highlights-text {
   padding-right: 2%;
-  padding-bottom: 1.5rem;
+  padding-bottom: 2.25rem;
   padding-top: 0;
 }
 
 .counselling-art-therapy-page .highlights-section .highlights-subtitle {
-  font-size: 1.2rem;
-  margin-bottom: 0.85rem;
+  font-size: 1.45rem;
+  margin-bottom: 1.1rem;
   margin-top: 0;
 }
 
 .counselling-art-therapy-page .highlights-section .highlights-title {
-  font-size: 1.65rem;
-  margin-bottom: 1.1rem;
+  font-size: 2.1rem;
+  margin-bottom: 1.6rem;
 }
 
 .counselling-art-therapy-page .highlights-section .batch-boxes {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.35rem;
-  margin-bottom: 1.25rem;
+  gap: 2rem;
+  margin-bottom: 2rem;
 }
 
 .counselling-art-therapy-page .highlights-section .batch-box {
   background: rgba(90, 85, 106, 0.8);
   border: none;
-  border-radius: 12px;
-  padding: 1rem;
+  border-radius: 18px;
+  padding: 1.65rem;
   position: relative;
 }
 
@@ -158,12 +158,12 @@
 }
 
 .counselling-art-therapy-page .highlights-section .batch-box h3 {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 700;
   color: white;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
   margin-top: 0;
-  padding-left: 2.4rem;
+  padding-left: 2.5rem;
 }
 
 .counselling-art-therapy-page .highlights-section .batch-details {
@@ -175,9 +175,9 @@
 
 .counselling-art-therapy-page .highlights-section .batch-details li {
   color: white;
-  font-size: 1.15rem;
-  line-height: 1.5;
-  margin-bottom: 0.3rem;
+  font-size: 1.2rem;
+  line-height: 1.55;
+  margin-bottom: 0.35rem;
   position: relative;
   padding-left: 1rem;
 }
@@ -247,9 +247,9 @@
     box-sizing: border-box;
   }
 
-  .counselling-art-therapy-page .highlights-section .highlights-image img {
-    width: 100%;
-    height: auto;
+    .counselling-art-therapy-page .highlights-section .highlights-image img {
+      width: 115%;
+      height: auto;
     max-width: 100%;
     display: block;
     margin: 0 auto;
@@ -260,13 +260,13 @@
   /* Mobile: Improve gaps and optimize batch cards layout */
   .counselling-art-therapy-page .highlights-section .batch-boxes {
     grid-template-columns: 1fr; /* Single column on mobile */
-    gap: 1.25rem; /* Better gap for mobile */
-    margin-bottom: 1.25rem; /* Better bottom margin */
+    gap: 1.6rem; /* Better gap for mobile */
+    margin-bottom: 2rem; /* Better bottom margin */
   }
 
   .counselling-art-therapy-page .highlights-section .batch-box {
-    padding: 1rem; /* Better padding for mobile */
-    border-radius: 12px; /* Better border radius */
+    padding: 1.4rem; /* Better padding for mobile */
+    border-radius: 16px; /* Better border radius */
   }
 
   .counselling-art-therapy-page .highlights-section .batch-icon {
@@ -328,13 +328,31 @@
     text-align: left;
   }
 
+  .counselling-art-therapy-page .button-text-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
   .counselling-art-therapy-page .highlights-section .download-brochure-btn {
     margin-top: 0.75rem; /* Add some top margin to separate from batch cards */
-    width: 100%; /* Full width button on mobile */
-    max-width: 280px; /* Reasonable max width */
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+    flex-shrink: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .counselling-art-therapy-page .university-collaboration-text {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.85rem !important;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.95);
+    margin: 0;
+    line-height: 1.5;
+    text-align: left;
+    flex: 1;
+    max-width: 320px;
   }
 }
 
@@ -1996,8 +2014,22 @@
     padding-bottom: 0 !important;
   }
   
+  .counselling-art-therapy-page .button-text-container {
+    flex-direction: column !important;
+    gap: 0.75rem !important;
+    align-items: stretch !important;
+  }
+
   .counselling-art-therapy-page .highlights-section .download-brochure-btn {
-    margin-bottom: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+  }
+
+  .counselling-art-therapy-page .university-collaboration-text {
+    text-align: center !important;
+    font-size: 0.8rem !important;
+    margin-top: 0.5rem !important;
   }
 
   /* Move image to bottom and flush with edge */
