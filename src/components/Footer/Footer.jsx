@@ -55,14 +55,17 @@ const Footer = () => {
     e.preventDefault();
     const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
     const targetEl = e.currentTarget;
-    if (isMobile && targetEl && typeof targetEl.scrollIntoView === 'function') {
+    if (isMobile && targetEl) {
       try {
-        targetEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        const rect = targetEl.getBoundingClientRect();
+        const elementCenterY = rect.top + window.scrollY + rect.height / 2;
+        const targetScrollY = Math.max(0, elementCenterY - window.innerHeight / 2);
+        window.scrollTo({ top: targetScrollY, behavior: 'smooth' });
       } catch (_) {}
-      setTimeout(() => setShowUnderConstruction(true), 300);
-    } else {
-      setShowUnderConstruction(true);
+      setTimeout(() => setShowUnderConstruction(true), 450);
+      return;
     }
+    setShowUnderConstruction(true);
   };
 
   const handleFAQ = (e) => {
