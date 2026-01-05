@@ -147,7 +147,7 @@ const CounsellingChildPsychology = () => {
             <div className="overview-text">
               <h1 className="overview-title">ADVANCED DIPLOMA IN COUNSELLING AND CHILD PSYCHOLOGY</h1>
               <p>
-                The Diploma in Counselling Psychology (Specialization in Child Psychology) equips learners with essential counselling skills, child-focused assessment techniques, and ethically grounded practice. With a blend of theory, supervised practicum, and real-world exposure, the program prepares reflective practitioners to support the emotional, behavioural, and developmental needs of children and adolescents across diverse settings.
+                The Diploma in Counselling Psychology (Specialization in Child Psychology) equips learners with essential counselling skills, child focused assessment techniques, and ethically grounded practice. With a blend of theory, supervised practicum, and real-world exposure, the program prepares reflective practitioners to support the emotional, behavioural, and developmental needs of children and adolescents across diverse settings.
               </p>
               <button className="enroll-now-btn" onClick={openApplyModal}>Enroll Now</button>
             </div>
