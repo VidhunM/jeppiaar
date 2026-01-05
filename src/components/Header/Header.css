@@ -372,7 +372,7 @@
   .dropdown-toggle {
     width: 100%;
     justify-content: space-between;
-    padding: 0.875rem 0;
+    padding: 0.75rem 0;
     cursor: pointer;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
     touch-action: manipulation;
@@ -382,14 +382,14 @@
     background: #f8f8f8;
   }
 
-  .dropdown-label {
+  .dropdown-toggle .dropdown-label {
     width: 100%;
     display: flex;
     align-items: center;
     text-align: left;
     color: #333;
-    font-weight: 500;
-    font-size: 0.95rem;
+    font-weight: 500 !important;
+    font-size: 0.95rem !important;
     pointer-events: auto; /* Enable pointer events for reliable tapping on iOS */
   }
 

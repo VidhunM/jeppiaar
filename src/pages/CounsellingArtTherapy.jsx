@@ -18,6 +18,7 @@ import at4Image from '../assets/images/at4.jpeg';
 import cc1Icon from '../assets/icons/cc1.png';
 import cc2Icon from '../assets/icons/cc02.png';
 import cc3Icon from '../assets/icons/cc3.png';
+import brIcon from '../assets/icons/br.png';
 import './CounsellingArtTherapy.css';
 
 const CounsellingArtTherapy = () => {
@@ -171,7 +172,12 @@ const CounsellingArtTherapy = () => {
             </div>
             <div className="highlights-text">
               <p className="highlights-subtitle">Unlock your path to becoming a skilled art therapist</p>
-              <h2 className="highlights-title">ADVANCED DIPLOMA IN ART THERAPY</h2>
+              <h2 className="highlights-title">
+                ADVANCED DIPLOMA IN ART THERAPY
+                <div className="title-university-icon">
+                  <img src={brIcon} alt="Bharathidasan University" />
+                </div>
+              </h2>
               <div className="batch-boxes">
                 <div className="batch-box">
                   <div className="batch-icon"></div>
@@ -183,23 +189,13 @@ const CounsellingArtTherapy = () => {
                   </ul>
                 </div>
               </div>
+              <div className="university-collaboration-text-above">
+                <p className="university-collaboration-text">
+                  This diploma program is offered in collaboration with Bharathidasan University
+                </p>
+              </div>
               <div className="button-text-container">
                 <button className="download-brochure-btn">Download Brochure</button>
-                <div className="university-collaboration-container">
-                  <div className="university-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                      <circle cx="9" cy="7" r="4"/>
-                      <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                      <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                      <circle cx="9" cy="12" r="1"/>
-                      <circle cx="15" cy="9" r="1"/>
-                    </svg>
-                  </div>
-                  <p className="university-collaboration-text">
-                    This diploma program is offered in collaboration with Bharathidasan University
-                  </p>
-                </div>
               </div>
             </div>
           </div>

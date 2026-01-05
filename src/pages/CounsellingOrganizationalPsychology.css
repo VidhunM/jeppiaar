@@ -603,6 +603,35 @@ img {
   box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
 }
 
+/* University icon next to title */
+.title-university-icon {
+  position: absolute;
+  top: 1rem;
+  right: 0;
+  z-index: 10;
+}
+
+.title-university-icon img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+/* Collaboration text above button */
+.university-collaboration-text-above {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.university-collaboration-text-above .university-collaboration-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  line-height: 1.5;
+}
+
 /* Legacy support - keep old class names working */
 .program-highlights {
   padding: 4rem 0 0 0;
@@ -691,6 +720,7 @@ img {
   padding-right: 6%;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .highlights-subtitle {
@@ -4465,6 +4495,6 @@ img {
   }
 
   .counselling-organizational-psychology-page .career-prospects .career-description {
-    font-size: 0.75rem !important;
+    font-size: 0.85rem !important;
   }
 }

@@ -99,13 +99,14 @@
 }
 
 .counselling-art-therapy-page .highlights-section {
-  padding: 3.5rem 0 0 0;
+  padding: 2.5rem 0 0 0;
 }
 
 .counselling-art-therapy-page .highlights-section .highlights-text {
   padding-right: 2%;
-  padding-bottom: 2.25rem;
+  padding-bottom: 1.75rem;
   padding-top: 0;
+  position: relative;
 }
 
 .counselling-art-therapy-page .highlights-section .highlights-subtitle {
@@ -115,7 +116,7 @@
 }
 
 .counselling-art-therapy-page .highlights-section .highlights-title {
-  font-size: 2.1rem;
+  font-size: 1.7rem;
   margin-bottom: 1.6rem;
 }
 
@@ -138,8 +139,8 @@
   width: 20px;
   height: 20px;
   position: absolute;
-  top: 1.5rem;
-  left: 1.25rem;
+  top: 1.65rem;
+  left: 1.15rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -163,14 +164,14 @@
   color: white;
   margin-bottom: 0.6rem;
   margin-top: 0;
-  padding-left: 2.5rem;
+  padding-left: 1.5rem;
 }
 
 .counselling-art-therapy-page .highlights-section .batch-details {
   list-style: none;
   padding: 0;
   margin: 0;
-  padding-left: 2.4rem;
+  padding-left: 1.5rem;
 }
 
 .counselling-art-therapy-page .highlights-section .batch-details li {
@@ -273,8 +274,8 @@
     width: 22px;
     height: 22px;
     position: absolute;
-    top: 1.25rem;
-    left: 1rem;
+    top: 1.4rem;
+    left: 1.15rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -295,11 +296,11 @@
   .counselling-art-therapy-page .highlights-section .batch-box h3 {
     font-size: 1rem; /* Slightly smaller font */
     margin-bottom: 0.5rem; /* Better margin */
-    padding-left: 2.5rem; /* Better icon spacing */
+    padding-left: 1.5rem; /* Better icon spacing */
   }
 
   .counselling-art-therapy-page .highlights-section .batch-details {
-    padding-left: 2.5rem; /* Better icon spacing */
+    padding-left: 1.5rem; /* Better icon spacing */
   }
 
   .counselling-art-therapy-page .highlights-section .batch-details li {
@@ -377,6 +378,35 @@
   }
 }
 
+/* University icon next to title */
+.title-university-icon {
+  position: absolute;
+  top: 1rem;
+  right: 0;
+  z-index: 10;
+}
+
+.title-university-icon img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+/* Collaboration text above button */
+.university-collaboration-text-above {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.university-collaboration-text-above .university-collaboration-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  line-height: 1.5;
+}
+
 @media (max-width: 480px) {
   .counselling-art-therapy-page {
     padding-top: 0;
@@ -430,8 +460,8 @@
     width: 20px;
     height: 20px;
     position: absolute;
-    top: 1.125rem;
-    left: 0.875rem;
+    top: 0.875rem;
+    left: 1rem;
   }
 
   .counselling-art-therapy-page .highlights-section .batch-icon::before {
@@ -442,11 +472,11 @@
   .counselling-art-therapy-page .highlights-section .batch-box h3 {
     font-size: 0.95rem; /* Smaller font for small screens */
     margin-bottom: 0.4rem; /* Better spacing */
-    padding-left: 2.25rem; /* Better icon spacing */
+    padding-left: 1.5rem; /* Better icon spacing */
   }
 
   .counselling-art-therapy-page .highlights-section .batch-details {
-    padding-left: 2.25rem; /* Better icon spacing */
+    padding-left: 1.5rem; /* Better icon spacing */
   }
 
   .counselling-art-therapy-page .highlights-section .batch-details li {
@@ -521,8 +551,8 @@
     width: 18px;
     height: 18px;
     position: absolute;
-    top: 1rem;
-    left: 0.75rem;
+    top: 0.75rem;
+    left: 0.875rem;
   }
 
   .counselling-art-therapy-page .highlights-section .batch-icon::before {
@@ -533,11 +563,11 @@
   .counselling-art-therapy-page .highlights-section .batch-box h3 {
     font-size: 0.9rem; /* Smallest readable font */
     margin-bottom: 0.35rem; /* Better margin */
-    padding-left: 2rem; /* Better icon spacing */
+    padding-left: 1.5rem; /* Better icon spacing */
   }
 
   .counselling-art-therapy-page .highlights-section .batch-details {
-    padding-left: 2rem; /* Better icon spacing */
+    padding-left: 1.5rem; /* Better icon spacing */
   }
 
   .counselling-art-therapy-page .highlights-section .batch-details li {
@@ -808,7 +838,7 @@
 .highlights-section .highlights-title {
   font-family: 'Inter', sans-serif !important;
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 1.7rem;
   line-height: 1.2;
   letter-spacing: 0%;
   text-align: left;
@@ -2019,7 +2049,7 @@
 
   /* Decrease top and bottom height spacing of the whole section */
   .counselling-art-therapy-page .highlights-section {
-    padding-top: 1.5rem !important;
+    padding-top: 1rem !important;
     padding-bottom: 0 !important;
     margin-bottom: 1rem !important;
   }
@@ -2157,7 +2187,7 @@
   }
 
   .counselling-art-therapy-page .career-prospects .career-description {
-    font-size: 0.75rem !important;
+    font-size: 0.85rem !important;
   }
 }
 
