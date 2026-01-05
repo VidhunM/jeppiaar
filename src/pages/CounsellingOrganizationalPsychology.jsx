@@ -301,7 +301,7 @@ const CounsellingOrganizationalPsychology = () => {
                 </svg>
               </span>
               <span className="skill-text">
-                <strong>Employee Assessment Skills</strong> <br />– Understanding behaviour, motivation, performance, and workplace dynamics.
+                <strong>Employee Assessment Skills</strong> <br />Understanding behaviour, motivation, performance, and workplace dynamics.
               </span>
             </li>
             <li>
@@ -311,7 +311,7 @@ const CounsellingOrganizationalPsychology = () => {
                 </svg>
               </span>
               <span className="skill-text">
-                <strong>Communication & Interpersonal Skills</strong> <br />– Engaging effectively with employees, teams, and leadership.
+                <strong>Communication & Interpersonal Skills</strong> <br />Engaging effectively with employees, teams, and leadership.
               </span>
             </li>
             <li>
@@ -331,7 +331,7 @@ const CounsellingOrganizationalPsychology = () => {
                 </svg>
               </span>
               <span className="skill-text">
-                <strong>Problem-Solving & Critical Thinking</strong> <br />– Designing interventions for workplace challenges and organizational improvement.
+                <strong>Problem-Solving & Critical Thinking</strong> <br />Designing interventions for workplace challenges and organizational improvement.
               </span>
             </li>
             <li>
@@ -341,7 +341,7 @@ const CounsellingOrganizationalPsychology = () => {
                 </svg>
               </span>
               <span className="skill-text">
-                <strong>Data Interpretation & Organizational Analysis</strong> <br />– Using assessments, surveys, and feedback tools to guide decisions.
+                <strong>Data Interpretation & Organizational Analysis</strong> <br />Using assessments, surveys, and feedback tools to guide decisions.
               </span>
             </li>
             <li>
@@ -351,7 +351,7 @@ const CounsellingOrganizationalPsychology = () => {
                 </svg>
               </span>
               <span className="skill-text">
-                <strong>Change Management & Workplace Wellbeing</strong> <br />– Facilitate organizational change while promoting a healthy, productive work culture.
+                <strong>Change Management & Workplace Wellbeing</strong> <br />Facilitate organizational change while promoting a healthy, productive work culture.
               </span>
             </li>
           </ul>
