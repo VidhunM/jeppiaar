@@ -1,9 +1,75 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import Logo1 from '../../assets/images/footerI.png';
 import './Footer.css';
+import '../../pages/ApplyModalPopup.css';
 
 const Footer = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [showUnderConstruction, setShowUnderConstruction] = useState(false);
+
+  const scrollToSection = (sectionId) => {
+    if (location.pathname !== '/') {
+      navigate('/');
+      // Wait for navigation and page render
+      setTimeout(() => {
+        const attemptScroll = () => {
+          const section = document.getElementById(sectionId);
+          if (section) {
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          } else {
+            // Retry if section not found yet
+            setTimeout(attemptScroll, 50);
+          }
+        };
+        attemptScroll();
+      }, 300);
+    } else {
+      // If already on home page, scroll immediately
+      setTimeout(() => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 50);
+    }
+  };
+
+  const handleCertificationPrograms = (e) => {
+    e.preventDefault();
+    window.open('https://www.voxdemy.com/courses/Psychology-Basics-Course-Jan-2026-68569c00e0203b5c9661eafa', '_blank');
+  };
+
+  const handleResearchWing = (e) => {
+    e.preventDefault();
+    window.open('https://www.thepoloresearch.com/', '_blank');
+  };
+
+  const handleInternships = (e) => {
+    e.preventDefault();
+    window.open('https://www.voxdemy.com/courses/Voxdemy-Internship-May-2025-Batch-680dcda04238861d5cad3f02', '_blank');
+  };
+
+  const handleYoungVox = (e) => {
+    e.preventDefault();
+    setShowUnderConstruction(true);
+  };
+
+  const handleFAQ = (e) => {
+    e.preventDefault();
+    scrollToSection('faq-section');
+  };
+
+  const handleAdmissions = (e) => {
+    e.preventDefault();
+    scrollToSection('admissions-banner');
+  };
+
+  const closePopup = () => {
+    setShowUnderConstruction(false);
+  };
+
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -38,28 +104,22 @@ const Footer = () => {
             <h4>Quick Links</h4>
             <ul>
               <li><Link to="/about">About Us</Link></li>
-              <li><Link to="/leadership">Leadership</Link></li>
-              <li><Link to="/events">Events</Link></li>
-              <li><Link to="/internships">Internships</Link></li>
-              <li><Link to="/research">Research Wing – POLO</Link></li>
-              <li><Link to="/counselling">Counseling Services</Link></li>
-              <li><Link to="/institution">Institution/Corporate Programs</Link></li>
-              <li><Link to="/youngvox">YoungVox</Link></li>
-              <li><Link to="/faq">FAQ</Link></li>
+              <li><a href="#" onClick={handleCertificationPrograms}>Certification Programs</a></li>
+              <li><a href="#" onClick={handleResearchWing}>Research Wing - POLO</a></li>
+              <li><a href="#" onClick={handleInternships}>Internships</a></li>
+              <li><a href="#" onClick={handleYoungVox}>YoungVox</a></li>
+              <li><a href="#" onClick={handleFAQ}>FAQ</a></li>
             </ul>
           </div>
 
           <div className="footer-section">
             <h4>Academics</h4>
             <ul>
-              <li><Link to="/courses/art-therapy">Advanced Diploma in Art Therapy</Link></li>
-              <li><Link to="/courses/child-psychology">Advanced Diploma in Counselling and Child Psychology</Link></li>
-              <li><Link to="/courses/organisational-psychology">Advanced Diploma in Counselling and Organisational Psychology</Link></li>
-              <li><Link to="/courses/forensic-psychology">Advanced Diploma in Counselling and Forensic Psychology</Link></li>
-              <li><Link to="/certification">Certification Courses</Link></li>
-              <li><Link to="/online-certification">Online Certification Courses</Link></li>
-              <li><Link to="/internships">Internships</Link></li>
-              <li><Link to="/admissions">Admissions 2025</Link></li>
+              <li><Link to="/counselling-child-psychology">Advanced Diploma in Counselling and Child Psychology</Link></li>
+              <li><Link to="/counselling-organizational-psychology">Advanced Diploma in Counselling and Organizational Psychology</Link></li>
+              <li><Link to="/counselling-forensic-psychology">Advanced Diploma in Counselling and Forensic Psychology</Link></li>
+              <li><Link to="/counselling-art-therapy">Advanced Diploma in Art Therapy</Link></li>
+              <li><a href="#" onClick={handleAdmissions}>Admissions 2025</a></li>
             </ul>
           </div>
 
@@ -112,6 +172,16 @@ const Footer = () => {
           <p>&copy; 2025 Jeppiaar Academy of Psychology & Research. All Rights Reserved. | <Link to="/terms">Terms and Conditions</Link> | <Link to="/privacy">Privacy Policy</Link></p>
         </div>
       </div>
+
+      {showUnderConstruction && (
+        <div className="under-construction-popup" onClick={closePopup}>
+          <div className="popup-content" onClick={(e) => e.stopPropagation()}>
+            <button className="popup-close" onClick={closePopup}>×</button>
+            <h2>Coming Soon</h2>
+            <p>Please check back soon!</p>
+          </div>
+        </div>
+      )}
     </footer>
   );
 };

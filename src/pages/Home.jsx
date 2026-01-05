@@ -171,7 +171,7 @@ const Home = () => {
       <CoursesGrid onKnowMoreClick={showConstructionPopup} />
 
       {/* Other Services Section */}
-      <section className="other-services-section">
+      <section id="other-services-section" className="other-services-section">
         <div className="container">
           <h2 className="section-title scroll-from-center">OTHER SERVICES</h2>
           <div className="services-grid">
@@ -222,7 +222,7 @@ const Home = () => {
       <LearnersReview />
 
       {/* FAQ Section */}
-      <section className="faq-section">
+      <section id="faq-section" className="faq-section">
         <div className="container">
           <div className="faq-content">
             <div className="faq-list scroll-from-left">
@@ -261,7 +261,7 @@ const Home = () => {
       </section>
 
       {/* Admissions Banner */}
-      <section className="admissions-banner" style={{ backgroundImage: `url(${image3})` }}>
+      <section id="admissions-banner" className="admissions-banner" style={{ backgroundImage: `url(${image3})` }}>
         <div className="banner-overlay"></div>
         <div className="banner-content scroll-from-left">
           <h2> 2026 ADMISSIONS OPEN - START YOUR JOURNEY IN PSYCHOLOGY</h2>
