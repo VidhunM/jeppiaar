@@ -382,7 +382,7 @@
 .title-university-icon {
   position: absolute;
   top: 1rem;
-  right: 0;
+  right: -2rem;
   z-index: 10;
 }
 
@@ -1520,6 +1520,7 @@
 
   .counselling-art-therapy-page .course-syllabus .syllabus-header .section-title {
     margin-bottom: 0 !important;
+    margin-top: 1.5rem !important;
     font-family: 'Roboto', sans-serif !important;
     font-size: 1.25rem !important;
     font-weight: 700 !important;
@@ -2120,8 +2121,8 @@
   .counselling-art-therapy-page .university-collaboration-text-above .university-collaboration-text::before {
     content: '' !important;
     display: inline-block !important;
-    width: 28px !important;
-    height: 28px !important;
+    width: 48px !important;
+    height: 48px !important;
     background-image: url('../assets/icons/br.png') !important;
     background-size: contain !important;
     background-repeat: no-repeat !important;

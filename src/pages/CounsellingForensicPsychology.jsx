@@ -361,7 +361,7 @@ const CounsellingForensicPsychology = () => {
         <div className="container">
           <h2 className="section-title-white">CAREER PROSPECTS</h2>
           <p className="career-description">
-            With a Forensic Psychology specialization, this course builds a strong foundation in criminal psychology and prepares you for impactful careers in forensic and legal settings. Potential career paths include
+            With a Forensic Psychology specialization, this course builds a strong foundation in criminal psychology and prepares you for impactful careers in forensic and legal settings. Potential career paths include:
           </p>
           <div className="career-carousel-wrapper">
             <div className="career-carousel-container">

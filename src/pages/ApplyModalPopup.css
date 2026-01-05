@@ -713,32 +713,38 @@
 /* iPhone specific fixes - ensure modal clears header */
 @media (max-width: 430px) and (-webkit-min-device-pixel-ratio: 2) {
   .apply-modal-overlay {
-    padding-top: 0 !important;
-    align-items: flex-start !important;
-    justify-content: flex-start !important;
-    padding: 0 !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: env(safe-area-inset-top, 20px)
+      env(safe-area-inset-right, 20px)
+      env(safe-area-inset-bottom, 20px)
+      env(safe-area-inset-left, 20px) !important;
   }
 
   .apply-modal-content {
-    margin-top: 100px !important;
-    margin-bottom: auto !important;
+    margin: auto !important;
     width: min(400px, 95%) !important;
+    max-height: calc(100vh - env(safe-area-inset-top, 40px) - env(safe-area-inset-bottom, 40px) - 40px) !important;
+    overflow-y: auto !important;
   }
 }
 
 /* iPhone 12 mini and similar small iPhones */
 @media (max-width: 390px) and (-webkit-min-device-pixel-ratio: 2) {
   .apply-modal-overlay {
-    padding-top: 0 !important;
-    align-items: flex-start !important;
-    justify-content: flex-start !important;
-    padding: 0 !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: env(safe-area-inset-top, 20px)
+      env(safe-area-inset-right, 20px)
+      env(safe-area-inset-bottom, 20px)
+      env(safe-area-inset-left, 20px) !important;
   }
 
   .apply-modal-content {
-    margin-top: 110px !important;
-    margin-bottom: auto !important;
+    margin: auto !important;
     width: min(350px, 95%) !important;
+    max-height: calc(100vh - env(safe-area-inset-top, 40px) - env(safe-area-inset-bottom, 40px) - 40px) !important;
+    overflow-y: auto !important;
   }
 }
 
@@ -746,9 +752,8 @@
 @supports (-webkit-touch-callout: none) {
   @media (max-width: 768px) {
     .apply-modal-overlay {
-      padding-top: 0 !important;
-      align-items: flex-start !important;
-      justify-content: flex-start !important;
+      align-items: center !important;
+      justify-content: center !important;
       padding: env(safe-area-inset-top, 20px)
         env(safe-area-inset-right, 20px)
         env(safe-area-inset-bottom, 20px)
@@ -756,8 +761,9 @@
     }
 
     .apply-modal-content {
-      margin-top: 90px !important;
-      margin-bottom: auto !important;
+      margin: auto !important;
+      max-height: calc(100vh - env(safe-area-inset-top, 40px) - env(safe-area-inset-bottom, 40px) - 40px) !important;
+      overflow-y: auto !important;
     }
   }
 }
