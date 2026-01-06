@@ -83,9 +83,9 @@ const CounsellingChildPsychology = () => {
 
   const careers = [
     { title: 'Child Counselor', image: cp1Image },
-    { title: 'Educational Psychologist', image: cp2Image },
-    { title: 'Rehabilitation & Behavioral Therapist', image: cp3Image },
-    { title: 'School Psychologist', image: cp4Image }
+    { title: 'Educational Counselor', image: cp2Image },
+    { title: 'Rehabilitation & Behavioral Counselor', image: cp3Image },
+    { title: 'School Counselor', image: cp4Image }
   ];
 
   useEffect(() => {
