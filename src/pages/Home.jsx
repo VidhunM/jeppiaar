@@ -10,6 +10,7 @@ import Group8 from '../assets/icons/Group 8.png';
 import Ellipse from '../assets/images/Ellipse.png';
 import Layer from '../assets/images/Layer.png';
 import Youngvox from '../assets/images/Youngvox.png';
+import Logo1 from '../assets/icons/Logo1.png';
 import image3 from '../assets/images/image3.png';
 import image2 from '../assets/images/image2.png';
 import './Home.css';
@@ -180,9 +181,9 @@ const Home = () => {
               onClick={() => window.open('https://www.voxdemy.com/courses/Psychology-Basics-Course-Jan-2026-68569c00e0203b5c9661eafa', '_blank')}
             >
               <div className="service-icon">
-                <img src={Ellipse} alt="Certification Programs" />
+                <img src={Ellipse} alt="Online certification courses" />
               </div>
-              <p>Certification Programs</p>
+              <p>Online certification courses</p>
             </div>
             <div 
               className="service-item scroll-from-right"
@@ -193,14 +194,14 @@ const Home = () => {
               </div>
               <p>Research Wing - POLO</p>
             </div>
-            <div 
+            <div
               className="service-item scroll-from-left"
               onClick={() => window.open('https://www.voxdemy.com/courses/Voxdemy-Internship-May-2025-Batch-680dcda04238861d5cad3f02', '_blank')}
             >
               <div className="service-icon">
-                <img src={Ellipse} alt="Internships" />
+                <img src={Logo1} alt="certification courses" />
               </div>
-              <p>Internships</p>
+              <p>certification courses</p>
             </div>
             <div 
               className="service-item scroll-from-right"
