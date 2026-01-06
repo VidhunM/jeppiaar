@@ -201,7 +201,7 @@ const Home = () => {
               <div className="service-icon">
                 <img src={Logo1} alt="certification courses" />
               </div>
-              <p>certification courses</p>
+              <p>Certification Courses</p>
             </div>
             <div 
               className="service-item scroll-from-right"
