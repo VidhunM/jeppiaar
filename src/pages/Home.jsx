@@ -181,9 +181,9 @@ const Home = () => {
               onClick={() => window.open('https://www.voxdemy.com/courses/Psychology-Basics-Course-Jan-2026-68569c00e0203b5c9661eafa', '_blank')}
             >
               <div className="service-icon">
-                <img src={Ellipse} alt="Online certification courses" />
+                <img src={Ellipse} alt="Online Certification Courses" />
               </div>
-              <p>Online certification courses</p>
+              <p>Online Certification Courses</p>
             </div>
             <div 
               className="service-item scroll-from-right"
