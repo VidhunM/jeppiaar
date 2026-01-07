@@ -13,6 +13,9 @@ import CounsellingChildPsychology from './pages/CounsellingChildPsychology';
 import CounsellingOrganizationalPsychology from './pages/CounsellingOrganizationalPsychology';
 import CounsellingForensicPsychology from './pages/CounsellingForensicPsychology';
 import CounsellingArtTherapy from './pages/CounsellingArtTherapy';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsAndConditions from './pages/TermsAndConditions';
+import CancellationPolicy from './pages/CancellationPolicy';
 import { initScrollAnimations } from './utils/scrollAnimations';
 import './styles/global.css';
 
@@ -53,6 +56,9 @@ function App() {
                 <Route path="/counselling-organizational-psychology" element={<CounsellingOrganizationalPsychology />} />
                 <Route path="/counselling-forensic-psychology" element={<CounsellingForensicPsychology />} />
                 <Route path="/counselling-art-therapy" element={<CounsellingArtTherapy />} />
+                <Route path="/privacy" element={<PrivacyPolicy />} />
+                <Route path="/terms" element={<TermsAndConditions />} />
+                <Route path="/cancellation" element={<CancellationPolicy />} />
                 <Route path="/leadership" element={<About />} />
                 <Route path="/research" element={<About />} />
               </Routes>

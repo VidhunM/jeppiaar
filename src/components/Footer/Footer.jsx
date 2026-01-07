@@ -169,7 +169,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; 2025 Jeppiaar Academy of Psychology & Research. All Rights Reserved. | <Link to="/terms">Terms and Conditions</Link> | <Link to="/privacy">Privacy Policy</Link></p>
+          <p>&copy; 2025 Jeppiaar Academy of Psychology & Research. All Rights Reserved. | <Link to="/terms">Terms and Conditions</Link> | <Link to="/privacy">Privacy Policy</Link> | <Link to="/cancellation">Cancellation Policy</Link></p>
         </div>
       </div>
 
