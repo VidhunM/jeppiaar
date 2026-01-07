@@ -116,17 +116,18 @@
   }
 
   .terms-conditions-banner {
-    padding: 3rem 1rem;
+    padding: 3.5rem 1rem 2rem 1rem;
     margin-top: 70px;
     position: relative;
   }
 
   .terms-conditions-banner h1 {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
+    margin-top: 1rem;
   }
 
   .terms-conditions-banner p {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .terms-conditions-content {
@@ -168,8 +169,18 @@
     padding-top: 0;
   }
 
+  .terms-conditions-banner {
+    padding: 3rem 1rem 1.5rem 1rem;
+    margin-top: 70px;
+  }
+
   .terms-conditions-banner h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .terms-conditions-banner p {
+    font-size: 0.85rem;
   }
 
   .terms-conditions-content {
