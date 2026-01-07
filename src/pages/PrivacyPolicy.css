@@ -14,6 +14,7 @@
   position: relative;
   /* Avoid extra top-gap; the page padding-top already offsets the fixed header */
   margin-top: 0;
+  z-index: 1;
 }
 
 .privacy-policy-banner h1 {
@@ -110,8 +111,14 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .privacy-policy-page {
+    padding-top: 0;
+  }
+
   .privacy-policy-banner {
     padding: 3rem 1rem;
+    margin-top: 70px;
+    position: relative;
   }
 
   .privacy-policy-banner h1 {
@@ -157,6 +164,10 @@
 }
 
 @media (max-width: 480px) {
+  .privacy-policy-page {
+    padding-top: 0;
+  }
+
   .privacy-policy-banner h1 {
     font-size: 2rem;
   }
