@@ -251,24 +251,30 @@
   .team-modal-description {
     font-family: 'Inter', sans-serif !important;
     font-size: 0.9rem !important;
-    line-height: 1.45;
-    letter-spacing: 0.005em;
+    line-height: 1.6;
+    letter-spacing: 0.01em;
     text-align: justify;
     text-justify: inter-word;
     hyphens: none;
     word-break: normal;
     overflow-wrap: break-word;
+    padding: 0;
   }
   .team-modal-description p {
     font-size: 0.9rem !important;
-    line-height: 1.45;
-    letter-spacing: 0.005em;
-    margin: 0.3rem 0 0.6rem 0;
+    line-height: 1.6;
+    letter-spacing: 0.01em;
+    margin: 0 0 1rem 0;
     text-align: justify;
     text-justify: inter-word;
     hyphens: none;
     word-break: normal;
     overflow-wrap: break-word;
+    padding: 0;
+  }
+  
+  .team-modal-description p:last-child {
+    margin-bottom: 0;
   }
 
   .team-modal-close {
@@ -320,23 +326,27 @@
   .team-modal-description {
     font-family: 'Inter', sans-serif !important;
     font-size: 0.85rem !important;
-    line-height: 1.4;
-    letter-spacing: 0.005em;
+    line-height: 1.6;
+    letter-spacing: 0.01em;
     text-align: justify;
     text-justify: inter-word;
     hyphens: none;
     word-break: normal;
     overflow-wrap: break-word;
+    padding: 0;
   }
   .team-modal-description p {
     font-size: 0.85rem !important;
-    line-height: 1.4;
-    letter-spacing: 0.005em;
-  }
-
-  .team-modal-description p {
-    margin: 0.3rem 0 0.6rem 0;
+    line-height: 1.6;
+    letter-spacing: 0.01em;
+    margin: 0 0 1rem 0;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: none;
+    word-break: normal;
+    overflow-wrap: break-word;
     min-height: unset;
+    padding: 0;
   }
 
   .team-modal-description p:first-child {
@@ -354,14 +364,24 @@
   .team-modal-description {
     font-family: 'Inter', sans-serif !important;
     font-size: 0.8rem !important;
-    line-height: 1.35;
-    letter-spacing: 0.005em;
+    line-height: 1.6;
+    letter-spacing: 0.01em;
+    text-align: justify;
+    text-justify: inter-word;
+    padding: 0;
   }
   .team-modal-description p {
     font-size: 0.8rem !important;
-    line-height: 1.35;
-    letter-spacing: 0.005em;
-    margin: 0.25rem 0 0.5rem 0;
+    line-height: 1.6;
+    letter-spacing: 0.01em;
+    margin: 0 0 1rem 0;
+    text-align: justify;
+    text-justify: inter-word;
+    padding: 0;
+  }
+  
+  .team-modal-description p:last-child {
+    margin-bottom: 0;
   }
 }
 
