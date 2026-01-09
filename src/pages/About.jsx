@@ -112,26 +112,6 @@ A former Member of the Tamil Nadu Commission for Protection of Child Rights, Dr.
 Dr. Saranya is also a Consultant Educational Psychologist at Shadithya Child Therapy Centre and a Child Protection Policy Expert for various international accreditation bodies. She serves as visiting faculty, programme head, keynote speaker, jury panelist, and motivational speaker at national and international platforms. Her articles, interviews, and expert opinions are widely featured in leading newspapers, magazines, TV channels, and digital media.`
     },
     {
-      name: 'Chrishanthi Vijay, B.Com, MBA, MA',
-      role: 'Deputy Director',
-      image: chrishanthiImage,
-      description: `Chrishanthi Vijay is an academic and human resources professional with a multidisciplinary background in commerce, management and psychology. She holds qualifications in B.Com, MBA and M.A. in Psychology, enabling her to integrate business understanding with a strong insight into human behaviour and organisational leadership.
-
-She serves as Head of Faculty at VOXdemy, where she oversees academic planning, faculty coordination, training systems, and student development. She also works as HR Head at POLO Research Organisation, leading HR strategy, organisational culture initiatives, talent development and employee well-being.
-
-Chrishanthi Vijay is known for her empathetic leadership style, strong communication skills, and people-centric approach, with strengths in team coordination, academic development, HR management, conflict resolution and organisational planning.`
-    },
-    {
-      name: 'Banupriya, M.Sc',
-      role: 'Joint Director',
-      image: banupriyaImage,
-      description: `Banupriya is a Psychologist, Certified Emotional Intelligence Coach Practitioner, and Career Coach who has made a meaningful impact in the field through her extensive counselling, training, and wellbeing initiatives. She is deeply committed to strengthening emotional resilience, student wellbeing, and mental health systems across educational and professional settings. Her work focuses on Integrating psychology with practical, real-world interventions to support individuals across different life stages.
-
-She has led comprehensive school counselling, special education, teacher training, and mental health programmes across India, contributing to the development of structured wellbeing frameworks within educational institutions. She has conducted 800+ workshops and training programmes, empowering psychology students, educators, professionals, and individuals with practical skills, emotional intelligence, and personal growth tools. She also serves as the Chief Operating Officer (COO) of YoungVox, where she supports youth development initiatives, programme execution, and organisational growth while strengthening leadership and community engagement.
-
-Her expertise extends to delivering specialised emotional intelligence and wellbeing sessions for Karnataka Administrative Service (KAS) officers, as well as workplace wellbeing and leadership programmes for corporate organisations, with a focus on stress management, interpersonal effectiveness, and sustainable performance. Through her work, she continues to contribute to building emotionally healthy individuals, institutions, and communities.`
-    },
-    {
       name: 'Dr. S. Usharani, Ph.D',
       role: 'Dean - Academics',
       image: deanImage,
@@ -140,6 +120,26 @@ Her expertise extends to delivering specialised emotional intelligence and wellb
 As Dean of Academics, she oversees the development and implementation of the academy's academic programs, ensuring they meet the highest standards of excellence. Her expertise spans various domains of psychology, and she is committed to creating learning experiences that are both rigorous and practical.
 
 She has been instrumental in developing the academy's curriculum, establishing quality assurance processes, and mentoring faculty and students. Her leadership has contributed significantly to the academy's reputation for academic excellence and innovation in psychology education.`
+    },
+    {
+      name: 'Banupriya, M.Sc',
+      role: 'Joint Director',
+      image: banupriyaImage,
+      description: `Banupriya is a Psychologist, Certified Emotional Intelligence Coach Practitioner, and Career Coach who has made a meaningful impact in the field through her extensive counselling, training, and wellbeing initiatives. She is deeply committed to strengthening emotional resilience, student wellbeing, and mental health systems across educational and professional settings. Her work focuses on Inegrating psychology with practical, real-world interventions to support individuals across different life stages.
+
+She has led comprehensive school counselling, special education, teacher training, and mental health programmes across India, contributing to the development of structured wellbeing frameworks within educational institutions. She has conducted 800+ workshops and training programmes, empowering psychology students, educators, professionals, and individuals with practical skills, emotional intelligence, and personal growth tools. She also serves as the Chief Operating Officer (COO) of YoungVox, where she supports youth development initiatives, programme execution, and organisational growth while strengthening leadership and community engagement.
+
+Her expertise extends to delivering specialised emotional intelligence and wellbeing sessions for Karnataka Administrative Service (KAS) officers, as well as workplace wellbeing and leadership programmes for corporate organisations, with a focus on stress management, interpersonal effectiveness, and sustainable performance. Through her work, she continues to contribute to building emotionally healthy individuals, institutions, and communities.`
+    },
+    {
+      name: 'Chrishanthi Vijay, B.Com, MBA, MA',
+      role: 'Deputy Director',
+      image: chrishanthiImage,
+      description: `Chrishanthi Vijay is an academic and human resources professional with a multidisciplinary background in commerce, management and psychology. She holds qualifications in B.Com, MBA and M.A. in Psychology, enabling her to integrate business understanding with a strong insight into human behaviour and organisational leadership.
+
+She serves as Head of Faculty at VOXdemy, where she oversees academic planning, faculty coordination, training systems, and student development. She also works as HR Head at POLO Research Organisation, leading HR strategy, organisational culture initiatives, talent development and employee well-being.
+
+Chrishanthi Vijay is known for her empathetic leadership style, strong communication skills, and people-centric approach, with strengths in team coordination, academic development, HR management, conflict resolution and organisational planning.`
     },
     {
       name: 'Augustine Thilak, BFA, M.Sc',
@@ -239,14 +239,14 @@ Augustine Thilak is committed to fostering an environment that encourages both a
             {teamMembers.map((member, index) => (
               <div 
                 key={index} 
-                className={`team-member-card scroll-from-${index % 2 === 0 ? 'left' : 'right'} ${index === 2 || index === 5 ? 'team-member-zoom-fix' : ''}`}
+                className={`team-member-card scroll-from-${index % 2 === 0 ? 'left' : 'right'} ${index === 4 || index === 5 ? 'team-member-zoom-fix' : ''}`}
                 onClick={() => setSelectedMember(member)}
               >
                 <div className="team-member-image">
                   <img 
                     src={member.image} 
                     alt={member.name}
-                    className={index === 2 || index === 5 ? 'team-img-zoom' : ''}
+                    className={index === 4 || index === 5 ? 'team-img-zoom' : ''}
                     onError={(e) => {
                       e.target.onerror = null;
                       e.target.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="300" height="300"%3E%3Crect fill="%23e0e0e0" width="300" height="300"/%3E%3Ctext fill="%23999" font-family="sans-serif" font-size="16" x="50%25" y="50%25" text-anchor="middle" dy=".3em"%3EPhoto Coming Soon%3C/text%3E%3C/svg%3E';
