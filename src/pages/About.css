@@ -565,14 +565,25 @@
 .team-member-image img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
   display: block;
   transition: all 0.3s ease;
 }
 
 .team-member-card:hover .team-member-image img {
-  transform: scale(1.05);
+  transform: scale(1.1);
+}
+
+/* Specific styling for c4 and c6 images (4th and 6th team members) */
+.team-member-zoom-fix .team-member-image img {
+  object-fit: cover;
+  object-position: center top;
+}
+
+.team-member-zoom-fix:hover .team-member-image img.team-img-zoom {
+  transform: scale(1.15);
+  object-position: center center;
 }
 
 .team-member-info {
