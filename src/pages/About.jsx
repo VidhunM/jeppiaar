@@ -112,7 +112,7 @@ A former Member of the Tamil Nadu Commission for Protection of Child Rights, Dr.
 Dr. Saranya is also a Consultant Educational Psychologist at Shadithya Child Therapy Centre and a Child Protection Policy Expert for various international accreditation bodies. She serves as visiting faculty, programme head, keynote speaker, jury panelist, and motivational speaker at national and international platforms. Her articles, interviews, and expert opinions are widely featured in leading newspapers, magazines, TV channels, and digital media.`
     },
     {
-      name: 'Chrishanthi Vijay, B.Com, MBA, MA Psychology',
+      name: 'Chrishanthi Vijay, B.Com, MBA, MA',
       role: 'Deputy Director',
       image: chrishanthiImage,
       description: `Chrishanthi Vijay is an academic and human resources professional with a multidisciplinary background in commerce, management and psychology. She holds qualifications in B.Com, MBA and M.A. in Psychology, enabling her to integrate business understanding with a strong insight into human behaviour and organisational leadership.
@@ -120,6 +120,16 @@ Dr. Saranya is also a Consultant Educational Psychologist at Shadithya Child The
 She serves as Head of Faculty at VOXdemy, where she oversees academic planning, faculty coordination, training systems, and student development. She also works as HR Head at POLO Research Organisation, leading HR strategy, organisational culture initiatives, talent development and employee well-being.
 
 Chrishanthi Vijay is known for her empathetic leadership style, strong communication skills, and people-centric approach, with strengths in team coordination, academic development, HR management, conflict resolution and organisational planning.`
+    },
+    {
+      name: 'Banupriya, M.Sc',
+      role: 'Joint Director',
+      image: banupriyaImage,
+      description: `Banupriya is a Psychologist, Certified Emotional Intelligence Coach Practitioner, and Career Coach who has made a meaningful impact in the field through her extensive counselling, training, and wellbeing initiatives. She is deeply committed to strengthening emotional resilience, student wellbeing, and mental health systems across educational and professional settings. Her work focuses on Integrating psychological science with practical, real-world interventions to support individuals across different life stages.
+
+She has led comprehensive school counselling, special education, teacher training, and mental health programmes across India, contributing to the development of structured wellbeing frameworks within educational institutions. She has conducted 800+ workshops and training programmes, empowering psychology students, educators, professionals, and individuals with practical skills, emotional intelligence, and personal growth tools. She also serves as the Chief Operating Officer (COO) of YoungVox, where she supports youth development initiatives, programme execution, and organisational growth while strengthening leadership and community engagement.
+
+Her expertise extends to delivering specialised emotional intelligence and wellbeing sessions for Karnataka Administrative Service (KAS) officers, as well as workplace wellbeing and leadership programmes for corporate organisations, with a focus on stress management, interpersonal effectiveness, and sustainable performance. Through her work, she continues to contribute to building emotionally healthy individuals, institutions, and communities.`
     },
     {
       name: 'Dr. S. Usharani, Ph.D',
@@ -132,19 +142,10 @@ As Dean of Academics, she oversees the development and implementation of the aca
 She has been instrumental in developing the academy's curriculum, establishing quality assurance processes, and mentoring faculty and students. Her leadership has contributed significantly to the academy's reputation for academic excellence and innovation in psychology education.`
     },
     {
-      name: 'Banupriya, M.Sc Psychology',
-      role: 'Joint Director',
-      image: banupriyaImage,
-      description: `Banupriya is a Psychologist, Certified Emotional Intelligence Coach Practitioner, and Career Coach who has made a meaningful impact in the field through her extensive counselling, training, and wellbeing initiatives. She is deeply committed to strengthening emotional resilience, student wellbeing, and mental health systems across educational and professional settings. Her work focuses on integrating psychological science with practical, real-world interventions to support individuals across different life stages.
-
-She has led comprehensive school counselling, special education, teacher training, and mental health programmes across India, contributing to the development of structured wellbeing frameworks within educational institutions. She has conducted 800+ workshops and training programmes, empowering psychology students, educators, professionals, and individuals with practical skills, emotional intelligence, and personal growth tools. She also serves as the Chief Operating Officer (COO) of YoungVox, where she supports youth development initiatives, programme execution, and organisational growth while strengthening leadership and community engagement.
-
-Her expertise extends to delivering specialised emotional intelligence and wellbeing sessions for Karnataka Administrative Service (KAS) officers, as well as workplace wellbeing and leadership programmes for corporate organisations, with a focus on stress management, interpersonal effectiveness, and sustainable performance. Through her work, she continues to contribute to building emotionally healthy individuals, institutions, and communities.`
-    },
-    {
       name: 'Augustine Thilak, BFA, M.Sc',
-      role: 'Dean - Academics',
+      role: ' Department Head, Art Therapy',
       image: augustineImage,
+     
       description: `Augustine Thilak brings a unique blend of artistic and psychological expertise to his role as Dean of Academics. With qualifications in BFA (Bachelor of Fine Arts) and M.Sc, he combines creative expression with scientific understanding to enhance the academy's academic programs.
 
 His multidisciplinary background enables him to approach psychology education from innovative perspectives, integrating arts-based interventions and creative methodologies into the curriculum. As Dean of Academics, he plays a crucial role in developing comprehensive academic frameworks that prepare students for diverse career paths in psychology.
