@@ -79,6 +79,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
+  align-items: stretch;
 }
 
 .course-card {
@@ -91,6 +92,8 @@
   flex-direction: column;
   border: 1px solid #f0f0f0;
   cursor: pointer;
+  height: 100%;
+  align-items: stretch;
 }
 
 .course-card:hover {
@@ -123,16 +126,24 @@
   display: flex;
   flex-direction: column;
   flex: 1;
+  width: 100%;
+  min-height: 0;
 }
 
 .course-content h3 {
   font-size: 1.25rem;
   font-weight: 700;
   color: #0E0529;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem 0;
+  padding: 0;
   line-height: 1.4;
-  min-height: 3rem;
+  min-height: 3.5rem;
+  max-height: 3.5rem;
+  display: flex;
+  align-items: flex-start;
   transition: color 0.3s ease;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .course-card:hover .course-content h3 {
@@ -141,9 +152,11 @@
 
 .course-divider {
   height: 1px;
+  width: 100%;
   background: #e0e0e0;
   margin-bottom: 1.2rem;
   transition: background 0.3s ease;
+  flex-shrink: 0;
 }
 
 .course-card:hover .course-divider {
@@ -154,7 +167,9 @@
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
-  margin-bottom: 1.5rem;
+  margin: 0 0 1.5rem 0;
+  width: 100%;
+  flex-shrink: 0;
 }
 
 .course-detail-item {
@@ -164,6 +179,33 @@
   color: #666;
   font-size: 0.85rem;
   transition: color 0.3s ease;
+  min-height: 24px;
+  height: 24px;
+  width: 100%;
+}
+
+.course-detail-item:first-child {
+  margin-top: 0;
+}
+
+.course-detail-item img {
+  flex-shrink: 0;
+  display: block;
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  min-height: 18px;
+}
+
+.course-detail-item span {
+  flex: 1;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .course-card:hover .course-detail-item {
@@ -173,8 +215,17 @@
 .course-icon {
   width: 18px;
   height: 18px;
+  min-width: 18px;
+  min-height: 18px;
+  max-width: 18px;
+  max-height: 18px;
+  flex-shrink: 0;
+  object-fit: contain;
+  object-position: center;
   filter: none;
   transition: filter 0.3s ease;
+  display: block;
+  vertical-align: middle;
 }
 
 .course-card:hover .course-icon {
