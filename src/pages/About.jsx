@@ -171,7 +171,7 @@ Augustine Thilak is committed to fostering an environment that encourages both a
               Jeppiaar Academy of Psychology and Research was established to bridge the gap between psychology education and real-world application. With a vision to nurture ethical, skilled, and research-oriented professionals, the academy offers advanced courses aligned with global mental health standards.
               </p>
               <p>
-              The academy provides specialized programs in key domains of psychology, including <br /> Counselling & Child Psychology, Counselling & Organisational Psychology, Counselling & Forensic Psychology, and Art Therapy.
+              The academy provides advanced diploma programs in key domains of psychology, including <br /> Counselling and Child Psychology, Counselling and Organisational Psychology, Counselling and Forensic Psychology, and Art Therapy.
               </p>
             </div>
           </div>
