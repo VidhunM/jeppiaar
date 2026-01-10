@@ -12,7 +12,7 @@ const CoursesGrid = ({ onKnowMoreClick }) => {
   const programs = [
     {
       id: 1,
-      title: "Counselling and Child Psychology",
+      title: "Advanced Counselling and Child Psychology",
       duration: "12-Month Program",
       eligibility: "Open to All UG Graduates",
       image: our1,
@@ -20,7 +20,7 @@ const CoursesGrid = ({ onKnowMoreClick }) => {
     },
     {
       id: 2,
-      title: "Counselling and Organisational Psychology",
+      title: "Advanced Counselling and Organisational Psychology",
       duration: "12-Month Program",
       eligibility: "Open to All UG Graduates",
       image: our2,
@@ -28,7 +28,7 @@ const CoursesGrid = ({ onKnowMoreClick }) => {
     },
     {
       id: 3,
-      title: "Counselling and Forensic Psychology",
+      title: "Advanced Counselling and Forensic Psychology",
       duration: "12-Month Program",
       eligibility: "Open to All UG Graduates",
       image: our3,
@@ -36,7 +36,7 @@ const CoursesGrid = ({ onKnowMoreClick }) => {
     },
     {
       id: 4,
-      title: "Art Therapy",
+      title: "Advanced Art Therapy",
       duration: "12-Month Program",
       eligibility: "Open to All UG Graduates",
       image: our4,

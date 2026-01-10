@@ -138,7 +138,7 @@ const CounsellingChildPsychology = () => {
     <div className="counselling-child-psychology-page">
       {/* Hero Banner Section */}
       <div className="program-hero-banner">
-        <h1>COUNSELLING & CHILD PSYCHOLOGY</h1>
+        <h1>ADVANCED COUNSELLING AND CHILD PSYCHOLOGY</h1>
       </div>
 
       {/* Program Overview Section */}
@@ -218,7 +218,7 @@ const CounsellingChildPsychology = () => {
             </div>
             <div className="detail-item">
               <span className="detail-label">Eligibility</span>
-              <span className="detail-value">Eligibility - Bachelor's degree in any discipline</span>
+              <span className="detail-value">Eligibility - Bachelor's degree in any discipline & interest towards fine arts.</span>
             </div>
           </div>
         </div>

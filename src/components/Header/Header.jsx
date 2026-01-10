@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Logo1 from '../../assets/icons/Logo1.png';
 import ApplyModal from '../ApplyModal/ApplyModal';
@@ -9,6 +9,10 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [showUnderConstruction, setShowUnderConstruction] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isDropdownClicked, setIsDropdownClicked] = useState(false);
+  const [hoverDisabled, setHoverDisabled] = useState(false);
+  const clickInProgressRef = useRef(false);
+  const dropdownStateRef = useRef(false);
   const [showApplyModal, setShowApplyModal] = useState(false);
   const [applyForm, setApplyForm] = useState({
     name: '',
@@ -32,22 +36,43 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Keep ref in sync with state
+  useEffect(() => {
+    dropdownStateRef.current = isDropdownOpen;
+  }, [isDropdownOpen]);
+
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (isDropdownOpen && !event.target.closest('.nav-dropdown')) {
+      // Don't close if clicking inside the dropdown area
+      const navDropdown = event.target.closest('.nav-dropdown');
+      const dropdownToggle = event.target.closest('.dropdown-toggle');
+      const dropdownMenu = event.target.closest('.dropdown-menu');
+      const dropdownLabel = event.target.closest('.dropdown-label');
+      const dropdownIcon = event.target.closest('.dropdown-icon');
+      
+      const clickedInside = navDropdown || dropdownToggle || dropdownMenu || dropdownLabel || dropdownIcon;
+      
+      if (isDropdownOpen && !clickedInside) {
         setIsDropdownOpen(false);
+        setIsDropdownClicked(false);
+        setHoverDisabled(false);
+        dropdownStateRef.current = false;
       }
     };
 
     if (isDropdownOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
-      document.addEventListener('touchstart', handleClickOutside);
-    }
+      // Use click event with a small delay to let click handlers complete first
+      const timeoutId = setTimeout(() => {
+        document.addEventListener('click', handleClickOutside);
+        document.addEventListener('touchstart', handleClickOutside);
+      }, 0);
 
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-      document.removeEventListener('touchstart', handleClickOutside);
-    };
+      return () => {
+        clearTimeout(timeoutId);
+        document.removeEventListener('click', handleClickOutside);
+        document.removeEventListener('touchstart', handleClickOutside);
+      };
+    }
   }, [isDropdownOpen]);
 
   const handleNavClick = (e, path) => {
@@ -126,14 +151,18 @@ const Header = () => {
             <Link to="/about" onClick={(e) => handleNavClick(e, '/about')}>About Us</Link>
             <div 
               className="nav-dropdown"
-              onMouseEnter={() => {
-                if (window.innerWidth > 768) {
+              onMouseEnter={(e) => {
+                // Only allow hover if not disabled, not clicked, and no click in progress
+                if (window.innerWidth > 768 && !isDropdownClicked && !hoverDisabled && !clickInProgressRef.current) {
                   setIsDropdownOpen(true);
+                  dropdownStateRef.current = true;
                 }
               }}
-              onMouseLeave={() => {
-                if (window.innerWidth > 768) {
+              onMouseLeave={(e) => {
+                // Only close on hover leave if it was opened by hover (not click)
+                if (window.innerWidth > 768 && !isDropdownClicked && !hoverDisabled && !clickInProgressRef.current) {
                   setIsDropdownOpen(false);
+                  dropdownStateRef.current = false;
                 }
               }}
             >
@@ -142,10 +171,46 @@ const Header = () => {
                 role="button"
                 aria-expanded={isDropdownOpen}
                 aria-controls="diploma-dropdown"
+                onMouseDown={(e) => {
+                  // Mark that a click is in progress to prevent hover interference
+                  clickInProgressRef.current = true;
+                  e.stopPropagation();
+                }}
                 onClick={(e) => {
                   e.preventDefault();
                   e.stopPropagation();
-                  setIsDropdownOpen(!isDropdownOpen);
+                  
+                  // Immediately disable hover to prevent interference
+                  setHoverDisabled(true);
+                  
+                  // Use functional form of setState to ensure we have the latest state
+                  setIsDropdownOpen(prevState => {
+                    const willBeOpen = !prevState;
+                    
+                    // Handle side effects based on the new state
+                    if (willBeOpen) {
+                      // Will be opening the dropdown
+                      setIsDropdownClicked(true);
+                      // Re-enable hover after opening to allow normal hover behavior
+                      setTimeout(() => {
+                        setHoverDisabled(false);
+                        clickInProgressRef.current = false;
+                      }, 200);
+                    } else {
+                      // Will be closing the dropdown
+                      setIsDropdownClicked(false);
+                      setHoverDisabled(false); // Re-enable hover immediately when closing
+                      setTimeout(() => {
+                        clickInProgressRef.current = false;
+                      }, 100);
+                    }
+                    
+                    return willBeOpen;
+                  });
+                }}
+                onMouseUp={(e) => {
+                  // Also stop propagation on mouseup to prevent issues
+                  e.stopPropagation();
                 }}
               >
                 <span className="dropdown-label">Diploma Programs</span>
@@ -162,42 +227,72 @@ const Header = () => {
                 </span>
               </div>
               {isDropdownOpen && (
-                <div id="diploma-dropdown" className="dropdown-menu">
+                <div 
+                  id="diploma-dropdown" 
+                  className="dropdown-menu"
+                  onMouseEnter={() => {
+                    if (window.innerWidth > 768) {
+                      setIsDropdownOpen(true);
+                      dropdownStateRef.current = true;
+                      // Maintain clicked state when opened via click
+                      if (isDropdownClicked) {
+                        setIsDropdownClicked(true);
+                      }
+                    }
+                  }}
+                  onMouseLeave={() => {
+                    if (window.innerWidth > 768) {
+                      // If opened via click, close when leaving menu
+                      // If opened via hover, also close when leaving
+                      setIsDropdownOpen(false);
+                      setIsDropdownClicked(false);
+                      dropdownStateRef.current = false;
+                    }
+                  }}
+                >
                   <Link 
                     to="/counselling-child-psychology" 
                     onClick={() => {
                       setIsMobileMenuOpen(false);
                       setIsDropdownOpen(false);
+                      setIsDropdownClicked(false);
+                      dropdownStateRef.current = false;
                     }}
                   >
-                    Diploma in Counselling & Child Psychology
+                  Advanced Diploma in Counselling & Child Psychology
                   </Link>
                   <Link 
                     to="/counselling-organizational-psychology" 
                     onClick={() => {
                       setIsMobileMenuOpen(false);
                       setIsDropdownOpen(false);
+                      setIsDropdownClicked(false);
+                      dropdownStateRef.current = false;
                     }}
                   >
-                    Diploma in Counselling & Organizational Psychology
+                  Advanced Diploma in Counselling & Organizational Psychology
                   </Link>
                   <Link 
                     to="/counselling-forensic-psychology" 
                     onClick={() => {
                       setIsMobileMenuOpen(false);
                       setIsDropdownOpen(false);
+                      setIsDropdownClicked(false);
+                      dropdownStateRef.current = false;
                     }}
                   >
-                    Diploma in Counselling & Forensic Psychology
+                   Advanced Diploma in Counselling & Forensic Psychology
                   </Link>
                   <Link 
                     to="/counselling-art-therapy" 
                     onClick={() => {
                       setIsMobileMenuOpen(false);
                       setIsDropdownOpen(false);
+                      setIsDropdownClicked(false);
+                      dropdownStateRef.current = false;
                     }}
                   >
-                    Diploma in Art Therapy
+                    Advanced Diploma in Art Therapy
                   </Link>
                 </div>
               )}
