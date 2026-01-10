@@ -213,7 +213,7 @@ const Header = () => {
                   e.stopPropagation();
                 }}
               >
-                <span className="dropdown-label">Diploma Programs</span>
+                <span className="dropdown-label">Advanced Diploma Programs</span>
                 <span className={`dropdown-icon ${isDropdownOpen ? 'open' : ''}`} aria-hidden="true">
                   <svg viewBox="0 0 24 24" focusable="false">
                     <path

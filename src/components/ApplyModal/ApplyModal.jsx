@@ -186,17 +186,17 @@ const ApplyModal = ({ isOpen, onClose, formData, onFormChange }) => {
                 onChange={onFormChange}
                 required
               >
-                <option value="">Select Diploma Course</option>
-                <option value="Counselling and Child Psychology">
-                  Counselling and Child Psychology
+                <option value="">Select Advanced Diploma Course</option>
+                <option value="Advanced Diploma in Counselling and Child Psychology">
+                  Advanced Diploma in Counselling and Child Psychology
                 </option>
-                <option value="Counselling and Organisational Psychology">
-                  Counselling and Organisational Psychology
+                <option value="Advanced Diploma in Counselling and Organisational Psychology">
+                  Advanced Diploma in Counselling and Organisational Psychology
                 </option>
-                <option value="Counselling and Forensic Psychology">
-                  Counselling and Forensic Psychology
+                <option value="Advanced Diploma in Counselling and Forensic Psychology">
+                  Advanced Diploma in Counselling and Forensic Psychology
                 </option>
-                <option value="Art Therapy">Art Therapy</option>
+                <option value="Advanced Diploma in Art Therapy">Advanced Diploma in Art Therapy</option>
               </select>
             </div>
           </div>

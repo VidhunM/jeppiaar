@@ -142,7 +142,7 @@ const CounsellingArtTherapy = () => {
     <div className="counselling-art-therapy-page">
       {/* Hero Banner Section */}
       <div className="program-hero-banner">
-        <h1>ADVANCED ART THERAPY</h1>
+        <h1>ADVANCED DIPLOMA IN ART THERAPY</h1>
       </div>
 
       {/* Program Overview Section */}

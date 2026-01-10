@@ -138,7 +138,7 @@ const CounsellingOrganizationalPsychology = () => {
     <div className="counselling-organizational-psychology-page">
       {/* Hero Banner Section */}
       <div className="program-hero-banner">
-        <h1>ADVANCED COUNSELLING AND ORGANIZATIONAL PSYCHOLOGY</h1>
+        <h1>ADVANCED DIPLOMA IN COUNSELLING AND ORGANIZATIONAL PSYCHOLOGY</h1>
       </div>
 
       {/* Program Overview Section */}

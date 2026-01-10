@@ -140,7 +140,7 @@ const CounsellingForensicPsychology = () => {
     <div className="counselling-forensic-psychology-page">
       {/* Hero Banner Section */}
       <div className="program-hero-banner">
-        <h1>ADVANCED COUNSELLING AND FORENSIC PSYCHOLOGY</h1>
+        <h1>ADVANCED DIPLOMA IN COUNSELLING AND FORENSIC PSYCHOLOGY</h1>
       </div>
 
       {/* Program Overview Section */}
