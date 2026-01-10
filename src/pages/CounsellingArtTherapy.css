@@ -2049,9 +2049,12 @@
   }
 
   .counselling-art-therapy-page .highlights-title {
-    font-size: 1.45rem !important;
+    font-size: 1.25rem !important;
     font-weight: 700 !important;
     font-family: 'Roboto', sans-serif !important;
+    text-align: left !important;
+    display: block !important;
+    line-height: 1.4 !important;
   }
 
   /* Decrease top and bottom height spacing of the whole section */
@@ -2095,10 +2098,9 @@
   .counselling-art-therapy-page .highlights-section .highlights-title {
     position: relative !important;
     margin-bottom: 0.25rem !important;
-    display: flex !important;
-    flex-wrap: wrap !important;
-    align-items: center !important;
-    gap: 0.5rem !important;
+    display: block !important;
+    text-align: left !important;
+    line-height: 1.4 !important;
   }
 
   .counselling-art-therapy-page .title-university-icon {
@@ -2199,6 +2201,24 @@
 
   .counselling-art-therapy-page .highlights-title {
     font-size: 1.15rem !important;
+    font-weight: 700 !important;
+    font-family: 'Roboto', sans-serif !important;
+    text-align: left !important;
+    display: block !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Ensure left alignment for all mobile devices */
+  .counselling-art-therapy-page .highlights-section .highlights-text {
+    text-align: left !important;
+  }
+
+  .counselling-art-therapy-page .highlights-section .highlights-subtitle {
+    text-align: left !important;
+  }
+
+  .counselling-art-therapy-page .highlights-section .highlights-title {
+    text-align: left !important;
   }
 }
 
@@ -2223,6 +2243,11 @@
 @media (max-width: 375px) {
   .counselling-art-therapy-page .highlights-title {
     font-size: 1.05rem !important;
+    font-weight: 700 !important;
+    font-family: 'Roboto', sans-serif !important;
+    text-align: left !important;
+    display: block !important;
+    line-height: 1.4 !important;
   }
 
   .counselling-art-therapy-page .career-prospects .section-title-white {
@@ -2231,6 +2256,19 @@
 
   .counselling-art-therapy-page .career-prospects .career-description {
     font-size: 0.95rem !important;
+  }
+
+  /* Ensure left alignment for smallest mobile devices */
+  .counselling-art-therapy-page .highlights-section .highlights-text {
+    text-align: left !important;
+  }
+
+  .counselling-art-therapy-page .highlights-section .highlights-subtitle {
+    text-align: left !important;
+  }
+
+  .counselling-art-therapy-page .highlights-section .highlights-title {
+    text-align: left !important;
   }
 }
 
@@ -2264,5 +2302,12 @@
     width: 100% !important;
     display: block !important;
     margin-left: 0 !important;
+    line-height: 1.4 !important;
+  }
+
+  .counselling-art-therapy-page .highlights-section .highlights-title {
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    font-family: 'Roboto', sans-serif !important;
   }
 }
