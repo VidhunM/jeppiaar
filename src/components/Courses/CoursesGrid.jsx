@@ -13,32 +13,32 @@ const CoursesGrid = ({ onKnowMoreClick }) => {
     {
       id: 1,
       title: "Advanced Diploma in Counselling and Child Psychology",
-      duration: "12-Month Program",
-      eligibility: "Open to All UG Graduates",
+      duration: "1 Year Program",
+      eligibility: "Open to Any UG Graduates",
       image: our1,
       path: "/counselling-child-psychology"
     },
     {
       id: 2,
       title: "Advanced Diploma in Counselling and Organisational Psychology",
-      duration: "12-Month Program",
-      eligibility: "Open to All UG Graduates",
+      duration: "1 Year Program",
+      eligibility: "Open to Any UG Graduates",
       image: our2,
       path: "/counselling-organizational-psychology"
     },
     {
       id: 3,
       title: "Advanced Diploma in Counselling and Forensic Psychology",
-      duration: "12-Month Program",
-      eligibility: "Open to All UG Graduates",
+      duration: "1 Year Program",
+      eligibility: "Open to Any UG Graduates",
       image: our3,
       path: "/counselling-forensic-psychology"
     },
     {
       id: 4,
       title: "Advanced Diploma in Art Therapy",
-      duration: "12-Month Program",
-      eligibility: "Open to All UG Graduates",
+      duration: "1 Year Program",
+      eligibility: "Open to Any UG Graduates",
       image: our4,
       path: "/counselling-art-therapy"
     }
@@ -55,6 +55,12 @@ const CoursesGrid = ({ onKnowMoreClick }) => {
           </h2>
           <p className="courses-description-text scroll-from-center">
             Jeppiaar Academy of Psychology and Research prepares ethical, skilled, and globally competent psychology professionals through world-class, practice-oriented education. Our academy bridges the gap between classroom knowledge and real-world mental health practice.
+          </p>
+        </div>
+
+        <div className="courses-note-box scroll-from-center">
+          <p className="courses-note-text">
+            <strong>Note:</strong> A FREE Psychology Bridge Program will be conducted for students from non-psychology background to ensure strong foundational readiness.
           </p>
         </div>
 

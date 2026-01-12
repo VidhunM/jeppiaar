@@ -30,15 +30,49 @@
 }
 
 .courses-description {
-  text-align: center;
-  max-width: 800px;
+  text-align: justify;
+  max-width: 100%;
+  width: 100%;
   margin: 0 auto 4rem;
+  padding: 0 2rem;
 }
 
 .courses-description-text {
   font-size: 1.1rem;
   color: #666;
   line-height: 1.6;
+  text-align: justify;
+  text-align-last: center;
+  max-width: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.courses-note-box {
+  max-width: 1000px;
+  width: 100%;
+  margin: 2rem auto 4rem;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border: 2px solid #0E0529;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(14, 5, 41, 0.1);
+}
+
+.courses-note-text {
+  font-size: 1.05rem;
+  color: #0E0529;
+  line-height: 1.7;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+.courses-note-text strong {
+  font-weight: 700;
+  color: #0E0529;
 }
 
 .program-bubbles {
@@ -225,7 +259,6 @@
   filter: none;
   transition: filter 0.3s ease;
   display: block;
-  vertical-align: middle;
 }
 
 .course-card:hover .course-icon {
@@ -277,6 +310,17 @@
     letter-spacing: 0.02em; /* Slight letter spacing for better readability */
   }
 
+  .courses-note-box {
+    max-width: 100%;
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem auto 3rem;
+  }
+
+  .courses-note-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
   .courses-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
@@ -305,6 +349,17 @@
     gap: 0.4rem; /* Appropriate spacing for smaller screens */
     justify-content: center;
     letter-spacing: 0.015em; /* Slight letter spacing for readability */
+  }
+
+  .courses-note-box {
+    padding: 1rem 1.25rem;
+    margin: 1.25rem auto 2.5rem;
+    border-width: 1.5px;
+  }
+
+  .courses-note-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
   }
 
   .courses-grid {

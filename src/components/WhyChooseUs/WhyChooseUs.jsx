@@ -7,7 +7,6 @@ import group4Image from '../../assets/images/Group4.png';
 import group5Image from '../../assets/images/Group6.png';
 
 const WhyChooseUs = () => {
-  const [isMobile, setIsMobile] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const images = [
@@ -18,38 +17,34 @@ const WhyChooseUs = () => {
     { src: group5Image, alt: 'Why Choose Us 5' }
   ];
 
-  useEffect(() => {
-    const updateIsMobile = () => setIsMobile(window.innerWidth <= 768);
-    updateIsMobile();
-    window.addEventListener('resize', updateIsMobile);
-    return () => window.removeEventListener('resize', updateIsMobile);
-  }, []);
+  // Create infinite loop by duplicating images for seamless scrolling
+  const duplicatedImages = [...images, ...images];
 
   useEffect(() => {
-    if (!isMobile) return undefined;
     const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 3500);
+      setCurrentIndex((prev) => {
+        const nextIndex = prev + 1;
+        // Reset to 0 when we complete one full cycle
+        return nextIndex >= images.length ? 0 : nextIndex;
+      });
+    }, 5000); // Slow slide - 5 seconds between slides
     return () => clearInterval(timer);
-  }, [isMobile, images.length]);
-
-  useEffect(() => {
-    if (!isMobile) {
-      setCurrentIndex(0);
-    }
-  }, [isMobile]);
+  }, [images.length]);
 
   return (
     <section className="why-choose-us-section">
       <div className="container">
         <h2 className="section-title">WHY CHOOSE US?</h2>
-        {isMobile ? (
-          <div className="images-slider">
+        <div className="images-slider">
+          <div className="slider-wrapper">
             <div
               className="images-track"
-              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+              style={{ 
+                transform: `translateX(-${currentIndex * 33.333}%)`,
+                transition: currentIndex === 0 ? 'none' : 'transform 2s ease-in-out'
+              }}
             >
-              {images.map((image, index) => (
+              {duplicatedImages.map((image, index) => (
                 <div
                   key={index}
                   className="image-item"
@@ -68,27 +63,7 @@ const WhyChooseUs = () => {
               ))}
             </div>
           </div>
-        ) : (
-          <div className="images-grid">
-            {images.map((image, index) => (
-              <div 
-                key={index} 
-                className={`image-item image-item-${index + 1}`}
-              >
-                <img 
-                  src={image.src} 
-                  alt={image.alt} 
-                  className="group-image"
-                  loading="lazy"
-                  onError={(e) => {
-                    console.error('Image load error:', image.src);
-                    e.target.style.border = '2px solid red';
-                  }}
-                />
-              </div>
-            ))}
-          </div>
-        )}
+        </div>
       </div>
     </section>
   );

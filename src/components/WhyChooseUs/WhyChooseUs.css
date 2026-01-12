@@ -18,15 +18,16 @@
   text-transform: uppercase;
 }
 
-.images-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 3.5rem;
-  max-width: 1200px;
+.images-slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1400px;
   margin: 0 auto;
+  padding: 2rem 0;
 }
 
-.images-slider {
+.slider-wrapper {
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -34,38 +35,29 @@
 
 .images-track {
   display: flex;
-  transition: transform 0.45s ease-in-out;
   width: 100%;
-}
-
-.images-track .image-item {
-  min-width: 100%;
-  justify-content: center;
+  will-change: transform;
 }
 
 .image-item {
-  grid-column: span 2;
+  flex: 0 0 33.333%;
+  min-width: 33.333%;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.image-item:nth-child(4) {
-  grid-column: 2 / span 2;
-}
-
-.image-item:nth-child(5) {
-  grid-column: 4 / span 2;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 .group-image {
   width: 100%;
-  max-width: 280px;
+  max-width: 320px;
   height: auto;
   display: block;
   border-radius: 10px;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  object-fit: contain;
 }
 
 .group-image:hover {
@@ -74,9 +66,16 @@
 }
 
 @media (max-width: 1024px) {
-  .images-grid {
-    gap: 1.5rem;
-    max-width: 900px;
+  .images-slider {
+    padding: 1.5rem 0;
+  }
+
+  .image-item {
+    padding: 0 0.75rem;
+  }
+
+  .group-image {
+    max-width: 280px;
   }
 }
 
@@ -89,17 +88,18 @@
     font-size: 1.5rem;
   }
 
-  .images-grid {
-    display: none;
+  .images-slider {
+    padding: 1.5rem 0;
   }
 
-  .images-track .image-item {
-    min-width: 100%;
+  .image-item {
+    flex: 0 0 33.333%;
+    min-width: 33.333%;
     padding: 0 0.5rem;
   }
 
   .group-image {
-    max-width: 240px;
+    max-width: 200px;
   }
 }
 
@@ -108,11 +108,17 @@
     padding: 1.5rem 1rem;
   }
 
-  .images-grid {
-    gap: 1rem;
+  .images-slider {
+    padding: 1rem 0;
+  }
+
+  .image-item {
+    flex: 0 0 33.333%;
+    min-width: 33.333%;
+    padding: 0 0.4rem;
   }
 
   .group-image {
-    max-width: 220px;
+    max-width: 160px;
   }
 }

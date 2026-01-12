@@ -104,7 +104,7 @@ const Footer = () => {
             <h4>Quick Links</h4>
             <ul>
               <li><Link to="/about">About Us</Link></li>
-              <li><a href="#" onClick={handleCertificationPrograms}>Certification Programs</a></li>
+              <li><a href="#" onClick={handleCertificationPrograms}>Online Courses</a></li>
               <li><a href="#" onClick={handleResearchWing}>Research Wing - POLO</a></li>
               <li><a href="#" onClick={handleInternships}>Internships</a></li>
               <li><a href="#" onClick={handleYoungVox}>YoungVox</a></li>
@@ -119,7 +119,7 @@ const Footer = () => {
               <li><Link to="/counselling-organizational-psychology">Advanced Diploma in Counselling and Organizational Psychology</Link></li>
               <li><Link to="/counselling-forensic-psychology">Advanced Diploma in Counselling and Forensic Psychology</Link></li>
               <li><Link to="/counselling-art-therapy">Advanced Diploma in Art Therapy</Link></li>
-              <li><a href="#" onClick={handleAdmissions}>Admissions 2025</a></li>
+              <li><a href="#" onClick={handleAdmissions}>Admissions 2026</a></li>
             </ul>
           </div>
 
@@ -150,7 +150,7 @@ const Footer = () => {
                     <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.07 21 3 13.93 3 5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.59a1 1 0 0 1-.24 1.01l-2.21 2.19z" />
                   </svg>
                 </span>
-                <a href="tel:+919381811111">93818-11111</a>
+                <a href="tel:+919381811111"> +91 93818-11111 / +91 80987-87575</a>
               </div>
             </div>
             <div className="footer-map">
@@ -169,7 +169,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; 2025 Jeppiaar Academy of Psychology & Research. All Rights Reserved. | <Link to="/terms">Terms and Conditions</Link> | <Link to="/privacy">Privacy Policy</Link> | <Link to="/cancellation">Cancellation Policy</Link></p>
+          <p>&copy; 2026 Jeppiaar Academy of Psychology & Research. All Rights Reserved. | <Link to="/terms">Terms and Conditions</Link> | <Link to="/privacy">Privacy Policy</Link> | <Link to="/cancellation">Cancellation Policy</Link></p>
         </div>
       </div>
 

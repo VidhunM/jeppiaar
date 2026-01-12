@@ -12,23 +12,19 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection, onOpenA
   const slides = [
     {
       image: heroImage,
-      title: 'Jeppiaar Academy of Psychology & Research',
-      tagline: 'Mind - Science - Innovation'
+      title: 'Jeppiaar Academy of Psychology & Research'
     },
     {
       image: hero2Image,
-      title: 'Jeppiaar Academy of Psychology & Research',
-      tagline: 'Mind - Science - Innovation'
+      title: 'Jeppiaar Academy of Psychology & Research'
     },
     {
       image: hero3Image,
-      title: 'Jeppiaar Academy of Psychology & Research',
-      tagline: 'Mind - Science - Innovation'
+      title: 'Jeppiaar Academy of Psychology & Research'
     },
     {
       image: hero4Image,
-      title: 'Jeppiaar Academy of Psychology & Research',
-      tagline: 'Mind - Science - Innovation'
+      title: 'Jeppiaar Academy of Psychology & Research'
     }
   ];
 
@@ -89,18 +85,18 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection, onOpenA
         ))}
       </div>
       <div 
-        className={`hero-slide ${currentSlide === 0 ? 'hero-slide-first' : ''} ${currentSlide === 3 ? 'hero-slide-fourth' : ''} ${imagesLoaded ? 'images-loaded' : ''}`}
+        className={`hero-slide ${currentSlide === 0 ? 'hero-slide-first' : ''} ${currentSlide === 1 ? 'hero-slide-second' : ''} ${currentSlide === 3 ? 'hero-slide-fourth' : ''} ${imagesLoaded ? 'images-loaded' : ''}`}
         style={{ backgroundImage: `url(${slides[currentSlide].image})` }}
       >
         <div className="hero-gradient-overlay-bottom"></div>
         <button className="hero-nav prev" onClick={prevSlide} aria-label="Previous slide">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M15 19L8 12L15 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             <path d="M8 12H20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
           </svg>
         </button>
         <button className="hero-nav next" onClick={nextSlide} aria-label="Next slide">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M9 5L16 12L9 19" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             <path d="M16 12H4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
           </svg>

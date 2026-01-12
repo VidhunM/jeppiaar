@@ -148,7 +148,7 @@ const CounsellingOrganizationalPsychology = () => {
             <div className="overview-text">
               <h1 className="overview-title">ADVANCED DIPLOMA IN COUNSELLING & ORGANIZATIONAL PSYCHOLOGY</h1>
               <p>
-                The Diploma in Counselling Psychology (Specialization in Organizational Psychology) equips learners with core counselling and workplace assessment skills. The program builds a strong foundation in organizational behaviour, employee motivation, well-being and performance while fostering ethical and culturally sensitive counselling and coaching practices. Through supervised practicum, organizational case studies, and HR-focused field exposure, learners become reflective practitioners capable of enhancing employee mental health, engagement, and productivity across diverse workplaces.
+                The Advanced Diploma in Counselling and Organizational Psychology equips learners with core counselling and workplace assessment skills. The program builds a strong foundation in organizational behaviour, employee motivation, well-being and performance while fostering ethical and culturally sensitive counselling and coaching practices. Through supervised practicum, organizational case studies, and HR-focused field exposure, learners become reflective practitioners capable of enhancing employee mental health, engagement, and productivity across diverse workplaces.
               </p>
               <button className="enroll-now-btn" onClick={openApplyModal}>Enroll Now</button>
             </div>
@@ -260,7 +260,7 @@ const CounsellingOrganizationalPsychology = () => {
                 <li>Introduction to Counselling Psychology</li>
                 <li>Developmental Psychology Across the Lifespan</li>
                 <li>Human Resource Management – I</li>
-                <li>Practical Paper – Employee Assessment, Testing & Organisational Counselling Lab</li>
+                <li>Practical Paper Therapies, Employee Assessment, Testing & Organisational Counselling Lab</li>
               </ul>
             </div>
             <div className="semester-card">

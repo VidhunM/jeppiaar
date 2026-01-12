@@ -152,7 +152,7 @@ const CounsellingArtTherapy = () => {
             <div className="overview-text">
               <h1 className="overview-title">ADVANCED DIPLOMA IN ART THERAPY</h1>
               <p>
-                The Diploma in Counselling Psychology (Specialization in Art Therapy) provides a strong foundation in art therapy theories, ethical practice, and culturally sensitive approaches. Learners gain confidence in using diverse art media, understanding the therapeutic value of creativity, and tailoring interventions to client needs. Through supervised practicum and hands-on training, students develop skills in assessment, ethical interpretation, session documentation, and reading non-verbal cues. The program prepares practitioners to conduct effective individual and group art therapy sessions, integrate innovative media, and contribute professionally through reflective practice and evidence-informed work.
+                The Advanced Diploma in Art Therapy provides a strong foundation in art therapy theories, ethical practice, and culturally sensitive approaches. Learners gain confidence in using diverse art media, understanding the therapeutic value of creativity, and tailoring interventions to client needs. Through supervised practicum and hands-on training, students develop skills in assessment, ethical interpretation, session documentation, and reading non-verbal cues. The program prepares practitioners to conduct effective individual and group art therapy sessions, integrate innovative media, and contribute professionally through reflective practice and evidence-informed work.
               </p>
               <button className="enroll-now-btn" onClick={openApplyModal}>Enroll Now</button>
             </div>

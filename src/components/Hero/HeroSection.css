@@ -10,8 +10,8 @@
 
 .hero-slide {
   width: 100%;
-  height: 70vh;
-  min-height: 700px;
+  height: 49vh;
+  min-height: 490px;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -47,9 +47,16 @@
   }
 }
 
+.hero-slide-second {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
 .hero-slide-fourth {
   background-size: cover;
-  background-position: center top;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 /* Bottom to top gradient overlay for all slides - dark smoky to transparent */
@@ -73,7 +80,7 @@
   z-index: 2;
   max-width: 1600px;
   width: 100%;
-  padding: 3rem;
+  padding: 2.1rem;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -83,9 +90,9 @@
 .hero-text {
   flex: 1;
   color: white;
-  max-width: 700px;
+  max-width: 490px;
   z-index: 3;
-  margin-left: 7rem;
+  margin-left: 4.9rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -94,46 +101,46 @@
 
 @media (max-width: 1440px) {
   .hero-text {
-    margin-left: 3.5rem;
-    max-width: 650px;
+    margin-left: 2.45rem;
+    max-width: 455px;
   }
   .hero-sidebar {
-    right: 5rem;
+    right: 3.5rem;
   }
 }
 
 @media (max-width: 1280px) {
   .hero-text {
-    margin-left: 2.5rem;
-    max-width: 600px;
+    margin-left: 1.75rem;
+    max-width: 420px;
   }
   .hero-sidebar {
-    right: 2.5rem;
+    right: 1.75rem;
   }
 }
 
 @media (max-width: 1150px) {
   .hero-text {
-    margin-left: 2rem;
-    max-width: 550px;
+    margin-left: 1.4rem;
+    max-width: 385px;
   }
   .hero-sidebar {
-    right: 1.5rem;
+    right: 1.05rem;
   }
   .hero-text h1 {
-    font-size: 3.5rem;
+    font-size: 2.45rem;
   }
   .admission-box {
-    min-width: 160px;
-    padding: 3rem 2rem;
+    min-width: 112px;
+    padding: 2.1rem 1.4rem;
   }
 }
 
 .hero-text h1 {
-  font-size: 4rem;
+  font-size: 2.8rem;
   font-weight: 700;
   line-height: 1.2;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.05rem;
   color: white;
   display: flex;
   flex-direction: column;
@@ -146,7 +153,7 @@
 }
 
 .tagline {
-  font-size: 1.75rem;
+  font-size: 1.225rem;
   font-weight: 400;
   color: white;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
@@ -154,23 +161,23 @@
 }
 
 .tagline-subtitle {
-  font-size: 1.1rem;
+  font-size: 0.77rem;
   font-weight: 400;
   color: white;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   animation: fadeInUp 1s ease-out 0.4s both;
-  margin-top: 0.5rem;
+  margin-top: 0.35rem;
   opacity: 0.95;
 }
 
 .hero-sidebar {
   position: absolute;
   top: 50%;
-  right: 10rem;
+  right: 7rem;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.4rem;
   align-items: center;
   z-index: 3;
 }
@@ -179,16 +186,16 @@
   background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  padding: 3.5rem 2.5rem;
-  border-radius: 18px;
+  padding: 2.45rem 1.75rem;
+  border-radius: 12.6px;
   color: white;
   text-align: center;
-  min-width: 180px;
-  max-width: 200px;
+  min-width: 126px;
+  max-width: 140px;
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.525rem;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.1);
   clip-path: polygon(0 0, 100% 0, 100% 75%, 5% 100%, 0 100%);
@@ -202,28 +209,28 @@
 }
 
 .admission-year {
-  font-size: 4rem;
+  font-size: 2.8rem;
   font-weight: 700;
   line-height: 1;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.525rem;
   color: white;
   text-align: left;
   letter-spacing: -0.02em;
   padding-left: 0;
-  margin-left: -1rem;
+  margin-left: -0.7rem;
 }
 
 .admission-text {
   display: flex;
   flex-direction: column;
-  gap: 0.15rem;
-  font-size: 1.15rem;
+  gap: 0.105rem;
+  font-size: 0.805rem;
   font-weight: 400;
   color: white;
   text-align: left;
   line-height: 1.2;
   padding-left: 0;
-  margin-left: -1rem;
+  margin-left: -0.7rem;
 }
 
 .admission-text span {
@@ -234,15 +241,15 @@
   background: white;
   color: #000;
   border: none;
-  padding: 1.25rem 3rem;
-  border-radius: 30px;
+  padding: 0.875rem 2.1rem;
+  border-radius: 21px;
   font-weight: 600;
-  font-size: 1.15rem;
+  font-size: 0.805rem;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   width: auto;
-  min-width: 200px;
+  min-width: 140px;
   white-space: nowrap;
   position: relative;
   overflow: hidden;
@@ -273,10 +280,10 @@
 
 .hero-nav {
   border: none;
-  width: 50px;
-  height: 50px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
-  font-size: 1.5rem;
+  font-size: 1.05rem;
   cursor: pointer;
   z-index: 5;
   transition: all 0.3s ease;
@@ -300,7 +307,7 @@
 }
 
 .hero-nav.prev {
-  left: 2rem;
+  left: 1.4rem;
   background: white;
   color: black;
 }
@@ -310,7 +317,7 @@
 }
 
 .hero-nav.next {
-  right: 2rem;
+  right: 1.4rem;
   background: #0E0529;
   color: white;
 }
@@ -323,13 +330,13 @@
 /* Hero Slide 2 - Student Rated Badge */
 .hero-rated-badge {
   position: absolute;
-  top: 6.5rem;
-  left: 2rem;
+  top: 4.55rem;
+  left: 1.4rem;
   background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  padding: 1.25rem 1.75rem;
-  border-radius: 12px;
+  padding: 0.875rem 1.225rem;
+  border-radius: 8.4px;
   z-index: 3;
   display: flex;
   flex-direction: column;
@@ -340,8 +347,8 @@
 
 .hero-rated-badge-bottom {
   top: auto;
-  bottom: 8rem;
-  left: 6rem;
+  bottom: 5.6rem;
+  left: 4.2rem;
   background: transparent;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
@@ -354,13 +361,13 @@
 }
 
 .hero-rated-badge-bottom .rated-text {
-  font-size: 2rem;
+  font-size: 1.4rem;
   margin: 0;
 }
 
 .rated-text {
   color: #ffffff;
-  font-size: 1.4rem;
+  font-size: 0.98rem;
   font-weight: 900;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -370,16 +377,16 @@
 
 .hero-rated-stars {
   position: absolute;
-  top: 13rem;
-  left: 2rem;
+  top: 9.1rem;
+  left: 1.4rem;
   display: flex;
-  gap: 0.4rem;
+  gap: 0.28rem;
   align-items: center;
   background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  padding: 0.85rem 1.5rem;
-  border-radius: 12px;
+  padding: 0.595rem 1.05rem;
+  border-radius: 8.4px;
   z-index: 3;
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -387,36 +394,36 @@
 
 .hero-rated-stars-bottom {
   top: auto;
-  bottom: 5.5rem;
-  left: 6rem;
+  bottom: 3.85rem;
+  left: 4.2rem;
   background: transparent;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
   border: none;
   box-shadow: none;
   padding: 0;
-  gap: 0.3rem;
+  gap: 0.21rem;
 }
 
 .hero-rated-stars-bottom .star {
-  font-size: 4.5rem;
+  font-size: 3.15rem;
 }
 
 .hero-rated-stars .star {
   color: #FFD700;
-  font-size: 1.75rem;
+  font-size: 1.225rem;
   line-height: 1;
 }
 
 /* Hero Slide 3 & 4 - Feature Badge */
 .hero-feature-badge {
   position: absolute;
-  top: 8rem;
-  left: 2rem;
+  top: 5.6rem;
+  left: 1.4rem;
   z-index: 3;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.525rem;
   align-items: flex-start;
 }
 
@@ -428,14 +435,14 @@
 }
 
 .hero-feature-badge-fourth {
-  top: 6rem;
+  top: 4.2rem;
 }
 
 .hero-feature-badge-fourth.hero-feature-badge-bottom {
   top: auto;
-  bottom: 6rem;
-  left: 6rem;
-  gap: 0.3rem;
+  bottom: 4.2rem;
+  left: 4.2rem;
+  gap: 0.21rem;
 }
 
 .feature-text {
@@ -443,12 +450,12 @@
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   color: #ffffff;
-  font-size: 1.3rem;
+  font-size: 0.91rem;
   font-weight: 900;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  padding: 1rem 1.5rem;
-  border-radius: 8px;
+  padding: 0.7rem 1.05rem;
+  border-radius: 5.6px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -461,17 +468,17 @@
   border: none;
   box-shadow: none;
   padding: 0;
-  font-size: 2rem;
+  font-size: 1.4rem;
   margin: 0;
 }
 
 .hero-feature-badge-bottom .feature-text-fourth {
-  font-size: 1.8rem;
+  font-size: 1.26rem;
 }
 
 .feature-text-fourth {
-  font-size: 1.1rem;
-  padding: 0.9rem 1.3rem;
+  font-size: 0.77rem;
+  padding: 0.63rem 0.91rem;
 }
 
 /* Hero Slide 2 - Vertical Apply Now */
@@ -482,9 +489,9 @@
   transform: translateY(-50%);
   background: rgba(0, 0, 0, 0.8);
   color: white;
-  padding: 2rem 1rem;
+  padding: 1.4rem 0.7rem;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.7rem;
   cursor: pointer;
   z-index: 3;
   writing-mode: vertical-rl;
@@ -494,7 +501,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 200px;
+  min-height: 140px;
 }
 
 .hero-apply-now-vertical:hover {
@@ -518,10 +525,10 @@
   min-height: auto;
   height: auto;
   /* Keep a controlled overlap with the hero slide */
-  margin-top: -160px;
+  margin-top: -112px;
   position: relative;
   z-index: 10;
-  padding-top: 160px;
+  padding-top: 112px;
   border-radius: 0 0 50% 50% / 0 0 200% 200%;
   overflow: visible;
   /* Don't pull the next section up (was causing overlap on some devices) */
@@ -683,8 +690,8 @@
 
 @media (max-width: 768px) {
   .hero-slide {
-    height: 50vh;
-    min-height: 500px;
+    height: 35vh;
+    min-height: 350px;
   }
 
   /* Hide desktop elements on mobile */
@@ -1108,8 +1115,8 @@
 
 @media (max-width: 768px) {
   .hero-slide {
-    height: 45vh;
-    min-height: 400px;
+    height: 31.5vh;
+    min-height: 280px;
     -webkit-background-size: cover !important;
     background-size: cover !important;
     background-attachment: scroll !important;
@@ -1117,9 +1124,15 @@
     transform: translateZ(0);
   }
 
+  .hero-slide-second {
+    -webkit-background-size: cover !important;
+    background-size: cover !important;
+    background-position: center center !important;
+  }
+
   .hero-slide-fourth {
-    -webkit-background-size: 100% 100% !important;
-    background-size: 100% 100% !important;
+    -webkit-background-size: cover !important;
+    background-size: cover !important;
     background-position: center center !important;
   }
 
@@ -1310,8 +1323,8 @@
 
 @media (max-width: 480px) {
   .hero-slide {
-    height: 40vh;
-    min-height: 350px;
+    height: 28vh;
+    min-height: 245px;
     -webkit-background-size: cover !important;
     background-size: cover !important;
     background-attachment: scroll !important;
@@ -1319,9 +1332,15 @@
     transform: translateZ(0);
   }
 
+  .hero-slide-second {
+    -webkit-background-size: cover !important;
+    background-size: cover !important;
+    background-position: center center !important;
+  }
+
   .hero-slide-fourth {
-    -webkit-background-size: 100% 100% !important;
-    background-size: 100% 100% !important;
+    -webkit-background-size: cover !important;
+    background-size: cover !important;
     background-position: center center !important;
   }
 

@@ -305,7 +305,7 @@ const Header = () => {
                 setIsMobileMenuOpen(false);
               }}
             >
-              Partnership
+              Gallery
             </Link>
             <Link 
               to="/contact" 
@@ -328,10 +328,20 @@ const Header = () => {
           className="mobile-menu-toggle"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
-          <span></span>
-          <span></span>
-          <span></span>
         </button>
+        <button 
+            className="cta-button" 
+            onClick={openApplyModal}
+          >
+            Login
+          </button>
+
+        <button 
+          className="mobile-menu-toggle"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+        </button>
+        
       </div>
     </header>
 

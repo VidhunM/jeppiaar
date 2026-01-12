@@ -187,7 +187,7 @@ const LeadGeneration = ({ onShowConstructionPopup }) => {
                 {message.text}
               </p>
             )}
-            <h2>Start your Psychology<br />Career Today!</h2>
+            <h2>Start your Psychology Career Today!</h2>
             <p className="lead-subtitle">Upgrade your skills with practice-oriented diploma programs</p>
             <form 
               className="lead-form"
@@ -226,6 +226,14 @@ const LeadGeneration = ({ onShowConstructionPopup }) => {
                   <option value="Advanced Diploma in Counselling and Forensic Psychology">Advanced Diploma in Counselling and Forensic Psychology</option>
                   <option value="Advanced Diploma in Art Therapy">Advanced Diploma in Art Therapy</option>
                 </select>
+                
+              </div>
+              <div className="form-row">
+              <select name="course" value={form.course} onChange={handleChange} className="course-select" required>
+                  <option value="">Select Course</option>
+                  <option value="Certificate Course in Psychology">Certification Courses</option>
+                  <option value="Advanced Diploma in Counselling and Organisational Psychology">Internships</option>
+                </select>
               </div>
               <label className="checkbox-label">
                 <input name="consent" type="checkbox" checked={form.consent} onChange={handleChange} required />
@@ -241,13 +249,6 @@ const LeadGeneration = ({ onShowConstructionPopup }) => {
                   onClick={onShowConstructionPopup}
                 >
                   Download Prospectus
-                </button>
-                <button 
-                  type="button" 
-                  className="btn-secondary"
-                  onClick={() => navigate('/contact')}
-                >
-                  Contact Us
                 </button>
               </div>
             </form>

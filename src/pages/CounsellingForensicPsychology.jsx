@@ -150,7 +150,7 @@ const CounsellingForensicPsychology = () => {
             <div className="overview-text">
               <h1 className="overview-title">ADVANCED DIPLOMA IN COUNSELLING & FORENSIC PSYCHOLOGY</h1>
               <p>
-                The Diploma in Counselling Psychology (Specialization in Forensic Psychology) builds essential knowledge in criminal behavior, legal processes, and forensic assessment. Learners develop competencies in offender evaluation, risk assessment, criminal profiling, and rehabilitation, rooted in ethical and evidence-based practice. Through supervised practicum, case studies, and field exposure in forensic and correctional settings, the program prepares practitioners to support criminal investigations, promote justice, and address mental health needs within legal systems.
+                The Advanced Diploma in Counselling and Forensic Psychology builds essential knowledge in criminal behavior, legal processes, and forensic assessment. Learners develop competencies in offender evaluation, risk assessment, criminal profiling, and rehabilitation, rooted in ethical and evidence-based practice. Through supervised practicum, case studies, and field exposure in forensic and correctional settings, the program prepares practitioners to support criminal investigations, promote justice, and address mental health needs within legal systems.
               </p>
               <button className="enroll-now-btn" onClick={openApplyModal}>Enroll Now</button>
             </div>

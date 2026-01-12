@@ -11,6 +11,7 @@ import Ellipse from '../assets/images/Ellipse.png';
 import Layer from '../assets/images/Layer.png';
 import Youngvox from '../assets/images/Youngvox.png';
 import Logo1 from '../assets/icons/Logo1.png';
+import Logo2 from '../assets/icons/Logo01.png';
 import image3 from '../assets/images/image3.png';
 import image2 from '../assets/images/image2.png';
 import './Home.css';
@@ -127,7 +128,7 @@ const Home = () => {
     },
     {
       question: '4. Can you become a counselor by attending this course?',
-      answer: 'Yes, you can become a counselor in your chosen specialization (Child Psychology, Psychology, Forensic Psychology, or Art Therapy). After completing this course, you can work as a counselor under the supervision of a qualified psychologist.'
+      answer: 'Yes, you can become a counselor in your chosen specialization (Child Psychology, Psychology, Forensic Psychology, or Art Therapy).After completing this advanced diploma course, you can work as a counselor.'
     }
   ];
   return (
@@ -144,25 +145,21 @@ const Home = () => {
           <img src={Group7} alt="Decoration" />
         </div>
         <div className="container">
-          <h2 className="collaboration-heading scroll-from-center">
-            <span className="collaboration-heading-line collaboration-heading-line-1">
-              JEPPIAAR ACADEMY OF
-            </span>
-            <span className="collaboration-heading-line collaboration-heading-line-2">
-              PSYCHOLOGY AND RESEARCH
-            </span>
-          </h2>
-          <p className="collaboration-text scroll-from-center">IN COLLABORATION WITH</p>
-          <h3 className="university-name scroll-from-center">BHARATHIDASAN UNIVERSITY</h3>
+          <div className="collaboration-logo scroll-from-center">
+            <img src={Logo2} alt="Jeppiaar Academy of Psychology and Research" />
+          </div>
+          <h3 className="collaboration-subheading scroll-from-center">
+            IN COLLABORATION WITH BHARATHIDASAN UNIVERSITY
+          </h3>
           <p className="accreditation-text scroll-from-center">
             (Accredited with A+ Grade by NAAC in the Third Cycle & 36th Rank among the Indian Universities in NIRF-2025)
           </p>
-          <div className="accreditation-badges">
+          {/* <div className="accreditation-badges">
             <div className="badge animate-on-scroll">
               <span className="badge-bold">Skill India</span>
               <span className="badge-regular">Approved</span>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="collaboration-decorative-right">
           <img src={Group8} alt="Decoration" />
@@ -183,7 +180,7 @@ const Home = () => {
               <div className="service-icon">
                 <img src={Ellipse} alt="Online Certification Courses" />
               </div>
-              <p>Online Certification Courses</p>
+              <p>Online Courses</p>
             </div>
             <div 
               className="service-item scroll-from-right"
@@ -201,7 +198,7 @@ const Home = () => {
               <div className="service-icon">
                 <img src={Logo1} alt="certification courses" />
               </div>
-              <p>Certification Courses</p>
+              <p>Internships</p>
             </div>
             <div 
               className="service-item scroll-from-right"
