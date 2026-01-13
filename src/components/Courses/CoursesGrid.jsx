@@ -59,7 +59,7 @@ const CoursesGrid = ({ onKnowMoreClick }) => {
         </div>
 
         <div className="courses-note-box scroll-from-center">
-          <p className="courses-note-text">
+          <p className="courses-note-text ">
             <strong>Note:</strong> A FREE Psychology Bridge Program will be conducted for students from non-psychology background to ensure strong foundational readiness.
           </p>
         </div>

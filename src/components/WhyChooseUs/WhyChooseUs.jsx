@@ -35,7 +35,7 @@ const WhyChooseUs = () => {
     <section className="why-choose-us-section">
       <div className="container">
         <h2 className="section-title">WHY CHOOSE US?</h2>
-        <div className="images-slider">
+          <div className="images-slider">
           <div className="slider-wrapper">
             <div
               className="images-track"
@@ -63,7 +63,7 @@ const WhyChooseUs = () => {
               ))}
             </div>
           </div>
-        </div>
+          </div>
       </div>
     </section>
   );

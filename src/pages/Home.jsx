@@ -152,7 +152,7 @@ const Home = () => {
             IN COLLABORATION WITH BHARATHIDASAN UNIVERSITY
           </h3>
           <p className="accreditation-text scroll-from-center">
-            (Accredited with A+ Grade by NAAC in the Third Cycle & 36th Rank among the Indian Universities in NIRF-2025)
+          (Bharathidasan University is accredited with an A+ Grade by NAAC (Third Cycle) and ranked 36th among Indian Universities in NIRF 2025)
           </p>
           {/* <div className="accreditation-badges">
             <div className="badge animate-on-scroll">

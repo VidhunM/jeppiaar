@@ -111,8 +111,8 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection, onOpenA
                   <span className="title-line">{slides[currentSlide].title}</span>
                   <span className="title-line">{slides[currentSlide].titleLine2}</span>
                 </h1>
-                <p className="tagline">{slides[currentSlide].tagline}</p>
-                <p className="tagline-subtitle">(A unit of Sancta Maria Educational Trust)</p>
+                <p className="tagline font-size-18">{slides[currentSlide].tagline}</p>
+                <p className="tagline-subtitle font-size-18">(A unit of Sancta Maria Educational Trust)</p>
               </div>
             </div>
 

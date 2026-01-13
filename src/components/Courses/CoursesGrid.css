@@ -33,7 +33,7 @@
   text-align: justify;
   max-width: 100%;
   width: 100%;
-  margin: 0 auto 4rem;
+  margin: 0 auto 1rem;
   padding: 0 2rem;
 }
 
@@ -52,9 +52,9 @@
 .courses-note-box {
   max-width: 1000px;
   width: 100%;
-  margin: 2rem auto 4rem;
+  margin: 0 auto 4rem;
   padding: 1.5rem 2rem;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  background: #FDFFB6;
   border: 2px solid #0E0529;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(14, 5, 41, 0.1);
@@ -313,7 +313,7 @@
   .courses-note-box {
     max-width: 100%;
     padding: 1.25rem 1.5rem;
-    margin: 1.5rem auto 3rem;
+    margin: 0 auto 3rem;
   }
 
   .courses-note-text {
@@ -353,7 +353,7 @@
 
   .courses-note-box {
     padding: 1rem 1.25rem;
-    margin: 1.25rem auto 2.5rem;
+    margin: 0 auto 2.5rem;
     border-width: 1.5px;
   }
 
