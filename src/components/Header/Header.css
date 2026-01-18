@@ -286,6 +286,11 @@
   box-shadow: 0 4px 12px rgba(14, 5, 41, 0.3);
 }
 
+/* Hide mobile menu CTA buttons on desktop */
+.mobile-menu-cta {
+  display: none;
+}
+
 .mobile-menu-toggle {
   display: none;
   flex-direction: column;
@@ -373,8 +378,8 @@
     transition: all 0.2s ease;
   }
 
-  .nav a:last-child {
-    border-bottom: none;
+  .nav a:last-of-type {
+    border-bottom: 1px solid #f0f0f0;
   }
 
   .nav a:active {
@@ -451,26 +456,45 @@
     color: #1a237e;
   }
 
-  /* Override global mobile/touch rules that force 44px min-height on .cta-button */
-  .header .cta-button {
-    /* Show CTA on mobile and keep it to the right, before the hamburger */
-    display: inline-flex;
+  /* Hide desktop CTA buttons on mobile */
+  .header .desktop-cta {
+    display: none !important;
+  }
+
+  /* Show mobile menu CTA buttons */
+  .header .nav .mobile-menu-cta {
+    display: flex !important;
     align-items: center;
     justify-content: center;
-    margin-left: auto;
-    order: 2;
-    padding: 0.28rem 0.48rem;
-    font-size: 0.68rem;
-    line-height: 1;
-    min-height: 28px;
-    min-width: unset;
-    box-shadow: 0 2px 6px rgba(14, 5, 41, 0.18);
-    -webkit-tap-highlight-color: transparent;
-    touch-action: manipulation;
-    z-index: 1010;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    background: #0E0529;
+    color: white;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
-    position: relative;
-    border-radius: 50px;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+    transition: all 0.2s ease;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+    touch-action: manipulation;
+    min-height: 44px;
+  }
+
+  .header .nav .mobile-menu-cta:first-of-type {
+    margin-top: 0.75rem;
+  }
+
+  .header .nav .mobile-menu-cta:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0.5rem;
+  }
+
+  .header .nav .mobile-menu-cta:active {
+    background: #1a0a3d;
   }
 
   .logo-container {

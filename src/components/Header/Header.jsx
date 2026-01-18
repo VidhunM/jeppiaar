@@ -480,22 +480,35 @@ const Header = () => {
             >
               Contact Us
             </Link>
+            <button 
+              className="cta-button mobile-menu-cta" 
+              onClick={() => {
+                openApplyModal();
+                setIsMobileMenuOpen(false);
+              }}
+            >
+              Join Us Now
+            </button>
+            <button 
+              className="cta-button mobile-menu-cta" 
+              onClick={() => {
+                setShowUnderConstruction(true);
+                setIsMobileMenuOpen(false);
+              }}
+            >
+              Login
+            </button>
           </nav>
 
           <button 
-            className="cta-button" 
+            className="cta-button desktop-cta" 
             onClick={openApplyModal}
           >
             Join Us Now
           </button>
 
-        <button 
-          className="mobile-menu-toggle"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-        </button>
-        <button 
-            className="cta-button" 
+          <button 
+            className="cta-button desktop-cta" 
             onClick={() => setShowUnderConstruction(true)}
           >
             Login
