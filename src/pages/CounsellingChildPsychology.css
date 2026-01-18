@@ -579,6 +579,21 @@ img {
   margin: 0;
 }
 
+.bridge-program-note {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+  line-height: 1.5;
+  flex: 1;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+}
+
 .university-collaboration-container {
   display: flex;
   align-items: flex-start;
@@ -4466,7 +4481,7 @@ img {
 
   .counselling-child-psychology-page .button-text-container {
     flex-direction: column !important;
-    gap: 0 !important;
+    gap: 0.75rem !important;
     align-items: stretch !important;
     margin-top: 0.5rem !important;
     margin-bottom: 1rem !important;
@@ -4476,6 +4491,11 @@ img {
     width: 100% !important;
     max-width: none !important;
     margin: 0 !important;
+  }
+
+  .counselling-child-psychology-page .bridge-program-note {
+    font-size: 0.85rem !important;
+    max-width: 100% !important;
   }
 
   /* Collaboration text near br.png icon */

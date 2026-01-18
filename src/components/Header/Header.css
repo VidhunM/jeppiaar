@@ -18,7 +18,7 @@
 .header-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -108,7 +108,7 @@
   text-decoration: none;
   color: #333;
   font-weight: 500;
-  font-size: 1.15rem;
+  font-size: 1rem;
   transition: color 0.3s ease;
   position: relative;
 }
@@ -135,19 +135,22 @@
 /* Dropdown Menu */
 .nav-dropdown {
   position: relative;
+  cursor: pointer;
 }
 
 .dropdown-toggle {
   display: flex;
   align-items: center;
   gap: 0.35rem;
+  cursor: pointer;
+  user-select: none;
 }
 
 .dropdown-label {
   text-decoration: none;
   color: #333;
   font-weight: 500;
-  font-size: 1.15rem;
+  font-size: 1rem;
   transition: color 0.3s ease;
   position: relative;
   cursor: pointer;
@@ -208,13 +211,15 @@
   top: 100%;
   left: 0;
   background: white;
-  min-width: 400px;
+  min-width: 280px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
-  padding: 0.75rem 0;
+  padding: 0.5rem 0;
   margin-top: 0.5rem;
-  z-index: 1000;
+  z-index: 1001;
   animation: fadeInDown 0.3s ease-out;
+  opacity: 1;
+  visibility: visible;
 }
 
 /* Create an invisible bridge to prevent gap when moving cursor from toggle to menu */
@@ -230,14 +235,14 @@
 
 .dropdown-menu a {
   display: block;
-  padding: 1rem 2rem;
+  padding: 0.75rem 1.5rem;
   color: #333;
   text-decoration: none;
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   transition: all 0.3s ease;
   position: relative;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 .dropdown-menu a::after {
@@ -247,7 +252,7 @@
 .dropdown-menu a:hover {
   background: #f5f5f5;
   color: #1a237e;
-  padding-left: 2.5rem;
+  padding-left: 1.75rem;
 }
 
 @keyframes fadeInDown {
@@ -300,8 +305,8 @@
 
 @media (max-width: 768px) {
   .header-container {
-    padding-top: 0.6rem;
-    padding-bottom: 0.6rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
     padding-left: 1.15rem;
     padding-right: 0.7rem; /* bring CTA + hamburger slightly closer to right edge */
     gap: 0.75rem;
@@ -359,7 +364,7 @@
   }
 
   .nav a {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     padding: 0.75rem 0;
     width: 100%;
     text-align: left;
@@ -401,7 +406,7 @@
     text-align: left;
     color: #333;
     font-weight: 500 !important;
-    font-size: 0.95rem !important;
+    font-size: 0.85rem !important;
     pointer-events: auto; /* Enable pointer events for reliable tapping on iOS */
   }
 
@@ -423,16 +428,16 @@
   }
 
   .dropdown-menu a {
-    padding: 0.875rem 0 0.875rem 1.5rem; /* Increased padding for better touch target */
+    padding: 0.75rem 0 0.75rem 1.25rem; /* Reduced padding for smaller cards */
     text-align: left;
     display: block;
     border-bottom: 1px solid #f0f0f0;
-    font-size: 0.88rem;
+    font-size: 0.75rem;
     line-height: 1.25;
     transition: all 0.2s ease;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
     touch-action: manipulation;
-    min-height: 44px; /* Standard touch target size */
+    min-height: 40px; /* Reduced touch target size */
   }
 
   .dropdown-menu a:last-child {
@@ -479,8 +484,8 @@
 
 @media (max-width: 480px) {
   .header-container {
-    padding-top: 0.4rem;
-    padding-bottom: 0.4rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
     padding-left: 0.875rem;
     padding-right: 0.55rem; /* slightly closer to right edge */
     gap: 0.6rem;
@@ -528,7 +533,7 @@
   }
 
   .nav a {
-    font-size: 0.91rem;
+    font-size: 0.82rem;
     padding: 0.65rem 0;
     text-align: left;
   }
@@ -538,12 +543,12 @@
   }
 
   .dropdown-toggle > span {
-    font-size: 0.84rem;
+    font-size: 0.76rem;
   }
 
   .dropdown-menu a {
-    font-size: 0.84rem;
-    padding: 0.6rem 0 0.6rem 1.25rem;
+    font-size: 0.7rem;
+    padding: 0.5rem 0 0.5rem 1rem;
     line-height: 1.25;
   }
 
@@ -644,7 +649,7 @@
 /* MacBook Air 13" and larger */
 @media screen and (min-width: 1440px) {
   .header-container {
-    padding: 1.25rem 3rem;
+    padding: 0.75rem 3rem;
   }
 
   .logo {
@@ -660,7 +665,7 @@
   }
 
   .nav a {
-    font-size: 1.2rem;
+    font-size: 1.05rem;
   }
 
   .cta-button {
@@ -672,7 +677,7 @@
 /* MacBook Pro 16" / iMac */
 @media screen and (min-width: 1920px) {
   .header-container {
-    padding: 1.5rem 4rem;
+    padding: 0.875rem 4rem;
   }
 
   .logo {
@@ -695,8 +700,8 @@
 /* iPhone SE */
 @media screen and (max-width: 375px) and (max-height: 667px) {
   .header-container {
-    padding-top: 0.35rem;
-    padding-bottom: 0.35rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
     padding-left: 0.75rem;
     padding-right: 0.45rem; /* slightly closer to right edge */
     gap: 0.5rem;
@@ -742,7 +747,7 @@
 @supports (padding: max(0px)) {
   @media screen and (max-width: 480px) {
     .header {
-      padding-top: max(0.5rem, env(safe-area-inset-top));
+      padding-top: max(0.25rem, env(safe-area-inset-top));
     }
 
     .header-container {
@@ -755,7 +760,7 @@
 /* iPhone Landscape */
 @media screen and (max-height: 500px) and (orientation: landscape) {
   .header-container {
-    padding: 0.4rem 0.875rem;
+    padding: 0.25rem 0.875rem;
   }
 
   .logo {

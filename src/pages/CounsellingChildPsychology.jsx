@@ -180,18 +180,18 @@ const CounsellingChildPsychology = () => {
                   <div className="batch-icon"></div>
                   <h3>Batch 1</h3>
                   <ul className="batch-details">
-                    <li>Weekday Morning Batch</li>
-                    <li>Monday - Thursday</li>
-                    <li>9 AM - 1 PM</li>
+                  <li>Weekday Morning Batch</li>
+                  <li>Monday - Thursday</li>
+                  <li>9:00 AM to 1:00 PM</li>
                   </ul>
                 </div>
                 <div className="batch-box">
                   <div className="batch-icon"></div>
                   <h3>Batch 2</h3>
                   <ul className="batch-details">
-                    <li>Weekday Evening Batch</li>
-                    <li>Monday - Thursday</li>
-                    <li>2 PM - 6 PM</li>
+                  Weekend Morning Batch
+                  <li>Saturday & Sunday</li>
+                  <li>7:30 AM -  1:30 PM</li>
                   </ul>
                 </div>
               </div>
@@ -201,7 +201,10 @@ const CounsellingChildPsychology = () => {
                 </p>
               </div>
               <div className="button-text-container">
-                <button className="download-brochure-btn">Download Brochure</button>
+                <button className="download-brochure-btn" onClick={showConstructionPopup}>Download Brochure</button>
+                <p className="bridge-program-note">
+                  Note: A FREE Psychology Bridge Program will be conducted for students from non-psychology background to ensure strong foundational readiness.
+                </p>
               </div>
             </div>
           </div>
@@ -218,7 +221,7 @@ const CounsellingChildPsychology = () => {
             </div>
             <div className="detail-item">
               <span className="detail-label">Eligibility</span>
-              <span className="detail-value">Eligibility - Bachelor's degree in any discipline & interest towards fine arts.</span>
+              <span className="detail-value">Eligibility - Bachelor's degree in any discipline.</span>
             </div>
           </div>
         </div>
@@ -230,6 +233,7 @@ const CounsellingChildPsychology = () => {
           <h2 className="section-title">LEARNING OUTCOMES</h2>
           <div className="outcomes-box">
             <ul className="outcomes-list">
+            <li>Receive skill-based training in evidence-based and integrative approaches including Learning Disabilities, Cognitive Behavioural Therapy (CBT), Solution-Focused Brief Therapy (SFBT), Neuro-Linguistic Programming (NLP), Mindfulness-Based Therapy, Emotion-Freedom Technique (EFT), and Marital Counselling.</li>
               <li>Gain practical counselling skills for children and adolescents by developing age-appropriate communication techniques and intervention strategies.</li>
               <li>Learn to assess and support emotional and behavioural needs using structured observation, basic assessments, and case understanding.</li>
               <li>Practice ethical, child-centred counselling approaches that prioritise safety, confidentiality, and the child's best interests.</li>
@@ -247,7 +251,7 @@ const CounsellingChildPsychology = () => {
             <h2 className="section-title">COURSE SYLLABUS</h2>
             <div className="syllabus-buttons">
               <button className="apply-now-btn-syllabus" onClick={openApplyModal}>Apply now</button>
-              <button className="download-brochure-btn">Download Brochure</button>
+              <button className="download-brochure-btn" onClick={showConstructionPopup}>Download Brochure</button>
             </div>
           </div>
           <div className="syllabus-content">

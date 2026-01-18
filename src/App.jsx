@@ -9,6 +9,9 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Courses from './pages/Courses';
 import Contact from './pages/Contact';
+import Gallery from './pages/Gallery';
+import AdmissionProcedure from './pages/AdmissionProcedure';
+import ProspectDownload from './pages/ProspectDownload';
 import CounsellingChildPsychology from './pages/CounsellingChildPsychology';
 import CounsellingOrganizationalPsychology from './pages/CounsellingOrganizationalPsychology';
 import CounsellingForensicPsychology from './pages/CounsellingForensicPsychology';
@@ -60,7 +63,9 @@ function App() {
                 <Route path="/terms" element={<TermsAndConditions />} />
                 <Route path="/cancellation" element={<CancellationPolicy />} />
                 <Route path="/leadership" element={<About />} />
-                <Route path="/research" element={<About />} />
+                <Route path="/research" element={<Gallery />} />
+                <Route path="/admission-procedure" element={<AdmissionProcedure />} />
+                <Route path="/prospect-download" element={<ProspectDownload />} />
               </Routes>
             </main>
             <Footer />

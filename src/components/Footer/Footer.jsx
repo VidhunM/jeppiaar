@@ -53,7 +53,7 @@ const Footer = () => {
 
   const handleYoungVox = (e) => {
     e.preventDefault();
-    setShowUnderConstruction(true);
+   window.open('https://youngvox.com/', '_blank');
   };
 
   const handleFAQ = (e) => {

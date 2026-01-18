@@ -54,7 +54,7 @@ const CoursesGrid = ({ onKnowMoreClick }) => {
             <span className="courses-heading-line courses-heading-line-2">DIPLOMA COURSES</span>
           </h2>
           <p className="courses-description-text scroll-from-center">
-            Jeppiaar Academy of Psychology and Research prepares ethical, skilled, and globally competent psychology professionals through world-class, practice-oriented education. Our academy bridges the gap between classroom knowledge and real-world mental health practice.
+            Jeppiaar Academy of Psychology and Research prepares ethical, skilled, and globally competent psychology professionals through world-class,<br /> practice-oriented education. Our academy bridges the gap between classroom knowledge and real-world mental health practice.
           </p>
         </div>
 

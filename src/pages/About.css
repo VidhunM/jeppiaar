@@ -81,8 +81,8 @@
   text-justify: inter-word;   
   hyphens: none;
   word-break: normal;
-  text-align-last: center;
   max-width: 1100px;
+  text-align-last: center;
   margin-left: auto;
   margin-right: auto; 
   font-weight: 400;
@@ -239,7 +239,7 @@
   font-weight: 700;
   color: #333;
   text-align: center;
-  margin-bottom: 0.1rem;
+  margin-bottom: 0.5rem;
   text-transform: uppercase;
 }
 
@@ -247,6 +247,7 @@
   font-size: 1.1rem;
   color: #666;
   text-align: center;
+  margin-top: -1.5rem;
   margin-bottom: 3rem;
   max-width: 800px;
   margin-left: auto;
@@ -527,8 +528,8 @@
 
 .team-members-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
   max-width: 1400px;
   margin: 0 auto;
   width: 100%;
@@ -589,6 +590,12 @@
   object-position: center center;
 }
 
+/* Specific styling for Dr. C. Nirmala (index 3) - prevent bottom cut */
+.team-member-image img.team-img-center {
+  object-fit: cover;
+  object-position: center top;
+}
+
 .team-member-info {
   padding: 0;
   text-align: center;
@@ -614,6 +621,13 @@
 }
 
 /* Responsive Styles */
+@media (max-width: 1024px) {
+  .team-members-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
 @media (max-width: 768px) {
   .about-page {
     padding-top: calc(115px + env(safe-area-inset-top, 0px));
@@ -663,7 +677,7 @@
   }
 
   .team-members-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 
@@ -1043,6 +1057,7 @@
 
   .section-title {
     font-size: 1.75rem;
+    margin-top: 1.5rem;
   }
 
   .section-subtitle {

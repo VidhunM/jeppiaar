@@ -42,7 +42,7 @@
   color: #666;
   line-height: 1.6;
   text-align: justify;
-  text-align-last: center;
+  text-align-last: justify;
   max-width: 100%;
   width: 100%;
   padding: 0;
@@ -171,13 +171,10 @@
   margin: 0 0 1rem 0;
   padding: 0;
   line-height: 1.4;
-  min-height: 3.5rem;
-  max-height: 3.5rem;
+  min-height: 5.2rem;
   display: flex;
   align-items: flex-start;
   transition: color 0.3s ease;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .course-card:hover .course-content h3 {

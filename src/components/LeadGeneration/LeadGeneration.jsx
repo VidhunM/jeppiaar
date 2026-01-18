@@ -231,8 +231,13 @@ const LeadGeneration = ({ onShowConstructionPopup }) => {
               <div className="form-row">
               <select name="course" value={form.course} onChange={handleChange} className="course-select" required>
                   <option value="">Select Course</option>
-                  <option value="Certificate Course in Psychology">Certification Courses</option>
-                  <option value="Advanced Diploma in Counselling and Organisational Psychology">Internships</option>
+                  <option value="Learning Disabilities">Learning Disabilities</option>
+                  <option value="Cognitive Behavioural Therapy (CBT)">Cognitive Behavioural Therapy (CBT)</option>
+                  <option value="Solution-Focused Brief Therapy (SFBT)">Solution-Focused Brief Therapy (SFBT)</option>
+                  <option value="Neuro-Linguistic Programming (NLP)">Neuro-Linguistic Programming (NLP)</option>
+                  <option value="Mindfulness-Based Therapy">Mindfulness-Based Therapy</option>
+                  <option value="Emotion-Freedom Technique (EFT)">Emotion-Freedom Technique (EFT)</option>
+                  <option value="Marital Counselling">Marital Counselling</option>
                 </select>
               </div>
               <label className="checkbox-label">

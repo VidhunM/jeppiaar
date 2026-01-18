@@ -128,7 +128,7 @@ const Home = () => {
     },
     {
       question: '4. Can you become a counselor by attending this course?',
-      answer: 'Yes, you can become a counselor in your chosen specialization (Child Psychology, Psychology, Forensic Psychology, or Art Therapy).After completing this advanced diploma course, you can work as a counselor.'
+      answer: 'Yes, you can become a counselor in your chosen specialization (Child Psychology, Psychology, Forensic Psychology, or Art Therapy). After completing this advanced diploma course, you can work as a counselor.'
     }
   ];
   return (
@@ -202,7 +202,7 @@ const Home = () => {
             </div>
             <div 
               className="service-item scroll-from-right"
-              onClick={showConstructionPopup}
+              onClick={() => window.open('https://youngvox.com/')}
             >
               <div className="service-icon">
                 <img src={Youngvox} alt="YoungVox" />

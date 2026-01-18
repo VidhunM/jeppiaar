@@ -86,10 +86,10 @@ const CounsellingArtTherapy = () => {
   };
 
   const careers = [
-    { title: 'Community & NGO Practitioner', image: at1Image },
-    { title: 'Child & School Art Therapist', image: at2Image },
-    { title: 'Rehabilitation & Wellness Specialist', image: at3Image },
-    { title: 'Researcher / Educator in Art Therapy', image: at4Image }
+    { title: 'School / Educational Art Therapy facilitator', image: at1Image },
+    { title: 'Clinical Art Therapist', image: at2Image },
+    { title: 'Community & NGO Art Therapy Facilitator', image: at3Image },
+    { title: 'Private Practice / Wellness Consultant', image: at4Image }
   ];
 
   useEffect(() => {
@@ -152,7 +152,9 @@ const CounsellingArtTherapy = () => {
             <div className="overview-text">
               <h1 className="overview-title">ADVANCED DIPLOMA IN ART THERAPY</h1>
               <p>
-                The Advanced Diploma in Art Therapy provides a strong foundation in art therapy theories, ethical practice, and culturally sensitive approaches. Learners gain confidence in using diverse art media, understanding the therapeutic value of creativity, and tailoring interventions to client needs. Through supervised practicum and hands-on training, students develop skills in assessment, ethical interpretation, session documentation, and reading non-verbal cues. The program prepares practitioners to conduct effective individual and group art therapy sessions, integrate innovative media, and contribute professionally through reflective practice and evidence-informed work.
+                
+The Advanced Diploma in Art Therapy provides a strong foundation in therapeutic art practices and psychological principles to support emotional healing and mental well-being across age groups. The programme covers core concepts of psychology, expressive art techniques, emotional regulation strategies, and ethical standards, enabling learners to use art as a tool for self-awareness, communication, and coping. Students develop skills to facilitate self-expression, strengthen emotional insight, and support clients in managing stress, trauma, and behavioural concerns. Emphasis is placed on confidentiality, professional boundaries, and ethical practice in therapeutic relationships. Through practical applications and guided experiential learning, students gain the competence to work effectively in diverse settings such as schools, hospitals, rehabilitation centres, and private practice, preparing them for meaningful roles in creative and mental health services.
+
               </p>
               <button className="enroll-now-btn" onClick={openApplyModal}>Enroll Now</button>
             </div>
@@ -183,9 +185,18 @@ const CounsellingArtTherapy = () => {
                   <div className="batch-icon"></div>
                   <h3>Batch 1</h3>
                   <ul className="batch-details">
-                    <li>Weekend Morning Batch</li>
-                    <li>Saturday</li>
-                    <li>7:30 AM - 1:30 PM</li>
+                  <li>Weekend Evening Batch</li>
+                  <li>Friday</li>
+                  <li>2:00 PM - 8:00 PM</li>
+                  </ul>
+                </div>
+                <div className="batch-box">
+                  <div className="batch-icon"></div>
+                  <h3>Batch 2</h3>
+                  <ul className="batch-details">
+                  <li>Weekend Morning Batch</li>
+                  <li>Saturday</li>
+                  <li>7:30 AM - 1:30 PM</li>
                   </ul>
                 </div>
               </div>
@@ -195,7 +206,10 @@ const CounsellingArtTherapy = () => {
                 </p>
               </div>
               <div className="button-text-container">
-                <button className="download-brochure-btn">Download Brochure</button>
+                <button className="download-brochure-btn" onClick={showConstructionPopup}>Download Brochure</button>
+                <p className="bridge-program-note">
+                  Note: A FREE Psychology Bridge Program will be conducted for students from non-psychology background to ensure strong foundational readiness.
+                </p>
               </div>
             </div>
           </div>
@@ -212,7 +226,7 @@ const CounsellingArtTherapy = () => {
             </div>
             <div className="detail-item">
               <span className="detail-label">Eligibility</span>
-              <span className="detail-value">Bachelor's degree in any discipline & interest towards fine arts.</span>
+              <span className="detail-value">Bachelor's degree in any discipline.</span>
             </div>
           </div>
         </div>
@@ -224,12 +238,12 @@ const CounsellingArtTherapy = () => {
           <h2 className="section-title">LEARNING OUTCOMES</h2>
           <div className="outcomes-box">
             <ul className="outcomes-list">
-              <li>Build a foundation in art therapy theory, ethics, and cultural sensitivity</li>
-              <li>Gain confidence using varied media and applying the creative process therapeutically</li>
-              <li>Conduct assessments, interpret artwork ethically, and observe non-verbal cues</li>
-              <li>Facilitate individual and group art therapy sessions with appropriate interventions</li>
-              <li>Apply hands-on learning through supervised practicum, integrating theory with practice</li>
-              <li>Uphold professional standards and contribute to the growth of the art therapy field</li>
+            <li>Equips individuals to facilitate emotional healing and self-discovery through supportive, client-centred helping approaches</li>
+
+              <li>Develops enhanced self-awareness and emotional intelligence essential for effective personal and professional functioning</li>
+              <li>Builds stronger communication and interpersonal skills for meaningful, therapeutic, and professional interactions</li>
+              <li>Provides foundational knowledge in psychology to understand behaviour, emotions, and mental health concerns</li>
+              <li>Strengthens ethical competence, including knowledge of confidentiality, informed consent, and maintenance of professional boundaries</li>
             </ul>
           </div>
         </div>
@@ -251,9 +265,11 @@ const CounsellingArtTherapy = () => {
               <h3>FOUNDATIONS OF ART THERAPY</h3>
               <p className="credits">TOTAL CREDITS - 4</p>
               <ul className="semester-topics">
-                <li>Foundations of Art Therapy</li>
-                <li>Materials, Media & Creative Processes</li>
-                <li>Art Therapy Assessment, Diagnostics & Interpretive Skills</li>
+              <li>Foundations of Art Therapy</li>
+              <li>Materials, Media & Creative Processes</li>
+              <li>Art Therapy Assessment, Diagnostics & Interpretive Skills</li>
+              <li>Therapeutic Modalities & Population-based Practice</li>
+
               </ul>
             </div>
             <div className="semester-card">
@@ -261,17 +277,16 @@ const CounsellingArtTherapy = () => {
               <h3>ADVANCEMENT TO SPECIALIZATION</h3>
               <p className="credits">TOTAL CREDITS - 4</p>
               <ul className="semester-topics">
-                <li>Therapeutic Modalities & Population-based Practice</li>
-                <li>Clinical Art Therapy Interventions & Techniques</li>
-                <li>Practicum / Clinical Placement & Supervision</li>
-                <li>Research, Evaluation & Professional Practice</li>
+              <li>Clinical Art Therapy Interventions & Techniques</li>
+              <li>Practicum / Clinical Placement & Supervision</li>
+              <li>Research, Evaluation & Professional Practice</li>
               </ul>
             </div>
           </div>
           <div className="internship-section">
             <h3>Internship Opportunities</h3>
             <p>
-              Gain supervised, hands-on experience in therapeutic, educational, or clinical settings such as hospitals, schools, rehabilitation centers, community organizations, or NGOs. These structured internships help you build practical skills, professional confidence, and industry-ready expertise in applying art therapy for mental health and emotional well-being.
+            Gain real-world experience through internships in schools, hospitals, and community centres. Structured field exposure helps you enhance practical art therapy skills, build professional confidence, and develop industry-ready competence for therapeutic practice in diverse settings.
             </p>
           </div>
         </div>
@@ -289,7 +304,7 @@ const CounsellingArtTherapy = () => {
                 </svg>
               </span>
               <span className="skill-text">
-                <strong>Creative Facilitation</strong> <br />Guide clients using various art media to express thoughts and emotions.
+                <strong>Artistic Skills</strong> Using various art media and techniques for therapeutic expression and emotional exploration.
               </span>
             </li>
             <li>
@@ -299,7 +314,27 @@ const CounsellingArtTherapy = () => {
                 </svg>
               </span>
               <span className="skill-text">
-                <strong>Psychological Assessment</strong> <br />Interpret artwork to understand clients' mental and emotional states.
+              <strong>Creativity</strong> – Encouraging imaginative thinking to support healing, self-expression, and problem-solving.   
+               </span>
+            </li>
+            <li>
+              <span className="skill-checkmark">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="white"/>
+                </svg>
+              </span>
+              <span className="skill-text">
+              <strong>Observation Skills</strong> – Interpreting visual cues, symbols, and behavioural responses during the art-making process 
+               </span>
+            </li>
+            <li>
+              <span className="skill-checkmark">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="white"/>
+                </svg>
+              </span>
+              <span className="skill-text">
+              <strong>Empathy</strong> – Understanding and responding sensitively to clients’ emotions and experiences.
               </span>
             </li>
             <li>
@@ -309,7 +344,7 @@ const CounsellingArtTherapy = () => {
                 </svg>
               </span>
               <span className="skill-text">
-                <strong>Therapeutic Communication</strong> <br />Observe and respond to verbal and non-verbal cues effectively.
+              <strong>Interpersonal Skills</strong> – Building trust, rapport, and therapeutic relationships with diverse client groups.
               </span>
             </li>
             <li>
@@ -319,28 +354,8 @@ const CounsellingArtTherapy = () => {
                 </svg>
               </span>
               <span className="skill-text">
-                <strong>Ethical & Cultural Sensitivity</strong> <br />Practice ethically and respect diverse backgrounds.
-              </span>
-            </li>
-            <li>
-              <span className="skill-checkmark">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="white"/>
-                </svg>
-              </span>
-              <span className="skill-text">
-                <strong>Session Planning & Leadership</strong> <br />Design and lead individual or group art therapy sessions.
-              </span>
-            </li>
-            <li>
-              <span className="skill-checkmark">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="white"/>
-                </svg>
-              </span>
-              <span className="skill-text">
-                <strong>Adaptability & Innovation</strong> <br />Integrate new techniques, digital media, and creative interventions.
-              </span>
+              <strong>Problem-Solving & Critical Thinking</strong> – Design therapeutic activities, interpret client responses, and develop creative intervention strategies.
+               </span>
             </li>
           </ul>
         </div>
@@ -351,7 +366,7 @@ const CounsellingArtTherapy = () => {
         <div className="container">
           <h2 className="section-title-white">CAREER PROSPECTS</h2>
           <p className="career-description">
-            With an Art Therapy specialization, this course builds a strong foundation in creative therapeutic practices and prepares you for impactful careers in mental health and wellness. Potential career paths include:
+          With an Art Therapy specialization, this course builds a strong foundation in therapeutic techniques and prepares you for impactful careers in promoting emotional well-being and mental health. Potential career paths include:
           </p>
           <div className="career-carousel-wrapper">
             <div className="career-carousel-container">

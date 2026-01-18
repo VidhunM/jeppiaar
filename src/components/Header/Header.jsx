@@ -11,8 +11,11 @@ const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isDropdownClicked, setIsDropdownClicked] = useState(false);
   const [hoverDisabled, setHoverDisabled] = useState(false);
-  const clickInProgressRef = useRef(false);
   const dropdownStateRef = useRef(false);
+  const [isAdmissionDropdownOpen, setIsAdmissionDropdownOpen] = useState(false);
+  const [isAdmissionDropdownClicked, setIsAdmissionDropdownClicked] = useState(false);
+  const [admissionHoverDisabled, setAdmissionHoverDisabled] = useState(false);
+  const admissionDropdownStateRef = useRef(false);
   const [showApplyModal, setShowApplyModal] = useState(false);
   const [applyForm, setApplyForm] = useState({
     name: '',
@@ -42,17 +45,25 @@ const Header = () => {
   }, [isDropdownOpen]);
 
   useEffect(() => {
+    admissionDropdownStateRef.current = isAdmissionDropdownOpen;
+  }, [isAdmissionDropdownOpen]);
+
+  useEffect(() => {
     const handleClickOutside = (event) => {
-      // Don't close if clicking inside the dropdown area
-      const navDropdown = event.target.closest('.nav-dropdown');
-      const dropdownToggle = event.target.closest('.dropdown-toggle');
-      const dropdownMenu = event.target.closest('.dropdown-menu');
-      const dropdownLabel = event.target.closest('.dropdown-label');
-      const dropdownIcon = event.target.closest('.dropdown-icon');
+      // Check if click is inside the diploma dropdown specifically
+      const diplomaMenu = document.getElementById('diploma-dropdown');
+      const diplomaToggle = document.querySelector('[aria-controls="diploma-dropdown"]');
+      const clickedElement = event.target;
       
-      const clickedInside = navDropdown || dropdownToggle || dropdownMenu || dropdownLabel || dropdownIcon;
+      // Check if click is inside the dropdown menu or its toggle button
+      const clickedInsideDiploma = 
+        (diplomaMenu && diplomaMenu.contains(clickedElement)) ||
+        (diplomaToggle && diplomaToggle.contains(clickedElement)) ||
+        clickedElement.closest('#diploma-dropdown') ||
+        clickedElement.closest('[aria-controls="diploma-dropdown"]');
       
-      if (isDropdownOpen && !clickedInside) {
+      // Don't close if clicking inside the diploma dropdown area
+      if (isDropdownOpen && !clickedInsideDiploma) {
         setIsDropdownOpen(false);
         setIsDropdownClicked(false);
         setHoverDisabled(false);
@@ -74,6 +85,44 @@ const Header = () => {
       };
     }
   }, [isDropdownOpen]);
+
+  useEffect(() => {
+    const handleAdmissionClickOutside = (event) => {
+      // Check if click is inside the admission dropdown specifically
+      const admissionMenu = document.getElementById('admission-dropdown');
+      const admissionToggle = document.querySelector('[aria-controls="admission-dropdown"]');
+      const clickedElement = event.target;
+      
+      // Check if click is inside the dropdown menu or its toggle button
+      const clickedInsideAdmission = 
+        (admissionMenu && admissionMenu.contains(clickedElement)) ||
+        (admissionToggle && admissionToggle.contains(clickedElement)) ||
+        clickedElement.closest('#admission-dropdown') ||
+        clickedElement.closest('[aria-controls="admission-dropdown"]');
+      
+      // Don't close if clicking inside the admission dropdown area
+      if (isAdmissionDropdownOpen && !clickedInsideAdmission) {
+        setIsAdmissionDropdownOpen(false);
+        setIsAdmissionDropdownClicked(false);
+        setAdmissionHoverDisabled(false);
+        admissionDropdownStateRef.current = false;
+      }
+    };
+
+    if (isAdmissionDropdownOpen) {
+      // Use click event with a small delay to let click handlers complete first
+      const timeoutId = setTimeout(() => {
+        document.addEventListener('click', handleAdmissionClickOutside);
+        document.addEventListener('touchstart', handleAdmissionClickOutside);
+      }, 0);
+
+      return () => {
+        clearTimeout(timeoutId);
+        document.removeEventListener('click', handleAdmissionClickOutside);
+        document.removeEventListener('touchstart', handleAdmissionClickOutside);
+      };
+    }
+  }, [isAdmissionDropdownOpen]);
 
   const handleNavClick = (e, path) => {
     if (isHomePage && (path === '/courses' || path === '/research' || path === '/contact')) {
@@ -152,15 +201,22 @@ const Header = () => {
             <div 
               className="nav-dropdown"
               onMouseEnter={(e) => {
-                // Only allow hover if not disabled, not clicked, and no click in progress
-                if (window.innerWidth > 768 && !isDropdownClicked && !hoverDisabled && !clickInProgressRef.current) {
+                // Only allow hover on desktop
+                if (window.innerWidth > 768 && !hoverDisabled) {
+                  // Close admission dropdown if open
+                  if (isAdmissionDropdownOpen) {
+                    setIsAdmissionDropdownOpen(false);
+                    setIsAdmissionDropdownClicked(false);
+                    setAdmissionHoverDisabled(false);
+                    admissionDropdownStateRef.current = false;
+                  }
                   setIsDropdownOpen(true);
                   dropdownStateRef.current = true;
                 }
               }}
               onMouseLeave={(e) => {
                 // Only close on hover leave if it was opened by hover (not click)
-                if (window.innerWidth > 768 && !isDropdownClicked && !hoverDisabled && !clickInProgressRef.current) {
+                if (window.innerWidth > 768 && !isDropdownClicked) {
                   setIsDropdownOpen(false);
                   dropdownStateRef.current = false;
                 }
@@ -171,46 +227,37 @@ const Header = () => {
                 role="button"
                 aria-expanded={isDropdownOpen}
                 aria-controls="diploma-dropdown"
-                onMouseDown={(e) => {
-                  // Mark that a click is in progress to prevent hover interference
-                  clickInProgressRef.current = true;
-                  e.stopPropagation();
-                }}
                 onClick={(e) => {
                   e.preventDefault();
                   e.stopPropagation();
                   
-                  // Immediately disable hover to prevent interference
-                  setHoverDisabled(true);
+                  // Close admission dropdown if open
+                  if (isAdmissionDropdownOpen) {
+                    setIsAdmissionDropdownOpen(false);
+                    setIsAdmissionDropdownClicked(false);
+                    setAdmissionHoverDisabled(false);
+                    admissionDropdownStateRef.current = false;
+                  }
                   
-                  // Use functional form of setState to ensure we have the latest state
+                  // Toggle dropdown
                   setIsDropdownOpen(prevState => {
                     const willBeOpen = !prevState;
                     
-                    // Handle side effects based on the new state
                     if (willBeOpen) {
-                      // Will be opening the dropdown
+                      // Opening - set clicked state and disable hover temporarily
                       setIsDropdownClicked(true);
-                      // Re-enable hover after opening to allow normal hover behavior
+                      setHoverDisabled(true);
                       setTimeout(() => {
                         setHoverDisabled(false);
-                        clickInProgressRef.current = false;
-                      }, 200);
+                      }, 300);
                     } else {
-                      // Will be closing the dropdown
+                      // Closing - reset states
                       setIsDropdownClicked(false);
-                      setHoverDisabled(false); // Re-enable hover immediately when closing
-                      setTimeout(() => {
-                        clickInProgressRef.current = false;
-                      }, 100);
+                      setHoverDisabled(false);
                     }
                     
                     return willBeOpen;
                   });
-                }}
-                onMouseUp={(e) => {
-                  // Also stop propagation on mouseup to prevent issues
-                  e.stopPropagation();
                 }}
               >
                 <span className="dropdown-label">Advanced Diploma Programs</span>
@@ -234,19 +281,15 @@ const Header = () => {
                     if (window.innerWidth > 768) {
                       setIsDropdownOpen(true);
                       dropdownStateRef.current = true;
-                      // Maintain clicked state when opened via click
-                      if (isDropdownClicked) {
-                        setIsDropdownClicked(true);
-                      }
                     }
                   }}
                   onMouseLeave={() => {
                     if (window.innerWidth > 768) {
-                      // If opened via click, close when leaving menu
-                      // If opened via hover, also close when leaving
-                      setIsDropdownOpen(false);
-                      setIsDropdownClicked(false);
-                      dropdownStateRef.current = false;
+                      // Close only if not clicked (hover mode)
+                      if (!isDropdownClicked) {
+                        setIsDropdownOpen(false);
+                        dropdownStateRef.current = false;
+                      }
                     }
                   }}
                 >
@@ -297,11 +340,133 @@ const Header = () => {
                 </div>
               )}
             </div>
+            <div 
+              className="nav-dropdown"
+              onMouseEnter={(e) => {
+                // Only allow hover on desktop
+                if (window.innerWidth > 768 && !admissionHoverDisabled) {
+                  // Close diploma dropdown if open
+                  if (isDropdownOpen) {
+                    setIsDropdownOpen(false);
+                    setIsDropdownClicked(false);
+                    setHoverDisabled(false);
+                    dropdownStateRef.current = false;
+                  }
+                  setIsAdmissionDropdownOpen(true);
+                  admissionDropdownStateRef.current = true;
+                }
+              }}
+              onMouseLeave={(e) => {
+                // Only close on hover leave if it was opened by hover (not click)
+                if (window.innerWidth > 768 && !isAdmissionDropdownClicked) {
+                  setIsAdmissionDropdownOpen(false);
+                  admissionDropdownStateRef.current = false;
+                }
+              }}
+            >
+              <div
+                className="dropdown-toggle"
+                role="button"
+                aria-expanded={isAdmissionDropdownOpen}
+                aria-controls="admission-dropdown"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  
+                  // Close diploma dropdown if open
+                  if (isDropdownOpen) {
+                    setIsDropdownOpen(false);
+                    setIsDropdownClicked(false);
+                    setHoverDisabled(false);
+                    dropdownStateRef.current = false;
+                  }
+                  
+                  // Toggle dropdown
+                  setIsAdmissionDropdownOpen(prevState => {
+                    const willBeOpen = !prevState;
+                    
+                    if (willBeOpen) {
+                      // Opening - set clicked state and disable hover temporarily
+                      setIsAdmissionDropdownClicked(true);
+                      setAdmissionHoverDisabled(true);
+                      setTimeout(() => {
+                        setAdmissionHoverDisabled(false);
+                      }, 300);
+                    } else {
+                      // Closing - reset states
+                      setIsAdmissionDropdownClicked(false);
+                      setAdmissionHoverDisabled(false);
+                    }
+                    
+                    return willBeOpen;
+                  });
+                }}
+              >
+                <span className="dropdown-label">Admission</span>
+                <span className={`dropdown-icon ${isAdmissionDropdownOpen ? 'open' : ''}`} aria-hidden="true">
+                  <svg viewBox="0 0 24 24" focusable="false">
+                    <path
+                      d="M6 9l6 6 6-6"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </span>
+              </div>
+              {isAdmissionDropdownOpen && (
+                <div 
+                  id="admission-dropdown" 
+                  className="dropdown-menu"
+                  onMouseEnter={() => {
+                    if (window.innerWidth > 768) {
+                      setIsAdmissionDropdownOpen(true);
+                      admissionDropdownStateRef.current = true;
+                    }
+                  }}
+                  onMouseLeave={() => {
+                    if (window.innerWidth > 768) {
+                      // Close only if not clicked (hover mode)
+                      if (!isAdmissionDropdownClicked) {
+                        setIsAdmissionDropdownOpen(false);
+                        admissionDropdownStateRef.current = false;
+                      }
+                    }
+                  }}
+                >
+                  <Link 
+                    to="/admission-procedure" 
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setShowUnderConstruction(true);
+                      setIsMobileMenuOpen(false);
+                      setIsAdmissionDropdownOpen(false);
+                      setIsAdmissionDropdownClicked(false);
+                      admissionDropdownStateRef.current = false;
+                    }}
+                  >
+                    Admission Procedure
+                  </Link>
+                  <Link 
+                    to="/prospect-download" 
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setShowUnderConstruction(true);
+                      setIsMobileMenuOpen(false);
+                      setIsAdmissionDropdownOpen(false);
+                      setIsAdmissionDropdownClicked(false);
+                      admissionDropdownStateRef.current = false;
+                    }}
+                  >
+                    Prospect Download
+                  </Link>
+                </div>
+              )}
+            </div>
             <Link 
               to="/research" 
-              onClick={(e) => {
-                e.preventDefault();
-                setShowUnderConstruction(true);
+              onClick={() => {
                 setIsMobileMenuOpen(false);
               }}
             >
@@ -331,7 +496,7 @@ const Header = () => {
         </button>
         <button 
             className="cta-button" 
-            onClick={openApplyModal}
+            onClick={() => setShowUnderConstruction(true)}
           >
             Login
           </button>

@@ -9,6 +9,8 @@ import deanImage from '../assets/images/c3.png';
 import chrishanthiImage from '../assets/images/c4.jpeg';
 import banupriyaImage from '../assets/images/c5.jpeg';
 import augustineImage from '../assets/images/c6.jpeg';
+import nirmalaImage from '../assets/images/c7.jpeg';
+import sangeethaImage from '../assets/images/c8.jpeg';
 import icon1 from '../assets/icons/Icon1.png';
 import icon2 from '../assets/icons/Icon2.png';
 import icon3 from '../assets/icons/Icon3.png';
@@ -92,7 +94,7 @@ const About = () => {
 
   const teamMembers = [
     {
-      name: 'B. Jaikumar ChristhuRajan, M.E., M.B.A(UK)',
+      name: 'B. Jaikumar',
       role: 'Chairman',
       image: chairmanImage,
       description: `B. Jaikumar ChristhuRajan is a visionary second-generation entrepreneur and the Chairman & Managing Director of the Jeppiaar Group. With a strong academic foundation in Engineering and an MBA from the UK, he brings strategic leadership, administrative excellence, and a people-centric approach to all Jeppiaar institutions. He currently serves on the Board of Trustees of Sancta Maria Educational Trust.
@@ -102,7 +104,7 @@ An educationalist since 2010, he has played a pivotal role as Director of the Je
 At Jeppiaar Academy of Psychology and Research, he provides strategic direction and ensures that the academy grows as a centre of excellence dedicated to mental health education, youth empowerment, and holistic societal wellbeing.`
     },
     {
-      name: 'Dr. Saranya T. Jaikumar, B.Tech., M.Sc., Ph.D',
+      name: 'Dr. Saranya',
       role: 'Founder & Director',
       image: directorImage,
       description: `Dr. Saranya Jaikumar is one of India's first Doctorates in Educational Psychology and has made a significant impact in the field through her academic expertise and commitment to student development. As the founder of Voxdemy, she has tutored and mentored more than 7,000 psychology students across the globe, empowering learners with practical skills, academic clarity, and professional confidence. She serves as an Independent Expert to the Ministry of Women & Child Development, Government of India, Tamil Nadu Police Department, Samagra Shiksha, and numerous schools and colleges across India.
@@ -112,7 +114,7 @@ A former Member of the Tamil Nadu Commission for Protection of Child Rights, Dr.
 Dr. Saranya is also a Consultant Educational Psychologist at Shadithya Child Therapy Centre and a Child Protection Policy Expert for various international accreditation bodies. She serves as visiting faculty, programme head, keynote speaker, jury panelist, and motivational speaker at national and international platforms. Her articles, interviews, and expert opinions are widely featured in leading newspapers, magazines, TV channels, and digital media.`
     },
     {
-      name: 'Dr. S. Usharani, Ph.D',
+      name: 'Dr. Usharani',
       role: 'Dean - Academics',
       image: deanImage,
       description: `Dr. S. Usharani is an accomplished academician and psychologist with extensive experience in psychology education and research. With a Ph.D. in Psychology, she has dedicated her career to advancing the field through teaching, research, and academic leadership.
@@ -122,17 +124,27 @@ As Dean of Academics, she oversees the development and implementation of the aca
 She has been instrumental in developing the academy's curriculum, establishing quality assurance processes, and mentoring faculty and students. Her leadership has contributed significantly to the academy's reputation for academic excellence and innovation in psychology education.`
     },
     {
-      name: 'Banupriya, M.Sc',
-      role: 'Joint Director',
-      image: banupriyaImage,
-      description: `Banupriya is a Psychologist, Certified Emotional Intelligence Coach Practitioner, and Career Coach who has made a meaningful impact in the field through her extensive counselling, training, and wellbeing initiatives. She is deeply committed to strengthening emotional resilience, student wellbeing, and mental health systems across educational and professional settings. Her work focuses on integrating psychology with practical, real-world interventions to support individuals across different life stages.
+      name: 'Dr. C. Nirmala, M.D.S',
+      role: 'Program Head, Polo Research',
+      image: nirmalaImage,
+      description: `Dr. C. Nirmala is a Conservative and Endodontic Dental Surgeon with a strong passion for research, innovation, and education. She firmly believes that introducing children to the fundamentals of research during their school years can help channel their natural curiosity into structured inquiry, creative problem-solving, and innovative thinking. With this vision, she founded the Junior Researcher Learning Adventure (JRLA) Program, an initiative dedicated to nurturing research skills among school students. Through JRLA, Dr. Nirmala mentors young learners in research methodology, scientific writing, article preparation, and effective presentations, empowering them to identify research gaps in everyday life and develop solution-oriented thinking.
 
-She has conducted 1000+ workshops, comprehensive school counselling, special education, teacher training, and mental health programmes across India, contributing to the development of structured wellbeing frameworks within educational institutions. She has conducted 800+ workshops and training programmes, empowering psychology students, educators, professionals, and individuals with practical skills, emotional intelligence, and personal growth tools. She also serves as the Chief Operating Officer (COO) of YoungVox, where she supports youth development initiatives, programme execution, and organisational growth while strengthening leadership and community engagement.
-
-Her expertise extends to delivering specialised emotional intelligence and wellbeing sessions for Karnataka Administrative Service (KAS) officers, as well as workplace wellbeing and leadership programmes for corporate organisations, with a focus on stress management, interpersonal effectiveness, and sustainable performance. Through her work, she continues to contribute to building emotionally healthy individuals, institutions, and communities.`
+JRLA has collaborated with Polo Research to deliver high-quality, structured research training for both teachers and students, ensuring a strong foundation in academic inquiry and innovation. Together, JRLA and Polo Research strive to build a culture of research excellence in schools by equipping young minds with the skills, confidence, and mindset required to become future inventors, innovators, and leaders across diverse fields.`
     },
     {
-      name: 'Chrishanthi Vijay, B.Com, MBA, MA',
+      name: 'Dr. Sangeetha Baid, Ph.D',
+      role: 'Program Head, Mind Mastery',
+      image: sangeethaImage,
+      description: `An accomplished Personality Development and Public Speaking Coach with a Ph.D. in Psychology, she is dedicated to empowering individuals through transformative learning experiences. Her work focuses on building confidence, emotional intelligence, and effective communication skills that enable success in both personal and professional domains.
+
+Currently associated with Voxdemy, Chennai, she trains counselors to manage student interactions with empathy, clarity, and professionalism. Previously, she served as a Relationship and Life Detox Coach with the Department of Social Defence, Government of Tamil Nadu, where she provided personalized guidance using NLP and psychological counseling techniques. Her professional journey is further enriched by over a decade of volunteer social work (2005–2017), during which she led initiatives supporting women's empowerment, leadership development, and life skills.
+
+A Certified NLP Practitioner, Yoga Protocol Instructor (Ministry of AYUSH), and an award-winning mentor, she has received both national and international recognition for her contributions to personal development. Her honors include the IIW SHE Inspires Award 2023 (Mentor Category) at the House of Commons, London, and the Women Power Summit & Award 2023 at the National Stock Exchange of India, Mumbai.
+
+She actively collaborates with individuals, institutions, and organizations to foster positive workplace culture, resilience, and holistic growth, creating environments where people thrive with confidence, clarity, and purpose.`
+    },
+    {
+      name: 'Chrishanthi',
       role: 'Deputy Director',
       image: chrishanthiImage,
       description: `Chrishanthi Vijay is an academic and human resources professional with a multidisciplinary background in commerce, management and psychology. She holds qualifications in B.Com, MBA and M.A. in Psychology, enabling her to integrate business understanding with a strong insight into human behaviour and organisational leadership.
@@ -142,13 +154,22 @@ She serves as Head of Faculty at VOXdemy, where she oversees academic planning, 
 Chrishanthi Vijay is known for her empathetic leadership style, strong communication skills, and people-centric approach, with strengths in team coordination, academic development, HR management, conflict resolution and organisational planning.`
     },
     {
-      name: 'Augustine Thilak, BFA, M.Sc',
-      role: ' Department Head, Art Therapy',
-      image: augustineImage,
-     
-      description: `Augustine Thilak brings a unique blend of artistic and psychological expertise to his role as Dean of Academics. With qualifications in BFA (Bachelor of Fine Arts) and M.Sc, he combines creative expression with scientific understanding to enhance the academy's academic programs.
+      name: 'Banupriya',
+      role: 'Joint Director',
+      image: banupriyaImage,
+      description: `Banupriya is a Psychologist, Certified Emotional Intelligence Coach Practitioner, and Career Coach who has made a meaningful impact in the field through her extensive counselling, training, and wellbeing initiatives. She is deeply committed to strengthening emotional resilience, student wellbeing, and mental health systems across educational and professional settings. Her work focuses on integrating psychology with practical, real-world interventions to support individuals across different life stages.
 
-His multidisciplinary background enables him to approach psychology education from innovative perspectives, integrating arts-based interventions and creative methodologies into the curriculum. As Dean of Academics, he plays a crucial role in developing comprehensive academic frameworks that prepare students for diverse career paths in psychology.
+She has conducted 1000+ workshops, comprehensive school counselling, special education, teacher training, and mental health programmes across India, contributing to the development of structured wellbeing frameworks within educational institutions. She has conducted 800+ workshops and training programmes, empowering psychology students, educators, professionals, and individuals with practical skills, emotional intelligence, and personal growth tools. She also serves as the Chief Operating Officer (COO) of YoungVox, where she supports youth development initiatives, programme execution, and organisational growth while strengthening leadership and community engagement.
+
+Her expertise extends to delivering specialised emotional intelligence and wellbeing sessions for Karnataka Administrative Service (KAS) officers, as well as workplace wellbeing and leadership programmes for corporate organisations, with a focus on stress management, interpersonal effectiveness, and sustainable performance. Through her work, she continues to contribute to building emotionally healthy individuals, institutions, and communities.`
+    },
+    {
+      name: 'Augustine',
+      role: 'Department Head, Art Therapy',
+      image: augustineImage,
+      description: `Augustine Thilak brings a unique blend of artistic and psychological expertise to his role as Department Head, Art Therapy. With qualifications in BFA (Bachelor of Fine Arts) and M.Sc, he combines creative expression with scientific understanding to enhance the academy's academic programs.
+
+His multidisciplinary background enables him to approach psychology education from innovative perspectives, integrating arts-based interventions and creative methodologies into the curriculum. As Department Head, Art Therapy, he plays a crucial role in developing comprehensive academic frameworks that prepare students for diverse career paths in psychology.
 
 Augustine Thilak is committed to fostering an environment that encourages both analytical thinking and creative problem-solving, ensuring that students receive a well-rounded education that prepares them for the evolving field of psychology.`
     }
@@ -171,7 +192,7 @@ Augustine Thilak is committed to fostering an environment that encourages both a
               Jeppiaar Academy of Psychology and Research was established to bridge the gap between psychology education and real-world application. With a vision to nurture ethical, skilled, and research-oriented professionals, the academy offers advanced courses aligned with global mental health standards.
               </p>
               <p>
-              The academy provides advanced diploma programs in key domains of psychology, including <br /> Counselling and Child Psychology, Counselling and Organisational Psychology, Counselling and Forensic Psychology, and Art Therapy.
+              The academy provides advanced diploma programs in key domains of psychology, including Counselling and Child Psychology, Counselling and Organisational Psychology, Counselling and Forensic Psychology, and Art Therapy.
               </p>
             </div>
           </div>
@@ -239,14 +260,14 @@ Augustine Thilak is committed to fostering an environment that encourages both a
             {teamMembers.map((member, index) => (
               <div 
                 key={index} 
-                className={`team-member-card scroll-from-${index % 2 === 0 ? 'left' : 'right'} ${index === 4 || index === 5 ? 'team-member-zoom-fix' : ''}`}
+                className={`team-member-card scroll-from-${index % 2 === 0 ? 'left' : 'right'} ${index === 3 || index === 4 || index === 5 ? 'team-member-zoom-fix' : ''}`}
                 onClick={() => setSelectedMember(member)}
               >
                 <div className="team-member-image">
                   <img 
                     src={member.image} 
                     alt={member.name}
-                    className={index === 4 || index === 5 ? 'team-img-zoom' : ''}
+                    className={index === 3 ? 'team-img-center' : index === 4 || index === 5 ? 'team-img-zoom' : ''}
                     onError={(e) => {
                       e.target.onerror = null;
                       e.target.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="300" height="300"%3E%3Crect fill="%23e0e0e0" width="300" height="300"/%3E%3Ctext fill="%23999" font-family="sans-serif" font-size="16" x="50%25" y="50%25" text-anchor="middle" dy=".3em"%3EPhoto Coming Soon%3C/text%3E%3C/svg%3E';

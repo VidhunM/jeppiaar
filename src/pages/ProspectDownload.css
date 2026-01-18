@@ -1,0 +1,76 @@
+.prospect-download-page {
+  min-height: 100vh;
+  padding-top: 100px;
+}
+
+.prospect-download-hero {
+  background: #0E0529;
+  padding: 5rem 0 3rem 0;
+  width: 100%;
+}
+
+.prospect-download-hero .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.prospect-download-hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.prospect-download-content {
+  background: #ffffff;
+  padding: 3rem 0;
+  min-height: 60vh;
+}
+
+.prospect-download-content .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.content-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.content-wrapper h2 {
+  font-size: 2rem;
+  color: #0E0529;
+  margin-bottom: 1.5rem;
+}
+
+.content-wrapper p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .prospect-download-page {
+    padding-top: 80px;
+  }
+  
+  .prospect-download-hero {
+    padding: 3rem 0 2rem 0;
+  }
+  
+  .prospect-download-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .content-wrapper h2 {
+    font-size: 1.5rem;
+  }
+  
+  .content-wrapper p {
+    font-size: 1rem;
+  }
+}

@@ -4,6 +4,7 @@ import './LearnersReview.css';
 const LearnersReview = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
+  const [expandedTestimonials, setExpandedTestimonials] = useState({});
 
   useEffect(() => {
     const checkMobile = () => {
@@ -17,56 +18,56 @@ const LearnersReview = () => {
   const testimonials = [
     {
       id: 1,
-      title: "Confident in Real Sessions",
-      quote: "The counselling labs at Jeppiaar gave me enough practice to handle real client sessions without fear. Faculty were in every step to guide me.",
-      name: "Priya S",
-      role: "10 months in Counselling",
+      title: "Recognizing Strengths and Weaknesses",
+      quote: "This course stands out as one of the best, aiding me in recognizing my strengths and weaknesses while providing effective strategies for handling toddlers. Dr. Saranya mam skillfully conveyed concepts, illustrating them with straightforward examples. Despite lacking a background in Psychology, this course sparked my interest to delve deeper into the field. Gratitude to Dr. Saranya mam and Chrishanthi mam for their unwavering support throughout the entire program.",
+      name: "Srividhya Sampathkumar",
+      role: "",
       rating: 5,
       image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=face"
     },
     {
       id: 2,
-      title: "From Theory to Practice",
-      quote: "I finally understood how psychological theories work in the field. Case discussions and supervised practice changed the way I think as a counsellor.",
-      name: "Arjun S",
-      role: "12 months in Art Therapy",
+      title: "Useful for Beginners",
+      quote: "It will be very useful for beginners who plan to pursue a degree in psychology. I really love the way Dr. Saranaya ma'am is teaching, especially her stories and examples. I am working as a counselor and it helps me to brush up my basics.",
+      name: "Brindha. S",
+      role: "Working as a Counselor",
       rating: 5,
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
     },
     {
       id: 3,
-      title: "Supportive Mentors",
-      quote: "Jeppiaar's faculty and mentors genuinely care. They connected me to internships and helped me shape a clear career path in mental health.",
-      name: "Meera V",
-      role: "Intern, Research Wing - POLO",
+      title: "Changed My Perspective",
+      quote: "I am a teacher and this course has made me change my perspective about student behaviour completely. I handle them very effectively now.",
+      name: "Keerthana S",
+      role: "Teacher",
       rating: 5,
       image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
     },
     {
       id: 4,
-      title: "Holistic Learning Environment",
-      quote: "The blend of classroom learning, reflection exercises, and peer practice helped me grow both personally and professionally.",
-      name: "Vikram P",
-      role: "Advanced Diploma Psychology",
-      rating: 4,
+      title: "Interesting and Informative",
+      quote: "This course was a very interesting and informative class. It helps me a lot to handle the situations. Thank you to saranya mam and kirushanthy mam.",
+      name: "PRASANNALAKSHMI",
+      role: "",
+      rating: 5,
       image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"
     },
     {
       id: 5,
-      title: "Flexible for Professionals",
-      quote: "With my full-time job, I needed a program that respected my schedule. Jeppiaar's weekend sessions and online support made it possible.",
-      name: "Sahana R",
-      role: "12 classes",
-      rating: 4,
+      title: "A Turning Point",
+      quote: "I am working as a Head Master. The course help me to understand the situation better. The way Saranya mam handled the class is amazing. The course is a turning point of my life.",
+      name: "U.B.Pooja Sri",
+      role: "Head Master",
+      rating: 5,
       image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face"
     },
     {
       id: 6,
-      title: "Career-Focused Guidance",
-      quote: "From day one, the focus was on where we want to work after the course—schools, corporates, or clinics—and how to build the right skills for it.",
-      name: "Rahul D",
-      role: "Forensic Psychology learner",
-      rating: 4,
+      title: "Metamorphosis in Personality",
+      quote: "A very excellent course, helps to realize your self, their is a drastic change in the personality and behavior, Dr. Saranya has been gifted with the velour to create a metamorphosis in us. Thus helping us to face the society with a better understanding. I strongly recommend that each one of us should under go this course immaterial of the age.",
+      name: "Ramani",
+      role: "",
+      rating: 5,
       image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face"
     }
   ];
@@ -99,6 +100,13 @@ const LearnersReview = () => {
       if (prev <= 0) return maxSlide;
       return prev - 1;
     });
+  };
+
+  const toggleExpand = (testimonialId) => {
+    setExpandedTestimonials(prev => ({
+      ...prev,
+      [testimonialId]: !prev[testimonialId]
+    }));
   };
 
   const renderStars = (rating) => {
@@ -138,7 +146,19 @@ const LearnersReview = () => {
               >
                 <div className="stars">{renderStars(testimonial.rating)}</div>
                 <h3 className="testimonial-title">{testimonial.title}</h3>
-                <p className="testimonial-quote">{testimonial.quote}</p>
+                <div className="testimonial-quote-wrapper">
+                  <p className={`testimonial-quote ${expandedTestimonials[testimonial.id] ? 'expanded' : ''}`}>
+                    {testimonial.quote}
+                  </p>
+                  {testimonial.quote.length > 150 && (
+                    <button 
+                      className="read-more-btn"
+                      onClick={() => toggleExpand(testimonial.id)}
+                    >
+                      {expandedTestimonials[testimonial.id] ? 'Read less' : 'Read more'}
+                    </button>
+                  )}
+                </div>
                 <div className="testimonial-author">
                   <img 
                     src={testimonial.image} 

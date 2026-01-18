@@ -179,9 +179,9 @@ const CounsellingOrganizationalPsychology = () => {
                   <div className="batch-icon"></div>
                   <h3>Batch 1</h3>
                   <ul className="batch-details">
-                  <li>Weekday Evening Batch</li>
+                  <li>Weekday Evening Batch</li >
                     <li>Monday - Thursday</li>
-                    <li>2 PM - 6 PM</li>
+                    <li>2:00 PM - 6:00 PM</li>
                     
                   </ul>
                 </div>
@@ -189,9 +189,9 @@ const CounsellingOrganizationalPsychology = () => {
                   <div className="batch-icon"></div>
                   <h3>Batch 2</h3>
                   <ul className="batch-details">
-                  <li>Weekend Morning Batch</li>
-                    <li>Friday - Saturday</li>
-                    <li>7.30 AM - 1.30 PM</li>
+                  <li>Weekend Evening Batch</li>
+                  <li>Saturday & Sunday</li>
+                  <li>2:00 PM - 8:00 PM</li>
                   </ul>
                 </div>
               </div>
@@ -201,7 +201,10 @@ const CounsellingOrganizationalPsychology = () => {
                 </p>
               </div>
               <div className="button-text-container">
-                <button className="download-brochure-btn">Download Brochure</button>
+                <button className="download-brochure-btn" onClick={showConstructionPopup}>Download Brochure</button>
+                <p className="bridge-program-note">
+                  Note: A FREE Psychology Bridge Program will be conducted for students from non-psychology background to ensure strong foundational readiness.
+                </p>
               </div>
             </div>
           </div>
@@ -218,7 +221,7 @@ const CounsellingOrganizationalPsychology = () => {
             </div>
             <div className="detail-item">
               <span className="detail-label">Eligibility</span>
-              <span className="detail-value">Bachelor's degree in any discipline & interest towards fine arts.</span>
+              <span className="detail-value">Bachelor's degree in any discipline.</span>
             </div>
           </div>
         </div>
@@ -230,6 +233,7 @@ const CounsellingOrganizationalPsychology = () => {
           <h2 className="section-title">LEARNING OUTCOMES</h2>
           <div className="outcomes-box">
             <ul className="outcomes-list">
+            <li>Receive skill-based training in evidence-based and integrative approaches including Cognitive Behavioural Therapy (CBT), Solution-Focused Brief Therapy (SFBT), Neuro-Linguistic Programming (NLP), Mindfulness-Based Therapy, Emotion-Freedom Technique (EFT), and Marital Counselling.</li> 
               <li>Gain practical counselling skills for workplace and organizational settings</li>
               <li>Learn to assess and address employee behaviour, motivation, performance, and well-being</li>
               <li>Practice ethical, culturally sensitive, and employee-centered counselling and coaching approaches</li>
