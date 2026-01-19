@@ -437,9 +437,7 @@ const Header = () => {
                 >
                   <Link 
                     to="/admission-procedure" 
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setShowUnderConstruction(true);
+                    onClick={() => {
                       setIsMobileMenuOpen(false);
                       setIsAdmissionDropdownOpen(false);
                       setIsAdmissionDropdownClicked(false);
@@ -450,9 +448,7 @@ const Header = () => {
                   </Link>
                   <Link 
                     to="/prospect-download" 
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setShowUnderConstruction(true);
+                    onClick={() => {
                       setIsMobileMenuOpen(false);
                       setIsAdmissionDropdownOpen(false);
                       setIsAdmissionDropdownClicked(false);

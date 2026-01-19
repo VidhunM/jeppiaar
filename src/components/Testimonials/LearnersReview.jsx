@@ -162,7 +162,6 @@ const LearnersReview = () => {
                 <div className="testimonial-author">
                   <div className="author-info">
                     <p className="author-name">{testimonial.name}</p>
-                    <p className="author-role">{testimonial.role}</p>
                   </div>
                 </div>
               </div>

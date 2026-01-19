@@ -1,11 +1,12 @@
 .prospect-download-page {
   min-height: 100vh;
-  padding-top: 100px;
+  /* account for fixed header + iPhone safe area */
+  padding-top: calc(120px + env(safe-area-inset-top, 0px));
 }
 
 .prospect-download-hero {
-  background: #0E0529;
-  padding: 5rem 0 3rem 0;
+  background: linear-gradient(180deg, #0E0529 0%, #241247 100%);
+  padding: 5rem 0 3.25rem 0;
   width: 100%;
 }
 
@@ -24,6 +25,15 @@
   letter-spacing: 2px;
 }
 
+.prospect-download-hero-subtitle {
+  margin: 1rem auto 0 auto;
+  max-width: 980px;
+  color: rgba(255, 255, 255, 0.92);
+  text-align: center;
+  line-height: 1.65;
+  font-size: 1.05rem;
+}
+
 .prospect-download-content {
   background: #ffffff;
   padding: 3rem 0;
@@ -37,25 +47,243 @@
 }
 
 .content-wrapper {
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
-.content-wrapper h2 {
-  font-size: 2rem;
-  color: #0E0529;
-  margin-bottom: 1.5rem;
+/* Actions */
+.prospect-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0 auto 1.25rem auto;
+  max-width: 980px;
 }
 
-.content-wrapper p {
-  font-size: 1.1rem;
-  line-height: 1.8;
+.prospect-action-btn {
+  background: #0E0529;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.85rem 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.prospect-action-hint {
+  margin: 0;
   color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Document */
+.prospect-document {
+  background: #ffffff;
+  border: 1px solid #e8e8e8;
+  border-radius: 14px;
+  padding: 2rem 2rem;
+  max-width: 980px;
+  margin: 0 auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  color: #111;
+}
+
+.prospect-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.prospect-brand-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+}
+
+.prospect-brand-subtitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-top: 0.1rem;
+}
+
+.prospect-brand-unit {
+  font-size: 0.95rem;
+  margin-top: 0.35rem;
+  color: #333;
+}
+
+.prospect-photo-box {
+  width: 160px;
+  height: 200px;
+  border: 1.5px solid #111;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 0.35rem;
+  flex-shrink: 0;
+}
+
+.prospect-photo-label {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.prospect-form-title {
+  text-align: center;
+  margin: 1.5rem 0 1.25rem 0;
+  font-size: 1.55rem;
+  letter-spacing: 0.08em;
+}
+
+.prospect-section {
+  margin-top: 1.25rem;
+}
+
+.prospect-section h3 {
+  margin: 0 0 0.65rem 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.prospect-muted {
+  margin: 0 0 0.65rem 0;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+.prospect-checklist,
+.prospect-bullets {
+  margin: 0.5rem 0 0 0;
+  padding-left: 1.1rem;
+}
+
+.prospect-checklist {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.prospect-checklist.two-col {
+  grid-template-columns: 1fr 1fr;
+}
+
+.prospect-checklist label {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  line-height: 1.45;
+}
+
+.prospect-checklist input[type="checkbox"] {
+  margin-top: 0.2rem;
+}
+
+.prospect-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.prospect-field {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.prospect-field.two,
+.prospect-field.three {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.prospect-field.three {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.prospect-inline {
+  display: inline-flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.prospect-line {
+  border-bottom: 1px solid #111;
+  flex: 1;
+  min-width: 220px;
+  height: 1.2em;
+}
+
+.prospect-line.short {
+  min-width: 140px;
+}
+
+.prospect-bullets li {
+  margin: 0.45rem 0;
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.prospect-table-wrap {
+  overflow-x: auto;
+}
+
+.prospect-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 720px;
+}
+
+.prospect-table th,
+.prospect-table td {
+  border: 1px solid #222;
+  padding: 0.6rem;
+  font-size: 0.95rem;
+}
+
+.prospect-table th {
+  background: #f3f3f3;
+  text-align: left;
+  font-weight: 800;
+}
+
+.prospect-table td.blank {
+  height: 2.1rem;
+}
+
+.prospect-big-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.prospect-big-line {
+  border-bottom: 1px solid #111;
+  height: 1.2rem;
+}
+
+.prospect-sep {
+  border: none;
+  border-top: 1px solid #aaa;
+  margin: 1.5rem 0;
+}
+
+.office-only-title {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
 @media (max-width: 768px) {
   .prospect-download-page {
-    padding-top: 80px;
+    padding-top: calc(95px + env(safe-area-inset-top, 0px));
   }
   
   .prospect-download-hero {
@@ -65,12 +293,74 @@
   .prospect-download-hero h1 {
     font-size: 2rem;
   }
-  
-  .content-wrapper h2 {
-    font-size: 1.5rem;
+
+  .prospect-download-hero-subtitle {
+    font-size: 0.95rem;
+    padding: 0 0.25rem;
+  }
+
+  .prospect-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .prospect-action-btn {
+    width: 100%;
+  }
+
+  .prospect-document {
+    padding: 1.25rem 1rem;
+  }
+
+  .prospect-photo-box {
+    width: 120px;
+    height: 150px;
+  }
+
+  .prospect-checklist.two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .prospect-field {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .prospect-inline {
+    justify-content: flex-start;
+  }
+
+  .prospect-line {
+    min-width: 100%;
   }
   
-  .content-wrapper p {
-    font-size: 1rem;
+  .prospect-field.two,
+  .prospect-field.three {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Print */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .prospect-download-hero {
+    padding: 0 !important;
+    background: #fff !important;
+  }
+  .prospect-download-hero h1,
+  .prospect-download-hero-subtitle {
+    color: #000 !important;
+  }
+  .prospect-download-page {
+    padding-top: 0 !important;
+  }
+  .prospect-document {
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    max-width: none !important;
   }
 }
