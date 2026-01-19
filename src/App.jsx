@@ -36,6 +36,39 @@ function ScrollToTop() {
   return null;
 }
 
+function AppLayout() {
+  const location = useLocation();
+  // Keep normal website chrome (footer/whatsapp) in view mode.
+  // Print/PDF is handled via @media print styles on the form page.
+
+  return (
+    <div className="App">
+      <Header />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/courses" element={<Courses />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/counselling-child-psychology" element={<CounsellingChildPsychology />} />
+          <Route path="/counselling-organizational-psychology" element={<CounsellingOrganizationalPsychology />} />
+          <Route path="/counselling-forensic-psychology" element={<CounsellingForensicPsychology />} />
+          <Route path="/counselling-art-therapy" element={<CounsellingArtTherapy />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<TermsAndConditions />} />
+          <Route path="/cancellation" element={<CancellationPolicy />} />
+          <Route path="/leadership" element={<About />} />
+          <Route path="/research" element={<Gallery />} />
+          <Route path="/admission-procedure" element={<AdmissionProcedure />} />
+          <Route path="/prospect-download" element={<ProspectDownload />} />
+        </Routes>
+      </main>
+      <Footer />
+      <WhatsAppButton />
+    </div>
+  );
+}
+
 function App() {
   useEffect(() => {
     // Initialize scroll animations on mount
@@ -47,30 +80,7 @@ function App() {
       <AppProvider>
         <Router>
           <ScrollToTop />
-          <div className="App">
-            <Header />
-            <main>
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/courses" element={<Courses />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/counselling-child-psychology" element={<CounsellingChildPsychology />} />
-                <Route path="/counselling-organizational-psychology" element={<CounsellingOrganizationalPsychology />} />
-                <Route path="/counselling-forensic-psychology" element={<CounsellingForensicPsychology />} />
-                <Route path="/counselling-art-therapy" element={<CounsellingArtTherapy />} />
-                <Route path="/privacy" element={<PrivacyPolicy />} />
-                <Route path="/terms" element={<TermsAndConditions />} />
-                <Route path="/cancellation" element={<CancellationPolicy />} />
-                <Route path="/leadership" element={<About />} />
-                <Route path="/research" element={<Gallery />} />
-                <Route path="/admission-procedure" element={<AdmissionProcedure />} />
-                <Route path="/prospect-download" element={<ProspectDownload />} />
-              </Routes>
-            </main>
-            <Footer />
-            <WhatsAppButton />
-          </div>
+          <AppLayout />
         </Router>
       </AppProvider>
     </ErrorBoundary>

@@ -1,9 +1,56 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import './ProspectDownload.css';
 import Logo1 from '../assets/icons/Logo1.png';
 
 const ProspectDownload = () => {
+  const formRef = useRef(null);
+  const [isGenerating, setIsGenerating] = useState(false);
+
   const handlePrint = () => window.print();
+  const handleDownloadPdf = async () => {
+    if (!formRef.current) return;
+
+    try {
+      setIsGenerating(true);
+      // Temporarily switch to PDF-friendly layout (tables, margins, page width)
+      formRef.current.classList.add('pdf-export');
+
+      const mod = await import('html2pdf.js');
+      const html2pdf = mod?.default ?? mod;
+
+      const el = formRef.current;
+      const w = el.scrollWidth;
+      const h = el.scrollHeight;
+      const opt = {
+        margin: [6, 6, 6, 6], // mm
+        filename: 'Student_Admission_Form_2026.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: {
+          scale: 2,
+          useCORS: true,
+          backgroundColor: '#ffffff',
+          scrollX: 0,
+          scrollY: 0,
+          windowWidth: w,
+          windowHeight: h,
+          width: w,
+          height: h
+        },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+        pagebreak: { mode: ['css', 'legacy'] }
+      };
+
+      await html2pdf()
+        .set(opt)
+        .from(el)
+        .save();
+    } finally {
+      if (formRef.current) {
+        formRef.current.classList.remove('pdf-export');
+      }
+      setIsGenerating(false);
+    }
+  };
 
   return (
     <div className="prospect-download-page">
@@ -18,15 +65,29 @@ const ProspectDownload = () => {
         <div className="container">
           <div className="content-wrapper">
             <div className="prospect-actions no-print">
-              <button className="prospect-action-btn" type="button" onClick={handlePrint}>
-                Print / Save as PDF
-              </button>
+              <div className="prospect-action-buttons">
+                <button
+                  className="prospect-action-btn"
+                  type="button"
+                  onClick={handleDownloadPdf}
+                  disabled={isGenerating}
+                >
+                  {isGenerating ? 'Generating PDF…' : 'Download PDF'}
+                </button>
+                <button className="prospect-action-btn secondary" type="button" onClick={handlePrint}>
+                  Print
+                </button>
+              </div>
               <p className="prospect-action-hint">
                 Tip: On mobile, choose your browser menu → Print → “Save as PDF”.
               </p>
             </div>
 
-            <article className="prospect-document" aria-label="Student Admission Form 2026">
+            <article
+              ref={formRef}
+              className="prospect-document"
+              aria-label="Student Admission Form 2026"
+            >
               <header className="prospect-letterhead">
                 <div className="prospect-letterhead-left">
                   <img

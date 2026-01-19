@@ -59,6 +59,13 @@
   max-width: 980px;
 }
 
+.prospect-action-buttons {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .prospect-action-btn {
   background: #0E0529;
   color: #fff;
@@ -67,6 +74,17 @@
   padding: 0.85rem 1.2rem;
   font-weight: 700;
   cursor: pointer;
+}
+
+.prospect-action-btn.secondary {
+  background: transparent;
+  color: #0E0529;
+  border: 2px solid #0E0529;
+}
+
+.prospect-action-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
 }
 
 .prospect-action-hint {
@@ -337,6 +355,11 @@
     width: 100%;
   }
 
+  .prospect-action-buttons {
+    width: 100%;
+    flex-direction: column;
+  }
+
   .prospect-document {
     padding: 1.5rem 1rem;
   }
@@ -386,11 +409,95 @@
   }
 }
 
+/* PDF export mode (used by the Download PDF button) */
+.prospect-document.pdf-export {
+  /* A4 content width = 210mm - (6mm left + 6mm right) = 198mm */
+  width: 198mm;
+  max-width: 198mm;
+  margin: 0;
+  box-shadow: none;
+  border: none;
+  padding: 10mm 10mm;
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+.prospect-document.pdf-export .prospect-letterhead {
+  /* Use mm so it fits A4 content width reliably */
+  grid-template-columns: 46mm 1fr 46mm;
+  gap: 5mm;
+  align-items: start;
+}
+
+.prospect-document.pdf-export .prospect-logo {
+  width: 44mm;
+  max-width: 44mm;
+}
+
+.prospect-document.pdf-export .prospect-photo-box {
+  width: 44mm;
+  height: 60mm;
+  box-sizing: border-box;
+}
+
+.prospect-document.pdf-export .prospect-letterhead-title {
+  font-size: 1.7rem;
+}
+
+.prospect-document.pdf-export .prospect-letterhead-subtitle {
+  font-size: 1.02rem;
+}
+
+.prospect-document.pdf-export .prospect-letterhead-unit {
+  font-size: 0.85rem;
+}
+
+.prospect-document.pdf-export .prospect-field,
+.prospect-document.pdf-export .prospect-inline {
+  min-width: 0;
+}
+
+.prospect-document.pdf-export .prospect-line {
+  min-width: 0;
+}
+
+.prospect-document.pdf-export .prospect-table-wrap {
+  overflow: visible;
+}
+
+.prospect-document.pdf-export .prospect-table {
+  min-width: 0;
+  width: 100%;
+  table-layout: fixed;
+  page-break-inside: avoid;
+}
+
+.prospect-document.pdf-export .prospect-table th,
+.prospect-document.pdf-export .prospect-table td {
+  font-size: 0.78rem;
+  padding: 0.4rem;
+  word-break: break-word;
+  page-break-inside: avoid;
+}
+
+.prospect-document.pdf-export .prospect-table td.blank {
+  height: 1.6rem;
+}
+
 /* Print */
 @media print {
   .no-print {
     display: none !important;
   }
+
+  /* Ensure the website chrome never appears in the PDF */
+  .header,
+  .footer,
+  footer,
+  .whatsapp-float {
+    display: none !important;
+  }
+
   .prospect-download-page {
     padding-top: 0 !important;
     background: #fff !important;
