@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import logo from "../../assets/icons/Logo1.png";
 import "./ApplyModal.css";
 
@@ -9,6 +10,17 @@ const SCRIPT_URL =
 const ApplyModal = ({ isOpen, onClose, formData, onFormChange }) => {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState(null);
+
+  // Prevent background scroll (especially important on iOS Safari)
+  useEffect(() => {
+    if (typeof document === "undefined") return;
+    if (!isOpen) return;
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [isOpen]);
 
   if (!isOpen) return null;
 
@@ -53,7 +65,7 @@ const ApplyModal = ({ isOpen, onClose, formData, onFormChange }) => {
     }
   };
   
-  return (
+  const modal = (
     <div className="apply-modal-overlay" onClick={onClose}>
       <div
         className="apply-modal-content"
@@ -196,7 +208,9 @@ const ApplyModal = ({ isOpen, onClose, formData, onFormChange }) => {
                 <option value="Advanced Diploma in Counselling and Forensic Psychology">
                   Advanced Diploma in Counselling and Forensic Psychology
                 </option>
-                <option value="Advanced Diploma in Art Therapy">Advanced Diploma in Art Therapy</option>
+                <option value="Advanced Diploma in Art Therapy">
+                  Advanced Diploma in Art Therapy
+                </option>
               </select>
             </div>
           </div>
@@ -216,10 +230,14 @@ const ApplyModal = ({ isOpen, onClose, formData, onFormChange }) => {
           </label>
 
           <button type="submit" className="apply-form-submit" disabled={loading}>
-            {loading ? 'Submitting...' : 'Submit'}
+            {loading ? "Submitting..." : "Submit"}
           </button>
           {message && (
-            <p className={`apply-form-message ${message.type === 'error' ? 'error' : 'success'}`}>
+            <p
+              className={`apply-form-message ${
+                message.type === "error" ? "error" : "success"
+              }`}
+            >
               {message.text}
             </p>
           )}
@@ -227,6 +245,9 @@ const ApplyModal = ({ isOpen, onClose, formData, onFormChange }) => {
       </div>
     </div>
   );
+
+  if (typeof document === "undefined") return null;
+  return createPortal(modal, document.body);
 };
 
 export default ApplyModal;

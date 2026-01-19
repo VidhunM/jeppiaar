@@ -739,12 +739,13 @@
 @supports (-webkit-touch-callout: none) {
   @media (max-width: 768px) {
     .apply-modal-overlay {
-      align-items: center !important;
+      /* Keep the modal clear of the fixed header on iPhones */
+      align-items: flex-start !important;
       justify-content: center !important;
-      padding: env(safe-area-inset-top, 20px)
-        env(safe-area-inset-right, 20px)
-        env(safe-area-inset-bottom, 20px)
-        env(safe-area-inset-left, 20px) !important;
+      padding-top: calc(1rem + env(safe-area-inset-top, 0px) + 80px) !important;
+      padding-right: calc(0.75rem + env(safe-area-inset-right, 0px)) !important;
+      padding-bottom: calc(1rem + env(safe-area-inset-bottom, 0px)) !important;
+      padding-left: calc(0.75rem + env(safe-area-inset-left, 0px)) !important;
     }
 
     .apply-modal-content {
