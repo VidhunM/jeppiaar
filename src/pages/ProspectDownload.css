@@ -3,6 +3,7 @@
   /* account for fixed header + iPhone safe area */
   padding-top: calc(120px + env(safe-area-inset-top, 0px));
   background: #f2f2f2;
+  overflow-x: hidden;
 }
 
 .prospect-page-banner {
@@ -106,6 +107,10 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   color: #111;
   font-family: "Times New Roman", Times, serif;
+  box-sizing: border-box;
+  max-width: 100%;
+  width: 100%;
+  overflow-x: hidden; /* prevent any stray horizontal overflow on mobile */
 }
 
 /* Letterhead */
@@ -208,7 +213,9 @@
 }
 
 .prospect-checklist.two-col {
+  display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 0.65rem 1rem;
 }
 
 .prospect-checklist li {
@@ -237,6 +244,8 @@
   align-items: baseline;
   justify-content: space-between;
   gap: 1rem;
+  min-width: 0;
+  flex-wrap: wrap; /* allow label + line to wrap instead of overflowing */
 }
 
 .prospect-field.two,
@@ -250,6 +259,17 @@
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+/* Ensure nested multi-field rows render lines correctly */
+.prospect-field.two > div,
+.prospect-field.three > div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  min-width: 0;
+  flex-wrap: wrap;
+}
+
 .prospect-inline {
   display: inline-flex;
   gap: 1rem;
@@ -259,13 +279,15 @@
 
 .prospect-line {
   border-bottom: 1px solid #111;
-  flex: 1;
-  min-width: 220px;
+  flex: 1 1 220px; /* preferred width, but can shrink */
+  min-width: 0; /* critical: never force horizontal overflow */
   height: 1.2em;
+  display: block;
 }
 
 .prospect-line.short {
-  min-width: 140px;
+  flex: 1 1 140px;
+  min-width: 0;
 }
 
 .prospect-bullets li {
@@ -276,7 +298,9 @@
 }
 
 .prospect-table-wrap {
+  max-width: 100%;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .prospect-table {
@@ -290,6 +314,7 @@
   border: 1px solid #222;
   padding: 0.6rem;
   font-size: 0.95rem;
+  word-break: break-word;
 }
 
 .prospect-table th {
@@ -386,6 +411,23 @@
     height: 190px;
   }
 
+  .prospect-letterhead-title {
+    font-size: 1.6rem;
+  }
+
+  .prospect-letterhead-subtitle {
+    font-size: 1.05rem;
+  }
+
+  .prospect-letterhead-unit {
+    font-size: 0.9rem;
+  }
+
+  .prospect-form-title {
+    margin: 1.25rem 0 0.9rem 0;
+    font-size: 1.35rem;
+  }
+
   .prospect-checklist.two-col {
     grid-template-columns: 1fr;
   }
@@ -393,6 +435,14 @@
   .prospect-field {
     flex-direction: column;
     align-items: flex-start;
+    width: 100%;
+  }
+
+  .prospect-field.two > div,
+  .prospect-field.three > div {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
   }
 
   .prospect-inline {
@@ -400,12 +450,63 @@
   }
 
   .prospect-line {
-    min-width: 100%;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    flex: none;
+  }
+
+  .prospect-line.short {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  /* Keep tables contained: scroll inside the document (not the page) */
+  .prospect-table-wrap {
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .prospect-table {
+    width: 100%;
+    min-width: 0;
+    table-layout: fixed;
+  }
+
+  .prospect-table th,
+  .prospect-table td {
+    font-size: 0.85rem;
+    padding: 0.45rem;
+    word-break: break-word;
   }
   
   .prospect-field.two,
   .prospect-field.three {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .prospect-download-content .container {
+    padding: 0 1rem;
+  }
+
+  .prospect-document {
+    padding: 1.25rem 0.85rem;
+  }
+
+  .prospect-table {
+    width: 100%;
+    min-width: 0;
+    table-layout: fixed;
+  }
+
+  .prospect-table th,
+  .prospect-table td {
+    font-size: 0.8rem;
+    padding: 0.4rem;
   }
 }
 
