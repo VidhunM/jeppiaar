@@ -462,21 +462,13 @@ const Header = () => {
             </div>
             <Link 
               to="/research" 
-              onClick={() => {
-                setIsMobileMenuOpen(false);
-              }}
-            >
-              Gallery
-            </Link>
-            <Link 
-              to="/certificate-courses" 
               onClick={(e) => {
                 e.preventDefault();
                 setShowUnderConstruction(true);
                 setIsMobileMenuOpen(false);
               }}
             >
-              Certificate Courses
+              Gallery
             </Link>
             <Link 
               to="/contact" 

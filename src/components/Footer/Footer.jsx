@@ -119,7 +119,7 @@ const Footer = () => {
               <li><Link to="/counselling-organizational-psychology">Advanced Diploma in Counselling and Organizational Psychology</Link></li>
               <li><Link to="/counselling-forensic-psychology">Advanced Diploma in Counselling and Forensic Psychology</Link></li>
               <li><Link to="/counselling-art-therapy">Advanced Diploma in Art Therapy</Link></li>
-              <li><a href="#" onClick={handleAdmissions}>Admissions 2026</a></li>
+              <li><Link to="/admission-procedure">Admissions 2026</Link></li>
             </ul>
           </div>
 

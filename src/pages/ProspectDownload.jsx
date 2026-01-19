@@ -60,7 +60,7 @@ const ProspectDownload = () => {
           <p>Student Admission Form 2026</p>
         </div>
       </section>
-
+      
       <section className="prospect-download-content">
         <div className="container">
           <div className="content-wrapper">

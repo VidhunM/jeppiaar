@@ -228,7 +228,7 @@ const LeadGeneration = ({ onShowConstructionPopup }) => {
                 </select>
                 
               </div>
-              <div className="form-row">
+              {/* <div className="form-row">
               <select name="course" value={form.course} onChange={handleChange} className="course-select" required>
                   <option value="">Select Course</option>
                   <option value="Learning Disabilities">Learning Disabilities</option>
@@ -241,7 +241,7 @@ const LeadGeneration = ({ onShowConstructionPopup }) => {
                   <option value="NeuroLinguistic Program Basics">NeuroLinguistic Program Basics</option>
                   <option value="NeuroLinguistic Program Advanced">NeuroLinguistic Program Advanced</option>
                 </select>
-              </div>
+              </div> */}
               <label className="checkbox-label">
                 <input name="consent" type="checkbox" checked={form.consent} onChange={handleChange} required />
                 <span>I authorize Jeppiaar Academy of Psychology & Research and its associates to contact me with updates and notification</span>
