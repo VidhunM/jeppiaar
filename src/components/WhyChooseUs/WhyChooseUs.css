@@ -94,13 +94,14 @@
   }
 
   .image-item {
-    flex: 0 0 33.333%;
-    min-width: 33.333%;
+    /* Mobile: show ONE image per slide */
+    flex: 0 0 100%;
+    min-width: 100%;
     padding: 0 0.5rem;
   }
 
   .group-image {
-    max-width: 200px;
+    max-width: 420px;
   }
 }
 
@@ -114,12 +115,13 @@
   }
 
   .image-item {
-    flex: 0 0 33.333%;
-    min-width: 33.333%;
+    /* Small mobile: still ONE image per slide */
+    flex: 0 0 100%;
+    min-width: 100%;
     padding: 0 0.4rem;
   }
 
   .group-image {
-    max-width: 160px;
+    max-width: 360px;
   }
 }

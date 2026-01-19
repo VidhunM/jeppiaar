@@ -772,6 +772,14 @@
 
   .introduction-text p {
     font-size: 1.0rem !important;
+    text-align: justify;
+    text-align-last: left;
+    text-justify: inter-word;
+    /* Better justification on iOS/Android */
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    overflow-wrap: break-word;
+    word-break: normal;
   }
 
   .core-value-card h4 {
@@ -988,6 +996,14 @@
 
   .introduction-text p {
     font-size: 0.95rem !important;
+    text-align: justify;
+    text-align-last: left;
+    text-justify: inter-word;
+    /* Better justification on iOS/Android */
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    overflow-wrap: break-word;
+    word-break: normal;
   }
 
   .core-value-card h4 {
@@ -1062,7 +1078,11 @@
 
   .section-subtitle {
     font-size: 1rem;
-  }
+  /* Mobile: core values paragraph should be properly justified */
+  text-align: justify;
+  text-align-last: center;
+  word-break: normal;
+}
 
   .core-values-grid {
     grid-template-columns: 1fr;

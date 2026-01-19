@@ -8,6 +8,10 @@ import group5Image from '../../assets/images/Group6.png';
 
 const WhyChooseUs = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [slidePct, setSlidePct] = useState(() => {
+    if (typeof window === 'undefined') return 33.333;
+    return window.matchMedia('(max-width: 768px)').matches ? 100 : 33.333;
+  });
 
   const images = [
     { src: groupImage, alt: 'Why Choose Us 1' },
@@ -19,6 +23,25 @@ const WhyChooseUs = () => {
 
   // Create infinite loop by duplicating images for seamless scrolling
   const duplicatedImages = [...images, ...images];
+
+  // Responsive slide width (mobile: 1 image, desktop: 3 images)
+  useEffect(() => {
+    if (typeof window === 'undefined') return undefined;
+
+    const mql = window.matchMedia('(max-width: 768px)');
+    const update = () => setSlidePct(mql.matches ? 100 : 33.333);
+
+    update();
+
+    // Safari fallback: addListener/removeListener
+    if (typeof mql.addEventListener === 'function') {
+      mql.addEventListener('change', update);
+      return () => mql.removeEventListener('change', update);
+    }
+
+    mql.addListener(update);
+    return () => mql.removeListener(update);
+  }, []);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -40,7 +63,7 @@ const WhyChooseUs = () => {
             <div
               className="images-track"
               style={{ 
-                transform: `translateX(-${currentIndex * 33.333}%)`,
+                transform: `translateX(-${currentIndex * slidePct}%)`,
                 transition: currentIndex === 0 ? 'none' : 'transform 2s ease-in-out'
               }}
             >

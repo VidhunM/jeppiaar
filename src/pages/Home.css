@@ -883,7 +883,7 @@
   }
 
   .admissions-banner {
-    min-height: 450px;
+    min-height: 500px;
     background-attachment: scroll !important;
     -webkit-background-size: cover !important;
     background-size: cover !important;
@@ -1117,7 +1117,7 @@
   }
 
   .admissions-banner {
-    min-height: 400px;
+    min-height: 440px;
     background-attachment: scroll !important;
     -webkit-background-size: cover !important;
     background-size: cover !important;

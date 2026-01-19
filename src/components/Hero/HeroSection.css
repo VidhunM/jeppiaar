@@ -1115,8 +1115,8 @@
 
 @media (max-width: 768px) {
   .hero-slide {
-    height: 31.5vh;
-    min-height: 280px;
+    height: 36vh;
+    min-height: 340px;
     -webkit-background-size: cover !important;
     background-size: cover !important;
     background-attachment: scroll !important;
@@ -1323,8 +1323,8 @@
 
 @media (max-width: 480px) {
   .hero-slide {
-    height: 28vh;
-    min-height: 245px;
+    height: 32vh;
+    min-height: 300px;
     -webkit-background-size: cover !important;
     background-size: cover !important;
     background-attachment: scroll !important;
