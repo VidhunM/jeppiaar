@@ -3566,6 +3566,17 @@ img {
     margin-bottom: 0.95rem !important;
     font-family: 'Inter', sans-serif !important;
   }
+
+  /* Mobile: add a touch more breathing room in intro */
+  .counselling-forensic-psychology-page .overview-section .overview-text p,
+  .counselling-forensic-psychology-page .overview-text p {
+    margin-top: 0.35rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .counselling-forensic-psychology-page .overview-section .enroll-now-btn {
+    margin-top: 0.25rem !important;
+  }
 }
 
 @media (max-width: 480px) {
@@ -3588,6 +3599,17 @@ img {
     line-height: 1.4 !important;
     margin-bottom: 0.8rem !important;
     font-family: 'Inter', sans-serif !important;
+  }
+
+  /* Mobile: add a touch more breathing room in intro */
+  .counselling-forensic-psychology-page .overview-section .overview-text p,
+  .counselling-forensic-psychology-page .overview-text p {
+    margin-top: 0.3rem !important;
+    margin-bottom: 0.95rem !important;
+  }
+
+  .counselling-forensic-psychology-page .overview-section .enroll-now-btn {
+    margin-top: 0.25rem !important;
   }
 
   /* Ensure left alignment for all mobile devices */

@@ -3629,6 +3629,17 @@ img {
     font-family: 'Roboto', sans-serif !important;
     line-height: 1.2;
   }
+
+  /* Mobile: add a touch more breathing room in intro */
+  .counselling-child-psychology-page .overview-section .overview-text p,
+  .counselling-child-psychology-page .overview-text p {
+    margin-top: 0.35rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .counselling-child-psychology-page .overview-section .enroll-now-btn {
+    margin-top: 0.25rem !important;
+  }
 }
 
 @media (max-width: 480px) {
@@ -3652,6 +3663,17 @@ img {
     font-size: 0.85rem !important;
     line-height: 1.4 !important;
     margin-bottom: 0.8rem !important;
+  }
+
+  /* Mobile: add a touch more breathing room in intro */
+  .counselling-child-psychology-page .overview-section .overview-text p,
+  .counselling-child-psychology-page .overview-text p {
+    margin-top: 0.3rem !important;
+    margin-bottom: 0.95rem !important;
+  }
+
+  .counselling-child-psychology-page .overview-section .enroll-now-btn {
+    margin-top: 0.25rem !important;
   }
 
   .counselling-child-psychology-page .highlights-section .highlights-subtitle {

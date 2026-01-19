@@ -991,6 +991,17 @@
     margin-bottom: 0.95rem !important;
     font-family: 'Inter', sans-serif !important;
   }
+
+  /* Mobile: add a touch more breathing room in intro */
+  .counselling-art-therapy-page .overview-section .overview-text p,
+  .counselling-art-therapy-page .overview-text p {
+    margin-top: 0.35rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .counselling-art-therapy-page .overview-section .enroll-now-btn {
+    margin-top: 0.25rem !important;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1018,6 +1029,17 @@
     line-height: 1.4 !important;
     margin-bottom: 0.8rem !important;
     font-family: 'Inter', sans-serif !important;
+  }
+
+  /* Mobile: add a touch more breathing room in intro */
+  .counselling-art-therapy-page .overview-section .overview-text p,
+  .counselling-art-therapy-page .overview-text p {
+    margin-top: 0.3rem !important;
+    margin-bottom: 0.95rem !important;
+  }
+
+  .counselling-art-therapy-page .overview-section .enroll-now-btn {
+    margin-top: 0.25rem !important;
   }
 
   /* Ensure vertical stacking on small mobile screens */
