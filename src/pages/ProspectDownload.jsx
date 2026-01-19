@@ -1,20 +1,19 @@
 import React from 'react';
 import './ProspectDownload.css';
+import Logo1 from '../assets/icons/Logo1.png';
 
 const ProspectDownload = () => {
   const handlePrint = () => window.print();
 
   return (
     <div className="prospect-download-page">
-      <section className="prospect-download-hero">
+      <section className="prospect-page-banner no-print">
         <div className="container">
           <h1>Prospect Download</h1>
-          <p className="prospect-download-hero-subtitle">
-            View the Student Admission Form 2026 below. Use the button to print or save it as a PDF.
-          </p>
+          <p>Student Admission Form 2026</p>
         </div>
       </section>
-      
+
       <section className="prospect-download-content">
         <div className="container">
           <div className="content-wrapper">
@@ -28,14 +27,26 @@ const ProspectDownload = () => {
             </div>
 
             <article className="prospect-document" aria-label="Student Admission Form 2026">
-              <header className="prospect-header">
-                <div className="prospect-brand">
-                  <div className="prospect-brand-title">JEPPIAAR ACADEMY</div>
-                  <div className="prospect-brand-subtitle">OF PSYCHOLOGY AND RESEARCH</div>
-                  <div className="prospect-brand-unit">(A Unit of Sancta Maria Educational Trust)</div>
+              <header className="prospect-letterhead">
+                <div className="prospect-letterhead-left">
+                  <img
+                    className="prospect-logo"
+                    src={Logo1}
+                    alt="Jeppiaar Academy of Psychology and Research"
+                    loading="eager"
+                  />
                 </div>
-                <div className="prospect-photo-box" aria-label="Photo box">
-                  <div className="prospect-photo-label">PHOTO</div>
+
+                <div className="prospect-letterhead-center">
+                  <div className="prospect-letterhead-title">JEPPIAAR ACADEMY</div>
+                  <div className="prospect-letterhead-subtitle">Of PSYCHOLOGY and RESEARCH</div>
+                  <div className="prospect-letterhead-unit">(A Unit of Sancta Maria Educational Trust)</div>
+                </div>
+
+                <div className="prospect-letterhead-right" aria-label="Photo box">
+                  <div className="prospect-photo-box">
+                    <div className="prospect-photo-label">PHOTO</div>
+                  </div>
                 </div>
               </header>
 
@@ -44,14 +55,14 @@ const ProspectDownload = () => {
               <section className="prospect-section">
                 <h3>1. Programme Applied For (Choose any one)</h3>
                 <ul className="prospect-checklist">
-                  <li><label><input type="checkbox" disabled /> Advanced Diploma in Counselling and Child Psychology - Weekday</label></li>
-                  <li><label><input type="checkbox" disabled /> Advanced Diploma in Counselling and Child Psychology - Weekend</label></li>
-                  <li><label><input type="checkbox" disabled /> Advanced Diploma in Counselling and Organisational Psychology - Weekday</label></li>
-                  <li><label><input type="checkbox" disabled /> Advanced Diploma in Counselling and Organisational Psychology - Weekend</label></li>
-                  <li><label><input type="checkbox" disabled /> Advanced Diploma in Counselling and Forensic Psychology - Weekday</label></li>
-                  <li><label><input type="checkbox" disabled /> Advanced Diploma in Counselling and Forensic Psychology - Weekend</label></li>
-                  <li><label><input type="checkbox" disabled /> Advanced Diploma in Art Therapy - Friday</label></li>
-                  <li><label><input type="checkbox" disabled /> Advanced Diploma in Art Therapy - Saturday</label></li>
+                  <li><span className="prospect-box">☐</span> Advanced Diploma in Counselling and Child Psychology - Weekday</li>
+                  <li><span className="prospect-box">☐</span> Advanced Diploma in Counselling and Child Psychology - Weekend</li>
+                  <li><span className="prospect-box">☐</span> Advanced Diploma in Counselling and Organisational Psychology - Weekday</li>
+                  <li><span className="prospect-box">☐</span> Advanced Diploma in Counselling and Organisational Psychology - Weekend</li>
+                  <li><span className="prospect-box">☐</span> Advanced Diploma in Counselling and Forensic Psychology - Weekday</li>
+                  <li><span className="prospect-box">☐</span> Advanced Diploma in Counselling and Forensic Psychology - Weekend</li>
+                  <li><span className="prospect-box">☐</span> Advanced Diploma in Art Therapy - Friday</li>
+                  <li><span className="prospect-box">☐</span> Advanced Diploma in Art Therapy - Saturday</li>
                 </ul>
               </section>
 
@@ -62,9 +73,9 @@ const ProspectDownload = () => {
                   <div className="prospect-field">
                     <span>Gender</span>
                     <span className="prospect-inline">
-                      <label><input type="checkbox" disabled /> Male</label>
-                      <label><input type="checkbox" disabled /> Female</label>
-                      <label><input type="checkbox" disabled /> Other</label>
+                      <span><span className="prospect-box">☐</span> Male</span>
+                      <span><span className="prospect-box">☐</span> Female</span>
+                      <span><span className="prospect-box">☐</span> Other</span>
                     </span>
                   </div>
                   <div className="prospect-field"><span>Date of Birth</span><span className="prospect-line short" /></div>
@@ -162,24 +173,24 @@ const ProspectDownload = () => {
               <section className="prospect-section">
                 <h3>7. Are you eligible for scholarship?</h3>
                 <ul className="prospect-checklist">
-                  <li><label><input type="checkbox" disabled /> First Graduate in the family (REV – 104)</label></li>
-                  <li><label><input type="checkbox" disabled /> Economically Weaker Section (REV – 122)</label></li>
-                  <li><label><input type="checkbox" disabled /> Voxdemy Basics / Advanced Student</label></li>
-                  <li><label><input type="checkbox" disabled /> University Rank Holder in UG / PG</label></li>
-                  <li><label><input type="checkbox" disabled /> NRI Student</label></li>
-                  <li><label><input type="checkbox" disabled /> Not Eligible</label></li>
+                  <li><span className="prospect-box">☐</span> First Graduate in the family (REV – 104)</li>
+                  <li><span className="prospect-box">☐</span> Economically Weaker Section (REV – 122)</li>
+                  <li><span className="prospect-box">☐</span> Voxdemy Basics / Advanced Student</li>
+                  <li><span className="prospect-box">☐</span> University Rank Holder in UG / PG</li>
+                  <li><span className="prospect-box">☐</span> NRI Student</li>
+                  <li><span className="prospect-box">☐</span> Not Eligible</li>
                 </ul>
               </section>
 
               <section className="prospect-section">
                 <h3>8. Document copies Enclosed (Tick applicable)</h3>
                 <ul className="prospect-checklist two-col">
-                  <li><label><input type="checkbox" disabled /> SSLC / 10th Mark Sheet</label></li>
-                  <li><label><input type="checkbox" disabled /> HSC / 12th Mark Sheet</label></li>
-                  <li><label><input type="checkbox" disabled /> Degree Certificate(s) and Mark sheets</label></li>
-                  <li><label><input type="checkbox" disabled /> Aadhaar card</label></li>
-                  <li><label><input type="checkbox" disabled /> Transfer / Migration Certificate (optional)</label></li>
-                  <li><label><input type="checkbox" disabled /> Experience Certificate (if applicable)</label></li>
+                  <li><span className="prospect-box">☐</span> SSLC / 10th Mark Sheet</li>
+                  <li><span className="prospect-box">☐</span> HSC / 12th Mark Sheet</li>
+                  <li><span className="prospect-box">☐</span> Degree Certificate(s) and Mark sheets</li>
+                  <li><span className="prospect-box">☐</span> Aadhaar card</li>
+                  <li><span className="prospect-box">☐</span> Transfer / Migration Certificate (optional)</li>
+                  <li><span className="prospect-box">☐</span> Experience Certificate (if applicable)</li>
                 </ul>
               </section>
 
@@ -207,26 +218,26 @@ const ProspectDownload = () => {
                   <div className="prospect-field">
                     <span>Application fee paid as</span>
                     <span className="prospect-inline">
-                      <label><input type="checkbox" disabled /> Cash</label>
-                      <label><input type="checkbox" disabled /> DD</label>
-                      <label><input type="checkbox" disabled /> QR</label>
-                      <label><input type="checkbox" disabled /> Bank Transfer</label>
+                      <span><span className="prospect-box">☐</span> Cash</span>
+                      <span><span className="prospect-box">☐</span> DD</span>
+                      <span><span className="prospect-box">☐</span> QR</span>
+                      <span><span className="prospect-box">☐</span> Bank Transfer</span>
                     </span>
                   </div>
                   <div className="prospect-field"><span>Interview Date</span><span className="prospect-line short" /></div>
                   <div className="prospect-field">
                     <span>Interview Status</span>
                     <span className="prospect-inline">
-                      <label><input type="checkbox" disabled /> Scheduled</label>
-                      <label><input type="checkbox" disabled /> Completed</label>
+                      <span><span className="prospect-box">☐</span> Scheduled</span>
+                      <span><span className="prospect-box">☐</span> Completed</span>
                     </span>
                   </div>
                   <div className="prospect-field">
                     <span>Admission Status</span>
                     <span className="prospect-inline">
-                      <label><input type="checkbox" disabled /> Selected</label>
-                      <label><input type="checkbox" disabled /> Waitlisted</label>
-                      <label><input type="checkbox" disabled /> Not Selected</label>
+                      <span><span className="prospect-box">☐</span> Selected</span>
+                      <span><span className="prospect-box">☐</span> Waitlisted</span>
+                      <span><span className="prospect-box">☐</span> Not Selected</span>
                     </span>
                   </div>
                   <div className="prospect-field"><span>Programme Offered</span><span className="prospect-line" /></div>
