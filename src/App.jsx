@@ -12,6 +12,7 @@ import Contact from './pages/Contact';
 import Gallery from './pages/Gallery';
 import AdmissionProcedure from './pages/AdmissionProcedure';
 import ProspectDownload from './pages/ProspectDownload';
+import ApplyOnline from './pages/ApplyOnline';
 import CounsellingChildPsychology from './pages/CounsellingChildPsychology';
 import CounsellingOrganizationalPsychology from './pages/CounsellingOrganizationalPsychology';
 import CounsellingForensicPsychology from './pages/CounsellingForensicPsychology';
@@ -60,6 +61,7 @@ function AppLayout() {
           <Route path="/leadership" element={<About />} />
           <Route path="/research" element={<Gallery />} />
           <Route path="/admission-procedure" element={<AdmissionProcedure />} />
+          <Route path="/apply-online" element={<ApplyOnline />} />
           <Route path="/prospect-download" element={<ProspectDownload />} />
         </Routes>
       </main>

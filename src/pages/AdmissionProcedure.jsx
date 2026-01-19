@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './AdmissionProcedure.css';
 
 const AdmissionProcedure = () => {
@@ -10,6 +11,14 @@ const AdmissionProcedure = () => {
           <p className="admission-procedure-hero-subtitle">
             Jeppiaar Academy of Psychology and Research follows a transparent and student-friendly admission process to ensure the selection of motivated learners committed to the field of psychology.
           </p>
+          <div className="admission-hero-actions">
+            <Link className="admission-apply-btn" to="/apply-online">
+              Apply Now (Online)
+            </Link>
+            <Link className="admission-apply-btn secondary" to="/prospect-download">
+              Download Form (PDF)
+            </Link>
+          </div>
         </div>
       </section>
       
