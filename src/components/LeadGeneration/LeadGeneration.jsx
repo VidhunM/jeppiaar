@@ -238,6 +238,8 @@ const LeadGeneration = ({ onShowConstructionPopup }) => {
                   <option value="Mindfulness-Based Therapy">Mindfulness-Based Therapy</option>
                   <option value="Emotion-Freedom Technique (EFT)">Emotion-Freedom Technique (EFT)</option>
                   <option value="Marital Counselling">Marital Counselling</option>
+                  <option value="NeuroLinguistic Program Basics">NeuroLinguistic Program Basics</option>
+                  <option value="NeuroLinguistic Program Advanced">NeuroLinguistic Program Advanced</option>
                 </select>
               </div>
               <label className="checkbox-label">

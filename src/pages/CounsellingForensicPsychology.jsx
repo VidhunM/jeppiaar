@@ -184,6 +184,7 @@ const CounsellingForensicPsychology = () => {
                   <li>Weekday Morning Batch</li>
                   <li>Monday - Thursday</li>
                   <li>9:00 AM  -  1:00 PM</li>
+                  <li>Classes start on July 15</li>
                   </ul>
                 </div>
                 <div className="batch-box">
@@ -193,6 +194,7 @@ const CounsellingForensicPsychology = () => {
                   <li>Weekend Evening Batch</li>
                   <li>Saturday & Sunday</li>
                   <li>2:00 PM  - 8:00 PM</li>
+                  <li>Classes start on June 20</li>
                   </ul>
                 </div>
               </div>

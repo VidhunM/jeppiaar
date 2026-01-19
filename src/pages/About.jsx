@@ -189,7 +189,7 @@ Augustine Thilak is committed to fostering an environment that encourages both a
             <div className="introduction-text scroll-from-left">
               <h2>JEPPIAAR ACADEMY<br/> <span style={{ fontSize: '0.85em' }}>OF PSYCHOLOGY AND RESEARCH</span></h2>
               <p>
-              Jeppiaar Academy of Psychology and Research was established to bridge the gap between psychology education and real-world application. With a vision to nurture ethical, skilled, and research-oriented professionals, the academy offers advanced courses aligned with global mental health standards.
+              Jeppiaar Academy of Psychology and Research was established to bridge the gap between psychology education and real world application. With a vision to nurture ethical, skilled, and research-oriented professionals, the academy offers advanced courses aligned with global mental health standards.
               </p>
               <p>
               The academy provides advanced diploma programs in key domains of psychology, including Counselling and Child Psychology, Counselling and Organisational Psychology, Counselling and Forensic Psychology, and Art Therapy.

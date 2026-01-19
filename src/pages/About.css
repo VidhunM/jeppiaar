@@ -48,7 +48,7 @@
 
 .introduction-text {
   flex: 1;
-  max-width: 1200px;
+  max-width: 1400px;
   text-align: center;
   margin: 0 auto;
   position: relative;
@@ -81,7 +81,7 @@
   text-justify: inter-word;   
   hyphens: none;
   word-break: normal;
-  max-width: 1100px;
+  max-width: 1180px;
   text-align-last: center;
   margin-left: auto;
   margin-right: auto; 

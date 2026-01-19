@@ -473,6 +473,16 @@ const Header = () => {
               Gallery
             </Link>
             <Link 
+              to="/certificate-courses" 
+              onClick={(e) => {
+                e.preventDefault();
+                setShowUnderConstruction(true);
+                setIsMobileMenuOpen(false);
+              }}
+            >
+              Certificate Courses
+            </Link>
+            <Link 
               to="/contact" 
               onClick={() => {
                 setIsMobileMenuOpen(false);
@@ -483,15 +493,6 @@ const Header = () => {
             <button 
               className="cta-button mobile-menu-cta" 
               onClick={() => {
-                openApplyModal();
-                setIsMobileMenuOpen(false);
-              }}
-            >
-              Join Us Now
-            </button>
-            <button 
-              className="cta-button mobile-menu-cta" 
-              onClick={() => {
                 setShowUnderConstruction(true);
                 setIsMobileMenuOpen(false);
               }}
@@ -499,13 +500,6 @@ const Header = () => {
               Login
             </button>
           </nav>
-
-          <button 
-            className="cta-button desktop-cta" 
-            onClick={openApplyModal}
-          >
-            Join Us Now
-          </button>
 
           <button 
             className="cta-button desktop-cta" 

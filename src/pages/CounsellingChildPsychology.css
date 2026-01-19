@@ -388,7 +388,15 @@ img {
 }
 
 .counselling-child-psychology-page .highlights-section {
-  padding: 0;
+  padding: 1.5rem 0 0 0;
+}
+
+.counselling-child-psychology-page .highlights-section .highlights-content {
+  padding-top: 1rem;
+}
+
+.counselling-child-psychology-page .highlights-section .highlights-text {
+  padding-top: 1.5rem !important;
 }
 
 .counselling-child-psychology-page .highlights-section .highlights-image {
@@ -437,7 +445,7 @@ img {
 }
 
 .highlights-section .highlights-text {
-  padding-top: 0;
+  padding-top: 1.5rem;
   padding-bottom: 2rem;
   padding-right: 6%;
   display: flex;
@@ -447,7 +455,7 @@ img {
 .highlights-section .highlights-subtitle {
   font-family: 'Inter', sans-serif !important;
   font-size: 1.2rem !important;
-  margin-top: -3rem;
+  margin-top: 3rem;
   margin-bottom: 0.4rem;
   color: white;
   opacity: 0.95;

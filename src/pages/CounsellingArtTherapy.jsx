@@ -87,7 +87,7 @@ const CounsellingArtTherapy = () => {
 
   const careers = [
     { title: 'School / Educational Art Therapy facilitator', image: at1Image },
-    { title: 'Clinical Art Therapist', image: at2Image },
+    // { title: 'Clinical Art Therapist', image: at2Image },
     { title: 'Community & NGO Art Therapy Facilitator', image: at3Image },
     { title: 'Private Practice / Wellness Consultant', image: at4Image }
   ];
@@ -188,6 +188,7 @@ The Advanced Diploma in Art Therapy provides a strong foundation in therapeutic 
                   <li>Weekend Evening Batch</li>
                   <li>Friday</li>
                   <li>2:00 PM - 8:00 PM</li>
+                  <li>Classes start on July 19</li>
                   </ul>
                 </div>
                 <div className="batch-box">
@@ -197,6 +198,7 @@ The Advanced Diploma in Art Therapy provides a strong foundation in therapeutic 
                   <li>Weekend Morning Batch</li>
                   <li>Saturday</li>
                   <li>7:30 AM - 1:30 PM</li>
+                  <li>Classes start on June 20</li>
                   </ul>
                 </div>
               </div>

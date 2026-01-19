@@ -182,6 +182,7 @@ const CounsellingOrganizationalPsychology = () => {
                   <li>Weekday Evening Batch</li >
                     <li>Monday - Thursday</li>
                     <li>2:00 PM - 6:00 PM</li>
+                    <li>Classes start on July 15</li>
                     
                   </ul>
                 </div>
@@ -192,6 +193,7 @@ const CounsellingOrganizationalPsychology = () => {
                   <li>Weekend Evening Batch</li>
                   <li>Saturday & Sunday</li>
                   <li>2:00 PM - 8:00 PM</li>
+                  <li>Classes start on June 20</li>
                   </ul>
                 </div>
               </div>

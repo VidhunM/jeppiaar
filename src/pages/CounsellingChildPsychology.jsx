@@ -183,15 +183,17 @@ const CounsellingChildPsychology = () => {
                   <li>Weekday Morning Batch</li>
                   <li>Monday - Thursday</li>
                   <li>9:00 AM to 1:00 PM</li>
+                  <li>Classes start on July 15</li>
                   </ul>
                 </div>
                 <div className="batch-box">
                   <div className="batch-icon"></div>
                   <h3>Batch 2</h3>
                   <ul className="batch-details">
-                  Weekend Morning Batch
+                  <li>Weekend Morning Batch</li>
                   <li>Saturday & Sunday</li>
                   <li>7:30 AM -  1:30 PM</li>
+                  <li>Classes start on June 20</li>
                   </ul>
                 </div>
               </div>

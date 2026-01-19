@@ -160,15 +160,6 @@ const LearnersReview = () => {
                   )}
                 </div>
                 <div className="testimonial-author">
-                  <img 
-                    src={testimonial.image} 
-                    alt={testimonial.name}
-                    className="author-image"
-                    onError={(e) => {
-                      e.target.onerror = null;
-                      e.target.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="60" height="60"%3E%3Ccircle fill="%23e0e0e0" cx="30" cy="30" r="30"/%3E%3Ctext fill="%23999" font-family="sans-serif" font-size="20" x="50%25" y="50%25" text-anchor="middle" dy=".3em"%3E%3C/text%3E%3C/svg%3E';
-                    }}
-                  />
                   <div className="author-info">
                     <p className="author-name">{testimonial.name}</p>
                     <p className="author-role">{testimonial.role}</p>
