@@ -4489,10 +4489,11 @@ img {
 
   .counselling-child-psychology-page .button-text-container {
     flex-direction: column !important;
-    gap: 0.75rem !important;
+    /* Mobile: add a little space between button and note box */
+    gap: 1.5rem !important;
     align-items: stretch !important;
-    margin-top: 0.5rem !important;
-    margin-bottom: 1rem !important;
+    margin-top: 0.25rem !important;
+    margin-bottom: 0 !important;
   }
 
   .counselling-child-psychology-page .highlights-section .download-brochure-btn {
@@ -4504,6 +4505,9 @@ img {
   .counselling-child-psychology-page .bridge-program-note {
     font-size: 0.85rem !important;
     max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0.6rem 0.9rem !important;
+    line-height: 1.45 !important;
   }
 
   /* Collaboration text near br.png icon */
@@ -4526,7 +4530,7 @@ img {
 
   .counselling-child-psychology-page .university-collaboration-text-above {
     margin-top: 0.25rem !important;
-    margin-bottom: 1rem !important;
+    margin-bottom: 0.35rem !important;
     text-align: left !important;
   }
 
@@ -4555,7 +4559,8 @@ img {
   .counselling-child-psychology-page .highlights-image {
     order: 2 !important;
     margin-bottom: 0 !important;
-    margin-top: 2.5rem !important;
+    /* Pull the image up closer to the note (mobile) */
+    margin-top: -6.25rem !important;
     padding-bottom: 0 !important;
     margin-left: 2rem !important;
     width: 115% !important;
@@ -4666,7 +4671,8 @@ img {
     margin-bottom: 0 !important;
   }
   .counselling-child-psychology-page .highlights-image {
-    margin-top: -1.6rem !important;
+    /* Keep image closer to note on small mobiles */
+    margin-top: -6.75rem !important;
     width: 90% !important;
     margin-left: 0.75rem !important;
   }
@@ -4719,7 +4725,8 @@ img {
     margin-bottom: 0 !important;
   }
   .counselling-child-psychology-page .highlights-image {
-    margin-top: -2rem !important;
+    /* Very small phones: slightly less lift to avoid overlap */
+    margin-top: -6.25rem !important;
     width: 88% !important;
     margin-left: 1rem !important;
   }
