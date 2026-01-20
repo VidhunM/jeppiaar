@@ -71,9 +71,9 @@ const AdmissionProcedure = () => {
                     <li>
                       Or through courier to:
                       <div className="admission-address">
-                        Jeppiaar Academy of Psychology and Research,<br />
-                        1/40H, Mount Poonamallee Road,<br />
-                        St.Thomas Mount, Chennai – 600016
+                        Jeppiaar Academy of Psychology and Research,
+                        1/40H, Mount Poonamallee Road,
+                        St.Thomas Mount, Chennai - 600016
                       </div>
                     </li>
                     <li>

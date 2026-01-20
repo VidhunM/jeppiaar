@@ -478,23 +478,27 @@ const Header = () => {
             >
               Contact Us
             </Link>
-            <button 
-              className="cta-button mobile-menu-cta" 
-              onClick={() => {
-                setShowUnderConstruction(true);
-                setIsMobileMenuOpen(false);
-              }}
+            <a
+              className="cta-button mobile-menu-cta"
+              href="https://erp.jeppiaaracademy.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="ERP Login"
+              onClick={() => setIsMobileMenuOpen(false)}
             >
               Login
-            </button>
+            </a>
           </nav>
 
-          <button 
-            className="cta-button desktop-cta" 
-            onClick={() => setShowUnderConstruction(true)}
+          <a
+            className="cta-button desktop-cta"
+            href="https://erp.jeppiaaracademy.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="ERP Login"
           >
             Login
-          </button>
+          </a>
 
         <button 
           className="mobile-menu-toggle"
