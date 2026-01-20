@@ -4761,11 +4761,14 @@ img {
    Mobile: justify Internship + Career Prospects paragraphs
    ========================================================= */
 @media (max-width: 768px) {
+  .overview-section .overview-text p,
   .counselling-child-psychology-page .internship-section p,
   .counselling-child-psychology-page .career-prospects .career-description {
     text-align: justify !important;
     text-justify: inter-word;
-    -webkit-hyphens: none;
-    hyphens: none;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    overflow-wrap: break-word;
+    word-break: normal;
   }
 }

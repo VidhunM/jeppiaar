@@ -150,6 +150,12 @@ const AdmissionProcedure = () => {
                 </p>
               </li>
             </ol>
+
+            <div className="admission-notes" role="note" aria-label="Admission committee note">
+              <p className="admission-step-text">
+                <b>Note:</b> The decision of the Admission Committee is final and binding in all matters related to the admission process and selection.
+              </p>
+            </div>
           </div>
         </div>
       </section>

@@ -131,7 +131,7 @@ const ProspectDownload = () => {
                 <h3>2. Personal Details of candidate (Fill in capital letters) (Mandatory)</h3>
                 <div className="prospect-fields">
                   <div className="prospect-field"><span>Full Name (as per Aadhaar)</span><span className="prospect-line" /></div>
-                  <div className="prospect-field">
+                  <div className="prospect-field prospect-field-inline">
                     <span>Gender</span>
                     <span className="prospect-inline">
                       <span><span className="prospect-box">☐</span> Male</span>

@@ -255,7 +255,8 @@
     letter-spacing: 0.01em;
     text-align: justify;
     text-justify: inter-word;
-    hyphens: none;
+    -webkit-hyphens: auto;
+    hyphens: auto;
     word-break: normal;
     overflow-wrap: break-word;
     padding: 0;
@@ -267,7 +268,8 @@
     margin: 0 0 1rem 0;
     text-align: justify;
     text-justify: inter-word;
-    hyphens: none;
+    -webkit-hyphens: auto;
+    hyphens: auto;
     word-break: normal;
     overflow-wrap: break-word;
     padding: 0;
@@ -330,7 +332,8 @@
     letter-spacing: 0.01em;
     text-align: justify;
     text-justify: inter-word;
-    hyphens: none;
+    -webkit-hyphens: auto;
+    hyphens: auto;
     word-break: normal;
     overflow-wrap: break-word;
     padding: 0;
@@ -342,7 +345,8 @@
     margin: 0 0 1rem 0;
     text-align: justify;
     text-justify: inter-word;
-    hyphens: none;
+    -webkit-hyphens: auto;
+    hyphens: auto;
     word-break: normal;
     overflow-wrap: break-word;
     min-height: unset;

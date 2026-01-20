@@ -318,8 +318,11 @@
     line-height: 1.7;
     text-align: justify;
     text-align-last: left;
+    text-justify: inter-word;
     /* Improve justification quality on mobile browsers (iOS/Android) */
-    
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    overflow-wrap: break-word;
     word-break: normal;
   }
 
@@ -339,9 +342,10 @@
     line-height: 1.6;
     text-align: justify;
     text-align-last: left;
+    text-justify: inter-word;
     /* Improve justification quality on mobile browsers (iOS/Android) */
-    -webkit-hyphens: none;
-    hyphens: none;
+    -webkit-hyphens: auto;
+    hyphens: auto;
     overflow-wrap: break-word;
     word-break: normal;
   }

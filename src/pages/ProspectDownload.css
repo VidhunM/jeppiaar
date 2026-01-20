@@ -248,6 +248,23 @@
   flex-wrap: wrap; /* allow label + line to wrap instead of overflowing */
 }
 
+/* Inline-option rows (e.g., Gender): keep options near the label on desktop */
+.prospect-field.prospect-field-inline {
+  justify-content: flex-start;
+  gap: 1.25rem;
+}
+
+.prospect-field.prospect-field-inline .prospect-inline {
+  justify-content: flex-start;
+  gap: 0.85rem;
+}
+
+.prospect-field.prospect-field-inline .prospect-inline > span {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem; /* checkbox closer to label text */
+}
+
 .prospect-field.two,
 .prospect-field.three {
   display: grid;
@@ -350,6 +367,12 @@
   letter-spacing: 0.06em;
 }
 
+/* Declaration paragraph */
+.prospect-step-text {
+  margin: 0.25rem 0 0.75rem 0;
+  line-height: 1.6;
+}
+
 @media (max-width: 768px) {
   .prospect-download-page {
     padding-top: calc(95px + env(safe-area-inset-top, 0px));
@@ -428,6 +451,73 @@
     font-size: 1.35rem;
   }
 
+  /* Mobile: tighten vertical rhythm (iPhone/Android) */
+  .prospect-section {
+    margin-top: 0.75rem;
+  }
+
+  .prospect-section h3 {
+    margin-bottom: 0.35rem;
+    font-size: 1.05rem;
+    line-height: 1.25;
+  }
+
+  .prospect-fields {
+    gap: 0.25rem;
+  }
+
+  .prospect-field {
+    gap: 0.25rem;
+    line-height: 1.2;
+  }
+
+  .prospect-inline {
+    gap: 0.5rem;
+    line-height: 1.25;
+  }
+
+  .prospect-line {
+    height: 0.7em; /* reduce extra blank space under lines */
+  }
+
+  .prospect-checklist {
+    gap: 0.35rem;
+  }
+
+  .prospect-checklist li {
+    line-height: 1.3;
+  }
+
+  .prospect-bullets {
+    margin-top: 0.35rem;
+    padding-left: 0; /* avoid “line touching edge” feel on mobile */
+  }
+
+  .prospect-bullets li {
+    margin: 0.22rem 0;
+    display: flex;
+    flex-direction: column; /* label on top, line below */
+    align-items: flex-start;
+    gap: 0.25rem;
+    line-height: 1.25;
+    width: 100%;
+  }
+
+  /* Alternate Contact Details: keep underline slightly inset */
+  .prospect-bullets .prospect-line,
+  .prospect-bullets .prospect-line.short {
+    width: calc(100% - 0.25rem);
+  }
+
+  .prospect-step-text {
+    margin: 0.15rem 0 0.6rem 0;
+    line-height: 1.35;
+  }
+
+  .prospect-sep {
+    margin: 1rem 0;
+  }
+
   .prospect-checklist.two-col {
     grid-template-columns: 1fr;
   }
@@ -443,6 +533,7 @@
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
+    gap: 0.25rem; /* tighten label-to-line spacing (DOB/Age/etc + City/State/PinCode) */
   }
 
   .prospect-inline {
@@ -460,6 +551,7 @@
     width: 100%;
     max-width: 100%;
     min-width: 0;
+    flex: none;
   }
 
   /* Keep tables contained: scroll inside the document (not the page) */
@@ -495,6 +587,23 @@
 
   .prospect-document {
     padding: 1.25rem 0.85rem;
+  }
+
+  .prospect-section h3 {
+    font-size: 1rem;
+  }
+
+  .prospect-fields {
+    gap: 0.2rem;
+  }
+
+  .prospect-line {
+    height: 0.6em;
+  }
+
+  .prospect-bullets .prospect-line,
+  .prospect-bullets .prospect-line.short {
+    width: calc(100% - 0.15rem);
   }
 
   .prospect-table {
