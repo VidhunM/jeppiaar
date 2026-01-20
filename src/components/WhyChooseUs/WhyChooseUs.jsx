@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import './WhyChooseUs.css';
-import groupImage from '../../assets/images/Group.png';
-import group2Image from '../../assets/images/Group2.png';
-import group3Image from '../../assets/images/Group3.png';
-import group4Image from '../../assets/images/Group4.png';
-import group5Image from '../../assets/images/Group6.png';
+import why01 from '../../assets/images/01.png';
+import why02 from '../../assets/images/02.png';
+import why03 from '../../assets/images/03.png';
+import why04 from '../../assets/images/04.png';
+import why05 from '../../assets/images/05.png';
 
 const WhyChooseUs = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -14,11 +14,11 @@ const WhyChooseUs = () => {
   });
 
   const images = [
-    { src: groupImage, alt: 'Why Choose Us 1' },
-    { src: group2Image, alt: 'Why Choose Us 2' },
-    { src: group3Image, alt: 'Why Choose Us 3' },
-    { src: group4Image, alt: 'Why Choose Us 4' },
-    { src: group5Image, alt: 'Why Choose Us 5' }
+    { src: why01, alt: 'Why Choose Us 01' },
+    { src: why02, alt: 'Why Choose Us 02' },
+    { src: why03, alt: 'Why Choose Us 03' },
+    { src: why04, alt: 'Why Choose Us 04' },
+    { src: why05, alt: 'Why Choose Us 05' }
   ];
 
   // Create infinite loop by duplicating images for seamless scrolling
