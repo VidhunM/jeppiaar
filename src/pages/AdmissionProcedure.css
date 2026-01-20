@@ -277,6 +277,15 @@
     gap: 0.5rem;
   }
 
+  /* Mobile: nudge step heading + paragraph slightly right */
+  .admission-step-title,
+  .admission-step-text,
+  .admission-step .admission-bullets,
+  .admission-step .admission-subcard,
+  .admission-step .admission-notes {
+    margin-left: 0.25rem;
+  }
+
   .admission-step-title {
     width: 100%;
   }
@@ -312,6 +321,15 @@
   /* Reduce list indentation so bullets align consistently on mobile */
   .admission-step .admission-bullets {
     padding-left: 0.9rem;
+  }
+
+  /* Small screens: keep the nudge but slightly smaller */
+  .admission-step-title,
+  .admission-step-text,
+  .admission-step .admission-bullets,
+  .admission-step .admission-subcard,
+  .admission-step .admission-notes {
+    margin-left: 0.2rem;
   }
 
   .admission-step .admission-address {

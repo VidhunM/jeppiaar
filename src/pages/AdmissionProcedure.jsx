@@ -86,7 +86,7 @@ const AdmissionProcedure = () => {
                 </div>
 
                 <div className="admission-notes">
-                  <h4 className="admission-notes-title">Important notes</h4>
+                  <h4 className="admission-notes-title">Important Notes</h4>
                   <ul className="admission-bullets">
                     <li>
                       You can also download the form from the website and pay the form fees of Rs 250 during submission along with payment screenshot.
