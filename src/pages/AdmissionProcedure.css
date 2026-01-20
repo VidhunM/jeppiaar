@@ -219,6 +219,16 @@
   text-underline-offset: 3px;
 }
 
+/* Inline links (like mailto) should not inherit global touch padding */
+.admission-procedure-content .admission-link {
+  padding: 0;
+  min-width: 0;
+  min-height: 0;
+  display: inline;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
 @media (max-width: 768px) {
   .admission-procedure-page {
     padding-top: calc(95px + env(safe-area-inset-top, 0px));
@@ -256,11 +266,33 @@
   }
 
   .admission-step {
-    padding: 1rem 1rem;
+    /* Match padding with other cards so text doesn't look shifted left */
+    padding: 1rem 1.25rem;
+  }
+
+  /* Mobile: stack badge + title so heading aligns with content */
+  .admission-step-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .admission-step-title {
+    width: 100%;
   }
 
   .admission-step-title {
     font-size: 1.1rem;
+  }
+
+  /* Mobile: reduce list indentation so step content doesn't look shifted right */
+  .admission-step .admission-bullets {
+    padding-left: 1rem;
+  }
+
+  /* Address block sits inside a bullet; avoid extra left padding */
+  .admission-step .admission-address {
+    padding-left: 0;
   }
 }
 
@@ -270,9 +302,19 @@
     padding: 0 1rem;
   }
 
-  .admission-step-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
+  /* Slightly more inner padding for step cards on small screens */
+  .admission-step {
+    padding: 1rem 1.15rem;
+  }
+
+  /* Step header stacking handled at <=768px */
+
+  /* Reduce list indentation so bullets align consistently on mobile */
+  .admission-step .admission-bullets {
+    padding-left: 0.9rem;
+  }
+
+  .admission-step .admission-address {
+    padding-left: 0;
   }
 }

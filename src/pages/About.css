@@ -776,8 +776,8 @@
     text-align-last: left;
     text-justify: inter-word;
     /* Better justification on iOS/Android */
-    -webkit-hyphens: auto;
-    hyphens: auto;
+    -webkit-hyphens: none;
+    hyphens: none;
     overflow-wrap: break-word;
     word-break: normal;
   }
@@ -1000,8 +1000,8 @@
     text-align-last: left;
     text-justify: inter-word;
     /* Better justification on iOS/Android */
-    -webkit-hyphens: auto;
-    hyphens: auto;
+    -webkit-hyphens: none;
+    hyphens: none;
     overflow-wrap: break-word;
     word-break: normal;
   }

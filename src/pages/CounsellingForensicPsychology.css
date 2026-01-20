@@ -4515,3 +4515,16 @@ img {
     font-size: 0.95rem !important;
   }
 }
+
+/* =========================================================
+   Mobile: justify Internship + Career Prospects paragraphs
+   ========================================================= */
+@media (max-width: 768px) {
+  .counselling-forensic-psychology-page .internship-section p,
+  .counselling-forensic-psychology-page .career-prospects .career-description {
+    text-align: justify !important;
+    text-justify: inter-word;
+    -webkit-hyphens: none;
+    hyphens: none;
+  }
+}
