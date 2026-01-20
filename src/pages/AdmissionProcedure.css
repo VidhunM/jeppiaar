@@ -267,7 +267,7 @@
 
   .admission-step {
     /* Match padding with other cards so text doesn't look shifted left */
-    padding: 1rem 1.25rem;
+    padding: 1rem 1.15rem 1rem 1.35rem; /* slight right-shift (more left padding) */
   }
 
   /* Mobile: stack badge + title so heading aligns with content */
@@ -304,7 +304,7 @@
 
   /* Slightly more inner padding for step cards on small screens */
   .admission-step {
-    padding: 1rem 1.15rem;
+    padding: 0.95rem 1.05rem 0.95rem 1.25rem; /* keep the same slight right-shift */
   }
 
   /* Step header stacking handled at <=768px */

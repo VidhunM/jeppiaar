@@ -219,6 +219,9 @@
   font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   color: #333;
   line-height: 1.35;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  padding: 0.15rem 0; /* comfortable tap target without huge controls */
 }
 
 .apply-check input {
@@ -234,6 +237,8 @@
   appearance: auto !important;
   width: 18px;
   height: 18px;
+  min-width: 18px;
+  min-height: 18px;
   flex: 0 0 18px;
   accent-color: #0E0529;
   border-radius: 999px; /* radio will ignore for checkbox */
@@ -241,6 +246,12 @@
 
 .apply-consent input[type="checkbox"] {
   border-radius: 4px;
+}
+
+.apply-consent {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  padding: 0.15rem 0;
 }
 
 .apply-table-wrap {
@@ -494,6 +505,28 @@
 
   .apply-doc-grid {
     grid-template-columns: 1fr;
+  }
+
+  /* Mobile: larger tap targets for iPhone/Android */
+  .apply-check input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    min-height: 20px;
+    flex: 0 0 20px;
+  }
+
+  /* Mobile: decrease consent tick box size only */
+  .apply-consent input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    min-width: 18px;
+    min-height: 18px;
+    flex: 0 0 18px;
+  }
+
+  .apply-check input {
+    margin-top: 0.15rem;
   }
 }
 

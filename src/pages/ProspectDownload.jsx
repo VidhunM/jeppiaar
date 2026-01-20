@@ -168,7 +168,7 @@ const ProspectDownload = () => {
               <section className="prospect-section">
                 <h3>4. Educational Qualifications of candidate</h3>
                 <div className="prospect-table-wrap">
-                  <table className="prospect-table">
+                  <table className="prospect-table prospect-table-education">
                     <thead>
                       <tr>
                         <th>Qualification</th>
@@ -196,7 +196,7 @@ const ProspectDownload = () => {
               <section className="prospect-section">
                 <h3>5. Work Experience (if applicable)</h3>
                 <div className="prospect-table-wrap">
-                  <table className="prospect-table">
+                  <table className="prospect-table prospect-table-experience">
                     <thead>
                       <tr>
                         <th>S.No</th>

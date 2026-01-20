@@ -4,6 +4,7 @@
   padding-top: calc(120px + env(safe-area-inset-top, 0px));
   background: #f2f2f2;
   overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
 }
 
 .prospect-page-banner {
@@ -323,7 +324,9 @@
 .prospect-table {
   width: 100%;
   border-collapse: collapse;
+  /* Keep table readable: on small screens it scrolls INSIDE the form wrapper */
   min-width: 720px;
+  table-layout: auto;
 }
 
 .prospect-table th,
@@ -331,13 +334,19 @@
   border: 1px solid #222;
   padding: 0.6rem;
   font-size: 0.95rem;
-  word-break: break-word;
+  /* Prevent "vertical text" (letter-by-letter wrapping) on narrow columns */
+  word-break: normal;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  white-space: normal;
+  vertical-align: top;
 }
 
 .prospect-table th {
   background: #f3f3f3;
-  text-align: left;
+  text-align: center;
   font-weight: 800;
+  line-height: 1.2;
 }
 
 .prospect-table td.blank {
@@ -463,12 +472,13 @@
   }
 
   .prospect-fields {
-    gap: 0.25rem;
+    gap: 0.55rem; /* more breathing room between each field row */
   }
 
   .prospect-field {
-    gap: 0.25rem;
-    line-height: 1.2;
+    gap: 0.35rem;
+    line-height: 1.3;
+    padding: 0.15rem 0;
   }
 
   .prospect-inline {
@@ -477,7 +487,8 @@
   }
 
   .prospect-line {
-    height: 0.7em; /* reduce extra blank space under lines */
+    height: 1.05em; /* consistent writing space & cleaner rhythm */
+    margin-top: 0.1rem; /* separate label from underline on mobile */
   }
 
   .prospect-checklist {
@@ -501,6 +512,7 @@
     gap: 0.25rem;
     line-height: 1.25;
     width: 100%;
+    padding: 0.1rem 0;
   }
 
   /* Alternate Contact Details: keep underline slightly inset */
@@ -563,15 +575,49 @@
 
   .prospect-table {
     width: 100%;
-    min-width: 0;
-    table-layout: fixed;
+    min-width: 720px; /* allow horizontal scroll instead of squeezing to vertical text */
+    table-layout: auto;
   }
 
   .prospect-table th,
   .prospect-table td {
-    font-size: 0.85rem;
-    padding: 0.45rem;
-    word-break: break-word;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    line-height: 1.25;
+  }
+
+  /* Per-table alignment tuning (mobile + desktop-safe) */
+  .prospect-table-education th:nth-child(1),
+  .prospect-table-education td:nth-child(1),
+  .prospect-table-education th:nth-child(2),
+  .prospect-table-education td:nth-child(2),
+  .prospect-table-education th:nth-child(3),
+  .prospect-table-education td:nth-child(3) {
+    text-align: left;
+  }
+
+  .prospect-table-education th:nth-child(4),
+  .prospect-table-education td:nth-child(4),
+  .prospect-table-education th:nth-child(5),
+  .prospect-table-education td:nth-child(5) {
+    text-align: center;
+  }
+
+  .prospect-table-experience th:nth-child(2),
+  .prospect-table-experience td:nth-child(2),
+  .prospect-table-experience th:nth-child(3),
+  .prospect-table-experience td:nth-child(3),
+  .prospect-table-experience th:nth-child(5),
+  .prospect-table-experience td:nth-child(5) {
+    text-align: left;
+  }
+
+  .prospect-table-experience th:nth-child(1),
+  .prospect-table-experience td:nth-child(1),
+  .prospect-table-experience th:nth-child(4),
+  .prospect-table-experience td:nth-child(4) {
+    text-align: center;
+    white-space: nowrap;
   }
   
   .prospect-field.two,
@@ -594,11 +640,11 @@
   }
 
   .prospect-fields {
-    gap: 0.2rem;
+    gap: 0.5rem;
   }
 
   .prospect-line {
-    height: 0.6em;
+    height: 1em;
   }
 
   .prospect-bullets .prospect-line,
@@ -608,14 +654,14 @@
 
   .prospect-table {
     width: 100%;
-    min-width: 0;
-    table-layout: fixed;
+    min-width: 720px;
+    table-layout: auto;
   }
 
   .prospect-table th,
   .prospect-table td {
-    font-size: 0.8rem;
-    padding: 0.4rem;
+    font-size: 0.88rem;
+    padding: 0.48rem;
   }
 }
 
