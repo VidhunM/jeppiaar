@@ -472,13 +472,13 @@
   }
 
   .prospect-fields {
-    gap: 0.55rem; /* more breathing room between each field row */
+    gap: 0.8rem; /* more breathing room between each field row */
   }
 
   .prospect-field {
-    gap: 0.35rem;
-    line-height: 1.3;
-    padding: 0.15rem 0;
+    gap: 0.45rem;
+    line-height: 1.35;
+    padding: 0.2rem 0;
   }
 
   .prospect-inline {
@@ -488,7 +488,7 @@
 
   .prospect-line {
     height: 1.05em; /* consistent writing space & cleaner rhythm */
-    margin-top: 0.1rem; /* separate label from underline on mobile */
+    margin-top: 0.18rem; /* a bit more gap between label and underline */
   }
 
   .prospect-checklist {
@@ -497,6 +497,20 @@
 
   .prospect-checklist li {
     line-height: 1.3;
+    /* Use a 2-col grid so the checkbox stays close & aligned for long text */
+    display: grid;
+    grid-template-columns: 1.2em 1fr;
+    column-gap: 0.5rem;
+    row-gap: 0.1rem;
+  }
+
+  /* Mobile: keep checkbox aligned with first line of long labels */
+  .prospect-box {
+    transform: none;
+    margin-top: 0.05rem;
+    width: 1.2em;
+    line-height: 1;
+    text-align: center;
   }
 
   .prospect-bullets {
@@ -528,6 +542,7 @@
 
   .prospect-sep {
     margin: 1rem 0;
+    border-top: 0; /* mobile: remove extra horizontal line near signature */
   }
 
   .prospect-checklist.two-col {
@@ -640,11 +655,12 @@
   }
 
   .prospect-fields {
-    gap: 0.5rem;
+    gap: 0.7rem;
   }
 
   .prospect-line {
     height: 1em;
+    margin-top: 0.16rem;
   }
 
   .prospect-bullets .prospect-line,

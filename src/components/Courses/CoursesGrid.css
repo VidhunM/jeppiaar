@@ -314,7 +314,7 @@
   }
 
   .courses-description-text {
-    font-size: 1rem;
+    font-size: 2rem;
     line-height: 1.7;
     text-align: justify;
     text-align-last: left;
@@ -344,9 +344,9 @@
     text-align-last: left;
     text-justify: inter-word;
     /* Improve justification quality on mobile browsers (iOS/Android) */
-    -webkit-hyphens: auto;
-    hyphens: auto;
-    overflow-wrap: break-word;
+    -webkit-hyphens: none;
+    hyphens: none;
+    overflow-wrap: none;
     word-break: normal;
   }
 
