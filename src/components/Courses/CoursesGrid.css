@@ -320,8 +320,8 @@
     text-align-last: left;
     text-justify: inter-word;
     /* Improve justification quality on mobile browsers (iOS/Android) */
-    -webkit-hyphens: auto;
-    hyphens: auto;
+    -webkit-hyphens: none;
+    hyphens: none;
     overflow-wrap: break-word;
     word-break: normal;
   }

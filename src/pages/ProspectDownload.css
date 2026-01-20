@@ -481,6 +481,16 @@
     padding: 0.2rem 0;
   }
 
+  /* Mobile: Gender row had extra gap (from desktop inline styles) */
+  .prospect-field.prospect-field-inline {
+    gap: 0.4rem;
+    padding: 0.1rem 0; /* reduce space below/above Gender */
+  }
+
+  .prospect-field.prospect-field-inline .prospect-inline {
+    gap: 0.6rem;
+  }
+
   .prospect-inline {
     gap: 0.5rem;
     line-height: 1.25;
