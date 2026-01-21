@@ -167,7 +167,7 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection, onOpenA
                     }
                   }}
                 >
-                  Apply Now
+                  Enquire Now
                 </button>
                 <div className="mobile-admission-info">
                   <div className="admission-year-mobile">2026</div>
