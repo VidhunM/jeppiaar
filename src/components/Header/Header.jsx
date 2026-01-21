@@ -447,7 +447,7 @@ const Header = () => {
                     Admission Procedure
                   </Link>
                   <Link 
-                    to="/prospect-download" 
+                    to="/admission-form-download" 
                     onClick={() => {
                       setIsMobileMenuOpen(false);
                       setIsAdmissionDropdownOpen(false);
@@ -455,7 +455,7 @@ const Header = () => {
                       admissionDropdownStateRef.current = false;
                     }}
                   >
-                    Prospect Download
+                    Admission Form Download
                   </Link>
                 </div>
               )}

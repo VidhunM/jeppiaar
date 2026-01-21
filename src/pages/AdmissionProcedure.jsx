@@ -15,7 +15,7 @@ const AdmissionProcedure = () => {
             <Link className="admission-apply-btn" to="/apply-online">
               Apply Now (Online)
             </Link>
-            <Link className="admission-apply-btn secondary" to="/prospect-download">
+            <Link className="admission-apply-btn secondary" to="/admission-form-download">
               Download Form (PDF)
             </Link>
           </div>

@@ -252,7 +252,7 @@ const CounsellingOrganizationalPsychology = () => {
           <div className="syllabus-header">
             <h2 className="section-title">COURSE SYLLABUS</h2>
             <div className="syllabus-buttons">
-              <button className="apply-now-btn-syllabus" onClick={openApplyModal}>Apply now</button>
+              <Link className="apply-now-btn-syllabus" to="/admission-form-download">Apply now</Link>
               <button className="download-brochure-btn">Download Brochure</button>
             </div>
           </div>

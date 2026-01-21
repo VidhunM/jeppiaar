@@ -139,7 +139,7 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection, onOpenA
                   }
                 }}
               >
-                Apply Now
+                Enquire Now
               </button>
             </div>
 

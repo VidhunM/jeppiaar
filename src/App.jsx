@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { AppProvider } from './context/AppContext';
 import ErrorBoundary from './components/ErrorBoundary';
 import Header from './components/Header/Header';
@@ -62,7 +62,9 @@ function AppLayout() {
           <Route path="/research" element={<Gallery />} />
           <Route path="/admission-procedure" element={<AdmissionProcedure />} />
           <Route path="/apply-online" element={<ApplyOnline />} />
-          <Route path="/prospect-download" element={<ProspectDownload />} />
+          <Route path="/admission-form-download" element={<ProspectDownload />} />
+          {/* Backward compatible route */}
+          <Route path="/prospect-download" element={<Navigate to="/admission-form-download" replace />} />
         </Routes>
       </main>
       <Footer />
