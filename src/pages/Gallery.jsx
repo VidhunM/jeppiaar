@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import heroImage from '../assets/images/hero2.png';
 import groupImage from '../assets/images/C02.png';
-import treatImage from '../assets/images/c5.jpeg';
+import treatImage from '../assets/images/hwts.png';
 import ssvImage from '../assets/icons/ssv.svg';
 import our1 from '../assets/images/our1.png';
 import our2 from '../assets/images/our2.png';
