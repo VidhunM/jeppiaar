@@ -31,13 +31,6 @@ const AdmissionProcedure = () => {
               <li>Programme duration</li>
               <li>Fee structure</li>
             </ul>
-            <div className="admission-eligibility-card">
-              <h2 className="section-heading">Eligibility</h2>
-              <ul className="admission-bullets">
-                <li>UG / PG completed in any discipline on or before 5th June 2026, OR</li>
-                <li>Currently pursuing final year UG/PG in any discipline during the 2026–2027 academic year</li>
-              </ul>
-            </div>
 
             <h2 className="section-heading">Step 2: Application Submission</h2>
             <div className="admission-subcard">
@@ -146,6 +139,13 @@ const AdmissionProcedure = () => {
             </ul>
 
             <h2 className="section-heading section-heading-spaced">Programme-wise Batch & Class Commencement Dates</h2>
+            <div className="admission-eligibility-card">
+              <h2 className="section-heading">Eligibility</h2>
+              <ul className="admission-bullets">
+                <li>UG / PG completed in any discipline on or before 5th June 2026, OR</li>
+                <li>Currently pursuing final year UG/PG in any discipline during the 2026–2027 academic year</li>
+              </ul>
+            </div>
             <div className="admission-subcard">
               <h3 className="admission-subcard-title">1. Advanced Diploma in Counselling and Child Psychology</h3>
               <ul className="admission-bullets">

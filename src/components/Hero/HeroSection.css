@@ -54,9 +54,9 @@
 }
 
 .hero-slide-fourth {
-  /* Slide 4: slightly zoomed out, slightly crop from bottom */
-  background-size: 108% auto; /* more zoom-out */
-  background-position: center 32%; /* crop a bit more from bottom */
+  /* Slide 4: properly positioned to show full image without bottom crop */
+  background-size: cover;
+  background-position: top center;
   background-repeat: no-repeat;
 }
 
@@ -1132,10 +1132,10 @@
   }
 
   .hero-slide-fourth {
-    /* Slide 4 mobile: keep more image width, avoid over-zoom */
-    -webkit-background-size: 110% auto !important;
-    background-size: 110% auto !important;
-    background-position: center 34% !important;
+    /* Slide 4 mobile: properly positioned to show full image */
+    -webkit-background-size: cover !important;
+    background-size: cover !important;
+    background-position: top center !important;
   }
 
   .hero-content {
@@ -1341,10 +1341,10 @@
   }
 
   .hero-slide-fourth {
-    /* Slide 4 small phones: slightly more zoom-out + a bit higher framing */
-    -webkit-background-size: 108% auto !important;
-    background-size: 108% auto !important;
-    background-position: center 30% !important;
+    /* Slide 4 small phones: properly positioned to show full image */
+    -webkit-background-size: cover !important;
+    background-size: cover !important;
+    background-position: top center !important;
   }
 
   /* Hide desktop elements on mobile */
