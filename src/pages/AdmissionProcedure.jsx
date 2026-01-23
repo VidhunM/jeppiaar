@@ -32,7 +32,7 @@ const AdmissionProcedure = () => {
               <li>Fee structure</li>
             </ul>
 
-            <h2 className="section-heading">Step 2: Application Submission</h2>
+            <h2 className="section-heading section-heading-spaced">Step 2: Application Submission</h2>
             <div className="admission-subcard">
               <h3 className="admission-subcard-title">Offline Application</h3>
               <ul className="admission-bullets">
