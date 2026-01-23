@@ -91,11 +91,15 @@
 }
 
 .section-heading {
-  font-size: 2rem;
+  font-size: 1.75rem;
   color: #0E0529;
   margin: 0 0 1.25rem 0;
   text-transform: uppercase;
   letter-spacing: 0.03em;
+}
+
+.section-heading.section-heading-spaced {
+  margin-top: 1.75rem;
 }
 
 .admission-procedure-content p {
@@ -258,7 +262,7 @@
   }
   
   .section-heading {
-    font-size: 1.35rem;
+    font-size: 1.2rem;
   }
   
   .admission-procedure-content p {

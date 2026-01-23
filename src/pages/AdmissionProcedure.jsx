@@ -104,14 +104,14 @@ const AdmissionProcedure = () => {
               <p className="admission-step-text"><strong>The last date for submission of admission application form is 15th April 2026.</strong></p>
             </div>
 
-            <h2 className="section-heading">Step 3: Eligibility Screening</h2>
+            <h2 className="section-heading section-heading-spaced">Step 3: Eligibility Screening</h2>
             <p className="admission-step-text">All applications will be reviewed by the Admissions Committee to verify eligibility as per the selected programme.</p>
             <ul className="admission-bullets">
               <li>Preference may be given to candidates who apply earlier (first-come basis where applicable).</li>
               <li>After payment confirmation, the Admissions/Support Team will contact applicants within the specified time frame to guide them through the next steps.</li>
             </ul>
 
-            <h2 className="section-heading">Step 4: Interview Session</h2>
+            <h2 className="section-heading section-heading-spaced">Step 4: Interview Session</h2>
             <p className="admission-step-text">Shortlisted candidates will be invited for a personal interview (Online / In-person) to assess:</p>
             <ul className="admission-bullets">
               <li>Academic interest</li>
@@ -119,7 +119,7 @@ const AdmissionProcedure = () => {
               <li>Suitability for the chosen programme</li>
             </ul>
 
-            <h2 className="section-heading">Step 5: Admission Confirmation</h2>
+            <h2 className="section-heading section-heading-spaced">Step 5: Admission Confirmation</h2>
             <p className="admission-step-text">Selected candidates will receive:</p>
             <ul className="admission-bullets">
               <li>Official Admission Offer Letter via Email</li>
@@ -136,7 +136,7 @@ const AdmissionProcedure = () => {
               </ul>
             </div>
 
-            <h2 className="section-heading">Step 6: Enrollment & Orientation</h2>
+            <h2 className="section-heading section-heading-spaced">Step 6: Enrollment & Orientation</h2>
             <p className="admission-step-text">Upon successful enrollment:</p>
             <ul className="admission-bullets">
               <li>Students will receive detailed programme information</li>

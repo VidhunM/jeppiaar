@@ -262,7 +262,7 @@ const Home = () => {
       <section id="admissions-banner" className="admissions-banner" style={{ backgroundImage: `url(${image3})` }}>
         <div className="banner-overlay"></div>
         <div className="banner-content scroll-from-left">
-          <h2> 2026 ADMISSIONS OPEN - START YOUR JOURNEY IN PSYCHOLOGY</h2>
+          <h2> 2026 ADMISSIONS OPEN - YOUR PSYCHOLOGY CAREER BEGINS HERE</h2>
           <p>Join Jeppiaar Academy for practice-oriented psychology diploma programs that blend classroom learning <br />with real-world experience.</p>
           <button 
             className="apply-now-btn"
