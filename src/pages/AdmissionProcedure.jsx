@@ -8,7 +8,7 @@ const AdmissionProcedure = () => {
       <section className="admission-procedure-hero">
         <div className="container">
           <h1>Admission Process – Jeppiaar Academy of Psychology and Research</h1>
-          <p className="admission-procedure-hero-subtitle">All diploma programmes at Jeppiaar Academy of Psychology and Research are conducted through live, direct classes. This is not a recorded or online programme.</p>
+          <p className="admission-procedure-hero-subtitle">All diploma programmes at Jeppiaar Academy of Psychology and Research are conducted through direct classes.<br /> This is not a recorded or online programme.</p>
           <div className="admission-hero-actions">
             <Link className="admission-apply-btn" to="/apply-online">
               Apply Now (Online)
@@ -39,7 +39,7 @@ const AdmissionProcedure = () => {
                 <li>Purchase Application Form & Brochure for ₹250 from the Admissions Desk at Jeppiaar Academy.</li>
                 <li>Submit the completed application form along with the following documents:</li>
               </ul>
-              <h4 className="admission-subcard-title">Required Documents (Photocopies Only):</h4>
+              <h4 className="admission-subcard-title">Required Documents (Photocopies Only)</h4>
               <ul className="admission-bullets">
                 <li>Recent passport-size photograph (to be pasted on application form)</li>
                 <li>Aadhaar Card copy</li>
@@ -64,13 +64,13 @@ const AdmissionProcedure = () => {
 
             <div className="admission-subcard">
               <h3 className="admission-subcard-title">Online Application</h3>
-              <p className="admission-step-text">Applicants must also fill out the Online Admission Form available on the official website with accurate:</p>
+              <p className="admission-step-text">Applicants can also fill out the Online Admission Form fee available on the official website with accurate:</p>
               <ul className="admission-bullets">
                 <li>Personal details</li>
                 <li>Academic information</li>
                 <li>Contact details</li>
               </ul>
-              <p className="admission-step-text">After successful form submission, candidates will be redirected to Razorpay (secure payment gateway) to complete the admission fee payment using:</p>
+              <p className="admission-step-text">After successful form submission, candidates will be redirected to Razorpay (secure payment gateway) to complete the admission form fee payment using:</p>
               <ul className="admission-bullets">
                 <li>UPI</li>
                 <li>Debit Card</li>
@@ -115,7 +115,7 @@ const AdmissionProcedure = () => {
             <h2 className="section-heading section-heading-spaced">Step 5: Admission Confirmation</h2>
             <p className="admission-step-text">Selected candidates will receive:</p>
             <ul className="admission-bullets">
-              <li>Official Admission Offer Letter via Email</li>
+              <li>Official Admission Offer Letter with fee details via Email</li>
               <li>Student Portal Login Credentials</li>
             </ul>
             <p className="admission-step-text">Admission is confirmed only after payment of the prescribed fees through the student portal within the stipulated timeline.</p>
@@ -142,36 +142,35 @@ const AdmissionProcedure = () => {
             <div className="admission-eligibility-card">
               <h2 className="section-heading">Eligibility</h2>
               <ul className="admission-bullets">
-                <li>UG / PG completed in any discipline on or before 5th June 2026, OR</li>
-                <li>Currently pursuing final year UG/PG in any discipline during the 2026–2027 academic year</li>
-              </ul>
+                UG / PG completed in any discipline on or before 5th June 2026.
+                              </ul>
             </div>
             <div className="admission-subcard">
               <h3 className="admission-subcard-title">1. Advanced Diploma in Counselling and Child Psychology</h3>
               <ul className="admission-bullets">
-                <li>Batch 1: Classes commence on 15th July 2026</li>
-                <li>Batch 2: Classes commence on 20th June 2026</li>
+                <li>Weekday Batch 1: Classes commence on 15th July 2026</li>
+                <li>Weekend Batch 2: Classes commence on 20th June 2026</li>
               </ul>
             </div>
             <div className="admission-subcard">
               <h3 className="admission-subcard-title">2. Advanced Diploma in Counselling & Organizational Psychology</h3>
               <ul className="admission-bullets">
-                <li>Batch 1: Classes commence on 15th July 2026</li>
-                <li>Batch 2: Classes commence on 20th June 2026</li>
+                <li>Weekday Batch 1: Classes commence on 15th July 2026</li>
+                <li>Weekend Batch 2: Classes commence on 20th June 2026</li>
               </ul>
             </div>
             <div className="admission-subcard">
               <h3 className="admission-subcard-title">3. Advanced Diploma in Counselling & Forensic Psychology</h3>
               <ul className="admission-bullets">
-                <li>Batch 1: Classes commence on 15th July 2026</li>
-                <li>Batch 2: Classes commence on 20th June 2026</li>
+                <li>Weekday Batch 1: Classes commence on 15th July 2026</li>
+                <li>Weekend Batch 2: Classes commence on 20th June 2026</li>
               </ul>
             </div>
             <div className="admission-subcard">
               <h3 className="admission-subcard-title">4. Advanced Diploma in Art Therapy</h3>
               <ul className="admission-bullets">
-                <li>Batch 1: Classes commence on 19th July 2026</li>
-                <li>Batch 2: Classes commence on 20th June 2026</li>
+                <li>Weekday Batch 1: Classes commence on 19th june 2026</li>
+                <li>Weekend Batch 2: Classes commence on 20th June 2026</li>
               </ul>
             </div>
 
