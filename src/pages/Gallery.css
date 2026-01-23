@@ -632,6 +632,94 @@
   z-index: 1;
 }
 
+.cw-program-wrapper {
+  position: relative;
+  display: none;
+}
+
+.cw-program-slider {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.cw-program-slider-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.cw-program-slider-track .cw-program-item {
+  flex: 0 0 100%;
+  min-width: 0;
+  padding: 0 1rem;
+}
+
+.cw-program-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #0E0529;
+  color: #fff;
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: background 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cw-program-nav:hover:not(:disabled) {
+  background: #1a0a3d;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.cw-program-nav:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.cw-program-nav-prev {
+  left: -24px;
+}
+
+.cw-program-nav-next {
+  right: -24px;
+}
+
+.cw-program-dots {
+  display: none;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.cw-program-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: #ccc;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  padding: 0;
+}
+
+.cw-program-dot:hover {
+  background: #999;
+  transform: scale(1.2);
+}
+
+.cw-program-dot.active {
+  background: #0E0529;
+  transform: scale(1.3);
+}
+
 .cw-program-grid {
   display: flex;
   justify-content: space-between;
@@ -957,10 +1045,10 @@
 }
 
 .cw-form-check input[type="checkbox"] {
-  margin-top: 0.1543275rem;
-  width: 14.6205px;
-  height: 14.6205px;
-  min-width: 14.6205px;
+  margin-top: 0.1rem;
+  width: 14px;
+  height: 14px;
+  min-width: 14px;
   cursor: pointer;
   accent-color: #3F3F6D;
   flex-shrink: 0;
@@ -1003,11 +1091,24 @@
 }
 
 @media (max-width: 1024px) {
-  .cw-signs-inner { grid-template-columns: 1fr; text-align: center; }
-  .cw-signs-illus { max-width: 320px; margin: 0 auto; }
-  .cw-signs-content { order: -1; }
+  .consultations-page { padding-top: calc(100px + env(safe-area-inset-top, 0px)); }
+  .cw-apply-now-strip { display: none; }
+  .cw-apply-now-text { display: none; }
+  .cw-banner { padding: 1.25rem 0; }
+  .cw-banner-title { padding-top: 1rem; }
+  .cw-signs { padding: 2rem 0 0 0; }
+  .cw-signs-inner { grid-template-columns: 1fr; text-align: center; padding-bottom: 0; }
+  .cw-signs-illus { max-width: 320px; margin: 0 auto; align-self: end; margin-bottom: 0 !important; }
+  .cw-signs-content { order: -1; align-items: center; }
+  .cw-signs-content .cw-section-title { text-align: center; }
+  .cw-signs-box { text-align: left; }
+  .cw-signs-box ul { text-align: left; }
+  .cw-signs-box li { text-align: left; }
   .cw-treat-inner { grid-template-columns: 1fr; }
   .cw-treat-right { order: -1; }
+  .cw-treat-card { background: #fff; max-width: 100%; }
+  .cw-treat-para { text-align: justify; }
+  .cw-callout-icon { width: 28px; height: 28px; display: block; object-fit: contain; }
   .cw-india-grid { grid-template-columns: 1fr; gap: 1.5rem; margin-top: 0; }
   .cw-india-timeline { height: 60px; }
   .cw-india-timeline-line-top { top: 30px; }
@@ -1019,11 +1120,11 @@
     flex: 0 0 50%;
     padding-right: 1rem;
   }
-  .cw-other-nav-prev {
-    left: 10px;
+  .cw-other-nav {
+    display: none;
   }
-  .cw-other-nav-next {
-    right: 10px;
+  .cw-other-dots {
+    display: none;
   }
   .cw-program-timeline-line {
     display: none;
@@ -1039,26 +1140,62 @@
   .cw-gethelp-inner { grid-template-columns: 1fr; }
   .cw-gethelp-text { order: -1; padding-right: 0; }
   .cw-gethelp-form-wrap { justify-content: center; }
+  .cw-gethelp-heading { font-size: clamp(1.25rem, 4vw, 1.75rem); font-weight: 700; }
+  .cw-form-check { gap: 0.5rem; align-items: center; }
+  .cw-form-check input[type="checkbox"] { 
+    width: 12px !important; 
+    height: 12px !important; 
+    min-width: 12px !important; 
+    margin-top: 0 !important; 
+  }
 }
 
 @media (max-width: 768px) {
-  .consultations-page { padding-top: calc(130px + env(safe-area-inset-top, 0px)); }
-  .cw-banner { padding: 1.5rem 0; }
+  .consultations-page { padding-top: calc(90px + env(safe-area-inset-top, 0px)); }
+  .cw-banner { padding: 1rem 0; }
+  .cw-banner-title { padding-top: 1.25rem; }
   .cw-hero-row { flex-direction: column; margin-bottom: 1.5rem; }
   .cw-hero-image-wrap { height: 280px; max-height: none; }
-  .cw-apply-now-strip { width: 100%; height: 48px; }
-  .cw-apply-now-text { transform: none; }
+  .cw-apply-now-strip { display: none; }
+  .cw-apply-now-text { display: none; }
   .cw-hero { padding: 1.5rem 0 2rem; }
-  .cw-signs, .cw-treat, .cw-program, .cw-other, .cw-gethelp { padding: 2rem 0; }
+  .cw-signs { padding: 2rem 0 0 0; }
+  .cw-treat, .cw-program, .cw-other, .cw-gethelp { padding: 2rem 0; }
+  .cw-treat-card { background: #fff; max-width: 100%; }
+  .cw-treat-para { text-align: justify; }
+  .cw-callout-icon { width: 28px; height: 28px; display: block; object-fit: contain; }
+  .cw-signs-inner { padding-bottom: 0; }
+  .cw-signs-illus { margin-bottom: 0 !important; }
+  .cw-signs-content { align-items: center; }
+  .cw-signs-content .cw-section-title { text-align: center; }
+  .cw-signs-box { text-align: left; }
+  .cw-signs-box ul { text-align: left; }
+  .cw-signs-box li { text-align: left; }
+  .cw-gethelp-heading { font-size: clamp(1.25rem, 4vw, 1.75rem); font-weight: 700; }
+  .cw-form-check { gap: 0.5rem; align-items: center; }
+  .cw-form-check input[type="checkbox"] { 
+    width: 12px !important; 
+    height: 12px !important; 
+    min-width: 12px !important; 
+    margin-top: 0 !important; 
+  }
   .cw-program-timeline-line {
     display: none;
   }
-  .cw-program-grid {
-    flex-direction: column;
-    gap: 2rem;
-    align-items: center;
+  .cw-program-wrapper {
+    display: block;
+    margin-top: 2rem;
   }
-  .cw-program-item {
+  .cw-program-grid {
+    display: none;
+  }
+  .cw-program-nav {
+    display: none;
+  }
+  .cw-program-dots {
+    display: none;
+  }
+  .cw-program-slider-track .cw-program-item {
     max-width: 100%;
     width: 100%;
   }
@@ -1080,29 +1217,62 @@
 }
 
 @media (max-width: 600px) {
+  .consultations-page { padding-top: calc(80px + env(safe-area-inset-top, 0px)); }
+  .cw-banner { padding: 0.75rem 0; }
+  .cw-banner-title { padding-top: 1.5rem; }
+  .cw-apply-now-strip { display: none; }
+  .cw-apply-now-text { display: none; }
+  .cw-signs { padding: 2rem 0 0 0; }
+  .cw-signs-inner { padding-bottom: 0; }
+  .cw-signs-illus { margin-bottom: 0 !important; align-self: end; }
+  .cw-signs-content { align-items: center; }
+  .cw-signs-content .cw-section-title { text-align: center; }
+  .cw-signs-box { text-align: left; }
+  .cw-signs-box ul { text-align: left; }
+  .cw-signs-box li { text-align: left; }
+  .cw-treat-card { background: #fff; max-width: 100%; }
+  .cw-treat-para { text-align: justify; }
+  .cw-callout-icon { width: 28px; height: 28px; display: block; object-fit: contain; }
   .cw-other-card {
     flex: 0 0 100%;
     padding-right: 0;
   }
   .cw-other-nav {
-    width: 40px;
-    height: 40px;
+    display: none;
   }
-  .cw-other-nav-prev {
-    left: 5px;
+  .cw-other-dots {
+    display: none;
   }
-  .cw-other-nav-next {
-    right: 5px;
+  .cw-other-slider-track .cw-other-card {
+    flex: 0 0 100%;
+    min-width: 0;
   }
   .cw-program-timeline-line {
     display: none;
   }
-  .cw-program-grid {
-    flex-direction: column;
-    gap: 2rem;
-    align-items: center;
+  .cw-program-wrapper {
+    display: block;
+    margin-top: 2rem;
   }
-  .cw-program-item {
+  .cw-program-grid {
+    display: none;
+  }
+  .cw-program-nav {
+    display: none;
+  }
+  .cw-program-dots {
+    display: none;
+  }
+  .cw-program-slider-track .cw-program-item {
     max-width: 100%;
+    width: 100%;
+  }
+  .cw-gethelp-heading { font-size: clamp(1.2rem, 4vw, 1.6rem); font-weight: 700; }
+  .cw-form-check { gap: 0.5rem; align-items: center; }
+  .cw-form-check input[type="checkbox"] { 
+    width: 12px !important; 
+    height: 12px !important; 
+    min-width: 12px !important; 
+    margin-top: 0 !important; 
   }
 }

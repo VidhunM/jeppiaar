@@ -41,15 +41,19 @@ const Gallery = () => {
   };
 
   const [currentServiceSlide, setCurrentServiceSlide] = useState(0);
+  const [currentProgramSlide, setCurrentProgramSlide] = useState(0);
   const [cardsPerView, setCardsPerView] = useState(4);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const updateCardsPerView = () => {
-      if (window.innerWidth <= 600) {
+      const width = window.innerWidth;
+      setIsMobile(width <= 768);
+      if (width <= 600) {
         setCardsPerView(1);
-      } else if (window.innerWidth <= 1024) {
+      } else if (width <= 1024) {
         setCardsPerView(2);
-      } else if (window.innerWidth <= 1200) {
+      } else if (width <= 1200) {
         setCardsPerView(3);
       } else {
         setCardsPerView(4);
@@ -104,6 +108,40 @@ const Gallery = () => {
     { img: cos4, title: 'Support for School Refusal and Social Isolation' },
     { img: cos5, title: 'Professional Development Programs' }
   ];
+
+  // Auto-advance program slides on mobile
+  useEffect(() => {
+    if (!isMobile) return;
+
+    const interval = setInterval(() => {
+      setCurrentProgramSlide((prev) => {
+        const maxSlide = programItems.length - 1;
+        if (prev >= maxSlide) {
+          return 0;
+        }
+        return prev + 1;
+      });
+    }, 3000); // Change slide every 3 seconds
+
+    return () => clearInterval(interval);
+  }, [isMobile, programItems.length]);
+
+  // Auto-advance other services slides on mobile
+  useEffect(() => {
+    if (!isMobile) return;
+
+    const interval = setInterval(() => {
+      setCurrentServiceSlide((prev) => {
+        const maxSlide = otherServices.length - 1;
+        if (prev >= maxSlide) {
+          return 0;
+        }
+        return prev + 1;
+      });
+    }, 3000); // Change slide every 3 seconds
+
+    return () => clearInterval(interval);
+  }, [isMobile, otherServices.length]);
 
   return (
     <div className="consultations-page">
@@ -225,6 +263,24 @@ const Gallery = () => {
           <p className="cw-program-sub">Each component works together to address the full picture of screen addiction, helping children replace unhealthy coping mechanisms with meaningful, lasting tools for growth.</p>
           <div className="cw-program-timeline">
             <div className="cw-program-timeline-line"></div>
+            <div className="cw-program-wrapper">
+              <div className="cw-program-slider">
+                <div 
+                  className="cw-program-slider-track" 
+                  style={{ transform: `translateX(-${currentProgramSlide * 100}%)` }}
+                >
+                  {programItems.map((item, i) => (
+                    <div key={i} className="cw-program-item">
+                      <div className={`cw-program-circle ${i === currentProgramSlide ? 'cw-program-circle-active' : ''}`}>
+                        <span className="cw-program-num">{item.num}</span>
+                      </div>
+                      <h4 className="cw-program-title">{item.title}</h4>
+                      <p className="cw-program-description">{item.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
             <div className="cw-program-grid">
               {programItems.map((item, i) => (
                 <div key={i} className="cw-program-item">
@@ -261,7 +317,11 @@ const Gallery = () => {
             <div className="cw-other-slider">
               <div 
                 className="cw-other-slider-track" 
-                style={{ transform: `translateX(-${currentServiceSlide * (100 / cardsPerView)}%)` }}
+                style={{ 
+                  transform: isMobile 
+                    ? `translateX(-${currentServiceSlide * 100}%)` 
+                    : `translateX(-${currentServiceSlide * (100 / cardsPerView)}%)` 
+                }}
               >
                 {otherServices.map((s, i) => (
                   <div key={i} className="cw-other-card">
