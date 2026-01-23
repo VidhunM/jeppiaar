@@ -75,7 +75,7 @@
 
 .admission-procedure-content {
   background: #ffffff;
-  padding: 3rem 0;
+  padding: 3.5rem 0 3rem 0;
   min-height: 60vh;
 }
 
@@ -91,7 +91,7 @@
 }
 
 .section-heading {
-  font-size: 1.75rem;
+  font-size: 1.55rem;
   color: #0E0529;
   margin: 0 0 1.25rem 0;
   text-transform: uppercase;
@@ -113,6 +113,7 @@
   border: 1px solid #E9E7F3;
   border-radius: 14px;
   padding: 1.5rem 1.5rem;
+  margin-top: 1.25rem;
   margin-bottom: 1.75rem;
 }
 
@@ -262,7 +263,7 @@
   }
   
   .section-heading {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   
   .admission-procedure-content p {

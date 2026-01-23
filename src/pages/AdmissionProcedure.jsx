@@ -145,7 +145,7 @@ const AdmissionProcedure = () => {
               <li>Important academic and institutional guidelines</li>
             </ul>
 
-            <h2 className="section-heading">Programme-wise Batch & Class Commencement Dates</h2>
+            <h2 className="section-heading section-heading-spaced">Programme-wise Batch & Class Commencement Dates</h2>
             <div className="admission-subcard">
               <h3 className="admission-subcard-title">1. Advanced Diploma in Counselling and Child Psychology</h3>
               <ul className="admission-bullets">
