@@ -10,7 +10,7 @@
 
 .lead-generation-section .container {
   max-width: 100%;
-  padding: 1.25rem 0.75rem;
+  padding: 0.5rem 0.5rem;
   margin: 0 auto;
 }
 
@@ -19,7 +19,7 @@
   grid-template-columns: 3fr 2fr;
   gap: 0;
   align-items: stretch;
-  min-height: 400px;
+  min-height: 360px;
   max-width: 1000px;
   margin: 0 auto;
   width: 100%;
@@ -27,25 +27,26 @@
 
 .lead-form-panel {
   background: #4A4A6A;
-  padding: 1.1rem 1.25rem;
+  padding: 0.15rem 1rem 0.15rem 1rem;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0.6rem 0.3rem 0.6rem 0.4rem;
+  margin: 0.35rem 0.3rem 0.35rem 0.4rem;
 }
 
 .lead-form-panel h2 {
   font-size: 1.4rem;
   font-weight: 700;
-  margin-bottom: 0.4rem;
+  margin-top: 0;
+  margin-bottom: 0.2rem;
   color: white;
   line-height: 1.2;
 }
 
 .lead-subtitle {
   font-size: 0.8rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.35rem;
   color: white;
   opacity: 0.95;
   line-height: 1.5;
@@ -54,17 +55,17 @@
 .lead-form {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.35rem;
 }
 
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.65rem;
+  gap: 0.4rem;
 }
 
 .lead-form input {
-  padding: 0.65rem;
+  padding: 0.55rem;
   border: none;
   border-radius: 8px;
   font-size: 0.85rem;
@@ -78,7 +79,7 @@
 }
 
 .course-select {
-  padding: 0.65rem;
+  padding: 0.55rem;
   border: none;
   border-radius: 8px;
   font-size: 0.85rem;
@@ -89,7 +90,7 @@
   appearance: none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  background-position: right 0.65rem center;
+  background-position: right 0.55rem center;
   padding-right: 2rem;
 }
 
@@ -112,7 +113,7 @@
   cursor: pointer;
   color: white;
   line-height: 1.4;
-  margin-top: 0.2rem;
+  margin-top: 0;
 }
 
 .checkbox-label input[type="checkbox"] {
@@ -147,16 +148,17 @@
 
 .form-buttons {
   display: flex;
-  gap: 0.65rem;
+  gap: 0.5rem;
   flex-wrap: wrap;
-  margin-top: 0.2rem;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .btn-primary {
   background: transparent;
   color: white;
   border: 2px solid white;
-  padding: 0.65rem 1.1rem;
+  padding: 0.55rem 1.1rem;
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
@@ -197,7 +199,7 @@
   background: transparent;
   color: white;
   border: 2px solid white;
-  padding: 0.65rem 1.1rem;
+  padding: 0.55rem 1.1rem;
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
@@ -246,7 +248,7 @@
 
 .form-message-top {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0.2rem;
   padding: 0.75rem 1rem;
   border-radius: 8px;
   font-size: 0.9rem;
@@ -287,7 +289,7 @@
   background: #1A1260;
   overflow: hidden;
   position: relative;
-  min-height: 400px;
+  min-height: 320px;
   margin: 0.6rem 0 -2rem 0.3rem;
   border-radius: 12px 0 0 0;
   padding-bottom: 0;
@@ -297,8 +299,8 @@
 }
 
 .lead-image-panel img {
-  width: 170%;
-  height: 110%;
+  width: 140%;
+  height: 90%;
   object-fit: cover;
   object-position: 55% 100%;
   display: block;
@@ -313,11 +315,11 @@
 
 @media (max-width: 768px) {
   .lead-generation-section {
-    padding: 1.25rem 0 0 0;
+    padding: 0.75rem 0 0 0;
   }
 
   .lead-generation-section .container {
-    padding: 1rem 0.5rem 0 0.5rem;
+    padding: 0.5rem 0.5rem 0 0.5rem;
   }
 
   .lead-content {
@@ -327,8 +329,8 @@
 
   .lead-form-panel {
     border-radius: 12px 12px 0 0;
-    margin: 1.25rem 0.75rem 0 0.75rem;
-    padding: 1.1rem 1.25rem;
+    margin: 0.75rem 0.75rem 0 0.75rem;
+    padding: 0.9rem 1rem;
   }
 
   .lead-form-panel h2 {
@@ -364,7 +366,7 @@
 
 @media (max-width: 768px) {
   .lead-generation-section {
-    padding: 2rem 0 0 0;
+    padding: 1rem 0 0 0;
   }
 
   .lead-generation-section .container {
@@ -377,8 +379,8 @@
   }
 
   .lead-form-panel {
-    margin: 1rem 1rem 0 1rem;
-    padding: 1.5rem 1.5rem;
+    margin: 0.75rem 0.75rem 0 0.75rem;
+    padding: 1rem 1rem;
     border-radius: 15px 15px 0 0;
   }
 
@@ -394,7 +396,8 @@
   .form-buttons {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.35rem;
+    margin-top: 0;
   }
 
   .btn-primary,
@@ -474,7 +477,7 @@
 
 @media (max-width: 480px) {
   .lead-generation-section {
-    padding: 1.5rem 0 0 0;
+    padding: 0.75rem 0 0 0;
   }
 
   .lead-generation-section .container {
@@ -482,8 +485,8 @@
   }
 
   .lead-form-panel {
-    margin: 0.75rem 0.75rem 0 0.75rem;
-    padding: 1.25rem 1.25rem;
+    margin: 0.6rem 0.6rem 0 0.6rem;
+    padding: 0.9rem 1rem;
     border-radius: 12px 12px 0 0;
   }
 
@@ -499,7 +502,8 @@
   .form-buttons {
     flex-direction: row !important;
     flex-wrap: nowrap !important;
-    gap: 0.35rem;
+    gap: 0.3rem;
+    margin-top: 0;
   }
 
   .btn-primary,
@@ -562,7 +566,7 @@
 
 @media (max-width: 360px) {
   .lead-generation-section {
-    padding: 1.5rem 0 0 0;
+    padding: 0.5rem 0 0 0;
   }
 
   .lead-generation-section .container {
@@ -570,9 +574,21 @@
   }
 
   .lead-form-panel {
-    margin: 0.5rem 0.5rem 0 0.5rem;
-    padding: 1rem 1rem;
+    margin: 0.45rem 0.45rem 0 0.45rem;
+    padding: 0.8rem 0.9rem;
     border-radius: 12px 12px 0 0;
+  }
+
+  .lead-subtitle {
+    margin-bottom: 0.3rem;
+  }
+
+  .lead-form {
+    gap: 0.3rem;
+  }
+
+  .form-row {
+    gap: 0.35rem;
   }
 
   .lead-form-panel h2 {
@@ -676,4 +692,3 @@
     display: block;
   }
 }
-

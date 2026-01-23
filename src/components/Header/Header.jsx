@@ -462,13 +462,9 @@ const Header = () => {
             </div>
             <Link 
               to="/research" 
-              onClick={(e) => {
-                e.preventDefault();
-                setShowUnderConstruction(true);
-                setIsMobileMenuOpen(false);
-              }}
+              onClick={() => setIsMobileMenuOpen(false)}
             >
-              Gallery
+              Consultations
             </Link>
             <Link 
               to="/contact" 

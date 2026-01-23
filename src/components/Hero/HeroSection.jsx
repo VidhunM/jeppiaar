@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './HeroSection.css';
 import heroImage from '../../assets/images/hero.png';
 import hero2Image from '../../assets/images/hero2.png';
-import hero3Image from '../../assets/images/hero3.png';
-import hero4Image from '../../assets/images/hero4.png';
+import hero3Image from '../../assets/images/hero03.jpg';
+import hero4Image from '../../assets/images/hero04.jpg';
 
 const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection, onOpenApplyModal }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -19,11 +19,11 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection, onOpenA
       title: 'Jeppiaar Academy of Psychology & Research'
     },
     {
-      image: hero3Image,
+      image: hero4Image,
       title: 'Jeppiaar Academy of Psychology & Research'
     },
     {
-      image: hero4Image,
+      image: hero3Image,
       title: 'Jeppiaar Academy of Psychology & Research'
     }
   ];
