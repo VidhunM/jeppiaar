@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import heroImage from '../assets/images/hero2.png';
 import groupImage from '../assets/images/C02.png';
 import treatImage from '../assets/images/c5.jpeg';
+import ssvImage from '../assets/icons/ssv.svg';
 import our1 from '../assets/images/our1.png';
 import our2 from '../assets/images/our2.png';
 import our3 from '../assets/images/our3.png';
@@ -90,7 +91,7 @@ const Gallery = () => {
       <section className="cw-section cw-section-dark cw-signs">
         <div className="cw-container cw-signs-inner">
           <div className="cw-signs-illus">
-            <img src={groupImage} alt="Screen addiction illustration" />
+            <img src={ssvImage} alt="Screen addiction illustration" />
           </div>
           <div className="cw-signs-content">
             <h3 className="cw-section-title cw-title-light">SIGNS OF SCREEN ADDICTION</h3>
