@@ -4,10 +4,11 @@ import heroImage from '../assets/images/hero2.png';
 import groupImage from '../assets/images/C02.png';
 import treatImage from '../assets/images/hwts.png';
 import ssvImage from '../assets/icons/ssv.svg';
-import our1 from '../assets/images/our1.png';
-import our2 from '../assets/images/our2.png';
-import our3 from '../assets/images/our3.png';
-import our4 from '../assets/images/our4.png';
+import cos1 from '../assets/images/cos1.jpg';
+import cos2 from '../assets/images/cos2.jpg';
+import cos3 from '../assets/images/cos3.jpg';
+import cos4 from '../assets/images/cos4.png';
+import cos5 from '../assets/images/cos5.jpg';
 import './Gallery.css';
 
 const Gallery = () => {
@@ -52,10 +53,11 @@ const Gallery = () => {
   ];
 
   const otherServices = [
-    { img: our1, title: 'School Workshops' },
-    { img: our2, title: 'Family Therapy' },
-    { img: our3, title: 'Individual Counselling' },
-    { img: our4, title: 'Community Outreach' }
+    { img: cos1, title: 'School-based Awareness Initiatives' },
+    { img: cos2, title: 'Counselling Consultation' },
+    { img: cos3, title: 'Clinical Assessments' },
+    { img: cos4, title: 'Support for School Refusal and Social Isolation' },
+    { img: cos5, title: 'Professional Development Programs' }
   ];
 
   return (
