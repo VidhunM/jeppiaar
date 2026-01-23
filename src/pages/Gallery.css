@@ -544,6 +544,7 @@
 /* 8. Get Help Now */
 .cw-gethelp {
   padding: 3rem 0;
+  background: #1A1260 !important;
 }
 
 .cw-gethelp-inner {
