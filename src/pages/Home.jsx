@@ -12,7 +12,7 @@ import Layer from '../assets/images/Layer.png';
 import Youngvox from '../assets/images/Youngvox.png';
 import Logo1 from '../assets/icons/Logo1.png';
 import Logo2 from '../assets/icons/Logo01.png';
-import image3 from '../assets/images/image3.png';
+import image3 from '../assets/images/ad01.jpg';
 import image2 from '../assets/images/image2.png';
 import './Home.css';
 

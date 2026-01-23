@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import about1Image from '../assets/images/about1.png';
-import about2Image from '../assets/images/about2.png';
+import ab01Image from '../assets/images/ab01.jpg';
 import visionIcon from '../assets/icons/abt1.png';
 import missionIcon from '../assets/icons/abt2.png';
 import chairmanImage from '../assets/images/c1.png';
@@ -197,20 +196,10 @@ Augustine Thilak is committed to fostering an environment that encourages both a
             </div>
           </div>
           <div className="introduction-images">
-            <div className="intro-image scroll-from-left">
+            <div className="intro-image scroll-from-center">
               <img 
-                src={about1Image} 
-                alt="Students with certificates"
-                onError={(e) => {
-                  e.target.onerror = null;
-                  e.target.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="600" height="400"%3E%3Crect fill="%23e0e0e0" width="600" height="400"/%3E%3Ctext fill="%23999" font-family="sans-serif" font-size="18" x="50%25" y="50%25" text-anchor="middle" dy=".3em"%3EImage Coming Soon%3C/text%3E%3C/svg%3E';
-                }}
-              />
-            </div>
-            <div className="intro-image scroll-from-right">
-              <img 
-                src={about2Image} 
-                alt="Certification ceremony"
+                src={ab01Image} 
+                alt="Jeppiaar Academy of Psychology and Research"
                 onError={(e) => {
                   e.target.onerror = null;
                   e.target.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="600" height="400"%3E%3Crect fill="%23e0e0e0" width="600" height="400"/%3E%3Ctext fill="%23999" font-family="sans-serif" font-size="18" x="50%25" y="50%25" text-anchor="middle" dy=".3em"%3EImage Coming Soon%3C/text%3E%3C/svg%3E';

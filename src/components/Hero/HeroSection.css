@@ -23,7 +23,9 @@
   overflow: visible;
   margin: 0;
   padding: 0;
-  transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+  transition: opacity 2s ease-in-out;
+  /* Prevent background-position from animating */
+  transition-property: opacity;
   /* iOS specific fixes */
   -webkit-background-size: cover !important;
   background-attachment: scroll;
@@ -47,6 +49,25 @@
   }
 }
 
+.hero-slide-first {
+  /* Slide 1: positioned between top and center to show upper-middle portion of image */
+  background-size: cover !important;
+  background-position: center 35% !important;
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important;
+  /* Prevent any movement or animation on background position */
+  transition: opacity 2s ease-in-out !important;
+  transition-property: opacity !important;
+  /* Ensure no transform animations */
+  transform: translateZ(0) !important;
+  -webkit-transform: translateZ(0) !important;
+  /* Override will-change from base class to prevent background recalculation */
+  will-change: opacity !important;
+  /* Force immediate background position application */
+  background-position-x: center !important;
+  background-position-y: 35% !important;
+}
+
 .hero-slide-second {
   background-size: cover;
   background-position: center center;
@@ -55,9 +76,18 @@
 
 .hero-slide-fourth {
   /* Slide 4: properly positioned to show full image without bottom crop */
-  background-size: cover;
-  background-position: top center;
-  background-repeat: no-repeat;
+  background-size: cover !important;
+  background-position: top center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important;
+  /* Prevent any movement or animation on background position */
+  transition: opacity 2s ease-in-out !important;
+  transition-property: opacity !important;
+  /* Ensure no transform animations */
+  transform: translateZ(0) !important;
+  -webkit-transform: translateZ(0) !important;
+  /* Prevent will-change from affecting background position */
+  will-change: opacity;
 }
 
 /* Bottom to top gradient overlay for all slides - dark smoky to transparent */
@@ -1125,6 +1155,13 @@
     transform: translateZ(0);
   }
 
+  .hero-slide-first {
+    /* Slide 1 mobile: positioned at top to show top portion of image */
+    -webkit-background-size: cover !important;
+    background-size: cover !important;
+    background-position: top center !important;
+  }
+
   .hero-slide-second {
     -webkit-background-size: cover !important;
     background-size: cover !important;
@@ -1332,6 +1369,13 @@
     background-attachment: scroll !important;
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
+  }
+
+  .hero-slide-first {
+    /* Slide 1 small phones: positioned between top and center to show upper-middle portion of image */
+    -webkit-background-size: cover !important;
+    background-size: cover !important;
+    background-position: center 35% !important;
   }
 
   .hero-slide-second {

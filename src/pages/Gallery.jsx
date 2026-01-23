@@ -12,13 +12,14 @@ import './Gallery.css';
 
 const Gallery = () => {
   const [form, setForm] = useState({
-    fullName: '',
+    childName: '',
+    parentName: '',
     age: '',
-    email: '',
-    gender: '',
-    phone: '',
+    class: '',
+    school: '',
     city: '',
-    concern: '',
+    phone: '',
+    email: '',
     terms: false
   });
 
@@ -31,7 +32,7 @@ const Gallery = () => {
     e.preventDefault();
     console.log('Get Help form:', form);
     alert('Thank you for reaching out. We will contact you soon.');
-    setForm({ fullName: '', age: '', email: '', gender: '', phone: '', city: '', concern: '', terms: false });
+    setForm({ childName: '', parentName: '', age: '', class: '', school: '', city: '', phone: '', email: '', terms: false });
   };
 
   const signsList = [
@@ -211,31 +212,27 @@ const Gallery = () => {
         <div className="cw-container cw-gethelp-inner">
           <div className="cw-gethelp-text">
             <h3 className="cw-gethelp-heading">Ready to Break the Cycle?</h3>
-            <p className="cw-gethelp-para">Taking the first step towards healthier screen habits can feel overwhelming—but you don’t have to do it alone. Our team is here to support you and your family with personalised assessments, counselling, and practical strategies that work in the real world.</p>
+            <p className="cw-gethelp-para">If your child is stuck in a cycle of screen use, emotional withdrawal, or overwhelm, they don't have to stay there. We help families understand the "why" behind screen addiction and build a healthier path forward.—but you don’t have to do it alone. Our team is here to support you and your family with personalised assessments, counselling, and practical strategies that work in the real world.</p>
             <p className="cw-gethelp-para">Fill in your details below and we’ll get back to you within 24–48 hours to discuss how we can help.</p>
           </div>
           <div className="cw-gethelp-form-wrap">
             <div className="cw-form-card">
               <h4 className="cw-form-title">Get Help Now</h4>
-              <p className="cw-form-sub">Fill out your details below</p>
+              <p className="cw-form-sub">Fill in the form below and our team will reach out:</p>
               <form className="cw-form" onSubmit={handleSubmit}>
                 <div className="cw-form-grid">
-                  <input name="fullName" value={form.fullName} onChange={handleFormChange} type="text" placeholder="Full Name" required />
+                  <input name="childName" value={form.childName} onChange={handleFormChange} type="text" placeholder="Name of Child" required />
+                  <input name="parentName" value={form.parentName} onChange={handleFormChange} type="text" placeholder="Name of Parent" required />
                   <input name="age" value={form.age} onChange={handleFormChange} type="text" placeholder="Age" inputMode="numeric" />
-                  <input name="email" value={form.email} onChange={handleFormChange} type="email" placeholder="Email" required />
-                  <select name="gender" value={form.gender} onChange={handleFormChange}>
-                    <option value="">Gender</option>
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                    <option value="Other">Other</option>
-                  </select>
-                  <input name="phone" value={form.phone} onChange={handleFormChange} type="tel" placeholder="Phone Number" />
+                  <input name="class" value={form.class} onChange={handleFormChange} type="text" placeholder="Class" />
+                  <input name="school" value={form.school} onChange={handleFormChange} type="text" placeholder="School / College Name" />
                   <input name="city" value={form.city} onChange={handleFormChange} type="text" placeholder="City" />
+                  <input name="phone" value={form.phone} onChange={handleFormChange} type="tel" placeholder="Phone Number" required />
+                  <input name="email" value={form.email} onChange={handleFormChange} type="email" placeholder="Email ID" required />
                 </div>
-                <textarea name="concern" value={form.concern} onChange={handleFormChange} placeholder="Concern" rows={3} />
                 <label className="cw-form-check">
                   <input name="terms" type="checkbox" checked={form.terms} onChange={handleFormChange} required />
-                  <span>I agree to the terms and conditions</span>
+                  <span>Take the first step toward lasting change</span>
                 </label>
                 <button type="submit" className="cw-form-btn">Submit</button>
               </form>
