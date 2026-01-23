@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import heroImage from '../assets/images/hero2.png';
+import heroImage from '../assets/images/csec1.png';
 import groupImage from '../assets/images/C02.png';
 import treatImage from '../assets/images/hwts.png';
 import ssvImage from '../assets/icons/ssv.svg';
+import mdiFamilyIcon from '../assets/icons/mdi_family.svg';
+import groupIcon from '../assets/icons/Group.svg';
+import vectorIcon from '../assets/icons/Vector.svg';
+import vector1Icon from '../assets/icons/Vector (1).svg';
 import cos1 from '../assets/images/cos1.jpg';
 import cos2 from '../assets/images/cos2.jpg';
 import cos3 from '../assets/images/cos3.jpg';
@@ -36,20 +40,61 @@ const Gallery = () => {
     setForm({ childName: '', parentName: '', age: '', class: '', school: '', city: '', phone: '', email: '', terms: false });
   };
 
+  const [currentServiceSlide, setCurrentServiceSlide] = useState(0);
+  const [cardsPerView, setCardsPerView] = useState(4);
+
+  useEffect(() => {
+    const updateCardsPerView = () => {
+      if (window.innerWidth <= 600) {
+        setCardsPerView(1);
+      } else if (window.innerWidth <= 1024) {
+        setCardsPerView(2);
+      } else if (window.innerWidth <= 1200) {
+        setCardsPerView(3);
+      } else {
+        setCardsPerView(4);
+      }
+    };
+
+    updateCardsPerView();
+    window.addEventListener('resize', updateCardsPerView);
+    return () => window.removeEventListener('resize', updateCardsPerView);
+  }, []);
+
   const signsList = [
-    'Excessive preoccupation with screen use',
-    'Withdrawal symptoms when not using screens',
-    'Neglecting important areas of life',
-    'Continuing to use despite negative consequences',
-    'Loss of control over screen use'
+    'Daily activities are affected because of screen use.',
+    'Gets angry or upset when screen time is stopped',
+    'Needs more and more screen time to feel happy or satisfied',
+    'Loses interest in playing, studying, or spending time with others',
+    'Screen use affects studies, work or sleep, but still continues'
   ];
 
   const programItems = [
-    { num: '01', label: 'Early Screening' },
-    { num: '02', label: 'Clinical & Psychological Assessments' },
-    { num: '03', label: 'Early Recovery' },
-    { num: '04', label: 'Individual & Parent Counselling' },
-    { num: '05', label: 'Digital Detox Programs' }
+    { 
+      num: '01', 
+      title: 'Early Screening',
+      description: 'Identify not just symptoms, but underlying causes'
+    },
+    { 
+      num: '02', 
+      title: 'Scientific Psychological Assessments',
+      description: 'Understand emotional, behavioral, and cognitive patterns'
+    },
+    { 
+      num: '03', 
+      title: 'Early Recovery',
+      description: 'Tailored to each child\'s habits, triggers, and mental health history'
+    },
+    { 
+      num: '04', 
+      title: 'Child and Parent Counselling',
+      description: 'One-on-one and family therapy to process emotions'
+    },
+    { 
+      num: '05', 
+      title: 'Digital Detox Programs',
+      description: 'Experiential activities to reset the brain\'s reward system'
+    }
   ];
 
   const otherServices = [
@@ -76,16 +121,16 @@ const Gallery = () => {
             <div className="cw-hero-image-wrap">
               <img src={heroImage} alt="Family engaging with technology at home" />
             </div>
-            <Link to="/apply-online" className="cw-apply-now-strip">
-              <span className="cw-apply-now-text">Apply Now</span>
-            </Link>
           </div>
-          <h1 className="cw-hero-heading">HELPING TO BUILD HEALTHY, BALANCED RELATIONSHIPS WITH TECHNOLOGY</h1>
-          <p className="cw-hero-intro">
-            In today’s digital world, excessive screen use can affect the well-being of children and adults alike. Understanding and managing our relationship with technology is important, and the right guidance can help families build healthy, balanced habits.
+          <h1 className="cw-hero-heading">
+            HELPING TO BUILD HEALTHY, BALANCED RELATIONSHIPS<br />
+            WITH TECHNOLOGY
+          </h1>
+          <p className="cw-hero-intro cw-hero-intro-first">
+            In today’s digital world, excessive screen use is increasingly affecting both children and adults. What may begin as simple entertainment can gradually interfere with attention, sleep, emotional well-being, academic or work performance, and social relationships. Over time, screen use can become difficult to control and may impact the brain, emotions, and everyday functioning. When not addressed early, it can lead to larger challenges in personal, academic, and professional life. With the right guidance, individuals can learn to use technology in a healthy and balanced way.
           </p>
-          <p className="cw-hero-intro">
-            Jeppiaar Academy of Psychology and Research offers support for developing healthy screen habits. Our team provides professional, compassionate, and evidence-based guidance for individuals and families.
+          <p className="cw-hero-intro cw-hero-intro-second">
+            At Jeppiaar Academy of Psychology and Research, Chennai, we support children, adolescents, and adults in developing healthy screen habits through professional, compassionate, and evidence-based guidance for both individuals and families.
           </p>
         </div>
       </section>
@@ -122,30 +167,27 @@ const Gallery = () => {
             </div>
             <div className="cw-india-grid">
               <div className="cw-india-col cw-india-col-left">
+                <div className="cw-india-vertical-line cw-india-vertical-line-left"></div>
                 <div className="cw-india-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
+                  <img src={groupIcon} alt="Group icon" />
                 </div>
                 <p>High screen exposure among children: Around 61% of urban Indian parents report that children aged 9-17 spend 3 or more hours per day on screens (social media, videos/OTT, gaming). Many also show signs of aggression, impatience and hyperactivity linked to this exposure</p>
               </div>
               <div className="cw-india-col cw-india-col-center">
-                <div className="cw-india-icon cw-india-icon-glow">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
+                <div className="cw-india-u-border">
+                  <div className="cw-india-u-border-left"></div>
+                  <div className="cw-india-u-border-right"></div>
+                  <div className="cw-india-u-border-bottom"></div>
+                </div>
+                <div className="cw-india-icon">
+                  <img src={vectorIcon} alt="Vector icon" />
                 </div>
                 <p>Adult screen use in India is substantial: Indians spend about 7+ hours per day on smartphone screens on average – covering messaging, social media, videos, OTT and more – making everyday digital use a large part of daily life.</p>
               </div>
               <div className="cw-india-col cw-india-col-right">
+                <div className="cw-india-vertical-line cw-india-vertical-line-right"></div>
                 <div className="cw-india-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <path d="M3 18L8 12L13 15L21 6" strokeLinecap="round" strokeLinejoin="round"/>
-                    <circle cx="3" cy="18" r="1.5" fill="currentColor"/>
-                    <circle cx="8" cy="12" r="1.5" fill="currentColor"/>
-                    <circle cx="13" cy="15" r="1.5" fill="currentColor"/>
-                    <circle cx="21" cy="6" r="1.5" fill="currentColor"/>
-                  </svg>
+                  <img src={vector1Icon} alt="Vector 1 icon" />
                 </div>
                 <p>Behavioural and wellbeing concerns: Excessive screen use (in children and adults) is associated with behavioural issues and wellbeing impacts such as poor sleep, irritability and difficulty with self-regulation.</p>
               </div>
@@ -159,16 +201,18 @@ const Gallery = () => {
         <div className="cw-container cw-treat-inner">
           <div className="cw-treat-text">
             <h3 className="cw-section-title cw-title-light">HOW WE TREAT SCREEN ADDICTION AT ITS CORE</h3>
-            <p className="cw-treat-para">We focus on understanding the underlying emotional and behavioural patterns that drive excessive screen use. Through individualised assessments, counselling, and structured digital detox programmes, we help clients and their families develop healthier habits and stronger connections beyond the screen.</p>
-            <p className="cw-treat-para">Our goal is lasting change—not just cutting hours, but building a balanced, intentional relationship with technology.</p>
+            <p className="cw-treat-para">At Jeppiaar Academy of Psychology and Research, we use a holistic, evidence-based approach to help children and adults heal from the inside out. We don't just limit screen time - we explore the emotional, social, and behavioral reasons behind excessive screen use and help individuals build healthier, long-term habits.</p>
+            <p className="cw-treat-para">Through personalized assessments, counseling, and skill-building strategies, we support lasting change - not just short-term control.</p>
           </div>
           <div className="cw-treat-right">
-            <div className="cw-treat-image">
-              <img src={treatImage} alt="Therapy or workshop setting" />
-            </div>
-            <div className="cw-treat-callout">
-              <span className="cw-callout-diamond">◆</span>
-              <span>100+ children and adults supported so far</span>
+            <div className="cw-treat-card">
+              <div className="cw-treat-image">
+                <img src={treatImage} alt="People using screens" />
+              </div>
+              <div className="cw-treat-callout">
+                <img src={mdiFamilyIcon} alt="Family icon" className="cw-callout-icon" />
+                <span className="cw-callout-text">100+ children and adults supported so far</span>
+              </div>
             </div>
           </div>
         </div>
@@ -178,16 +222,20 @@ const Gallery = () => {
       <section className="cw-section cw-section-light cw-program">
         <div className="cw-container">
           <h3 className="cw-section-title cw-title-dark cw-centered">OUR PROGRAM INCLUDES</h3>
-          <p className="cw-program-sub">A comprehensive, step-by-step approach from screening to sustained recovery.</p>
-          <div className="cw-program-grid">
-            {programItems.map((item, i) => (
-              <div key={i} className="cw-program-item">
-                <div className="cw-program-circle">
-                  <span className="cw-program-num">{item.num}</span>
+          <p className="cw-program-sub">Each component works together to address the full picture of screen addiction, helping children replace unhealthy coping mechanisms with meaningful, lasting tools for growth.</p>
+          <div className="cw-program-timeline">
+            <div className="cw-program-timeline-line"></div>
+            <div className="cw-program-grid">
+              {programItems.map((item, i) => (
+                <div key={i} className="cw-program-item">
+                  <div className={`cw-program-circle ${i === 0 ? 'cw-program-circle-active' : ''}`}>
+                    <span className="cw-program-num">{item.num}</span>
+                  </div>
+                  <h4 className="cw-program-title">{item.title}</h4>
+                  <p className="cw-program-description">{item.description}</p>
                 </div>
-                <span className="cw-program-label">{item.label}</span>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -196,14 +244,57 @@ const Gallery = () => {
       <section className="cw-section cw-section-light cw-other">
         <div className="cw-container">
           <h3 className="cw-section-title cw-title-dark cw-centered">OTHER SERVICES</h3>
-          <div className="cw-other-grid">
-            {otherServices.map((s, i) => (
-              <div key={i} className="cw-other-card">
-                <div className="cw-other-image">
-                  <img src={s.img} alt={s.title} />
-                </div>
-                <p className="cw-other-title">{s.title}</p>
+          <div className="cw-other-wrapper">
+            <button 
+              className="cw-other-nav cw-other-nav-prev" 
+              onClick={() => {
+                const maxSlide = Math.max(0, otherServices.length - cardsPerView);
+                setCurrentServiceSlide((prev) => Math.max(0, prev - 1));
+              }}
+              aria-label="Previous service"
+              disabled={currentServiceSlide === 0}
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 19L8 12L15 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
+            <div className="cw-other-slider">
+              <div 
+                className="cw-other-slider-track" 
+                style={{ transform: `translateX(-${currentServiceSlide * (100 / cardsPerView)}%)` }}
+              >
+                {otherServices.map((s, i) => (
+                  <div key={i} className="cw-other-card">
+                    <div className="cw-other-image">
+                      <img src={s.img} alt={s.title} />
+                    </div>
+                    <p className="cw-other-title">{s.title}</p>
+                  </div>
+                ))}
               </div>
+            </div>
+            <button 
+              className="cw-other-nav cw-other-nav-next" 
+              onClick={() => {
+                const maxSlide = Math.max(0, otherServices.length - cardsPerView);
+                setCurrentServiceSlide((prev) => Math.min(maxSlide, prev + 1));
+              }}
+              aria-label="Next service"
+              disabled={currentServiceSlide >= Math.max(0, otherServices.length - cardsPerView)}
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 5L16 12L9 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
+          </div>
+          <div className="cw-other-dots">
+            {otherServices.map((_, i) => (
+              <button
+                key={i}
+                className={`cw-other-dot ${i === currentServiceSlide ? 'active' : ''}`}
+                onClick={() => setCurrentServiceSlide(i)}
+                aria-label={`Go to slide ${i + 1}`}
+              />
             ))}
           </div>
         </div>
@@ -214,8 +305,8 @@ const Gallery = () => {
         <div className="cw-container cw-gethelp-inner">
           <div className="cw-gethelp-text">
             <h3 className="cw-gethelp-heading">Ready to Break the Cycle?</h3>
-            <p className="cw-gethelp-para">If your child is stuck in a cycle of screen use, emotional withdrawal, or overwhelm, they don't have to stay there. We help families understand the "why" behind screen addiction and build a healthier path forward.—but you don’t have to do it alone. Our team is here to support you and your family with personalised assessments, counselling, and practical strategies that work in the real world.</p>
-            <p className="cw-gethelp-para">Fill in your details below and we’ll get back to you within 24–48 hours to discuss how we can help.</p>
+            <p className="cw-gethelp-para">If your child is stuck in a cycle of screen use, emotional withdrawal, or overwhelm, they don't have to stay there. We help families understand the "why" behind screen addiction and build a healthier path forward.-but you don’t have to do it alone. Our team is here to support you and your family with personalised assessments, counselling, and practical strategies that work in the real world.</p>
+            <p className="cw-gethelp-para">Fill in your details below and we’ll get back to you within 24-48 hours to discuss how we can help.</p>
           </div>
           <div className="cw-gethelp-form-wrap">
             <div className="cw-form-card">
