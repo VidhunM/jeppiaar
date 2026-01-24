@@ -1083,15 +1083,18 @@
 .cw-form-check input[type="checkbox"] {
   /* Custom checkbox to ensure tick is visible across browsers */
   margin-top: 0.1rem;
-  width: 14px;
-  height: 14px;
-  min-width: 14px;
+  --cw-check-size: 16px;
+  width: var(--cw-check-size);
+  height: var(--cw-check-size);
+  min-width: var(--cw-check-size);
+  min-height: var(--cw-check-size);
+  aspect-ratio: 1 / 1;
   cursor: pointer;
   flex-shrink: 0;
   padding: 0;
-  border-radius: 3px;
-  border: 2px solid #fff;
-  background: #fff;
+  border-radius: 2px;
+  border: 2px solid rgba(255, 255, 255, 0.95);
+  background: transparent;
   appearance: none;
   -webkit-appearance: none;
   display: inline-grid;
@@ -1101,8 +1104,8 @@
 
 .cw-form-check input[type="checkbox"]::before {
   content: '';
-  width: 7px;
-  height: 4px;
+  width: calc(var(--cw-check-size) * 0.55);
+  height: calc(var(--cw-check-size) * 0.35);
   border-left: 2px solid #1A1260;
   border-bottom: 2px solid #1A1260;
   transform: rotate(-45deg);
@@ -1111,6 +1114,10 @@
 
 .cw-form-check input[type="checkbox"]:checked::before {
   opacity: 1;
+}
+
+.cw-form-check input[type="checkbox"]:checked {
+  background: #fff;
 }
 
 .cw-form-check input[type="checkbox"]:focus-visible {
@@ -1214,10 +1221,8 @@
   .cw-gethelp-heading { font-size: clamp(1.25rem, 4vw, 1.75rem); font-weight: 700; }
   .cw-form-check { gap: 0.5rem; align-items: center; }
   .cw-form-check input[type="checkbox"] { 
-    width: 12px !important; 
-    height: 12px !important; 
-    min-width: 12px !important; 
-    margin-top: 0 !important; 
+    --cw-check-size: 18px;
+    margin-top: 0;
   }
 }
 
@@ -1245,10 +1250,8 @@
   .cw-gethelp-heading { font-size: clamp(1.25rem, 4vw, 1.75rem); font-weight: 700; }
   .cw-form-check { gap: 0.5rem; align-items: center; }
   .cw-form-check input[type="checkbox"] { 
-    width: 12px !important; 
-    height: 12px !important; 
-    min-width: 12px !important; 
-    margin-top: 0 !important; 
+    --cw-check-size: 18px;
+    margin-top: 0;
   }
   .cw-program-timeline-line {
     display: none;
@@ -1341,9 +1344,7 @@
   .cw-gethelp-heading { font-size: clamp(1.2rem, 4vw, 1.6rem); font-weight: 700; }
   .cw-form-check { gap: 0.5rem; align-items: center; }
   .cw-form-check input[type="checkbox"] { 
-    width: 12px !important; 
-    height: 12px !important; 
-    min-width: 12px !important; 
-    margin-top: 0 !important; 
+    --cw-check-size: 18px;
+    margin-top: 0;
   }
 }
