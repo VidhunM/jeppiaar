@@ -1,49 +1,18 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './AdmissionProcedure.css';
-import ProspectFormDocument from '../components/ProspectFormDocument/ProspectFormDocument';
+import admissionFormPdfUrl from '../assets/images/Student_Admission_Form_2026.pdf';
 
 const AdmissionProcedure = () => {
-  const formRef = useRef(null);
-  const [isGenerating, setIsGenerating] = useState(false);
-
-  const handleDownloadFormPdf = async () => {
-    if (!formRef.current || isGenerating) return;
-
-    try {
-      setIsGenerating(true);
-      formRef.current.classList.add('pdf-export');
-
-      const mod = await import('html2pdf.js');
-      const html2pdf = mod?.default ?? mod;
-
-      const el = formRef.current;
-      const w = el.scrollWidth;
-      const h = el.scrollHeight;
-      const opt = {
-        margin: [6, 6, 6, 6], // mm
-        filename: 'Student_Admission_Form_2026.pdf',
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: {
-          scale: 2,
-          useCORS: true,
-          backgroundColor: '#ffffff',
-          scrollX: 0,
-          scrollY: 0,
-          windowWidth: w,
-          windowHeight: h,
-          width: w,
-          height: h
-        },
-        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-        pagebreak: { mode: ['css', 'legacy'] }
-      };
-
-      await html2pdf().set(opt).from(el).save();
-    } finally {
-      if (formRef.current) formRef.current.classList.remove('pdf-export');
-      setIsGenerating(false);
-    }
+  const handleDownloadFormPdf = () => {
+    const a = document.createElement('a');
+    a.href = admissionFormPdfUrl;
+    a.download = 'Student_Admission_Form_2026.pdf';
+    a.target = '_blank';
+    a.rel = 'noopener';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
   };
 
   return (
@@ -60,18 +29,12 @@ const AdmissionProcedure = () => {
               type="button"
               className="admission-apply-btn secondary"
               onClick={handleDownloadFormPdf}
-              disabled={isGenerating}
             >
-              {isGenerating ? 'Generating PDF…' : 'Download Form (PDF)'}
+              Download Form (PDF)
             </button>
           </div>
         </div>
       </section>
-
-      {/* Hidden: used only to render the PDF template for download */}
-      <div style={{ position: 'absolute', left: -99999, top: 0, width: 0, height: 0, overflow: 'hidden' }} aria-hidden="true">
-        <ProspectFormDocument ref={formRef} />
-      </div>
       
       <section className="admission-procedure-content">
         <div className="container">

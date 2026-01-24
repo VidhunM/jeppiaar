@@ -75,14 +75,13 @@
 // export default LeadGeneration;
 
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import contactImage from '../../assets/images/contact.png';
+import brochurePdf from '../../assets/images/broucher.pdf';
 import './LeadGeneration.css';
 
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw94ZBBLU5OIcbG_Ydo-Qizu-JiSmA6x0JwNmtHTcQ9-L2onyqDhwkACsVGfXgxI708/exec";
 
-const LeadGeneration = ({ onShowConstructionPopup }) => {
-  const navigate = useNavigate();
+const LeadGeneration = () => {
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -250,13 +249,19 @@ const LeadGeneration = ({ onShowConstructionPopup }) => {
                 <button type="submit" className="btn-primary" disabled={loading}>
                   {loading ? 'Sending...' : 'Apply Now'}
                 </button>
-                <button 
-                  type="button" 
+                <a
                   className="btn-secondary"
-                  onClick={onShowConstructionPopup}
+                  href={brochurePdf}
+                  download="broucher.pdf"
+                  style={{
+                    textDecoration: 'none',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center'
+                  }}
                 >
                   Download Prospectus
-                </button>
+                </a>
               </div>
             </form>
           </div>

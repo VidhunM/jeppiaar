@@ -13,6 +13,7 @@ import cc1Icon from '../assets/icons/cc1.png';
 import cc2Icon from '../assets/icons/cc02.png';
 import cc3Icon from '../assets/icons/cc3.png';
 import brIcon from '../assets/icons/br.png';
+import brochurePdf from '../assets/images/broucher.pdf';
 import './CounsellingChildPsychology.css';
 
 const CounsellingChildPsychology = () => {
@@ -203,7 +204,14 @@ const CounsellingChildPsychology = () => {
                 </p>
               </div>
               <div className="button-text-container">
-                <button className="download-brochure-btn" onClick={showConstructionPopup}>Download Brochure</button>
+                <a
+                  className="download-brochure-btn"
+                  href={brochurePdf}
+                  download="broucher.pdf"
+                  style={{ textDecoration: 'none' }}
+                >
+                  Download Brochure
+                </a>
                 <p className="bridge-program-note">
                   Note: A FREE Psychology Bridge Program will be conducted for students from non-psychology background to ensure strong foundational readiness.
                 </p>
@@ -253,7 +261,14 @@ const CounsellingChildPsychology = () => {
             <h2 className="section-title">COURSE SYLLABUS</h2>
             <div className="syllabus-buttons">
               <Link className="apply-now-btn-syllabus" to="/admission-form-download">Apply now</Link>
-              <button className="download-brochure-btn" onClick={showConstructionPopup}>Download Brochure</button>
+              <a
+                className="download-brochure-btn"
+                href={brochurePdf}
+                download="broucher.pdf"
+                style={{ textDecoration: 'none' }}
+              >
+                Download Brochure
+              </a>
             </div>
           </div>
           <div className="syllabus-content">
