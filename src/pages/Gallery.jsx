@@ -87,12 +87,12 @@ const Gallery = () => {
     { 
       num: '03', 
       title: 'Early Recovery',
-      description: 'Tailored to each child\'s habits, triggers, and mental health history'
+      description: 'Tailored to each individual’s habits, triggers, and mental health history '
     },
     { 
       num: '04', 
-      title: 'Child and Parent Counselling',
-      description: 'One-on-one and family therapy to process emotions'
+      title: ' Individual & Family Counselling',
+      description: 'One-on-one and family sessions to process emotions'
     },
     { 
       num: '05', 
@@ -103,10 +103,9 @@ const Gallery = () => {
 
   const otherServices = [
     { img: cos1, title: 'School-based Awareness Initiatives' },
-    { img: cos2, title: 'Counselling Consultation' },
+    { img: cos2, title: 'Counselling and Family Consultation.' },
     { img: cos3, title: 'Clinical Assessments' },
-    { img: cos4, title: 'Support for School Refusal and Social Isolation' },
-    { img: cos5, title: 'Professional Development Programs' }
+    { img: cos4, title: 'Support for School Refusal and Social Isolation' }
   ];
 
   // Auto-advance program slides on mobile
@@ -209,7 +208,7 @@ const Gallery = () => {
                 <div className="cw-india-icon">
                   <img src={groupIcon} alt="Group icon" />
                 </div>
-                <p>High screen exposure among children: Around 61% of urban Indian parents report that children aged 9-17 spend 3 or more hours per day on screens (social media, videos/OTT, gaming). Many also show signs of aggression, impatience and hyperactivity linked to this exposure</p>
+                <p>High screen exposure. among children: Around 61% of urban Indian parents report that children aged 9-17 spend 3 or more hours per day on screens (social media, videos/OTT, gaming). Many also show signs of aggression, impatience and hyperactivity linked to this exposure</p>
               </div>
               <div className="cw-india-col cw-india-col-center">
                 <div className="cw-india-u-border">
@@ -301,19 +300,6 @@ const Gallery = () => {
         <div className="cw-container">
           <h3 className="cw-section-title cw-title-dark cw-centered">OTHER SERVICES</h3>
           <div className="cw-other-wrapper">
-            <button 
-              className="cw-other-nav cw-other-nav-prev" 
-              onClick={() => {
-                const maxSlide = Math.max(0, otherServices.length - cardsPerView);
-                setCurrentServiceSlide((prev) => Math.max(0, prev - 1));
-              }}
-              aria-label="Previous service"
-              disabled={currentServiceSlide === 0}
-            >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15 19L8 12L15 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </button>
             <div className="cw-other-slider">
               <div 
                 className="cw-other-slider-track" 
@@ -333,19 +319,6 @@ const Gallery = () => {
                 ))}
               </div>
             </div>
-            <button 
-              className="cw-other-nav cw-other-nav-next" 
-              onClick={() => {
-                const maxSlide = Math.max(0, otherServices.length - cardsPerView);
-                setCurrentServiceSlide((prev) => Math.min(maxSlide, prev + 1));
-              }}
-              aria-label="Next service"
-              disabled={currentServiceSlide >= Math.max(0, otherServices.length - cardsPerView)}
-            >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 5L16 12L9 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </button>
           </div>
           <div className="cw-other-dots">
             {otherServices.map((_, i) => (

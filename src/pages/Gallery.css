@@ -136,7 +136,7 @@
 }
 
 .cw-hero-heading {
-  font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+  font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 700;
   color: #1a1a1a;
   text-align: center;
@@ -179,7 +179,7 @@
 
 /* 3. Signs of Screen Addiction */
 .cw-signs {
-  padding: 3rem 0 0 0;
+  padding: 4rem 0 0 0;
 }
 
 .cw-signs-inner {
@@ -249,11 +249,12 @@
 
 .cw-signs-box {
   background: #fff;
-  padding: 1.5rem 1.75rem;
+  padding: 32px 28px;
   border-radius: 8px;
   border: 1px solid #d0d0d0;
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
   width: 100%;
+  box-sizing: border-box;
 }
 
 .cw-signs-box ul {
@@ -265,10 +266,16 @@
 .cw-signs-box li {
   position: relative;
   padding-left: 1.75rem;
+  margin-top: 0;
   margin-bottom: 0.6rem;
   font-size: 0.95rem;
   color: #333;
   line-height: 1.5;
+}
+
+.cw-signs-box li:first-child {
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .cw-signs-box li::before {
@@ -289,7 +296,10 @@
   line-height: 1;
 }
 
-.cw-signs-box li:last-child { margin-bottom: 0; }
+.cw-signs-box li:last-child { 
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
 
 /* 4. Screen Use in India */
 .cw-india {
@@ -383,6 +393,7 @@
 
 .cw-india-col-left {
   border: none;
+  padding-left: 0.2rem;
 }
 
 .cw-india-col-center {
@@ -504,7 +515,7 @@
   font-size: 1.75rem;
   font-weight: 700;
   line-height: 1.2;
-  margin-bottom: 0.88rem;
+  margin-bottom: 1.5rem;
   letter-spacing: 0.02em;
 }
 
@@ -512,7 +523,7 @@
   font-size: 1.05rem;
   line-height: 1.04;
   color: rgba(255,255,255,0.95);
-  margin: 0 0 0.73rem;
+  margin: 0 0 1.2rem;
   text-align: justify;
 }
 
@@ -598,6 +609,13 @@
 /* 6. Our Program Includes */
 .cw-program {
   padding: 3rem 0;
+}
+
+.cw-program .cw-section-title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .cw-program-sub {
