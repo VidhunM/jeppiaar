@@ -1,5 +1,10 @@
 .lead-generation-section {
-  padding: 0.5rem 0 0 0;
+  /* Center the section content with balanced top/bottom spacing */
+  /* Reduce top space for the whole block (card + image) */
+  padding-top: clamp(0.1rem, 0.6vw, 0.25rem);
+  padding-bottom: clamp(0.5rem, 1.4vw, 0.9rem);
+  padding-left: 0;
+  padding-right: 0;
   background: #1A1260;
   color: white;
   width: 100%;
@@ -9,34 +14,48 @@
 }
 
 .lead-generation-section .container {
-  max-width: 100%;
-  padding: 0.5rem 0.5rem;
+  /* Keep consistent with the site's container boundary */
+  max-width: 1400px;
+  /* Only horizontal padding; vertical spacing is handled by the section */
+  padding: 0 2rem;
   margin: 0 auto;
 }
 
 .lead-content {
   display: grid;
   grid-template-columns: 3fr 2fr;
-  gap: 0;
-  align-items: stretch;
-  min-height: 360px;
-  max-width: 1000px;
+  gap: 0.9rem;
+  /* Keep panels vertically centered without stretching */
+  align-items: center;
+  min-height: 0;
+  /* Reduce overall section size ~15% */
+  max-width: 935px;
   margin: 0 auto;
   width: 100%;
 }
 
 .lead-form-panel {
   background: #4A4A6A;
-  padding: 0.15rem 1rem 0.15rem 1rem;
+  /* Reduce top space inside panel (responsive, capped) */
+  padding: clamp(1.15rem, 6%, 2.18rem) 1.5rem clamp(1.28rem, 7%, 2.54rem) 1.5rem;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin: 0.35rem 0.3rem 0.35rem 0.4rem;
+  /* Avoid large empty space at top due to vertical centering */
+  justify-content: flex-start;
+  margin: 0;
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+/* Prevent scroll animation translateX from getting clipped by section overflow */
+.lead-generation-section .lead-form-panel.scroll-from-left,
+.lead-generation-section .lead-image-panel.scroll-from-right {
+  transform: none;
 }
 
 .lead-form-panel h2 {
-  font-size: 1.4rem;
+  font-size: 1.45rem;
   font-weight: 700;
   margin-top: 0;
   margin-bottom: 0.2rem;
@@ -45,7 +64,7 @@
 }
 
 .lead-subtitle {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   margin-bottom: 0.35rem;
   color: white;
   opacity: 0.95;
@@ -55,20 +74,20 @@
 .lead-form {
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  gap: 0.36rem;
 }
 
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.4rem;
+  gap: 0.42rem;
 }
 
 .lead-form input {
-  padding: 0.55rem;
+  padding: 0.57rem;
   border: none;
   border-radius: 8px;
-  font-size: 0.85rem;
+  font-size: 0.91rem;
   background: white;
   color: #333;
   width: 100%;
@@ -79,10 +98,10 @@
 }
 
 .course-select {
-  padding: 0.55rem;
+  padding: 0.57rem;
   border: none;
   border-radius: 8px;
-  font-size: 0.85rem;
+  font-size: 0.91rem;
   background: white;
   color: #333;
   width: 100%;
@@ -109,7 +128,7 @@
   display: flex;
   align-items: flex-start;
   gap: 0.65rem;
-  font-size: 0.75rem;
+  font-size: 0.79rem;
   cursor: pointer;
   color: white;
   line-height: 1.4;
@@ -158,14 +177,14 @@
   background: transparent;
   color: white;
   border: 2px solid white;
-  padding: 0.55rem 1.1rem;
+  padding: 0.57rem 1.16rem;
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
-  font-size: 0.85rem;
+  font-size: 0.91rem;
   transition: all 0.3s ease;
   flex: 1;
-  min-width: 90px;
+  min-width: 92px;
   position: relative;
   overflow: hidden;
 }
@@ -199,14 +218,14 @@
   background: transparent;
   color: white;
   border: 2px solid white;
-  padding: 0.55rem 1.1rem;
+  padding: 0.57rem 1.16rem;
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 0.85rem;
+  font-size: 0.91rem;
   flex: 1;
-  min-width: 90px;
+  min-width: 92px;
   position: relative;
   overflow: hidden;
 }
@@ -289,8 +308,9 @@
   background: #1A1260;
   overflow: hidden;
   position: relative;
-  min-height: 320px;
-  margin: 0.6rem 0 -2rem 0.3rem;
+  /* Reduce overall section height on desktop */
+  min-height: 262px;
+  margin: 0 0 -2rem 0.3rem;
   border-radius: 12px 0 0 0;
   padding-bottom: 0;
   align-content: flex-end;
@@ -300,7 +320,9 @@
 
 .lead-image-panel img {
   width: 140%;
-  height: 90%;
+  /* Fill the panel height to avoid top empty space */
+  height: 100%;
+  max-height: 100%;
   object-fit: cover;
   object-position: 55% 100%;
   display: block;
@@ -315,11 +337,11 @@
 
 @media (max-width: 768px) {
   .lead-generation-section {
-    padding: 0.75rem 0 0 0;
+    padding: 0.15rem 0 0 0;
   }
 
   .lead-generation-section .container {
-    padding: 0.5rem 0.5rem 0 0.5rem;
+    padding: 0 1.5rem;
   }
 
   .lead-content {
@@ -329,21 +351,22 @@
 
   .lead-form-panel {
     border-radius: 12px 12px 0 0;
-    margin: 0.75rem 0.75rem 0 0.75rem;
-    padding: 0.9rem 1rem;
+    margin: 0.1rem 0.75rem 0 0.75rem;
+    padding: clamp(1.05rem, 7%, 1.54rem) 1.1rem;
   }
 
   .lead-form-panel h2 {
-    font-size: 1.3rem;
+    font-size: 1.43rem;
     font-family: Helvetica, sans-serif;
   }
 
   .lead-image-panel {
     margin: 0 0.75rem 0 0.75rem;
     border-radius: 0;
-    min-height: 250px;
+    /* Remove extra empty space above the image */
+    min-height: 0;
     justify-content: center;
-    align-items: flex-end;
+    align-items: flex-start;
     display: flex;
     padding-bottom: 0;
   }
@@ -366,11 +389,11 @@
 
 @media (max-width: 768px) {
   .lead-generation-section {
-    padding: 1rem 0 0 0;
+    padding: 0.15rem 0 0 0;
   }
 
   .lead-generation-section .container {
-    padding: 0 0 0 0;
+    padding: 0 1.5rem;
   }
 
   .lead-content {
@@ -379,18 +402,18 @@
   }
 
   .lead-form-panel {
-    margin: 0.75rem 0.75rem 0 0.75rem;
-    padding: 1rem 1rem;
+    margin: 0.1rem 0.75rem 0 0.75rem;
+    padding: clamp(1.05rem, 7%, 1.54rem) 1.1rem;
     border-radius: 15px 15px 0 0;
   }
 
   .lead-form-panel h2 {
-    font-size: 1.5rem;
+    font-size: 1.65rem;
     font-family: Helvetica, sans-serif;
   }
 
   .lead-subtitle {
-    font-size: 0.85rem;
+    font-size: 0.94rem;
   }
 
   .form-buttons {
@@ -402,14 +425,14 @@
 
   .btn-primary,
   .btn-secondary {
-    font-size: 0.85rem;
-    padding: 0.7rem 1rem;
+    font-size: 0.94rem;
+    padding: 0.77rem 1.1rem;
     min-width: auto;
     flex: 1;
   }
 
   .checkbox-label {
-    font-size: 0.75rem;
+    font-size: 0.83rem;
     gap: 0.4rem;
   }
 
@@ -455,10 +478,11 @@
 
   .lead-image-panel {
     margin: 0 1rem 0 1rem;
-    min-height: 250px;
+    /* Remove extra empty space above the image */
+    min-height: 0;
     border-radius: 0;
     justify-content: center;
-    align-items: flex-end;
+    align-items: flex-start;
     display: flex;
     padding-bottom: 0;
   }
@@ -477,26 +501,26 @@
 
 @media (max-width: 480px) {
   .lead-generation-section {
-    padding: 0.75rem 0 0 0;
+    padding: 0.2rem 0 0 0;
   }
 
   .lead-generation-section .container {
-    padding: 0;
+    padding: 0 1rem;
   }
 
   .lead-form-panel {
-    margin: 0.6rem 0.6rem 0 0.6rem;
-    padding: 0.9rem 1rem;
+    margin: 0.12rem 0.6rem 0 0.6rem;
+    padding: clamp(0.94rem, 7%, 1.38rem) 1.1rem;
     border-radius: 12px 12px 0 0;
   }
 
   .lead-form-panel h2 {
-    font-size: 1.25rem;
+    font-size: 1.38rem;
     font-family: Helvetica, sans-serif;
   }
 
   .lead-subtitle {
-    font-size: 0.8rem;
+    font-size: 0.88rem;
   }
 
   .form-buttons {
@@ -508,8 +532,8 @@
 
   .btn-primary,
   .btn-secondary {
-    font-size: 0.7rem !important;
-    padding: 0.55rem 0.3rem !important;
+    font-size: 0.77rem !important;
+    padding: 0.61rem 0.33rem !important;
     min-width: auto;
     flex: 1;
     white-space: normal;
@@ -520,7 +544,7 @@
   }
 
   .checkbox-label {
-    font-size: 0.7rem;
+    font-size: 0.77rem;
     gap: 0.3rem;
   }
 
@@ -544,9 +568,10 @@
 
   .lead-image-panel {
     margin: 0 0.75rem 0 0.75rem;
-    min-height: 220px;
+    /* Remove extra empty space above the image */
+    min-height: 0;
     justify-content: center;
-    align-items: flex-end;
+    align-items: flex-start;
     display: flex;
     padding-bottom: 0;
     border-radius: 0;
@@ -566,16 +591,16 @@
 
 @media (max-width: 360px) {
   .lead-generation-section {
-    padding: 0.5rem 0 0 0;
+    padding: 0.15rem 0 0 0;
   }
 
   .lead-generation-section .container {
-    padding: 0;
+    padding: 0 0.75rem;
   }
 
   .lead-form-panel {
-    margin: 0.45rem 0.45rem 0 0.45rem;
-    padding: 0.8rem 0.9rem;
+    margin: 0.1rem 0.45rem 0 0.45rem;
+    padding: clamp(0.88rem, 7%, 1.21rem) 0.99rem;
     border-radius: 12px 12px 0 0;
   }
 
@@ -592,23 +617,23 @@
   }
 
   .lead-form-panel h2 {
-    font-size: 1.1rem;
+    font-size: 1.21rem;
     font-family: Helvetica, sans-serif;
   }
 
   .lead-subtitle {
-    font-size: 0.75rem;
+    font-size: 0.83rem;
   }
 
   .lead-form input {
-    padding: 0.65rem;
-    font-size: 0.85rem;
+    padding: 0.72rem;
+    font-size: 0.94rem;
   }
 
   .course-select {
-    padding: 0.65rem;
+    padding: 0.72rem;
     padding-right: 2.5rem;
-    font-size: 0.85rem;
+    font-size: 0.94rem;
   }
 
   .form-buttons {
@@ -619,8 +644,8 @@
 
   .btn-primary,
   .btn-secondary {
-    font-size: 0.6rem !important;
-    padding: 0.45rem 0.2rem !important;
+    font-size: 0.66rem !important;
+    padding: 0.5rem 0.22rem !important;
     min-width: auto;
     flex: 1;
     white-space: normal;
@@ -630,7 +655,7 @@
   }
 
   .checkbox-label {
-    font-size: 0.65rem;
+    font-size: 0.72rem;
     gap: 0.3rem;
   }
 
@@ -660,8 +685,8 @@
 
   .btn-primary,
   .btn-secondary {
-    font-size: 0.6rem !important;
-    padding: 0.45rem 0.2rem !important;
+    font-size: 0.66rem !important;
+    padding: 0.5rem 0.22rem !important;
     min-width: auto;
     flex: 1;
     white-space: normal;
@@ -673,10 +698,11 @@
 
   .lead-image-panel {
     margin: 0 0.5rem 0 0.5rem;
-    min-height: 200px;
+    /* Remove extra empty space above the image */
+    min-height: 0;
     border-radius: 0;
     justify-content: center;
-    align-items: flex-end;
+    align-items: flex-start;
     display: flex;
     padding-bottom: 0;
   }
