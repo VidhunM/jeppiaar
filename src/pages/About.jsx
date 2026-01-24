@@ -198,10 +198,7 @@ Augustine Thilak is committed to fostering an environment that encourages both a
           <div className="introduction-images">
             <div className="intro-image scroll-from-center">
               <div className="intro-image-overlay" aria-hidden="true">
-                <div className="intro-image-overlay-title">
-                  JEPPIAAR ACADEMY<br />
-                  <span>OF PSYCHOLOGY AND RESEARCH</span>
-                </div>
+              
               </div>
               <img 
                 src={ab01Image} 
