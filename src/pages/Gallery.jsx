@@ -27,18 +27,51 @@ const Gallery = () => {
     email: '',
     terms: false
   });
+  const [submitting, setSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState(null); // { type: 'success' | 'error', text: string }
 
   const handleFormChange = (e) => {
     const { name, value, type, checked } = e.target;
     setForm(prev => ({ ...prev, [name]: type === 'checkbox' ? checked : value }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Get Help form:', form);
-    alert('Thank you for reaching out. We will contact you soon.');
-    setForm({ childName: '', parentName: '', age: '', class: '', school: '', city: '', phone: '', email: '', terms: false });
-  };
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxuqzs81q4dIgBrzsfWbAisS1ZUYwk6QL5LjbogLTJ5snkp3xzw6WqAerINLuLwjnCwbw/exec";
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setSubmitting(true);
+  setSubmitMessage(null);
+
+  try {
+    // Google Apps Script web apps often do NOT include CORS headers.
+    // With `no-cors`, the request is sent successfully, but the response is opaque (can't read `res.json()`).
+    await fetch(SCRIPT_URL, {
+      method: "POST",
+      mode: "no-cors",
+      body: JSON.stringify(form)
+    });
+
+    setSubmitMessage({ type: 'success', text: "Thank you — we will contact you soon." });
+    // Refresh the form (clear fields) after submit
+    setForm({
+      childName: "",
+      parentName: "",
+      age: "",
+      class: "",
+      school: "",
+      city: "",
+      phone: "",
+      email: "",
+      terms: false
+    });
+  } catch (err) {
+    console.error(err);
+    setSubmitMessage({ type: 'error', text: "Something went wrong. Please try again." });
+  } finally {
+    setSubmitting(false);
+  }
+};
+
 
   const [currentServiceSlide, setCurrentServiceSlide] = useState(0);
   const [currentProgramSlide, setCurrentProgramSlide] = useState(0);
@@ -345,6 +378,11 @@ const Gallery = () => {
             <div className="cw-form-card">
               <h4 className="cw-form-title">Get Help Now</h4>
               <p className="cw-form-sub">Fill in the form below and our team will reach out:</p>
+              {submitMessage && (
+                <p className={`cw-form-message ${submitMessage.type}`}>
+                  {submitMessage.text}
+                </p>
+              )}
               <form className="cw-form" onSubmit={handleSubmit}>
                 <div className="cw-form-grid">
                   <input name="childName" value={form.childName} onChange={handleFormChange} type="text" placeholder="Name of Child" required />
@@ -360,7 +398,9 @@ const Gallery = () => {
                   <input name="terms" type="checkbox" checked={form.terms} onChange={handleFormChange} required />
                   <span>Take the first step toward lasting change</span>
                 </label>
-                <button type="submit" className="cw-form-btn">Submit</button>
+                <button type="submit" className="cw-form-btn" disabled={submitting}>
+                  {submitting ? 'Submitting...' : 'Submit'}
+                </button>
               </form>
             </div>
           </div>
