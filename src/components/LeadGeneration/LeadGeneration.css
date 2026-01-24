@@ -1,8 +1,8 @@
 .lead-generation-section {
   /* Center the section content with balanced top/bottom spacing */
   /* Reduce top space for the whole block (card + image) */
-  padding-top: clamp(0.1rem, 0.6vw, 0.25rem);
-  padding-bottom: clamp(0.5rem, 1.4vw, 0.9rem);
+  padding-top: clamp(-3rem, -0.1vw, -1.5rem);
+  padding-bottom: clamp(0.1rem, 1.4vw, 0.9rem);
   padding-left: 0;
   padding-right: 0;
   background: #1A1260;
@@ -24,12 +24,12 @@
 .lead-content {
   display: grid;
   grid-template-columns: 3fr 2fr;
-  gap: 0.9rem;
+  gap: 1.1rem;
   /* Keep panels vertically centered without stretching */
   align-items: center;
   min-height: 0;
-  /* Reduce overall section size ~15% */
-  max-width: 935px;
+  /* Slightly increase overall section size (desktop) */
+  max-width: 1020px;
   margin: 0 auto;
   width: 100%;
 }
@@ -37,7 +37,7 @@
 .lead-form-panel {
   background: #4A4A6A;
   /* Reduce top space inside panel (responsive, capped) */
-  padding: clamp(1.15rem, 6%, 2.18rem) 1.5rem clamp(1.28rem, 7%, 2.54rem) 1.5rem;
+  padding: clamp(1.3rem, 6%, 2.35rem) 1.65rem clamp(1.45rem, 7%, 2.7rem) 1.65rem;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
@@ -309,7 +309,7 @@
   overflow: hidden;
   position: relative;
   /* Reduce overall section height on desktop */
-  min-height: 262px;
+  min-height: 295px;
   margin: 0 0 -2rem 0.3rem;
   border-radius: 12px 0 0 0;
   padding-bottom: 0;
