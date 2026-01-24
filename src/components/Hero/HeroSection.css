@@ -52,7 +52,7 @@
 .hero-slide-first {
   /* Slide 1: positioned between top and center to show upper-middle portion of image */
   background-size: cover !important;
-  background-position: center 62% !important;
+  background-position: center 72% !important;
   background-repeat: no-repeat !important;
   background-attachment: scroll !important;
   /* Prevent any movement or animation on background position */
@@ -65,7 +65,7 @@
   will-change: opacity !important;
   /* Force immediate background position application */
   background-position-x: center !important;
-  background-position-y: 62% !important;
+  background-position-y: 72% !important;
 }
 
 .hero-slide-second {
