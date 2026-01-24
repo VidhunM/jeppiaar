@@ -105,10 +105,14 @@
 }
 
 .nav a {
+  display: inline-flex;
+  align-items: center;
   text-decoration: none;
   color: #333;
   font-weight: 500;
   font-size: 1rem;
+  line-height: 1.1;
+  white-space: nowrap;
   transition: color 0.3s ease;
   position: relative;
 }
@@ -147,10 +151,14 @@
 }
 
 .dropdown-label {
+  display: inline-flex;
+  align-items: center;
   text-decoration: none;
   color: #333;
   font-weight: 500;
   font-size: 1rem;
+  line-height: 1.1;
+  white-space: nowrap;
   transition: color 0.3s ease;
   position: relative;
   cursor: pointer;
