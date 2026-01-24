@@ -113,6 +113,21 @@
   position: relative;
 }
 
+/* Desktop Safari/Mac: keep nav text vertically centered consistently */
+@media (min-width: 769px) {
+  .nav > a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    line-height: 1.15;
+  }
+
+  .nav-dropdown .dropdown-toggle {
+    height: 44px;
+  }
+}
+
 .nav a:hover {
   color: #1a237e;
 }

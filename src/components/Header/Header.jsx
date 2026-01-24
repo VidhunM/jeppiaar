@@ -26,6 +26,10 @@ const Header = () => {
   });
   const location = useLocation();
   const isHomePage = location.pathname === '/';
+  const [isMobileViewport, setIsMobileViewport] = useState(() => {
+    if (typeof window === 'undefined') return false;
+    return window.matchMedia('(max-width: 768px)').matches;
+  });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,6 +37,24 @@ const Header = () => {
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const mq = window.matchMedia('(max-width: 768px)');
+    const onChange = (e) => setIsMobileViewport(e.matches);
+
+    // Set initial in case of late hydration / resize before mount
+    setIsMobileViewport(mq.matches);
+
+    if (mq.addEventListener) {
+      mq.addEventListener('change', onChange);
+      return () => mq.removeEventListener('change', onChange);
+    }
+
+    // Safari fallback
+    mq.addListener(onChange);
+    return () => mq.removeListener(onChange);
   }, []);
 
   // Keep ref in sync with state
@@ -92,6 +114,13 @@ const Header = () => {
 
   const closePopup = () => {
     setShowUnderConstruction(false);
+  };
+
+  const handleLoginClick = (e) => {
+    // ERP login is not live yet — show "Coming Soon"
+    e.preventDefault();
+    setShowUnderConstruction(true);
+    setIsMobileMenuOpen(false);
   };
 
   const openApplyModal = () => {
@@ -294,27 +323,32 @@ const Header = () => {
             >
               Contact Us
             </Link>
+            {isMobileViewport && (
+              <a
+                className="cta-button mobile-menu-cta"
+                href="https://erp.jeppiaaracademy.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="ERP Login"
+                onClick={handleLoginClick}
+              >
+                Login
+              </a>
+            )}
+          </nav>
+
+          {!isMobileViewport && (
             <a
-              className="cta-button mobile-menu-cta"
+              className="cta-button desktop-cta"
               href="https://erp.jeppiaaracademy.com"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="ERP Login"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={handleLoginClick}
             >
               Login
             </a>
-          </nav>
-
-          <a
-            className="cta-button desktop-cta"
-            href="https://erp.jeppiaaracademy.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="ERP Login"
-          >
-            Login
-          </a>
+          )}
 
         <button 
           className="mobile-menu-toggle"
