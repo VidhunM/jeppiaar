@@ -3,13 +3,13 @@ import ab01Image from '../assets/images/ab01.jpg';
 import visionIcon from '../assets/icons/abt1.png';
 import missionIcon from '../assets/icons/abt2.png';
 import chairmanImage from '../assets/images/c1.png';
-import directorImage from '../assets/images/c2.png';
-import deanImage from '../assets/images/c3.png';
-import chrishanthiImage from '../assets/images/c4.jpeg';
-import banupriyaImage from '../assets/images/c5.jpeg';
-import augustineImage from '../assets/images/c6.jpeg';
+import directorImage from '../assets/images/c2.jpg';
+import deanImage from '../assets/images/c3.jpg';
+import chrishanthiImage from '../assets/images/c4.jpg';
+import banupriyaImage from '../assets/images/c5.jpg';
+import augustineImage from '../assets/images/c6.jpg';
 import nirmalaImage from '../assets/images/c7.jpeg';
-import sangeethaImage from '../assets/images/c8.jpeg';
+import sangeethaImage from '../assets/images/c8.jpg';
 import icon1 from '../assets/icons/Icon1.png';
 import icon2 from '../assets/icons/Icon2.png';
 import icon3 from '../assets/icons/Icon3.png';
@@ -197,6 +197,12 @@ Augustine Thilak is committed to fostering an environment that encourages both a
           </div>
           <div className="introduction-images">
             <div className="intro-image scroll-from-center">
+              <div className="intro-image-overlay" aria-hidden="true">
+                <div className="intro-image-overlay-title">
+                  JEPPIAAR ACADEMY<br />
+                  <span>OF PSYCHOLOGY AND RESEARCH</span>
+                </div>
+              </div>
               <img 
                 src={ab01Image} 
                 alt="Jeppiaar Academy of Psychology and Research"
@@ -256,7 +262,14 @@ Augustine Thilak is committed to fostering an environment that encourages both a
                   <img 
                     src={member.image} 
                     alt={member.name}
-                    className={index === 3 ? 'team-img-center' : index === 4 || index === 5 ? 'team-img-zoom' : ''}
+                    className={[
+                      index === 3 ? 'team-img-center' : '',
+                      index === 4 ? 'team-img-zoom' : '',
+                      // c4 (Chrishanthi) - slight zoom on the card
+                      index === 5 ? 'team-img-zoom-slight' : '',
+                      // Show top side for c3 (Dean) and c6 (Augustine) images
+                      index === 2 || index === 7 ? 'team-img-top' : ''
+                    ].filter(Boolean).join(' ')}
                     onError={(e) => {
                       e.target.onerror = null;
                       e.target.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="300" height="300"%3E%3Crect fill="%23e0e0e0" width="300" height="300"/%3E%3Ctext fill="%23999" font-family="sans-serif" font-size="16" x="50%25" y="50%25" text-anchor="middle" dy=".3em"%3EPhoto Coming Soon%3C/text%3E%3C/svg%3E';
