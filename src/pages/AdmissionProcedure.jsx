@@ -1,24 +1,77 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './AdmissionProcedure.css';
+import ProspectFormDocument from '../components/ProspectFormDocument/ProspectFormDocument';
 
 const AdmissionProcedure = () => {
+  const formRef = useRef(null);
+  const [isGenerating, setIsGenerating] = useState(false);
+
+  const handleDownloadFormPdf = async () => {
+    if (!formRef.current || isGenerating) return;
+
+    try {
+      setIsGenerating(true);
+      formRef.current.classList.add('pdf-export');
+
+      const mod = await import('html2pdf.js');
+      const html2pdf = mod?.default ?? mod;
+
+      const el = formRef.current;
+      const w = el.scrollWidth;
+      const h = el.scrollHeight;
+      const opt = {
+        margin: [6, 6, 6, 6], // mm
+        filename: 'Student_Admission_Form_2026.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: {
+          scale: 2,
+          useCORS: true,
+          backgroundColor: '#ffffff',
+          scrollX: 0,
+          scrollY: 0,
+          windowWidth: w,
+          windowHeight: h,
+          width: w,
+          height: h
+        },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+        pagebreak: { mode: ['css', 'legacy'] }
+      };
+
+      await html2pdf().set(opt).from(el).save();
+    } finally {
+      if (formRef.current) formRef.current.classList.remove('pdf-export');
+      setIsGenerating(false);
+    }
+  };
+
   return (
     <div className="admission-procedure-page">
       <section className="admission-procedure-hero">
         <div className="container">
-          <h1>Admission Process – Jeppiaar Academy of Psychology and Research</h1>
+          <h1>Admission Process <br /> Jeppiaar Academy of Psychology and Research</h1>
           <p className="admission-procedure-hero-subtitle">All diploma programmes at Jeppiaar Academy of Psychology and Research are conducted through direct classes.<br /> This is not a recorded or online programme.</p>
           <div className="admission-hero-actions">
             <Link className="admission-apply-btn" to="/apply-online">
               Apply Now (Online)
             </Link>
-            <Link className="admission-apply-btn secondary" to="/admission-form-download">
-              Download Form (PDF)
-            </Link>
+            <button
+              type="button"
+              className="admission-apply-btn secondary"
+              onClick={handleDownloadFormPdf}
+              disabled={isGenerating}
+            >
+              {isGenerating ? 'Generating PDF…' : 'Download Form (PDF)'}
+            </button>
           </div>
         </div>
       </section>
+
+      {/* Hidden: used only to render the PDF template for download */}
+      <div style={{ position: 'absolute', left: -99999, top: 0, width: 0, height: 0, overflow: 'hidden' }} aria-hidden="true">
+        <ProspectFormDocument ref={formRef} />
+      </div>
       
       <section className="admission-procedure-content">
         <div className="container">
@@ -148,29 +201,29 @@ const AdmissionProcedure = () => {
             <div className="admission-subcard">
               <h3 className="admission-subcard-title">1. Advanced Diploma in Counselling and Child Psychology</h3>
               <ul className="admission-bullets">
-                <li>Weekday Classes commence on 15th July 2026</li>
-                <li>Weekend Classes commence on 20th June 2026</li>
+                <li>Weekday batch commence on 15th July 2026</li>
+                <li>Weekend batch commence on 20th June 2026</li>
               </ul>
             </div>
             <div className="admission-subcard">
               <h3 className="admission-subcard-title">2. Advanced Diploma in Counselling & Organizational Psychology</h3>
               <ul className="admission-bullets">
-                <li>Weekday Classes commence on 15th July 2026</li>
-                <li>Weekend Classes commence on 20th June 2026</li>
+                <li>Weekday batch commence on 15th July 2026</li>
+                <li>Weekend batch commence on 20th June 2026</li>
               </ul>
             </div>
             <div className="admission-subcard">
               <h3 className="admission-subcard-title">3. Advanced Diploma in Counselling & Forensic Psychology</h3>
               <ul className="admission-bullets">
-                <li>Weekday Classes commence on 15th July 2026</li>
-                <li>Weekend Classes commence on 20th June 2026</li>
+                <li>Weekday batch commence on 15th July 2026</li>
+                <li>Weekend batch commence on 20th June 2026</li>
               </ul>
             </div>
             <div className="admission-subcard">
               <h3 className="admission-subcard-title">4. Advanced Diploma in Art Therapy</h3>
               <ul className="admission-bullets">
-                <li>Friday Batch Classes commence on 19th june 2026</li>
-                <li>Saturday Batch Classes commence on 20th June 2026</li>
+                <li>Friday Batch commence on 19th June 2026</li>
+                <li>Saturday Batch commence on 20th June 2026</li>
               </ul>
             </div>
 

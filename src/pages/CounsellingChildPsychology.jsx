@@ -4,7 +4,7 @@ import LeadGeneration from '../components/LeadGeneration/LeadGeneration';
 import ApplyModal from '../components/ApplyModal/ApplyModal';
 import image2 from '../assets/images/image2.png';
 import cc1Image from '../assets/images/cc1.png';
-import cc2Image from '../assets/images/cc2.png';
+import cc2Image from '../assets/images/cc101.jpg';
 import cp1Image from '../assets/images/cp1.png';
 import cp2Image from '../assets/images/cp2.png';
 import cp3Image from '../assets/images/cp4.png';

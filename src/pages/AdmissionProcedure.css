@@ -54,7 +54,14 @@
   font-weight: 800;
   letter-spacing: 0.02em;
   border: 2px solid #ffffff;
+  cursor: pointer;
+  font: inherit;
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.admission-apply-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
 }
 
 .admission-apply-btn:hover {

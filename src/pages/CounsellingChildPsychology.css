@@ -434,6 +434,32 @@ img {
   transform-origin: bottom left;
 }
 
+/* Desktop alignment fix: keep LEFT image card vertically centered
+   relative to the center text block (top/bottom balanced). */
+@media (min-width: 769px) {
+  .counselling-child-psychology-page .highlights-section .highlights-content {
+    align-items: center;
+  }
+
+  .counselling-child-psychology-page .highlights-section .highlights-image {
+    align-self: center;
+    align-items: center;
+    margin-top: 0;
+    max-width: 100%;
+  }
+
+  .counselling-child-psychology-page .highlights-section .highlights-image img {
+    align-self: center;
+    transform: scale(1.05);
+    transform-origin: center;
+  }
+
+  .counselling-child-psychology-page .highlights-section .highlights-text {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem;
+  }
+}
+
 .highlights-section .highlights-image img {
   width: 100%;
   height: auto;
@@ -653,6 +679,7 @@ img {
 .counselling-child-psychology-page .title-university-icon {
   left: 40rem !important;
   right: auto !important;
+  top: 3.6rem !important; /* move Bharathi icon further down */
 }
 
 /* Collaboration text above button */
@@ -4065,6 +4092,71 @@ img {
 }
 
 /* =========================================================
+   Mobile (all iPhones/Android): Highlights section cleanup
+   Center the image card + center the button/note layout
+   (Counselling & Child Psychology only)
+   ========================================================= */
+@media (max-width: 768px) {
+  .counselling-child-psychology-page .highlights-section .highlights-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 1rem !important;
+  }
+
+  .counselling-child-psychology-page .highlights-section .highlights-text {
+    width: 100% !important;
+    max-width: 560px;
+    padding-bottom: 0.75rem !important;
+  }
+
+  .counselling-child-psychology-page .highlights-section .button-text-container {
+    width: 100% !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 1rem !important;
+  }
+
+  .counselling-child-psychology-page .highlights-section .download-brochure-btn {
+    width: 100% !important;
+    max-width: 360px !important;
+    margin: 0 !important;
+  }
+
+  .counselling-child-psychology-page .highlights-section .bridge-program-note {
+    width: 100% !important;
+    max-width: 360px !important;
+    margin: 0 !important;
+  }
+
+  .counselling-child-psychology-page .highlights-section .highlights-image {
+    order: 3;
+    position: static !important;
+    left: auto !important;
+    margin: 0.5rem auto 1rem !important;
+    width: 100% !important;
+    max-width: 360px !important;
+    align-self: center !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22) !important;
+    /* ~15% shorter than 4/5 */
+    aspect-ratio: 16 / 17;
+  }
+
+  .counselling-child-psychology-page .highlights-section .highlights-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    transform: none !important;
+  }
+}
+
+/* =========================================================
    Mobile typography: keep ONE consistent font across this page
    ========================================================= */
 
@@ -4770,5 +4862,67 @@ img {
     hyphens: auto;
     overflow-wrap: break-word;
     word-break: normal;
+  }
+}
+
+/* =========================================================
+   Desktop: center-align LEFT + RIGHT columns (Highlights section)
+   Fix left image + right text block alignment (top/bottom + horizontal)
+   ========================================================= */
+@media (min-width: 769px) {
+  .counselling-child-psychology-page .highlights-section .highlights-content,
+  .counselling-child-psychology-page .program-highlights .highlights-content,
+  .counselling-child-psychology-page .highlights-content {
+    /* Keep the two columns centered as a single block */
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    grid-template-columns: minmax(300px, 440px) minmax(420px, 1fr);
+  }
+
+  .counselling-child-psychology-page .highlights-section .highlights-image,
+  .counselling-child-psychology-page .program-highlights .highlights-image,
+  .counselling-child-psychology-page .highlights-image {
+    margin-top: 0; /* cancel legacy "lift" on desktop */
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    /* Card look + containment (desktop) */
+    border-radius: 12px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
+    aspect-ratio: 4 / 5;
+    max-height: 480px;
+  }
+
+  .counselling-child-psychology-page .highlights-section .highlights-image img,
+  .counselling-child-psychology-page .program-highlights .highlights-image img,
+  .counselling-child-psychology-page .highlights-image img {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    object-fit: cover;
+    object-position: center;
+    transform: none;
+    transform-origin: center;
+    align-self: center;
+  }
+
+  .counselling-child-psychology-page .highlights-section .highlights-text,
+  .counselling-child-psychology-page .program-highlights .highlights-text,
+  .counselling-child-psychology-page .highlights-text {
+    width: 100%;
+    max-width: 860px;
+    padding-right: 0;
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+  }
+
+  /* Desktop: reduce extra top gap above subtitle */
+  .counselling-child-psychology-page .highlights-section .highlights-subtitle {
+    margin-top: 1.5rem !important;
   }
 }
