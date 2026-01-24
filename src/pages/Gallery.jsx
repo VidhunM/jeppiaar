@@ -57,8 +57,6 @@ const handleSubmit = async (e) => {
       childName: "",
       parentName: "",
       age: "",
-      class: "",
-      school: "",
       city: "",
       phone: "",
       email: "",
@@ -370,9 +368,9 @@ const handleSubmit = async (e) => {
       <section className="cw-section cw-section-dark cw-gethelp">
         <div className="cw-container cw-gethelp-inner">
           <div className="cw-gethelp-text">
-            <h3 className="cw-gethelp-heading">Ready to Break the Cycle?</h3>
-            <p className="cw-gethelp-para">If your child is stuck in a cycle of screen use, emotional withdrawal, or overwhelm, they don't have to stay there. We help families understand the "why" behind screen addiction and build a healthier path forward.-but you don’t have to do it alone. Our team is here to support you and your family with personalised assessments, counselling, and practical strategies that work in the real world.</p>
-            <p className="cw-gethelp-para">Fill in your details below and we’ll get back to you within 24-48 hours to discuss how we can help.</p>
+            <h3 className="cw-gethelp-heading">Ready to take the first step toward healthier screen habits?</h3>
+            <p className="cw-gethelp-para">If you or your family member whether a child, adolescent, or adult is experiencing concerns related to excessive screen use, emotional withdrawal, stress, or feeling overwhelmed, support is available. Our approach focuses on understanding the underlying factors and helping individuals build healthier routines and coping skills.</p>
+            <p className="cw-gethelp-para">You don’t have to go through this alone. Our team provides personalised assessments, counselling, and practical strategies that can be applied in everyday life. Share your details below, and we will get in touch to discuss how we can support you or your family.</p>
           </div>
           <div className="cw-gethelp-form-wrap">
             <div className="cw-form-card">
@@ -385,11 +383,9 @@ const handleSubmit = async (e) => {
               )}
               <form className="cw-form" onSubmit={handleSubmit}>
                 <div className="cw-form-grid">
-                  <input name="childName" value={form.childName} onChange={handleFormChange} type="text" placeholder="Name of Child" required />
-                  <input name="parentName" value={form.parentName} onChange={handleFormChange} type="text" placeholder="Name of Parent" required />
+                  <input name="childName" value={form.childName} onChange={handleFormChange} type="text" placeholder="Name" required />
+                  <input name="parentName" value={form.parentName} onChange={handleFormChange} type="text" placeholder="Guardian’s Name" required />
                   <input name="age" value={form.age} onChange={handleFormChange} type="text" placeholder="Age" inputMode="numeric" />
-                  <input name="class" value={form.class} onChange={handleFormChange} type="text" placeholder="Class" />
-                  <input name="school" value={form.school} onChange={handleFormChange} type="text" placeholder="School / College Name" />
                   <input name="city" value={form.city} onChange={handleFormChange} type="text" placeholder="City" />
                   <input name="phone" value={form.phone} onChange={handleFormChange} type="tel" placeholder="Phone Number" required />
                   <input name="email" value={form.email} onChange={handleFormChange} type="email" placeholder="Email ID" required />

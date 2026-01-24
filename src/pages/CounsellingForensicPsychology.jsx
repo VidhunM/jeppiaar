@@ -6,7 +6,7 @@ import image2 from '../assets/images/image2.png';
 import cc1Image from '../assets/images/cc1.png';
 import f1Image from '../assets/images/f1.jpeg';
 import cc2Image from '../assets/images/cc2.png';
-import cc202Image from '../assets/images/cc202.png';
+import cc202Image from '../assets/images/cc103.JPG';
 import cp1Image from '../assets/images/cp1.png';
 import cp2Image from '../assets/images/cp2.png';
 import cfp2Image from '../assets/images/cfp2.jpeg';

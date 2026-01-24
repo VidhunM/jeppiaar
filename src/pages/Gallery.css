@@ -881,10 +881,7 @@
 }
 
 .cw-other-dots {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-top: 1.5rem;
+  display: none;
 }
 
 .cw-other-dot {

@@ -6,7 +6,7 @@ import image2 from '../assets/images/image2.png';
 import cc1Image from '../assets/images/cc1.png';
 import a1Image from '../assets/images/a1.jpeg';
 import cc2Image from '../assets/images/cc2.png';
-import cc203Image from '../assets/images/cc203.png';
+import cc203Image from '../assets/images/cC104.JPG';
 import cp1Image from '../assets/images/cp1.png';
 import cp2Image from '../assets/images/cp2.png';
 import cp3Image from '../assets/images/cp4.png';
@@ -188,7 +188,7 @@ The Advanced Diploma in Art Therapy provides a strong foundation in therapeutic 
                   <li>Weekend Evening Batch</li>
                   <li>Friday</li>
                   <li>2:00 PM - 8:00 PM</li>
-                  <li>Classes start on July 19</li>
+                  <li>Classes start on June 19</li>
                   </ul>
                 </div>
                 <div className="batch-box">
