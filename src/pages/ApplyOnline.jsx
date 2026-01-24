@@ -164,9 +164,7 @@ export default function ApplyOnline() {
 
     if (name === 'phone' || name === 'altPhone' || name === 'altContactPhone') {
       const numericValue = value.replace(/\D/g, '');
-      if (numericValue.length <= 10) {
-        setForm((p) => ({ ...p, [name]: numericValue }));
-      }
+      setForm((p) => ({ ...p, [name]: numericValue }));
       return;
     }
 
@@ -180,9 +178,7 @@ export default function ApplyOnline() {
 
     if (name === 'pincode') {
       const numericValue = value.replace(/\D/g, '');
-      if (numericValue.length <= 6) {
-        setForm((p) => ({ ...p, pincode: numericValue }));
-      }
+      setForm((p) => ({ ...p, pincode: numericValue }));
       return;
     }
 
@@ -227,8 +223,8 @@ export default function ApplyOnline() {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(form.email)) return 'Please enter a valid email address.';
 
-    const phoneRegex = /^\d{10}$/;
-    if (!phoneRegex.test(form.phone)) return 'Please enter a valid 10-digit mobile number.';
+    const phoneRegex = /^\d+$/;
+    if (!phoneRegex.test(form.phone)) return 'Please enter a valid mobile number.';
 
     // Required files
     for (const f of docFields) {
@@ -528,8 +524,7 @@ export default function ApplyOnline() {
                         onChange={onChange}
                         onKeyPress={handlePhoneKeyPress}
                         inputMode="numeric"
-                        placeholder="10 digits"
-                        maxLength={10}
+                        placeholder="enter your mobile number"
                         required
                         disabled={submitted}
                       />
@@ -545,7 +540,6 @@ export default function ApplyOnline() {
                         onKeyPress={handlePhoneKeyPress}
                         inputMode="numeric"
                         placeholder="10 digits"
-                        maxLength={10}
                         disabled={submitted}
                       />
                     </label>
@@ -579,7 +573,7 @@ export default function ApplyOnline() {
                         value={form.pincode}
                         onChange={onChange}
                         onKeyPress={handlePhoneKeyPress}
-                        placeholder="6 digits"
+                        placeholder="enter your pincode"
                         disabled={submitted}
                       />
                     </label>
@@ -607,7 +601,6 @@ export default function ApplyOnline() {
                         onKeyPress={handlePhoneKeyPress}
                         inputMode="numeric"
                         placeholder="10 digits"
-                        maxLength={10}
                         required
                         disabled={submitted}
                       />
