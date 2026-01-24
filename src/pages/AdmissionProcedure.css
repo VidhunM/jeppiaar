@@ -272,6 +272,16 @@
   .section-heading {
     font-size: 1.1rem;
   }
+
+  /* Mobile: tighten Eligibility card heading-to-text spacing */
+  .admission-eligibility-card .section-heading {
+    margin-bottom: 0.55rem;
+  }
+
+  .admission-eligibility-card .admission-eligibility-text,
+  .admission-eligibility-card .admission-bullets {
+    margin-top: 0.35rem;
+  }
   
   .admission-procedure-content p {
     font-size: 0.98rem;
@@ -321,6 +331,16 @@
   .admission-procedure-hero .container,
   .admission-procedure-content .container {
     padding: 0 1rem;
+  }
+
+  /* Small screens: slightly tighter Eligibility spacing */
+  .admission-eligibility-card .section-heading {
+    margin-bottom: 0.45rem;
+  }
+
+  .admission-eligibility-card .admission-eligibility-text,
+  .admission-eligibility-card .admission-bullets {
+    margin-top: 0.25rem;
   }
 
   /* Slightly more inner padding for step cards on small screens */

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './HeroSection.css';
-import heroImage from '../../assets/images/hero01.jpg';
+import heroImage from '../../assets/images/hero1.png';
 import hero2Image from '../../assets/images/hero2.png';
 import hero3Image from '../../assets/images/hero03.jpg';
 import hero4Image from '../../assets/images/hero04.jpg';
@@ -88,7 +88,7 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection, onOpenA
         className={`hero-slide ${currentSlide === 0 ? 'hero-slide-first' : ''} ${currentSlide === 1 ? 'hero-slide-second' : ''} ${currentSlide === 3 ? 'hero-slide-fourth' : ''} ${imagesLoaded ? 'images-loaded' : ''}`}
         style={{ 
           backgroundImage: `url(${slides[currentSlide].image})`,
-          backgroundPosition: currentSlide === 0 ? 'center 35%' : (currentSlide === 3 ? 'top center' : undefined)
+          backgroundPosition: currentSlide === 3 ? 'top center' : undefined
         }}
       >
         <div className="hero-gradient-overlay-bottom"></div>
