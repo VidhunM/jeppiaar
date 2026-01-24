@@ -12,10 +12,6 @@ const Header = () => {
   const [isDropdownClicked, setIsDropdownClicked] = useState(false);
   const [hoverDisabled, setHoverDisabled] = useState(false);
   const dropdownStateRef = useRef(false);
-  const [isAdmissionDropdownOpen, setIsAdmissionDropdownOpen] = useState(false);
-  const [isAdmissionDropdownClicked, setIsAdmissionDropdownClicked] = useState(false);
-  const [admissionHoverDisabled, setAdmissionHoverDisabled] = useState(false);
-  const admissionDropdownStateRef = useRef(false);
   const [showApplyModal, setShowApplyModal] = useState(false);
   const [applyForm, setApplyForm] = useState({
     name: '',
@@ -43,10 +39,6 @@ const Header = () => {
   useEffect(() => {
     dropdownStateRef.current = isDropdownOpen;
   }, [isDropdownOpen]);
-
-  useEffect(() => {
-    admissionDropdownStateRef.current = isAdmissionDropdownOpen;
-  }, [isAdmissionDropdownOpen]);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -85,44 +77,6 @@ const Header = () => {
       };
     }
   }, [isDropdownOpen]);
-
-  useEffect(() => {
-    const handleAdmissionClickOutside = (event) => {
-      // Check if click is inside the admission dropdown specifically
-      const admissionMenu = document.getElementById('admission-dropdown');
-      const admissionToggle = document.querySelector('[aria-controls="admission-dropdown"]');
-      const clickedElement = event.target;
-      
-      // Check if click is inside the dropdown menu or its toggle button
-      const clickedInsideAdmission = 
-        (admissionMenu && admissionMenu.contains(clickedElement)) ||
-        (admissionToggle && admissionToggle.contains(clickedElement)) ||
-        clickedElement.closest('#admission-dropdown') ||
-        clickedElement.closest('[aria-controls="admission-dropdown"]');
-      
-      // Don't close if clicking inside the admission dropdown area
-      if (isAdmissionDropdownOpen && !clickedInsideAdmission) {
-        setIsAdmissionDropdownOpen(false);
-        setIsAdmissionDropdownClicked(false);
-        setAdmissionHoverDisabled(false);
-        admissionDropdownStateRef.current = false;
-      }
-    };
-
-    if (isAdmissionDropdownOpen) {
-      // Use click event with a small delay to let click handlers complete first
-      const timeoutId = setTimeout(() => {
-        document.addEventListener('click', handleAdmissionClickOutside);
-        document.addEventListener('touchstart', handleAdmissionClickOutside);
-      }, 0);
-
-      return () => {
-        clearTimeout(timeoutId);
-        document.removeEventListener('click', handleAdmissionClickOutside);
-        document.removeEventListener('touchstart', handleAdmissionClickOutside);
-      };
-    }
-  }, [isAdmissionDropdownOpen]);
 
   const handleNavClick = (e, path) => {
     if (isHomePage && (path === '/courses' || path === '/research' || path === '/contact')) {
@@ -203,13 +157,6 @@ const Header = () => {
               onMouseEnter={(e) => {
                 // Only allow hover on desktop
                 if (window.innerWidth > 768 && !hoverDisabled) {
-                  // Close admission dropdown if open
-                  if (isAdmissionDropdownOpen) {
-                    setIsAdmissionDropdownOpen(false);
-                    setIsAdmissionDropdownClicked(false);
-                    setAdmissionHoverDisabled(false);
-                    admissionDropdownStateRef.current = false;
-                  }
                   setIsDropdownOpen(true);
                   dropdownStateRef.current = true;
                 }
@@ -230,14 +177,6 @@ const Header = () => {
                 onClick={(e) => {
                   e.preventDefault();
                   e.stopPropagation();
-                  
-                  // Close admission dropdown if open
-                  if (isAdmissionDropdownOpen) {
-                    setIsAdmissionDropdownOpen(false);
-                    setIsAdmissionDropdownClicked(false);
-                    setAdmissionHoverDisabled(false);
-                    admissionDropdownStateRef.current = false;
-                  }
                   
                   // Toggle dropdown
                   setIsDropdownOpen(prevState => {
@@ -340,126 +279,7 @@ const Header = () => {
                 </div>
               )}
             </div>
-            <div 
-              className="nav-dropdown"
-              onMouseEnter={(e) => {
-                // Only allow hover on desktop
-                if (window.innerWidth > 768 && !admissionHoverDisabled) {
-                  // Close diploma dropdown if open
-                  if (isDropdownOpen) {
-                    setIsDropdownOpen(false);
-                    setIsDropdownClicked(false);
-                    setHoverDisabled(false);
-                    dropdownStateRef.current = false;
-                  }
-                  setIsAdmissionDropdownOpen(true);
-                  admissionDropdownStateRef.current = true;
-                }
-              }}
-              onMouseLeave={(e) => {
-                // Only close on hover leave if it was opened by hover (not click)
-                if (window.innerWidth > 768 && !isAdmissionDropdownClicked) {
-                  setIsAdmissionDropdownOpen(false);
-                  admissionDropdownStateRef.current = false;
-                }
-              }}
-            >
-              <div
-                className="dropdown-toggle"
-                role="button"
-                aria-expanded={isAdmissionDropdownOpen}
-                aria-controls="admission-dropdown"
-                onClick={(e) => {
-                  e.preventDefault();
-                  e.stopPropagation();
-                  
-                  // Close diploma dropdown if open
-                  if (isDropdownOpen) {
-                    setIsDropdownOpen(false);
-                    setIsDropdownClicked(false);
-                    setHoverDisabled(false);
-                    dropdownStateRef.current = false;
-                  }
-                  
-                  // Toggle dropdown
-                  setIsAdmissionDropdownOpen(prevState => {
-                    const willBeOpen = !prevState;
-                    
-                    if (willBeOpen) {
-                      // Opening - set clicked state and disable hover temporarily
-                      setIsAdmissionDropdownClicked(true);
-                      setAdmissionHoverDisabled(true);
-                      setTimeout(() => {
-                        setAdmissionHoverDisabled(false);
-                      }, 300);
-                    } else {
-                      // Closing - reset states
-                      setIsAdmissionDropdownClicked(false);
-                      setAdmissionHoverDisabled(false);
-                    }
-                    
-                    return willBeOpen;
-                  });
-                }}
-              >
-                <span className="dropdown-label">Admission</span>
-                <span className={`dropdown-icon ${isAdmissionDropdownOpen ? 'open' : ''}`} aria-hidden="true">
-                  <svg viewBox="0 0 24 24" focusable="false">
-                    <path
-                      d="M6 9l6 6 6-6"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </span>
-              </div>
-              {isAdmissionDropdownOpen && (
-                <div 
-                  id="admission-dropdown" 
-                  className="dropdown-menu"
-                  onMouseEnter={() => {
-                    if (window.innerWidth > 768) {
-                      setIsAdmissionDropdownOpen(true);
-                      admissionDropdownStateRef.current = true;
-                    }
-                  }}
-                  onMouseLeave={() => {
-                    if (window.innerWidth > 768) {
-                      // Close only if not clicked (hover mode)
-                      if (!isAdmissionDropdownClicked) {
-                        setIsAdmissionDropdownOpen(false);
-                        admissionDropdownStateRef.current = false;
-                      }
-                    }
-                  }}
-                >
-                  <Link 
-                    to="/admission-procedure" 
-                    onClick={() => {
-                      setIsMobileMenuOpen(false);
-                      setIsAdmissionDropdownOpen(false);
-                      setIsAdmissionDropdownClicked(false);
-                      admissionDropdownStateRef.current = false;
-                    }}
-                  >
-                    Admission Procedure
-                  </Link>
-                  <Link 
-                    to="/admission-form-download" 
-                    onClick={() => {
-                      setIsMobileMenuOpen(false);
-                      setIsAdmissionDropdownOpen(false);
-                      setIsAdmissionDropdownClicked(false);
-                      admissionDropdownStateRef.current = false;
-                    }}
-                  >
-                    Admission Form Download
-                  </Link>
-                </div>
-              )}
-            </div>
+            <Link to="/admission-procedure" onClick={() => setIsMobileMenuOpen(false)}>Admission</Link>
             <Link 
               to="/research" 
               onClick={() => setIsMobileMenuOpen(false)}

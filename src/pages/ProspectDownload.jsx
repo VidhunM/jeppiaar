@@ -1,13 +1,17 @@
-import React, { useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import './ProspectDownload.css';
 import Logo1 from '../assets/icons/Logo1.png';
 
 const ProspectDownload = () => {
   const formRef = useRef(null);
   const [isGenerating, setIsGenerating] = useState(false);
+  const location = useLocation();
+  const autoTriggeredRef = useRef(false);
 
-  const handlePrint = () => window.print();
-  const handleDownloadPdf = async () => {
+  const handlePrint = useCallback(() => window.print(), []);
+
+  const handleDownloadPdf = useCallback(async () => {
     if (!formRef.current) return;
 
     try {
@@ -50,7 +54,21 @@ const ProspectDownload = () => {
       }
       setIsGenerating(false);
     }
-  };
+  }, []);
+
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const shouldAuto = params.get('auto') === '1';
+    if (!shouldAuto || autoTriggeredRef.current) return;
+    autoTriggeredRef.current = true;
+
+    // Let the form render before capturing to PDF
+    const t = setTimeout(() => {
+      handleDownloadPdf();
+    }, 200);
+
+    return () => clearTimeout(t);
+  }, [location.search, handleDownloadPdf]);
 
   return (
     <div className="prospect-download-page">
