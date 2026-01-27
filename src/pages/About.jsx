@@ -123,7 +123,7 @@ As Dean of Academics, she oversees the development and implementation of the aca
 She has been instrumental in developing the academy's curriculum, establishing quality assurance processes, and mentoring faculty and students. Her leadership has contributed significantly to the academy's reputation for academic excellence and innovation in psychology education.`
     },
     {
-      name: 'Dr. C. Nirmala, M.D.S',
+      name: 'Dr. C. Nirmala',
       role: 'Program Head, Polo Research',
       image: nirmalaImage,
       description: `Dr. C. Nirmala is a Conservative and Endodontic Dental Surgeon with a strong passion for research, innovation, and education. She firmly believes that introducing children to the fundamentals of research during their school years can help channel their natural curiosity into structured inquiry, creative problem-solving, and innovative thinking. With this vision, she founded the Junior Researcher Learning Adventure (JRLA) Program, an initiative dedicated to nurturing research skills among school students. Through JRLA, Dr. Nirmala mentors young learners in research methodology, scientific writing, article preparation, and effective presentations, empowering them to identify research gaps in everyday life and develop solution-oriented thinking.
@@ -131,7 +131,7 @@ She has been instrumental in developing the academy's curriculum, establishing q
 JRLA has collaborated with Polo Research to deliver high-quality, structured research training for both teachers and students, ensuring a strong foundation in academic inquiry and innovation. Together, JRLA and Polo Research strive to build a culture of research excellence in schools by equipping young minds with the skills, confidence, and mindset required to become future inventors, innovators, and leaders across diverse fields.`
     },
     {
-      name: 'Dr. Sangeetha Baid, Ph.D',
+      name: 'Dr. Sangeetha Baid',
       role: 'Program Head, Mind Mastery',
       image: sangeethaImage,
       description: `An accomplished Personality Development and Public Speaking Coach with a Ph.D. in Psychology, she is dedicated to empowering individuals through transformative learning experiences. Her work focuses on building confidence, emotional intelligence, and effective communication skills that enable success in both personal and professional domains.
