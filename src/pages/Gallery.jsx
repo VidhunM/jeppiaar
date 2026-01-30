@@ -35,7 +35,7 @@ const Gallery = () => {
     setForm(prev => ({ ...prev, [name]: type === 'checkbox' ? checked : value }));
   };
 
-  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxuqzs81q4dIgBrzsfWbAisS1ZUYwk6QL5LjbogLTJ5snkp3xzw6WqAerINLuLwjnCwbw/exec";
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwrJ88Q2CXRFaZ884FWaxOeElPbvjUizofjHVEiCmt-s5TKeIog2cChElv1UAKxyatJ/exec";
 
 const handleSubmit = async (e) => {
   e.preventDefault();
@@ -50,6 +50,7 @@ const handleSubmit = async (e) => {
       mode: "no-cors",
       body: JSON.stringify(form)
     });
+    
 
     setSubmitMessage({ type: 'success', text: "Thank you — we will contact you soon." });
     // Refresh the form (clear fields) after submit

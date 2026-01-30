@@ -3,7 +3,7 @@ import './ApplyOnline.css';
 import Logo1 from '../assets/icons/Logo1.png';
 
 const DEFAULT_SCRIPT_URL =
-  'https://script.google.com/macros/s/AKfycbzVPgyGqVi2nR9KqB8Wq4Sr50zu-5XDFjYpGgReD0VrakQD9vBbsIWbfhMPfAXIJnk/exec';
+  'https://script.google.com/macros/s/AKfycbxOOayK7tyitliRIIU_1bp00Mqjqn0kfKcQa6VobD-41-qOBzogpzMZy7QQEp3OtsWwrw/exec';
 
 function generateApplicationId() {
   const ts = new Date().toISOString().replace(/[-:.TZ]/g, '');
@@ -37,6 +37,26 @@ export default function ApplyOnline() {
   const paymentUrl = import.meta.env.VITE_APPLICATION_PAYMENT_URL ?? '';
   const scriptUrl = import.meta.env.VITE_ADMISSION_APPLICATION_SCRIPT_URL ?? DEFAULT_SCRIPT_URL;
   const razorpayKeyId = import.meta.env.VITE_RAZORPAY_KEY_ID ?? '';
+
+  /**
+   * Google Apps Script Web Apps (script.google.com) cannot reliably return CORS headers
+   * for fetch() from arbitrary origins. Use a "simple" no-cors POST:
+   * - The request reaches Apps Script
+   * - The browser will NOT let us read the response (opaque)
+   *
+   * If you need to read JSON responses, add a server-side proxy (Netlify/Vercel/Node)
+   * or move this submission endpoint to your own backend.
+   */
+  const postToAppsScript = async (payload) => {
+    if (!scriptUrl) throw new Error('Submission endpoint is not configured.');
+    await fetch(scriptUrl, {
+      method: 'POST',
+      mode: 'no-cors',
+      // Keep it a "simple request" to avoid preflight.
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(payload)
+    });
+  };
 
   const programmes = useMemo(
     () => [
@@ -280,16 +300,9 @@ export default function ApplyOnline() {
         attachments
       };
 
-      const res = await fetch(scriptUrl, {
-        method: 'POST',
-        mode: 'cors',
-        body: JSON.stringify(payload)
-      });
-
-      const result = await res.json().catch(() => ({}));
-      if (result?.status && result.status !== 'success') {
-        throw new Error(result.message || 'Submission failed.');
-      }
+      // Apps Script can't provide CORS headers, so we can't read the response in-browser.
+      // This still submits the data successfully (when the web app is deployed with public access).
+      await postToAppsScript(payload);
 
       // Keep localStorage lightweight (avoid storing base64)
       localStorage.setItem(
@@ -307,7 +320,10 @@ export default function ApplyOnline() {
 
       setApplicationId(appId);
       setSubmitted(true);
-      setMessage({ type: 'success', text: 'Form submitted successfully. Proceed to payment.' });
+      setMessage({
+        type: 'success',
+        text: 'Form submitted (sent). Proceed to payment. If you face any issues, please try again or contact support with your Application ID.'
+      });
     } catch (ex) {
       setMessage({
         type: 'error',
@@ -347,18 +363,13 @@ export default function ApplyOnline() {
           });
           
           // Optionally send payment confirmation to Apps Script
-          fetch(scriptUrl, {
-            method: 'POST',
-            mode: 'cors',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              type: 'payment_confirmation',
-              applicationId: applicationId,
-              paymentId: response.razorpay_payment_id,
-              orderId: response.razorpay_order_id,
-              signature: response.razorpay_signature
-            })
-          }).catch(err => console.error('Payment confirmation failed:', err));
+          postToAppsScript({
+            type: 'payment_confirmation',
+            applicationId: applicationId,
+            paymentId: response.razorpay_payment_id,
+            orderId: response.razorpay_order_id,
+            signature: response.razorpay_signature
+          }).catch((err) => console.error('Payment confirmation failed:', err));
         },
         prefill: {
           name: form.fullName || '',

@@ -24,6 +24,13 @@
 const SHEET_ID = 'YOUR_SHEET_ID_HERE'; // Replace with your Google Sheet ID
 const DRIVE_FOLDER_ID = 'YOUR_DRIVE_FOLDER_ID_HERE'; // Replace with your Google Drive folder ID
 const SHEET_NAME = 'Applications'; // Name of the sheet tab
+const GALLERY_SHEET_NAME = 'GalleryEnquiries'; // Name of the sheet tab for Gallery.jsx submissions
+
+function jsonResponse(obj) {
+  return ContentService
+    .createTextOutput(JSON.stringify(obj))
+    .setMimeType(ContentService.MimeType.JSON);
+}
 
 // ========== MAIN DO POST FUNCTION ==========
 function doPost(e) {
@@ -35,38 +42,93 @@ function doPost(e) {
     if (payload.type === 'payment_confirmation') {
       return handlePaymentConfirmation(payload);
     }
+
+    // Handle Gallery enquiry (and also tolerate legacy "plain form" payloads from Gallery.jsx)
+    // - New shape: { type: "gallery_enquiry", form: { ... } }
+    // - Legacy shape: { childName, parentName, age, city, phone, email, terms, ... }
+    if (
+      payload.type === 'gallery_enquiry' ||
+      (!payload.type && (payload.childName || payload.parentName || payload.phone || payload.email))
+    ) {
+      const form = payload.form ? payload.form : payload;
+      return handleGalleryEnquiry(form);
+    }
     
     // Validate payload type for application submission
     if (payload.type !== 'online_application_full') {
-      return ContentService
-        .createTextOutput(JSON.stringify({
-          status: 'error',
-          message: 'Invalid request type'
-        }))
-        .setMimeType(ContentService.MimeType.JSON);
+      return jsonResponse({
+        status: 'error',
+        message: 'Invalid request type'
+      });
     }
     
     // Process the application
     const result = processApplication(payload);
     
     // Return success response
-    return ContentService
-      .createTextOutput(JSON.stringify({
-        status: 'success',
-        message: 'Application submitted successfully',
-        applicationId: payload.applicationId,
-        driveFolderUrl: result.driveFolderUrl
-      }))
-      .setMimeType(ContentService.MimeType.JSON);
+    return jsonResponse({
+      status: 'success',
+      message: 'Application submitted successfully',
+      applicationId: payload.applicationId,
+      driveFolderUrl: result.driveFolderUrl
+    });
       
   } catch (error) {
     // Return error response
-    return ContentService
-      .createTextOutput(JSON.stringify({
+    return jsonResponse({
+      status: 'error',
+      message: error.toString()
+    });
+  }
+}
+
+// ========== HANDLE GALLERY ENQUIRY ==========
+function handleGalleryEnquiry(form) {
+  try {
+    if (!SHEET_ID || SHEET_ID === 'YOUR_SHEET_ID_HERE') {
+      return jsonResponse({
         status: 'error',
-        message: error.toString()
-      }))
-      .setMimeType(ContentService.MimeType.JSON);
+        message: 'SHEET_ID is not configured in apps-script.gs'
+      });
+    }
+
+    const ss = SpreadsheetApp.openById(SHEET_ID);
+    const sheet = ss.getSheetByName(GALLERY_SHEET_NAME) || ss.insertSheet(GALLERY_SHEET_NAME);
+
+    // Create header row if sheet is empty
+    if (sheet.getLastRow() === 0) {
+      sheet.appendRow([
+        'Timestamp',
+        'Child Name',
+        'Parent Name',
+        'Age',
+        'City',
+        'Phone',
+        'Email',
+        'Terms Accepted'
+      ]);
+    }
+
+    sheet.appendRow([
+      new Date().toISOString(),
+      (form && form.childName) || '',
+      (form && form.parentName) || '',
+      (form && form.age) || '',
+      (form && form.city) || '',
+      (form && form.phone) || '',
+      (form && form.email) || '',
+      (form && form.terms) ? 'Yes' : 'No'
+    ]);
+
+    return jsonResponse({
+      status: 'success',
+      message: 'Gallery enquiry submitted'
+    });
+  } catch (error) {
+    return jsonResponse({
+      status: 'error',
+      message: error.toString()
+    });
   }
 }
 
