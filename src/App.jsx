@@ -13,6 +13,7 @@ import Gallery from './pages/Gallery';
 import AdmissionProcedure from './pages/AdmissionProcedure';
 import ProspectDownload from './pages/ProspectDownload';
 import ApplyOnline from './pages/ApplyOnline';
+import Walkin from './pages/Walkin';
 import CounsellingChildPsychology from './pages/CounsellingChildPsychology';
 import CounsellingOrganizationalPsychology from './pages/CounsellingOrganizationalPsychology';
 import CounsellingForensicPsychology from './pages/CounsellingForensicPsychology';
@@ -63,6 +64,7 @@ function AppLayout() {
           <Route path="/research" element={<Gallery />} />
           <Route path="/admission-procedure" element={<AdmissionProcedure />} />
           <Route path="/apply-online" element={<ApplyOnline />} />
+          <Route path="/walkin" element={<Walkin />} />
           <Route path="/admission-form-download" element={<ProspectDownload />} />
           {/* Backward compatible route */}
           <Route path="/prospect-download" element={<Navigate to="/admission-form-download" replace />} />

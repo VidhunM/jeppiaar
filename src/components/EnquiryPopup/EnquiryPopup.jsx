@@ -235,7 +235,7 @@ export default function EnquiryPopup({
               onChange={onChange}
               type="tel"
               inputMode="numeric"
-              placeholder="10 digits"
+              placeholder="Enter phone number"
               maxLength={15}
               required
             />

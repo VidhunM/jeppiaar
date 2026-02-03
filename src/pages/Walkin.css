@@ -1,0 +1,275 @@
+.walkin-page {
+  padding-top: 140px;
+  background: #fff;
+}
+
+.walkin-banner {
+  position: relative;
+  width: 100%;
+  height: 34vh;
+  min-height: 240px;
+  max-height: 360px;
+  background: linear-gradient(
+    135deg,
+    rgba(14, 5, 41, 1) 0%,
+    rgba(26, 18, 96, 1) 45%,
+    rgba(14, 5, 41, 1) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.walkin-banner-inner {
+  position: relative;
+  z-index: 1;
+  padding: 1.25rem 2rem;
+  text-align: center;
+}
+
+.walkin-banner-inner h1 {
+  margin: 0 0 0.35rem 0;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 800;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.walkin-banner-inner p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 720px;
+}
+
+.walkin-content {
+  padding: 1.5rem 0 3rem;
+}
+
+.walkin-card {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid rgba(14, 5, 41, 0.1);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+}
+
+.walkin-card h2 {
+  margin: 0 0 1rem 0;
+  color: #0e0529;
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.walkin-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.walkin-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.walkin-field {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.walkin-field span {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgba(14, 5, 41, 0.85);
+}
+
+.walkin-field input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(14, 5, 41, 0.22);
+  border-radius: 10px;
+  background: #fff;
+  color: #222;
+  min-height: 44px;
+  box-sizing: border-box;
+}
+
+.walkin-field select {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(14, 5, 41, 0.22);
+  border-radius: 10px;
+  background: #fff;
+  color: #222;
+  min-height: 44px;
+  box-sizing: border-box;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.6rem;
+  cursor: pointer;
+}
+
+.walkin-placeholder-label {
+  /* Match screenshot: label looks like placeholder text */
+  font-weight: 500 !important;
+  color: rgba(0, 0, 0, 0.75) !important;
+}
+
+/* Dropdown (collapsible) checkbox section */
+.walkin-dropdown {
+  border: 1px solid rgba(14, 5, 41, 0.12);
+  border-radius: 14px;
+  background: rgba(14, 5, 41, 0.02);
+  overflow: hidden;
+}
+
+.walkin-dropdown-summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 0.9rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #0e0529;
+  background: rgba(14, 5, 41, 0.03);
+}
+
+/* Hide default marker (Chrome/Safari) */
+.walkin-dropdown-summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Add our own chevron */
+.walkin-dropdown-summary::after {
+  content: '▾';
+  float: right;
+  opacity: 0.7;
+  transform: translateY(-1px);
+}
+
+.walkin-dropdown[open] .walkin-dropdown-summary::after {
+  content: '▴';
+}
+
+.walkin-dropdown-body {
+  padding: 0.9rem 1rem 1rem;
+}
+
+.walkin-interests-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem 0.9rem;
+}
+
+.walkin-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid rgba(14, 5, 41, 0.12);
+  border-radius: 12px;
+  background: rgba(14, 5, 41, 0.03);
+}
+
+.walkin-check input[type='checkbox'] {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  flex-shrink: 0;
+  accent-color: #1a1260;
+  -webkit-appearance: checkbox;
+  -moz-appearance: auto;
+  appearance: auto;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+}
+
+.walkin-check span {
+  font-size: 0.95rem;
+  color: rgba(0, 0, 0, 0.8);
+  line-height: 1.35;
+}
+
+.walkin-submit {
+  justify-self: start;
+  background: #1a1260;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.95rem 2.25rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  min-height: 44px;
+}
+
+.walkin-submit:hover {
+  transform: translateY(-1px);
+}
+
+.walkin-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.walkin-message {
+  margin-top: 0.25rem;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+}
+
+.walkin-message.success {
+  background: rgba(76, 175, 80, 0.12);
+  border: 1px solid rgba(76, 175, 80, 0.5);
+  color: #2e7d32;
+}
+
+.walkin-message.error {
+  background: rgba(244, 67, 54, 0.12);
+  border: 1px solid rgba(244, 67, 54, 0.5);
+  color: #c62828;
+}
+
+@media (max-width: 768px) {
+  .walkin-page {
+    padding-top: 120px;
+  }
+  .walkin-banner {
+    height: 26vh;
+    min-height: 190px;
+  }
+  .walkin-banner-inner {
+    padding: 1rem 1rem;
+  }
+  .walkin-banner-inner h1 {
+    font-size: 1.5rem;
+  }
+  .walkin-grid {
+    grid-template-columns: 1fr;
+  }
+  .walkin-interests-grid {
+    grid-template-columns: 1fr;
+  }
+  .walkin-submit {
+    width: 100%;
+    justify-self: stretch;
+  }
+}
+
+/* iOS Safari: prevent zoom on focus */
+@supports (-webkit-touch-callout: none) {
+  .walkin-field input {
+    font-size: 16px;
+  }
+  .walkin-field select {
+    font-size: 16px;
+  }
+}
+
