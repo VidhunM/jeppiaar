@@ -119,81 +119,6 @@
   color: rgba(0, 0, 0, 0.75) !important;
 }
 
-/* Dropdown (collapsible) checkbox section */
-.walkin-dropdown {
-  border: 1px solid rgba(14, 5, 41, 0.12);
-  border-radius: 14px;
-  background: rgba(14, 5, 41, 0.02);
-  overflow: hidden;
-}
-
-.walkin-dropdown-summary {
-  list-style: none;
-  cursor: pointer;
-  padding: 0.9rem 1rem;
-  font-size: 0.95rem;
-  font-weight: 800;
-  color: #0e0529;
-  background: rgba(14, 5, 41, 0.03);
-}
-
-/* Hide default marker (Chrome/Safari) */
-.walkin-dropdown-summary::-webkit-details-marker {
-  display: none;
-}
-
-/* Add our own chevron */
-.walkin-dropdown-summary::after {
-  content: '▾';
-  float: right;
-  opacity: 0.7;
-  transform: translateY(-1px);
-}
-
-.walkin-dropdown[open] .walkin-dropdown-summary::after {
-  content: '▴';
-}
-
-.walkin-dropdown-body {
-  padding: 0.9rem 1rem 1rem;
-}
-
-.walkin-interests-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.6rem 0.9rem;
-}
-
-.walkin-check {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.6rem;
-  padding: 0.6rem 0.75rem;
-  border: 1px solid rgba(14, 5, 41, 0.12);
-  border-radius: 12px;
-  background: rgba(14, 5, 41, 0.03);
-}
-
-.walkin-check input[type='checkbox'] {
-  width: 18px;
-  height: 18px;
-  margin-top: 2px;
-  flex-shrink: 0;
-  accent-color: #1a1260;
-  -webkit-appearance: checkbox;
-  -moz-appearance: auto;
-  appearance: auto;
-  min-width: 0 !important;
-  min-height: 0 !important;
-  padding: 0 !important;
-}
-
-.walkin-check span {
-  font-size: 0.95rem;
-  color: rgba(0, 0, 0, 0.8);
-  line-height: 1.35;
-}
-
 .walkin-submit {
   justify-self: start;
   background: #1a1260;
@@ -252,9 +177,6 @@
     font-size: 1.5rem;
   }
   .walkin-grid {
-    grid-template-columns: 1fr;
-  }
-  .walkin-interests-grid {
     grid-template-columns: 1fr;
   }
   .walkin-submit {

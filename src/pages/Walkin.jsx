@@ -51,7 +51,7 @@ export default function Walkin() {
     phone: '',
     hearAbout: '',
     hearAboutOther: '',
-    interests: [],
+    enquiry: '',
   });
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState(null);
@@ -64,13 +64,6 @@ export default function Walkin() {
       return;
     }
     setForm((p) => ({ ...p, [name]: value }));
-  };
-
-  const toggleInterest = (label) => {
-    setForm((p) => {
-      const exists = p.interests.includes(label);
-      return { ...p, interests: exists ? p.interests.filter((x) => x !== label) : [...p.interests, label] };
-    });
   };
 
   const submitToWebhook = async (payload) => {
@@ -103,10 +96,10 @@ export default function Walkin() {
     const phone = normalizePhone(form.phone);
     const hearAbout = String(form.hearAbout || '').trim();
     const hearAboutOther = String(form.hearAboutOther || '').trim();
-    const interests = Array.isArray(form.interests) ? form.interests : [];
+    const enquiry = String(form.enquiry || '').trim();
 
-    if (!name || !phone || interests.length === 0) {
-      setMessage({ type: 'error', text: 'Please enter Name, Mobile Number, and select at least one option.' });
+    if (!name || !phone || !enquiry) {
+      setMessage({ type: 'error', text: 'Please enter Name, Mobile Number, and select Enquiry.' });
       return;
     }
     if (email && !isValidEmail(email)) {
@@ -134,9 +127,9 @@ export default function Walkin() {
         name,
         phone,
         email,
-        enquiry: interests.join(', '),
+        enquiry,
         source: 'Walkin page',
-        notes: `Heard about: ${hearText}\nSelected: ${interests.join(', ')}\nPage: ${
+        notes: `Heard about: ${hearText}\nSelected: ${enquiry}\nPage: ${
           typeof window !== 'undefined' ? window.location.href : ''
         }`,
       };
@@ -144,7 +137,7 @@ export default function Walkin() {
       await submitToWebhook(payload);
 
       setMessage({ type: 'success', text: 'Thank you! We will contact you soon.' });
-      setForm({ name: '', email: '', phone: '', hearAbout: '', hearAboutOther: '', interests: [] });
+      setForm({ name: '', email: '', phone: '', hearAbout: '', hearAboutOther: '', enquiry: '' });
     } catch (err) {
       setMessage({ type: 'error', text: `Submission failed: ${err?.message || String(err)}` });
     } finally {
@@ -193,7 +186,7 @@ export default function Walkin() {
                     onChange={onChange}
                     type="tel"
                     inputMode="numeric"
-                    placeholder="10 digits"
+                    placeholder="Enter phone number"
                     maxLength={15}
                     required
                   />
@@ -228,23 +221,19 @@ export default function Walkin() {
                 )}
               </div>
 
-              <details className="walkin-dropdown" open>
-                <summary className="walkin-dropdown-summary">Workshops / Courses / Programs (Select) *</summary>
-                <div className="walkin-dropdown-body">
-                  <div className="walkin-interests-grid">
-                    {options.map((opt) => (
-                      <label key={opt} className="walkin-check">
-                        <input
-                          type="checkbox"
-                          checked={form.interests.includes(opt)}
-                          onChange={() => toggleInterest(opt)}
-                        />
-                        <span>{opt}</span>
-                      </label>
-                    ))}
-                  </div>
-                </div>
-              </details>
+              <label className="walkin-field">
+                <span>Workshops / Courses / Programs (Select) *</span>
+                <select name="enquiry" value={form.enquiry} onChange={onChange} required>
+                  <option value="" disabled>
+                    Select
+                  </option>
+                  {options.map((opt) => (
+                    <option key={opt} value={opt}>
+                      {opt}
+                    </option>
+                  ))}
+                </select>
+              </label>
 
               <button className="walkin-submit" type="submit" disabled={loading}>
                 {loading ? 'Submitting…' : 'Submit'}
