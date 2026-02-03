@@ -20,6 +20,7 @@ import CounsellingArtTherapy from './pages/CounsellingArtTherapy';
 import PrivacyNotice from './pages/PrivacyNotice';
 import TermsAndConditions from './pages/TermsAndConditions';
 import CancellationPolicy from './pages/CancellationPolicy';
+import EnquiryPopup from './components/EnquiryPopup/EnquiryPopup';
 import { initScrollAnimations } from './utils/scrollAnimations';
 import './styles/global.css';
 
@@ -84,6 +85,7 @@ function App() {
       <AppProvider>
         <Router>
           <ScrollToTop />
+          <EnquiryPopup />
           <AppLayout />
         </Router>
       </AppProvider>

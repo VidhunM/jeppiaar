@@ -25,6 +25,7 @@ const SHEET_ID = 'YOUR_SHEET_ID_HERE'; // Replace with your Google Sheet ID
 const DRIVE_FOLDER_ID = 'YOUR_DRIVE_FOLDER_ID_HERE'; // Replace with your Google Drive folder ID
 const SHEET_NAME = 'Applications'; // Name of the sheet tab
 const GALLERY_SHEET_NAME = 'GalleryEnquiries'; // Name of the sheet tab for Gallery.jsx submissions
+const SITE_ENQUIRY_SHEET_NAME = 'SiteEnquiries'; // Enquiry popup submissions
 
 function jsonResponse(obj) {
   return ContentService
@@ -41,6 +42,13 @@ function doPost(e) {
     // Handle payment confirmation
     if (payload.type === 'payment_confirmation') {
       return handlePaymentConfirmation(payload);
+    }
+
+    // Handle site enquiry popup
+    if (payload.type === 'site_enquiry') {
+      const form = payload.form ? payload.form : payload;
+      const meta = payload.meta ? payload.meta : {};
+      return handleSiteEnquiry(form, meta);
     }
 
     // Handle Gallery enquiry (and also tolerate legacy "plain form" payloads from Gallery.jsx)
@@ -75,6 +83,58 @@ function doPost(e) {
       
   } catch (error) {
     // Return error response
+    return jsonResponse({
+      status: 'error',
+      message: error.toString()
+    });
+  }
+}
+
+// ========== HANDLE SITE ENQUIRY (POPUP) ==========
+function handleSiteEnquiry(form, meta) {
+  try {
+    if (!SHEET_ID || SHEET_ID === 'YOUR_SHEET_ID_HERE') {
+      return jsonResponse({
+        status: 'error',
+        message: 'SHEET_ID is not configured in apps-script.gs'
+      });
+    }
+
+    const ss = SpreadsheetApp.openById(SHEET_ID);
+    const sheet = ss.getSheetByName(SITE_ENQUIRY_SHEET_NAME) || ss.insertSheet(SITE_ENQUIRY_SHEET_NAME);
+
+    // Create header row if sheet is empty
+    if (sheet.getLastRow() === 0) {
+      sheet.appendRow([
+        'Timestamp',
+        'Name',
+        'Email',
+        'Enquiry For',
+        'Heard About',
+        'Heard About (Other)',
+        'Page URL',
+        'Referrer',
+        'User Agent'
+      ]);
+    }
+
+    sheet.appendRow([
+      new Date().toISOString(),
+      (form && form.name) || '',
+      (form && form.email) || '',
+      (form && form.enquiryFor) || '',
+      (form && form.heardAbout) || '',
+      (form && form.heardAboutOther) || '',
+      (meta && meta.pageUrl) || '',
+      (meta && meta.referrer) || '',
+      (meta && meta.userAgent) || ''
+    ]);
+
+    return jsonResponse({
+      status: 'success',
+      message: 'Enquiry submitted'
+    });
+  } catch (error) {
     return jsonResponse({
       status: 'error',
       message: error.toString()

@@ -1,0 +1,249 @@
+.enquiry-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  height: 100dvh;
+  height: 100svh;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 10003;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: env(safe-area-inset-top, 20px)
+    env(safe-area-inset-right, 20px)
+    env(safe-area-inset-bottom, 20px)
+    env(safe-area-inset-left, 20px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  animation: enquiryFadeIn 0.25s ease-out;
+}
+
+.enquiry-popup-content {
+  position: relative;
+  width: min(520px, 94vw);
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  padding: 1.5rem 1.5rem 1.25rem;
+  animation: enquirySlideUp 0.25s ease-out;
+  color: #0e0529;
+}
+
+.enquiry-popup-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  line-height: 1;
+  color: #666;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.enquiry-popup-close:hover {
+  background: rgba(0, 0, 0, 0.06);
+  color: #000;
+  transform: rotate(90deg);
+}
+
+.enquiry-popup-title {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #0e0529;
+}
+
+.enquiry-popup-subtitle {
+  margin: 0 0 1rem 0;
+  color: rgba(14, 5, 41, 0.75);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.enquiry-popup-form {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.enquiry-field {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.enquiry-field span {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgba(14, 5, 41, 0.85);
+}
+
+.enquiry-field input,
+.enquiry-field select {
+  width: 100%;
+  border: 1px solid rgba(14, 5, 41, 0.18);
+  border-radius: 10px;
+  padding: 0.85rem 0.95rem;
+  background: rgba(255, 255, 255, 0.95);
+  color: #222;
+  min-height: 44px;
+}
+
+.enquiry-field select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.75rem;
+  cursor: pointer;
+}
+
+.enquiry-message {
+  padding: 0.75rem 0.9rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  animation: enquiryFadeIn 0.2s ease-out;
+}
+
+.enquiry-message.success {
+  background: rgba(76, 175, 80, 0.12);
+  border: 1px solid rgba(76, 175, 80, 0.5);
+  color: #2e7d32;
+}
+
+.enquiry-message.error {
+  background: rgba(244, 67, 54, 0.12);
+  border: 1px solid rgba(244, 67, 54, 0.5);
+  color: #c62828;
+}
+
+.enquiry-submit {
+  width: 100%;
+  border: none;
+  border-radius: 999px;
+  padding: 0.9rem 1rem;
+  font-weight: 800;
+  font-size: 1rem;
+  background: #0e0529;
+  color: #ffffff;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.enquiry-submit:hover {
+  transform: translateY(-1px);
+}
+
+.enquiry-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.enquiry-footnote {
+  margin-top: 0.25rem;
+  font-size: 0.8rem;
+  color: rgba(14, 5, 41, 0.55);
+  text-align: center;
+}
+
+@keyframes enquiryFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes enquirySlideUp {
+  from {
+    transform: translateY(18px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* iOS Safari: backdrop-filter on a fixed overlay can break input tapping. */
+@supports (-webkit-touch-callout: none) {
+  .enquiry-popup-overlay {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+  .enquiry-field input,
+  .enquiry-field select {
+    font-size: 16px !important; /* prevent iOS zoom on focus */
+  }
+}
+
+@media (max-width: 480px) {
+  .enquiry-popup-content {
+    padding: 1.1rem 1rem 0.95rem;
+    border-radius: 14px;
+  }
+  .enquiry-popup-title {
+    font-size: 1.3rem;
+  }
+  .enquiry-popup-subtitle {
+    font-size: 0.9rem;
+  }
+}
+
+/* Desktop: make the popup card smaller */
+@media (min-width: 769px) {
+  .enquiry-popup-content {
+    width: min(360px, 92vw);
+    padding: 0.9rem 0.9rem 0.85rem;
+    border-radius: 14px;
+  }
+
+  .enquiry-popup-title {
+    font-size: 1.1rem;
+  }
+
+  .enquiry-popup-subtitle {
+    font-size: 0.82rem;
+    margin-bottom: 0.65rem;
+  }
+
+  .enquiry-popup-form {
+    gap: 0.55rem;
+  }
+
+  .enquiry-field span {
+    font-size: 0.78rem;
+  }
+
+  .enquiry-field input,
+  .enquiry-field select {
+    padding: 0.6rem 0.75rem;
+    min-height: 40px;
+  }
+
+  .enquiry-submit {
+    padding: 0.7rem 0.9rem;
+    font-size: 0.9rem;
+  }
+
+  .enquiry-popup-close {
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 40px;
+    height: 40px;
+    font-size: 1.8rem;
+  }
+}
+
