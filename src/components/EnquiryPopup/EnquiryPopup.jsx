@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { createPortal } from 'react-dom';
+import { useLocation } from 'react-router-dom';
 import './EnquiryPopup.css';
 
 function isValidEmail(email) {
@@ -44,11 +45,15 @@ export default function EnquiryPopup({
     heardAboutOther: '',
   });
 
-  // Show on every page load (including refresh)
+  const location = useLocation();
+
+  // Show on home page only (pathname === '/')
   useEffect(() => {
-    const t = setTimeout(() => setIsOpen(true), Math.max(0, Number(delayMs) || 0));
-    return () => clearTimeout(t);
-  }, [delayMs]);
+    if (location.pathname === '/') {
+      const t = setTimeout(() => setIsOpen(true), Math.max(0, Number(delayMs) || 0));
+      return () => clearTimeout(t);
+    }
+  }, [delayMs, location.pathname]);
 
   // Prevent background scroll when open
   useEffect(() => {
