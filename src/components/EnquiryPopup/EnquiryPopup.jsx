@@ -40,7 +40,7 @@ export default function EnquiryPopup({
     name: '',
     email: '',
     phone: '',
-    enquiryFor: 'Consultation',
+    enquiryFor: '',
     heardAbout: '',
     heardAboutOther: '',
   });
