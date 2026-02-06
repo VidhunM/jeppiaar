@@ -249,8 +249,9 @@ export default function EnquiryPopup({
           <label className="enquiry-field">
             <span>Enquire for *</span>
             <select name="enquiryFor" value={form.enquiryFor} onChange={onChange} required>
+               <option value="Courses">Courses</option>
               <option value="Consultation">Consultation</option>
-              <option value="Courses">Courses</option>
+             
             </select>
           </label>
 
