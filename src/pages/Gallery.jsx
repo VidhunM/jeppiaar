@@ -15,6 +15,9 @@ import cos4 from '../assets/images/cos4.png';
 import cos5 from '../assets/images/cos5.jpg';
 import './Gallery.css';
 
+// Website lead API endpoint
+const WEBSITE_LEAD_URL = "https://api.jeppiaaracademy.com/api/lead/website";
+
 const Gallery = () => {
   const [form, setForm] = useState({
     childName: '',
@@ -35,41 +38,62 @@ const Gallery = () => {
     setForm(prev => ({ ...prev, [name]: type === 'checkbox' ? checked : value }));
   };
 
-  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwrJ88Q2CXRFaZ884FWaxOeElPbvjUizofjHVEiCmt-s5TKeIog2cChElv1UAKxyatJ/exec";
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSubmitting(true);
+    setSubmitMessage(null);
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
-  setSubmitting(true);
-  setSubmitMessage(null);
+    // Basic phone / email validation (keep browser-level as is)
+    if (!form.phone) {
+      setSubmitMessage({ type: 'error', text: 'Please enter a phone number.' });
+      setSubmitting(false);
+      return;
+    }
 
-  try {
-    // Google Apps Script web apps often do NOT include CORS headers.
-    // With `no-cors`, the request is sent successfully, but the response is opaque (can't read `res.json()`).
-    await fetch(SCRIPT_URL, {
-      method: "POST",
-      mode: "no-cors",
-      body: JSON.stringify(form)
-    });
-    
+    // Build payload for Website Lead API
+    const payload = {
+      name: form.childName || form.parentName,
+      phone: `91${form.phone}`,
+      email: form.email,
+      city: form.city,
+      enquiry: 'Digital Wellness & Screen Addiction Support',
+      source: 'Website - Gallery Get Help',
+      notes: `Child: ${form.childName || ''}; Guardian: ${form.parentName || ''}; Age: ${form.age || ''}`,
+    };
 
-    setSubmitMessage({ type: 'success', text: "Thank you — we will contact you soon." });
-    // Refresh the form (clear fields) after submit
-    setForm({
-      childName: "",
-      parentName: "",
-      age: "",
-      city: "",
-      phone: "",
-      email: "",
-      terms: false
-    });
-  } catch (err) {
-    console.error(err);
-    setSubmitMessage({ type: 'error', text: "Something went wrong. Please try again." });
-  } finally {
-    setSubmitting(false);
-  }
-};
+    try {
+      const res = await fetch(WEBSITE_LEAD_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!res.ok) {
+        throw new Error(`Request failed with status ${res.status}`);
+      }
+
+      setSubmitMessage({ type: 'success', text: "Thank you — we will contact you soon." });
+      // Refresh the form (clear fields) after submit
+      setForm({
+        childName: "",
+        parentName: "",
+        age: "",
+        class: "",
+        school: "",
+        city: "",
+        phone: "",
+        email: "",
+        terms: false
+      });
+    } catch (err) {
+      console.error(err);
+      setSubmitMessage({ type: 'error', text: "Something went wrong. Please try again." });
+    } finally {
+      setSubmitting(false);
+    }
+  };
 
 
   const [currentServiceSlide, setCurrentServiceSlide] = useState(0);

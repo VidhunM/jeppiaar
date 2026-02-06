@@ -3,9 +3,8 @@ import { createPortal } from "react-dom";
 import logo from "../../assets/icons/Logo1.png";
 import "./ApplyModal.css";
 
-/* 🔴 Paste your Google Apps Script Web App URL here */
-const SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbwt5RPQdhwUATta9TpfEfqP9YGdwHLiVOhYs61noahGrvysPfEXZquzFnuPDdTp_GKz/exec";
+// Website lead API endpoint
+const WEBSITE_LEAD_URL = "https://api.jeppiaaracademy.com/api/lead/website";
 
 const ApplyModal = ({ isOpen, onClose, formData, onFormChange }) => {
   const [loading, setLoading] = useState(false);
@@ -27,39 +26,73 @@ const ApplyModal = ({ isOpen, onClose, formData, onFormChange }) => {
   /* 🔹 Handle Submit */
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
-      setMessage({ type: 'error', text: 'Please enter a valid email address.' });
+      setMessage({
+        type: "error",
+        text: "Please enter a valid email address.",
+      });
       return;
     }
 
     // Phone number validation (must be exactly 10 digits)
     const phoneRegex = /^\d{10}$/;
     if (!phoneRegex.test(formData.mobile)) {
-      setMessage({ type: 'error', text: 'Please enter a valid 10-digit mobile number.' });
+      setMessage({
+        type: "error",
+        text: "Please enter a valid 10-digit mobile number.",
+      });
       return;
     }
-  
+
+    // Build payload for Website Lead API
+    const payload = {
+      name: formData.name,
+      phone: `91${formData.mobile}`, // Indian numbers, API will normalise
+      email: formData.email,
+      city: formData.city,
+      state: formData.state,
+      enquiry:
+        formData.course ||
+        "Advanced Diploma Programmes", // required Type of Enquiry
+      source: "Website - Apply Modal",
+      notes: formData.qualification
+        ? `Highest Qualification: ${formData.qualification}`
+        : undefined,
+    };
+
     setLoading(true);
     setMessage(null);
 
     try {
-      await fetch(SCRIPT_URL, {
+      const response = await fetch(WEBSITE_LEAD_URL, {
         method: "POST",
-        body: JSON.stringify(formData), // no headers!
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
       });
-  
-      setMessage({ type: 'success', text: 'Application submitted successfully!' });
+
+      if (!response.ok) {
+        throw new Error(`Request failed with status ${response.status}`);
+      }
+
+      setMessage({
+        type: "success",
+        text: "Application submitted successfully!",
+      });
       setTimeout(() => {
         onClose();
         setMessage(null);
       }, 2000);
-  
     } catch (error) {
       console.error(error);
-      setMessage({ type: 'error', text: 'Submission failed. Please try again.' });
+      setMessage({
+        type: "error",
+        text: "Submission failed. Please try again.",
+      });
     } finally {
       setLoading(false);
     }

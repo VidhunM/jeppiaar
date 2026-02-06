@@ -181,7 +181,8 @@ import React, { useState } from 'react';
 import RouteMap from '../components/RouteMap/RouteMap';
 import './Contact.css';
 
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzxkxbxdGjZXg6gEwlwLj06EBsqjazMeFRfegIgx3C-s9hhxKuGe95eruoVKrhcneWm/exec";
+// Website lead API endpoint
+const WEBSITE_LEAD_URL = "https://api.jeppiaaracademy.com/api/lead/website";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -247,38 +248,46 @@ const Contact = () => {
       setMessage({ type: 'error', text: 'Please enter a valid 10-digit phone number.' });
       return;
     }
+
+    // Build payload for Website Lead API
+    const payload = {
+      name: formData.fullName,
+      phone: `91${formData.phoneNumber}`,
+      email: formData.email,
+      city: formData.location,
+      enquiry: 'General Enquiry',
+      source: formData.hearAbout
+        ? `Website - Contact (${formData.hearAbout})`
+        : 'Website - Contact',
+      notes: formData.message,
+    };
     
     setLoading(true);
     setMessage(null);
   
     try {
-      const formBody = new URLSearchParams(formData).toString();
-  
-      const response = await fetch(SCRIPT_URL, {
+      const response = await fetch(WEBSITE_LEAD_URL, {
         method: "POST",
         headers: {
-          "Content-Type": "application/x-www-form-urlencoded"
+          "Content-Type": "application/json",
         },
-        body: formBody
+        body: JSON.stringify(payload),
       });
   
-      const text = await response.text();
-  
-      if (text === "success") {
-        setMessage({ type: 'success', text: 'Thank you! Your message has been submitted.' });
-        setFormData({
-          fullName: '',
-          email: '',
-          phoneNumber: '',
-          location: '',
-          hearAbout: '',
-          message: '',
-          authorize: false
-        });
-      } else {
-        setMessage({ type: 'error', text: 'Submission failed. Please try again.' });
+      if (!response.ok) {
+        throw new Error(`Request failed with status ${response.status}`);
       }
   
+      setMessage({ type: 'success', text: 'Thank you! Your message has been submitted.' });
+      setFormData({
+        fullName: '',
+        email: '',
+        phoneNumber: '',
+        location: '',
+        hearAbout: '',
+        message: '',
+        authorize: false
+      });
     } catch (error) {
       console.error(error);
       setMessage({ type: 'error', text: 'Network error! Please try again.' });

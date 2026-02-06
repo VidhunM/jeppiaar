@@ -79,7 +79,8 @@ import contactImage from '../../assets/images/contact.png';
 import brochurePdf from '../../assets/images/broucher.pdf';
 import './LeadGeneration.css';
 
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw94ZBBLU5OIcbG_Ydo-Qizu-JiSmA6x0JwNmtHTcQ9-L2onyqDhwkACsVGfXgxI708/exec";
+// Website lead API endpoint
+const WEBSITE_LEAD_URL = "https://api.jeppiaaracademy.com/api/lead/website";
 
 const LeadGeneration = () => {
   const [form, setForm] = useState({
@@ -149,28 +150,36 @@ const LeadGeneration = () => {
       return;
     }
 
+    // Build payload for Website Lead API
+    const payload = {
+      name: form.name,
+      phone: `91${form.phone}`,
+      email: form.email,
+      enquiry: form.course || 'Advanced Diploma Programmes',
+      source: 'Website - Lead Generation',
+    };
+
     setLoading(true);
     setMessage(null);
 
     try {
-      const res = await fetch(SCRIPT_URL, {
+      const res = await fetch(WEBSITE_LEAD_URL, {
         method: 'POST',
-        mode: 'cors', // defaul
-        body: JSON.stringify(form)
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
       });
 
-      // Apps Script returns JSON
-      const result = await res.json();
-
-      if (result.status === 'success') {
-        setMessage({ type: 'success', text: 'Thank you — we will contact you soon.' });
-        // reset or keep values
-        setForm({ name: '', email: '', phone: '', course: '', consent: false });
-      } else {
-        setMessage({ type: 'error', text: result.message || 'Submission failed.' });
+      if (!res.ok) {
+        throw new Error(`Request failed with status ${res.status}`);
       }
+
+      setMessage({ type: 'success', text: 'Thank you — we will contact you soon.' });
+      setForm({ name: '', email: '', phone: '', course: '', consent: false });
     } catch (err) {
-      setMessage({ type: 'error', text: 'Network error: ' + err.toString() });
+      console.error(err);
+      setMessage({ type: 'error', text: 'Network error! Please try again.' });
     } finally {
       setLoading(false);
     }

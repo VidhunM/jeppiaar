@@ -1099,8 +1099,9 @@
   }
 
   .hero-programs-section {
-    padding-top: 15vh;
-    margin-top: -15vh;
+    /* On mobile, avoid overlapping the hero so buttons remain clickable */
+    padding-top: 2rem;
+    margin-top: 0;
     padding: 1rem 1rem 2.1rem 1rem; /* more breathing room below circles on mobile */
     margin-bottom: 0;
     min-height: auto;
@@ -1538,9 +1539,10 @@
   }
 
   .hero-programs-section {
+    /* On very small phones, also avoid overlapping the hero */
     padding: 0.75rem 0.75rem 2rem 0.75rem; /* more breathing room below circles on small iPhones */
-    padding-top: 12vh;
-    margin-top: -12vh;
+    padding-top: 2rem;
+    margin-top: 0;
     margin-bottom: 0;
     min-height: auto;
     height: auto;
@@ -1615,8 +1617,8 @@
 
   .hero-programs-section {
     padding: 0.75rem 0.75rem 2rem 0.75rem; /* keep consistent for duplicated block */
-    padding-top: 12vh;
-    margin-top: -12vh;
+    padding-top: 2rem;
+    margin-top: 0;
     margin-bottom: 0;
     min-height: auto;
     height: auto;
