@@ -268,7 +268,7 @@ const Home = () => {
             className="apply-now-btn"
             onClick={openApplyModal}
           >
-            Apply Now
+             Enquire Now
           </button>
         </div>
       </section>

@@ -247,7 +247,7 @@ const LeadGeneration = () => {
               </label>
               <div className="form-buttons">
                 <button type="submit" className="btn-primary" disabled={loading}>
-                  {loading ? 'Sending...' : 'Apply Now'}
+                  {loading ? 'Sending...' : 'Enquire Now'}
                 </button>
                 <a
                   className="btn-secondary"
