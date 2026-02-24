@@ -2,8 +2,7 @@ import React, { useMemo, useState, useEffect } from 'react';
 import './ApplyOnline.css';
 import Logo1 from '../assets/icons/Logo1.png';
 
-const DEFAULT_SCRIPT_URL =
-  'https://script.google.com/macros/s/AKfycbxOOayK7tyitliRIIU_1bp00Mqjqn0kfKcQa6VobD-41-qOBzogpzMZy7QQEp3OtsWwrw/exec';
+const API_URL = 'https://myguesi.com/api/public/apply';
 
 function generateApplicationId() {
   const ts = new Date().toISOString().replace(/[-:.TZ]/g, '');
@@ -19,23 +18,11 @@ function bytesToLabel(bytes) {
   return `${kb.toFixed(0)} KB`;
 }
 
-function fileToBase64(file) {
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onload = () => {
-      const dataUrl = String(reader.result || '');
-      const base64 = dataUrl.includes(',') ? dataUrl.split(',')[1] : dataUrl;
-      resolve(base64);
-    };
-    reader.onerror = () => reject(new Error('Failed to read file'));
-    reader.readAsDataURL(file);
-  });
-}
 
 export default function ApplyOnline() {
   const feeInr = Number(import.meta.env.VITE_APPLICATION_FEE_INR ?? 250);
   const paymentUrl = import.meta.env.VITE_APPLICATION_PAYMENT_URL ?? '';
-  const scriptUrl = import.meta.env.VITE_ADMISSION_APPLICATION_SCRIPT_URL ?? DEFAULT_SCRIPT_URL;
+  const scriptUrl = API_URL;
   const razorpayKeyId = import.meta.env.VITE_RAZORPAY_KEY_ID ?? '';
 
   /**
@@ -47,16 +34,6 @@ export default function ApplyOnline() {
    * If you need to read JSON responses, add a server-side proxy (Netlify/Vercel/Node)
    * or move this submission endpoint to your own backend.
    */
-  const postToAppsScript = async (payload) => {
-    if (!scriptUrl) throw new Error('Submission endpoint is not configured.');
-    await fetch(scriptUrl, {
-      method: 'POST',
-      mode: 'no-cors',
-      // Keep it a "simple request" to avoid preflight.
-      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-      body: JSON.stringify(payload)
-    });
-  };
 
   const programmes = useMemo(
     () => [
@@ -87,14 +64,14 @@ export default function ApplyOnline() {
   const docFields = useMemo(
     () => [
       { key: 'photo', label: 'Passport-size Photograph (PHOTO)', required: true, accept: 'image/*' },
-      { key: 'aadhaarCopy', label: 'Aadhaar card copy', required: true, accept: 'application/pdf,image/*' },
-      { key: 'tenthMarksheet', label: 'SSLC / 10th Mark Sheet', required: true, accept: 'application/pdf,image/*' },
-      { key: 'twelfthMarksheet', label: 'HSC / 12th Mark Sheet', required: true, accept: 'application/pdf,image/*' },
-      { key: 'ugMarksheets', label: 'UG Mark Sheets copy', required: true, accept: 'application/pdf,image/*' },
-      { key: 'ugCertificate', label: 'UG Certificate copy', required: true, accept: 'application/pdf,image/*' },
-      { key: 'tcOptional', label: 'Transfer Certificate (optional)', required: false, accept: 'application/pdf,image/*' },
-      { key: 'experienceOptional', label: 'Experience Certificate (optional)', required: false, accept: 'application/pdf,image/*' },
-      { key: 'scholarshipDocOptional', label: 'Scholarship supporting documents (optional)', required: false, accept: 'application/pdf,image/*' }
+      { key: 'aadhaarDoc', label: 'Aadhaar card copy', required: true, accept: 'application/pdf,image/*' },
+      { key: 'sslcDoc', label: 'SSLC / 10th Mark Sheet', required: true, accept: 'application/pdf,image/*' },
+      { key: 'hscDoc', label: 'HSC / 12th Mark Sheet', required: true, accept: 'application/pdf,image/*' },
+      { key: 'ugMarksDoc', label: 'UG Mark Sheets copy', required: true, accept: 'application/pdf,image/*' },
+      { key: 'ugCertDoc', label: 'UG Certificate copy', required: true, accept: 'application/pdf,image/*' },
+      { key: 'transferCertDoc', label: 'Transfer Certificate (optional)', required: false, accept: 'application/pdf,image/*' },
+      { key: 'experienceCertDoc', label: 'Experience Certificate (optional)', required: false, accept: 'application/pdf,image/*' },
+      { key: 'scholarshipDoc', label: 'Scholarship supporting documents (optional)', required: false, accept: 'application/pdf,image/*' }
     ],
     []
   );
@@ -105,32 +82,32 @@ export default function ApplyOnline() {
   );
 
   const [form, setForm] = useState({
-    programme: '',
+    programmeAppliedFor: '',
 
     fullName: '',
     gender: '',
-    dob: '',
+    dateOfBirth: '',
     nationality: '',
-    aadhaar: '',
-    phone: '',
-    altPhone: '',
-    email: '',
+    aadhaarNo: '',
+    mobileNumber: '',
+    alternateMobile: '',
+    emailId: '',
     address: '',
     city: '',
     state: '',
     pincode: '',
 
-    altContactName: '',
-    altContactRelation: '',
-    altContactPhone: '',
-    altContactEmail: '',
+    contactName: '',
+    contactRelationship: '',
+    contactMobile: '',
+    contactEmail: '',
 
-    sop: '',
-    scholarship: 'Not Eligible',
+    statementOfPurpose: '',
+    scholarshipEligibility: 'Not Eligible',
 
     declarationPlace: '',
     declarationDate: '',
-    declarationSignature: '',
+    signatureName: '',
     declarationAccepted: false,
 
     consent: false
@@ -182,16 +159,16 @@ export default function ApplyOnline() {
   const onChange = (e) => {
     const { name, value, type, checked } = e.target;
 
-    if (name === 'phone' || name === 'altPhone' || name === 'altContactPhone') {
+    if (name === 'mobileNumber' || name === 'alternateMobile' || name === 'contactMobile') {
       const numericValue = value.replace(/\D/g, '');
       setForm((p) => ({ ...p, [name]: numericValue }));
       return;
     }
 
-    if (name === 'aadhaar') {
+    if (name === 'aadhaarNo') {
       const numericValue = value.replace(/\D/g, '');
       if (numericValue.length <= 12) {
-        setForm((p) => ({ ...p, aadhaar: numericValue }));
+        setForm((p) => ({ ...p, aadhaarNo: numericValue }));
       }
       return;
     }
@@ -211,7 +188,7 @@ export default function ApplyOnline() {
   };
 
   const setScholarship = (label) => {
-    setForm((p) => ({ ...p, scholarship: label }));
+    setForm((p) => ({ ...p, scholarshipEligibility: label }));
   };
 
   const setEducationField = (idx, field, value) => {
@@ -231,20 +208,20 @@ export default function ApplyOnline() {
   };
 
   const validate = () => {
-    if (!form.programme) return 'Please select programme.';
-    if (!form.fullName || !form.phone || !form.email) return 'Please fill all required fields.';
+    if (!form.programmeAppliedFor) return 'Please select programme.';
+    if (!form.fullName || !form.mobileNumber || !form.emailId) return 'Please fill all required fields.';
     if (!form.consent) return 'Please accept consent.';
 
     if (!form.declarationAccepted) return 'Please accept the applicant declaration.';
-    if (!form.declarationPlace || !form.declarationDate || !form.declarationSignature) {
+    if (!form.declarationPlace || !form.declarationDate || !form.signatureName) {
       return 'Please fill Place, Date and Signature in the applicant declaration.';
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(form.email)) return 'Please enter a valid email address.';
+    if (!emailRegex.test(form.emailId)) return 'Please enter a valid email address.';
 
     const phoneRegex = /^\d+$/;
-    if (!phoneRegex.test(form.phone)) return 'Please enter a valid mobile number.';
+    if (!phoneRegex.test(form.mobileNumber)) return 'Please enter a valid mobile number.';
 
     // Required files
     for (const f of docFields) {
@@ -274,60 +251,76 @@ export default function ApplyOnline() {
     }
 
     const appId = generateApplicationId();
+    setApplicationId(appId);
     setLoading(true);
     setMessage(null);
 
     try {
-      const attachments = {};
-      for (const f of docFields) {
-        const file = files[f.key];
-        if (!file) continue;
-        attachments[f.key] = {
-          name: file.name,
-          type: file.type,
-          size: file.size,
-          base64: await fileToBase64(file)
-        };
+      const formData = new FormData();
+      formData.append('applicationId', appId); // Keep it for tracking if API accepts it
+
+      // Append primary fields
+      formData.append('programmeAppliedFor', form.programmeAppliedFor);
+      formData.append('fullName', form.fullName);
+      formData.append('mobileNumber', form.mobileNumber);
+      formData.append('emailId', form.emailId);
+
+      // Append optional personal details
+      if (form.gender) formData.append('gender', form.gender);
+      if (form.dateOfBirth) formData.append('dateOfBirth', form.dateOfBirth);
+      if (form.nationality) formData.append('nationality', form.nationality);
+      if (form.aadhaarNo) formData.append('aadhaarNo', form.aadhaarNo);
+      if (form.alternateMobile) formData.append('alternateMobile', form.alternateMobile);
+      if (form.address) formData.append('address', form.address);
+      if (form.city) formData.append('city', form.city);
+      if (form.state) formData.append('state', form.state);
+      if (form.pincode) formData.append('pincode', form.pincode);
+
+      // Append alternate contact
+      if (form.contactName) formData.append('contactName', form.contactName);
+      if (form.contactRelationship) formData.append('contactRelationship', form.contactRelationship);
+      if (form.contactMobile) formData.append('contactMobile', form.contactMobile);
+      if (form.contactEmail) formData.append('contactEmail', form.contactEmail);
+
+      // Append education & experience as JSON strings
+      formData.append('educationalQualifications', JSON.stringify(education));
+      formData.append('workExperience', JSON.stringify(work));
+
+      // Append other details
+      if (form.statementOfPurpose) formData.append('statementOfPurpose', form.statementOfPurpose);
+      if (form.scholarshipEligibility) formData.append('scholarshipEligibility', form.scholarshipEligibility);
+      if (form.declarationPlace) formData.append('declarationPlace', form.declarationPlace);
+      if (form.declarationDate) formData.append('declarationDate', form.declarationDate);
+      if (form.signatureName) formData.append('signatureName', form.signatureName);
+
+      // Append files
+      Object.keys(files).forEach((key) => {
+        if (files[key]) {
+          formData.append(key, files[key]);
+        }
+      });
+
+      const response = await fetch(scriptUrl, {
+        method: 'POST',
+        body: formData
+      });
+
+      if (!response.ok) {
+        throw new Error(`Submission failed: ${response.statusText}`);
       }
 
-      const payload = {
-        type: 'online_application_full',
-        applicationId: appId,
-        feeInr,
-        form,
-        education,
-        work,
-        attachments
-      };
+      // If the API returns something, we could parse it, but no response handle needed per usual fetch logic
+      // if it's meant to be simple.
 
-      // Apps Script can't provide CORS headers, so we can't read the response in-browser.
-      // This still submits the data successfully (when the web app is deployed with public access).
-      await postToAppsScript(payload);
-
-      // Keep localStorage lightweight (avoid storing base64)
-      localStorage.setItem(
-        'jeppiaar_online_application',
-        JSON.stringify({
-          applicationId: appId,
-          feeInr,
-          programme: form.programme,
-          fullName: form.fullName,
-          phone: form.phone,
-          email: form.email,
-          submittedAt: new Date().toISOString()
-        })
-      );
-
-      setApplicationId(appId);
       setSubmitted(true);
       setMessage({
         type: 'success',
-        text: 'Form submitted (sent). Proceed to payment. If you face any issues, please try again or contact support with your Application ID.'
+        text: 'Your application has been submitted successfully! We will get back to you soon.'
       });
     } catch (ex) {
       setMessage({
         type: 'error',
-        text: `Submission error: ${ex?.message || String(ex)}. If you uploaded large files, please try smaller PDFs/images.`
+        text: `Submission error: ${ex?.message || String(ex)}`
       });
     } finally {
       setLoading(false);
@@ -353,7 +346,7 @@ export default function ApplyOnline() {
         amount: feeInr * 100, // Amount in paise (multiply by 100)
         currency: 'INR',
         name: 'Jeppiaar Academy of Psychology & Research',
-        description: `Application Fee for ${form.programme || 'Programme'}`,
+        description: `Application Fee for ${form.programmeAppliedFor || 'Programme'}`,
         order_id: null, // Will be generated by Razorpay for direct payment
         handler: function (response) {
           // Payment successful
@@ -361,30 +354,36 @@ export default function ApplyOnline() {
             type: 'success',
             text: `Payment successful! Payment ID: ${response.razorpay_payment_id}. Your application is confirmed.`
           });
-          
-          // Optionally send payment confirmation to Apps Script
-          postToAppsScript({
-            type: 'payment_confirmation',
-            applicationId: applicationId,
-            paymentId: response.razorpay_payment_id,
-            orderId: response.razorpay_order_id,
-            signature: response.razorpay_signature
+
+          // Optionally send payment confirmation to the same API
+          fetch(scriptUrl, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              type: 'payment_confirmation',
+              applicationId: applicationId,
+              paymentId: response.razorpay_payment_id,
+              orderId: response.razorpay_order_id,
+              signature: response.razorpay_signature
+            })
           }).catch((err) => console.error('Payment confirmation failed:', err));
         },
         prefill: {
           name: form.fullName || '',
-          email: form.email || '',
-          contact: form.phone || ''
+          email: form.emailId || '',
+          contact: form.mobileNumber || ''
         },
         notes: {
           applicationId: applicationId,
-          programme: form.programme || ''
+          programme: form.programmeAppliedFor || ''
         },
         theme: {
           color: '#0E0529'
         },
         modal: {
-          ondismiss: function() {
+          ondismiss: function () {
             setMessage({ type: 'info', text: 'Payment cancelled. You can try again later.' });
           }
         }
@@ -404,17 +403,18 @@ export default function ApplyOnline() {
     if (!paymentUrl) return '';
     try {
       const url = new URL(paymentUrl, window.location.origin);
+      url.searchParams.set('description', `Application Fee for ${form.programmeAppliedFor || 'Programme'}`);
       url.searchParams.set('applicationId', applicationId || 'PENDING');
       url.searchParams.set('amount', String(feeInr));
       url.searchParams.set('name', form.fullName || '');
-      url.searchParams.set('phone', form.phone || '');
-      url.searchParams.set('email', form.email || '');
+      url.searchParams.set('phone', form.mobileNumber || '');
+      url.searchParams.set('email', form.emailId || '');
       return url.toString();
     } catch {
       const sep = paymentUrl.includes('?') ? '&' : '?';
       return `${paymentUrl}${sep}applicationId=${encodeURIComponent(applicationId || 'PENDING')}&amount=${encodeURIComponent(
         String(feeInr)
-      )}`;
+      )}&name=${encodeURIComponent(form.fullName || '')}&phone=${encodeURIComponent(form.mobileNumber || '')}&email=${encodeURIComponent(form.emailId || '')}`;
     }
   };
 
@@ -474,7 +474,7 @@ export default function ApplyOnline() {
               <form className="apply-form" onSubmit={handleSubmit}>
                 <section className="apply-section">
                   <h3>1. Programme Applied For (Choose any one) *</h3>
-                  <select className="apply-input" name="programme" value={form.programme} onChange={onChange} required disabled={submitted}>
+                  <select className="apply-input" name="programmeAppliedFor" value={form.programmeAppliedFor} onChange={onChange} required disabled={submitted}>
                     <option value="">Select programme</option>
                     {programmes.map((p) => (
                       <option key={p} value={p}>
@@ -504,7 +504,7 @@ export default function ApplyOnline() {
 
                     <label className="apply-field">
                       <span>Date of Birth</span>
-                      <input className="apply-input" type="date" name="dob" value={form.dob} onChange={onChange} disabled={submitted} />
+                      <input className="apply-input" type="date" name="dateOfBirth" value={form.dateOfBirth} onChange={onChange} disabled={submitted} />
                     </label>
 
                     <label className="apply-field">
@@ -516,9 +516,9 @@ export default function ApplyOnline() {
                       <span>Aadhaar No</span>
                       <input
                         className="apply-input"
-                        name="aadhaar"
+                        name="aadhaarNo"
                         inputMode="numeric"
-                        value={form.aadhaar}
+                        value={form.aadhaarNo}
                         onChange={onChange}
                         onKeyPress={handlePhoneKeyPress}
                         placeholder="12 digits"
@@ -530,8 +530,8 @@ export default function ApplyOnline() {
                       <span>Mobile Number *</span>
                       <input
                         className="apply-input"
-                        name="phone"
-                        value={form.phone}
+                        name="mobileNumber"
+                        value={form.mobileNumber}
                         onChange={onChange}
                         onKeyPress={handlePhoneKeyPress}
                         inputMode="numeric"
@@ -545,8 +545,8 @@ export default function ApplyOnline() {
                       <span>Alternate Mobile Number</span>
                       <input
                         className="apply-input"
-                        name="altPhone"
-                        value={form.altPhone}
+                        name="alternateMobile"
+                        value={form.alternateMobile}
                         onChange={onChange}
                         onKeyPress={handlePhoneKeyPress}
                         inputMode="numeric"
@@ -557,7 +557,7 @@ export default function ApplyOnline() {
 
                     <label className="apply-field">
                       <span>Email ID *</span>
-                      <input className="apply-input" type="email" name="email" value={form.email} onChange={onChange} required disabled={submitted} />
+                      <input className="apply-input" type="email" name="emailId" value={form.emailId} onChange={onChange} required disabled={submitted} />
                     </label>
                   </div>
 
@@ -596,18 +596,18 @@ export default function ApplyOnline() {
                   <div className="apply-grid">
                     <label className="apply-field">
                       <span>Name of Contact *</span>
-                      <input className="apply-input" name="altContactName" value={form.altContactName} onChange={onChange} required disabled={submitted} />
+                      <input className="apply-input" name="contactName" value={form.contactName} onChange={onChange} required disabled={submitted} />
                     </label>
                     <label className="apply-field">
                       <span>Relationship with Applicant *</span>
-                      <input className="apply-input" name="altContactRelation" value={form.altContactRelation} onChange={onChange} required disabled={submitted} />
+                      <input className="apply-input" name="contactRelationship" value={form.contactRelationship} onChange={onChange} required disabled={submitted} />
                     </label>
                     <label className="apply-field">
                       <span>Mobile Number *</span>
                       <input
                         className="apply-input"
-                        name="altContactPhone"
-                        value={form.altContactPhone}
+                        name="contactMobile"
+                        value={form.contactMobile}
                         onChange={onChange}
                         onKeyPress={handlePhoneKeyPress}
                         inputMode="numeric"
@@ -618,7 +618,7 @@ export default function ApplyOnline() {
                     </label>
                     <label className="apply-field">
                       <span>Email ID</span>
-                      <input className="apply-input" type="email" name="altContactEmail" value={form.altContactEmail} onChange={onChange} disabled={submitted} />
+                      <input className="apply-input" type="email" name="contactEmail" value={form.contactEmail} onChange={onChange} disabled={submitted} />
                     </label>
                   </div>
                 </section>
@@ -719,7 +719,7 @@ export default function ApplyOnline() {
                 <section className="apply-section">
                   <h3>6. Statement of Purpose (Mandatory)</h3>
                   <p className="apply-muted">(Briefly explain why you wish to pursue this programme and your career goals)</p>
-                  <textarea className="apply-input" name="sop" value={form.sop} onChange={onChange} rows={5} required disabled={submitted} />
+                  <textarea className="apply-input" name="statementOfPurpose" value={form.statementOfPurpose} onChange={onChange} rows={5} required disabled={submitted} />
                 </section>
 
                 <section className="apply-section">
@@ -729,9 +729,9 @@ export default function ApplyOnline() {
                       <label key={opt} className="apply-check">
                         <input
                           type="radio"
-                          name="scholarship"
+                          name="scholarshipEligibility"
                           value={opt}
-                          checked={form.scholarship === opt}
+                          checked={form.scholarshipEligibility === opt}
                           onChange={() => setScholarship(opt)}
                           disabled={submitted}
                         />
@@ -813,8 +813,8 @@ export default function ApplyOnline() {
                     <span>Signature of Applicant (Type your name) *</span>
                     <input
                       className="apply-input"
-                      name="declarationSignature"
-                      value={form.declarationSignature}
+                      name="signatureName"
+                      value={form.signatureName}
                       onChange={onChange}
                       required
                       disabled={submitted}
