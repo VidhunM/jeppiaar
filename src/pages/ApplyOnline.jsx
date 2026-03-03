@@ -300,7 +300,7 @@ export default function ApplyOnline() {
         }
       });
 
-      const response = await fetch(scriptUrl, {
+      const response = await fetch(API_URL, {
         method: 'POST',
         body: formData
       });
