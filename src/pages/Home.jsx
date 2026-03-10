@@ -175,7 +175,7 @@ const Home = () => {
           <div className="services-grid">
             <div 
               className="service-item scroll-from-left"
-              onClick={() => window.open('https://www.voxdemy.com/courses/Psychology-Basics-Course-Jan-2026-68569c00e0203b5c9661eafa', '_blank')}
+              onClick={() => window.open('https://www.voxdemy.com/s/store', '_blank')}
             >
               <div className="service-icon">
                 <img src={Ellipse} alt="Online Certification Courses" />
