@@ -10,6 +10,10 @@ import banupriyaImage from '../assets/images/c5.jpg';
 import augustineImage from '../assets/images/c6.jpg';
 import nirmalaImage from '../assets/images/c7.jpeg';
 import sangeethaImage from '../assets/images/c8.jpg';
+import neethuImage from '../assets/images/c9.jpeg';
+import ashwinImage from '../assets/images/c10.jpeg';
+import sutheeshImage from '../assets/images/c11.jpeg';
+import dipakImage from '../assets/images/c12.jpeg';
 import icon1 from '../assets/icons/Icon1.png';
 import icon2 from '../assets/icons/Icon2.png';
 import icon3 from '../assets/icons/Icon3.png';
@@ -171,6 +175,31 @@ Her expertise extends to delivering specialised emotional intelligence and wellb
 His multidisciplinary background enables him to approach psychology education from innovative perspectives, integrating arts-based interventions and creative methodologies into the curriculum. As Department Head, Art Therapy, he plays a crucial role in developing comprehensive academic frameworks that prepare students for diverse career paths in psychology.
 
 Augustine Thilak is committed to fostering an environment that encourages both analytical thinking and creative problem-solving, ensuring that students receive a well-rounded education that prepares them for the evolving field of psychology.`
+    },
+    {
+      name: 'Dipak B',
+      role: 'Program Head Organization Psychology',
+      image: neethuImage,
+      description: `Dipak B is the Program Head for Organization Psychology at Jeppiaar Academy of Psychology and Research. He is committed to developing and delivering comprehensive academic programs that prepare students for successful careers in organizational psychology and human behavior.`
+    },
+    {
+      name: 'Sutheesh S',
+      role: 'Joint Director Research',
+      image: ashwinImage,
+      description: `Sutheesh S is a technology-driven leader with extensive experience in building and scaling intelligent digital platforms. As Chief Technology Officer (CTO) at Psyiani, he leads product architecture, AI strategy, and platform development, with a strong focus on cognitive neural intelligence—applying brain-inspired models of reasoning, learning, and decision-making to create systems that go beyond basic data processing.
+His work centers on developing secure, scalable, and human-centric AI solutions that can understand context, interpret psychological signals, and enable deeper, more meaningful interactions through technology.`
+    },
+    {
+      name: 'Neethu KM',
+      role: 'Joint Director Technology',
+      image: sutheeshImage,
+      description: `Neethu KM is a results-driven operations leader with over a decade of experience across sales, marketing, and organizational management in education and technology sectors. As Chief Operating Officer (COO) at Psyiani, she oversees day-to-day operations, process optimization, and execution strategy for an AI-enabled psychology technology platform, working closely with cross-functional teams to ensure scalability, efficiency, and seamless delivery while empowering teams to perform at their best.`
+    },
+    {
+      name: 'Ashwin G',
+      role: 'Joint Director Partnerships',
+      image: dipakImage,
+      description: `Neethu Icm is the Joint Director of Partnerships at Jeppiaar Academy of Psychology and Research. She is dedicated to building and maintaining strategic collaborations that enhance the academy's impact and reach in the field of psychology and research.`
     }
   ];
 
