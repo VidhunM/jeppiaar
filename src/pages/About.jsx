@@ -158,7 +158,7 @@ Chrishanthi Vijay is known for her empathetic leadership style, strong communica
     },
     {
       name: 'Banupriya',
-      role: 'Joint Director',
+      role: 'Joint Director Academics',
       image: banupriyaImage,
       description: `Banupriya is a Psychologist, Certified Emotional Intelligence Coach Practitioner, and Career Coach who has made a meaningful impact in the field through her extensive counselling, training, and wellbeing initiatives. She is deeply committed to strengthening emotional resilience, student wellbeing, and mental health systems across educational and professional settings. Her work focuses on integrating psychology with practical, real-world interventions to support individuals across different life stages.
 
@@ -180,7 +180,9 @@ Augustine Thilak is committed to fostering an environment that encourages both a
       name: 'Dipak B',
       role: 'Program Head Organization Psychology',
       image: neethuImage,
-      description: `Dipak B is the Program Head for Organization Psychology at Jeppiaar Academy of Psychology and Research. He is committed to developing and delivering comprehensive academic programs that prepare students for successful careers in organizational psychology and human behavior.`
+      description: `With over 38+ years of experience in the corporate world, working in various leadership roles, Dipak Bishnoi is the Program Head for Organizational Psychology. Dipak has the experience of building and leading large teams of professionals across multiple geographies, giving him deep understanding of how people and organisations truly operate.
+His career at the intersection of business strategy and human performance uniquely positions him to bring Organisational Psychology to life in the classroom. Dipak draws on his Corporate experience, combined with his proficiency as a solution-focused Career and Life Coach, to offer students a curriculum that is grounded in real-world complexity rather than theory alone. As the founder of DB Ventures, he continues to work with corporates and startups on leadership & behavioural coaching, consulting, and learning strategies.
+Dipak is committed to helping students discover the human dynamics that shape workplace culture, performance, and growth. Guided by his belief that people always carry within them the resources they need to succeed, he brings a coaching sensibility to every session — equipping HR managers, team leaders, and individual contributors alike with the insight and tools to make a meaningful impact in their organisations.`
     },
     {
       name: 'Sutheesh S',
@@ -199,7 +201,10 @@ His work centers on developing secure, scalable, and human-centric AI solutions 
       name: 'Ashwin G',
       role: 'Joint Director Partnerships',
       image: dipakImage,
-      description: `Neethu Icm is the Joint Director of Partnerships at Jeppiaar Academy of Psychology and Research. She is dedicated to building and maintaining strategic collaborations that enhance the academy's impact and reach in the field of psychology and research.`
+      description: `Ashwin G is a Mechanical Engineer turned entrepreneur with over a decade of experience across sales, marketing, partnerships, and product-led growth in the education and technology sectors.
+As CEO at Psyiani, he leads operations and market strategy for an AI-enabled psychology technology platform focused on building accessible, insight-driven mental health solutions through a seamless digital ecosystem.
+He also works closely with academic institutions as a consultant, advising on partnerships, ecosystem building, and student development initiatives.
+With a strong engineering foundation, he specializes in 0→1 venture building, scalable product development, and long-term value creation across education, technology, and gig-service markets.`
     }
   ];
 
