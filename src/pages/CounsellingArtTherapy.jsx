@@ -153,8 +153,8 @@ const CounsellingArtTherapy = () => {
             <div className="overview-text">
               <h1 className="overview-title">ADVANCED DIPLOMA IN ART THERAPY</h1>
               <p>
-                
-The Advanced Diploma in Art Therapy provides a strong foundation in therapeutic art practices and psychological principles to support emotional healing and mental well-being across age groups. The programme covers core concepts of psychology, expressive art techniques, emotional regulation strategies, and ethical standards, enabling learners to use art as a tool for self-awareness, communication, and coping. Students develop skills to facilitate self-expression, strengthen emotional insight, and support clients in managing stress, trauma, and behavioural concerns. Emphasis is placed on confidentiality, professional boundaries, and ethical practice in therapeutic relationships. Through practical applications and guided experiential learning, students gain the competence to work effectively in diverse settings such as schools, hospitals, rehabilitation centres, and private practice, preparing them for meaningful roles in creative and mental health services.
+
+                The Advanced Diploma in Art Therapy provides a strong foundation in therapeutic art practices and psychological principles to support emotional healing and mental well-being across age groups. The programme covers core concepts of psychology, expressive art techniques, emotional regulation strategies, and ethical standards, enabling learners to use art as a tool for self-awareness, communication, and coping. Students develop skills to facilitate self-expression, strengthen emotional insight, and support clients in managing stress, trauma, and behavioural concerns. Emphasis is placed on confidentiality, professional boundaries, and ethical practice in therapeutic relationships. Through practical applications and guided experiential learning, students gain the competence to work effectively in diverse settings such as schools, hospitals, rehabilitation centres, and private practice, preparing them for meaningful roles in creative and mental health services.
 
               </p>
               <button className="enroll-now-btn" onClick={openApplyModal}>Enroll Now</button>
@@ -186,20 +186,20 @@ The Advanced Diploma in Art Therapy provides a strong foundation in therapeutic 
                   <div className="batch-icon"></div>
                   <h3>Batch 1</h3>
                   <ul className="batch-details">
-                  <li>Weekend Evening Batch</li>
-                  <li>Friday</li>
-                  <li>2:00 PM - 8:00 PM</li>
-                  <li>Classes start on June 19</li>
+                    <li>Weekend Evening Batch</li>
+                    <li>Friday</li>
+                    <li>2:00 PM - 8:00 PM</li>
+                    <li>Classes start on June 19</li>
                   </ul>
                 </div>
                 <div className="batch-box">
                   <div className="batch-icon"></div>
                   <h3>Batch 2</h3>
                   <ul className="batch-details">
-                  <li>Weekend Morning Batch</li>
-                  <li>Saturday</li>
-                  <li>7:30 AM - 1:30 PM</li>
-                  <li>Classes start on June 20</li>
+                    <li>Weekend Morning Batch</li>
+                    <li>Saturday</li>
+                    <li>7:30 AM - 1:30 PM</li>
+                    <li>Classes start on June 20</li>
                   </ul>
                 </div>
               </div>
@@ -236,7 +236,7 @@ The Advanced Diploma in Art Therapy provides a strong foundation in therapeutic 
             </div>
             <div className="detail-item">
               <span className="detail-label">Eligibility</span>
-              <span className="detail-value">Bachelor's degree in any discipline.</span>
+              <span className="detail-value">Anyone with a UG degree or Diploma, or individuals aged 35 years and above.</span>
             </div>
           </div>
         </div>
@@ -248,7 +248,7 @@ The Advanced Diploma in Art Therapy provides a strong foundation in therapeutic 
           <h2 className="section-title">LEARNING OUTCOMES</h2>
           <div className="outcomes-box">
             <ul className="outcomes-list">
-            <li>Equips individuals to facilitate emotional healing and self-discovery through supportive, client-centred helping approaches</li>
+              <li>Equips individuals to facilitate emotional healing and self-discovery through supportive, client-centred helping approaches</li>
 
               <li>Develops enhanced self-awareness and emotional intelligence essential for effective personal and professional functioning</li>
               <li>Builds stronger communication and interpersonal skills for meaningful, therapeutic, and professional interactions</li>
@@ -280,30 +280,30 @@ The Advanced Diploma in Art Therapy provides a strong foundation in therapeutic 
             <div className="semester-card">
               <div className="semester-header semester-1">SEMESTER 1</div>
               <h3>FOUNDATIONS OF ART THERAPY</h3>
-              <p className="credits">TOTAL CREDITS - 4</p>
+              <p className="credits">TOTAL CREDITS - 20</p>
               <ul className="semester-topics">
-              <li>Foundations of Art Therapy</li>
-              <li>Materials, Media & Creative Processes</li>
-              <li>Art Therapy Assessment, Diagnostics & Interpretive Skills</li>
-              <li>Therapeutic Modalities & Population-based Practice</li>
+                <li>Foundations of Art Therapy</li>
+                <li>Materials, Media & Creative Processes</li>
+                <li>Art Therapy Assessment, Diagnostics & Interpretive Skills</li>
+                <li>Therapeutic Modalities & Population-based Practice</li>
 
               </ul>
             </div>
             <div className="semester-card">
               <div className="semester-header semester-2">SEMESTER 2</div>
               <h3>ADVANCEMENT TO SPECIALIZATION</h3>
-              <p className="credits">TOTAL CREDITS - 4</p>
+              <p className="credits">TOTAL CREDITS - 20</p>
               <ul className="semester-topics">
-              <li>Clinical Art Therapy Interventions & Techniques</li>
-              <li>Practicum / Clinical Placement & Supervision</li>
-              <li>Research, Evaluation & Professional Practice</li>
+                <li>Clinical Art Therapy Interventions & Techniques</li>
+                <li>Practicum / Clinical Placement & Supervision</li>
+                <li>Research, Evaluation & Professional Practice</li>
               </ul>
             </div>
           </div>
           <div className="internship-section">
             <h3>Internship Opportunities</h3>
             <p>
-            Gain real-world experience through internships in schools, hospitals, and community centres. Structured field exposure helps you enhance practical art therapy skills, build professional confidence, and develop industry-ready competence for therapeutic practice in diverse settings.
+              Gain real-world experience through internships in schools, hospitals, and community centres. Structured field exposure helps you enhance practical art therapy skills, build professional confidence, and develop industry-ready competence for therapeutic practice in diverse settings.
             </p>
           </div>
         </div>
@@ -317,7 +317,7 @@ The Advanced Diploma in Art Therapy provides a strong foundation in therapeutic 
             <li>
               <span className="skill-checkmark">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="white"/>
+                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="white" />
                 </svg>
               </span>
               <span className="skill-text">
@@ -327,52 +327,52 @@ The Advanced Diploma in Art Therapy provides a strong foundation in therapeutic 
             <li>
               <span className="skill-checkmark">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="white"/>
+                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="white" />
                 </svg>
               </span>
               <span className="skill-text">
-              <strong>Creativity</strong> – Encouraging imaginative thinking to support healing, self-expression, and problem-solving.   
-               </span>
-            </li>
-            <li>
-              <span className="skill-checkmark">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="white"/>
-                </svg>
-              </span>
-              <span className="skill-text">
-              <strong>Observation Skills</strong> – Interpreting visual cues, symbols, and behavioural responses during the art-making process 
-               </span>
-            </li>
-            <li>
-              <span className="skill-checkmark">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="white"/>
-                </svg>
-              </span>
-              <span className="skill-text">
-              <strong>Empathy</strong> – Understanding and responding sensitively to clients’ emotions and experiences.
+                <strong>Creativity</strong> – Encouraging imaginative thinking to support healing, self-expression, and problem-solving.
               </span>
             </li>
             <li>
               <span className="skill-checkmark">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="white"/>
+                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="white" />
                 </svg>
               </span>
               <span className="skill-text">
-              <strong>Interpersonal Skills</strong> – Building trust, rapport, and therapeutic relationships with diverse client groups.
+                <strong>Observation Skills</strong> – Interpreting visual cues, symbols, and behavioural responses during the art-making process
               </span>
             </li>
             <li>
               <span className="skill-checkmark">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="white"/>
+                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="white" />
                 </svg>
               </span>
               <span className="skill-text">
-              <strong>Problem-Solving & Critical Thinking</strong> – Design therapeutic activities, interpret client responses, and develop creative intervention strategies.
-               </span>
+                <strong>Empathy</strong> – Understanding and responding sensitively to clients’ emotions and experiences.
+              </span>
+            </li>
+            <li>
+              <span className="skill-checkmark">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="white" />
+                </svg>
+              </span>
+              <span className="skill-text">
+                <strong>Interpersonal Skills</strong> – Building trust, rapport, and therapeutic relationships with diverse client groups.
+              </span>
+            </li>
+            <li>
+              <span className="skill-checkmark">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="white" />
+                </svg>
+              </span>
+              <span className="skill-text">
+                <strong>Problem-Solving & Critical Thinking</strong> – Design therapeutic activities, interpret client responses, and develop creative intervention strategies.
+              </span>
             </li>
           </ul>
         </div>
@@ -383,14 +383,14 @@ The Advanced Diploma in Art Therapy provides a strong foundation in therapeutic 
         <div className="container">
           <h2 className="section-title-white">CAREER PROSPECTS</h2>
           <p className="career-description">
-          With an Art Therapy specialization, this course builds a strong foundation in therapeutic techniques and prepares you for impactful careers in promoting emotional well-being and mental health. Potential career paths include:
+            With an Art Therapy specialization, this course builds a strong foundation in therapeutic techniques and prepares you for impactful careers in promoting emotional well-being and mental health. Potential career paths include:
           </p>
           <div className="career-carousel-wrapper">
             <div className="career-carousel-container">
               <div className="career-cards-slider">
                 {careers.map((career, index) => (
-                  <div 
-                    key={index} 
+                  <div
+                    key={index}
                     className="career-card"
                   >
                     <div className="career-image">
@@ -443,7 +443,7 @@ The Advanced Diploma in Art Therapy provides a strong foundation in therapeutic 
               <div className="faq-items">
                 {faqs.map((faq, index) => (
                   <div key={index} className="faq-item">
-                    <div 
+                    <div
                       className="faq-question"
                       onClick={() => toggleFaq(index)}
                     >
@@ -460,8 +460,8 @@ The Advanced Diploma in Art Therapy provides a strong foundation in therapeutic 
               </div>
             </div>
             <div className="faq-image scroll-from-right">
-              <img 
-                src={image2} 
+              <img
+                src={image2}
                 alt="Student studying"
                 onError={(e) => {
                   e.target.onerror = null;

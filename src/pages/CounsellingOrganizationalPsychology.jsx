@@ -275,7 +275,7 @@ const CounsellingOrganizationalPsychology = () => {
             <div className="semester-card">
               <div className="semester-header semester-1">SEMESTER 1</div>
               <h3>FOUNDATIONS OF COUNSELLING PSYCHOLOGY</h3>
-              <p className="credits">TOTAL CREDITS - 22</p>
+              <p className="credits">TOTAL CREDITS - 20</p>
               <ul className="semester-topics">
                 <li>Foundations of Psychology</li>
                 <li>Introduction to Counselling Psychology</li>
@@ -287,7 +287,7 @@ const CounsellingOrganizationalPsychology = () => {
             <div className="semester-card">
               <div className="semester-header semester-2">SEMESTER 2</div>
               <h3>ADVANCEMENT TO SPECIALIZATION</h3>
-              <p className="credits">TOTAL CREDITS - 32</p>
+              <p className="credits">TOTAL CREDITS - 20</p>
               <ul className="semester-topics">
                 <li>Ethics and Professional Issues in Counselling</li>
                 <li>Human Resource Management – II</li>
