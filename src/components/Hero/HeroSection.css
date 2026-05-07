@@ -90,6 +90,58 @@
   will-change: opacity;
 }
 
+.hero-slide-fifth {
+  background-size: cover !important;
+  -webkit-background-size: cover !important;
+  background-position: center 70px !important;
+  background-color: white !important;
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important;
+  transition: opacity 2s ease-in-out !important;
+  transition-property: opacity !important;
+  transform: translateZ(0) !important;
+  -webkit-transform: translateZ(0) !important;
+  will-change: opacity;
+}
+
+@media (max-width: 768px) {
+  .hero-slide-fifth {
+    background-position: center 40px !important;
+  }
+}
+
+/* Fifth Slide Overlay Elements */
+.hero-slide-br-icon-container {
+  position: absolute;
+  top: 85px; /* Positioned below desktop header */
+  right: 2.5rem;
+  z-index: 10;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.hero-slide-br-icon {
+  width: 100px;
+  height: auto;
+  min-width: 80px;
+  object-fit: contain;
+}
+
+@media (max-width: 1024px) {
+  .hero-slide-br-icon {
+    width: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-slide-br-icon-container {
+    top: 65px; /* Closer to top header on mobile */
+    right: 1.25rem;
+  }
+  .hero-slide-br-icon {
+    width: 65px;
+  }
+}
+
 /* Bottom to top gradient overlay for all slides - dark smoky to transparent */
 .hero-gradient-overlay-bottom {
   position: absolute;
@@ -135,6 +187,7 @@
     margin-left: 2.45rem;
     max-width: 455px;
   }
+
   .hero-sidebar {
     right: 3.5rem;
   }
@@ -145,6 +198,7 @@
     margin-left: 1.75rem;
     max-width: 420px;
   }
+
   .hero-sidebar {
     right: 1.75rem;
   }
@@ -155,12 +209,15 @@
     margin-left: 1.4rem;
     max-width: 385px;
   }
+
   .hero-sidebar {
     right: 1.05rem;
   }
+
   .hero-text h1 {
     font-size: 2.45rem;
   }
+
   .admission-box {
     min-width: 112px;
     padding: 2.1rem 1.4rem;
@@ -548,7 +605,8 @@
 .hero-programs-section {
   width: 100%;
   background: transparent;
-  padding: 1rem 2rem 2.75rem 2rem; /* a bit more white space below circles */
+  padding: 1rem 2rem 2.75rem 2rem;
+  /* a bit more white space below circles */
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -588,10 +646,12 @@
     gap: 1.5rem;
     padding: 0 1rem;
   }
-  .hero-programs-small-heading, 
+
+  .hero-programs-small-heading,
   .hero-programs-bold-title {
     font-size: 1.6rem;
   }
+
   .hero-program-bubble {
     width: 130px;
     height: 130px;
@@ -704,7 +764,8 @@
 }
 
 .hero-program-bubble:hover p {
-  transform: translate(-50%, -50%); /* Maintain centering during hover */
+  transform: translate(-50%, -50%);
+  /* Maintain centering during hover */
 }
 
 .hero-program-bubble p {
@@ -1092,7 +1153,7 @@
     flex: 0 0 calc(50% - 0.5rem);
     position: relative;
   }
-  
+
   .hero-program-bubble:nth-child(1),
   .hero-program-bubble:nth-child(2) {
     margin-bottom: 1.25rem;
@@ -1102,7 +1163,8 @@
     /* On mobile, avoid overlapping the hero so buttons remain clickable */
     padding-top: 2rem;
     margin-top: 0;
-    padding: 1rem 1rem 2.1rem 1rem; /* more breathing room below circles on mobile */
+    padding: 1rem 1rem 2.1rem 1rem;
+    /* more breathing room below circles on mobile */
     margin-bottom: 0;
     min-height: auto;
     height: auto;
@@ -1354,7 +1416,7 @@
     flex: 0 0 calc(50% - 0.5rem);
     position: relative;
   }
-  
+
   .hero-program-bubble:nth-child(1),
   .hero-program-bubble:nth-child(2) {
     margin-bottom: 1.5rem;
@@ -1540,7 +1602,8 @@
 
   .hero-programs-section {
     /* On very small phones, also avoid overlapping the hero */
-    padding: 0.75rem 0.75rem 2rem 0.75rem; /* more breathing room below circles on small iPhones */
+    padding: 0.75rem 0.75rem 2rem 0.75rem;
+    /* more breathing room below circles on small iPhones */
     padding-top: 2rem;
     margin-top: 0;
     margin-bottom: 0;
@@ -1609,14 +1672,15 @@
     flex: 0 0 calc(50% - 0.375rem);
     position: relative;
   }
-  
+
   .hero-program-bubble:nth-child(1),
   .hero-program-bubble:nth-child(2) {
     margin-bottom: 1.25rem;
   }
 
   .hero-programs-section {
-    padding: 0.75rem 0.75rem 2rem 0.75rem; /* keep consistent for duplicated block */
+    padding: 0.75rem 0.75rem 2rem 0.75rem;
+    /* keep consistent for duplicated block */
     padding-top: 2rem;
     margin-top: 0;
     margin-bottom: 0;

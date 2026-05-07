@@ -10,8 +10,11 @@ const Header = () => {
   const [showUnderConstruction, setShowUnderConstruction] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isDropdownClicked, setIsDropdownClicked] = useState(false);
+  const [isCoursesDropdownOpen, setIsCoursesDropdownOpen] = useState(false);
+  const [isCoursesDropdownClicked, setIsCoursesDropdownClicked] = useState(false);
   const [hoverDisabled, setHoverDisabled] = useState(false);
   const dropdownStateRef = useRef(false);
+  const coursesDropdownStateRef = useRef(false);
   const [showApplyModal, setShowApplyModal] = useState(false);
   const [applyForm, setApplyForm] = useState({
     name: '',
@@ -63,10 +66,16 @@ const Header = () => {
   }, [isDropdownOpen]);
 
   useEffect(() => {
+    coursesDropdownStateRef.current = isCoursesDropdownOpen;
+  }, [isCoursesDropdownOpen]);
+
+  useEffect(() => {
     const handleClickOutside = (event) => {
       // Check if click is inside the diploma dropdown specifically
       const diplomaMenu = document.getElementById('diploma-dropdown');
       const diplomaToggle = document.querySelector('[aria-controls="diploma-dropdown"]');
+      const coursesMenu = document.getElementById('courses-dropdown');
+      const coursesToggle = document.querySelector('[aria-controls="courses-dropdown"]');
       const clickedElement = event.target;
       
       // Check if click is inside the dropdown menu or its toggle button
@@ -75,6 +84,12 @@ const Header = () => {
         (diplomaToggle && diplomaToggle.contains(clickedElement)) ||
         clickedElement.closest('#diploma-dropdown') ||
         clickedElement.closest('[aria-controls="diploma-dropdown"]');
+        
+      const clickedInsideCourses = 
+        (coursesMenu && coursesMenu.contains(clickedElement)) ||
+        (coursesToggle && coursesToggle.contains(clickedElement)) ||
+        clickedElement.closest('#courses-dropdown') ||
+        clickedElement.closest('[aria-controls="courses-dropdown"]');
       
       // Don't close if clicking inside the diploma dropdown area
       if (isDropdownOpen && !clickedInsideDiploma) {
@@ -83,9 +98,16 @@ const Header = () => {
         setHoverDisabled(false);
         dropdownStateRef.current = false;
       }
+
+      if (isCoursesDropdownOpen && !clickedInsideCourses) {
+        setIsCoursesDropdownOpen(false);
+        setIsCoursesDropdownClicked(false);
+        setHoverDisabled(false);
+        coursesDropdownStateRef.current = false;
+      }
     };
 
-    if (isDropdownOpen) {
+    if (isDropdownOpen || isCoursesDropdownOpen) {
       // Use click event with a small delay to let click handlers complete first
       const timeoutId = setTimeout(() => {
         document.addEventListener('click', handleClickOutside);
@@ -98,10 +120,10 @@ const Header = () => {
         document.removeEventListener('touchstart', handleClickOutside);
       };
     }
-  }, [isDropdownOpen]);
+  }, [isDropdownOpen, isCoursesDropdownOpen]);
 
   const handleNavClick = (e, path) => {
-    if (isHomePage && (path === '/courses' || path === '/research' || path === '/contact')) {
+    if (isHomePage && (path === '/research' || path === '/contact')) {
       e.preventDefault();
       setShowUnderConstruction(true);
       setIsMobileMenuOpen(false);
@@ -304,6 +326,82 @@ const Header = () => {
                     }}
                   >
                     Advanced Diploma in Art Therapy
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            <div 
+              className="nav-dropdown"
+              onMouseEnter={(e) => {
+                if (window.innerWidth > 768 && !hoverDisabled) {
+                  setIsCoursesDropdownOpen(true);
+                  coursesDropdownStateRef.current = true;
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (window.innerWidth > 768 && !isCoursesDropdownClicked) {
+                  setIsCoursesDropdownOpen(false);
+                  coursesDropdownStateRef.current = false;
+                }
+              }}
+            >
+              <div
+                className="dropdown-toggle"
+                role="button"
+                aria-expanded={isCoursesDropdownOpen}
+                aria-controls="courses-dropdown"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  setIsCoursesDropdownOpen(prevState => {
+                    const willBeOpen = !prevState;
+                    if (willBeOpen) {
+                      setIsCoursesDropdownClicked(true);
+                      setHoverDisabled(true);
+                      setTimeout(() => setHoverDisabled(false), 300);
+                    } else {
+                      setIsCoursesDropdownClicked(false);
+                      setHoverDisabled(false);
+                    }
+                    return willBeOpen;
+                  });
+                }}
+              >
+                <span className="dropdown-label">Courses</span>
+                <span className={`dropdown-icon ${isCoursesDropdownOpen ? 'open' : ''}`} aria-hidden="true">
+                  <svg viewBox="0 0 24 24" focusable="false">
+                    <path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
+              </div>
+              {isCoursesDropdownOpen && (
+                <div 
+                  id="courses-dropdown" 
+                  className="dropdown-menu"
+                  onMouseEnter={() => {
+                    if (window.innerWidth > 768) {
+                      setIsCoursesDropdownOpen(true);
+                      coursesDropdownStateRef.current = true;
+                    }
+                  }}
+                  onMouseLeave={() => {
+                    if (window.innerWidth > 768 && !isCoursesDropdownClicked) {
+                      setIsCoursesDropdownOpen(false);
+                      coursesDropdownStateRef.current = false;
+                    }
+                  }}
+                >
+                  <Link 
+                    to="/courses" 
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      setIsCoursesDropdownOpen(false);
+                      setIsCoursesDropdownClicked(false);
+                      coursesDropdownStateRef.current = false;
+                    }}
+                  >
+                    Certification Courses
                   </Link>
                 </div>
               )}
