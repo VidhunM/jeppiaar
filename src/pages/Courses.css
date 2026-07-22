@@ -633,8 +633,26 @@
 
 @media (max-width: 992px) {
   .overview-cards-container {
-    grid-template-columns: 1fr;
-    gap: 4.5rem;
+    display: flex !important;
+    overflow-x: auto !important;
+    gap: 2rem !important;
+    padding: 3rem 1rem 1.5rem !important;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .overview-cards-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .overview-card-box {
+    flex: 0 0 290px !important;
+    min-width: 290px !important;
+    scroll-snap-align: center;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
   }
 }
 
@@ -959,9 +977,12 @@
     grid-template-columns: 1fr !important;
     gap: 2rem !important;
   }
-  .courses-highlights-image {
+  .courses-highlights-section .courses-highlights-image {
     max-width: 70% !important;
-    margin: 0 auto !important;
+    margin-top: 0 !important;
+    transform: none !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
   .courses-highlights-text {
     align-items: center;
@@ -991,6 +1012,47 @@
   .courses-inline-form-grid {
     grid-template-columns: 1fr !important;
     gap: 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .courses-page-premium {
+    padding-top: calc(75px + env(safe-area-inset-top, 0px)) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .courses-page-premium {
+    padding-top: calc(65px + env(safe-area-inset-top, 0px)) !important;
+  }
+}
+
+#start-career-section .lead-form-panel {
+  padding: 1.25rem 1.5rem !important;
+}
+
+@media (max-width: 768px) {
+  #start-career-section {
+    margin-top: 3.5rem !important;
+    padding-top: 1.5rem !important;
+  }
+  #start-career-section .lead-content {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  #start-career-section .lead-form-panel {
+    order: 1 !important;
+    border-radius: 12px 12px 0 0 !important;
+    padding: 2.2rem 1.5rem 1.5rem 1.5rem !important;
+  }
+  #start-career-section .lead-form-panel form {
+    margin-top: 1.25rem !important;
+  }
+  #start-career-section .lead-image-panel {
+    order: 2 !important;
+    border-radius: 0 0 12px 12px !important;
+    min-height: 0 !important;
+    margin: 0 auto !important;
   }
 }
 

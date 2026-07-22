@@ -277,10 +277,10 @@ const Courses = () => {
                       <span style={{ position: 'absolute', left: '0' }}>•</span>Role-Specific Applied Tracks
                     </li>
                     <li style={{ color: '#ffffff', fontSize: '1.05rem', lineHeight: '1.5', marginBottom: '0.4rem', paddingLeft: '1rem', position: 'relative' }}>
-                      <span style={{ position: 'absolute', left: '0' }}>•</span>Customized for Corporate Teams
+                      <span style={{ position: 'absolute', left: '0' }}>•</span>Direct Classes
                     </li>
                     <li style={{ color: '#ffffff', fontSize: '1.05rem', lineHeight: '1.5', marginBottom: '0.4rem', paddingLeft: '1rem', position: 'relative' }}>
-                      <span style={{ position: 'absolute', left: '0' }}>•</span>Direct Classes
+                      <span style={{ position: 'absolute', left: '0' }}>•</span>Customized for Corporate Teams
                     </li>
                   </ul>
                 </div>
@@ -348,9 +348,7 @@ const Courses = () => {
               </p>
             </div>
             <div className="syllabus-buttons" style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-              <button className="apply-now-btn-syllabus" onClick={openApplyModal} style={{ cursor: 'pointer' }}>
-                Apply now
-              </button>
+
               <a
                 className="download-brochure-btn"
                 href={brochurePdf}
@@ -443,7 +441,7 @@ const Courses = () => {
       <section id="start-career-section" className="lead-generation-section" style={{ paddingTop: '0', paddingBottom: '0' }}>
         <div className="container">
           <div className="lead-content">
-            <div className="lead-form-panel scroll-from-left" style={{ background: '#0E0529', padding: '0.75rem 1.25rem' }}>
+            <div className="lead-form-panel scroll-from-left" style={{ background: '#0E0529' }}>
               <h2 style={{ color: '#ffffff', fontSize: '1.8rem', fontWeight: '700', textTransform: 'uppercase', marginBottom: '0.25rem', lineHeight: '1.2' }}>
                 Enquire Now
               </h2>
@@ -504,7 +502,7 @@ const Courses = () => {
                       required
                       style={{ background: '#ffffff', border: '1px solid #CCCCCC', borderRadius: '8px', padding: '0.6rem 0.9rem', color: '#0E0529', fontSize: '0.95rem', width: '100%', boxSizing: 'border-box' }}
                     >
-                      <option value="Courses">Courses</option>
+                      <option value="Corporate programme">Corporate programme</option>
                       <option value="Consultation">Consultation</option>
                     </select>
                   </label>
