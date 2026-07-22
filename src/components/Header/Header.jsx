@@ -368,7 +368,7 @@ const Header = () => {
                   });
                 }}
               >
-                <span className="dropdown-label">Courses</span>
+                <span className="dropdown-label">Corporate & Programs</span>
                 <span className={`dropdown-icon ${isCoursesDropdownOpen ? 'open' : ''}`} aria-hidden="true">
                   <svg viewBox="0 0 24 24" focusable="false">
                     <path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -401,7 +401,7 @@ const Header = () => {
                       coursesDropdownStateRef.current = false;
                     }}
                   >
-                    Certification Courses
+                    Organizational Psychology
                   </Link>
                 </div>
               )}

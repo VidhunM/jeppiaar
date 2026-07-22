@@ -558,3 +558,232 @@
     flex: 0 0 85%;
   }
 }
+
+/* Academy Overview Cards Section */
+.academy-overview-cards-section {
+  padding: 1.5rem 0 3rem;
+  background-color: #ffffff;
+}
+
+.overview-cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.overview-card-box {
+  background: linear-gradient(135deg, #ffffff 0%, #f9faff 100%);
+  border: 1px solid rgba(26, 18, 96, 0.1);
+  border-top: 4px solid #1A1260; /* Brand navy blue top border */
+  padding: 4.5rem 2.2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(26, 18, 96, 0.03);
+  position: relative;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.overview-card-box:hover {
+  transform: translateY(-10px);
+  border-color: rgba(26, 18, 96, 0.2);
+  border-top-color: #0E0529; /* Deep dark blue top border on hover */
+  box-shadow: 0 20px 40px rgba(26, 18, 96, 0.08);
+}
+
+.card-number-badge {
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 48px;
+  background-color: #0E0529; /* Brand dark blue background */
+  border: 3px solid #1A1260; /* Brand navy blue outer ring */
+  color: #ffffff; /* White text instead of gold */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+  box-shadow: 0 4px 10px rgba(26, 18, 96, 0.1);
+  transition: all 0.3s ease;
+}
+
+.overview-card-box:hover .card-number-badge {
+  background-color: #1A1260; /* Highlight blue on hover */
+  color: #ffffff;
+  border-color: #0E0529;
+  transform: translateX(-50%) scale(1.1);
+}
+
+.overview-card-box p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 0;
+  font-weight: 450;
+  font-family: 'Inter', sans-serif !important;
+}
+
+@media (max-width: 992px) {
+  .overview-cards-container {
+    grid-template-columns: 1fr;
+    gap: 4.5rem;
+  }
+}
+
+.structure-table th, .structure-table td {
+  transition: background-color 0.3s ease;
+}
+
+.structure-table tbody tr:hover td {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Learning Outcomes / Programme Outcomes Section */
+.learning-outcomes {
+  padding: 5rem 0;
+  background: #ffffff;
+}
+
+.learning-outcomes .section-title {
+  color: #0E0529;
+  text-align: left;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.outcomes-box {
+  background: #E8E4F4; /* Light lavender-grey brand color background */
+  border-radius: 12px;
+  padding: 2.5rem;
+}
+
+.learning-outcomes .outcomes-list {
+  list-style: none;
+  padding: 0;
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 1.5rem 2.5rem !important;
+}
+
+.learning-outcomes .outcomes-list li {
+  font-size: 1.25rem;
+  color: #0E0529;
+  line-height: 1.7;
+  padding-left: 3rem;
+  position: relative;
+  font-weight: 500;
+}
+
+.outcomes-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background: #1A1260;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .learning-outcomes {
+    padding: 3rem 0;
+  }
+  .learning-outcomes h2.section-title {
+    font-size: 1.6rem !important;
+    margin-bottom: 1.5rem;
+  }
+  .learning-outcomes .outcomes-list {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  .learning-outcomes .outcomes-list li {
+    font-size: 1.05rem;
+    padding-left: 2.25rem;
+  }
+}
+
+/* Programme Structure Table & Button Styles */
+.apply-now-btn-syllabus {
+  background: #0E0529;
+  color: white;
+  border: 2px solid #E8E4F4;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  text-transform: none;
+  position: relative;
+  z-index: 10;
+}
+
+.apply-now-btn-syllabus:hover {
+  background: white;
+  color: #0E0529;
+  border-color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2);
+}
+
+.download-brochure-btn {
+  background: #0E0529;
+  color: white;
+  border: 2px solid #E8E4F4;
+  padding: 0.65rem 1.75rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+  height: auto;
+  line-height: 1.5;
+  font-family: 'Roboto', sans-serif;
+}
+
+.download-brochure-btn:hover {
+  background: white;
+  color: #0E0529;
+  border-color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2);
+}
+
+.structure-table th, .structure-table td {
+  transition: background-color 0.3s ease;
+}
+
+.structure-table tbody tr:hover td {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+
+
+
+
