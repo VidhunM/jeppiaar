@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import CourseApplyModal from '../components/CourseApplyModal/CourseApplyModal';
-import LeadGeneration from '../components/LeadGeneration/LeadGeneration';
 import { initScrollAnimations } from '../utils/scrollAnimations';
 import heroImage from '../assets/images/ad01.jpg'; // Using an existing relevant image
 import courseImage1 from '../assets/images/cp1.png';
@@ -14,6 +13,16 @@ const Courses = () => {
   const [applyForm, setApplyForm] = useState({
     name: '', email: '', mobile: '', country: '', city: '', state: '', course: '', batch: '', qualification: '', consent: false
   });
+  const [enquiryForm, setEnquiryForm] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    enquiryFor: 'Courses',
+    heardAbout: '',
+    heardAboutOther: ''
+  });
+  const [enquiryLoading, setEnquiryLoading] = useState(false);
+  const [enquiryMessage, setEnquiryMessage] = useState(null);
 
   const [activeCourseIndex, setActiveCourseIndex] = useState(0);
 
@@ -24,10 +33,10 @@ const Courses = () => {
   };
 
   const scrollPrev = () => {
-    if(gridRef.current) gridRef.current.scrollBy({ left: -350, behavior: 'smooth' });
+    if (gridRef.current) gridRef.current.scrollBy({ left: -350, behavior: 'smooth' });
   };
   const scrollNext = () => {
-    if(gridRef.current) gridRef.current.scrollBy({ left: 350, behavior: 'smooth' });
+    if (gridRef.current) gridRef.current.scrollBy({ left: 350, behavior: 'smooth' });
   };
 
   useEffect(() => {
@@ -71,6 +80,79 @@ const Courses = () => {
     e.preventDefault();
     alert('Thank you for your interest! We will contact you soon.');
     closeApplyModal();
+  };
+
+  const handleEnquirySubmit = async (e) => {
+    e.preventDefault();
+    setEnquiryMessage(null);
+
+    const name = String(enquiryForm.name || '').trim();
+    const email = String(enquiryForm.email || '').trim();
+    const phone = String(enquiryForm.phone || '').replace(/\D/g, '');
+    const enquiryFor = String(enquiryForm.enquiryFor || '').trim();
+    const heardAbout = String(enquiryForm.heardAbout || '').trim();
+    const heardAboutOther = String(enquiryForm.heardAboutOther || '').trim();
+
+    if (!name || !phone || !enquiryFor || !heardAbout) {
+      setEnquiryMessage({ type: 'error', text: 'Please fill all fields.' });
+      return;
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setEnquiryMessage({ type: 'error', text: 'Please enter a valid email address.' });
+      return;
+    }
+    if (phone.length < 10) {
+      setEnquiryMessage({ type: 'error', text: 'Please enter a valid mobile number.' });
+      return;
+    }
+    if (heardAbout === 'Other' && !heardAboutOther) {
+      setEnquiryMessage({ type: 'error', text: 'Please specify where you heard about this site.' });
+      return;
+    }
+
+    setEnquiryLoading(true);
+    try {
+      const heardText = heardAbout === 'Other' ? heardAboutOther : heardAbout;
+      const payload = {
+        name,
+        phone,
+        email,
+        enquiry: enquiryFor,
+        source: 'Website - Organisational Psychology Inline Enquiry Form',
+        notes: `Heard about: ${heardText}`,
+      };
+
+      const res = await fetch('https://api.jeppiaaracademy.com/api/lead/website', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+
+      if (!res.ok) {
+        throw new Error(`Request failed (${res.status})`);
+      }
+
+      setEnquiryMessage({ type: 'success', text: 'Thank you! We will contact you soon.' });
+      setEnquiryForm({ name: '', email: '', phone: '', enquiryFor: 'Courses', heardAbout: '', heardAboutOther: '' });
+      setTimeout(() => setEnquiryMessage(null), 3000);
+    } catch (err) {
+      setEnquiryMessage({ type: 'error', text: `Submission failed: ${err?.message || String(err)}` });
+    } finally {
+      setEnquiryLoading(false);
+    }
+  };
+
+  const handleEnquiryChange = (e) => {
+    const { name, value } = e.target;
+    if (name === 'phone') {
+      const numeric = value.replace(/\D/g, '');
+      if (numeric.length <= 15) {
+        setEnquiryForm(prev => ({ ...prev, phone: numeric }));
+      }
+      return;
+    }
+    setEnquiryForm(prev => ({ ...prev, [name]: value }));
   };
 
   const certificationCourses = [
@@ -177,12 +259,7 @@ const Courses = () => {
                     <li style={{ color: '#ffffff', fontSize: '1.05rem', lineHeight: '1.5', marginBottom: '0.4rem', paddingLeft: '1rem', position: 'relative' }}>
                       <span style={{ position: 'absolute', left: '0' }}>•</span>Applied Psychology Basics
                     </li>
-                    <li style={{ color: '#ffffff', fontSize: '1.05rem', lineHeight: '1.5', marginBottom: '0.4rem', paddingLeft: '1rem', position: 'relative' }}>
-                      <span style={{ position: 'absolute', left: '0' }}>•</span>Monday - Thursday Options
-                    </li>
-                    <li style={{ color: '#ffffff', fontSize: '1.05rem', lineHeight: '1.5', marginBottom: '0.4rem', paddingLeft: '1rem', position: 'relative' }}>
-                      <span style={{ position: 'absolute', left: '0' }}>•</span>Classes start on August 10
-                    </li>
+
                   </ul>
                 </div>
                 <div className="batch-box" style={{ background: 'rgba(90, 85, 106, 0.4)', borderRadius: '12px', padding: '1.5rem', position: 'relative' }}>
@@ -195,7 +272,7 @@ const Courses = () => {
                       <span style={{ position: 'absolute', left: '0' }}>•</span>Role-Specific Applied Tracks
                     </li>
                     <li style={{ color: '#ffffff', fontSize: '1.05rem', lineHeight: '1.5', marginBottom: '0.4rem', paddingLeft: '1rem', position: 'relative' }}>
-                      <span style={{ position: 'absolute', left: '0' }}>•</span>Flexible Self-Paced Learning
+                      <span style={{ position: 'absolute', left: '0' }}>•</span>Live classes or Self-Paced Learning
                     </li>
                     <li style={{ color: '#ffffff', fontSize: '1.05rem', lineHeight: '1.5', marginBottom: '0.4rem', paddingLeft: '1rem', position: 'relative' }}>
                       <span style={{ position: 'absolute', left: '0' }}>•</span>Customized for Corporate Teams
@@ -212,9 +289,7 @@ const Courses = () => {
                 >
                   Download Brochure
                 </a>
-                <p className="bridge-program-note" style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '0.9rem', margin: '0', flex: '1', minWidth: '250px', lineHeight: '1.4' }}>
-                  Note: A FREE Psychology Bridge Program will be conducted for students from non-psychology background to ensure strong foundational readiness.
-                </p>
+
               </div>
             </div>
           </div>
@@ -230,7 +305,7 @@ const Courses = () => {
               <span className="detail-label">Duration</span>
               <span className="detail-value">30 Hours</span>
             </div>
-            
+
             {/* Column 2: Tracks */}
             <div className="detail-item">
               <span className="detail-label">Tracks</span>
@@ -359,8 +434,132 @@ const Courses = () => {
         </div>
       </section>
 
-      {/* Lead Generation Form Section */}
-      <LeadGeneration />
+      {/* Inline Enquiry Form Section */}
+      <section className="courses-inline-form-section scroll-from-center" style={{ background: '#ffffff', padding: '0.5rem 0 1rem 0', color: '#0E0529' }}>
+        <div className="container" style={{ maxWidth: '600px', margin: '0 auto' }}>
+          <div className="inline-form-card" style={{ background: '#0E0529', borderRadius: '16px', padding: '1.25rem 1.5rem', border: '1px solid #1A1260' }}>
+            <div className="inline-form-header" style={{ textAlign: 'center', marginBottom: '1.25rem' }}>
+              <h2 style={{ fontSize: '1.8rem', fontWeight: '700', textTransform: 'uppercase', color: '#ffffff', margin: '0 0 0.25rem 0' }}>
+                Enquire Now
+              </h2>
+              <p style={{ color: '#E8E4F4', opacity: '0.9', fontSize: '1rem', margin: '0' }}>
+                Please share your details. We will reach you soon.
+              </p>
+            </div>
+
+            <form onSubmit={handleEnquirySubmit} className="enquiry-popup-form" style={{ background: 'transparent', padding: '0', boxShadow: 'none' }}>
+              <div className="courses-inline-form-grid">
+                <label className="enquiry-field" style={{ display: 'flex', flexDirection: 'column', gap: '0.3rem' }}>
+                  <span style={{ color: '#ffffff', fontWeight: '600', fontSize: '0.9rem' }}>Name *</span>
+                  <input
+                    name="name"
+                    value={enquiryForm.name}
+                    onChange={handleEnquiryChange}
+                    type="text"
+                    placeholder="Your name"
+                    required
+                    style={{ background: '#ffffff', border: '1px solid #CCCCCC', borderRadius: '8px', padding: '0.6rem 0.9rem', color: '#0E0529', fontSize: '0.95rem', width: '100%', boxSizing: 'border-box' }}
+                  />
+                </label>
+
+                <label className="enquiry-field" style={{ display: 'flex', flexDirection: 'column', gap: '0.3rem' }}>
+                  <span style={{ color: '#ffffff', fontWeight: '600', fontSize: '0.9rem' }}>Email ID *</span>
+                  <input
+                    name="email"
+                    value={enquiryForm.email}
+                    onChange={handleEnquiryChange}
+                    type="email"
+                    placeholder="yourname@example.com"
+                    maxLength={100}
+                    required
+                    style={{ background: '#ffffff', border: '1px solid #CCCCCC', borderRadius: '8px', padding: '0.6rem 0.9rem', color: '#0E0529', fontSize: '0.95rem', width: '100%', boxSizing: 'border-box' }}
+                  />
+                </label>
+
+                <label className="enquiry-field" style={{ display: 'flex', flexDirection: 'column', gap: '0.3rem' }}>
+                  <span style={{ color: '#ffffff', fontWeight: '600', fontSize: '0.9rem' }}>Mobile Number *</span>
+                  <input
+                    name="phone"
+                    value={enquiryForm.phone}
+                    onChange={handleEnquiryChange}
+                    type="tel"
+                    inputMode="numeric"
+                    placeholder="Enter phone number"
+                    maxLength={15}
+                    required
+                    style={{ background: '#ffffff', border: '1px solid #CCCCCC', borderRadius: '8px', padding: '0.6rem 0.9rem', color: '#0E0529', fontSize: '0.95rem', width: '100%', boxSizing: 'border-box' }}
+                  />
+                </label>
+
+                <label className="enquiry-field" style={{ display: 'flex', flexDirection: 'column', gap: '0.3rem' }}>
+                  <span style={{ color: '#ffffff', fontWeight: '600', fontSize: '0.95rem' }}>Enquire for *</span>
+                  <select
+                    name="enquiryFor"
+                    value={enquiryForm.enquiryFor}
+                    onChange={handleEnquiryChange}
+                    required
+                    style={{ background: '#ffffff', border: '1px solid #CCCCCC', borderRadius: '8px', padding: '0.6rem 0.9rem', color: '#0E0529', fontSize: '0.95rem', width: '100%', boxSizing: 'border-box' }}
+                  >
+                    <option value="Courses">Courses</option>
+                    <option value="Consultation">Consultation</option>
+                  </select>
+                </label>
+              </div>
+
+              <div className="courses-inline-form-grid" style={{ gridTemplateColumns: enquiryForm.heardAbout === 'Other' ? '1fr 1fr' : '1fr' }}>
+                <label className="enquiry-field" style={{ display: 'flex', flexDirection: 'column', gap: '0.3rem' }}>
+                  <span style={{ color: '#ffffff', fontWeight: '600', fontSize: '0.95rem' }}>Where did you hear about this site? *</span>
+                  <select
+                    name="heardAbout"
+                    value={enquiryForm.heardAbout}
+                    onChange={handleEnquiryChange}
+                    required
+                    style={{ background: '#ffffff', border: '1px solid #CCCCCC', borderRadius: '8px', padding: '0.6rem 0.9rem', color: '#0E0529', fontSize: '0.95rem', width: '100%', boxSizing: 'border-box' }}
+                  >
+                    <option value="">Select</option>
+                    <option value="Google Search">Google Search</option>
+                    <option value="Instagram">Instagram</option>
+                    <option value="Facebook">Facebook</option>
+                    <option value="YouTube">YouTube</option>
+                    <option value="Friend / Family">Friend / Family</option>
+                    <option value="College / Staff">College / Staff</option>
+                    <option value="Newspaper / TV">Newspaper / TV</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </label>
+
+                {enquiryForm.heardAbout === 'Other' && (
+                  <label className="enquiry-field" style={{ display: 'flex', flexDirection: 'column', gap: '0.3rem' }}>
+                    <span style={{ color: '#ffffff', fontWeight: '600', fontSize: '0.95rem' }}>Please specify *</span>
+                    <input
+                      name="heardAboutOther"
+                      value={enquiryForm.heardAboutOther}
+                      onChange={handleEnquiryChange}
+                      type="text"
+                      placeholder="Eg: referral, website, etc."
+                      required
+                      style={{ background: '#ffffff', border: '1px solid #CCCCCC', borderRadius: '8px', padding: '0.6rem 0.9rem', color: '#0E0529', fontSize: '0.95rem', width: '100%', boxSizing: 'border-box' }}
+                    />
+                  </label>
+                )}
+              </div>
+
+              {enquiryMessage && (
+                <div
+                  className={`enquiry-message ${enquiryMessage.type === 'error' ? 'error' : 'success'}`}
+                  style={{ margin: '0.85rem 0', padding: '0.6rem', borderRadius: '8px', textAlign: 'center', fontWeight: '600', background: enquiryMessage.type === 'error' ? 'rgba(255, 77, 77, 0.15)' : 'rgba(77, 255, 77, 0.15)', color: enquiryMessage.type === 'error' ? '#ff4d4d' : '#4dff4d', border: enquiryMessage.type === 'error' ? '1px solid #ff4d4d' : '1px solid #4dff4d', fontSize: '0.9rem' }}
+                >
+                  {enquiryMessage.text}
+                </div>
+              )}
+
+              <button className="enquiry-submit" type="submit" disabled={enquiryLoading} style={{ background: '#ffffff', color: '#0E0529', border: 'none', padding: '0.8rem 2rem', borderRadius: '50px', fontWeight: '700', fontSize: '1rem', cursor: 'pointer', transition: 'all 0.3s ease', width: '100%', textTransform: 'uppercase', marginTop: '0.5rem' }}>
+                {enquiryLoading ? 'Sending…' : 'Submit'}
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
 
       <CourseApplyModal
         isOpen={showApplyModal}

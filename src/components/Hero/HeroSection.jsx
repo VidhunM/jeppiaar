@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './HeroSection.css';
 import heroImage from '../../assets/images/hero1.png';
-import hero2Image from '../../assets/images/hero2.png';
 import hero3Image from '../../assets/images/hero03.jpg';
 import hero4Image from '../../assets/images/hero04.jpg';
 import hero5Image from '../../assets/images/hero5.png';
+import hero6Image from '../../assets/images/hero6.JPG';
+import hero7Image from '../../assets/images/hero7.JPG';
+import hero8Image from '../../assets/images/hero8.JPG';
 import brIcon from '../../assets/icons/br.png';
 
 const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection, onOpenApplyModal }) => {
@@ -17,7 +19,15 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection, onOpenA
       title: 'Jeppiaar Academy of Psychology & Research'
     },
     {
-      image: hero2Image,
+      image: hero6Image,
+      title: 'Jeppiaar Academy of Psychology & Research'
+    },
+    {
+      image: hero7Image,
+      title: 'Jeppiaar Academy of Psychology & Research'
+    },
+    {
+      image: hero8Image,
       title: 'Jeppiaar Academy of Psychology & Research'
     },
     {
@@ -36,7 +46,7 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection, onOpenA
 
   // Preload all hero images
   useEffect(() => {
-    const imageUrls = [heroImage, hero2Image, hero3Image, hero4Image, hero5Image];
+    const imageUrls = [heroImage, hero6Image, hero7Image, hero8Image, hero3Image, hero4Image, hero5Image];
     const imagePromises = imageUrls.map((imageUrl) => {
       return new Promise((resolve, reject) => {
         const img = new Image();
@@ -91,10 +101,13 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection, onOpenA
         ))}
       </div>
       <div 
-        className={`hero-slide ${currentSlide === 0 ? 'hero-slide-first' : ''} ${currentSlide === 1 ? 'hero-slide-second' : ''} ${currentSlide === 3 ? 'hero-slide-fourth' : ''} ${currentSlide === 4 ? 'hero-slide-fifth' : ''} ${imagesLoaded ? 'images-loaded' : ''}`}
+        className={`hero-slide ${currentSlide === 0 ? 'hero-slide-first' : ''} ${(currentSlide === 1 || currentSlide === 2 || currentSlide === 3) ? 'hero-slide-second' : ''} ${currentSlide === 5 ? 'hero-slide-fourth' : ''} ${currentSlide === 6 ? 'hero-slide-fifth' : ''} ${imagesLoaded ? 'images-loaded' : ''}`}
         style={{ 
           backgroundImage: `url(${slides[currentSlide].image})`,
-          backgroundPosition: currentSlide === 3 ? 'top center' : (currentSlide === 4 ? 'top center' : undefined)
+          backgroundPosition: 
+            (currentSlide === 2 || currentSlide === 3) ? 'center 70px' :
+            (currentSlide === 5 ? 'top center' : 
+            (currentSlide === 6 ? 'top center' : undefined))
         }}
       >
         <div className="hero-gradient-overlay-bottom"></div>
@@ -126,13 +139,6 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection, onOpenA
             </div>
 
             <div className="hero-sidebar desktop-only">
-              <div className="admission-box">
-                <div className="admission-year">2026</div>
-                <div className="admission-text">
-                  <span>Admissions</span>
-                  <span>Open Now</span>
-                </div>
-              </div>
               <button
                 className="apply-now-btn"
                 onClick={() => {
@@ -178,20 +184,13 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection, onOpenA
                 >
                   Enquire Now
                 </button>
-                <div className="mobile-admission-info">
-                  <div className="admission-year-mobile">2026</div>
-                  <div className="admission-text-mobile">
-                    <span>Admissions</span>
-                    <span>Open Now</span>
-                  </div>
-                </div>
               </div>
             </div>
 
           </>
         )}
 
-        {currentSlide === 1 && (
+        {(currentSlide === 1 || currentSlide === 2 || currentSlide === 3) && (
           <>
             <div className="hero-rated-badge hero-rated-badge-bottom">
               <div className="rated-text">STUDENT RATED</div>
@@ -206,7 +205,7 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection, onOpenA
           </>
         )}
 
-        {currentSlide === 2 && (
+        {currentSlide === 4 && (
           <>
             <div className="hero-feature-badge hero-feature-badge-bottom">
               <div className="feature-text">AC CLASSROOMS</div>
@@ -215,7 +214,7 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection, onOpenA
           </>
         )}
 
-        {currentSlide === 3 && (
+        {currentSlide === 5 && (
           <>
             <div className="hero-feature-badge hero-feature-badge-fourth hero-feature-badge-bottom">
               <div className="feature-text feature-text-fourth">LEARN FROM</div>
@@ -224,7 +223,7 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection, onOpenA
           </>
         )}
         
-        {currentSlide === 4 && (
+        {currentSlide === 6 && (
           <>
             <div className="hero-slide-br-icon-container">
               <img src={brIcon} alt="University Logo" className="hero-slide-br-icon" />
