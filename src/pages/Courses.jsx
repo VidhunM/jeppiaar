@@ -152,50 +152,115 @@ const Courses = () => {
         </div>
       </section>
 
-      {/* Program Stats Banner Section (Compact site-themed layout) */}
-      <section className="program-details-bar scroll-from-center" style={{ margin: '2rem 0 4rem', background: '#f5f5f5', padding: '1.5rem 0' }}>
+      {/* Program Highlights Section */}
+      <section className="courses-program-highlights courses-highlights-section scroll-from-center">
         <div className="container">
-          <div className="details-grid" style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.2fr 2.5fr 1.4fr', gap: '0', textAlign: 'center', background: '#f5f5f5' }}>
-            {/* Column 1: 30 Hours */}
-            <div className="detail-item" style={{ display: 'flex', flexDirection: 'column', padding: '1.25rem 1.75rem', borderRight: '3px solid #1A1260', background: '#f5f5f5', alignItems: 'center', justifyContent: 'center' }}>
-              <span className="detail-value" style={{ fontFamily: "'Inter', sans-serif", fontSize: '2.6rem', color: '#1A1260', fontWeight: '900', textTransform: 'uppercase', lineHeight: '1' }}>30</span>
-              <span className="detail-label" style={{ fontFamily: "'Inter', sans-serif", fontSize: '1.1rem', color: '#666', fontWeight: '600', textTransform: 'uppercase', marginTop: '0.4rem' }}>Hours</span>
+          <div className="courses-highlights-content">
+            <div className="courses-highlights-image">
+              <img src={courseImage2} alt="Organizational Psychology Collaboration" />
             </div>
-            
-            {/* Column 2: Track 1 & 2 */}
-            <div className="detail-item" style={{ display: 'flex', flexDirection: 'column', padding: '1.25rem 1.75rem', borderRight: '3px solid #1A1260', background: '#f5f5f5', alignItems: 'center', justifyContent: 'center' }}>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', justifyContent: 'center', height: '100%' }}>
-                <span className="detail-value" style={{ fontFamily: "'Inter', sans-serif", fontSize: '1.35rem', color: '#1A1260', fontWeight: '900', textTransform: 'uppercase' }}>Track 1</span>
-                <span className="detail-value" style={{ fontFamily: "'Inter', sans-serif", fontSize: '1.35rem', color: '#1A1260', fontWeight: '900', textTransform: 'uppercase' }}>Track 2</span>
+            <div className="courses-highlights-text" style={{ display: 'flex', flexDirection: 'column' }}>
+              <p className="courses-highlights-subtitle" style={{ fontFamily: "'Inter', sans-serif", fontSize: '1.2rem', color: '#ffffff', opacity: '0.95', fontWeight: '400', marginBottom: '0.4rem' }}>
+                Unlock your path to mastering organizational behavior and human dynamics
+              </p>
+              <h2 className="courses-highlights-title" style={{ fontFamily: "'Inter', sans-serif", fontWeight: '600', fontSize: '1.85rem', lineHeight: '1.2', textTransform: 'uppercase', color: '#ffffff', margin: '0.3rem 0 1.25rem' }}>
+                ORGANISATIONAL PSYCHOLOGY<br />
+                PROGRAMME
+              </h2>
+              <div className="courses-batch-boxes" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.35rem', marginBottom: '1.25rem' }}>
+                <div className="batch-box" style={{ background: 'rgba(90, 85, 106, 0.4)', borderRadius: '12px', padding: '1.5rem', position: 'relative' }}>
+                  <h3 style={{ fontSize: '1.2rem', fontWeight: '700', color: '#ffffff', margin: '0 0 0.75rem' }}>Foundation Track</h3>
+                  <ul className="batch-details" style={{ listStyle: 'none', padding: '0', margin: '0' }}>
+                    <li style={{ color: '#ffffff', fontSize: '1.05rem', lineHeight: '1.5', marginBottom: '0.4rem', paddingLeft: '1rem', position: 'relative' }}>
+                      <span style={{ position: 'absolute', left: '0' }}>•</span>20 Hours of Core Learning
+                    </li>
+                    <li style={{ color: '#ffffff', fontSize: '1.05rem', lineHeight: '1.5', marginBottom: '0.4rem', paddingLeft: '1rem', position: 'relative' }}>
+                      <span style={{ position: 'absolute', left: '0' }}>•</span>Applied Psychology Basics
+                    </li>
+                    <li style={{ color: '#ffffff', fontSize: '1.05rem', lineHeight: '1.5', marginBottom: '0.4rem', paddingLeft: '1rem', position: 'relative' }}>
+                      <span style={{ position: 'absolute', left: '0' }}>•</span>Monday - Thursday Options
+                    </li>
+                    <li style={{ color: '#ffffff', fontSize: '1.05rem', lineHeight: '1.5', marginBottom: '0.4rem', paddingLeft: '1rem', position: 'relative' }}>
+                      <span style={{ position: 'absolute', left: '0' }}>•</span>Classes start on August 10
+                    </li>
+                  </ul>
+                </div>
+                <div className="batch-box" style={{ background: 'rgba(90, 85, 106, 0.4)', borderRadius: '12px', padding: '1.5rem', position: 'relative' }}>
+                  <h3 style={{ fontSize: '1.2rem', fontWeight: '700', color: '#ffffff', margin: '0 0 0.75rem' }}>Specialised Tracks</h3>
+                  <ul className="batch-details" style={{ listStyle: 'none', padding: '0', margin: '0' }}>
+                    <li style={{ color: '#ffffff', fontSize: '1.05rem', lineHeight: '1.5', marginBottom: '0.4rem', paddingLeft: '1rem', position: 'relative' }}>
+                      <span style={{ position: 'absolute', left: '0' }}>•</span>10 Hours of Focus Areas
+                    </li>
+                    <li style={{ color: '#ffffff', fontSize: '1.05rem', lineHeight: '1.5', marginBottom: '0.4rem', paddingLeft: '1rem', position: 'relative' }}>
+                      <span style={{ position: 'absolute', left: '0' }}>•</span>Role-Specific Applied Tracks
+                    </li>
+                    <li style={{ color: '#ffffff', fontSize: '1.05rem', lineHeight: '1.5', marginBottom: '0.4rem', paddingLeft: '1rem', position: 'relative' }}>
+                      <span style={{ position: 'absolute', left: '0' }}>•</span>Flexible Self-Paced Learning
+                    </li>
+                    <li style={{ color: '#ffffff', fontSize: '1.05rem', lineHeight: '1.5', marginBottom: '0.4rem', paddingLeft: '1rem', position: 'relative' }}>
+                      <span style={{ position: 'absolute', left: '0' }}>•</span>Customized for Corporate Teams
+                    </li>
+                  </ul>
+                </div>
               </div>
-            </div>
-
-            {/* Column 3: Curriculums */}
-            <div className="detail-item" style={{ display: 'flex', flexDirection: 'column', padding: '1.25rem 1.75rem', borderRight: '3px solid #1A1260', background: '#f5f5f5', alignItems: 'flex-start', justifyContent: 'center', paddingLeft: '2.5rem' }}>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', justifyContent: 'center', height: '100%', textAlign: 'left' }}>
-                <span className="detail-value" style={{ fontFamily: "'Inter', sans-serif", fontSize: '1.25rem', color: '#1A1260', fontWeight: '800', lineHeight: '1.3', textTransform: 'none' }}>Applied Psychology Foundation</span>
-                <span className="detail-value" style={{ fontFamily: "'Inter', sans-serif", fontSize: '1.25rem', color: '#1A1260', fontWeight: '800', lineHeight: '1.3', textTransform: 'none' }}>Role Specific Applied Tracks</span>
-              </div>
-            </div>
-
-            {/* Column 4: Online + Offline */}
-            <div className="detail-item" style={{ display: 'flex', flexDirection: 'column', padding: '1.25rem 1.75rem', borderRight: 'none', background: '#f5f5f5', alignItems: 'center', justifyContent: 'center' }}>
-              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%', gap: '0.2rem' }}>
-                <span className="detail-value" style={{ fontFamily: "'Inter', sans-serif", fontSize: '1.4rem', color: '#1A1260', fontWeight: '900', textTransform: 'uppercase', lineHeight: '1.1' }}>Online</span>
-                <span style={{ fontFamily: "'Inter', sans-serif", fontSize: '1.3rem', color: '#1A1260', fontWeight: '900' }}>+</span>
-                <span className="detail-value" style={{ fontFamily: "'Inter', sans-serif", fontSize: '1.4rem', color: '#1A1260', fontWeight: '900', textTransform: 'uppercase', lineHeight: '1.1' }}>Offline</span>
+              <div className="button-text-container" style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', marginTop: '1rem', flexWrap: 'wrap' }}>
+                <a
+                  className="download-brochure-btn"
+                  href={brochurePdf}
+                  download="Blue_White_Corporate_Bifold_Brochure.pdf"
+                  style={{ textDecoration: 'none', background: 'white', color: '#333', padding: '0.8rem 1.75rem', borderRadius: '50px', fontWeight: '700', fontSize: '0.85rem', cursor: 'pointer', textAlign: 'center', display: 'inline-block' }}
+                >
+                  Download Brochure
+                </a>
+                <p className="bridge-program-note" style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '0.9rem', margin: '0', flex: '1', minWidth: '250px', lineHeight: '1.4' }}>
+                  Note: A FREE Psychology Bridge Program will be conducted for students from non-psychology background to ensure strong foundational readiness.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Program Details Bar */}
+      <section className="program-details-bar scroll-from-center" style={{ margin: '2rem 0 4rem' }}>
+        <div className="container">
+          <div className="details-grid" style={{ gridTemplateColumns: '1.2fr 1.2fr 2.5fr 1.4fr' }}>
+            {/* Column 1: 30 Hours */}
+            <div className="detail-item">
+              <span className="detail-label">Duration</span>
+              <span className="detail-value">30 Hours</span>
+            </div>
+            
+            {/* Column 2: Tracks */}
+            <div className="detail-item">
+              <span className="detail-label">Tracks</span>
+              <span className="detail-value" style={{ textTransform: 'none' }}>Track 1 & 2</span>
+            </div>
+
+            {/* Column 3: Curriculum */}
+            <div className="detail-item">
+              <span className="detail-label">Curriculum</span>
+              <span className="detail-value" style={{ textTransform: 'none', fontSize: '1.1rem', lineHeight: '1.4', fontWeight: '700' }}>
+                • Applied Psychology Foundation<br />
+                • Role Specific Applied Tracks
+              </span>
+            </div>
+
+            {/* Column 4: Delivery */}
+            <div className="detail-item" style={{ borderRight: 'none' }}>
+              <span className="detail-label">Delivery</span>
+              <span className="detail-value" style={{ textTransform: 'none' }}>Online + Offline</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Programme Structure Section */}
-      <section className="course-syllabus program-structure-section scroll-from-center" style={{ background: '#0E0529', padding: '5rem 0 6rem' }}>
+      <section className="course-syllabus program-structure-section scroll-from-center">
         <div className="container">
           <div className="syllabus-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2.5rem', flexWrap: 'wrap', gap: '1.5rem' }}>
             <div className="structure-title-area">
-              <h2 className="section-title" style={{ color: '#ffffff', fontSize: '2.5rem', fontWeight: '700', textTransform: 'uppercase', margin: '0' }}>
+              <h2 className="section-title">
                 PROGRAMME STRUCTURE
               </h2>
               <p style={{ color: '#E8E4F4', fontSize: '1.15rem', fontWeight: '700', textTransform: 'uppercase', margin: '0.6rem 0 0', letterSpacing: '1px' }}>
@@ -218,7 +283,7 @@ const Courses = () => {
           </div>
 
           {/* Intro highlight box */}
-          <div className="structure-intro-box" style={{ background: '#E8E4F4', borderRadius: '12px', padding: '2rem', marginBottom: '3rem', color: '#0E0529', fontWeight: '500', fontSize: '1.15rem', lineHeight: '1.6', textShadow: 'none' }}>
+          <div className="structure-intro-box" style={{ background: '#E8E4F4', borderRadius: '12px', padding: '1.25rem 2rem', marginBottom: '1.5rem', color: '#0E0529', fontWeight: '500', fontSize: '1.15rem', lineHeight: '1.6', textShadow: 'none' }}>
             The programme follows a two-track learning model. Participants begin with a 20-hour Applied Psychology Foundation (Track 1) and then move into a role-specific Track 2 pathway. The programme is delivered in a hybrid format through live online and in-person sessions over 45–60 days.
           </div>
 
@@ -227,48 +292,48 @@ const Courses = () => {
             <table className="structure-table" style={{ width: '100%', borderCollapse: 'collapse', border: '2px solid #ffffff', color: '#ffffff', textAlign: 'center' }}>
               <thead>
                 <tr style={{ borderBottom: '2px solid #ffffff' }}>
-                  <th style={{ padding: '1.5rem', borderRight: '2px solid #ffffff', color: '#E8E4F4', fontSize: '1.25rem', fontWeight: '700', textTransform: 'uppercase' }}>Track</th>
-                  <th style={{ padding: '1.5rem', borderRight: '2px solid #ffffff', color: '#E8E4F4', fontSize: '1.25rem', fontWeight: '700', textTransform: 'uppercase' }}>Sessions</th>
-                  <th style={{ padding: '1.5rem', borderRight: '2px solid #ffffff', color: '#E8E4F4', fontSize: '1.25rem', fontWeight: '700', textTransform: 'uppercase' }}>Hours</th>
-                  <th style={{ padding: '1.5rem', color: '#E8E4F4', fontSize: '1.25rem', fontWeight: '700', textTransform: 'uppercase' }}>Mode</th>
+                  <th style={{ padding: '1rem', borderRight: '2px solid #ffffff', color: '#E8E4F4', fontSize: '1.25rem', fontWeight: '700', textTransform: 'uppercase' }}>Track</th>
+                  <th style={{ padding: '1rem', borderRight: '2px solid #ffffff', color: '#E8E4F4', fontSize: '1.25rem', fontWeight: '700', textTransform: 'uppercase' }}>Sessions</th>
+                  <th style={{ padding: '1rem', borderRight: '2px solid #ffffff', color: '#E8E4F4', fontSize: '1.25rem', fontWeight: '700', textTransform: 'uppercase' }}>Hours</th>
+                  <th style={{ padding: '1rem', color: '#E8E4F4', fontSize: '1.25rem', fontWeight: '700', textTransform: 'uppercase' }}>Mode</th>
                 </tr>
               </thead>
               <tbody>
                 <tr style={{ borderBottom: '2px solid #ffffff' }}>
-                  <td style={{ padding: '1.8rem 1.5rem', borderRight: '2px solid #ffffff', fontWeight: '700' }}>
+                  <td style={{ padding: '1.1rem 1.5rem', borderRight: '2px solid #ffffff', fontWeight: '700' }}>
                     <div style={{ color: '#ffffff', fontSize: '1.25rem' }}>Track 1</div>
                     <div style={{ fontSize: '1rem', fontWeight: '400', marginTop: '0.4rem', color: 'rgba(255,255,255,0.8)' }}>Applied Psychology Foundation</div>
                   </td>
-                  <td style={{ padding: '1.8rem 1.5rem', borderRight: '2px solid #ffffff', fontWeight: '600', fontSize: '1.1rem' }}>20 * 1 Hour</td>
-                  <td style={{ padding: '1.8rem 1.5rem', borderRight: '2px solid #ffffff', fontWeight: '600', fontSize: '1.1rem' }}>20 Hours</td>
-                  <td style={{ padding: '1.8rem 1.5rem', fontWeight: '600', fontSize: '1.1rem' }}>Online + Live</td>
+                  <td style={{ padding: '1.1rem 1.5rem', borderRight: '2px solid #ffffff', fontWeight: '600', fontSize: '1.1rem' }}>20 * 1 Hour</td>
+                  <td style={{ padding: '1.1rem 1.5rem', borderRight: '2px solid #ffffff', fontWeight: '600', fontSize: '1.1rem' }}>20 Hours</td>
+                  <td style={{ padding: '1.1rem 1.5rem', fontWeight: '600', fontSize: '1.1rem' }}>Online + Live</td>
                 </tr>
                 <tr style={{ borderBottom: '2px solid #ffffff' }}>
-                  <td style={{ padding: '1.8rem 1.5rem', borderRight: '2px solid #ffffff', fontWeight: '700' }}>
+                  <td style={{ padding: '1.1rem 1.5rem', borderRight: '2px solid #ffffff', fontWeight: '700' }}>
                     <div style={{ color: '#ffffff', fontSize: '1.25rem' }}>Track 2A</div>
                     <div style={{ fontSize: '1rem', fontWeight: '400', marginTop: '0.4rem', color: 'rgba(255,255,255,0.8)' }}>HR Leadership</div>
                   </td>
-                  <td style={{ padding: '1.8rem 1.5rem', borderRight: '2px solid #ffffff', fontWeight: '600', fontSize: '1.1rem' }}>10 * 1 Hour</td>
-                  <td style={{ padding: '1.8rem 1.5rem', borderRight: '2px solid #ffffff', fontWeight: '600', fontSize: '1.1rem' }}>10 Hours</td>
-                  <td style={{ padding: '1.8rem 1.5rem', fontWeight: '600', fontSize: '1.1rem' }}>In Person - On Location</td>
+                  <td style={{ padding: '1.1rem 1.5rem', borderRight: '2px solid #ffffff', fontWeight: '600', fontSize: '1.1rem' }}>10 * 1 Hour</td>
+                  <td style={{ padding: '1.1rem 1.5rem', borderRight: '2px solid #ffffff', fontWeight: '600', fontSize: '1.1rem' }}>10 Hours</td>
+                  <td style={{ padding: '1.1rem 1.5rem', fontWeight: '600', fontSize: '1.1rem' }}>In Person - On Location</td>
                 </tr>
                 <tr style={{ borderBottom: '2px solid #ffffff' }}>
-                  <td style={{ padding: '1.8rem 1.5rem', borderRight: '2px solid #ffffff', fontWeight: '700' }}>
+                  <td style={{ padding: '1.1rem 1.5rem', borderRight: '2px solid #ffffff', fontWeight: '700' }}>
                     <div style={{ color: '#ffffff', fontSize: '1.25rem' }}>Track 2B</div>
                     <div style={{ fontSize: '1rem', fontWeight: '400', marginTop: '0.4rem', color: 'rgba(255,255,255,0.8)' }}>Managers</div>
                   </td>
-                  <td style={{ padding: '1.8rem 1.5rem', borderRight: '2px solid #ffffff', fontWeight: '600', fontSize: '1.1rem' }}>10 * 1 Hour</td>
-                  <td style={{ padding: '1.8rem 1.5rem', borderRight: '2px solid #ffffff', fontWeight: '600', fontSize: '1.1rem' }}>10 Hours</td>
-                  <td style={{ padding: '1.8rem 1.5rem', fontWeight: '600', fontSize: '1.1rem' }}>In Person - On Location</td>
+                  <td style={{ padding: '1.1rem 1.5rem', borderRight: '2px solid #ffffff', fontWeight: '600', fontSize: '1.1rem' }}>10 * 1 Hour</td>
+                  <td style={{ padding: '1.1rem 1.5rem', borderRight: '2px solid #ffffff', fontWeight: '600', fontSize: '1.1rem' }}>10 Hours</td>
+                  <td style={{ padding: '1.1rem 1.5rem', fontWeight: '600', fontSize: '1.1rem' }}>In Person - On Location</td>
                 </tr>
                 <tr>
-                  <td style={{ padding: '1.8rem 1.5rem', borderRight: '2px solid #ffffff', fontWeight: '700' }}>
+                  <td style={{ padding: '1.1rem 1.5rem', borderRight: '2px solid #ffffff', fontWeight: '700' }}>
                     <div style={{ color: '#ffffff', fontSize: '1.25rem' }}>Track 2C</div>
                     <div style={{ fontSize: '1rem', fontWeight: '400', marginTop: '0.4rem', color: 'rgba(255,255,255,0.8)' }}>Individual Contributors</div>
                   </td>
-                  <td style={{ padding: '1.8rem 1.5rem', borderRight: '2px solid #ffffff', fontWeight: '600', fontSize: '1.1rem' }}>10 * 1 Hour</td>
-                  <td style={{ padding: '1.8rem 1.5rem', borderRight: '2px solid #ffffff', fontWeight: '600', fontSize: '1.1rem' }}>10 Hours</td>
-                  <td style={{ padding: '1.8rem 1.5rem', fontWeight: '600', fontSize: '1.1rem' }}>In Person - On Location</td>
+                  <td style={{ padding: '1.1rem 1.5rem', borderRight: '2px solid #ffffff', fontWeight: '600', fontSize: '1.1rem' }}>10 * 1 Hour</td>
+                  <td style={{ padding: '1.1rem 1.5rem', borderRight: '2px solid #ffffff', fontWeight: '600', fontSize: '1.1rem' }}>10 Hours</td>
+                  <td style={{ padding: '1.1rem 1.5rem', fontWeight: '600', fontSize: '1.1rem' }}>In Person - On Location</td>
                 </tr>
               </tbody>
             </table>
@@ -277,11 +342,11 @@ const Courses = () => {
       </section>
 
       {/* Programme Outcomes Section */}
-      <section className="learning-outcomes scroll-from-center">
+      <section className="programme-outcomes scroll-from-center">
         <div className="container">
           <h2 className="section-title">PROGRAMME OUTCOMES</h2>
-          <div className="outcomes-box">
-            <ul className="outcomes-list">
+          <div className="programme-outcomes-box">
+            <ul className="programme-outcomes-list">
               <li>Understand Human Behaviour & Applied Psychology</li>
               <li>Improve Leadership & Managerial Effectiveness</li>
               <li>Build High-Performance Teams</li>
