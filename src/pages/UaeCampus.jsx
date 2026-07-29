@@ -432,7 +432,7 @@ const UaeCampus = () => {
                     </li>
                     <li>
                       <strong>Student Intake:</strong>
-                      <span>20–70 Students / Batch</span>
+                      <span>Limited Seats Only</span>
                     </li>
                     <li>
                       <strong>Batches Available:</strong>
@@ -454,7 +454,7 @@ const UaeCampus = () => {
                     </li>
                     <li>
                       <strong>Student Intake:</strong>
-                      <span>20–70 Students / Batch</span>
+                      <span>Limited Seats Only</span>
                     </li>
                     <li>
                       <strong>Batches Available:</strong>

@@ -19,15 +19,19 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection, onOpenA
       title: 'Jeppiaar Academy of Psychology & Research'
     },
     {
+      image: hero5Image,
+      title: 'Jeppiaar Academy of Psychology & Research'
+    },
+    {
+      image: hero8Image,
+      title: 'Jeppiaar Academy of Psychology & Research'
+    },
+    {
       image: hero6Image,
       title: 'Jeppiaar Academy of Psychology & Research'
     },
     {
       image: hero7Image,
-      title: 'Jeppiaar Academy of Psychology & Research'
-    },
-    {
-      image: hero8Image,
       title: 'Jeppiaar Academy of Psychology & Research'
     },
     {
@@ -37,16 +41,12 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection, onOpenA
     {
       image: hero3Image,
       title: 'Jeppiaar Academy of Psychology & Research'
-    },
-    {
-      image: hero5Image,
-      title: 'Jeppiaar Academy of Psychology & Research'
     }
   ];
 
   // Preload all hero images
   useEffect(() => {
-    const imageUrls = [heroImage, hero6Image, hero7Image, hero8Image, hero3Image, hero4Image, hero5Image];
+    const imageUrls = [heroImage, hero5Image, hero8Image, hero6Image, hero7Image, hero4Image, hero3Image];
     const imagePromises = imageUrls.map((imageUrl) => {
       return new Promise((resolve, reject) => {
         const img = new Image();
@@ -101,14 +101,14 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection, onOpenA
         ))}
       </div>
       <div
-        className={`hero-slide ${currentSlide === 0 ? 'hero-slide-first' : ''} ${(currentSlide === 1 || currentSlide === 2 || currentSlide === 3) ? 'hero-slide-second' : ''} ${currentSlide === 5 ? 'hero-slide-fourth' : ''} ${currentSlide === 6 ? 'hero-slide-fifth' : ''} ${imagesLoaded ? 'images-loaded' : ''}`}
+        className={`hero-slide ${currentSlide === 0 ? 'hero-slide-first' : ''} ${(currentSlide === 3 || currentSlide === 4) ? 'hero-slide-second' : ''} ${currentSlide === 2 ? 'hero-slide-three' : ''} ${currentSlide === 6 ? 'hero-slide-fourth' : ''} ${currentSlide === 1 ? 'hero-slide-fifth' : ''} ${imagesLoaded ? 'images-loaded' : ''}`}
         style={{
           backgroundImage: `url(${slides[currentSlide].image})`,
           backgroundPosition:
-            currentSlide === 2 ? 'center -160px' :
-              currentSlide === 3 ? 'center 100px' :
-                (currentSlide === 5 ? 'top center' :
-                  (currentSlide === 6 ? 'top center' : undefined))
+            currentSlide === 4 ? 'center -160px' :
+              currentSlide === 2 ? 'center 100px' :
+                (currentSlide === 6 ? 'top center' :
+                  (currentSlide === 1 ? 'top center' : undefined))
         }}
       >
         <div className="hero-gradient-overlay-bottom"></div>
@@ -191,15 +191,16 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection, onOpenA
           </>
         )}
 
-        {(currentSlide === 3) && (
+        {(currentSlide === 2) && (
           <>
-            <div className="hero-rated-badge hero-rated-badge-bottom">
-              <div className="rated-text">In Association with AURA Academy</div>
+            <div className="hero-feature-badge hero-feature-badge-fourth hero-feature-badge-bottom">
+              <div className="feature-text feature-text-fourth">IN ASSOCIATION WITH</div>
+              <div className="feature-text feature-text-fourth">AURA ACADEMIA - UAE</div>
             </div>
           </>
         )}
 
-        {currentSlide === 4 && (
+        {currentSlide === 5 && (
           <>
             <div className="hero-feature-badge hero-feature-badge-bottom">
               <div className="feature-text">AC CLASSROOMS</div>
@@ -208,7 +209,7 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection, onOpenA
           </>
         )}
 
-        {currentSlide === 5 && (
+        {currentSlide === 6 && (
           <>
             <div className="hero-feature-badge hero-feature-badge-fourth hero-feature-badge-bottom">
               <div className="feature-text feature-text-fourth">LEARN FROM</div>
@@ -217,7 +218,7 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection, onOpenA
           </>
         )}
 
-        {currentSlide === 6 && (
+        {currentSlide === 1 && (
           <>
             <div className="hero-slide-br-icon-container">
               <img src={brIcon} alt="University Logo" className="hero-slide-br-icon" />
