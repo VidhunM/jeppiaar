@@ -33,19 +33,19 @@ const UaeCampus = () => {
       <section className="admission-procedure-hero uae-campus-hero">
         <div className="container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <span className="uae-hero-subtitle">International Collaboration</span>
-          
+
           <div className="collaboration-container">
             <div className="collab-card jeppiaar-card">
               <h3>JEPPIAAR ACADEMY OF PSYCHOLOGY AND RESEARCH</h3>
               <span className="location-tag">Tamil Nadu, India</span>
             </div>
-            
+
             <div className="collab-connector">
               <div className="connector-line"></div>
               <span className="collab-text">in collaboration with</span>
               <div className="connector-line"></div>
             </div>
-            
+
             <div className="collab-card aura-card">
               <h3>AURA ACADEMIA</h3>
               <span className="location-tag">Sharjah, UAE</span>
@@ -60,13 +60,7 @@ const UaeCampus = () => {
             <Link className="admission-apply-btn" to="/apply-online-uae">
               Apply Now (Online)
             </Link>
-            <button
-              type="button"
-              className="admission-apply-btn secondary"
-              onClick={handleDownloadFormPdf}
-            >
-              Download Form (PDF)
-            </button>
+
           </div>
         </div>
       </section>
@@ -77,7 +71,7 @@ const UaeCampus = () => {
             <div className="uae-who-we-are-text-col">
               <h2 className="uae-who-we-are-title">WHO WE ARE</h2>
               <div className="uae-who-we-are-separator"></div>
-              
+
               <p className="uae-who-we-are-text highlight-text">
                 The Jeppiaar Group of Institutions is a well-established educational group with over three decades of excellence in higher education, consistently providing quality, value-based, and future-oriented education.
               </p>
@@ -88,7 +82,7 @@ const UaeCampus = () => {
                 Within this progressive educational ecosystem, the Jeppiaar Academy of Psychology and Research was established to bridge the gap between academic learning in psychology and real-world application. Guided by a vision to nurture ethical, skilled, and research-oriented mental health professionals, the Academy offers advanced, practice-focused programmes aligned with global mental health standards. The Academy follows a strong practice-oriented approach, integrating applied learning, professional supervision, ethical practice, and research exposure, thereby preparing learners for impactful and responsible careers in the field of psychology.
               </p>
             </div>
-            
+
             <div className="uae-who-we-are-image-col">
               <div className="uae-vertical-image-wrapper">
                 <img src={uaeImage} alt="UAE Campus Collaboration" />
@@ -105,9 +99,9 @@ const UaeCampus = () => {
             <h2 className="uae-section-title">COURSE OFFERED IN COLLABORATION WITH AURA ACADEMIA - UAE</h2>
             <div className="uae-section-separator"></div>
             <div style={{ marginBottom: '2.5rem', textAlign: 'center' }}>
-              <button 
-                type="button" 
-                className="admission-apply-btn" 
+              <button
+                type="button"
+                className="admission-apply-btn"
                 onClick={handleDownloadBrochure}
                 style={{ background: '#1A1260', color: '#ffffff', display: 'inline-flex', alignItems: 'center', gap: '0.5rem', border: 'none', cursor: 'pointer' }}
               >
@@ -120,11 +114,11 @@ const UaeCampus = () => {
               </button>
             </div>
           </div>
-          
+
           <div className="uae-course-grid">
             <div className="uae-course-info-col">
               <h2 className="uae-course-title">Diploma in Counselling and Child Psychology</h2>
-              
+
               <div className="uae-location-info">
                 <span className="location-icon">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -242,7 +236,7 @@ const UaeCampus = () => {
             <div className="uae-programme-content-col">
               <span className="uae-section-subtitle">ABOUT PROGRAMME</span>
               <h2 className="uae-programme-title">Diploma in Counselling and Child Psychology</h2>
-              
+
               <div className="uae-programme-description">
                 <p>
                   The Advanced Diploma in Counselling and Child Psychology offers strong theoretical and practical training to support the emotional and developmental needs of children and adolescents. The programme covers counselling psychology, child development, assessment methods, and ethical practice, preparing learners for roles in educational, clinical, and community settings.
@@ -259,9 +253,9 @@ const UaeCampus = () => {
                   <h4>Entry Requirements</h4>
                   <p>Bachelor Degree in any discipline</p>
                 </div>
-                
+
                 <div className="details-card-divider"></div>
-                
+
                 <div className="details-card-section">
                   <h4>Duration</h4>
                   <p className="duration-highlight">6 Months <span>(150 Hours)</span></p>
@@ -297,7 +291,7 @@ const UaeCampus = () => {
           <div className="uae-skills-careers-grid">
             <div className="uae-skills-col">
               <span className="uae-section-subtitle">SKILL-BASED TRAINING INCLUDES</span>
-              
+
               <ul className="uae-skills-list">
                 <li>
                   <span className="skill-check-icon">
@@ -381,7 +375,7 @@ const UaeCampus = () => {
         <div className="container">
           <span className="uae-section-subtitle">PROGRAMME STRUCTURE</span>
           <h2 className="uae-structure-title">Diploma in Counselling and Child Psychology</h2>
-          
+
           <div className="uae-structure-grid">
             <div className="structure-card">
               <div className="structure-card-icon">
@@ -424,7 +418,7 @@ const UaeCampus = () => {
 
           <div className="uae-intakes-container">
             <h3 className="intakes-section-title">Proposed Student Intake</h3>
-            
+
             <div className="intakes-grid">
               <div className="intake-card">
                 <div className="intake-header">
