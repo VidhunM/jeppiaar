@@ -191,7 +191,7 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection, onOpenA
           </>
         )}
 
-        {(currentSlide === 1 || currentSlide === 2 || currentSlide === 3) && (
+        {(currentSlide === 3) && (
           <>
             <div className="hero-rated-badge hero-rated-badge-bottom">
               <div className="rated-text">In Association with AURA Academy</div>
