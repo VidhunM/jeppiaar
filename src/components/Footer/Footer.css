@@ -723,3 +723,71 @@
   }
 }
 
+/* Horizontal Footer Maps Row */
+.footer-maps-row {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2.5rem 0;
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.footer-maps-title {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  margin: 0 0 1.5rem 0;
+}
+
+.footer-maps-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.footer-map-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.footer-map-col h5 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.footer-map-wrapper {
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 21 / 9;
+  width: 100%;
+}
+
+.footer-map-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .footer-maps-row {
+    padding: 1.5rem 0;
+    margin-top: 1.5rem;
+  }
+  
+  .footer-maps-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .footer-map-wrapper {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+

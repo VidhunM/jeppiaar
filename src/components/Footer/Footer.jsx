@@ -132,7 +132,16 @@ const Footer = () => {
                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" />
                   </svg>
                 </span>
-                <p>First floor, EJR Enclave, 1/40H, Mount Poonamallee Rd, Ramapuram, Viralur, Parangi Malai, Chennai, St.Thomas Mount, Tamil Nadu 600016</p>
+                <p><strong>India Campus:</strong> First floor, EJR Enclave, 1/40H, Mount Poonamallee Rd, Ramapuram, Viralur, Parangi Malai, Chennai, St.Thomas Mount, Tamil Nadu 600016</p>
+              </div>
+
+              <div className="contact-item" style={{ marginTop: '0.75rem' }}>
+                <span className="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" />
+                  </svg>
+                </span>
+                <p><strong>UAE Campus:</strong> Office No. 803, Tower - 8, Floor A, Al Rayyan Complex, (Lulu Hypermarket Same Building), Al Nahda Sharjah, UAE</p>
               </div>
 
               <div className="contact-item">
@@ -153,17 +162,42 @@ const Footer = () => {
                 <a href="tel:+919381811111">+91 80987-87575/ +91 93818-11111</a>
               </div>
             </div>
-            <div className="footer-map">
-              <iframe
-                src="https://maps.google.com/maps?q=13.007243,80.201819&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                width="100%"
-                height="100%"
-                style={{ border: 0, borderRadius: '8px', aspectRatio: '1 / 1' }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Location Map"
-              ></iframe>
+          </div>
+        </div>
+
+        <div className="footer-maps-row">
+          <h4 className="footer-maps-title">Our Campus Locations</h4>
+          <div className="footer-maps-grid">
+            <div className="footer-map-col">
+              <h5>India Campus</h5>
+              <div className="footer-map-wrapper">
+                <iframe
+                  src="https://maps.google.com/maps?q=13.007243,80.201819&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="India Location Map"
+                ></iframe>
+              </div>
+            </div>
+
+            <div className="footer-map-col">
+              <h5>UAE Campus</h5>
+              <div className="footer-map-wrapper">
+                <iframe
+                  src="https://maps.google.com/maps?q=Al%20Rayyan%20Complex,%20Al%20Nahda,%20Sharjah,%20UAE&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="UAE Location Map"
+                ></iframe>
+              </div>
             </div>
           </div>
         </div>

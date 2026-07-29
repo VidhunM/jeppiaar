@@ -14,6 +14,7 @@ import AdmissionProcedure from './pages/AdmissionProcedure';
 import UaeCampus from './pages/UaeCampus';
 import ProspectDownload from './pages/ProspectDownload';
 import ApplyOnline from './pages/ApplyOnline';
+import ApplyOnlineUae from './pages/ApplyOnlineUae';
 import Walkin from './pages/Walkin';
 import CounsellingChildPsychology from './pages/CounsellingChildPsychology';
 import CounsellingOrganizationalPsychology from './pages/CounsellingOrganizationalPsychology';
@@ -66,6 +67,7 @@ function AppLayout() {
           <Route path="/admission-procedure" element={<AdmissionProcedure />} />
           <Route path="/uae-campus" element={<UaeCampus />} />
           <Route path="/apply-online" element={<ApplyOnline />} />
+          <Route path="/apply-online-uae" element={<ApplyOnlineUae />} />
           <Route path="/walkin" element={<Walkin />} />
           <Route path="/admission-form-download" element={<ProspectDownload />} />
           {/* Backward compatible route */}
