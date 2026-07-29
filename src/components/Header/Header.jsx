@@ -12,9 +12,12 @@ const Header = () => {
   const [isDropdownClicked, setIsDropdownClicked] = useState(false);
   const [isCoursesDropdownOpen, setIsCoursesDropdownOpen] = useState(false);
   const [isCoursesDropdownClicked, setIsCoursesDropdownClicked] = useState(false);
+  const [isCampusDropdownOpen, setIsCampusDropdownOpen] = useState(false);
+  const [isCampusDropdownClicked, setIsCampusDropdownClicked] = useState(false);
   const [hoverDisabled, setHoverDisabled] = useState(false);
   const dropdownStateRef = useRef(false);
   const coursesDropdownStateRef = useRef(false);
+  const campusDropdownStateRef = useRef(false);
   const [showApplyModal, setShowApplyModal] = useState(false);
   const [applyForm, setApplyForm] = useState({
     name: '',
@@ -70,12 +73,18 @@ const Header = () => {
   }, [isCoursesDropdownOpen]);
 
   useEffect(() => {
+    campusDropdownStateRef.current = isCampusDropdownOpen;
+  }, [isCampusDropdownOpen]);
+
+  useEffect(() => {
     const handleClickOutside = (event) => {
       // Check if click is inside the diploma dropdown specifically
       const diplomaMenu = document.getElementById('diploma-dropdown');
       const diplomaToggle = document.querySelector('[aria-controls="diploma-dropdown"]');
       const coursesMenu = document.getElementById('courses-dropdown');
       const coursesToggle = document.querySelector('[aria-controls="courses-dropdown"]');
+      const campusMenu = document.getElementById('campus-dropdown');
+      const campusToggle = document.querySelector('[aria-controls="campus-dropdown"]');
       const clickedElement = event.target;
       
       // Check if click is inside the dropdown menu or its toggle button
@@ -90,6 +99,12 @@ const Header = () => {
         (coursesToggle && coursesToggle.contains(clickedElement)) ||
         clickedElement.closest('#courses-dropdown') ||
         clickedElement.closest('[aria-controls="courses-dropdown"]');
+
+      const clickedInsideCampus = 
+        (campusMenu && campusMenu.contains(clickedElement)) ||
+        (campusToggle && campusToggle.contains(clickedElement)) ||
+        clickedElement.closest('#campus-dropdown') ||
+        clickedElement.closest('[aria-controls="campus-dropdown"]');
       
       // Don't close if clicking inside the diploma dropdown area
       if (isDropdownOpen && !clickedInsideDiploma) {
@@ -105,9 +120,16 @@ const Header = () => {
         setHoverDisabled(false);
         coursesDropdownStateRef.current = false;
       }
+
+      if (isCampusDropdownOpen && !clickedInsideCampus) {
+        setIsCampusDropdownOpen(false);
+        setIsCampusDropdownClicked(false);
+        setHoverDisabled(false);
+        campusDropdownStateRef.current = false;
+      }
     };
 
-    if (isDropdownOpen || isCoursesDropdownOpen) {
+    if (isDropdownOpen || isCoursesDropdownOpen || isCampusDropdownOpen) {
       // Use click event with a small delay to let click handlers complete first
       const timeoutId = setTimeout(() => {
         document.addEventListener('click', handleClickOutside);
@@ -120,7 +142,7 @@ const Header = () => {
         document.removeEventListener('touchstart', handleClickOutside);
       };
     }
-  }, [isDropdownOpen, isCoursesDropdownOpen]);
+  }, [isDropdownOpen, isCoursesDropdownOpen, isCampusDropdownOpen]);
 
   const handleNavClick = (e, path) => {
     if (isHomePage && (path === '/research' || path === '/contact')) {
@@ -406,7 +428,94 @@ const Header = () => {
                 </div>
               )}
             </div>
-            <Link to="/admission-procedure" onClick={() => setIsMobileMenuOpen(false)}>Admission</Link>
+            <div 
+              className="nav-dropdown"
+              onMouseEnter={(e) => {
+                if (window.innerWidth > 768 && !hoverDisabled) {
+                  setIsCampusDropdownOpen(true);
+                  campusDropdownStateRef.current = true;
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (window.innerWidth > 768 && !isCampusDropdownClicked) {
+                  setIsCampusDropdownOpen(false);
+                  campusDropdownStateRef.current = false;
+                }
+              }}
+            >
+              <div
+                className="dropdown-toggle"
+                role="button"
+                aria-expanded={isCampusDropdownOpen}
+                aria-controls="campus-dropdown"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  setIsCampusDropdownOpen(prevState => {
+                    const willBeOpen = !prevState;
+                    if (willBeOpen) {
+                      setIsCampusDropdownClicked(true);
+                      setHoverDisabled(true);
+                      setTimeout(() => setHoverDisabled(false), 300);
+                    } else {
+                      setIsCampusDropdownClicked(false);
+                      setHoverDisabled(false);
+                    }
+                    return willBeOpen;
+                  });
+                }}
+              >
+                <span className="dropdown-label">Our Campus</span>
+                <span className={`dropdown-icon ${isCampusDropdownOpen ? 'open' : ''}`} aria-hidden="true">
+                  <svg viewBox="0 0 24 24" focusable="false">
+                    <path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
+              </div>
+              {isCampusDropdownOpen && (
+                <div 
+                  id="campus-dropdown" 
+                  className="dropdown-menu"
+                  onMouseEnter={() => {
+                    if (window.innerWidth > 768) {
+                      setIsCampusDropdownOpen(true);
+                      campusDropdownStateRef.current = true;
+                    }
+                  }}
+                  onMouseLeave={() => {
+                    if (window.innerWidth > 768 && !isCampusDropdownClicked) {
+                      setIsCampusDropdownOpen(false);
+                      campusDropdownStateRef.current = false;
+                    }
+                  }}
+                >
+                  <Link 
+                    to="/admission-procedure" 
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      setIsCampusDropdownOpen(false);
+                      setIsCampusDropdownClicked(false);
+                      campusDropdownStateRef.current = false;
+                    }}
+                  >
+                    Admission
+                  </Link>
+                  <Link 
+                    to="#" 
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setShowUnderConstruction(true);
+                      setIsMobileMenuOpen(false);
+                      setIsCampusDropdownOpen(false);
+                      setIsCampusDropdownClicked(false);
+                      campusDropdownStateRef.current = false;
+                    }}
+                  >
+                    UAE Campus
+                  </Link>
+                </div>
+              )}
+            </div>
             <Link 
               to="/research" 
               onClick={() => setIsMobileMenuOpen(false)}
