@@ -2,12 +2,24 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './UaeCampus.css';
 import admissionFormPdfUrl from '../assets/images/Student_Admission_Form_2026.pdf';
+import uaeBrochurePdf from '../assets/images/AURA ACADEMIA - UAE Broucher.pdf';
 
 const UaeCampus = () => {
   const handleDownloadFormPdf = () => {
     const a = document.createElement('a');
     a.href = admissionFormPdfUrl;
     a.download = 'Student_Admission_Form_2026.pdf';
+    a.target = '_blank';
+    a.rel = 'noopener';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+  };
+
+  const handleDownloadBrochure = () => {
+    const a = document.createElement('a');
+    a.href = uaeBrochurePdf;
+    a.download = 'AURA ACADEMIA - UAE Broucher.pdf';
     a.target = '_blank';
     a.rel = 'noopener';
     document.body.appendChild(a);
@@ -83,6 +95,21 @@ const UaeCampus = () => {
             <span className="uae-section-subtitle">Collaborative Offering</span>
             <h2 className="uae-section-title">COURSE OFFERED IN COLLABORATION WITH AURA ACADEMIA - UAE</h2>
             <div className="uae-section-separator"></div>
+            <div style={{ marginBottom: '2.5rem', textAlign: 'center' }}>
+              <button 
+                type="button" 
+                className="admission-apply-btn" 
+                onClick={handleDownloadBrochure}
+                style={{ background: '#1A1260', color: '#ffffff', display: 'inline-flex', alignItems: 'center', gap: '0.5rem', border: 'none', cursor: 'pointer' }}
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                Download UAE Brochure
+              </button>
+            </div>
           </div>
           
           <div className="uae-course-grid">
