@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './UaeCampus.css';
 import admissionFormPdfUrl from '../assets/images/Student_Admission_Form_2026.pdf';
 import uaeBrochurePdf from '../assets/images/AURA ACADEMIA - UAE Broucher.pdf';
+import uaeImage from '../assets/images/uae.jpeg';
 
 const UaeCampus = () => {
   const handleDownloadFormPdf = () => {
@@ -72,19 +73,27 @@ const UaeCampus = () => {
 
       <section className="uae-who-we-are-section">
         <div className="container">
-          <div className="uae-who-we-are-content">
-            <h2 className="uae-who-we-are-title">WHO WE ARE</h2>
-            <div className="uae-who-we-are-separator"></div>
+          <div className="uae-who-we-are-grid">
+            <div className="uae-who-we-are-text-col">
+              <h2 className="uae-who-we-are-title">WHO WE ARE</h2>
+              <div className="uae-who-we-are-separator"></div>
+              
+              <p className="uae-who-we-are-text highlight-text">
+                The Jeppiaar Group of Institutions is a well-established educational group with over three decades of excellence in higher education, consistently providing quality, value-based, and future-oriented education.
+              </p>
+              <p className="uae-who-we-are-text">
+                Founded with a vision to make education accessible and meaningful, the group has grown into a trusted name across Tamil Nadu. Rooted in academic rigor and strong ethical values, the Jeppiaar Group emphasizes innovation, industry relevance, experiential learning, and holistic student development.
+              </p>
+              <p className="uae-who-we-are-text">
+                Within this progressive educational ecosystem, the Jeppiaar Academy of Psychology and Research was established to bridge the gap between academic learning in psychology and real-world application. Guided by a vision to nurture ethical, skilled, and research-oriented mental health professionals, the Academy offers advanced, practice-focused programmes aligned with global mental health standards. The Academy follows a strong practice-oriented approach, integrating applied learning, professional supervision, ethical practice, and research exposure, thereby preparing learners for impactful and responsible careers in the field of psychology.
+              </p>
+            </div>
             
-            <p className="uae-who-we-are-text highlight-text">
-              The Jeppiaar Group of Institutions is a well-established educational group with over three decades of excellence in higher education, consistently providing quality, value-based, and future-oriented education.
-            </p>
-            <p className="uae-who-we-are-text">
-              Founded with a vision to make education accessible and meaningful, the group has grown into a trusted name across Tamil Nadu. Rooted in academic rigor and strong ethical values, the Jeppiaar Group emphasizes innovation, industry relevance, experiential learning, and holistic student development.
-            </p>
-            <p className="uae-who-we-are-text">
-              Within this progressive educational ecosystem, the Jeppiaar Academy of Psychology and Research was established to bridge the gap between academic learning in psychology and real-world application. Guided by a vision to nurture ethical, skilled, and research-oriented mental health professionals, the Academy offers advanced, practice-focused programmes aligned with global mental health standards. The Academy follows a strong practice-oriented approach, integrating applied learning, professional supervision, ethical practice, and research exposure, thereby preparing learners for impactful and responsible careers in the field of psychology.
-            </p>
+            <div className="uae-who-we-are-image-col">
+              <div className="uae-vertical-image-wrapper">
+                <img src={uaeImage} alt="UAE Campus Collaboration" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
