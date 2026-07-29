@@ -382,7 +382,8 @@
   color: #333;
 }
 
-.apply-submit {
+.apply-submit,
+.apply-submit-btn {
   margin-top: 1.25rem;
   width: 100%;
   background: #0E0529;
@@ -394,7 +395,8 @@
   cursor: pointer;
 }
 
-.apply-submit:disabled {
+.apply-submit:disabled,
+.apply-submit-btn:disabled {
   opacity: 0.65;
   cursor: not-allowed;
 }
