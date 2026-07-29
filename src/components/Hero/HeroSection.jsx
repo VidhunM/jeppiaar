@@ -105,7 +105,8 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection, onOpenA
         style={{ 
           backgroundImage: `url(${slides[currentSlide].image})`,
           backgroundPosition: 
-            (currentSlide === 2 || currentSlide === 3) ? 'center 70px' :
+            currentSlide === 2 ? 'center -160px' :
+            currentSlide === 3 ? 'center 100px' :
             (currentSlide === 5 ? 'top center' : 
             (currentSlide === 6 ? 'top center' : undefined))
         }}

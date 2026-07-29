@@ -14,6 +14,8 @@ import neethuImage from '../assets/images/c9.jpeg';
 import ashwinImage from '../assets/images/c10.jpeg';
 import sutheeshImage from '../assets/images/c11.jpeg';
 import dipakImage from '../assets/images/c12.jpeg';
+import sarahImage from '../assets/images/c13.jpeg';
+import ishvaryaImage from '../assets/images/c14.jpeg';
 import icon1 from '../assets/icons/Icon1.png';
 import icon2 from '../assets/icons/Icon2.png';
 import icon3 from '../assets/icons/Icon3.png';
@@ -205,6 +207,40 @@ His work centers on developing secure, scalable, and human-centric AI solutions 
 As CEO at Psyiani, he leads operations and market strategy for an AI-enabled psychology technology platform focused on building accessible, insight-driven mental health solutions through a seamless digital ecosystem.
 He also works closely with academic institutions as a consultant, advising on partnerships, ecosystem building, and student development initiatives.
 With a strong engineering foundation, he specializes in 0→1 venture building, scalable product development, and long-term value creation across education, technology, and gig-service markets.`
+    },
+    {
+      name: 'Dr. Sarah Manickaraj',
+      role: 'Associate Professor & Head of the Department of Psychology, Presidency College',
+      image: sarahImage,
+      description: `Dr. Sarah Manickaraj is an accomplished academician and psychologist currently serving as Associate Professor and Head of the Department of Psychology at Presidency College, Chennai. She holds a Ph.D. in Psychology from the University of Madras (2003) with a research focus on the vocational correlates of orthopedically handicapped individuals. Her academic qualifications also include an M.Ed. and B.Ed. from Annamalai University, an M.Phil. in Psychology from the University of Madras, an M.A. in Psychology from Annamalai University, and a B.A. in Sociology from Stella Maris College. She is an active member of several professional organizations, including the Asia Pacific School Psychology Association (APSPA), the Indian School Psychology Association (InSPA), and the Indian Academy of Applied Psychology.
+
+With more than three decades of teaching experience, Dr. Sarah began her academic career at Annamalai University’s Psychology Wing (DDE) from 1992 to 1995, served at the University of Madras from 1995 to 1998, and has been associated with Presidency College, Chennai, since 1998. She has also been actively involved in distance education and honorary guest lecturing for institutions such as Annamalai University, the University of Madras, Mother Teresa University, and Bharathiar University. Her teaching expertise spans a wide range of undergraduate and postgraduate subjects, including Advanced General Psychology, Child Psychology, Developmental Psychology, Educational Psychology, Research Methodology, Psychopathology, Organizational Behaviour, Human Resource Management, Psychological Testing, and Psychological Profiling.
+
+Dr. Sarah has conducted numerous training programs and workshops on topics such as memory and study skills, problem-solving and decision-making, creativity, career counselling, mental rejuvenation, game-based learning, interpersonal relations, leadership, motivation, personality development, conflict management, team building, and communication skills. Her research contributions include serving as Research Assistant and Journal Secretary at the Madras Psychology Society, University of Madras, from 1995 to 1998, and guiding 6 Ph.D. scholars, 20 M.Phil. students, and approximately 180 M.Sc. dissertations. She also gained valuable counselling experience as an Honorary Testing Officer at the Juvenile Guidance Bureau, Chennai, from 1989 to 1991.
+
+Her scholarly achievements include 8 national journal publications, 11 international journal publications, 14 national conference presentations, 16 international conference presentations, and participation in 88 national and international conferences and seminars. She has published popular articles and has received recognition through national and international Best Paper Awards, a Leadership Award, and numerous appointments as Chairperson at academic conferences. Her academic contributions further include serving as a subject expert on 25 Boards of Studies, conducting 12 academic audits, participating in 15 doctoral committees, and serving on 16 selection committees. Through her extensive teaching, research, training, and academic leadership, Dr. Sarah Manickaraj has made significant contributions to the field of psychology and higher education in India.`
+    },
+    {
+      name: 'Ishvarya Ramasubramanian',
+      role: 'Founder & Academic Director – Aura Academia',
+      image: ishvaryaImage,
+      description: `Ishvarya Ramasubramanian is a highly experienced educator specializing in Medical Science and Chemistry. With over 15 years of teaching expertise, she has guided countless students toward success in NEET and CBSE board examinations through her clear, concept-driven teaching approach. Her visual learning methods make complex topics in Biochemistry and Organic Chemistry engaging, easy to understand, and exam-ready.
+
+Specialisations:
+• Organic Chemistry
+• Medical Science
+• NEET Biology
+• CBSE Board Preparation
+
+Key Achievements:
+• 15+ years of excellence in Chemistry and Biology teaching
+• Trained 2,000+ students across NEET and CBSE programs
+• Successfully mentored numerous NEET qualifiers
+• Expert in Medical Science and Chemistry education
+
+Ishvarya Ramasubhramaiyan began her educational journey in 2018 by establishing her first academy in Abu Shagara, which continues to successfully support students in achieving academic excellence. This marked the beginning of her mission to provide quality education, personalized guidance, and strong academic support.
+
+Continuing her journey of educational excellence, she expanded the academy by opening a new branch in Al Nahda, Sharjah, in 2026, providing even more students with access to quality education and expert academic guidance.`
     }
   ];
 

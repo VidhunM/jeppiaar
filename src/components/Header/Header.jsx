@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import Logo1 from '../../assets/icons/Logo1.png';
+import Logo01 from '../../assets/icons/Logo01.png';
 import ApplyModal from '../ApplyModal/ApplyModal';
 import './Header.css';
 
@@ -187,11 +187,11 @@ const Header = () => {
           <Link to="/" className="logo-container">
             <div className="logo">
               <img 
-                src={Logo1} 
+                src={Logo01} 
                 alt="Jeppiaar Academy"
                 onError={(e) => {
                   console.error('Logo image failed to load, trying fallback');
-                  e.target.src = '/icons/Logo1.png';
+                  e.target.src = '/icons/Logo01.png';
                 }}
                 onLoad={() => {
                   console.log('Logo image loaded successfully');
@@ -421,32 +421,7 @@ const Header = () => {
             >
               Contact Us
             </Link>
-            {isMobileViewport && (
-              <a
-                className="cta-button mobile-menu-cta"
-                href="https://erp.jeppiaaracademy.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="ERP Login"
-                onClick={handleLoginClick}
-              >
-                Login
-              </a>
-            )}
           </nav>
-
-          {!isMobileViewport && (
-            <a
-              className="cta-button desktop-cta"
-              href="https://erp.jeppiaaracademy.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="ERP Login"
-              onClick={handleLoginClick}
-            >
-              Login
-            </a>
-          )}
 
         <button 
           className="mobile-menu-toggle"

@@ -52,7 +52,7 @@
 .hero-slide-first {
   /* Slide 1: centered horizontally, positioned to hide header completely and show main content upward */
   background-size: cover !important;
-  background-position: top !important;
+  background-position: center 30px !important;
   background-repeat: no-repeat !important;
   background-attachment: scroll !important;
   /* Prevent any movement or animation on background position */
@@ -64,13 +64,13 @@
   /* Override will-change from base class to prevent background recalculation */
   will-change: opacity !important;
   /* Force immediate background position application */
-  background-position-x: top 99% !important;
-  background-position-y: top !important;
+  background-position-x: center !important;
+  background-position-y: 30px !important;
 }
 
 .hero-slide-second {
   background-size: cover;
-  background-position: center center;
+  background-position: center 40%;
   background-repeat: no-repeat;
 }
 
