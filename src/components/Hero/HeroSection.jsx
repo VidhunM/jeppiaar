@@ -12,7 +12,7 @@ import brIcon from '../../assets/icons/br.png';
 const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection, onOpenApplyModal }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [imagesLoaded, setImagesLoaded] = useState(false);
-  
+
   const slides = [
     {
       image: heroImage,
@@ -100,28 +100,28 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection, onOpenA
           <img key={index} src={slide.image} alt="" />
         ))}
       </div>
-      <div 
+      <div
         className={`hero-slide ${currentSlide === 0 ? 'hero-slide-first' : ''} ${(currentSlide === 1 || currentSlide === 2 || currentSlide === 3) ? 'hero-slide-second' : ''} ${currentSlide === 5 ? 'hero-slide-fourth' : ''} ${currentSlide === 6 ? 'hero-slide-fifth' : ''} ${imagesLoaded ? 'images-loaded' : ''}`}
-        style={{ 
+        style={{
           backgroundImage: `url(${slides[currentSlide].image})`,
-          backgroundPosition: 
+          backgroundPosition:
             currentSlide === 2 ? 'center -160px' :
-            currentSlide === 3 ? 'center 100px' :
-            (currentSlide === 5 ? 'top center' : 
-            (currentSlide === 6 ? 'top center' : undefined))
+              currentSlide === 3 ? 'center 100px' :
+                (currentSlide === 5 ? 'top center' :
+                  (currentSlide === 6 ? 'top center' : undefined))
         }}
       >
         <div className="hero-gradient-overlay-bottom"></div>
         <button className="hero-nav prev" onClick={prevSlide} aria-label="Previous slide">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M15 19L8 12L15 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M8 12H20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+            <path d="M15 19L8 12L15 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M8 12H20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
           </svg>
         </button>
         <button className="hero-nav next" onClick={nextSlide} aria-label="Next slide">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M9 5L16 12L9 19" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M16 12H4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+            <path d="M9 5L16 12L9 19" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M16 12H4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
           </svg>
         </button>
 
@@ -194,14 +194,7 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection, onOpenA
         {(currentSlide === 1 || currentSlide === 2 || currentSlide === 3) && (
           <>
             <div className="hero-rated-badge hero-rated-badge-bottom">
-              <div className="rated-text">STUDENT RATED</div>
-            </div>
-            <div className="hero-rated-stars hero-rated-stars-bottom">
-              <span className="star">★</span>
-              <span className="star">★</span>
-              <span className="star">★</span>
-              <span className="star">★</span>
-              <span className="star">★</span>
+              <div className="rated-text">In Association with AURA Academy</div>
             </div>
           </>
         )}
@@ -223,7 +216,7 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection, onOpenA
             </div>
           </>
         )}
-        
+
         {currentSlide === 6 && (
           <>
             <div className="hero-slide-br-icon-container">
@@ -246,8 +239,8 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection, onOpenA
 
           <div className="hero-programs-bubbles">
             {programCards.map((card, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="hero-program-bubble"
                 style={{ backgroundColor: card.color }}
               >
