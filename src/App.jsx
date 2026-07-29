@@ -11,6 +11,7 @@ import Courses from './pages/Courses';
 import Contact from './pages/Contact';
 import Gallery from './pages/Gallery';
 import AdmissionProcedure from './pages/AdmissionProcedure';
+import UaeCampus from './pages/UaeCampus';
 import ProspectDownload from './pages/ProspectDownload';
 import ApplyOnline from './pages/ApplyOnline';
 import Walkin from './pages/Walkin';
@@ -63,6 +64,7 @@ function AppLayout() {
           <Route path="/leadership" element={<About />} />
           <Route path="/research" element={<Gallery />} />
           <Route path="/admission-procedure" element={<AdmissionProcedure />} />
+          <Route path="/uae-campus" element={<UaeCampus />} />
           <Route path="/apply-online" element={<ApplyOnline />} />
           <Route path="/walkin" element={<Walkin />} />
           <Route path="/admission-form-download" element={<ProspectDownload />} />

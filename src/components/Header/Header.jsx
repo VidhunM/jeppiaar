@@ -501,10 +501,8 @@ const Header = () => {
                     Admission
                   </Link>
                   <Link 
-                    to="#" 
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setShowUnderConstruction(true);
+                    to="/uae-campus" 
+                    onClick={() => {
                       setIsMobileMenuOpen(false);
                       setIsCampusDropdownOpen(false);
                       setIsCampusDropdownClicked(false);

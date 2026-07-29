@@ -1,0 +1,6 @@
+@import "./AdmissionProcedure.css";
+
+/* Custom overrides for UAE Campus page if any are needed in future */
+.uae-campus-hero {
+  background: linear-gradient(180deg, #1b0a3d 0%, #0E0529 100%);
+}
