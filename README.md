@@ -1,2 +1,2 @@
 uae-campus
-jeppiar academy.
+jeppiar academy UAE.
