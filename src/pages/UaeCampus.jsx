@@ -1,11 +1,65 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './UaeCampus.css';
 import admissionFormPdfUrl from '../assets/images/Student_Admission_Form_2026.pdf';
 import uaeBrochurePdf from '../assets/images/AURA ACADEMIA - UAE Broucher.pdf';
 import uaeImage from '../assets/images/uae.jpeg';
+import hero8Image from '../assets/images/hero8.JPG';
+import hero6Image from '../assets/images/hero6.JPG';
+import hero7Image from '../assets/images/hero7.JPG';
+import hero5Image from '../assets/images/hero5.png';
 
 const UaeCampus = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const campusSlides = [
+    {
+      image: uaeImage,
+      badge: 'Sharjah, UAE',
+      title: 'Aura Academia Collaboration Center',
+      description: 'Modern campus facilities located at Al Rayyan Complex, Sharjah, offering state-of-the-art psychology learning spaces.'
+    },
+    {
+      image: hero8Image,
+      badge: 'Infrastructure & Tech',
+      title: 'Smart Classrooms & Discussion Labs',
+      description: 'Fully air-conditioned classrooms equipped with interactive digital smart boards for immersive learning experiences.'
+    },
+    {
+      image: hero6Image,
+      badge: 'Practical Training',
+      title: 'Hands-on Clinical Supervision',
+      description: 'Application-driven training under the guidance of Dr. Saranya Jaikumar and leading psychology experts.'
+    },
+    {
+      image: hero7Image,
+      badge: 'Collaborative Environment',
+      title: 'Interactive Academic Community',
+      description: 'Fostering child-centered, ethical, and research-oriented mental health practices among aspiring professionals.'
+    },
+    {
+      image: hero5Image,
+      badge: 'Skill-Based Learning',
+      title: 'Specialized Workshops & Case Studies',
+      description: 'In-depth modules on Learning Disabilities, Child & Family Counselling, and Special Needs management.'
+    }
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % campusSlides.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [campusSlides.length]);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % campusSlides.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + campusSlides.length) % campusSlides.length);
+  };
+
   const handleDownloadFormPdf = () => {
     const a = document.createElement('a');
     a.href = admissionFormPdfUrl;
@@ -61,6 +115,63 @@ const UaeCampus = () => {
               Apply Now (Online)
             </Link>
 
+          </div>
+        </div>
+      </section>
+
+      {/* UAE Campus Gallery / Image Slider Section */}
+      <section className="uae-slider-section">
+        <div className="container">
+          <div className="uae-slider-header">
+            <span className="uae-section-subtitle">Campus Experience & Highlights</span>
+            <h2 className="uae-section-title">INSIDE OUR UAE CAMPUS & FACILITIES</h2>
+            <div className="uae-section-separator"></div>
+          </div>
+
+          <div className="uae-slider-wrapper">
+            <div className="uae-slider-container">
+              {campusSlides.map((slide, index) => (
+                <div
+                  key={index}
+                  className={`uae-slide-item ${index === currentSlide ? 'active' : ''}`}
+                >
+                  <img src={slide.image} alt={slide.title} className="uae-slide-image" />
+                  <div className="uae-slide-overlay">
+                    <div className="uae-slide-content">
+                      <span className="uae-slide-badge">{slide.badge}</span>
+                      <h3 className="uae-slide-title">{slide.title}</h3>
+                      <p className="uae-slide-desc">{slide.description}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+
+              <button className="uae-slider-nav prev" onClick={prevSlide} aria-label="Previous Slide">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+              <button className="uae-slider-nav next" onClick={nextSlide} aria-label="Next Slide">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+
+              <div className="uae-slide-counter">
+                <span>0{currentSlide + 1}</span> / <span>0{campusSlides.length}</span>
+              </div>
+            </div>
+
+            <div className="uae-slider-dots">
+              {campusSlides.map((_, index) => (
+                <button
+                  key={index}
+                  className={`uae-dot ${index === currentSlide ? 'active' : ''}`}
+                  onClick={() => setCurrentSlide(index)}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>

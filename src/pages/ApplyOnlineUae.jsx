@@ -19,11 +19,6 @@ function bytesToLabel(bytes) {
 }
 
 export default function ApplyOnlineUae() {
-  const feeInr = Number(import.meta.env.VITE_APPLICATION_FEE_INR ?? 250);
-  const paymentUrl = import.meta.env.VITE_APPLICATION_PAYMENT_URL ?? '';
-  const scriptUrl = API_URL;
-  const razorpayKeyId = (import.meta.env.VITE_RAZORPAY_KEY_ID || '').trim();
-
   // ONLY first two child psychology options are applicable for UAE Campus
   const programmes = useMemo(
     () => [
@@ -33,35 +28,20 @@ export default function ApplyOnlineUae() {
     []
   );
 
-  const scholarshipOptions = useMemo(
-    () => [
-      'First Graduate in the family (REV – 104)',
-      'Economically Weaker Section (REV – 122)',
-      'Basics / Advanced Student',
-      'University Rank Holder in UG / PG',
-      'NRI Student',
-      'Not Eligible'
-    ],
-    []
-  );
-
   const docFields = useMemo(
     () => [
       { key: 'photo', label: 'Passport-size Photograph (PHOTO)', required: true, accept: 'image/*' },
-      { key: 'aadhaarDoc', label: 'Aadhaar card copy / National ID', required: true, accept: 'application/pdf,image/*' },
-      { key: 'sslcDoc', label: 'SSLC / 10th Mark Sheet', required: true, accept: 'application/pdf,image/*' },
-      { key: 'hscDoc', label: 'HSC / 12th Mark Sheet', required: true, accept: 'application/pdf,image/*' },
+      { key: 'aadhaarDoc', label: 'Emirates ID copy', required: true, accept: 'application/pdf,image/*' },
       { key: 'ugMarksDoc', label: 'UG Mark Sheets copy', required: true, accept: 'application/pdf,image/*' },
       { key: 'ugCertDoc', label: 'UG Certificate copy', required: true, accept: 'application/pdf,image/*' },
       { key: 'transferCertDoc', label: 'Transfer Certificate (optional)', required: false, accept: 'application/pdf,image/*' },
-      { key: 'experienceCertDoc', label: 'Experience Certificate (optional)', required: false, accept: 'application/pdf,image/*' },
-      { key: 'scholarshipDoc', label: 'Scholarship supporting documents (optional)', required: false, accept: 'application/pdf,image/*' }
+      { key: 'experienceCertDoc', label: 'Experience Certificate (optional)', required: false, accept: 'application/pdf,image/*' }
     ],
     []
   );
 
   const qualificationRows = useMemo(
-    () => ['SSLC / 10th', 'HSC / 12th', 'Diploma (optional)', 'UG Degree', 'PG Degree (optional)', 'Other (optional)'],
+    () => ['UG Degree'],
     []
   );
 
@@ -125,19 +105,6 @@ export default function ApplyOnlineUae() {
   const [message, setMessage] = useState(null);
   const [applicationId, setApplicationId] = useState('');
   const [submitted, setSubmitted] = useState(false);
-  const [paymentFinished, setPaymentFinished] = useState(false);
-  const [razorpayLoaded, setRazorpayLoaded] = useState(false);
-
-  useEffect(() => {
-    const checkRazorpay = () => {
-      if (window.Razorpay) {
-        setRazorpayLoaded(true);
-      } else {
-        setTimeout(checkRazorpay, 100);
-      }
-    };
-    checkRazorpay();
-  }, []);
 
   const onChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -149,10 +116,7 @@ export default function ApplyOnlineUae() {
     }
 
     if (name === 'aadhaarNo') {
-      const numericValue = value.replace(/\D/g, '');
-      if (numericValue.length <= 12) {
-        setForm((p) => ({ ...p, aadhaarNo: numericValue }));
-      }
+      setForm((p) => ({ ...p, aadhaarNo: value }));
       return;
     }
 
@@ -299,102 +263,12 @@ export default function ApplyOnlineUae() {
     }
   };
 
-  const handleRazorpayPayment = async () => {
-    if (!razorpayKeyId) {
-      setMessage({ type: 'error', text: 'Razorpay is not configured. Please contact support.' });
-      return;
-    }
-
-    if (!window.Razorpay) {
-      setMessage({ type: 'error', text: 'Razorpay script is still loading. Please wait a moment and try again.' });
-      return;
-    }
-
-    try {
-      const options = {
-        key: razorpayKeyId,
-        amount: feeInr * 100,
-        currency: 'INR',
-        name: 'Jeppiaar Academy - UAE Campus',
-        description: `Application Fee for ${form.programmeAppliedFor || 'Programme'}`,
-        handler: function (response) {
-          setPaymentFinished(true);
-          setMessage({
-            type: 'success',
-            text: `Payment successful! Payment ID: ${response.razorpay_payment_id}.`
-          });
-
-          fetch(scriptUrl, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-              type: 'payment_confirmation',
-              applicationId: applicationId,
-              paymentId: response.razorpay_payment_id,
-              orderId: response.razorpay_order_id,
-              signature: response.razorpay_signature
-            })
-          }).catch((err) => console.error('Payment confirmation failed:', err));
-        },
-        prefill: {
-          name: form.fullName || '',
-          email: form.emailId || '',
-          contact: form.mobileNumber || ''
-        },
-        notes: {
-          applicationId: applicationId,
-          programme: form.programmeAppliedFor || ''
-        },
-        theme: {
-          color: '#0E0529'
-        },
-        modal: {
-          ondismiss: function () {
-            setMessage({ type: 'info', text: 'Payment cancelled. You can try again later.' });
-          }
-        }
-      };
-
-      const razorpay = new window.Razorpay(options);
-      razorpay.open();
-    } catch (error) {
-      setMessage({
-        type: 'error',
-        text: `Payment initialization failed: ${error.message || String(error)}`
-      });
-    }
-  };
-
-  const buildPaymentHref = () => {
-    if (!paymentUrl) return '';
-    try {
-      const url = new URL(paymentUrl, window.location.origin);
-      url.searchParams.set('description', `Application Fee for ${form.programmeAppliedFor || 'Programme'}`);
-      url.searchParams.set('applicationId', applicationId || 'PENDING');
-      url.searchParams.set('amount', String(feeInr));
-      url.searchParams.set('name', form.fullName || '');
-      url.searchParams.set('phone', form.mobileNumber || '');
-      url.searchParams.set('email', form.emailId || '');
-      return url.toString();
-    } catch {
-      const sep = paymentUrl.includes('?') ? '&' : '?';
-      return `${paymentUrl}${sep}applicationId=${encodeURIComponent(applicationId || 'PENDING')}&amount=${encodeURIComponent(
-        String(feeInr)
-      )}&name=${encodeURIComponent(form.fullName || '')}&phone=${encodeURIComponent(form.mobileNumber || '')}&email=${encodeURIComponent(form.emailId || '')}`;
-    }
-  };
-
-  const paymentHref = buildPaymentHref();
-  const hasRazorpay = razorpayKeyId && razorpayLoaded;
-
   return (
     <div className="apply-online-page">
       <section className="apply-online-hero">
         <div className="container">
           <h1>Apply Online - UAE Campus</h1>
-          <p>Fill the application form and pay the application fee (₹{feeInr}).</p>
+          <p>Fill out the application form below for UAE Campus programmes.</p>
         </div>
       </section>
 
@@ -456,7 +330,7 @@ export default function ApplyOnlineUae() {
                   <h3>2. Personal Details of candidate (Mandatory)</h3>
                   <div className="apply-grid">
                     <label className="apply-field">
-                      <span>Full Name (as per ID/Aadhaar) *</span>
+                      <span>Full Name (as per Emirates ID / Passport) *</span>
                       <input className="apply-input" name="fullName" value={form.fullName} onChange={onChange} required disabled={submitted} />
                     </label>
 
@@ -481,13 +355,13 @@ export default function ApplyOnlineUae() {
                     </label>
 
                     <label className="apply-field">
-                      <span>Aadhaar No / National ID</span>
+                      <span>Emirates ID Number</span>
                       <input
                         className="apply-input"
                         name="aadhaarNo"
                         value={form.aadhaarNo}
                         onChange={onChange}
-                        placeholder="ID number"
+                        placeholder="Emirates ID number"
                         disabled={submitted}
                       />
                     </label>
@@ -686,26 +560,7 @@ export default function ApplyOnlineUae() {
                 </section>
 
                 <section className="apply-section">
-                  <h3>7. Are you eligible for scholarship?</h3>
-                  <div className="apply-checklist">
-                    {scholarshipOptions.map((opt) => (
-                      <label key={opt} className="apply-check">
-                        <input
-                          type="radio"
-                          name="scholarshipEligibility"
-                          value={opt}
-                          checked={form.scholarshipEligibility === opt}
-                          onChange={() => setScholarship(opt)}
-                          disabled={submitted}
-                        />
-                        <span>{opt}</span>
-                      </label>
-                    ))}
-                  </div>
-                </section>
-
-                <section className="apply-section">
-                  <h3>8. Upload Document copies (Mandatory)</h3>
+                  <h3>7. Upload Document copies (Mandatory)</h3>
                   <p className="apply-muted">
                     Upload clear PDF/JPG/PNG files. Max <b>3MB</b> per file, total max <b>15MB</b>.
                   </p>
@@ -738,7 +593,7 @@ export default function ApplyOnlineUae() {
                 </section>
 
                 <section className="apply-section">
-                  <h3>9. Declaration by the Applicant</h3>
+                  <h3>8. Declaration by the Applicant</h3>
                   <p className="apply-declaration">
                     I hereby declare that the information furnished above is true and correct to the best of my knowledge. I
                     understand that admission is subject to verification of documents and fulfillment of eligibility criteria
@@ -817,20 +672,9 @@ export default function ApplyOnlineUae() {
                   </button>
                 ) : (
                   <div className="apply-post-submit">
-                    <h3>Form Registered! Application ID: {applicationId}</h3>
-                    <p className="apply-muted">To complete registration, proceed with the Application Fee (₹{feeInr}).</p>
-
-                    {hasRazorpay ? (
-                      <button className="apply-pay-btn" type="button" onClick={handleRazorpayPayment} disabled={paymentFinished}>
-                        {paymentFinished ? 'PAYMENT DONE' : 'PAY APPLICATION FEE (ONLINE)'}
-                      </button>
-                    ) : (
-                      paymentHref && (
-                        <a className="apply-pay-btn-link" href={paymentHref} target="_blank" rel="noopener noreferrer">
-                          PAY APPLICATION FEE (ONLINE)
-                        </a>
-                      )
-                    )}
+                    <h3>Application Submitted Successfully!</h3>
+                    <p className="apply-muted">Application ID: <b>{applicationId}</b></p>
+                    <p className="apply-muted">Thank you for applying. Our admissions team will contact you shortly.</p>
                   </div>
                 )}
               </form>
