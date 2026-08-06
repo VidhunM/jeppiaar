@@ -77,6 +77,7 @@
 import React, { useState } from 'react';
 import contactImage from '../../assets/images/contact.png';
 import brochurePdf from '../../assets/images/broucher.pdf';
+import uaeBrochurePdf from '../../assets/images/AURA ACADEMIA - UAE Broucher.pdf';
 import './LeadGeneration.css';
 
 // Website lead API endpoint
@@ -228,28 +229,19 @@ const LeadGeneration = () => {
                   required 
                 />
                 <select name="course" value={form.course} onChange={handleChange} className="course-select" required>
-                  <option value="">Select Advanced Diploma Course</option>
-                  <option value="Advanced Diploma in Counselling and Child Psychology">Advanced Diploma in Counselling and Child Psychology</option>
-                  <option value="Advanced Diploma in Counselling and Organisational Psychology">Advanced Diploma in Counselling and Organisational Psychology</option>
-                  <option value="Advanced Diploma in Counselling and Forensic Psychology">Advanced Diploma in Counselling and Forensic Psychology</option>
-                  <option value="Advanced Diploma in Art Therapy">Advanced Diploma in Art Therapy</option>
+                  <option value="">Select Programme / Course</option>
+                  <optgroup label="Diploma Programmes - India">
+                    <option value="Advanced Diploma in Counselling and Child Psychology (India)">1. Counselling & Child Psychology (India)</option>
+                    <option value="Advanced Diploma in Counselling and Organisational Psychology (India)">2. Counselling & Organisational Psychology (India)</option>
+                    <option value="Advanced Diploma in Counselling and Forensic Psychology (India)">3. Counselling & Forensic Psychology (India)</option>
+                    <option value="Advanced Diploma in Art Therapy (India)">4. Art Therapy (India)</option>
+                  </optgroup>
+                  <optgroup label="Dubai">
+                    <option value="Advanced Diploma in Counselling and Child Psychology (Dubai)">Counselling & Child Psychology (Dubai)</option>
+                  </optgroup>
+                  <option value="Dubai Short Online Certifications">Dubai Short Online Certifications</option>
                 </select>
-                
               </div>
-              {/* <div className="form-row">
-              <select name="course" value={form.course} onChange={handleChange} className="course-select" required>
-                  <option value="">Select Course</option>
-                  <option value="Learning Disabilities">Learning Disabilities</option>
-                  <option value="Cognitive Behavioural Therapy (CBT)">Cognitive Behavioural Therapy (CBT)</option>
-                  <option value="Solution-Focused Brief Therapy (SFBT)">Solution-Focused Brief Therapy (SFBT)</option>
-                  <option value="Neuro-Linguistic Programming (NLP)">Neuro-Linguistic Programming (NLP)</option>
-                  <option value="Mindfulness-Based Therapy">Mindfulness-Based Therapy</option>
-                  <option value="Emotion-Freedom Technique (EFT)">Emotion-Freedom Technique (EFT)</option>
-                  <option value="Marital Counselling">Marital Counselling</option>
-                  <option value="NeuroLinguistic Program Basics">NeuroLinguistic Program Basics</option>
-                  <option value="NeuroLinguistic Program Advanced">NeuroLinguistic Program Advanced</option>
-                </select>
-              </div> */}
               <label className="checkbox-label">
                 <input name="consent" type="checkbox" checked={form.consent} onChange={handleChange} required />
                 <span>I authorize Jeppiaar Academy of Psychology & Research and its associates to contact me with updates and notification</span>
@@ -261,15 +253,30 @@ const LeadGeneration = () => {
                 <a
                   className="btn-secondary"
                   href={brochurePdf}
-                  download="broucher.pdf"
+                  download="Jeppiaar_Psychology_India_Prospectus.pdf"
                   style={{
                     textDecoration: 'none',
                     display: 'inline-flex',
                     alignItems: 'center',
-                    justifyContent: 'center'
+                    justifyContent: 'center',
+                    whiteSpace: 'nowrap'
                   }}
                 >
-                  Download Prospectus
+                  India Prospectus
+                </a>
+                <a
+                  className="btn-secondary"
+                  href={uaeBrochurePdf}
+                  download="AURA_ACADEMIA_UAE_Prospectus.pdf"
+                  style={{
+                    textDecoration: 'none',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    whiteSpace: 'nowrap'
+                  }}
+                >
+                  UAE Prospectus
                 </a>
               </div>
             </form>

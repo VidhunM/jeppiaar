@@ -10,14 +10,14 @@ function normalizePhone(raw) {
   return String(raw || '').replace(/\D/g, '');
 }
 
-export default function Walkin() {
+export default function WalkinUae() {
   const webhookUrl = import.meta.env.VITE_WEBSITE_LEAD_WEBHOOK_URL ?? 'https://api.jeppiaaracademy.com/api/lead/website';
 
   const hearAboutOptions = useMemo(
     () => [
       'Google Search',
-      'Instagram',
-      'Facebook',
+      'Instagram / Facebook',
+      'Aura Academia',
       'YouTube',
       'Friend / Referral',
       'Advertisement',
@@ -30,17 +30,8 @@ export default function Walkin() {
 
   const options = useMemo(
     () => [
-      'Cambridge',
-      'Young Research',
-      'English Certification Course',
-      'Psychology Basic Course',
-      'Voxdemy',
-      'Events',
-      'School Workshops',
-      'College Workshops',
-      'Corporate Workshops',
-      'Diploma Programs',
-      'Patient Consultations',
+      'Advanced Diploma in Counselling and Child Psychology',
+
     ],
     []
   );
@@ -49,6 +40,7 @@ export default function Walkin() {
     name: '',
     email: '',
     phone: '',
+    emiratesId: '',
     hearAbout: '',
     hearAboutOther: '',
     enquiry: '',
@@ -106,7 +98,7 @@ export default function Walkin() {
       setMessage({ type: 'error', text: 'Please enter a valid email address.' });
       return;
     }
-    if (phone.length < 10) {
+    if (phone.length < 8) {
       setMessage({ type: 'error', text: 'Please enter a valid mobile number.' });
       return;
     }
@@ -121,23 +113,21 @@ export default function Walkin() {
 
     setLoading(true);
     try {
-      // API requires phone + enquiry + (name OR first_name+last_name)
       const hearText = hearAbout === 'Other' ? hearAboutOther : hearAbout;
       const payload = {
         name,
         phone,
         email,
-        enquiry,
-        source: 'Walkin page',
-        notes: `Heard about: ${hearText}\nSelected: ${enquiry}\nPage: ${
-          typeof window !== 'undefined' ? window.location.href : ''
-        }`,
+        enquiry: `[UAE Campus] ${enquiry}`,
+        source: 'UAE Walkin page',
+        notes: `Heard about: ${hearText}\nEmirates ID/ID: ${form.emiratesId || 'N/A'}\nSelected: ${enquiry}\nPage: ${typeof window !== 'undefined' ? window.location.href : ''
+          }`,
       };
 
       await submitToWebhook(payload);
 
-      setMessage({ type: 'success', text: 'Thank you! We will contact you soon.' });
-      setForm({ name: '', email: '', phone: '', hearAbout: '', hearAboutOther: '', enquiry: '' });
+      setMessage({ type: 'success', text: 'Thank you for visiting! Our UAE admissions team will contact you soon.' });
+      setForm({ name: '', email: '', phone: '', emiratesId: '', hearAbout: '', hearAboutOther: '', enquiry: '' });
     } catch (err) {
       setMessage({ type: 'error', text: `Submission failed: ${err?.message || String(err)}` });
     } finally {
@@ -149,21 +139,21 @@ export default function Walkin() {
     <div className="walkin-page">
       <section className="walkin-banner">
         <div className="container walkin-banner-inner">
-          <h1>Walk-in Enquiry</h1>
-          <p>Please fill your details and select what you are enquiring for.</p>
+          <h1>Walk-in Enquiry - UAE Campus</h1>
+          <p>Sharjah Campus (Aura Academia) — Please fill your details and enquiry below.</p>
         </div>
       </section>
 
       <section className="walkin-content">
         <div className="container">
           <div className="walkin-card">
-            <h2>Enquiry Form</h2>
+            <h2>UAE Campus Enquiry Form</h2>
 
             <form className="walkin-form" onSubmit={onSubmit}>
               <div className="walkin-grid">
                 <label className="walkin-field">
                   <span>Name *</span>
-                  <input name="name" value={form.name} onChange={onChange} type="text" placeholder="Your name" required />
+                  <input name="name" value={form.name} onChange={onChange} type="text" placeholder="Your full name" required />
                 </label>
 
                 <label className="walkin-field">
@@ -179,16 +169,27 @@ export default function Walkin() {
                 </label>
 
                 <label className="walkin-field">
-                  <span>Mobile Number *</span>
+                  <span>Mobile / WhatsApp Number *</span>
                   <input
                     name="phone"
                     value={form.phone}
                     onChange={onChange}
                     type="tel"
                     inputMode="numeric"
-                    placeholder="Enter phone number"
+                    placeholder="Enter contact mobile number"
                     maxLength={15}
                     required
+                  />
+                </label>
+
+                <label className="walkin-field">
+                  <span>Emirates ID / National ID (Optional)</span>
+                  <input
+                    name="emiratesId"
+                    value={form.emiratesId}
+                    onChange={onChange}
+                    type="text"
+                    placeholder="784-XXXX-XXXXXXX-X"
                   />
                 </label>
 
@@ -222,7 +223,7 @@ export default function Walkin() {
               </div>
 
               <label className="walkin-field">
-                <span>Programme / Course (Select) *</span>
+                <span>Programme (Select) *</span>
                 <select name="enquiry" value={form.enquiry} onChange={onChange} required>
                   <option value="" disabled>
                     Select
@@ -249,4 +250,3 @@ export default function Walkin() {
     </div>
   );
 }
-

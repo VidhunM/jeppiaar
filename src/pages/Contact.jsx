@@ -178,7 +178,6 @@
 
 // export default Contact;
 import React, { useState } from 'react';
-import RouteMap from '../components/RouteMap/RouteMap';
 import './Contact.css';
 
 // Website lead API endpoint
@@ -305,7 +304,7 @@ const Contact = () => {
 
             {/* Left Section */}
             <div className="contact-info-section">
-              <h2 className="contact-main-heading">Get in Touch with Jeppiaar</h2>
+              <h2 className="contact-main-heading">Jeppiaar Academy India and UAE</h2>
 
               <div className="contact-info-card-wrapper">
 
@@ -316,7 +315,7 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div className="contact-info-content">
-                    <h3>Admissions</h3>
+                    <h3>Admissions (India & UAE)</h3>
                     <a href="tel:+918098787575" className="contact-value">
                     +91 80987-87575 
                     </a>
@@ -332,9 +331,25 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div className="contact-info-content">
-                    <h3>Address</h3>
+                    <h3>India Campus Address</h3>
                     <p className="contact-value">
                       First floor, EJR Enclave, 1/40H, Mount Poonamallee Rd, Ramapuram, Viralur, Parangi Malai, Chennai, St.Thomas Mount, Tamil Nadu 600016
+                    </p>
+                  </div>
+                </div>
+
+                <div className="contact-divider"></div>
+
+                <div className="contact-info-item">
+                  <div className="contact-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    </svg>
+                  </div>
+                  <div className="contact-info-content">
+                    <h3>UAE Campus Address</h3>
+                    <p className="contact-value">
+                      Flat 803 Tower A, Al Rayyan Complex, Al Nahdha, Sharjah, UAE (in collaboration with Aura Academia)
                     </p>
                   </div>
                 </div>
@@ -463,8 +478,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-
-      <RouteMap />
     </div>
   );
 };

@@ -104,6 +104,8 @@ const Footer = () => {
             <h4>Quick Links</h4>
             <ul>
               <li><Link to="/about">About Us</Link></li>
+              <li><Link to="/uae-walkin">UAE Walk-in Enquiry</Link></li>
+              <li><Link to="/walkin">India Walk-in Enquiry</Link></li>
               <li><a href="#" onClick={handleCertificationPrograms}>Online Courses</a></li>
               <li><a href="#" onClick={handleResearchWing}>Research Wing - POLO</a></li>
               <li><a href="#" onClick={handleInternships}>Internships</a></li>

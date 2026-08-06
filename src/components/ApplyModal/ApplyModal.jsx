@@ -231,18 +231,28 @@ const ApplyModal = ({ isOpen, onClose, formData, onFormChange }) => {
                 onChange={onFormChange}
                 required
               >
-                <option value="">Select Advanced Diploma Course</option>
-                <option value="Advanced Diploma in Counselling and Child Psychology">
-                  Advanced Diploma in Counselling and Child Psychology
-                </option>
-                <option value="Advanced Diploma in Counselling and Organisational Psychology">
-                  Advanced Diploma in Counselling and Organisational Psychology
-                </option>
-                <option value="Advanced Diploma in Counselling and Forensic Psychology">
-                  Advanced Diploma in Counselling and Forensic Psychology
-                </option>
-                <option value="Advanced Diploma in Art Therapy">
-                  Advanced Diploma in Art Therapy
+                <option value="">Select Programme / Course</option>
+                <optgroup label="Diploma Programmes - India">
+                  <option value="Advanced Diploma in Counselling and Child Psychology (India)">
+                    Counselling & Child Psychology (India)
+                  </option>
+                  <option value="Advanced Diploma in Counselling and Organisational Psychology (India)">
+                    Counselling & Organisational Psychology (India)
+                  </option>
+                  <option value="Advanced Diploma in Counselling and Forensic Psychology (India)">
+                    Counselling & Forensic Psychology (India)
+                  </option>
+                  <option value="Advanced Diploma in Art Therapy (India)">
+                    Art Therapy (India)
+                  </option>
+                </optgroup>
+                <optgroup label="Dubai">
+                  <option value="Advanced Diploma in Counselling and Child Psychology (Dubai)">
+                    Counselling & Child Psychology (Dubai)
+                  </option>
+                </optgroup>
+                <option value="Dubai Short Online Certifications">
+                  Dubai Short Online Certifications
                 </option>
               </select>
             </div>
