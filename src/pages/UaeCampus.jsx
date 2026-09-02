@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import LeadGeneration from '../components/LeadGeneration/LeadGeneration';
 import './UaeCampus.css';
 import admissionFormPdfUrl from '../assets/images/Student_Admission_Form_2026.pdf';
 import uaeBrochurePdf from '../assets/images/AURA ACADEMIA - UAE Broucher.pdf';
@@ -84,41 +85,6 @@ const UaeCampus = () => {
 
   return (
     <div className="admission-procedure-page uae-campus-page">
-      <section className="admission-procedure-hero uae-campus-hero">
-        <div className="container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <span className="uae-hero-subtitle">International Collaboration</span>
-
-          <div className="collaboration-container">
-            <div className="collab-card jeppiaar-card">
-              <h3>JEPPIAAR ACADEMY OF PSYCHOLOGY AND RESEARCH</h3>
-              <span className="location-tag">Tamil Nadu, India</span>
-            </div>
-
-            <div className="collab-connector">
-              <div className="connector-line"></div>
-              <span className="collab-text">in collaboration with</span>
-              <div className="connector-line"></div>
-            </div>
-
-            <div className="collab-card aura-card">
-              <h3>AURA ACADEMIA</h3>
-              <span className="location-tag">Sharjah, UAE</span>
-            </div>
-          </div>
-
-          <div className="collab-programme-banner">
-            <h2>For Psychology Programme in UAE</h2>
-          </div>
-
-          <div className="admission-hero-actions">
-            <Link className="admission-apply-btn" to="/apply-online-uae">
-              Apply Now (Online)
-            </Link>
-
-          </div>
-        </div>
-      </section>
-
       {/* UAE Campus Gallery / Image Slider Section */}
       <section className="uae-slider-section">
         <div className="container">
@@ -172,6 +138,41 @@ const UaeCampus = () => {
                 />
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="admission-procedure-hero uae-campus-hero">
+        <div className="container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <span className="uae-hero-subtitle">International Collaboration</span>
+
+          <div className="collaboration-container">
+            <div className="collab-card jeppiaar-card">
+              <h3>JEPPIAAR ACADEMY OF PSYCHOLOGY AND RESEARCH</h3>
+              <span className="location-tag">Tamil Nadu, India</span>
+            </div>
+
+            <div className="collab-connector">
+              <div className="connector-line"></div>
+              <span className="collab-text">in collaboration with</span>
+              <div className="connector-line"></div>
+            </div>
+
+            <div className="collab-card aura-card">
+              <h3>AURA ACADEMIA</h3>
+              <span className="location-tag">Sharjah, UAE</span>
+            </div>
+          </div>
+
+          <div className="collab-programme-banner">
+            <h2>For Psychology Programme in UAE</h2>
+          </div>
+
+          <div className="admission-hero-actions">
+            <Link className="admission-apply-btn" to="/apply-online-uae">
+              Apply Now (Online)
+            </Link>
+
           </div>
         </div>
       </section>
@@ -577,10 +578,12 @@ const UaeCampus = () => {
             </div>
           </div>
         </div>
+      </section>
 
-        <div className="uae-study-materials-banner">
-          <p>All the study materials and manuals will be provided to all the students</p>
-        </div>
+      <LeadGeneration />
+
+      <section className="uae-study-materials-banner">
+        <p>All the study materials and manuals will be provided to all the students</p>
       </section>
     </div>
   );
