@@ -398,24 +398,61 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.6rem;
-  margin-top: 1.5rem;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
 }
 
 .uae-dot {
-  width: 12px;
-  height: 12px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background: #cbd5e1;
   border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+  min-height: 0;
+  line-height: 0;
   cursor: pointer;
   transition: all 0.3s ease;
+  appearance: none;
+  -webkit-appearance: none;
+  display: block;
 }
 
 .uae-dot.active {
-  width: 32px;
-  border-radius: 10px;
+  width: 20px;
+  height: 8px;
+  border-radius: 4px;
   background: #0E0529;
+}
+
+@media (max-width: 991px) {
+  .uae-slider-dots {
+    gap: 0.35rem !important;
+    margin-top: 0.85rem !important;
+  }
+
+  .uae-dot {
+    width: 4px !important;
+    height: 4px !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    max-width: 4px !important;
+    max-height: 4px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border-radius: 50% !important;
+  }
+
+  .uae-dot.active {
+    width: 10px !important;
+    height: 4px !important;
+    max-width: 10px !important;
+    max-height: 4px !important;
+    border-radius: 2px !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -451,6 +488,33 @@
 
   .uae-slider-nav.next {
     right: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .uae-slider-dots {
+    gap: 0.25rem !important;
+    margin-top: 0.6rem !important;
+  }
+
+  .uae-dot {
+    width: 3.5px !important;
+    height: 3.5px !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    max-width: 3.5px !important;
+    max-height: 3.5px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border-radius: 50% !important;
+  }
+
+  .uae-dot.active {
+    width: 8px !important;
+    height: 3.5px !important;
+    max-width: 8px !important;
+    max-height: 3.5px !important;
+    border-radius: 2px !important;
   }
 }
 
@@ -1418,6 +1482,10 @@
   font-weight: 500;
 }
 
+.uae-structure-mobile-slider-container {
+  display: none;
+}
+
 @media (max-width: 1024px) {
   .uae-structure-grid {
     grid-template-columns: 1fr;
@@ -1431,6 +1499,62 @@
 }
 
 @media (max-width: 768px) {
+  .uae-structure-grid {
+    display: none;
+  }
+
+  .uae-structure-mobile-slider-container {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 3.5rem;
+    padding: 0.25rem 0;
+  }
+
+  .uae-structure-mobile-slider-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+  }
+
+  .uae-structure-slide {
+    flex: 0 0 100%;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  .uae-structure-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.35rem;
+    margin-top: 1.5rem;
+  }
+
+  .uae-structure-dots .uae-dot {
+    width: 4px !important;
+    height: 4px !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    max-width: 4px !important;
+    max-height: 4px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border-radius: 50% !important;
+  }
+
+  .uae-structure-dots .uae-dot.active {
+    width: 10px !important;
+    height: 4px !important;
+    max-width: 10px !important;
+    max-height: 4px !important;
+    border-radius: 2px !important;
+  }
+
   .uae-programme-structure-section {
     padding: 4rem 0 0 0;
   }
@@ -1442,5 +1566,28 @@
 
   .intakes-section-title {
     font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .uae-structure-dots {
+    gap: 0.25rem;
+    margin-top: 1.25rem;
+  }
+
+  .uae-structure-dots .uae-dot {
+    width: 3.5px !important;
+    height: 3.5px !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    max-width: 3.5px !important;
+    max-height: 3.5px !important;
+  }
+
+  .uae-structure-dots .uae-dot.active {
+    width: 8px !important;
+    height: 3.5px !important;
+    max-width: 8px !important;
+    max-height: 3.5px !important;
   }
 }

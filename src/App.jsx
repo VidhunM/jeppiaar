@@ -72,8 +72,11 @@ function AppLayout() {
           <Route path="/walkin" element={<Walkin />} />
           <Route path="/uae-walkin" element={<WalkinUae />} />
           <Route path="/admission-form-download" element={<ProspectDownload />} />
-          {/* Backward compatible route */}
+          {/* Backward compatible & alias routes */}
           <Route path="/prospect-download" element={<Navigate to="/admission-form-download" replace />} />
+          <Route path="/admissions" element={<Navigate to="/admission-procedure" replace />} />
+          <Route path="/admission" element={<Navigate to="/admission-procedure" replace />} />
+          <Route path="/admission-form" element={<Navigate to="/admission-form-download" replace />} />
         </Routes>
       </main>
       <Footer />

@@ -25,12 +25,17 @@
   padding: 0 1.5rem;
 }
 
+.courses-page-premium .cw-banner,
 .cw-banner {
   background: #0E0529;
-  padding: 3.5rem 0;
+  padding: 3.5rem 1rem;
   width: 100%;
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
 }
 
+.courses-page-premium .cw-banner-title,
 .cw-banner-title {
   font-size: clamp(1.3rem, 3.5vw, 2rem);
   font-weight: 700;
@@ -1015,15 +1020,72 @@
   }
 }
 
+@media (max-width: 992px) {
+  .courses-page-premium {
+    padding-top: calc(110px + env(safe-area-inset-top, 0px)) !important;
+  }
+  .courses-page-premium .cw-banner {
+    padding: 2.25rem 1rem;
+  }
+  .courses-page-premium .cw-banner-title {
+    font-size: 1.6rem;
+  }
+}
+
 @media (max-width: 768px) {
   .courses-page-premium {
-    padding-top: calc(75px + env(safe-area-inset-top, 0px)) !important;
+    padding-top: calc(95px + env(safe-area-inset-top, 0px)) !important;
+  }
+  .courses-page-premium .cw-banner {
+    padding: 1.75rem 1rem;
+  }
+  .courses-page-premium .cw-banner-title {
+    font-size: 1.35rem;
+    letter-spacing: 0.05em;
+    padding-top: 0.25rem;
+  }
+  .courses-page-premium .cw-hero {
+    padding: 1.25rem 0 2rem;
+  }
+  .courses-page-premium .cw-hero-row {
+    padding: 0 1rem;
+    margin-bottom: 1.25rem;
+  }
+  .courses-page-premium .cw-hero-image-wrap {
+    height: 240px;
+  }
+  .courses-page-premium .cw-hero-heading {
+    font-size: 1.35rem;
+    margin: 0 0 0.75rem;
+    padding: 0 0.5rem;
+  }
+  .courses-page-premium .cw-hero-intro {
+    padding: 0 0.5rem;
+    font-size: 0.95rem;
   }
 }
 
 @media (max-width: 480px) {
   .courses-page-premium {
-    padding-top: calc(65px + env(safe-area-inset-top, 0px)) !important;
+    padding-top: calc(88px + env(safe-area-inset-top, 0px)) !important;
+  }
+  .courses-page-premium .cw-banner {
+    padding: 1.5rem 0.75rem;
+  }
+  .courses-page-premium .cw-banner-title {
+    font-size: 1.15rem;
+    letter-spacing: 0.04em;
+    line-height: 1.35;
+    padding-top: 0.25rem;
+  }
+  .courses-page-premium .cw-hero-image-wrap {
+    height: 190px;
+  }
+  .courses-page-premium .cw-hero-heading {
+    font-size: 1.15rem;
+  }
+  .courses-page-premium .cw-hero-intro {
+    font-size: 0.9rem;
   }
 }
 

@@ -73,20 +73,58 @@
   color: #fff;
   border: none;
   border-radius: 10px;
-  padding: 0.85rem 1.2rem;
+  padding: 0.85rem 1.3rem;
   font-weight: 700;
+  font-size: 0.95rem;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(14, 5, 41, 0.15);
+}
+
+.prospect-action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(14, 5, 41, 0.25);
+}
+
+.prospect-action-btn.primary {
+  background: #0E0529;
+  color: #ffffff;
+}
+
+.prospect-action-btn.primary:hover {
+  background: #1a0a3d;
+}
+
+.prospect-action-btn.accent {
+  background: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+.prospect-action-btn.accent:hover {
+  background: #1d4ed8;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
 }
 
 .prospect-action-btn.secondary {
   background: transparent;
   color: #0E0529;
   border: 2px solid #0E0529;
+  box-shadow: none;
+}
+
+.prospect-action-btn.secondary:hover {
+  background: rgba(14, 5, 41, 0.06);
 }
 
 .prospect-action-btn:disabled {
   opacity: 0.65;
   cursor: not-allowed;
+  transform: none;
 }
 
 .prospect-action-hint {

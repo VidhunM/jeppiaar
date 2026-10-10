@@ -52,7 +52,7 @@ const AdmissionProcedure = () => {
             <div className="admission-subcard">
               <h3 className="admission-subcard-title">Offline Application</h3>
               <ul className="admission-bullets">
-                <li>Purchase Application Form & Brochure for ₹250 from the Admissions Desk at Jeppiaar Academy.</li>
+                <li>Purchase Application Form & Brochure for ₹250 from the Admissions Desk at Jeppiaar Academy, or <Link to="/admission-form-download" className="admission-link" style={{ fontWeight: 600 }}>Download / Print the Application Form Online</Link>.</li>
                 <li>Submit the completed application form along with the following documents:</li>
               </ul>
               <h4 className="admission-subcard-title">Required Documents (Photocopies only)</h4>

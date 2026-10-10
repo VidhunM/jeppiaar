@@ -1,7 +1,8 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import './ProspectDownload.css';
 import Logo1 from '../assets/icons/Logo1.png';
+import admissionFormPdfUrl from '../assets/images/Student_Admission_Form_2026.pdf';
 
 const ProspectDownload = () => {
   const formRef = useRef(null);
@@ -10,6 +11,17 @@ const ProspectDownload = () => {
   const autoTriggeredRef = useRef(false);
 
   const handlePrint = useCallback(() => window.print(), []);
+
+  const handleDownloadOfficialPdf = useCallback(() => {
+    const a = document.createElement('a');
+    a.href = admissionFormPdfUrl;
+    a.download = 'Student_Admission_Form_2026.pdf';
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+  }, []);
 
   const handleDownloadPdf = useCallback(async () => {
     if (!formRef.current) return;
@@ -48,13 +60,16 @@ const ProspectDownload = () => {
         .set(opt)
         .from(el)
         .save();
+    } catch (err) {
+      console.warn('html2pdf generation error, falling back to static PDF download:', err);
+      handleDownloadOfficialPdf();
     } finally {
       if (formRef.current) {
         formRef.current.classList.remove('pdf-export');
       }
       setIsGenerating(false);
     }
-  }, []);
+  }, [handleDownloadOfficialPdf]);
 
   useEffect(() => {
     const params = new URLSearchParams(location.search);
@@ -62,20 +77,20 @@ const ProspectDownload = () => {
     if (!shouldAuto || autoTriggeredRef.current) return;
     autoTriggeredRef.current = true;
 
-    // Let the form render before capturing to PDF
+    // Trigger instant official PDF download if auto param is present
     const t = setTimeout(() => {
-      handleDownloadPdf();
+      handleDownloadOfficialPdf();
     }, 200);
 
     return () => clearTimeout(t);
-  }, [location.search, handleDownloadPdf]);
+  }, [location.search, handleDownloadOfficialPdf]);
 
   return (
     <div className="prospect-download-page">
       <section className="prospect-page-banner no-print">
         <div className="container">
           <h1>Admission Form Download</h1>
-          <p>Student Admission Form 2026</p>
+          <p>Student Admission Form 2026 (Offline Application & Printable Copy)</p>
         </div>
       </section>
       
@@ -85,19 +100,29 @@ const ProspectDownload = () => {
             <div className="prospect-actions no-print">
               <div className="prospect-action-buttons">
                 <button
-                  className="prospect-action-btn"
+                  className="prospect-action-btn primary"
                   type="button"
-                  onClick={handleDownloadPdf}
-                  disabled={isGenerating}
+                  onClick={handleDownloadOfficialPdf}
                 >
-                  {isGenerating ? 'Generating PDF…' : 'Download PDF'}
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: '6px' }}>
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  Download PDF Form
                 </button>
+                <Link className="prospect-action-btn accent" to="/apply-online">
+                  Apply Online (India)
+                </Link>
+                <Link className="prospect-action-btn secondary" to="/admission-procedure">
+                  Admission Procedure
+                </Link>
                 <button className="prospect-action-btn secondary" type="button" onClick={handlePrint}>
                   Print
                 </button>
               </div>
               <p className="prospect-action-hint">
-                Tip: On mobile, choose your browser menu → Print → “Save as PDF”.
+                You can download the PDF to fill and submit offline, or click "Apply Online" to submit digitally.
               </p>
             </div>
 

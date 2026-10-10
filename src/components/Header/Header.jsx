@@ -91,7 +91,7 @@ const Header = () => {
         clickedElement.closest('#courses-dropdown') ||
         clickedElement.closest('[aria-controls="courses-dropdown"]');
 
-      // Don't close if clicking inside the diploma dropdown area
+      // Don't close if clicking inside the respective dropdown area
       if (isDropdownOpen && !clickedInsideDiploma) {
         setIsDropdownOpen(false);
         setIsDropdownClicked(false);
@@ -406,6 +406,13 @@ const Header = () => {
                 </div>
               )}
             </div>
+
+            <Link
+              to="/admission-procedure"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Admission
+            </Link>
             <Link
               to="/uae-campus"
               onClick={() => setIsMobileMenuOpen(false)}
