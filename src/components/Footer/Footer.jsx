@@ -121,7 +121,7 @@ const Footer = () => {
               <li><Link to="/counselling-organizational-psychology">Advanced Diploma in Counselling and Organizational Psychology</Link></li>
               <li><Link to="/counselling-forensic-psychology">Advanced Diploma in Counselling and Forensic Psychology</Link></li>
               <li><Link to="/counselling-art-therapy">Advanced Diploma in Art Therapy</Link></li>
-              <li><Link to="/admission-procedure">Admissions 2026</Link></li>
+              <li><Link to="/admission-procedure">Admissions 2027</Link></li>
               <li><Link to="/admission-form-download">Download Admission Form</Link></li>
             </ul>
           </div>

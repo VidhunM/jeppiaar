@@ -110,7 +110,7 @@ const AdmissionProcedure = () => {
             </div>
 
             <div className="admission-notes">
-              <p className="admission-step-text"><strong>The last date for submission of admission application form is 15th April 2026.</strong></p>
+              <p className="admission-step-text"><strong>The last date for submission of admission application form is 15th April 2027.</strong></p>
             </div>
 
             <h2 className="section-heading section-heading-spaced">Step 3: Eligibility Screening</h2>
@@ -158,40 +158,40 @@ const AdmissionProcedure = () => {
             <div className="admission-eligibility-card">
               <h2 className="section-heading">Eligibility</h2>
               <ul className="admission-bullets">
-                UG / PG completed in any discipline on or before 15th June 2026.
-                              </ul>
+                <li>UG / PG completed in any discipline on or before 15th June 2027.</li>
+              </ul>
             </div>
             <div className="admission-subcard">
               <h3 className="admission-subcard-title">1. Advanced Diploma in Counselling and Child Psychology</h3>
               <ul className="admission-bullets">
-                <li>Weekday batch commence on 15th July 2026</li>
-                <li>Weekend batch commence on 20th June 2026</li>
+                <li>Weekday batch commence on 15th July 2027</li>
+                <li>Weekend batch commence on 19th June 2027</li>
               </ul>
             </div>
             <div className="admission-subcard">
               <h3 className="admission-subcard-title">2. Advanced Diploma in Counselling & Organizational Psychology</h3>
               <ul className="admission-bullets">
-                <li>Weekday batch commence on 15th July 2026</li>
-                <li>Weekend batch commence on 20th June 2026</li>
+                <li>Weekday batch commence on 15th July 2027</li>
+                <li>Weekend batch commence on 19th June 2027</li>
               </ul>
             </div>
             <div className="admission-subcard">
               <h3 className="admission-subcard-title">3. Advanced Diploma in Counselling & Forensic Psychology</h3>
               <ul className="admission-bullets">
-                <li>Weekday batch commence on 15th July 2026</li>
-                <li>Weekend batch commence on 20th June 2026</li>
+                <li>Weekday batch commence on 15th July 2027</li>
+                <li>Weekend batch commence on 19th June 2027</li>
               </ul>
             </div>
             <div className="admission-subcard">
               <h3 className="admission-subcard-title">4. Advanced Diploma in Art Therapy</h3>
               <ul className="admission-bullets">
-                <li>Friday Batch commence on 19th June 2026</li>
-                <li>Saturday Batch commence on 20th June 2026</li>
+                <li>Friday Batch commence on 18th June 2027</li>
+                <li>Saturday Batch commence on 19th June 2027</li>
               </ul>
             </div>
 
             <div className="admission-notes">
-              <p className="admission-step-text"><strong>The last date for submission of admission application form is 15th April 2026.</strong></p>
+              <p className="admission-step-text"><strong>The last date for submission of admission application form is 15th April 2027.</strong></p>
             </div>
 
             <p className="admission-step-text">Note: The decision of the Admission Committee is final and binding in all matters related to the admission process and selection.</p>

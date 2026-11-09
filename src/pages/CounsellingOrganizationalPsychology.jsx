@@ -149,7 +149,21 @@ const CounsellingOrganizationalPsychology = () => {
             <div className="overview-text">
               <h1 className="overview-title">ADVANCED DIPLOMA IN COUNSELLING & ORGANIZATIONAL PSYCHOLOGY</h1>
               <p>
-                The Advanced Diploma in Counselling and Organizational Psychology equips learners with core counselling and workplace assessment skills. The program builds a strong foundation in organizational behaviour, employee motivation, well-being and performance while fostering ethical and culturally sensitive counselling and coaching practices. Through supervised practicum, organizational case studies, and HR-focused field exposure, learners become reflective practitioners capable of enhancing employee mental health, engagement, and productivity across diverse workplaces.
+                The Advanced Diploma in Counselling
+                and Organizational Psychology builds
+                strong counselling and workplace
+                psychology skills to support employee
+                well-being and performance. The
+                programme covers organizational
+                behaviour, employee engagement,
+                assessment methods, and ethics,
+                preparing learners for roles in
+                HR, workplace counselling, and
+                organizational development. Through
+                practicum and case-based learning,
+                students gain practical skills to
+                promote mental health, productivity,
+                and organizational effectiveness.
               </p>
               <button className="enroll-now-btn" onClick={openApplyModal}>Enroll Now</button>
             </div>
@@ -180,21 +194,21 @@ const CounsellingOrganizationalPsychology = () => {
                   <div className="batch-icon"></div>
                   <h3>Batch 1</h3>
                   <ul className="batch-details">
-                  <li>Weekday Evening Batch</li >
+                    <li>Weekday Evening Batch</li >
                     <li>Monday - Thursday</li>
                     <li>2:00 PM - 6:00 PM</li>
-                    <li>Classes start on July 15</li>
-                    
+                    <li>Classes start on July 14</li>
+
                   </ul>
                 </div>
                 <div className="batch-box">
                   <div className="batch-icon"></div>
                   <h3>Batch 2</h3>
                   <ul className="batch-details">
-                  <li>Weekend Evening Batch</li>
-                  <li>Saturday & Sunday</li>
-                  <li>2:00 PM - 8:00 PM</li>
-                  <li>Classes start on June 20</li>
+                    <li>Weekend Evening Batch</li>
+                    <li>Saturday & Sunday</li>
+                    <li>2:00 PM - 8:00 PM</li>
+                    <li>Classes start on June 19</li>
                   </ul>
                 </div>
               </div>
@@ -243,7 +257,7 @@ const CounsellingOrganizationalPsychology = () => {
           <h2 className="section-title">LEARNING OUTCOMES</h2>
           <div className="outcomes-box">
             <ul className="outcomes-list">
-            <li>Receive skill-based training in evidence-based and integrative approaches including Cognitive Behavioural Therapy (CBT), Solution-Focused Brief Therapy (SFBT), Neuro-Linguistic Programming (NLP), Mindfulness-Based Therapy, Emotion-Freedom Technique (EFT), and Marital Counselling.</li> 
+              <li>Receive skill-based training in evidence-based and integrative approaches including Cognitive Behavioural Therapy (CBT), Solution-Focused Brief Therapy (SFBT), Neuro-Linguistic Programming (NLP), Mindfulness-Based Therapy, Emotion-Freedom Technique (EFT), and Marital Counselling.</li>
               <li>Gain practical counselling skills for workplace and organizational settings</li>
               <li>Learn to assess and address employee behaviour, motivation, performance, and well-being</li>
               <li>Practice ethical, culturally sensitive, and employee-centered counselling and coaching approaches</li>
@@ -315,7 +329,7 @@ const CounsellingOrganizationalPsychology = () => {
             <li>
               <span className="skill-checkmark">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="white"/>
+                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="white" />
                 </svg>
               </span>
               <span className="skill-text">
@@ -325,7 +339,7 @@ const CounsellingOrganizationalPsychology = () => {
             <li>
               <span className="skill-checkmark">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="white"/>
+                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="white" />
                 </svg>
               </span>
               <span className="skill-text">
@@ -335,7 +349,7 @@ const CounsellingOrganizationalPsychology = () => {
             <li>
               <span className="skill-checkmark">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="white"/>
+                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="white" />
                 </svg>
               </span>
               <span className="skill-text">
@@ -345,7 +359,7 @@ const CounsellingOrganizationalPsychology = () => {
             <li>
               <span className="skill-checkmark">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="white"/>
+                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="white" />
                 </svg>
               </span>
               <span className="skill-text">
@@ -355,7 +369,7 @@ const CounsellingOrganizationalPsychology = () => {
             <li>
               <span className="skill-checkmark">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="white"/>
+                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="white" />
                 </svg>
               </span>
               <span className="skill-text">
@@ -365,7 +379,7 @@ const CounsellingOrganizationalPsychology = () => {
             <li>
               <span className="skill-checkmark">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="white"/>
+                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="white" />
                 </svg>
               </span>
               <span className="skill-text">
@@ -387,8 +401,8 @@ const CounsellingOrganizationalPsychology = () => {
             <div className="career-carousel-container">
               <div className="career-cards-slider">
                 {careers.map((career, index) => (
-                  <div 
-                    key={index} 
+                  <div
+                    key={index}
                     className="career-card"
                   >
                     <div className="career-image">
@@ -441,7 +455,7 @@ const CounsellingOrganizationalPsychology = () => {
               <div className="faq-items">
                 {faqs.map((faq, index) => (
                   <div key={index} className="faq-item">
-                    <div 
+                    <div
                       className="faq-question"
                       onClick={() => toggleFaq(index)}
                     >
@@ -458,8 +472,8 @@ const CounsellingOrganizationalPsychology = () => {
               </div>
             </div>
             <div className="faq-image scroll-from-right">
-              <img 
-                src={image2} 
+              <img
+                src={image2}
                 alt="Student studying"
                 onError={(e) => {
                   e.target.onerror = null;

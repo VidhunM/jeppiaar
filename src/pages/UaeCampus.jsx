@@ -1,25 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import LeadGeneration from '../components/LeadGeneration/LeadGeneration';
 import './UaeCampus.css';
 import admissionFormPdfUrl from '../assets/images/Student_Admission_Form_2026.pdf';
 import uaeBrochurePdf from '../assets/images/AURA ACADEMIA - UAE Broucher.pdf';
+import LeadGeneration from '../components/LeadGeneration/LeadGeneration';
 import uaeImage from '../assets/images/uae.jpeg';
 import hero8Image from '../assets/images/hero8.JPG';
+import hero9Image from '../assets/images/uae3.jpeg';
 import hero6Image from '../assets/images/hero6.JPG';
 import hero7Image from '../assets/images/hero7.JPG';
-import hero5Image from '../assets/images/hero5.png';
+import hero5Image from '../assets/images/uae1.png';
 
 const UaeCampus = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [structureSlide, setStructureSlide] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
-  const [touchStartX, setTouchStartX] = useState(null);
-  const [touchEndX, setTouchEndX] = useState(null);
 
   const campusSlides = [
     {
-      image: uaeImage,
+      image: hero9Image,
       badge: 'Sharjah, UAE',
       title: 'Aura Academia Collaboration Center',
       description: 'Modern campus facilities located at Al Rayyan Complex, Sharjah, offering state-of-the-art psychology learning spaces.'
@@ -50,88 +47,12 @@ const UaeCampus = () => {
     }
   ];
 
-  const structureCards = [
-    {
-      icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-          <line x1="16" y1="2" x2="16" y2="6"></line>
-          <line x1="8" y1="2" x2="8" y2="6"></line>
-          <line x1="3" y1="10" x2="21" y2="10"></line>
-        </svg>
-      ),
-      title: 'Programme Duration',
-      primaryText: 'Six Months',
-      subDetail: 'Total Hours: 150 hours (inclusive of 30 hours internship with Dr. Saranya Jaikumar and team)'
-    },
-    {
-      icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-        </svg>
-      ),
-      title: 'Delivery Mode',
-      primaryText: 'Blended Learning Model',
-      subDetail: 'Comprising both offline classroom sessions at Sharjah, UAE and online learning through live classes and recorded sessions.'
-    },
-    {
-      icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <circle cx="12" cy="12" r="10"></circle>
-          <polyline points="12 6 12 12 16 14"></polyline>
-        </svg>
-      ),
-      title: 'Commencement',
-      primaryText: 'Programme Start Date',
-      commenceDate: '15th October 2026'
-    }
-  ];
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % campusSlides.length);
     }, 5000);
     return () => clearInterval(timer);
   }, [campusSlides.length]);
-
-  useEffect(() => {
-    if (!isMobile) return;
-    const timer = setInterval(() => {
-      setStructureSlide((prev) => (prev + 1) % structureCards.length);
-    }, 4000);
-    return () => clearInterval(timer);
-  }, [isMobile, structureCards.length]);
-
-  const handleTouchStart = (e) => {
-    setTouchStartX(e.targetTouches[0].clientX);
-  };
-
-  const handleTouchMove = (e) => {
-    setTouchEndX(e.targetTouches[0].clientX);
-  };
-
-  const handleTouchEnd = () => {
-    if (!touchStartX || !touchEndX) return;
-    const distance = touchStartX - touchEndX;
-    const minSwipeDistance = 50;
-    if (distance > minSwipeDistance) {
-      setStructureSlide((prev) => (prev + 1) % structureCards.length);
-    } else if (distance < -minSwipeDistance) {
-      setStructureSlide((prev) => (prev - 1 + structureCards.length) % structureCards.length);
-    }
-    setTouchStartX(null);
-    setTouchEndX(null);
-  };
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % campusSlides.length);
@@ -150,6 +71,19 @@ const UaeCampus = () => {
     document.body.appendChild(a);
     a.click();
     a.remove();
+  };
+
+   const showConstructionPopup = () => {
+    setShowUnderConstruction(true);
+  };
+
+    const handleApplySubmit = async (e) => {
+    e.preventDefault();
+    // Handle form submission here
+    console.log('Apply form submitted:', applyForm);
+    // You can add API call here similar to LeadGeneration component
+    alert('Thank you for your interest! We will contact you soon.');
+    closeApplyModal();
   };
 
   const handleDownloadBrochure = () => {
@@ -221,8 +155,7 @@ const UaeCampus = () => {
           </div>
         </div>
       </section>
-
-      <section className="admission-procedure-hero uae-campus-hero">
+<section className="admission-procedure-hero uae-campus-hero">
         <div className="container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <span className="uae-hero-subtitle">International Collaboration</span>
 
@@ -256,7 +189,7 @@ const UaeCampus = () => {
           </div>
         </div>
       </section>
-
+      
       <section className="uae-who-we-are-section">
         <div className="container">
           <div className="uae-who-we-are-grid">
@@ -284,6 +217,7 @@ const UaeCampus = () => {
         </div>
       </section>
 
+    
       <section className="uae-course-offering-section">
         <div className="container">
           <div className="uae-section-header">
@@ -568,56 +502,45 @@ const UaeCampus = () => {
           <span className="uae-section-subtitle">PROGRAMME STRUCTURE</span>
           <h2 className="uae-structure-title">Diploma in Counselling and Child Psychology</h2>
 
-          {isMobile ? (
-            <div 
-              className="uae-structure-mobile-slider-container"
-              onTouchStart={handleTouchStart}
-              onTouchMove={handleTouchMove}
-              onTouchEnd={handleTouchEnd}
-            >
-              <div 
-                className="uae-structure-mobile-slider-track" 
-                style={{ transform: `translateX(-${structureSlide * 100}%)` }}
-              >
-                {structureCards.map((card, idx) => (
-                  <div key={idx} className="structure-card uae-structure-slide">
-                    <div className="structure-card-icon">
-                      {card.icon}
-                    </div>
-                    <h3>{card.title}</h3>
-                    <p><strong>{card.primaryText}</strong></p>
-                    {card.subDetail && <p className="sub-detail">{card.subDetail}</p>}
-                    {card.commenceDate && <p className="commence-date">{card.commenceDate}</p>}
-                  </div>
-                ))}
+          <div className="uae-structure-grid">
+            <div className="structure-card">
+              <div className="structure-card-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
               </div>
+              <h3>Programme Duration</h3>
+              <p><strong>Six Months</strong></p>
+              <p className="sub-detail">Total Hours: 150 hours (inclusive of 30 hours internship with Dr. Saranya Jaikumar and team)</p>
+            </div>
 
-              <div className="uae-structure-dots">
-                {structureCards.map((_, idx) => (
-                  <button
-                    key={idx}
-                    className={`uae-dot ${idx === structureSlide ? 'active' : ''}`}
-                    onClick={() => setStructureSlide(idx)}
-                    aria-label={`Go to structure slide ${idx + 1}`}
-                  />
-                ))}
+            <div className="structure-card">
+              <div className="structure-card-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                </svg>
               </div>
+              <h3>Delivery Mode</h3>
+              <p><strong>Blended Learning Model</strong></p>
+              <p className="sub-detail">Comprising both offline classroom sessions at Sharjah, UAE and online learning through live classes and recorded sessions.</p>
             </div>
-          ) : (
-            <div className="uae-structure-grid">
-              {structureCards.map((card, idx) => (
-                <div key={idx} className="structure-card">
-                  <div className="structure-card-icon">
-                    {card.icon}
-                  </div>
-                  <h3>{card.title}</h3>
-                  <p><strong>{card.primaryText}</strong></p>
-                  {card.subDetail && <p className="sub-detail">{card.subDetail}</p>}
-                  {card.commenceDate && <p className="commence-date">{card.commenceDate}</p>}
-                </div>
-              ))}
+
+            <div className="structure-card">
+              <div className="structure-card-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <h3>Commencement</h3>
+              <p><strong>Programme Start Date</strong></p>
+              <p className="commence-date">15th October 2026</p>
             </div>
-          )}
+          </div>
 
           <div className="uae-intakes-container">
             <h3 className="intakes-section-title">Proposed Student Intake</h3>
@@ -669,12 +592,10 @@ const UaeCampus = () => {
             </div>
           </div>
         </div>
-      </section>
-
-      <LeadGeneration />
-
-      <section className="uae-study-materials-banner">
-        <p>All the study materials and manuals will be provided to all the students</p>
+<LeadGeneration onShowConstructionPopup={showConstructionPopup} />
+        <div className="uae-study-materials-banner">
+          <p>All the study materials and manuals will be provided to all the students</p>
+        </div>
       </section>
     </div>
   );

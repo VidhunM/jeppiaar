@@ -140,6 +140,11 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection, onOpenA
             </div>
 
             <div className="hero-sidebar desktop-only">
+              <div className="admission-glass" aria-label="Admission 2027">
+                <span className="admission-glass-kicker">Admission</span>
+                <span className="admission-glass-year">2027</span>
+                <span className="admission-glass-status">Now Open</span>
+              </div>
               <button
                 className="apply-now-btn"
                 onClick={() => {
@@ -168,6 +173,11 @@ const HeroSection = ({ onShowConstructionPopup, onScrollToCareerSection, onOpenA
                 </h1>
                 <p className="tagline-mobile">{slides[currentSlide].tagline}</p>
                 <p className="tagline-subtitle-mobile">(A unit of Sancta Maria Educational Trust)</p>
+                <div className="admission-glass admission-glass-mobile" aria-label="Admission 2027">
+                  <span className="admission-glass-kicker">Admission</span>
+                  <span className="admission-glass-year">2027</span>
+                  <span className="admission-glass-status">Now Open</span>
+                </div>
                 <button
                   className="apply-now-btn-mobile"
                   onClick={() => {

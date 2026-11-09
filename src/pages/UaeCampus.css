@@ -119,13 +119,11 @@
 }
 
 .jeppiaar-card {
-  border-left: 4px solid #1A1260;
-  /* Deep navy accent */
+  border-left: 4px solid #1A1260; /* Deep navy accent */
 }
 
 .aura-card {
-  border-left: 4px solid #5A556A;
-  /* Slate accent */
+  border-left: 4px solid #5A556A; /* Slate accent */
 }
 
 .collab-card h3 {
@@ -159,7 +157,7 @@
 .connector-line {
   width: 2px;
   height: 25px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
+  background: linear-gradient(180deg, rgba(255,255,255,0.1), rgba(255,255,255,0.3));
 }
 
 .collab-text {
@@ -181,8 +179,7 @@
 .collab-programme-banner h2 {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #ffffff;
-  /* gold to white */
+  color: #ffffff; /* gold to white */
   text-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
   margin: 0;
   letter-spacing: 0.5px;
@@ -194,24 +191,24 @@
     flex-direction: column;
     gap: 1rem;
   }
-
+  
   .collab-connector {
     min-width: unset;
     width: 100%;
     margin: 0.5rem 0;
   }
-
+  
   .connector-line {
     display: none;
   }
-
+  
   .collab-text {
     background: rgba(255, 255, 255, 0.05);
     padding: 0.35rem 1rem;
     border-radius: 20px;
     font-size: 0.85rem;
   }
-
+  
   .collab-card {
     width: 100%;
     padding: 1.75rem 1.5rem;
@@ -220,7 +217,7 @@
   .collab-card h3 {
     font-size: 1.15rem;
   }
-
+  
   .collab-programme-banner h2 {
     font-size: 1.35rem;
   }
@@ -305,7 +302,6 @@
     opacity: 0;
     transform: translateY(20px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
@@ -398,61 +394,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
-  margin-top: 1.25rem;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
 }
 
 .uae-dot {
-  width: 8px;
-  height: 8px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background: #cbd5e1;
   border: none;
-  outline: none;
-  padding: 0;
-  margin: 0;
-  min-width: 0;
-  min-height: 0;
-  line-height: 0;
   cursor: pointer;
   transition: all 0.3s ease;
-  appearance: none;
-  -webkit-appearance: none;
-  display: block;
 }
 
 .uae-dot.active {
-  width: 20px;
-  height: 8px;
-  border-radius: 4px;
+  width: 32px;
+  border-radius: 10px;
   background: #0E0529;
-}
-
-@media (max-width: 991px) {
-  .uae-slider-dots {
-    gap: 0.35rem !important;
-    margin-top: 0.85rem !important;
-  }
-
-  .uae-dot {
-    width: 4px !important;
-    height: 4px !important;
-    min-width: 0 !important;
-    min-height: 0 !important;
-    max-width: 4px !important;
-    max-height: 4px !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    border-radius: 50% !important;
-  }
-
-  .uae-dot.active {
-    width: 10px !important;
-    height: 4px !important;
-    max-width: 10px !important;
-    max-height: 4px !important;
-    border-radius: 2px !important;
-  }
 }
 
 @media (max-width: 768px) {
@@ -488,33 +447,6 @@
 
   .uae-slider-nav.next {
     right: 0.75rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .uae-slider-dots {
-    gap: 0.25rem !important;
-    margin-top: 0.6rem !important;
-  }
-
-  .uae-dot {
-    width: 3.5px !important;
-    height: 3.5px !important;
-    min-width: 0 !important;
-    min-height: 0 !important;
-    max-width: 3.5px !important;
-    max-height: 3.5px !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    border-radius: 50% !important;
-  }
-
-  .uae-dot.active {
-    width: 8px !important;
-    height: 3.5px !important;
-    max-width: 8px !important;
-    max-height: 3.5px !important;
-    border-radius: 2px !important;
   }
 }
 
@@ -584,10 +516,10 @@
 
 .uae-vertical-image-wrapper {
   width: 100%;
-  max-width: 480px;
+  max-width: 420px;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
   border: 1px solid #eef0f6;
   background: #f8f9fc;
 }
@@ -596,7 +528,9 @@
   width: 100%;
   height: auto;
   display: block;
-  object-fit: contain;
+  object-fit: cover;
+  min-height: 480px;
+  max-height: 600px;
 }
 
 @media (max-width: 1024px) {
@@ -604,11 +538,9 @@
     grid-template-columns: 1fr;
     gap: 3rem;
   }
-
   .uae-who-we-are-title {
     text-align: center;
   }
-
   .uae-who-we-are-separator {
     margin: 0 auto 2.5rem auto;
   }
@@ -622,17 +554,17 @@
   .uae-who-we-are-section {
     padding: 3rem 1.5rem;
   }
-
+  
   .uae-who-we-are-title {
     font-size: 1.8rem;
   }
-
+  
   .uae-who-we-are-text {
     font-size: 1.05rem !important;
     text-align: justify;
     text-align-last: left;
   }
-
+  
   .uae-who-we-are-text.highlight-text {
     font-size: 1.15rem !important;
   }
@@ -885,24 +817,24 @@
   .uae-course-offering-section {
     padding: 4rem 0;
   }
-
+  
   .uae-course-offering-section .container {
     padding: 0 1.5rem;
   }
-
+  
   .uae-collab-badge-wrapper {
     margin-bottom: 2rem;
   }
-
+  
   .uae-collab-badge {
     font-size: 0.9rem;
     padding: 0.75rem 1.25rem;
   }
-
+  
   .uae-course-title {
     font-size: 1.9rem;
   }
-
+  
   .uae-location-info {
     font-size: 0.95rem;
     padding: 0.85rem 1.1rem;
@@ -910,27 +842,27 @@
     align-items: flex-start;
     gap: 0.35rem;
   }
-
+  
   .uae-learning-outcomes {
     padding: 1.75rem 1.5rem;
   }
-
+  
   .uae-learning-outcomes h3 {
     font-size: 1.2rem;
   }
-
+  
   .objective-text {
     font-size: 0.98rem;
   }
-
+  
   .uae-infrastructure-card {
     padding: 2.25rem 1.75rem;
   }
-
+  
   .uae-infrastructure-card h3 {
     font-size: 1.5rem;
   }
-
+  
   .uae-infrastructure-card p {
     font-size: 1.05rem !important;
     line-height: 1.6;
@@ -1105,24 +1037,24 @@
   .uae-about-programme-section {
     padding: 4rem 0;
   }
-
+  
   .uae-about-programme-section .container {
     padding: 0 1.5rem;
   }
-
+  
   .uae-programme-title {
     font-size: 1.9rem;
   }
-
+  
   .uae-programme-description p {
     font-size: 1.05rem !important;
     line-height: 1.6;
   }
-
+  
   .uae-details-card {
     padding: 2.25rem 1.75rem;
   }
-
+  
   .hours-breakdown li {
     flex-direction: column;
     align-items: flex-start;
@@ -1254,15 +1186,17 @@
 
 .uae-study-materials-banner {
   background: #ffffff;
-  color: #1a1919;
+  color: #1A1260;
   padding: 3rem 2rem;
   text-align: center;
   position: relative;
   overflow: hidden;
-  margin: 0;
-  width: 100%;
+  margin-top: auto;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  width: 100vw;
   box-sizing: border-box;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-top: 4px solid #1A1260;
 }
 
 .uae-study-materials-banner p {
@@ -1271,7 +1205,7 @@
   font-weight: 700;
   margin: 0;
   letter-spacing: 0.5px;
-  color: #221f1f;
+  color: #1A1260;
   text-transform: uppercase;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
@@ -1287,28 +1221,28 @@
   .uae-skills-careers-section {
     padding: 4rem 0 0 0;
   }
-
+  
   .uae-skills-careers-section .container {
     padding: 0 1.5rem;
   }
-
+  
   .uae-skills-list {
     grid-template-columns: 1fr;
     gap: 1.25rem;
   }
-
+  
   .skill-item-text {
     font-size: 1.05rem;
   }
-
+  
   .uae-careers-card {
     padding: 2.25rem 1.75rem;
   }
-
+  
   .career-text {
     font-size: 1.05rem;
   }
-
+  
   .uae-study-materials-banner p {
     font-size: 1.15rem !important;
     line-height: 1.4;
@@ -1482,16 +1416,12 @@
   font-weight: 500;
 }
 
-.uae-structure-mobile-slider-container {
-  display: none;
-}
-
 @media (max-width: 1024px) {
   .uae-structure-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-
+  
   .intakes-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -1499,95 +1429,25 @@
 }
 
 @media (max-width: 768px) {
-  .uae-structure-grid {
-    display: none;
-  }
-
-  .uae-structure-mobile-slider-container {
-    display: block;
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    margin-bottom: 3.5rem;
-    padding: 0.25rem 0;
-  }
-
-  .uae-structure-mobile-slider-track {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 100%;
-  }
-
-  .uae-structure-slide {
-    flex: 0 0 100%;
-    width: 100%;
-    min-width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-    margin: 0;
-  }
-
-  .uae-structure-dots {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.35rem;
-    margin-top: 1.5rem;
-  }
-
-  .uae-structure-dots .uae-dot {
-    width: 4px !important;
-    height: 4px !important;
-    min-width: 0 !important;
-    min-height: 0 !important;
-    max-width: 4px !important;
-    max-height: 4px !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    border-radius: 50% !important;
-  }
-
-  .uae-structure-dots .uae-dot.active {
-    width: 10px !important;
-    height: 4px !important;
-    max-width: 10px !important;
-    max-height: 4px !important;
-    border-radius: 2px !important;
-  }
-
   .uae-programme-structure-section {
     padding: 4rem 0 0 0;
   }
-
+  
   .uae-structure-title {
     font-size: 1.9rem;
     margin-bottom: 2.5rem;
   }
-
+  
   .intakes-section-title {
     font-size: 1.5rem;
   }
 }
 
-@media (max-width: 480px) {
-  .uae-structure-dots {
-    gap: 0.25rem;
-    margin-top: 1.25rem;
-  }
 
-  .uae-structure-dots .uae-dot {
-    width: 3.5px !important;
-    height: 3.5px !important;
-    min-width: 0 !important;
-    min-height: 0 !important;
-    max-width: 3.5px !important;
-    max-height: 3.5px !important;
-  }
 
-  .uae-structure-dots .uae-dot.active {
-    width: 8px !important;
-    height: 3.5px !important;
-    max-width: 8px !important;
-    max-height: 3.5px !important;
-  }
-}
+
+
+
+
+
+

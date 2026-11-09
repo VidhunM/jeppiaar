@@ -276,6 +276,78 @@
   z-index: 3;
 }
 
+.admission-glass {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 168px;
+  padding: 1.15rem 1.35rem 1.05rem;
+  border-radius: 22px;
+  color: #ffffff;
+  text-align: center;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow:
+    0 16px 40px rgba(14, 5, 41, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55);
+  animation: fadeInRight 0.8s ease-out 0.3s both;
+}
+
+.admission-glass::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.38) 0%, rgba(255, 255, 255, 0.08) 48%, rgba(14, 5, 41, 0.28) 100%);
+  backdrop-filter: blur(18px) saturate(1.4);
+  -webkit-backdrop-filter: blur(18px) saturate(1.4);
+}
+
+.admission-glass::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 12%;
+  width: 76%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.9), transparent);
+}
+
+.admission-glass-kicker {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  line-height: 1;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
+}
+
+.admission-glass-year {
+  margin-top: 0.28rem;
+  font-size: 2.65rem;
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+}
+
+.admission-glass-status {
+  margin-top: 0.45rem;
+  padding-top: 0.4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+  width: 100%;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
+}
+
 .admission-box {
   background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(10px);
@@ -919,6 +991,36 @@
   .apply-now-btn-mobile:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .admission-glass-mobile {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.45rem;
+    min-width: 0;
+    margin: 0 0 0.75rem;
+    padding: 0.42rem 0.9rem;
+    border-radius: 999px;
+  }
+
+  .admission-glass-mobile .admission-glass-kicker,
+  .admission-glass-mobile .admission-glass-status {
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+  }
+
+  .admission-glass-mobile .admission-glass-year {
+    margin-top: 0;
+    font-size: 1.15rem;
+  }
+
+  .admission-glass-mobile .admission-glass-status {
+    width: auto;
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+    padding-left: 0.45rem;
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
   }
 
   .mobile-admission-info {
@@ -1572,6 +1674,20 @@
     font-size: 0.5rem;
     min-width: 90px;
     margin-bottom: 0.6rem;
+  }
+
+  .admission-glass-mobile {
+    padding: 0.32rem 0.7rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .admission-glass-mobile .admission-glass-year {
+    font-size: 1rem;
+  }
+
+  .admission-glass-mobile .admission-glass-kicker,
+  .admission-glass-mobile .admission-glass-status {
+    font-size: 0.58rem;
   }
 
   .admission-year-mobile {

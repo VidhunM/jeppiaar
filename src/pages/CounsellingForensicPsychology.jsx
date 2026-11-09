@@ -151,7 +151,22 @@ const CounsellingForensicPsychology = () => {
             <div className="overview-text">
               <h1 className="overview-title">ADVANCED DIPLOMA IN COUNSELLING & FORENSIC PSYCHOLOGY</h1>
               <p>
-                The Advanced Diploma in Counselling and Forensic Psychology builds essential knowledge in criminal behavior, legal processes, and forensic assessment. Learners develop competencies in offender evaluation, risk assessment, criminal profiling, and rehabilitation, rooted in ethical and evidence-based practice. Through supervised practicum, case studies, and field exposure in forensic and correctional settings, the program prepares practitioners to support criminal investigations, promote justice, and address mental health needs within legal systems.
+                The Advanced Diploma in Counselling
+                and Forensic Psychology provides a
+                strong foundation in criminal
+                behaviour, legal processes, and
+                forensic assessment. Learners
+                develop skills in offender evaluation,
+                risk assessment, criminal profiling,
+                and rehabilitation through ethical,
+                evidence-based practice. With
+                supervised practicum, case studies,
+                and field exposure in forensic and
+                correctional settings, the programme
+                prepares students to support criminal
+                investigations, promote justice, and
+                address mental health needs within
+                the legal system.
               </p>
               <button className="enroll-now-btn" onClick={openApplyModal}>Enroll Now</button>
             </div>
@@ -182,20 +197,20 @@ const CounsellingForensicPsychology = () => {
                   <div className="batch-icon"></div>
                   <h3>Batch 1</h3>
                   <ul className="batch-details">
-                  <li>Weekday Morning Batch</li>
-                  <li>Monday - Thursday</li>
-                  <li>9:00 AM  -  1:00 PM</li>
-                  <li>Classes start on July 15</li>
+                    <li>Weekday Morning Batch</li>
+                    <li>Monday - Thursday</li>
+                    <li>9:00 AM  -  1:00 PM</li>
+                    <li>Classes start on July 14</li>
                   </ul>
                 </div>
                 <div className="batch-box">
                   <div className="batch-icon"></div>
                   <h3>Batch 2</h3>
                   <ul className="batch-details">
-                  <li>Weekend Evening Batch</li>
-                  <li>Saturday & Sunday</li>
-                  <li>2:00 PM  - 8:00 PM</li>
-                  <li>Classes start on June 20</li>
+                    <li>Weekend Evening Batch</li>
+                    <li>Saturday & Sunday</li>
+                    <li>2:00 PM  - 8:00 PM</li>
+                    <li>Classes start on June 19</li>
                   </ul>
                 </div>
               </div>
@@ -244,7 +259,7 @@ const CounsellingForensicPsychology = () => {
           <h2 className="section-title">LEARNING OUTCOMES</h2>
           <div className="outcomes-box">
             <ul className="outcomes-list">
-            <li>Receive skill-based training in evidence-based and integrative approaches including Cognitive Behavioural Therapy (CBT), Solution-Focused Brief Therapy (SFBT), Neuro-Linguistic Programming (NLP), Mindfulness-Based Therapy, Emotion-Freedom Technique (EFT), and Marital Counselling.</li>
+              <li>Receive skill-based training in evidence-based and integrative approaches including Cognitive Behavioural Therapy (CBT), Solution-Focused Brief Therapy (SFBT), Neuro-Linguistic Programming (NLP), Mindfulness-Based Therapy, Emotion-Freedom Technique (EFT), and Marital Counselling.</li>
               <li>Build a strong foundation in psychological principles related to criminal behavior, legal processes, and forensic settings</li>
               <li>Learn to assess, understand, and manage offenders' behavior, motivation, risk factors, and mental health concerns</li>
               <li>Practice ethical, culturally sensitive, and evidence-based approaches in forensic assessment, criminal profiling, and rehabilitation</li>
@@ -316,7 +331,7 @@ const CounsellingForensicPsychology = () => {
             <li>
               <span className="skill-checkmark">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="white"/>
+                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="white" />
                 </svg>
               </span>
               <span className="skill-text">
@@ -326,7 +341,7 @@ const CounsellingForensicPsychology = () => {
             <li>
               <span className="skill-checkmark">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="white"/>
+                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="white" />
                 </svg>
               </span>
               <span className="skill-text">
@@ -336,7 +351,7 @@ const CounsellingForensicPsychology = () => {
             <li>
               <span className="skill-checkmark">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="white"/>
+                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="white" />
                 </svg>
               </span>
               <span className="skill-text">
@@ -346,7 +361,7 @@ const CounsellingForensicPsychology = () => {
             <li>
               <span className="skill-checkmark">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="white"/>
+                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="white" />
                 </svg>
               </span>
               <span className="skill-text">
@@ -356,7 +371,7 @@ const CounsellingForensicPsychology = () => {
             <li>
               <span className="skill-checkmark">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="white"/>
+                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="white" />
                 </svg>
               </span>
               <span className="skill-text">
@@ -366,7 +381,7 @@ const CounsellingForensicPsychology = () => {
             <li>
               <span className="skill-checkmark">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="white"/>
+                  <path d="M16.7071 5.29289C17.0976 5.68342 17.0976 6.31658 16.7071 6.70711L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071L3.29289 10.7071C2.90237 10.3166 2.90237 9.68342 3.29289 9.29289C3.68342 8.90237 4.31658 8.90237 4.70711 9.29289L8 12.5858L15.2929 5.29289C15.6834 4.90237 16.3166 4.90237 16.7071 5.29289Z" fill="white" />
                 </svg>
               </span>
               <span className="skill-text">
@@ -388,8 +403,8 @@ const CounsellingForensicPsychology = () => {
             <div className="career-carousel-container">
               <div className="career-cards-slider">
                 {careers.map((career, index) => (
-                  <div 
-                    key={index} 
+                  <div
+                    key={index}
                     className="career-card"
                   >
                     <div className="career-image">
@@ -442,7 +457,7 @@ const CounsellingForensicPsychology = () => {
               <div className="faq-items">
                 {faqs.map((faq, index) => (
                   <div key={index} className="faq-item">
-                    <div 
+                    <div
                       className="faq-question"
                       onClick={() => toggleFaq(index)}
                     >
@@ -459,8 +474,8 @@ const CounsellingForensicPsychology = () => {
               </div>
             </div>
             <div className="faq-image scroll-from-right">
-              <img 
-                src={image2} 
+              <img
+                src={image2}
                 alt="Student studying"
                 onError={(e) => {
                   e.target.onerror = null;

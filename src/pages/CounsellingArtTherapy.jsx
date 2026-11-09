@@ -154,7 +154,51 @@ const CounsellingArtTherapy = () => {
               <h1 className="overview-title">ADVANCED DIPLOMA IN ART THERAPY</h1>
               <p>
 
-                The Advanced Diploma in Art Therapy provides a strong foundation in therapeutic art practices and psychological principles to support emotional healing and mental well-being across age groups. The programme covers core concepts of psychology, expressive art techniques, emotional regulation strategies, and ethical standards, enabling learners to use art as a tool for self-awareness, communication, and coping. Students develop skills to facilitate self-expression, strengthen emotional insight, and support clients in managing stress, trauma, and behavioural concerns. Emphasis is placed on confidentiality, professional boundaries, and ethical practice in therapeutic relationships. Through practical applications and guided experiential learning, students gain the competence to work effectively in diverse settings such as schools, hospitals, rehabilitation centres, and private practice, preparing them for meaningful roles in creative and mental health services.
+                The Advanced Diploma in Art Therapy
+                provides a strong foundation in
+                therapeutic
+                art
+                practices
+                and
+                psychological principles to support
+                emotional
+                healing
+                and
+                mental
+                well-being across age groups. The
+                programme covers core concepts of
+                psychology, expressive art techniques,
+                emotional regulation strategies, and
+                ethical standards, enabling learners to
+                use art as a tool for self-awareness,
+                communication, and coping. Students
+                develop
+                skills
+                to
+                facilitate
+                self-expression, strengthen emotional
+                insight,
+                and
+                managing
+                support
+                stress,
+                clients
+                trauma,
+                and
+                behavioural concerns. Emphasis is
+                placed on confidentiality, professional
+                boundaries, and ethical practice in
+                therapeutic
+                relationships.
+                Through
+                practical applications and guided
+                experiential learning, students gain the
+                competence to work effectively in
+                diverse settings such as schools,
+                hospitals, rehabilitation centres, and
+                private practice, preparing them for
+                meaningful roles in creative and mental
+                health services.
 
               </p>
               <button className="enroll-now-btn" onClick={openApplyModal}>Enroll Now</button>
@@ -189,7 +233,7 @@ const CounsellingArtTherapy = () => {
                     <li>Weekend Evening Batch</li>
                     <li>Friday</li>
                     <li>2:00 PM - 8:00 PM</li>
-                    <li>Classes start on June 19</li>
+                    <li>Classes start on June 18</li>
                   </ul>
                 </div>
                 <div className="batch-box">
@@ -199,7 +243,7 @@ const CounsellingArtTherapy = () => {
                     <li>Weekend Morning Batch</li>
                     <li>Saturday</li>
                     <li>7:30 AM - 1:30 PM</li>
-                    <li>Classes start on June 20</li>
+                    <li>Classes start on June 19</li>
                   </ul>
                 </div>
               </div>
@@ -283,9 +327,10 @@ const CounsellingArtTherapy = () => {
               <p className="credits">TOTAL CREDITS - 20</p>
               <ul className="semester-topics">
                 <li>Foundations of Art Therapy</li>
-                <li>Materials, Media & Creative Processes</li>
-                <li>Art Therapy Assessment, Diagnostics & Interpretive Skills</li>
-                <li>Therapeutic Modalities & Population-based Practice</li>
+                <li>Theoretical Approaches in Art Therapy</li>
+                <li>Materials, Media & Creative Processes      </li>
+                <li>Art Therapy Assessment, Diagnostics & Interpretive Skills                       </li>
+                <li>Working with Adults and ageing population</li>
 
               </ul>
             </div>
@@ -294,9 +339,12 @@ const CounsellingArtTherapy = () => {
               <h3>ADVANCEMENT TO SPECIALIZATION</h3>
               <p className="credits">TOTAL CREDITS - 20</p>
               <ul className="semester-topics">
-                <li>Clinical Art Therapy Interventions & Techniques</li>
+                <li>Working with Children and Adolescents </li>
+                <li>Art Therapy Interventions & Techniques</li>
+                <li>Working with neurodiversity and learning disabilities</li>
                 <li>Practicum / Clinical Placement & Supervision</li>
                 <li>Research, Evaluation & Professional Practice</li>
+
               </ul>
             </div>
           </div>

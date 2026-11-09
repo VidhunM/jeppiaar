@@ -102,21 +102,13 @@ const About = () => {
       name: 'B. Jaikumar',
       role: 'Chairman',
       image: chairmanImage,
-      description: `B. Jaikumar ChristhuRajan is a visionary second-generation entrepreneur and the Chairman & Managing Director of the Jeppiaar Group. With a strong academic foundation in Engineering and an MBA from the UK, he brings strategic leadership, administrative excellence, and a people-centric approach to all Jeppiaar institutions. He currently serves on the Board of Trustees of Sancta Maria Educational Trust.
-
-An educationalist since 2010, he has played a pivotal role as Director of the Jeppiaar Group of Educational Institutions. Through his training and placement initiatives, he has mentored and guided hundreds of students across diverse disciplines, helping them build successful careers. A strong advocate for youth development, he is the patron of JCR Basketball Club, which trains over 250 children free of cost and organizes All India Basketball Tournaments for more than 22 years. Known for his compassion and community service, Jaikumar is deeply respected for his contributions during the 2015 Chennai floods and 2016 Vardha cyclone, where his relief efforts reached thousands.
-
-At Jeppiaar Academy of Psychology and Research, he provides strategic direction and ensures that the academy grows as a centre of excellence dedicated to mental health education, youth empowerment, and holistic societal wellbeing.`
+      description: `B. Jaikumar ChristhuRajan, M.E., M.B.A (UK) is the Chairman & Managing Director of the Jeppiaar Group and a third-generation entrepreneur with strong academic and leadership credentials. An educationalist since 2010, he has played a key role in mentoring students through training and placement initiatives and serves on the Board of Trustees of Sancta Maria Educational Trust. A strong advocate for youth development, he is widely respected for his impactful community service during the Chennai floods and Cyclone Vardha. At Jeppiaar Academy of Psychology and Research, he provides strategic direction to promote excellence in mental health education and youth empowerment.`
     },
     {
       name: 'Dr. Saranya Jaikumar',
       role: 'Founder & Director',
       image: directorImage,
-      description: `Dr. Saranya Jaikumar is one of India's first Doctorates in Educational Psychology and has made a significant impact in the field through her academic expertise and commitment to student development. As the founder of Voxdemy, she has tutored and mentored more than 7,000 psychology students across the globe, empowering learners with practical skills, academic clarity, and professional confidence. She serves as an Independent Expert to the Ministry of Women & Child Development, Government of India, Tamil Nadu Police Department, Samagra Shiksha, and numerous schools and colleges across India.
-
-A former Member of the Tamil Nadu Commission for Protection of Child Rights, Dr. Saranya is widely acknowledged as a leading advocate for POCSO awareness and digital safety for children. She has conducted her flagship program "Raksha" across 3000+ schools, addressing students, teachers, and parents.
-
-Dr. Saranya is also a Consultant Educational Psychologist at Shadithya Child Therapy Centre and a Child Protection Policy Expert for various international accreditation bodies. She serves as visiting faculty, programme head, keynote speaker, jury panelist, and motivational speaker at national and international platforms. Her articles, interviews, and expert opinions are widely featured in leading newspapers, magazines, TV channels, and digital media.`
+      description: `Dr. Saranya Jaikumar is one of India’s first Doctorates in Educational Psychology and a leading advocate for child safety and student wellbeing. Founder of Voxdemy, she has mentored over 7,000 psychology students globally, equipping them with strong academic and professional skills. She serves as an Independent Expert to the Ministry of Women & Child Development (GoI), Tamil Nadu Police, Samagra Shiksha, and several educational institutions. A former Member of the Tamil Nadu Commission for Protection of Child Rights, she has led large-scale POCSO and digital safety initiatives through her flagship program “Raksha” across 3,000+ schools. She is also a Consultant Educational Psychologist, Child Protection Policy Expert, and a sought-after speaker and academic leader at national and international forums, with regular media features for her expert insights.`
     },
     {
       name: 'Dr. Usharani',
@@ -256,22 +248,22 @@ Continuing her journey of educational excellence, she expanded the academy by op
         <div className="container">
           <div className="introduction-content">
             <div className="introduction-text scroll-from-left">
-              <h2>JEPPIAAR ACADEMY<br/> <span style={{ fontSize: '0.85em' }}>OF PSYCHOLOGY AND RESEARCH</span></h2>
+              <h2>JEPPIAAR ACADEMY<br /> <span style={{ fontSize: '0.85em' }}>OF PSYCHOLOGY AND RESEARCH</span></h2>
               <p>
-              Jeppiaar Academy of Psychology and Research was established to bridge the gap between psychology education and real world application. With a vision to nurture ethical, skilled, and research-oriented professionals, the academy offers advanced courses aligned with global mental health standards.
+                Jeppiaar Academy of Psychology and Research was established to bridge the gap between psychology education and real world application. With a vision to nurture ethical, skilled, and research-oriented professionals, the academy offers advanced courses aligned with global mental health standards.
               </p>
               <p>
-              The academy provides advanced diploma programs in key domains of psychology, including Counselling and Child Psychology, Counselling and Organisational Psychology, Counselling and Forensic Psychology, and Art Therapy.
+                The academy provides advanced diploma programs in key domains of psychology, including Counselling and Child Psychology, Counselling and Organisational Psychology, Counselling and Forensic Psychology, and Art Therapy.
               </p>
             </div>
           </div>
           <div className="introduction-images">
             <div className="intro-image scroll-from-center">
               <div className="intro-image-overlay" aria-hidden="true">
-              
+
               </div>
-              <img 
-                src={ab01Image} 
+              <img
+                src={ab01Image}
                 alt="Jeppiaar Academy of Psychology and Research"
                 onError={(e) => {
                   e.target.onerror = null;
@@ -320,14 +312,14 @@ Continuing her journey of educational excellence, she expanded the academy by op
           </p>
           <div className="team-members-grid">
             {teamMembers.map((member, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className={`team-member-card scroll-from-${index % 2 === 0 ? 'left' : 'right'} ${index === 3 || index === 4 || index === 5 ? 'team-member-zoom-fix' : ''}`}
                 onClick={() => setSelectedMember(member)}
               >
                 <div className="team-member-image">
-                  <img 
-                    src={member.image} 
+                  <img
+                    src={member.image}
                     alt={member.name}
                     className={[
                       index === 3 ? 'team-img-center' : '',
@@ -378,12 +370,12 @@ Continuing her journey of educational excellence, she expanded the academy by op
                 </div>
                 <button className="core-value-nav prev" onClick={() => setCurrentSlide((prev) => (prev - 1 + coreValues.length) % coreValues.length)} aria-label="Previous value">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15 19L8 12L15 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M15 19L8 12L15 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </button>
                 <button className="core-value-nav next" onClick={() => setCurrentSlide((prev) => (prev + 1) % coreValues.length)} aria-label="Next value">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9 5L16 12L9 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M9 5L16 12L9 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </button>
                 <div className="core-value-dots">
@@ -399,8 +391,8 @@ Continuing her journey of educational excellence, she expanded the academy by op
               </>
             ) : (
               coreValues.map((value, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className={`core-value-card scroll-from-${index % 2 === 0 ? 'left' : 'right'}`}
                 >
                   <div className="value-icon-container">
@@ -417,7 +409,7 @@ Continuing her journey of educational excellence, she expanded the academy by op
         </div>
       </section>
 
-      <TeamMemberModal 
+      <TeamMemberModal
         isOpen={selectedMember !== null}
         onClose={() => setSelectedMember(null)}
         member={selectedMember}

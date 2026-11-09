@@ -2,7 +2,7 @@ import React, { useMemo, useState, useEffect } from 'react';
 import './ApplyOnline.css';
 import Logo1 from '../assets/icons/Logo1.png';
 
-const API_URL = 'https://myguesi.com/api/public/apply';
+const API_URL = 'https://erp.jeppiaaracademy.com/api/public/apply';
 
 function generateApplicationId() {
   const ts = new Date().toISOString().replace(/[-:.TZ]/g, '');
@@ -53,9 +53,9 @@ export default function ApplyOnline() {
     () => [
       'First Graduate in the family (REV – 104)',
       'Economically Weaker Section (REV – 122)',
-      'Basics / Advanced Student',
+      'Voxdemy Basics / Advanced Student',
+      'Christian Student (Baptism Certificate)',
       'University Rank Holder in UG / PG',
-      'NRI Student',
       'Not Eligible'
     ],
     []
@@ -87,18 +87,24 @@ export default function ApplyOnline() {
     fullName: '',
     gender: '',
     dateOfBirth: '',
+    community: '',
     nationality: '',
     aadhaarNo: '',
     mobileNumber: '',
     alternateMobile: '',
     emailId: '',
-    address: '',
-    city: '',
-    state: '',
-    pincode: '',
+    permanentAddress: '',
+    permanentCity: '',
+    permanentState: '',
+    permanentPincode: '',
+    chennaiAddress: '',
+    chennaiCity: '',
+    chennaiState: '',
+    chennaiPincode: '',
 
     contactName: '',
     contactRelationship: '',
+    contactOccupation: '',
     contactMobile: '',
     contactEmail: '',
 
@@ -166,6 +172,12 @@ export default function ApplyOnline() {
       return;
     }
 
+    if (name === 'permanentPincode' || name === 'chennaiPincode') {
+      const numericValue = value.replace(/\D/g, '');
+      setForm((p) => ({ ...p, [name]: numericValue }));
+      return;
+    }
+
     if (name === 'aadhaarNo') {
       const numericValue = value.replace(/\D/g, '');
       if (numericValue.length <= 12) {
@@ -174,11 +186,7 @@ export default function ApplyOnline() {
       return;
     }
 
-    if (name === 'pincode') {
-      const numericValue = value.replace(/\D/g, '');
-      setForm((p) => ({ ...p, pincode: numericValue }));
-      return;
-    }
+
 
     setForm((p) => ({ ...p, [name]: type === 'checkbox' ? checked : value }));
   };
@@ -232,12 +240,12 @@ export default function ApplyOnline() {
     }
 
     // File size limits
-    const maxPerFile = 3 * 1024 * 1024; // 3MB
+    const maxPerFile = 5 * 1024 * 1024; // 5MB
     const maxTotal = 15 * 1024 * 1024; // 15MB
     const selected = Object.values(files).filter(Boolean);
     const total = selected.reduce((sum, file) => sum + (file?.size || 0), 0);
     const tooBig = selected.find((file) => (file?.size || 0) > maxPerFile);
-    if (tooBig) return `File too large: ${tooBig.name}. Max 3MB per file.`;
+    if (tooBig) return `File too large: ${tooBig.name}. Max 5MB per file.`;
     if (total > maxTotal) return `Total upload size is too large (${bytesToLabel(total)}). Please reduce files.`;
 
     return null;
@@ -269,17 +277,23 @@ export default function ApplyOnline() {
       // Append optional personal details
       if (form.gender) formData.append('gender', form.gender);
       if (form.dateOfBirth) formData.append('dateOfBirth', form.dateOfBirth);
+      if (form.community) formData.append('community', form.community);
       if (form.nationality) formData.append('nationality', form.nationality);
       if (form.aadhaarNo) formData.append('aadhaarNo', form.aadhaarNo);
       if (form.alternateMobile) formData.append('alternateMobile', form.alternateMobile);
-      if (form.address) formData.append('address', form.address);
-      if (form.city) formData.append('city', form.city);
-      if (form.state) formData.append('state', form.state);
-      if (form.pincode) formData.append('pincode', form.pincode);
+      if (form.permanentAddress) formData.append('permanentAddress', form.permanentAddress);
+      if (form.permanentCity) formData.append('permanentCity', form.permanentCity);
+      if (form.permanentState) formData.append('permanentState', form.permanentState);
+      if (form.permanentPincode) formData.append('permanentPincode', form.permanentPincode);
+      if (form.chennaiAddress) formData.append('chennaiAddress', form.chennaiAddress);
+      if (form.chennaiCity) formData.append('chennaiCity', form.chennaiCity);
+      if (form.chennaiState) formData.append('chennaiState', form.chennaiState);
+      if (form.chennaiPincode) formData.append('chennaiPincode', form.chennaiPincode);
 
       // Append alternate contact
       if (form.contactName) formData.append('contactName', form.contactName);
       if (form.contactRelationship) formData.append('contactRelationship', form.contactRelationship);
+      if (form.contactOccupation) formData.append('contactOccupation', form.contactOccupation);
       if (form.contactMobile) formData.append('contactMobile', form.contactMobile);
       if (form.contactEmail) formData.append('contactEmail', form.contactEmail);
 
@@ -478,7 +492,7 @@ export default function ApplyOnline() {
                 </div>
               </header>
 
-              <h2 className="apply-form-title">ONLINE APPLICATION (2026)</h2>
+              <h2 className="apply-form-title">STUDENT ADMISSION FORM 2027</h2>
 
               <form className="apply-form" onSubmit={handleSubmit}>
                 <section className="apply-section">
@@ -502,8 +516,8 @@ export default function ApplyOnline() {
                     </label>
 
                     <label className="apply-field">
-                      <span>Gender</span>
-                      <select className="apply-input" name="gender" value={form.gender} onChange={onChange} disabled={submitted}>
+                      <span>Gender *</span>
+                      <select className="apply-input" name="gender" value={form.gender} onChange={onChange} required disabled={submitted}>
                         <option value="">Select</option>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
@@ -512,17 +526,22 @@ export default function ApplyOnline() {
                     </label>
 
                     <label className="apply-field">
-                      <span>Date of Birth</span>
-                      <input className="apply-input" type="date" name="dateOfBirth" value={form.dateOfBirth} onChange={onChange} disabled={submitted} />
+                      <span>Date of Birth *</span>
+                      <input className="apply-input" type="date" name="dateOfBirth" value={form.dateOfBirth} onChange={onChange} required disabled={submitted} />
                     </label>
 
                     <label className="apply-field">
-                      <span>Nationality</span>
-                      <input className="apply-input" name="nationality" value={form.nationality} onChange={onChange} disabled={submitted} />
+                      <span>Community (university norms) *</span>
+                      <input className="apply-input" name="community" value={form.community} onChange={onChange} required disabled={submitted} />
                     </label>
 
                     <label className="apply-field">
-                      <span>Aadhaar No</span>
+                      <span>Nationality *</span>
+                      <input className="apply-input" name="nationality" value={form.nationality} onChange={onChange} required disabled={submitted} />
+                    </label>
+
+                    <label className="apply-field">
+                      <span>Aadhaar No *</span>
                       <input
                         className="apply-input"
                         name="aadhaarNo"
@@ -571,26 +590,55 @@ export default function ApplyOnline() {
                   </div>
 
                   <label className="apply-field full">
-                    <span>Address for Communication</span>
-                    <textarea className="apply-input" name="address" value={form.address} onChange={onChange} rows={3} disabled={submitted} />
+                    <span>Permanent Address *</span>
+                    <textarea className="apply-input" name="permanentAddress" value={form.permanentAddress} onChange={onChange} rows={3} required disabled={submitted} />
                   </label>
 
                   <div className="apply-grid three">
                     <label className="apply-field">
                       <span>City</span>
-                      <input className="apply-input" name="city" value={form.city} onChange={onChange} disabled={submitted} />
+                      <input className="apply-input" name="permanentCity" value={form.permanentCity} onChange={onChange} disabled={submitted} />
                     </label>
                     <label className="apply-field">
                       <span>State</span>
-                      <input className="apply-input" name="state" value={form.state} onChange={onChange} disabled={submitted} />
+                      <input className="apply-input" name="permanentState" value={form.permanentState} onChange={onChange} disabled={submitted} />
                     </label>
                     <label className="apply-field">
                       <span>PinCode</span>
                       <input
                         className="apply-input"
-                        name="pincode"
+                        name="permanentPincode"
                         inputMode="numeric"
-                        value={form.pincode}
+                        value={form.permanentPincode}
+                        onChange={onChange}
+                        onKeyPress={handlePhoneKeyPress}
+                        placeholder="enter your pincode"
+                        disabled={submitted}
+                      />
+                    </label>
+                  </div>
+
+                  <label className="apply-field full">
+                    <span>Address in Chennai</span>
+                    <textarea className="apply-input" name="chennaiAddress" value={form.chennaiAddress} onChange={onChange} rows={3} disabled={submitted} />
+                  </label>
+
+                  <div className="apply-grid three">
+                    <label className="apply-field">
+                      <span>City</span>
+                      <input className="apply-input" name="chennaiCity" value={form.chennaiCity} onChange={onChange} disabled={submitted} />
+                    </label>
+                    <label className="apply-field">
+                      <span>State</span>
+                      <input className="apply-input" name="chennaiState" value={form.chennaiState} onChange={onChange} disabled={submitted} />
+                    </label>
+                    <label className="apply-field">
+                      <span>PinCode</span>
+                      <input
+                        className="apply-input"
+                        name="chennaiPincode"
+                        inputMode="numeric"
+                        value={form.chennaiPincode}
                         onChange={onChange}
                         onKeyPress={handlePhoneKeyPress}
                         placeholder="enter your pincode"
@@ -610,6 +658,10 @@ export default function ApplyOnline() {
                     <label className="apply-field">
                       <span>Relationship with Applicant *</span>
                       <input className="apply-input" name="contactRelationship" value={form.contactRelationship} onChange={onChange} required disabled={submitted} />
+                    </label>
+                    <label className="apply-field">
+                      <span>Occupation *</span>
+                      <input className="apply-input" name="contactOccupation" value={form.contactOccupation} onChange={onChange} required disabled={submitted} />
                     </label>
                     <label className="apply-field">
                       <span>Mobile Number *</span>
