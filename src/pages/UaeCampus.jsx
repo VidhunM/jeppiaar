@@ -384,7 +384,7 @@ const UaeCampus = () => {
 
                 <div className="details-card-section">
                   <h4>Duration</h4>
-                  <p className="duration-highlight">6 Months <span>(150 Hours)</span></p>
+                  <p className="duration-highlight">6 Months <span>(120 Hours)</span></p>
                 </div>
 
                 <div className="details-card-divider"></div>
@@ -514,7 +514,7 @@ const UaeCampus = () => {
               </div>
               <h3>Programme Duration</h3>
               <p><strong>Six Months</strong></p>
-              <p className="sub-detail">Total Hours: 150 hours (inclusive of 30 hours internship with Dr. Saranya Jaikumar and team)</p>
+              <p className="sub-detail">Total Hours: 120 hours (inclusive of 30 hours internship with Dr. Saranya Jaikumar and team)</p>
             </div>
 
             <div className="structure-card">
@@ -538,7 +538,7 @@ const UaeCampus = () => {
               </div>
               <h3>Commencement</h3>
               <p><strong>Programme Start Date</strong></p>
-              <p className="commence-date">15th October 2026</p>
+              <p className="commence-date">15th February 2027</p>
             </div>
           </div>
 
