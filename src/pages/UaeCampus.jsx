@@ -546,7 +546,7 @@ const UaeCampus = () => {
             <h3 className="intakes-section-title">Proposed Student Intake</h3>
 
             <div className="intakes-grid">
-              <div className="intake-card">
+              {/* <div className="intake-card">
                 <div className="intake-header">
                   <h4>October 2026 Intake</h4>
                 </div>
@@ -566,7 +566,7 @@ const UaeCampus = () => {
                     </li>
                   </ul>
                 </div>
-              </div>
+              </div> */}
 
               <div className="intake-card">
                 <div className="intake-header">

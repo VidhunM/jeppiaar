@@ -1341,6 +1341,7 @@
 
 .uae-intakes-container {
   max-width: 1000px;
+  position: center;
   margin: 0 auto 5rem auto;
   text-align: left;
 }
@@ -1356,9 +1357,15 @@
 }
 
 .intakes-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  justify-content: center;
   gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.intakes-grid .intake-card {
+  width: 100%;
+  max-width: 480px;
 }
 
 .intake-card {
@@ -1423,7 +1430,6 @@
   }
   
   .intakes-grid {
-    grid-template-columns: 1fr;
     gap: 2rem;
   }
 }
